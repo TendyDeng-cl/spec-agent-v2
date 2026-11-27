@@ -8,7 +8,7 @@ const part = (name: string) => readFileSync(join(import.meta.dirname, '..', name
 // localStorage 'casebook-theme'. It sets <html data-theme>, which every page's dark rules already honour, and points the
 // browser bar's theme-color at the chosen side. It runs in <head>, before anything is drawn, so a dark page never
 // flashes white; a page without a <head> of its own runs it at the start of the shared script instead. Another tab
-// changing the choice redraws this one (storage event). window.cbTheme() applies it again after a change here.
+// changing the choice redraws this one (storage event), and so does coming back to it (pageshow, visibilitychange). window.cbTheme() applies it again after a change here.
 export const THEME_JS = `(function () {
   var K = 'casebook-theme';
   function apply() {
@@ -23,6 +23,9 @@ export const THEME_JS = `(function () {
   }
   apply(); window.cbTheme = apply;
   addEventListener('storage', function (e) { if (e.key === K) apply(); });
+  // a page restored from the back-forward cache (Settings, then Back) or brought back to the front checks the choice again
+  addEventListener('pageshow', apply);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) apply(); });
 })();`;
 
 export function withShared(html: string): string {

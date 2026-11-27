@@ -131,6 +131,25 @@ Enhance's Q-14 said 「No row asserts it」 and stayed open through three runs f
    does not cover them (TC-218 stood for three tiers). Fill `### Variants`: one line per requirement × variant with
    its rows. `check.ts` fails a requirement naming two or more tiers, or "each tier / model / language", that lacks a
    line per variant.
+   **Every drawn appearance is a variant (2026-11-27, christmas-new-year-sale DRA262611P0331).** When the Design
+   draws a screen in more than one appearance (dark / light, landscape, a short device), each appearance is a variant
+   of that screen's requirement, whether or not the PM text names it, and its row says what changes per appearance
+   (the background or art of each themed element, read from the frame: 「pale cream card」, not 「seasonal
+   background」). A row with an appearance sets it in its Precondition, with the app's own Appearance setting
+   (Android ☰ › Preferences › Appearance overrides the system switch). (v2 split dark / light only for the Launcher
+   banner, whose PM line said 「dark / light」; the IAP page, drawn as IAP_year dark and light, kept one row whose
+   「seasonal background」 passed a navy dark-mode card seen in light mode in R2.)
+   **Every copy of a screen is read (user, 2026-11-27).** The miss above began in the reading: the board drew two
+   frames both named 「IAP_year」 side by side and the analysis read one. Wherever a board holds two or more screens
+   with the same name, fill `### Repeated screens` in `requirements.md`: `| Board | Screen | What differs | Rows |`,
+   one line per repeated name, `What differs` read from the frames themselves (「dark: navy card, gold title · light:
+   pale cream card, dark title」) and `Rows` the rows that check each copy, or `same: <why>` (one screen drawn again
+   at a later flow step, a pressed state already covered) or `older: <newer copy>`; a board whose repeats are all flow
+   steps may take one line with Screen `*` and `same:`. `check.ts` fails a repeated name of `inventory.json` with no
+   line, and a row-trace naming no active row.
+   **Expected Results name the look (user, 2026-11-27).** Where a row checks a themed or appearance-dependent element,
+   its Expected Result states what the Design draws for that appearance (colours, art, which card or banner), never
+   only a category (「seasonal background」, 「themed style」, 「festive banner」): a category passes any wrong art.
    **A setting's values are variants too (2026-11-04, Video Enhance).** Every value the user can choose for a
    setting that changes what the feature makes (Mode, style, fps, resolution, quality, length, voice) gets a row that
    *uses* it: chosen, carried through the action it changes (generate, export, save) and checked in the result (the

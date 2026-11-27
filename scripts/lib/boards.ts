@@ -7,6 +7,7 @@ import { LIBRARY, PLATFORMS, draftsDir, listFeatures, readManifest, tableDir } f
 import { parseQuestions, readAnswers, readSettled } from './questions.ts';
 import { bugStatus, isOpenStatus } from './ebug-status.ts';
 import { readRegression } from './regression.ts';
+import { atReading, readAtSources, readSuites, suiteOf } from './at-results.ts';
 import { tableTr, trInfo } from './tr-info.ts';
 
 const NAMES: Record<string, string> = { pdr: 'PowerDirector', phd: 'PhotoDirector' };
@@ -255,21 +256,40 @@ export function latestTally(feature: string, platform: string): { pass: number; 
   return { pass, fail, blocked, other: best.size - pass - fail - blocked };
 }
 
+/** A table's AT side (user, 2026-11-27): its Jenkins job (at.json), the latest build read from it and its [AT] eBugs
+ *  (lib/at-results.ts, this computer's last refresh). */
+function atOf(feature: string, platform: string) {
+  const src = readAtSources(feature)[platform], r = atReading(feature, platform);
+  const bugs = r?.bugs ? { filed: r.bugs.length, open: r.bugs.filter(b => isOpenStatus(b.status)).length, list: r.bugs.map(b => ({ ...b, open: isOpenStatus(b.status) })) } : null;
+  return { at_job: src ? { url: src.jenkins ?? '', kind: src.source ?? null, suite: src.folder ? src.suite ?? 'core' : null, folder: src.folder ?? null } : null, at_result: src ? r?.result ?? null : null, at_error: src ? r?.error ?? null : null, at_read: r?.at ?? 0, at_bugs: bugs, at_bugs_error: r?.bugs_error ?? null };
+}
+
 export function listBoards() {
-  const products = new Map<string, { id: string; name: string; releases: unknown[]; features: unknown[] }>();
+  const products = new Map<string, { id: string; name: string; releases: unknown[]; at_suites: unknown[]; features: unknown[] }>();
   for (const id of listFeatures()) {
     const product = id.split('/')[0];
-    if (!products.has(product)) products.set(product, { id: product, name: json(join(LIBRARY, product, 'product.json'))?.name ?? NAMES[product] ?? product, releases: releases(product), features: [] });
+    if (!products.has(product)) products.set(product, { id: product, name: json(join(LIBRARY, product, 'product.json'))?.name ?? NAMES[product] ?? product, releases: releases(product), at_suites: PLATFORMS.flatMap(pl => readSuites(product, pl).map(x => suiteOf(product, pl, x))), features: [] });
     let title = '';
     // a table being saved right now (a half-written file) sits out this view; the rest of the list still shows
     const platforms = PLATFORMS.filter(p => existsSync(tableDir(id, p))).flatMap(platform => { try {
       const m = readManifest(id, platform), drafts = openDrafts(id, platform), plan = newestPlan(id, platform);
       title ||= m?.title ?? json(join(draftsDir(id, platform), drafts.at(-1) ?? '', 'spec.json'))?.title ?? '';
       const n = m ? caseCounts(id, platform) : null, plannedFor = planned(id, platform), ran = testedVersion(id, platform);
-      return [{ platform, version: m?.version ?? null, cases: n?.cases ?? m?.cases ?? null, mui_cases: n?.mui ?? 0, ran_cases: m ? ranCases(id, platform) : 0, approved_at: m?.approved_at ?? null, drafts, plan: !!(plan.md && plan.draft), runs: runCount(id, platform), last: lastRun(id, platform), latest: m ? latestTally(id, platform) : null, waiting: waiting(id, platform, m ? undefined : drafts.at(-1)), app: plannedFor?.version || ran, ran, items: plannedFor?.items ?? [], tested: lastTested(id, platform), at: readRegression(id)[platform] ?? null,
+      return [{ platform, version: m?.version ?? null, cases: n?.cases ?? m?.cases ?? null, mui_cases: n?.mui ?? 0, ran_cases: m ? ranCases(id, platform) : 0, approved_at: m?.approved_at ?? null, drafts, plan: !!(plan.md && plan.draft), runs: runCount(id, platform), last: lastRun(id, platform), latest: m ? latestTally(id, platform) : null, waiting: waiting(id, platform, m ? undefined : drafts.at(-1)), app: plannedFor?.version || ran, ran, items: plannedFor?.items ?? [], tested: lastTested(id, platform), at: readRegression(id)[platform] ?? null, ...atOf(id, platform),
         bugs: bugCounts(id, platform), mui: m ? muiStatus(id, platform) : null, design: designStatus(id, platform) }];
     } catch { return []; } }).filter(p => p.version || p.drafts.length);
     if (platforms.length) products.get(product)!.features.push({ id, title: title || id.split('/')[1], platforms });
+  }
+  // The product's suite row holds only the cases the casebook did not create (user, 2026-11-27): the folders of the
+  // tables converted to AT and linked to it (at.json "folder") are their own rows, so they leave the suite's figures.
+  for (const pr of products.values()) for (const su of pr.at_suites as any[]) {
+    const r = su.result; if (!r?.folders) continue;
+    const linked = (pr.features as any[]).flatMap(f => f.platforms.filter((p: any) => p.platform === su.platform && p.version && p.at && p.at.state !== 'na' && p.at_job?.folder && p.at_job.suite === su.id && r.folders[p.at_job.folder])
+      .map((p: any) => ({ folder: p.at_job.folder, title: f.title, ...r.folders[p.at_job.folder] })));
+    if (!linked.length) continue;
+    const less = (k: 'total' | 'pass' | 'fail' | 'skip') => r[k] - linked.reduce((n: number, x: any) => n + x[k], 0);
+    const total = less('total'), pass = less('pass'), fail = less('fail'), skip = less('skip');
+    su.result = { ...r, total, pass, fail, skip, blocked: Math.max(0, total - pass - fail - skip), excluded: linked.map((x: any) => ({ folder: x.folder, title: x.title, total: x.total })), launch_total: r.total };
   }
   return [...products.values()].filter(p => p.features.length);
 }

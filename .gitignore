@@ -132,3 +132,8 @@ library/*/*/comparisons/
 
 # Chinese copy work files (scripts/zh-copy.ts export → merge), local only
 zh-work/
+
+# Local credentials kept in the repo folder but never committed (user, 2026-11-27): AT reading keys
+# (config/at-credentials.json, lib/at-results.ts). Only the *.example.json templates are shared.
+config/*
+!config/*.example.json

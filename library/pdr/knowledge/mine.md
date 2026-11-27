@@ -56,10 +56,13 @@ User Sign in › Sign In (Email/Password, Sign Up, Forgot Password, Google / Fac
 fields and errors are cleared on re-entry.
 
 ## KP-036 Setting the appearance
-- kind: howto · platform: ios · use: run · tags: appearance, dark-mode, settings
-- source: exploration KB mine-page.md (deep dive 2026-09-01, 16.8.0 build 188407, TestFlight, Developer Server, VIP)
+- kind: howto · platform: both · use: analysis, run · tags: appearance, dark-mode, light-mode, settings
+- source: exploration KB mine-page.md (deep dive 2026-09-01, 16.8.0 build 188407, TestFlight, Developer Server, VIP); Android: christmas-new-year-sale R2 (DRA262611P0331, 2026-11-27, observed)
 
-Home ☰ › Preferences › Appearance: 「Light mode」 / 「Dark mode」 / 「Device Settings」 (default Device Settings).
+Home ☰ › Preferences › Appearance: 「Light mode」 / 「Dark mode」 / 「Device Settings」 (default Device Settings). The
+app's setting overrides the phone's dark / light switch (on Android too), so a row that needs an appearance sets it
+here in its Precondition. Design files often draw a themed screen (sale IAP page, banners) in both appearances with
+different art per appearance; each one is its own row (`analysis.md` pass 10, *Every drawn appearance is a variant*).
 
 ## KP-037 VIP or Pro+
 - kind: question · platform: both · use: analysis, ebug · tags: mine, tier, naming

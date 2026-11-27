@@ -188,5 +188,31 @@
         "android": "uk"
       }
     ]
+  },
+  "at": {
+    "_note": "The product's own AT suite (user, 2026-11-27): every case already automated, one line of its own on the Dashboard's Regression (AT) tab (lib/at-results.ts). SFT runs the whole AT-PDRA pytest suite on each TR's build and reports it to ReportPortal (project pdra) launch 「SFT」, read with this computer's token (~/.casebook/at-credentials.json), else the console's pytest summary; a converted feature's tests are one top-level folder of that launch (its at.json: \"folder\"); BFT is the basic-function subset on daily builds.",
+    "android": [
+      {
+        "id": "core",
+        "name": "Core AT suite",
+        "jenkins": "http://192.168.17.37:8080/job/PDR_Android_SFT",
+        "also": [
+          {
+            "label": "BFT",
+            "jenkins": "http://192.168.17.37:8080/job/PDR_Android_BFT",
+            "reportportal": {
+              "url": "http://192.168.17.37:9090",
+              "project": "pdra",
+              "launch": "BFT"
+            }
+          }
+        ],
+        "reportportal": {
+          "url": "http://192.168.17.37:9090",
+          "project": "pdra",
+          "launch": "SFT"
+        }
+      }
+    ]
   }
 }

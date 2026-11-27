@@ -18,7 +18,7 @@ type Entry = { status: string; at: number };
 let cache: Record<string, Entry> | null = null;
 const load = () => cache ??= (() => { try { return JSON.parse(readFileSync(CACHE, 'utf8')); } catch { return {}; } })();
 const save = () => { try { mkdirSync(join(homedir(), '.casebook'), { recursive: true }); writeFileSync(CACHE, JSON.stringify(cache, null, 1), { mode: 0o600 }); } catch {} };
-function token(): string {
+export function token(): string {
   const env = (process.env.ECL_TOKEN ?? '').trim();
   if (env) return env;
   try { return readFileSync(join(homedir(), '.ecl_token'), 'utf8').trim(); } catch { return ''; }
@@ -33,12 +33,15 @@ const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
 // one call per bug): BugCode `match` is a substring search, and a product's tickets of one version share everything but
 // their last four digits (DRA262611P0072), so one page of 200 answers a whole group in about a second.
 const SPACING_MS = 300, BACKOFF_MS = 15_000, TRIES = 4, FRESH_MS = 60_000, PAGE = 200, PAGES = 10;
-async function search(condition: object, pageIndex: number, pageSize: number, t: string): Promise<any[]> {
+const search = (condition: object, pageIndex: number, pageSize: number, t: string) => eclSearch([{ field: 'BugCode', ...condition }], pageIndex, pageSize, t);
+/** One page of TSR.EbugSearch (newest first) for any conditions; a 429 waits and tries again. Reading only. */
+export async function eclSearch(conditions: object[], pageIndex: number, pageSize: number, t = token()): Promise<any[]> {
+  if (!t) throw new Error('No eCL token on this computer (ECL_TOKEN or ~/.ecl_token).');
   for (let attempt = 0; ; attempt++) {
     const r = await fetch(`${BASE}/IF3/tsr/api/public/Query/TSR.EbugSearch`, {
       method: 'POST', signal: AbortSignal.timeout(30_000),
       headers: { Authorization: `Bearer ${t}`, 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ queryModel: 'TSR.EbugSearch', pageIndex, pageSize, conditions: [{ field: 'BugCode', ...condition }], sortBy: 'CreateTime', isDesc: true }),
+      body: JSON.stringify({ queryModel: 'TSR.EbugSearch', pageIndex, pageSize, conditions, sortBy: 'CreateTime', isDesc: true }),
     });
     if (r.status === 429 && attempt < TRIES - 1) { await wait(BACKOFF_MS * (attempt + 1)); continue; }
     if (!r.ok) throw new Error(r.status === 429 ? 'eCL is rate limiting (HTTP 429); try again in a minute' : `eCL answered HTTP ${r.status}`);

@@ -38,6 +38,7 @@ import { housekeeping } from './lib/housekeeping.ts';
 import { LIBRARY, PLATFORMS, arg, assertIds, readManifest, tableDir } from './lib/library.ts';
 import { isLocal } from './lib/local.ts';
 import { setRegression } from './lib/regression.ts';
+import { refreshAt, refreshSuites, setAtSource } from './lib/at-results.ts';
 import { refreshBugs } from './lib/ebug-status.ts';
 import { COOKIE, attempts, hasSession, makePasscode, passcodeMatches, safeNext, sessionOf } from './lib/passcode.ts';
 import { withShared } from './lib/page-shared.ts';
@@ -325,20 +326,58 @@ const notAvailable = (c: Child, r: Ref) => `<!doctype html><meta charset="utf-8"
 // The navigation page. Its data is a few small files per table, read when it is asked for.
 // `local`: this computer may mark a table as in regression (AT) from the page (POST /regression)
 const refreshing = new Map<string, Promise<Awaited<ReturnType<typeof refreshBugs>>>>();
-const boardsData = (local = false) => { const products = listBoards(); return { products, local, refreshing: [...refreshing.keys()], trPending: trPending(), live: live().length, idleMinutes: IDLE_MS / 60_000 }; };
+const atRefreshing = new Map<string, Promise<Awaited<ReturnType<typeof refreshAt>>>>();
+const boardsData = (local = false) => { const products = listBoards(); return { products, local, refreshing: [...refreshing.keys()], atRefreshing: [...atRefreshing.keys()], trPending: trPending(), live: live().length, idleMinutes: IDLE_MS / 60_000 }; };
 const loginPage = (next: string, error = '') => withShared(readFileSync(script('login-page.tpl'), 'utf8')).replace('__NEXT__', () => esc(next)).replace('__HIDE__', error ? '' : ' hidden').replace('__ERROR__', () => esc(error));
 const boardsPage = (local: boolean) => withShared(readFileSync(script('boards-page.tpl'), 'utf8')).replace('/*__BAR_CSS__*/', () => barCss.replace(/<\/?style>/g, ''))
   .replace('__NOTE__', () => shareNote()).replace('__DATA__', () => JSON.stringify(boardsData(local)).replace(/</g, '\\u003c'));
-// The Dashboard's AT button (user, 2026-11-25): mark a table as in the regression suite, or take the mark off
-// (lib/regression.ts). From this computer only, like Save.
+// The Dashboard's AT buttons (user, 2026-11-25/27): mark a table as in the regression suite ('at'), as not AT-capable
+// ('na'), or take the mark off (null) (lib/regression.ts). From this computer only, like Save. (`on` is the older form.)
 async function saveRegression(req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse) {
   const json = (status: number, body: unknown) => { res.writeHead(status, { 'content-type': 'application/json', 'cache-control': 'no-store' }); res.end(JSON.stringify(body)); };
   if (!isLocal(req.socket.remoteAddress)) { json(403, { error: 'Only this computer can change a table\'s AT mark.' }); return; }
   let raw = ''; for await (const c of req) { raw += c; if (raw.length > 4096) break; }
   try {
     const body = JSON.parse(raw);
-    setRegression(String(body.feature), String(body.platform), !!body.on, { note: String(body.note ?? '').slice(0, 200) });
+    const state = 'state' in body ? (body.state === 'at' || body.state === 'na' ? body.state : null) : body.on ? 'at' : null;
+    setRegression(String(body.feature), String(body.platform), state, { note: String(body.note ?? '').slice(0, 200) });
     json(200, boardsData(true));
+  } catch (e: any) { json(400, { error: e?.message ?? String(e) }); }
+}
+
+// The Regression (AT) tab (user, 2026-11-27): 「Link job」 sets where a table's AT runs (at.json, this computer only, like
+// the AT mark); 「Refresh AT」 reads the latest Jenkins builds and [AT] eBugs of the tables named (lib/at-results.ts), from
+// any computer that reached the page, with this computer's credentials; one read per group at a time.
+async function saveAtSource(req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse) {
+  const json = (status: number, body: unknown) => { res.writeHead(status, { 'content-type': 'application/json', 'cache-control': 'no-store' }); res.end(JSON.stringify(body)); };
+  if (!isLocal(req.socket.remoteAddress)) { json(403, { error: 'Only this computer can link a table\'s Jenkins job.' }); return; }
+  let raw = ''; for await (const c of req) { raw += c; if (raw.length > 4096) break; }
+  try {
+    const body = JSON.parse(raw), feature = String(body.feature), platform = String(body.platform);
+    // a URL is the table's own Jenkins job; a bare name is a folder of the product's suite launch
+    const v = String(body.jenkins ?? '').trim();
+    setAtSource(feature, platform, !v ? null : /^https?:\/\//.test(v) ? { jenkins: v } : { folder: v.replace(/^tests[\\/]/, '').replace(/[\\/]+$/, '') });
+    if (v) await refreshAt([[feature, platform]]);
+    json(200, boardsData(true));
+  } catch (e: any) { json(400, { error: e?.message ?? String(e) }); }
+}
+async function refreshAtResults(req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse) {
+  const json = (status: number, body: unknown) => { res.writeHead(status, { 'content-type': 'application/json', 'cache-control': 'no-store' }); res.end(JSON.stringify(body)); };
+  let raw = ''; for await (const c of req) { raw += c; if (raw.length > 20_000) break; }
+  try {
+    const body = JSON.parse(raw), tables: [string, string][] = (body.tables ?? []).slice(0, 60).map(([f, p]: string[]) => { assertIds(f, p); return [f, p]; });
+    // a product's own suite (product.json › at): [product, platform]
+    const suites: [string, string][] = (body.suites ?? []).slice(0, 8).filter(([pr, pl]: string[]) => /^[a-z0-9-]+$/.test(pr) && (PLATFORMS as readonly string[]).includes(pl));
+    const key = String(body.key ?? JSON.stringify([...tables].sort()));
+    let run = atRefreshing.get(key);
+    if (!run) {
+      run = (async () => { const a = await refreshAt(tables), out = { ...a };
+        for (const [pr, pl] of suites) { const b = await refreshSuites(pr, pl); out.asked += b.asked; out.read += b.read; out.errors = [...out.errors, ...b.errors]; }
+        return out; })().finally(() => atRefreshing.delete(key));
+      atRefreshing.set(key, run);
+    }
+    const done = await run;
+    json(200, { ...boardsData(isLocal(req.socket.remoteAddress)), atRefreshed: done });
   } catch (e: any) { json(400, { error: e?.message ?? String(e) }); }
 }
 
@@ -418,6 +457,8 @@ async function handle(req: import('node:http').IncomingMessage, res: import('nod
   if (url === '/boards.json') { sendText(req, res, 200, { 'content-type': 'application/json', 'cache-control': 'no-store' }, JSON.stringify(boardsData(isLocal(req.socket.remoteAddress)))); return; }
   if (url === '/regression' && req.method === 'POST') { await saveRegression(req, res); return; }
   if (url === '/ebugs/refresh' && req.method === 'POST') { await refreshEbugs(req, res); return; }
+  if (url === '/at/source' && req.method === 'POST') { await saveAtSource(req, res); return; }
+  if (url === '/at/refresh' && req.method === 'POST') { await refreshAtResults(req, res); return; }
   if (url === '/__stamp') { res.writeHead(200, { 'content-type': 'application/json', 'cache-control': 'no-store' }); res.end(stamps()); return; }
   if (url === '/__events') {
     res.writeHead(200, { 'content-type': 'text/event-stream', 'cache-control': 'no-store', connection: 'keep-alive' });

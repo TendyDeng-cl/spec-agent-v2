@@ -61,6 +61,12 @@ and look at the tile images where layout, arrows or states matter.**
    `extracted/figma-frames.json` (`label`, `node`, `in_pdf`, `read` = the board or note where it was read);
    `check.ts` fails a label with an empty `read`. A Figma-only frame is part of the spec like any other frame and is
    dated by its label.
+   **Same page, several copies (user, 2026-11-27, christmas-new-year-sale DRA262611P0331).** A page or board often
+   draws one screen several times side by side (dark and light, iOS and Android, landscape, before and after an
+   update) under the same or nearly the same name. Read and look at every copy: none is a duplicate or an older
+   version unless a date or label says so. Note in board-notes what each copy changes (background, art, colours,
+   text), so the analysis can make each one a variant (`analysis.md` pass 10, *Every copy of a screen is read*).
+   v2 of the Christmas table read one of the two 「IAP_year」 frames and missed the light-mode card.
 
 9. **Trace every annotation (user, 2026-10-22, REQ-032).** Reading board by board skips lines: the PM note
    「只送 crop 後的圖」 was read by OCR (low-confidence) and never became a requirement. After `requirements.md` is

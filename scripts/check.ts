@@ -260,6 +260,37 @@ if (draft && reqText) {
       for (const tc of tcs) if (!active.has(tc)) errors.push(`Variants: ${id} × ${variant} names ${tc}, which is not an active row`);
     }
   }
+  // "Repeated screens" grid (pass 10, user 2026-11-27): a board drawing two or more screens with the same name (dark /
+  // light, landscape, update copies) has a line per name saying what differs and the rows that check each copy, or
+  // `same: <why>` / `older: <why>`; Screen `*` with same: / older: covers a whole board of flow repeats. Christmas v2
+  // read one of two 「IAP_year」 frames and missed the light-mode card (DRA262611P0331).
+  const invFile = join(featureDir(feature), specFolder, 'extracted', 'inventory.json');
+  if (existsSync(invFile)) {
+    const screens: { board: string; name: string }[] = JSON.parse(readFileSync(invFile, 'utf8')).screens ?? [];
+    const counts = new Map<string, { board: string; name: string; n: number }>();
+    for (const s of screens) {
+      const k = `${s.board}\u0000${s.name}`;
+      const c = counts.get(k) ?? { board: s.board, name: s.name, n: 0 };
+      c.n++; counts.set(k, c);
+    }
+    const repeated = [...counts.values()].filter(c => c.n > 1);
+    const rg = gridRows('Repeated screens');
+    const SKIP = /^(same|older):\s*\S/;
+    if (repeated.length && !rg) errors.push(`No "Repeated screens" grid in requirements.md (pass 10): ${repeated.length} screen name(s) are drawn more than once on a board, e.g. ${repeated.slice(0, 4).map(c => `${c.board} 「${c.name}」 ×${c.n}`).join(', ')}`);
+    if (rg) {
+      const missing = repeated.filter(c => !rg.some(([b, s, , by]) => b === c.board && (s === c.name || (s === '*' && SKIP.test(by ?? '')))));
+      if (missing.length) errors.push(`Repeated screens: ${missing.length} not listed: ${missing.slice(0, 8).map(c => `${c.board} 「${c.name}」 ×${c.n}`).join(', ')}${missing.length > 8 ? ', …' : ''}`);
+      for (const [board, screen, differs, by] of rg) {
+        const v = by?.trim() ?? '';
+        if (SKIP.test(v)) continue;
+        if (screen === '*') { errors.push(`Repeated screens: ${board} * must be same: or older: <why>`); continue; }
+        if (!differs) errors.push(`Repeated screens: ${board} 「${screen}」 needs what differs between the copies`);
+        const tcs = tcRefs(v);
+        if (!tcs.length) errors.push(`Repeated screens: ${board} 「${screen}」 must name rows (TC-…) or same: / older: <why>`);
+        for (const tc of tcs) if (!active.has(tc)) errors.push(`Repeated screens: ${board} 「${screen}」 names ${tc}, which is not an active row`);
+      }
+    }
+  }
   // "Combinations" grid (pass 10, user 2026-11-10, REQ-008): when the user can choose two or more settings that change
   // what the feature makes, every combination of their values is a row. The grid's `- Setting <name>: a, b, c` lines
   // give the values; every combination (`name=value · name=value …`, in the settings' order) names its rows or

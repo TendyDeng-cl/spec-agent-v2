@@ -106,6 +106,11 @@ lines; put the full rule in the skill or reference file that applies it and poin
   its eBugs comes from there (`ebugs.md` step 1).
 - **Spec Link URL on its own line (user, 2026-11-11).** In an eBug Note, `Spec Link: <source>, <board> board (…) -`
   then the URL alone on the next line; `check_ebug_format.py` fails a URL on the label's line (overlay rule 2).
+- **Every copy on a Figma page, every appearance (user, 2026-11-27, DRA262611P0331).** Every copy of a screen drawn
+  on a page is read (dark / light, landscape, update copies: none is a duplicate unless a label says so), each
+  appearance is a variant row that sets it in its Precondition, and the Expected Result names the look the Design
+  draws (「pale cream card」, never just 「seasonal background」); `### Repeated screens`, `check.ts`
+  (`reading-the-spec.md` step 8, `analysis.md` pass 10; KP-036).
 - **Every combination (user, 2026-11-10, REQ-008).** Settings chosen together get a row per combination of their
   values (the full cross product), each priced and checked in the result; `### Combinations` grid, `check.ts`
   (`analysis.md` pass 10).
@@ -251,6 +256,21 @@ lines; put the full rule in the skill or reference file that applies it and poin
   icon) is loaded from a third party, and the Geist fonts are only named. Other pages keep the shared palette. The list
   also holds Vercel's interface guidelines (user, 2026-11-27): 4px grid, keyboard tabs, 24px / 44px touch targets,
   16px fields on a phone, visible labels over hover tips, the view in the address, undo instead of a confirm box.
+- **Dashboard columns, AT states and the AT tab (user, 2026-11-27).** Cases is its own column on Agentic runs (not under
+  the feature's name); a visit without a view in its address lands on PowerDirector · Android. Each table's AT menu is
+  Waiting, Mark as AT or **Not AT-capable** (stays on Agentic runs; `regression.json` `"state": "na"`, `regression.ts
+  … --na`). Regression (AT) lists one line per table with its latest completed Jenkins build: Tests, Pass, Fail,
+  Blocked, Skipped, [AT] eBugs (open / filed, eCL Short Descriptions tagged `[AT]`; no PM column), and the build's own
+  report last (Allure, ReportPortal, else JUnit). The job is `at.json` in the feature folder (「Link Jenkins job」 or
+  `regression.ts … --jenkins <job URL>`); keys stay in `config/at-credentials.json` (git-ignored, user 2026-11-27: copy `config/at-credentials.example.json`; `~/.casebook/` still read) (`lib/at-results.ts`).
+  **Core AT suite (user, 2026-11-27):** the automated cases the casebook did not create are one line above the features,
+  named 「Core AT suite」, from the product's suite job (`product.json` › `at`; PDR Android: `PDR_Android_SFT`, with
+  `PDR_Android_BFT` named on its second line). Its figures and report are the build's ReportPortal launch
+  (`http://192.168.17.37:9090`, project pdra, launch 「SFT」), else the console's pytest summary. A converted feature
+  whose tests sit in the suite is linked to its top-level folder (`regression.ts <feature> android --folder
+  <folder>`, or 「Link AT results」), and its row is that folder of the same launch. **The suite row holds only the
+  cases not created by the casebook (user, 2026-11-27):** a converted table's linked folder leaves its figures. Folders
+  are not casebook features by name: `ai_video_upscaler` is AI Video Upscaler, not Video Enhance (KP-138).
 - **Settings: this computer and this browser (user, 2026-11-27).** The Settings page keeps this computer's settings
   (seat size, saved outside the repo) apart from this browser's, which apply at once from any computer: Appearance
   (System / Light / Dark on every page, `lib/page-shared.ts` sets it before the page draws), Language, the name signed
