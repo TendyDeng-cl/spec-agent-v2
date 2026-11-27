@@ -1,0 +1,52 @@
+{
+ "schema_version": "ebug_form_contract/v3",
+ "expected": {
+  "validationStage": "draft",
+  "product": "MyEdit",
+  "version": "5.11.0",
+  "productId": "274",
+  "templateId": "23404",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "featureName": "Video Enhancer(SEO page)",
+  "bugBelong": "RD",
+  "affectedLanguages": [],
+  "allowNote": true,
+  "requiresSpec": true,
+  "requiresFixture": false,
+  "priorityBefore": "N/A",
+  "attachments": [
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_Resolution_dialog_2560x1440.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Resolution_dialog_1440p.png",
+    "group": "spec"
+   }
+  ]
+ },
+ "live": {
+  "productId": "274",
+  "templateId": "23404",
+  "version": "5.11.0",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "bugSource": "QA",
+  "bugBelong": "RD",
+  "severity": "Must Fix",
+  "priority": "N/A",
+  "reproduceOut": "3",
+  "reproduceTimes": "3",
+  "previousBuild": "Unknown",
+  "shortDescription": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): The resolution error dialog says 2560x1440 instead of 1440p",
+  "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload a 4K video.\n\nResult:\nThe Video Resolution Not Supported dialog names the limit as (2560x1440). (ref to attachment)\n\nExpect Result:\nThe body should read \"This video exceeds the supported resolution limit (1440p). Please choose another video.\"\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, Case 3 dialog body\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1273\n2. Spec: Video Enhancer V2 > Input Format (public text always says 1440p) and Error Handle\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+  "attachments": [
+   "Highlight_Resolution_dialog_2560x1440.png",
+   "Figma_Resolution_dialog_1440p.png"
+  ],
+  "createButtonPresent": true,
+  "bugCodePresent": false
+ }
+}

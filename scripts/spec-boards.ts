@@ -11,6 +11,7 @@ import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from '
 import { join } from 'node:path';
 import { ROOT, arg, assertIds } from './lib/library.ts';
 import { specsDir } from './lib/specs.ts';
+import { ocrTiles } from './lib/ocr.ts';
 
 type Board = { id: string; title: string; region: [number, number, number, number] };
 type OcrLine = { text: string; x: number; y: number; w: number; h: number; conf: number };
@@ -64,11 +65,11 @@ async function doBoard({ pdf, file, b }: { pdf: string; file: string; b: Board }
     writeFileSync(lock, String(process.pid));
     await run('node', [join(ROOT, 'scripts', 'render-tiles.ts'), pdf, tiles, ...b.region.map(String), '--tile', '1600x1000', '--scale', scale]).finally(() => { try { unlinkSync(lock); } catch {} });
   }
-  if (!existsSync(join(tiles, 'ocr.json'))) await run('swift', [join(ROOT, 'scripts', 'ocr-tiles.swift'), tiles]);
+  if (!existsSync(join(tiles, 'ocr.json'))) { const r = ocrTiles(tiles); if (r.status !== 0) throw new Error(`OCR failed for ${b.id}: ${r.stderr.trim().split('\n').pop()}`); }
   const ocr: { file: string; lines: OcrLine[] }[] = JSON.parse(readFileSync(join(tiles, 'ocr.json'), 'utf8'));
   const lines = merge(ocr.flatMap(t => t.lines));
   const out = [`# ${b.title}`, '', `Source: ${file} · board \`${b.id}\` · region x=${b.region[0]} y=${b.region[1]} w=${b.region[2]} h=${b.region[3]} (PDF points)`,
-    `OCR of rendered tiles (macOS Vision). Columns: y, x (canvas points), text; "(?)" marks low-confidence lines.`, '', '```'];
+    `OCR of rendered tiles (${process.platform === 'win32' ? 'Windows OCR' : 'macOS Vision'}). Columns: y, x (canvas points), text; "(?)" marks low-confidence lines.`, '', '```'];
   let lastY = -1e9;
   for (const l of lines) {
     if (l.y - lastY > 150) out.push('');

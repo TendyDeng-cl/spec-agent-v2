@@ -1,0 +1,307 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)",Look at the top right of the editor,"The button reads 「Export & Share」
+No separate 「Export」 button is shown",P1,R-001,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-002,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)",Click 「Export & Share」,"A dialog opens
+Upper part: 「Share」 with the project link and a copy icon
+Lower part: 「Export Format: mp4」 with 「Cancel」 and 「Download」
+An X at the dialog's top right",P1,R-002,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Record what the link area shows while the dialog opens (Q-10).",new,
+TC-003,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open",Read the text under 「Share」,It reads exactly 「Share access to this project. Anyone with the link can sign in to view it. Premium users can copy and edit the project.」,P3,R-003,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-1: 「Premium users」 while Biz plans are Free / Pro; the row checks the spec wording.",new,
+TC-004,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open",Hover the link,"A tooltip shows the whole URL, including the part cut off in the field",P2,R-004,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-005,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open","1. Click the copy icon beside the link
+2. Paste the clipboard into a text field (the browser address bar of a new tab, not opened)","Step 1: the tooltip 「Copied」 appears
+Step 2: the pasted text equals the full URL shown in the tooltip
+Step 2: it starts with https://business-demo.myedit.online and contains /share/ followed by a token",P1,"R-005, R-006","PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-2: the Figma 20261019 note gives the MyEdit format …/video-editor/online-video-editor/{project token}; the KC spec of 2026-11-11 (Biz, newer) wins. Record the tool path.",new,
+TC-006,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open",Click 「Download」,"A video file with the .mp4 extension downloads
+It plays the project's timeline",P1,R-007,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Record the file name and how long the export takes.",new,
+TC-007,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open",Click 「Cancel」,"The dialog closes
+No file downloads
+The editor is as before",P2,R-008,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-008,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. The Export & Share dialog is open",Click the X at the dialog's top right,"The dialog closes
+No file downloads",P3,R-009,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+The X is drawn on the PM Figma board, not stated in the KC spec.",new,
+TC-009,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as the Free account (web-account free, also sharer of P2)
+3. Its project P2 open in the Video Editor","1. Click 「Export & Share」
+2. Click the copy icon","Step 1: the dialog shows the 「Share」 part with a link (no upgrade prompt)
+Step 2: 「Copied」 appears and the clipboard holds the link",P1,R-010,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Free of R-010. The link of P2 is used by TC-016 and the Pro receiver rows.",new,
+TC-010,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as a Biz Pro account (web-account premium; check the Biz plan first, fixtures.md)
+3. One of its video projects open in the Video Editor","1. Click 「Export & Share」
+2. Click the copy icon","Step 1: the dialog shows the 「Share」 part with a link
+Step 2: 「Copied」 appears and the clipboard holds the link",P2,R-010,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Pro of R-010. Its cloud is full: sharing must not depend on free space (the spec puts no plan or storage gate on sharing).",new,
+TC-011,Share link from the editor,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A (web-account jackcy)
+3. A's project P1 open in the Video Editor (fixtures.md: clips include A's own uploaded video)
+4. P1 was shared before (its link copied in TC-005)","1. Open the Export & Share dialog and look for a way to stop sharing
+2. Close the dialog
+3. Open My Projects › Video and open P1's more menu
+4. Open the P1 link again in receiver B's Chrome","Steps 1–3: no control stops sharing or turns the link off
+Step 4: the link still opens P1's view",P3,R-011,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-012,Share link from My Projects,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A
+3. Launcher › My Projects › 「Video」 tab with P1 listed",Click the more icon on P1's card,"The menu lists 「Duplicate」, 「Share」, 「Rename」, 「Delete」 in this order
+There is no 「Download」",P2,R-012,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-013,Share link from My Projects,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A
+3. P1's more menu open in My Projects › Video",Click 「Share」,"The more menu closes
+The toast 「Share link copied. You can now share the link.」 appears",P1,R-013,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-014,Share link from My Projects,"1. The link copied in TC-013
+2. Receiver B's Chrome (web-account free) signed in",Open the copied link in B's Chrome,"P1's shared view opens (same name, same clips as A's project)",P1,R-014,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-015,Owner opens own link,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as sharer A
+3. P1's share link copied (TC-005)",Open the link in a new tab of A's Chrome,"The editable editor of P1 opens, not the read-only view
+「Export & Share」 is enabled and the Cloud icon shows beside the name
+The left panel and the timeline can be used
+No 「Create Copy of Project」 button",P1,R-015,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-016,Owner opens own link,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as the Free account (owner of P2)
+3. P2's share link copied (TC-009)",Open the link in a new tab,"The editable editor of P2 opens, not the read-only view
+No 「Create Copy of Project」 button",P2,R-015,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Owner on the Free plan: the owner rule holds on every plan.",new,
+TC-017,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. A signed-out Chrome profile (fixtures.md)
+3. P1's share link","1. Open the link
+2. Close the Sign In dialog with its X","Step 1: the 「Sign In」 dialog opens before any project content
+Step 2: record where the page goes and that P1 cannot be viewed signed out",P1,R-016,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-6: closing the dialog is not stated; step 2 is recorded, not judged.",new,
+TC-018,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. A signed-out Chrome profile
+3. P1's share link open with the 「Sign In」 dialog shown",Sign in through the dialog with receiver B's account (the user signs in),"After the sign-in, P1's shared view opens",P2,R-017,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-6. The agent never types a password: the user signs in at this step.",new,
+TC-019,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B's My Projects › Video: note the project count","1. Open P1's share link
+2. Open B's My Projects › Video again","Step 1: P1's shared view opens straight away, with no Sign In dialog and no copy prompt
+Step 2: the project count is unchanged (no copy was made by opening the link)",P1,"R-018, R-059","PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Free of R-059.",new,
+TC-020,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","1. Click Play
+2. Click Pause
+3. Click Play
+4. Click Stop","Step 1: the video plays and the time advances
+Step 2: playback pauses at the current time
+Step 3: playback resumes from that time
+Step 4: playback stops and the time returns to the start",P1,R-019,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-021,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Drag the playhead to the middle of the timeline,"The playhead follows the drag
+The preview shows the frame at the new time and playback continues from there",P2,R-020,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-022,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","1. Click the full screen icon
+2. Leave full screen (Esc)","Step 1: the video plays enlarged in full screen
+Step 2: the view returns as before",P2,R-021,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-023,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","1. Hover the top menu 「Video Tools」
+2. Click the user profile icon","Step 1: the top menu opens
+Step 2: the profile menu opens",P2,R-022,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-024,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","Click the icons of the left side panel (Videos, Photos, Stickers, Text, Music, Transitions)","The panel is collapsed when the view opens
+It does not open and no media can be added",P2,R-023,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-025,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Click the Layer panel icon at the right,"The Layer panel is collapsed when the view opens
+It does not open",P2,R-024,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-026,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","1. Click a clip on the timeline
+2. Try to drag it",The clip is not selected and does not move,P2,R-025,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-027,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)","1. Click zoom in
+2. Click zoom out
+3. Drag the zoom slider",The timeline scale does not change (the controls are disabled),P2,R-026,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-028,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Click undo and redo,Both are disabled and nothing changes,P2,R-027,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-029,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Click 「Export & Share」,"The button is disabled
+No dialog opens",P2,R-028,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-030,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Click the project name in the top bar,"The name keeps its usual colour
+No rename field opens
+No Cloud icon is shown beside the name",P3,R-029,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-031,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)",Look at the bottom of the view,A 「Create Copy of Project」 button is shown,P1,R-030,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-032,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as a Biz Pro account (web-account premium, plan checked)",Open P1's share link,"P1's shared view opens with no Sign In dialog
+The same disabled controls as for B and the 「Create Copy of Project」 button",P2,R-059,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Pro of R-059.",new,
+TC-033,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. A has P1 open in A's own Chrome","1. In A's Chrome, add a text title to P1 and wait until the Cloud icon shows it is saved
+2. In B's Chrome, open P1's share link again",Step 2: B's view shows the title A added,P1,R-031,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-034,Receiver: sign-in and view,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. A has project P0 with no clips (fixtures.md) and copied its share link
+3. Signed in as Free receiver B in another Chrome",Open P0's share link in B's Chrome,"P0's shared view opens
+No 「Create Copy of Project」 button is shown",P2,R-032,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-035,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. B's My Projects › Video: note the project count",Click 「Create Copy of Project」,"The Limitation popup opens: 「Your account has limited access to copying projects.」
+「Upgrade to unlock this feature for seamless project management.」 and an 「Upgrade now」 button
+Its image is the Video Editor cover image
+No copy is made (B's project count is unchanged)",P1,"R-033, R-060","PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Free of R-060. The PM Figma draws a sample photo to be replaced by the Video Editor cover image.",new,
+TC-036,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. The Limitation popup is open (TC-035)",Click 「Upgrade now」,The sales popup opens with the Biz Pro plan,P1,R-034,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Do not subscribe: purchase rows are TC-040.",new,
+TC-037,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. The sales popup is open (TC-036)",Close the sales popup with its X,"The popup closes and B is on P1's view
+No copy is made and nothing is bought",P2,R-035,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-12: what the X does is not stated; the no-copy part is the spec's rule.",new,
+TC-038,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. The Limitation popup is open",Close the Limitation popup with its close button,"The popup closes and B is on P1's view as before
+No copy is made",P2,R-035,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-12.",new,
+TC-039,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as the Free account with full cloud storage (web-account storage-full; never fill or empty it)
+3. P1's share link open (shared view)",Click 「Create Copy of Project」,"The Limitation popup of TC-035 opens
+The storage message 「You’ve reached your cloud storage limit.」 does not show before it
+No copy is made",P2,"R-048, R-033","PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-3: the spec also gives a non-Pro storage-full message, but a Free receiver is stopped by the plan first.",new,
+TC-040,Create Copy: Free receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B (web-account free)
+3. B opened the share link of A's project P1 (the shared view is shown)
+4. Manual row: the user completes the subscription by hand (REQ-008)
+5. The sales popup is open from 「Upgrade now」","1. Complete the Pro subscription in the sales popup
+2. Look at the page
+3. Click 「Create Copy of Project」 again
+4. Click 「Copy」","Step 2: B is back on P1's view, the page did not reload (the playhead and scroll position are kept) and no copy started
+Step 3: the cloud storage check passes, then 「Copy Project to Start Editing」 opens
+Step 4: the copy is made as in TC-043",P1,R-036,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Manual row: the user tests it by hand (REQ-008); MyEdit Biz demo has no test purchase (REQ-007). Runs leave it out and record what the user reports.",new,
+TC-041,Create Copy: Pro receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Pro receiver C with room in the cloud (fixtures.md)
+3. C opened the share link of P2, a project of another account with clips and an uploaded video (fixtures.md)",Click 「Create Copy of Project」,"The dialog 「Copy Project to Start Editing」 opens
+「You’re about to copy this project as a template for your own use. The original project will remain unchanged. Once copied, you can edit it freely.」
+Buttons 「Cancel」 and 「Copy」",P1,R-037,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Needs a Biz Pro account with room (fixtures.md).",new,
+TC-042,Create Copy: Pro receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Pro receiver C with room in the cloud (fixtures.md)
+3. C opened the share link of P2, a project of another account with clips and an uploaded video (fixtures.md)
+4. C's My Projects › Video: note the project count
+5. The 「Copy Project to Start Editing」 dialog is open",Click 「Cancel」,"The dialog closes and C is on P2's view
+No copy is made (C's project count is unchanged)",P2,R-038,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-043,Create Copy: Pro receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Pro receiver C with room in the cloud (fixtures.md)
+3. C opened the share link of P2, a project of another account with clips and an uploaded video (fixtures.md)
+4. Note C's tab count and cloud storage use
+5. The 「Copy Project to Start Editing」 dialog is open",Click 「Copy」,"The copy is made in the same tab (no new tab opens)
+A loading dialog (「Loading Project...」 with a percentage) shows until it is done
+The progress keeps moving: no stretch over 10 s with nothing changing",P1,"R-039, R-040, R-060","PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Variant Plan=Pro of R-060. Evidence: screen recording of the loading; record the total time.",new,
+TC-044,Create Copy: Pro receiver,The copy of TC-043 has just been made,Look at the editor that opens,"The editable editor opens on the copy
+The project name is P2's name followed by 「_copy」
+「Export & Share」 is enabled and the Cloud icon shows beside the name
+The timeline has the same clips as P2",P1,"R-041, R-042",PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-045,Create Copy: Pro receiver,"1. The copy of TC-043 open in C's Chrome
+2. P2's owner (web-account free) signed in in another Chrome","1. In C's copy, delete one clip and wait until it is saved
+2. Open C's My Projects › Video
+3. In the owner's Chrome, open P2","Step 2: the copy is listed in C's My Projects › Video
+Step 3: P2 still has every clip (the original is unchanged)",P1,"R-042, R-043",PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-046,Create Copy: Pro receiver,"1. The copy of TC-043 made
+2. C's My Uploads and cloud storage use noted before the copy (TC-043)","1. Open C's My Uploads
+2. Read C's cloud storage use","Step 1: the video P2's owner uploaded into P2 is listed in C's Uploads
+Step 2: C's storage use grew by about the size of the copied media",P1,R-044,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+PM confirmed (KC spec).",new,
+TC-047,Create Copy: Pro receiver,"1. TC-046 passed
+2. P2's owner signed in in another Chrome","1. In the owner's Chrome, delete from My Uploads the video that was uploaded into P2
+2. In C's Chrome, open the copy and play it",Step 2: the copy still plays that clip and nothing in it is missing,P2,R-045,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Deletes the owner's upload: run after every row that needs P2 intact (TC-041 – TC-046).",new,
+TC-048,Create Copy: Pro receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as a Biz Pro account with full cloud storage (web-account premium or studio-pro-full, plan checked; never fill or empty it)
+3. P1's share link open (shared view)
+4. Its My Projects › Video: note the project count",Click 「Create Copy of Project」,"The message 「Your Cloud Storage is Full.」 / 「You cannot use this tool because your storage is full. Please manage your storage space to continue.」 opens with 「Manage」
+「Copy Project to Start Editing」 does not open
+No copy is made",P1,R-046,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-049,Create Copy: Pro receiver,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. The storage-full message of TC-048 is open",Click 「Manage」,My Projects opens (record the tab and whether it opened in a new tab),P2,R-047,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Q-7: assumed the Video tab.",new,
+TC-056,Small screens,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B
+3. The window resized to exactly 1200 px wide (device-web window 1200 900)",Open P1's share link,"A full-screen mask covers the page: 「Your screen size is too small for this feature. Please adjust your browser window to a larger size for the best experience.」
+Nothing under it can be clicked or played",P2,R-056,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Restore 1440 × 900 after the row.",new,
+TC-057,Small screens,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B
+3. The window resized to 1201 px wide",Open P1's share link,"P1's shared view opens with no mask
+Play works",P2,R-057,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Restore 1440 × 900 after the row.",new,
+TC-058,Small screens,"1. Chrome device emulation of a phone (iPhone, phone user agent; fixtures.md)
+2. Signed in as Free receiver B",Open P1's share link,"A full-screen mask covers the page: 「This service is only available on larger screens. Please switch to a desktop for full access.」
+Nothing under it can be used",P3,R-058,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Needs a phone user agent: a narrow desktop window shows the desktop text instead.",new,
+TC-050,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B
+3. P1's share link with a few characters of its token changed",Open the altered link,"B lands on My Projects › 「Video」
+The message 「The shared project has been deleted and is no longer available.」 appears",P2,"R-053, R-049",PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-051,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. A made a throwaway project P3 with one clip and copied its share link (fixtures.md)
+3. B (web-account free) has P3's shared view open in another Chrome
+4. Screen recording of B's window started","1. In A's Chrome, delete P3 in My Projects › Video (confirm the deletion)
+2. Watch B's view for 10 s
+3. Try to close the banner","Step 2: within about 5 s a banner at the top reads 「The shared project has been deleted and is no longer available.」
+Step 2: 「Create Copy of Project」 disappears
+Step 3: the banner has no close button and stays",P1,R-052,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Evidence: the recording, with the time from the deletion to the banner.",new,
+TC-052,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. P3 deleted (TC-051)
+3. Signed in as Free receiver B","1. Open P3's share link
+2. Reload My Projects","Step 1: B lands on My Projects › 「Video」 with the message 「The shared project has been deleted and is no longer available.」
+Step 2: the message does not appear again",P1,"R-049, R-050",PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-053,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. P3 deleted (TC-051)
+3. A signed-out Chrome profile",Open P3's share link,"The Video Editor entry page opens
+No message is shown",P2,R-051,PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).,new,
+TC-054,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B
+3. Chrome DevTools › Network request blocking set to block the project request of P1 (done by hand)",Open P1's share link,"B lands on My Projects › 「Video」 with 「The shared project has been deleted and is no longer available.」
+No other error message tells the cause",P3,R-054,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Parked: needs a network or server fault the run tools cannot make; run by hand when RD or the user agrees.",new,
+TC-055,Deleted or unavailable project,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. Signed in as Free receiver B
+3. A shared project that fails to load without being deleted (trigger from RD, Q-4)",Open its share link,"The message 「The project may have been updated. Try copying the link again.」 appears
+B lands on My Projects",P3,R-055,"PM-only: no Design frame yet (Biz Design by UJ due 2026-11-27).
+Parked until RD names how to make the load fail (Q-4).",new,

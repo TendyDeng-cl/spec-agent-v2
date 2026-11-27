@@ -1,0 +1,101 @@
+{
+ "Q-1": {
+  "question": "[KC Open Questions] Are the upload errors shown when the file is chosen or after it uploads (RD, undecided)? Assumption: rows accept either and record which.",
+  "answer": "上傳完才提示",
+  "by": "",
+  "at": "2026-11-25T03:39:26.493Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "R-078 added; the 8 upload-error rows (TC-010 – TC-012, TC-014, TC-016, TC-018 – TC-020) expect the dialog after the upload (REQ-004)"
+ },
+ "Q-2": {
+  "question": "[KC#94cb91895dea; KC:settings] Where Open in Editor sits on desktop is not decided (UI to define). The code-derived rules put it in the result preview (brings the result) and in the top bar (brings the uploaded video), not confirmed by PM or UI. Assumption: rows look in both places and record what each one brings (R-048, R-073, R-074).",
+  "answer": "這部分先略過",
+  "by": "",
+  "at": "2026-11-25T03:58:28.189Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "R-048, R-073, R-074 held; TC-098, TC-123, TC-124 left out of the table (REQ-004)"
+ },
+ "Q-3": {
+  "question": "[KC#2f23bec67749] The HD Video Converter / AI Frame Interpolation URL answer is not merged into the KC spec yet. Assumption: the answer (keep the SEO page URLs) holds (R-002, R-003).",
+  "answer": "照答覆，維持 SEO 頁原網址",
+  "by": "",
+  "at": "2026-11-25T03:39:26.493Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Assumption confirmed: R-002, R-003, TC-003, TC-004 unchanged (REQ-004)"
+ },
+ "Q-4": {
+  "question": "[PMF:pm-3-pc-flow] The Figma mockup shows 「Enhance 7.3 seconds (3 credits/sec)」 with 21 credits, while the rule rounds the seconds up (8 × 3 = 24). Assumption: the mockup numbers are illustrative (the page says 點數數字為示意) and the rounded-up total is right (R-030).",
+  "answer": "是秒數無條件進位",
+  "by": "",
+  "at": "2026-11-25T03:39:26.493Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Assumption confirmed: R-030 and the price rows unchanged (REQ-004)"
+ },
+ "Q-5": {
+  "question": "[KC:credits] The rate table is the stage environment's; production may differ. Assumption: demo uses the stage rates (R-032); production rows compare with the ledger only.",
+  "answer": "看demo就好",
+  "by": "",
+  "at": "2026-11-25T03:39:26.493Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Demo only: R-032 stage rates; production prices out of scope (REQ-004)"
+ },
+ "Q-6": {
+  "question": "[PMF:pm-2-seo; KC#842d15e20293] The SEO Figma mockup still draws 「Maximum file resolution: 1440p」 and 「Maximum video length: 8 minutes」, while the 11/16 decision removes the resolution line and keeps 「Maximum file duration: 8 min」. Assumption: the newer KC decision (R-010).",
+  "answer": "較新的知識庫決定為準",
+  "by": "",
+  "at": "2026-11-25T03:39:26.493Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Assumption confirmed: R-010, TC-008 unchanged (REQ-004)"
+ },
+ "Q-7": {
+  "question": "[PMF:pm-3-pc-flow; KC#d9497315c276] Figma ⑦ says Enhance comes back after a settings change or Replace Video; the KC spec adds Trim (PM 2026-10-21). Assumption: Trim counts too (R-044).",
+  "answer": "目前假設沒錯",
+  "by": "",
+  "at": "2026-11-25T03:58:28.189Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Assumption confirmed: R-044, TC-094 unchanged (REQ-004)"
+ },
+ "Q-9": {
+  "question": "[KC:settings] R-070 to R-077 come from Knowledge Center documents written from the code by a schedule (「未經人確認」), not from an approved spec or a person's decision. Assumption: their rows record what the site does; a difference from them is not a bug by itself and goes to PM for a decision (AGENTS.md › Visible defects and open questions).",
+  "answer": "不用管這部份",
+  "by": "",
+  "at": "2026-11-25T03:58:28.189Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "R-070 – R-077 held; TC-121, TC-122, TC-125 – TC-127 left out of the table (REQ-004)"
+ },
+ "Q-10": {
+  "question": "[KC#dfed049fda18] Cancelling while the job is processing: whether the backend can stop and whether credits come back is not decided (RD). Assumption: no row cancels a processing job.",
+  "answer": "先跳過",
+  "by": "",
+  "at": "2026-11-25T03:58:28.189Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Skipped: no row cancels a processing job (REQ-004)"
+ },
+ "Q-11": {
+  "question": "[KB: KP-054] The Design file has a 「Video Enhancer_light」 page, so the room is taken as a Light Mode page. Assumption: R-101's row checks every element light; exact colours wait for the Design read (Q-8).",
+  "answer": "照你假設",
+  "by": "",
+  "at": "2026-11-25T05:58:27.319Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "Confirmed: the room is a Light Mode page; R-101 stands (REQ-006)"
+ },
+ "Q-12": {
+  "question": "[KB: KP-061] Which site languages Video Enhancer ships in, and whether a translation sheet exists, is not stated (MUI test not set up). Assumption: R-103's row checks /tw/ only; a full MUI section follows the answer (mui.md).",
+  "answer": "ui先不用看",
+  "by": "",
+  "at": "2026-11-25T05:58:27.319Z",
+  "platform": "web",
+  "status": "done",
+  "resolution": "UI languages not checked now: R-103 held, no MUI section (REQ-006)"
+ }
+}

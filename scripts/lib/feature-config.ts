@@ -60,10 +60,24 @@ export type ProductConfig = {
   name: string;
   ios?: { bundle_id: string; testflight_name?: string; ecl_product?: string };
   android?: { package: string; ecl_product?: string };
+  // A website (MyEdit…), run in Chrome by device-web.ts (user, 2026-11-24): one base URL per environment, the default
+  // environment, optional JS that returns the deployed build (shown by `build`), and the viewport the run uses.
+  web?: { ecl_product?: string; base_urls: Record<string, string>; default_env?: string; build_js?: string; viewport?: { width: number; height: number };
+    // `credits` (device-web.ts): the account menu button that shows the balance, the balance pattern, and the credit
+    // ledger page per environment (run.md step 8 on the web)
+    credits?: { menu_id: string; pattern?: string; ledger_urls?: Record<string, string> } };
+  // Which Figma MCP server reads each spec file (README › Figma). Default: design → figma-design (qa-dm), pm / mx →
+  // figma-pm (qa1). MyEdit and MyEdit Biz read every file as qa-dm (user, 2026-11-25).
+  figma?: { servers?: Partial<Record<'design' | 'pm' | 'mx', string>> };
 };
 export function loadProductConfig(feature: string): ProductConfig | null {
   const p = join(LIBRARY, feature.split('/')[0], 'product.json');
   return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : null;
+}
+/** The Figma MCP server for a spec file's role (design / pm / mx) of this feature's product. */
+export function figmaServer(feature: string, role: string): string {
+  const own = loadProductConfig(feature)?.figma?.servers?.[role as 'design' | 'pm' | 'mx'];
+  return own ?? (role === 'design' ? 'figma-design' : role === 'pm' || role === 'mx' ? 'figma-pm' : '(unknown: add the file to figma-frames.json files)');
 }
 export const productForRunDir = (runDir: string) => { const f = featureOfRunDir(runDir); return f ? loadProductConfig(f) : null; };
 // A required product value, else stop with what to set: the run folder's product.json or the CASEBOOK_<env> variable.

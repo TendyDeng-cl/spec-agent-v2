@@ -19,7 +19,8 @@ and look at the tile images where layout, arrows or states matter.**
    `node scripts/spec-boards.ts <feature> <date> [--jobs 3] [--board <id>] [--scale 1.5]`
    For each board it renders 1600 × 1000 pt tiles at 1.5× in grayscale with MuPDF (`render-tiles.ts`, which draws the
    board in large strips and slices them, because every replay of a huge Figma page costs ~30 s), OCRs the tiles with
-   macOS Vision in English + Traditional Chinese + Japanese (`ocr-tiles.swift`), and writes
+   macOS Vision in English + Traditional Chinese + Japanese (`ocr-tiles.swift`; on Windows the built-in OCR with the
+   installed language packs, `ocr-windows.ps1` through `lib/ocr.ts`, README › Windows OCR languages), and writes
    `specs/<date>/extracted/boards/<id>.md`: the board's text in reading order with canvas coordinates. Tiles stay in
    `boards/<id>/tiles/` (local only). Re-running skips finished steps. Expect about 45–75 min for a 230 MB PM file with `--jobs 3` (10/21: 48 min for 14 boards; the main-flow board alone took 48 min), so run it in the background.
    Do not use macOS Preview/Quick Look/CoreGraphics or pdf.js to render these files: they draw them blank or crash.
@@ -92,7 +93,9 @@ and look at the tile images where layout, arrows or states matter.**
 10. **Inventory every screen, control and arrow from Figma (user, 2026-10-28, REQ-038).** The run must press every
    tappable element the spec draws and walk every arrow, and the coverage page proves it.
    - **Accounts and servers.** The Design file is read through the `figma-design` server (qa-dm, Dev seat), the PM and
-     MX files through `figma-pm` (qa1; qa-dm only has a View seat on PM). Both are in the repo's `.mcp.json` (Codex:
+     MX files through `figma-pm` (qa1; qa-dm only has a View seat on PM). MyEdit and MyEdit Biz follow the same split
+     (user, 2026-11-25: qa-dm's View seat hit the call limit after two reads of the MyEdit PM file; `product.json` ›
+     `figma.servers` can route a product's files otherwise, and `figma-check.ts` prints the server it uses). Both are in the repo's `.mcp.json` (Codex:
      same names under `mcp_servers`). `whoami` on the server before its first read; stop for the user if it names the
      wrong account. If a server is absent, pending approval, needs auth or names the wrong account, never read through
      another Figma tool: offer the sign-in or **PDF-only** (*No Figma access* below). For the sign-in, open a Terminal

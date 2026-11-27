@@ -1,0 +1,47 @@
+{
+ "schema_version": "ebug_form_contract/v3",
+ "expected": {
+  "validationStage": "draft",
+  "product": "MyEdit",
+  "version": "5.11.0",
+  "productId": "274",
+  "templateId": "23404",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "featureName": "Pricing(Compare All Plans)",
+  "bugBelong": "RD",
+  "affectedLanguages": [],
+  "allowNote": true,
+  "requiresSpec": false,
+  "requiresFixture": false,
+  "priorityBefore": "N/A",
+  "attachments": [
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_Pricing_Video_Tools_no_Video_Enhancer.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   }
+  ]
+ },
+ "live": {
+  "productId": "274",
+  "templateId": "23404",
+  "version": "5.11.0",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "bugSource": "QA",
+  "bugBelong": "RD",
+  "severity": "Must Fix",
+  "priority": "N/A",
+  "reproduceOut": "3",
+  "reproduceTimes": "3",
+  "previousBuild": "Unknown",
+  "shortDescription": "MyEdit 5.11.0 - [AIAgent]Pricing(Compare All Plans): Video Tools lists Video Restoration but not Video Enhancer",
+  "description": "Repro Steps:\n1. Open demo server > open Pricing.\n2. Open Compare All Plans > read the Video Tools rows.\n\nResult:\nVideo Restoration is listed, but Video Enhancer is missing from Video Tools. (ref to attachment)\n\nExpect Result:\nVideo Tools should list both Video Enhancer and Video Restoration.\n\nNote:\nSpec: Video Enhancer V2 > User Flow > Cross-tool links > Pricing page\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+  "attachments": [
+   "Highlight_Pricing_Video_Tools_no_Video_Enhancer.png"
+  ],
+  "createButtonPresent": true,
+  "bugCodePresent": false
+ }
+}

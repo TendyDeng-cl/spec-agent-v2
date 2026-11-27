@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-25T09:15:15.273Z",
+  "env": "demo",
+  "url": "https://mauth-stage.cyberlink.com/auth/login?accessURLIncludeDomain=https%3A%2F%2Fstage2.cyberlink.com%2Faccount%2Fcredits",
+  "signedIn": false,
+  "balance": null,
+  "rows": [],
+  "texts": [
+    "登入",
+    "電子郵件地址",
+    "mxphoto03+2gb@gmail.com",
+    "密碼",
+    "還不是會員嗎？",
+    "立即註冊",
+    "或",
+    "本網站受reCAPTCHA保護，並適用Google 和 。",
+    "隱私政策",
+    "服務條款",
+    "我們使用 Cookie 以改善您在網站上的體驗，用於個人化內容、廣告，以及分析網站流量。 詳細資訊",
+    "關閉",
+    "詳細資訊",
+    "詳細資訊, Opens the preference center dialog"
+  ]
+}

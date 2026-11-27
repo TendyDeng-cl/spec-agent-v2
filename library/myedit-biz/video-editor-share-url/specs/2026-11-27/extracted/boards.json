@@ -1,0 +1,42 @@
+{
+  "source": "figma+knowledge-center",
+  "file": "3GnLdOiX9G5NH27l1ltqVr",
+  "page": "6002:7",
+  "boards": [
+    {
+      "id": "pm-index",
+      "title": "26’ 11/E Share Project URL",
+      "node": "6531:156549"
+    },
+    {
+      "id": "pm-add-share-option",
+      "title": "Share Project URL - Add Share Project Option",
+      "node": "6545:62731"
+    },
+    {
+      "id": "pm-user-a-copy-link",
+      "title": "User A Copy Shared Link Flow",
+      "node": "6545:64349"
+    },
+    {
+      "id": "pm-user-b-receive",
+      "title": "User B (Free & Audio Pro User) Receive Share Link Flow",
+      "node": "6545:67400"
+    },
+    {
+      "id": "pm-user-c-receive",
+      "title": "User C (Creator Pro & Studio Pro User) Receive Share Link Flow",
+      "node": "6545:75010"
+    },
+    {
+      "id": "pm-my-projects-share",
+      "title": "Copy Project Link from My Projects",
+      "node": "6545:78360"
+    },
+    {
+      "id": "kc-spec",
+      "title": "KC spec (myedit-biz/features/video-editor-share-project-url.md)",
+      "node": null
+    }
+  ]
+}

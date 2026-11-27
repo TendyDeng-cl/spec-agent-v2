@@ -1,0 +1,576 @@
+ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Any page with the top menu","1. Hover the top menu 「Video Tools」
+2. Click 「Video Enhancer」","The menu item 「Video Enhancer」 carries the 「Enhanced」 tag, not 「New」
+The page opens at /en/video-editor/video-enhancer (SEO page) or the room /video-editor/video-enhancer/edit",P1,"R-001, R-008",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-002,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Home (/en/home)","1. Look at Home › Popular Tools
+2. Find the Video Enhancer card","The Video Enhancer card carries 「Enhanced」, not 「New」",P2,R-008,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-003,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Any page with the top menu","1. Hover 「Video Tools」 and click 「HD Video Converter」
+2. Click 「Choose a file」 and pick the 480p 30 fps 7.3 s MP4 (fx-480p30)","Step 1: the address is /en/video-editor/hd-video-converter (its own SEO page)
+Step 2: the new Video Enhancer room opens with 「Video Enhancer Settings」
+Step 2: the defaults are Standard, HD, 1080P, Same as source (as from the Video Enhancer entry)",P1,"R-002, R-009","Q-3 answered (user, 2026-11-25, REQ-004): keep the SEO page URLs",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-004,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Any page with the top menu","1. Hover 「Video Tools」 and click 「AI Frame Interpolation」
+2. Click 「Choose a file」 and pick the 480p 30 fps 7.3 s MP4 (fx-480p30)","Step 1: the address is /en/video-editor/ai-frame-interpolation
+Step 2: the new Video Enhancer room opens with the same defaults as TC-003",P1,"R-003, R-009",Q-3 answered (REQ-004),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-005,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Any page with the top menu","1. Hover 「Video Tools」 and click 「Video Denoiser」
+2. Upload the 480p 30 fps 7.3 s MP4 (fx-480p30)","Step 2: the address is /en/video-editor/video-denoiser/edit
+Step 2: the room is Video Restoration with 「Video Restoration Settings」
+Step 2: Video Denoise is ticked",P1,"R-004, R-054, R-056",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-006,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Any page with the top menu","1. Hover 「Video Tools」 and click 「Video Brightener」
+2. Upload the 480p 30 fps 7.3 s MP4 (fx-480p30)","Step 2: the address is /en/video-editor/video-brightener/edit
+Step 2: the room is Video Restoration
+Step 2: Lighting Adjustment is ticked",P1,"R-005, R-056",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-007,Entries and rooms,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Signed in, on Home","1. Open the top menu 「Video Tools」 and read its items
+2. Open the Launcher tool list and the room's left tool menu
+3. Open /en/video-editor/video-restoration/edit and upload the 480p 30 fps 7.3 s MP4 (fx-480p30)","Step 1: no 「Video Restoration」 item in the top menu
+Step 2: 「Video Restoration」 is listed in the Launcher and the left tool menu
+Step 3: the Video Restoration room opens with Lighting Adjustment and Video Denoise ticked",P1,"R-006, R-007, R-056",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-008,SEO page and upload,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page (/en/video-editor/video-enhancer)","1. Read the upload box
+2. Click 「Choose a file」 and pick the 480p 30 fps 7.3 s MP4 (fx-480p30)
+3. Look at the room while the upload runs","Step 1: the box lists 「Supported file formats: MP4, MOV」, then 「Maximum file duration: 8 min」, then 「Maximum file size: 10 GB」
+Step 1: no resolution limit line
+Step 3: 「Processing...」 with a percentage and 「It may take a few seconds. Please don't leave this page.」
+Step 3: every setting and Enhance are disabled",P1,"R-010, R-011, R-012, R-013",Q-6: the Figma mockup still draws the resolution line,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-009,SEO page and upload,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Wait for the upload to finish
+2. Read the settings panel and the area above the preview","The panel title is 「Video Enhancer Settings」
+Mode: Standard, Professional
+Enhance Style: HD, Natural
+Output Resolution: Original, 720P, 1080P, 4K
+Frame Rate: Same as source
+「Replace Video」 and 「Trim Video」 above the preview
+Defaults: Standard, HD, 1080P, Same as source
+Every setting and Enhance are enabled",P1,"R-024, R-025, R-012",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-010,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick an AVI file (fx-avi)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Unsupported File Format」 / 「Only MP4 and MOV formats are supported. Please choose another video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-014, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-011,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick an MP4 over 10 GB (fx-10gb)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「File Size Too Large」 / 「This video exceeds the 10 GB file size limit. Please choose a smaller video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-015, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-012,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick a 2160p MP4 (fx-2160p)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Video Resolution Not Supported」 / 「This video exceeds the supported resolution limit (1440p). Please choose another video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-016, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-013,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Upload the 1440p 30 fps MP4 (fx-1440p)
+2. Open Output Resolution","Step 1: the room opens without an error
+Step 2: 720P and 1080P are disabled
+Step 2: Original and 4K are selectable
+Step 2: the default is 4K",P1,"R-016, R-025, R-026",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-014,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick a 192×96 MP4 (fx-192x96)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Video Resolution Not Supported」 / 「This video is below the minimum supported resolution (shorter side of 128 px). Please choose another video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-017, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-015,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page",1. Upload the 256×128 MP4 (fx-128short),"The room opens without an error
+Original is selectable",P2,"R-017, R-026",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-016,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick a 240 fps MP4 (fx-240fps)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Video Frame Rate Not Supported」 / 「This video exceeds the supported frame rate limit (120 fps). Please choose another video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-018, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-017,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Upload the 1080p 120 fps MP4 (fx-1080p120)
+2. Open Frame Rate","Step 1: the room opens without an error
+Step 2: only 「Same as source」 is listed",P1,"R-018, R-027",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-018,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick the MP4 with no readable frame rate (fx-nofps)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Unable to Use This Video」 / 「This video cannot be enhanced because it is missing required information, such as the frame rate. Try uploading a different video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-019, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-019,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Click 「Choose a file」 and pick an AV1 MP4 (fx-av1)
+2. Click 「Got it」","Step 1: after the upload finishes, a dialog 「Unsupported Format」 / 「This video contains an unsupported video codec. Please choose another video.」 with 「Got it」
+Step 2: the dialog closes and the video is not imported",P1,"R-020, R-078","Q-1 answered (user, 2026-11-25, REQ-004): the error shows after the upload, not on choosing the file",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-020,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Upload the MP4 with an unsupported audio codec (fx-badaudio)
+2. Click the dialog's button","Step 1: after the upload finishes, the old room's 「Audio Codec Not Supported」 or 「Audio Format Not Supported」 dialog shows
+Step 2: the video is not imported",P2,"R-021, R-078",Record which of the two dialogs shows and its text,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-021,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page","1. Upload the 8:20 MP4 (fx-8m20)
+2. Look at the Trimmer that opens
+3. Drag the end handle past 8:00
+4. Click 「Trim」","Step 2: the Trimmer opens instead of an error
+Step 2: bottom left 「Standard mode supports videos up to 8 minutes long. Please trim your video to continue.」
+Step 3: the selection stops at 8:00
+Step 4: the room opens with the trimmed video (8:00 or less)",P1,"R-022, R-038, R-039",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-022,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page",1. Upload the 8:00 MP4 (fx-8m00),"The room opens with the video, no Trimmer and no error",P1,R-022,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-023,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page",1. Upload the HEVC MOV (fx-hevc-mov),"The room opens with the video, no error",P1,"R-013, R-020",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-024,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page",1. Drag the 480p 30 fps 7.3 s MP4 (fx-480p30) onto the upload box,The room opens and the video uploads as with Choose a file,P2,R-011,Drag and drop needs the OS file dialog or a real drop: run by hand or park (run-web.md),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-025,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer SEO page",1. Click a sample video,The room opens with the sample video,P2,R-011,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-026,Input limits,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Trimmer cannot be used (service paused; RD switch needed)",1. Upload the 8:20 MP4 (fx-8m20),「Video Too Long」 / 「This video exceeds the 8-minute length limit. Please choose a shorter video.」 with 「Got it」,P3,R-023,Needs a way to make the Trimmer unavailable: Blocked --as test-data until RD gives one,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-027,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)",1. Open Output Resolution,"Original, 720P, 1080P and 4K are all selectable
+The default is 1080P",P1,"R-026, R-025",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-028,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 720p 30 fps MP4 (fx-720p30) uploaded (web/fixtures.md)",1. Open Output Resolution,"720P is disabled
+Original, 1080P and 4K are selectable
+The default is 1080P",P1,"R-026, R-025",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-029,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 60 fps MP4 (fx-1080p60) uploaded (web/fixtures.md)",1. Open Output Resolution,"720P and 1080P are disabled
+Original and 4K are selectable
+The default is 4K",P1,"R-026, R-025",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-030,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 50, 60, 100, 120 fps
+Not listed: none",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-031,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 50 fps MP4 (fx-1080p50) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 60, 100, 120 fps
+Not listed: 50 fps",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-032,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 60 fps MP4 (fx-1080p60) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 100, 120 fps
+Not listed: 50, 60 fps",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-033,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 100 fps MP4 (fx-1080p100) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 120 fps
+Not listed: 50, 60, 100 fps",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-034,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 24 fps MP4 (fx-1080p24) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 50, 60 fps
+Not listed: 100, 120 fps (over four times 24 fps)",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-035,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 29.97 fps MP4 (fx-1080p2997) uploaded (web/fixtures.md)",1. Open Frame Rate,"Listed: Same as source, 50, 60, 100, 120 fps
+Not listed: none (29.97 rounds to 30)",P1,R-027,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-036,Settings panel,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Hover the ⓘ of Mode
+2. Hover the ⓘ of Enhance Style
+3. Hover the ⓘ of Output Resolution
+4. Hover the ⓘ of Frame Rate","Step 1: 「Standard: Balanced enhancement. Works well for most videos. Professional: Stronger restoration for older or badly compressed footage. Takes much longer to process. Supports videos up to 2:30.」
+Step 2: 「HD: A crisper, more detailed picture. Best when footage looks soft or blurry. Natural: A gentler result that stays true to the original. Best when footage already looks good.」
+Step 3: 「Resolution adjustment is supported up to 4K. Options lower than or equal to the original resolution are unavailable.」
+Step 4: 「Frame rate adjustment is supported up to 120 fps.」",P2,R-028,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-037,Price,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)",1. Hover the ⓘ beside the price under Enhance,"「Total credits depend on video duration and selected mode, resolution, and frame rate.」",P2,R-031,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-038,Price,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Read the price on Enhance
+2. Switch Enhance Style to Natural
+3. Switch back to HD",Steps 2–3: the price on Enhance and the line under it do not change,P1,R-029,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-039,Price,"1. Chrome at 1440 × 900 on MyEdit demo, signed in as the Free / empty-state test account with too few credits
+2. The Video Enhancer room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded",1. Read Enhance and the line under it,"Enhance shows the normal credit price (Standard 1080P Same as source: 16)
+No 「1 Free Trial」 anywhere",P1,R-034,Free account (myedit-test-accounts); its own Chrome profile,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-040,Price,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1080p 60 fps MP4 (fx-1080p60, 5.0 s) uploaded (web/fixtures.md)","1. Set Standard, Original, Same as source and read the price
+2. Set Professional, Original, Same as source and read the price","Step 1: 10 credits, 「Enhance 5.00 seconds (2 credits/sec)」 (Original = 1080p tier, Same as source = ≤60 tier)
+Step 2: 40 credits, 「Enhance 5.00 seconds (8 credits/sec)」",P1,"R-033, R-030, R-032",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-041,Price,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1440p 30 fps MP4 (fx-1440p, 5.0 s) uploaded (web/fixtures.md)","1. Set Standard, Original, Same as source and read the price","15 credits, 「Enhance 5.00 seconds (3 credits/sec)」 (Original of a 1440p source = 4K tier)",P1,"R-033, R-030, R-032",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-042,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution Original, Frame Rate Same as source (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P1,"R-030, R-032, R-033","Combination Standard · Original · Same as source; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-043,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution Original, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · Original · 50 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-044,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution Original, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · Original · 60 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-045,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution Original, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · Original · 100 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-046,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution Original, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · Original · 120 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-047,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 720P, Frame Rate Same as source (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P1,"R-030, R-032, R-033","Combination Standard · 720P · Same as source; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-048,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 720P, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 720P · 50 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-049,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 720P, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 720P · 60 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-050,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 720P, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 720P · 100 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-051,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 720P, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 8 credits
+Under it: 「Enhance 7.30 seconds (1 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 720P · 120 fps; 8 s (7.3 rounded up) × 1; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-052,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 1080P, Frame Rate Same as source (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P1,"R-030, R-032, R-033","Combination Standard · 1080P · Same as source; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-053,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 1080P, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 1080P · 50 fps; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-054,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 1080P, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 1080P · 60 fps; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-055,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 1080P, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 1080P · 100 fps; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-056,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 1080P, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 1080P · 120 fps; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-057,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 4K, Frame Rate Same as source (Enhance Style HD)","Enhance shows 24 credits
+Under it: 「Enhance 7.30 seconds (3 credits/sec)」",P1,"R-030, R-032, R-033","Combination Standard · 4K · Same as source; 8 s (7.3 rounded up) × 3; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-058,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 4K, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 48 credits
+Under it: 「Enhance 7.30 seconds (6 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 4K · 50 fps; 8 s (7.3 rounded up) × 6; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-059,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 4K, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 48 credits
+Under it: 「Enhance 7.30 seconds (6 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 4K · 60 fps; 8 s (7.3 rounded up) × 6; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-060,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 4K, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 4K · 100 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-061,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Standard, Output Resolution 4K, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Standard · 4K · 120 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-062,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution Original, Frame Rate Same as source (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · Original · Same as source; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-063,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution Original, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 32 credits
+Under it: 「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · Original · 50 fps; 8 s (7.3 rounded up) × 4; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-064,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution Original, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 32 credits
+Under it: 「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · Original · 60 fps; 8 s (7.3 rounded up) × 4; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-065,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution Original, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · Original · 100 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-066,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution Original, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · Original · 120 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-067,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 720P, Frame Rate Same as source (Enhance Style HD)","Enhance shows 16 credits
+Under it: 「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 720P · Same as source; 8 s (7.3 rounded up) × 2; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-068,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 720P, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 32 credits
+Under it: 「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 720P · 50 fps; 8 s (7.3 rounded up) × 4; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-069,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 720P, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 32 credits
+Under it: 「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 720P · 60 fps; 8 s (7.3 rounded up) × 4; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-070,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 720P, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 720P · 100 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-071,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 720P, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 720P · 120 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-072,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 1080P, Frame Rate Same as source (Enhance Style HD)","Enhance shows 32 credits
+Under it: 「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 1080P · Same as source; 8 s (7.3 rounded up) × 4; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-073,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 1080P, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 1080P · 50 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-074,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 1080P, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 64 credits
+Under it: 「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 1080P · 60 fps; 8 s (7.3 rounded up) × 8; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-075,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 1080P, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 128 credits
+Under it: 「Enhance 7.30 seconds (16 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 1080P · 100 fps; 8 s (7.3 rounded up) × 16; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-076,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 1080P, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 128 credits
+Under it: 「Enhance 7.30 seconds (16 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 1080P · 120 fps; 8 s (7.3 rounded up) × 16; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-077,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 4K, Frame Rate Same as source (Enhance Style HD)","Enhance shows 96 credits
+Under it: 「Enhance 7.30 seconds (12 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 4K · Same as source; 8 s (7.3 rounded up) × 12; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-078,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 4K, Frame Rate 50 fps (Enhance Style HD)","Enhance shows 192 credits
+Under it: 「Enhance 7.30 seconds (24 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 4K · 50 fps; 8 s (7.3 rounded up) × 24; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-079,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 4K, Frame Rate 60 fps (Enhance Style HD)","Enhance shows 192 credits
+Under it: 「Enhance 7.30 seconds (24 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 4K · 60 fps; 8 s (7.3 rounded up) × 24; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-080,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 4K, Frame Rate 100 fps (Enhance Style HD)","Enhance shows 384 credits
+Under it: 「Enhance 7.30 seconds (48 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 4K · 100 fps; 8 s (7.3 rounded up) × 48; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-081,Price — every combination,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Mode Professional, Output Resolution 4K, Frame Rate 120 fps (Enhance Style HD)","Enhance shows 384 credits
+Under it: 「Enhance 7.30 seconds (48 credits/sec)」",P2,"R-030, R-032, R-033","Combination Professional · 4K · 120 fps; 8 s (7.3 rounded up) × 48; stage rates, demo only (Q-4, Q-5 answered, REQ-004); no generation",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-082,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 3:00 MP4 (fx-3m00) uploaded (web/fixtures.md)",1. Click Mode 「Professional」,"Professional is selected
+「Professional mode supports videos up to 2:30.」 shows in red under Mode
+Enhance is disabled",P1,R-036,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-083,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with the 3:00 MP4 (fx-3m00), Professional selected (red text shown)",1. Click Mode 「Standard」,"The red text disappears
+Enhance is enabled",P1,R-037,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-084,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with the 3:00 MP4 (fx-3m00), Professional selected (red text shown)",1. Click 「Replace Video」 and pick the 2:30 MP4 (fx-2m30),"The red text disappears
+Enhance is enabled",P1,R-037,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-085,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with the 2:30 MP4 (fx-2m30), Professional selected",1. Click 「Replace Video」 and pick the 3:00 MP4 (fx-3m00),"「Professional mode supports videos up to 2:30.」 shows in red under Mode
+Enhance is disabled",P1,"R-036, R-037",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-086,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with the 5:12 MP4 (fx-5m12), Professional selected (red text shown)","1. Click 「Trim Video」
+2. Drag the end handle as far right as it goes
+3. Type an End Time 3:00 past the Start Time
+4. Set a part of 2:30 or less and click 「Trim」","Step 1: bottom left 「Professional mode supports videos up to 2:30 long. Please trim your video to continue.」
+Step 2: the selection stops at 2:30
+Step 3: End Time becomes Start Time + 2:30
+Step 4: the red text disappears and Enhance is enabled",P1,"R-038, R-039, R-037",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-087,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with the 2:00 MP4 (fx-2m00), Professional selected",1. Click 「Trim Video」,The Trimmer opens with no bottom-left hint,P2,R-039,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-088,Professional length limit,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A video editing tool result of 8:20 offering 「Continue Editing」 into Video Enhancer","1. Click 「Continue Editing」 › Video Enhancer
+2. Trim to 8:00 or less and click 「Trim」","Step 1: the room opens with the Trimmer first (at most 8:00 selectable)
+Step 1: Enhance is not available yet
+Step 2: the room shows the trimmed clip and Enhance is enabled",P2,R-040,Which tool offers Continue Editing into Video Enhancer: find it once and name it in fixtures.md,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-089,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Standard, HD, 720P, Same as source
+2. Read the credit ledger (device-web credits ledger)
+3. Click 「Enhance」
+4. Wait for the job to finish in Recent Gen
+5. Read the credit ledger again
+6. Download the result and read its resolution and frame rate (ffprobe)","Step 1: Enhance shows 8 credits (1 credit/sec)
+Step 3: a job card appears in Recent Gen
+Step 3: under Recent Gen 「The generated videos can be found in My Library」 with 「My Library」 as a link
+Step 5: one new entry of -8 under MyEdit for the Video Enhancer job
+Step 6: 1280×720 (or 720 on the shorter side), 30 fps",P1,"R-041, R-046, R-047, R-030",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-090,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Standard, Natural, 4K, 120 fps
+2. Read the credit ledger (device-web credits ledger)
+3. Click 「Enhance」
+4. Wait for the job to finish in Recent Gen
+5. Read the credit ledger again
+6. Download the result and read its resolution and frame rate (ffprobe)","Step 1: Enhance shows 64 credits (8 credits/sec)
+Step 3: a job card appears in Recent Gen
+Step 3: under Recent Gen 「The generated videos can be found in My Library」 with 「My Library」 as a link
+Step 5: one new entry of -64 under MyEdit for the Video Enhancer job
+Step 6: 3840×2160 (4K on the shorter side), 120 fps",P1,"R-041, R-046, R-047",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-091,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Professional, HD, 1080P, 60 fps
+2. Read the credit ledger (device-web credits ledger)
+3. Click 「Enhance」
+4. Wait for the job to finish in Recent Gen
+5. Read the credit ledger again
+6. Download the result and read its resolution and frame rate (ffprobe)","Step 1: Enhance shows 64 credits (8 credits/sec)
+Step 3: a job card appears in Recent Gen
+Step 3: under Recent Gen 「The generated videos can be found in My Library」 with 「My Library」 as a link
+Step 5: one new entry of -64 under MyEdit for the Video Enhancer job
+Step 6: 1920×1080, 60 fps",P1,"R-041, R-046, R-047",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-092,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Standard, HD, Original, 50 fps
+2. Read the credit ledger (device-web credits ledger)
+3. Click 「Enhance」
+4. Wait for the job to finish in Recent Gen
+5. Read the credit ledger again
+6. Download the result and read its resolution and frame rate (ffprobe)","Step 1: Enhance shows 8 credits (1 credit/sec)
+Step 3: a job card appears in Recent Gen
+Step 3: under Recent Gen 「The generated videos can be found in My Library」 with 「My Library」 as a link
+Step 5: one new entry of -8 under MyEdit for the Video Enhancer job
+Step 6: the source's 854×480, 50 fps",P1,"R-041, R-046, R-047, R-033",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-093,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job from TC above has finished in Recent Gen","1. Click 「My Library」 under Recent Gen
+2. Open the Video Enhancer folder","Step 1: My Library opens
+Step 2: the result is in the Video Enhancer folder",P1,"R-043, R-041",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-094,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The room just finished a job for the uploaded video, settings unchanged","1. Look at Enhance
+2. Change Frame Rate
+3. Change it back and click 「Replace Video」 with the 480p 30 fps 7.3 s MP4 (fx-480p30)
+4. Use 「Trim Video」 to change the part and click 「Trim」","Step 1: Enhance is disabled
+Step 2: Enhance is enabled
+Step 3: Enhance is enabled
+Step 4: Enhance is enabled",P1,R-044,"Q-7 answered (user, 2026-11-25, REQ-004): Trim re-enables Enhance",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-095,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Play the preview, pause it and seek
+2. Use 「Trim Video」 and 「Replace Video」 once each","Preview, Trim and Replace work as in the original Video Enhancer",P2,R-045,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-096,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with no job yet for this account (empty Recent Gen)",1. Read Recent Gen before uploading,「Start by uploading a video to generate your video」,P3,R-042,Needs an account with no Video Enhancer results (Free / empty-state account),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-097,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job is running in Recent Gen","1. Go to Home
+2. Open My Library › Video Enhancer",The job is listed and finishes there,P2,R-043,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-099,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job is made to fail (fault input from RD or a policy-violating video)",1. Wait for the failure,"Recent Gen shows the failure with an understandable message
+The page does not reload, and the uploaded video and settings stay for a retry
+The credits are returned in the ledger",P2,"R-046, R-081",Needs a way to fail a job: Blocked --as test-data until found,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-100,Generate and result,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Settings set in the room with the 480p 30 fps 7.3 s MP4 (fx-480p30)","1. Leave the room for Home
+2. Come back to /en/video-editor/video-enhancer/edit",The room starts empty: no video and default settings,P3,R-045,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-101,Mobile web,"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The Video Enhancer SEO page","1. Upload the 480p 30 fps 7.3 s MP4 (fx-480p30)
+2. Look at the page during the upload","「Processing...」 with a percentage
+「It may take a few seconds. Please don’t leave this page.」
+The settings summary and Enhance are dimmed",P1,R-049,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-102,Mobile web,"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded",1. Read the settings summary and Enhance,"「Video Enhancer Settings」
+Mode | Standard
+Enhance Style | HD
+Output Resolution | 1080P
+Frame Rate | Same as source
+Enhance with credits and 「Enhance 7.30 seconds (2 credits/sec)」",P1,R-050,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-103,Mobile web,"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded","1. Open the edit panel
+2. Tap Frame Rate","Step 1: all options of the four settings, with 「Replace Video」 and 「Trim Video」 above
+Step 2: a bottom sheet lists Same as source, 50, 60, 100, 120 fps",P1,R-051,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-104,Mobile web,"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded, Standard 720P","1. Tap Enhance
+2. Wait","Step 1: 「Creating Your Video」 with a percentage and 「Please do not close this window or click the Back button on your browser.」
+Step 2: the page goes to My Library › Video Enhancer",P1,R-052,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-105,Mobile web,"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The room with the 3:00 MP4 (fx-3m00) uploaded","1. Open the edit panel and choose Professional
+2. Close the edit panel
+3. Choose Standard","Step 1: 「Professional mode supports videos up to 2:30.」 under Mode
+Step 2: summary 「Mode | Professional」 with 「Video longer than 2:30」 in red
+Step 2: Enhance is disabled
+Step 3: both red texts disappear and Enhance is enabled",P1,R-053,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-106,Video Restoration (old room),"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. /en/video-editor/video-restoration/edit with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded",1. Read the panel title and options,"「Video Restoration Settings」
+Options in order: Lighting Adjustment, Video Denoise, Video Upscaler, Frame Interpolation",P1,"R-054, R-055",,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-107,Video Restoration (old room),"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Restoration panel open","1. Click the panel's Back button
+2. Click 「Video Restoration」 in the left tool menu","Step 1: the panel closes
+Step 2: the four-option panel opens again",P1,R-057,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-108,Video Restoration (old room),"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Restoration room with the 480p 30 fps 7.3 s MP4 (fx-480p30), Lighting Adjustment ticked","1. Generate
+2. Open My Library",The result is in My Library › Video Restoration,P2,R-058,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-109,Video Restoration (old room),"1. Chrome window 375 × 812 (device-web window 375 812) on MyEdit demo, signed in as the default test account
+2. The Video Restoration room with the 480p 30 fps 7.3 s MP4 (fx-480p30)",1. Generate,The page goes straight to My Library › Video Restoration,P2,R-058,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-110,My Library,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. My Library › Video","1. Open the Video Enhancer folder
+2. Read its note","「Results from the new Video Enhancer are saved here. For results from the original Video Enhancer, go to Video Restoration.」",P2,R-059,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-111,My Library,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. My Library › Video
+3. The account has results from the original Video Enhancer","1. Look at the Video Restoration folder
+2. Hover its ⓘ","Step 1: 「(Formerly Video Enhancer)」 under the name and the earlier results inside
+Step 2: 「The original Video Enhancer has been renamed to Video Restoration. Your previous results are still here. Results from the new Video Enhancer are saved in the Video Enhancer folder.」",P2,R-060,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-112,My Library,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)","1. Open /en/cloud/library/video/video-enhancer
+2. Open /en/cloud/library/video/video-restoration","Step 1: the new Video Enhancer folder
+Step 2: the Video Restoration folder",P2,R-061,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-113,Emails,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job has just finished","1. Open the account's mailbox
+2. Click 「Access Your Video Enhancer」","Step 1: 「Your Video Enhancer result is ready!」 with 「Your enhanced video is ready! Click the button below to view the results and start using your video.」
+Step 2: My Library › Video Enhancer opens",P2,R-062,Mailbox of the default account (Outlook),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-114,Emails,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job has failed",1. Open the account's mailbox,"「Your Video Enhancer result failed to generate.」
+Its body says 「…content that violates our policy, or temporary server issues…」 and names My Library › Video Enhancer",P3,R-063,Blocked --as test-data until a job can be failed,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-115,Emails,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Restoration job has just finished","1. Open the account's mailbox
+2. Click 「Access Your Video Restoration」","Step 1: 「Your Video Restoration result is ready!」
+Step 2: My Library › Video Restoration opens",P3,R-064,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-116,Other tools,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. MyEdit Agent (Home › Agent)","1. Attach the 480p 30 fps 7.3 s MP4 (fx-480p30) and ask 「Upscale this video to 4K and make it smoother」
+2. Attach the 8:20 MP4 (fx-8m20) and ask the same","Step 1: the Agent completes it with Video Enhancer in Standard mode
+Step 2: the Agent asks to trim the video first",P2,R-065,Spends credits; Agent answers vary: judge the tool and mode it names,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-117,Other tools,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A 60 fps Video Enhancer result in My Library","1. Open it in Video Editor (Open in Editor)
+2. Switch to another clip and back","Step 1: a toast 「This 60 fps video will export at 30 fps. Your original is unchanged.」 for about 3 s
+Step 2: no second toast",P2,R-066,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-118,Other tools,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)",1. Open the Pricing page,The video tools list 「Video Enhancer」 and 「Video Restoration」,P3,R-067,,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-119,Knowledge Center rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Standard, HD, 720P, Same as source
+2. Read the credit ledger
+3. Click 「Enhance」
+4. While the upload dialog is still running, read the credit ledger again",Step 4: the -8 entry for the job is already in the ledger before the upload finishes,P2,"R-068, R-046",RD answer #dfed049fda18; can share the generation of the first Generate row,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-120,Knowledge Center rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 3:00 MP4 (fx-3m00) uploaded (web/fixtures.md)","1. Set Standard, HD, 720P, Same as source and read the credit ledger
+2. Click 「Enhance」
+3. Cancel in the upload dialog while it uploads
+4. Read the credit ledger again 6 hours later","Step 3: the upload stops and no job appears in Recent Gen
+Step 3: nothing reports it as a failed generation (it shows as cancelled or simply stops)
+Step 4: the deducted credits are back (a refund entry of +180 or the balance restored)",P2,"R-069, R-080",RD answer #dfed049fda18: refund within 3–6 hours; record the time it arrived,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-128,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Start device-web record
+2. Upload the 480p 30 fps 7.3 s MP4 (fx-480p30) again with 「Replace Video」 and watch the percentage
+3. Set Standard 720P and click 「Enhance」
+4. Watch the job card in Recent Gen until it ends
+5. Stop the recording","Step 2: the percentage starts at 0 and never goes back
+Step 4: the job progress starts at 0, never goes back and ends done (or failed), never stuck processing",P2,R-079,"Product rule KP-007, KP-008 (library/myedit/knowledge; imported 2026-11-25); shares the generation of the first Generate row",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-129,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job is generating in Recent Gen","1. Click 「Replace Video」 and pick the 480p 30 fps 7.3 s MP4 (fx-480p30)
+2. Use 「Trim Video」 if it is enabled","Replace Video and Trim Video are disabled, or the running job still finishes with the video it started with",P2,R-082,Product rule KP-011 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-130,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A finished result from the first Generate row (fx-480p30, with audio)","1. Play the result in its preview
+2. Download it
+3. Play the download and read it with ffprobe
+4. Download it once more and play both","Step 3: same content, orientation, aspect ratio and length (about 7.3 s) as the preview
+Step 3: it has an audio track
+Step 3: the extension matches the format (MP4 → .mp4) and the name is not empty
+Step 4: both downloads play",P2,"R-083, R-085, R-086","Product rule KP-012, KP-014, KP-017, KP-070 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-131,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the portrait phone video with rotation metadata (fx-rotated, 1080×1920 shown, stored 1920×1080 + rotate 90) uploaded (web/fixtures.md)","1. Look at the preview
+2. Open 「Trim Video」
+3. Set Standard 720P, Enhance and download the result","Steps 1–3: the picture is upright everywhere: preview, Trimmer, result and download",P2,R-084,"Product rule KP-013, KP-069 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-132,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 5:12 MP4 (fx-5m12) uploaded (web/fixtures.md)","1. Click 「Trim Video」 and play
+2. Click the timeline near 3:00 while it plays
+3. Set the range 1:00 – 1:10 and play from 1:00","Step 2: the playhead jumps to about 3:00 and playback goes on from there
+Step 3: playback stops at 1:10",P2,R-087,Product rule KP-023 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-133,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Change Output Resolution to 4K
+2. Click the top menu 「Image Tools」 › any tool
+3. Choose to stay
+4. Reload the page (F5)
+5. Choose to leave","Step 2: a leave confirmation shows
+Step 3: the room stays with the video and 4K
+Step 4: the browser or the site asks first
+Step 5: the page leaves",P2,R-088,"Product rule KP-025, KP-026 (library/myedit/knowledge; imported 2026-11-25); the spec is silent: a missing warning goes to PM",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-134,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room with nothing uploaded",1. Click the top menu 「Image Tools」 › any tool,The page leaves with no unsaved-changes warning,P3,R-089,Product rule KP-027 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-135,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set Professional, Natural, 4K, 60 fps
+2. Set the window to 1000 × 900 (device-web window 1000 900)
+3. Set it back to 1440 × 900","Step 2: the mobile summary shows Professional, Natural, 4K, 60 fps
+Step 3: the panel shows the same settings",P2,R-090,Product rule KP-028 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-136,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Play the preview
+2. Click 「Enhance」 (Standard 720P)
+3. Play the preview again and click 「Replace Video」","Step 2: the preview pauses or stops
+Step 3: the preview pauses or stops",P3,R-091,Product rule KP-029 (library/myedit/knowledge; imported 2026-11-25); can share the generation of the first Generate row,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-137,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. A Video Enhancer job just started from the room","1. Open My Library › Video Enhancer while it processes
+2. Reload the page after it finishes","Step 1: the item shows processing
+Step 2: the item is still there and shows done
+Step 2: its thumbnail and length (about 0:07) belong to the result",P2,"R-092, R-093","Product rule KP-031, KP-032, KP-034, KP-068 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-138,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Look at the top right of the SEO page and of the room
+2. Read the account menu balance
+3. Enhance with Standard 720P and close nothing
+4. Read the account menu balance again without reloading","Step 1: 「Get Credits」 is at the top right on both pages
+Step 3: no credit-shortage dialog
+Step 4: the balance is 8 lower than in step 2",P2,"R-094, R-095","Product rule KP-038, KP-039, KP-040, KP-043 (library/myedit/knowledge; imported 2026-11-25); can share the first Generate row",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-139,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo, signed out (a fresh Chrome profile on its own port)
+2. The Video Enhancer room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded",1. Click 「Enhance」,"The site asks to sign in
+No job is sent and nothing is charged",P2,R-096,Product rule KP-041 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-140,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Home (/en/home)","1. Read the tool names in the Launcher
+2. Read them in the top menu 「Video Tools」
+3. Read them in the room's left tool menu
+4. Read them on the Pricing page","「Video Enhancer」 and 「Video Restoration」 are written the same everywhere they appear
+No place shows another tool's name for them",P3,R-097,Product rule KP-045 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-141,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 3:00 MP4 (fx-3m00) uploaded (web/fixtures.md)","1. Choose Professional (Enhance disabled) and click 「Enhance」
+2. Hover, tab to and select each setting option","Step 1: Enhance looks disabled and nothing happens
+Step 2: hover, focus, selected and disabled options each look different and stay readable",P3,R-098,"Product rule KP-050, KP-056 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-142,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Open the Frame Rate menu
+2. Open another settings menu or tooltip","Step 1: the menu opens right beside Frame Rate, does not cover it and shows every option (or scrolls)
+Step 2: the first menu closes
+Step 2: never two menus open at once",P3,R-099,"Product rule KP-051, KP-058 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-143,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Set the window to 1280 × 720
+2. Zoom the page to 150 %
+3. Hover each ⓘ","Steps 1–2: every setting, Enhance and Recent Gen can be reached, by scrolling if needed
+Step 3: no tooltip hides Enhance for good",P3,R-100,"Product rule KP-052, KP-053 (library/myedit/knowledge; imported 2026-11-25); reset zoom to 100 % after",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-144,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded (web/fixtures.md)","1. Open each settings menu and tooltip
+2. Open the Trimmer
+3. Click 「Enhance」 and watch the progress and the Recent Gen card
+4. Open and close a result preview
+5. Trigger one dialog (Replace Video with fx-avi)","Every element is light: menus, Trimmer, progress, cards, preview, dialog, toasts
+No dark flash when the preview closes
+Text and icons stay legible in every state, including disabled and processing
+Frames and dividers drawn in the design are still there",P3,R-101,"Product rule KP-054, KP-055, KP-057 (library/myedit/knowledge; imported 2026-11-25); Q-11; colours checked against the Design later",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-145,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. The Video Enhancer room (/en/video-editor/video-enhancer/edit) with the 1:00 MP4 (fx-1m00) uploaded (web/fixtures.md)","1. Play the preview to the end
+2. Open the Trimmer
+3. Enhance (Standard 720P) and read the duration on the Recent Gen card and in My Library","Every time code shows 01:00 at the end, never 00:60",P3,R-102,Product rule KP-060 (library/myedit/knowledge; imported 2026-11-25),new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-147,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo, signed in as the Free storage-full test account (own Chrome profile; storage already full, never filled by the run)
+2. The Video Enhancer room with the 480p 30 fps 7.3 s MP4 (fx-480p30) uploaded","1. Read My Library's storage (used / total)
+2. Click 「Enhance」
+3. Click 「Manage」","Step 2: the storage-full prompt shows with 「Generate Anyway」 and 「Manage」
+Step 3: the tool's album opens (My Library › Video Enhancer)",P2,R-104,"Product rule KP-065, KP-067 (library/myedit/knowledge; imported 2026-11-25)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-148,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo, signed in as the Free storage-full test account (own Chrome profile)
+2. The Video Enhancer room with the 480p 30 fps 7.3 s MP4 (fx-480p30), Standard 720P","1. Click 「Enhance」
+2. Click 「Generate Anyway」",Step 2: the job starts in Recent Gen and is charged as shown,P2,R-104,"Product rule KP-065, KP-068 (library/myedit/knowledge; imported 2026-11-25); record whether the result is saved (storage is full)",new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-149,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)","1. Open /en/video-editor/video-enhancer and read the browser tab title
+2. Do the same for /en/video-editor/video-enhancer/edit, /en/video-editor/hd-video-converter, /en/video-editor/ai-frame-interpolation and /en/video-editor/video-restoration/edit","Each tab title is readable and names its tool or page
+None shows a string key, 「undefined」 or another tool's title",P3,R-105,Product rule KP-074 (library/myedit/knowledge; imported 2026-11-25); screenshot the tab strip,new,"New table (PM Figma + KC spec, 2026-11-25)"
+TC-150,Product rules,"1. Chrome at 1440 × 900 on MyEdit demo (en), signed in as the default test account (Studio Pro, enough credits)
+2. Home (/en/home) and the public Home (signed out)","1. Compare the Video Enhancer card's thumbnail with every other tool card
+2. Do the same for Video Restoration",Neither card uses the same thumbnail as another tool,P3,R-106,Product rule KP-075 (library/myedit/knowledge; imported 2026-11-25); a shared thumbnail is a fail,new,"New table (PM Figma + KC spec, 2026-11-25)"

@@ -33,7 +33,9 @@ if (!groups.length) { console.error(`No ${ex}/figma-inventory-<group>.json: extr
 
 const hash = (s: string) => { let h = 0x811c9dc5; for (const c of s) { h ^= c.codePointAt(0)!; h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(16).padStart(8, '0').slice(0, 6); };
 const ANDROID = /pixel|android|galaxy/i;
-const platformOf = (name: string, w: number) => ANDROID.test(name) || [360, 384, 411, 412].includes(w) ? 'android' : 'ios';
+// Web frames (MyEdit and other websites, user 2026-11-24): a desktop-width frame or one named web/desktop/browser.
+const WEB = /(web|desktop|browser|pc)/i;
+const platformOf = (name: string, w: number) => WEB.test(name) || w >= 1024 ? 'web' : ANDROID.test(name) || [360, 384, 411, 412].includes(w) ? 'android' : 'ios';
 const kindOf = (name: string, label: string) =>
   /^imput$|^input|text ?field|search|ai input/i.test(name) ? 'input'
   : /toggle|switch|checkbox|radio/i.test(name) ? 'toggle'
@@ -300,5 +302,6 @@ console.log(JSON.stringify({
   controls: controls.length, by_kind: count(controls, c => c.kind),
   ios_required: new Set(controls.filter(c => c.platforms.includes('ios')).map(c => c.group)).size,
   android_required: new Set(controls.filter(c => c.platforms.includes('android')).map(c => c.group)).size,
+  web_required: new Set(controls.filter(c => c.platforms.includes('web')).map(c => c.group)).size,
   arrows: count(arrows, a => a.duplicate_of ? 'duplicate' : a.kind), pdf: Object.fromEntries(Object.entries(files).map(([k, f]) => [k, f.pdf ?? null])),
 }, null, 1));

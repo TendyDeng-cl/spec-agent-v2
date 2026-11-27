@@ -109,7 +109,7 @@ th{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color
 .lb .cap{color:#e9eef2;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;text-align:center}
 .lb .cap button{background:#26323b;color:#e9eef2;border-color:#3a4852}
 small.from{color:var(--ok);font-weight:600}
-a.chip.filed{color:var(--ok);text-decoration:none;border-color:currentColor}
+a.chip.filed{color:var(--ok);text-decoration:none;border-color:currentColor;white-space:normal;max-width:100%;overflow-wrap:anywhere}
 .filedbar{border:1px solid var(--ok);border-radius:10px;padding:10px 12px;color:var(--ok)}
 @media (max-width:560px){.strip img{height:130px}.head h3{flex-basis:100%}}
 @media (prefers-reduced-motion:reduce){.card{transition:none}}
@@ -124,47 +124,51 @@ a.chip.filed{color:var(--ok);text-decoration:none;border-color:currentColor}
 .strip,.bar{flex-wrap:wrap}
 table{max-width:100%}
 .tblwrap,.scrollx{overflow-x:auto;max-width:100%}
+#langsw{display:inline-flex;gap:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;justify-self:end}
+#langsw[hidden]{display:none}
+#langsw button{border:0;background:transparent;color:var(--ink);font:inherit;font-size:13px;padding:4px 12px;cursor:pointer;border-radius:0}
+#langsw button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
 </style>
 
 <div class="wrap">
   <header style="display:grid;gap:10px">
-    <div class="eyebrow">{{EYEBROW}}</div>
-    <h1>{{H1}}</h1>
-    <p class="lede">{{LEDE}}</p>
+    <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap"><div class="eyebrow">{{EYEBROW}}</div><div id="langsw" role="group" aria-label="Language" hidden><button type="button" data-l="zh">中文</button><button type="button" data-l="en">English</button></div></div>
+    <h1 id="h1">{{H1}}</h1>
+    <p class="lede" id="lede">{{LEDE}}</p>
     <dl class="facts">{{FACTS}}</dl>
   </header>
 
   <section class="panel" aria-labelledby="bd">
-    <h2 id="bd">Batch decisions</h2>
+    <h2 id="bd" data-zh="批次決定">Batch decisions</h2>
     <div class="decisions">
-      <label for="acct">Filing account (Creator)
+      <label for="acct"><span data-zh="送單帳號（Creator）">Filing account (Creator)</span>
         <input type="text" id="acct" class="pending" placeholder="ECL login, e.g. ETHAN_HSU">
-        <small>{{ACCT_NOTE}}</small>
+        <small data-zh="會成為每張單的 Creator。">{{ACCT_NOTE}}</small>
       </label>
-      <label for="tag">Source tag
+      <label for="tag"><span data-zh="來源標籤">Source tag</span>
         <input type="text" id="tag" class="pending" value="AIAgent">
-        <small>[AIAgent], as for every casebook batch.</small>
+        <small data-zh="[AIAgent]，每批 casebook 都一樣。">[AIAgent], as for every casebook batch.</small>
       </label>
       <label for="tr">TRCode
         <input type="text" id="tr" class="pending" value="{{TR}}">
-        <small>{{TR_NOTE}}</small>
+        <small data-zh="每張卡片都掛在這張 TR；下面一行說明它的來源。">{{TR_NOTE}}</small>
       </label>
       <div class="radios" role="radiogroup" aria-labelledby="mlab">
-        <span id="mlab" style="font-weight:600">Filing method</span>
-        <label><input type="radio" name="method" id="m-api" value="API" checked> API (new way) <small>ecl_if3.py create plus attachment upload, if the template is on IF3.</small></label>
-        <label><input type="radio" name="method" id="m-web" value="Browser form"> Browser form (old way) <small>ECL web form through the browser pane, every field by hand.</small></label>
+        <span id="mlab" style="font-weight:600" data-zh="送單方式">Filing method</span>
+        <label><input type="radio" name="method" id="m-api" value="API" checked> <span data-zh="API（新方式）">API (new way)</span> <small data-zh="範本在 IF3 時，用 ecl_if3.py 建單並上傳附件。">ecl_if3.py create plus attachment upload, if the template is on IF3.</small></label>
+        <label><input type="radio" name="method" id="m-web" value="Browser form"> <span data-zh="瀏覽器表單（舊方式）">Browser form (old way)</span> <small data-zh="在瀏覽器窗格開 ECL 網頁表單，每一欄手動填。">ECL web form through the browser pane, every field by hand.</small></label>
       </div>
     </div>
   </section>
 
   <section class="panel" aria-labelledby="tl">
-    <h2 id="tl">Where the run landed</h2>
+    <h2 id="tl" data-zh="這輪測試的結果">Where the run landed</h2>
     <div class="tally" id="tally"></div>
-    <p class="cal">{{CAL}}</p>
+    <p class="cal" id="cal">{{CAL}}</p>
     <div class="toolbar">
-      <button type="button" id="fileAll">File all</button>
-      <button type="button" id="holdAll">Hold all</button>
-      <button type="button" id="reset">Reset to proposal</button>
+      <button type="button" id="fileAll" data-zh="全部送出">File all</button>
+      <button type="button" id="holdAll" data-zh="全部暫緩">Hold all</button>
+      <button type="button" id="reset" data-zh="還原成建議">Reset to proposal</button>
     </div>
   </section>
 
@@ -177,27 +181,27 @@ table{max-width:100%}
   </section>
 
   <section class="panel" aria-labelledby="nf">
-    <h2 id="nf">Held, already filed, cited and not raised</h2>
-    <p class="cal" style="margin:0">Team rule (2026-10-21): no comments, no reopen, no reject on existing tickets.</p>
-    <div class="tbl"><table id="fxtbl"><thead><tr><th>Item</th><th>Outcome</th></tr></thead><tbody></tbody></table></div>
+    <h2 id="nf" data-zh="暫緩、已有人發、引用與不提出的項目">Held, already filed, cited and not raised</h2>
+    <p class="cal" style="margin:0" data-zh="團隊規則（2026-10-21）：已經存在的單不留言、不重開、不退回修正。">Team rule (2026-10-21): no comments, no reopen, no reject on existing tickets.</p>
+    <div class="tbl"><table id="fxtbl"><thead><tr><th data-zh="項目">Item</th><th data-zh="結果">Outcome</th></tr></thead><tbody></tbody></table></div>
   </section>
 
   <section class="panel" aria-labelledby="gp">
-    <h2 id="gp">Gaps you should know about</h2>
-    <p class="cal" style="margin:0">{{GAPS}}</p>
-    <div class="tbl"><table id="blk"><thead><tr><th>Case</th><th>Why it is Blocked</th></tr></thead><tbody></tbody></table></div>
+    <h2 id="gp" data-zh="你需要知道的缺口">Gaps you should know about</h2>
+    <p class="cal" style="margin:0" id="gaps">{{GAPS}}</p>
+    <div class="tbl"><table id="blk"><thead><tr><th data-zh="案例">Case</th><th data-zh="為什麼是 Blocked">Why it is Blocked</th></tr></thead><tbody></tbody></table></div>
   </section>
 
   <section class="panel" aria-labelledby="cd">
-    <h2 id="cd">Copy decisions</h2>
-    <div class="toolbar"><button type="button" class="primary" id="copy">Copy decisions</button><span id="copied" class="cal" role="status"></span></div>
+    <h2 id="cd" data-zh="複製決定">Copy decisions</h2>
+    <div class="toolbar"><button type="button" class="primary" id="copy" data-zh="複製決定">Copy decisions</button><span id="copied" class="cal" role="status"></span></div>
     <textarea id="out" readonly aria-label="Decisions table"></textarea>
   </section>
 </div>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Evidence">
   <img id="lbimg" alt="">
-  <div class="cap"><button type="button" id="lbprev">← Prev</button><span id="lbcap"></span><button type="button" id="lbnext">Next →</button><button type="button" id="lbclose">Close</button></div>
+  <div class="cap"><button type="button" id="lbprev" data-zh="← 上一張">← Prev</button><span id="lbcap"></span><button type="button" id="lbnext" data-zh="下一張 →">Next →</button><button type="button" id="lbclose" data-zh="關閉">Close</button></div>
 </div>
 
 <script>
@@ -207,6 +211,23 @@ const SEVC = {1:"var(--s1)",2:"var(--s2)",3:"var(--s3)",4:"var(--s4)",5:"var(--s
 const BELONGS = ["RD","PM","PC-Doc","PC-Art","Setup Kit","Marketing","RD-ECL"];
 const TYPES = ["Functional","UI","UX"];
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// Language (user, 2026-11-25): with DATA.zh the page opens in 中文; the eBug text itself (Short Description and the
+// description as filed) is never translated.
+let LANG = DATA.zh ? "zh" : "en";
+try { const l = localStorage.getItem("ebug-review-lang"); if (DATA.zh && (l === "zh" || l === "en")) LANG = l; } catch(e) {}
+const Z = () => LANG === "zh" && !!DATA.zh;
+const tx = (en, zh) => (Z() && zh) ? zh : en;
+const ez = (e, k) => (Z() && e.zh && e.zh[k]) ? e.zh[k] : e[k];
+function applyLang(){
+  document.documentElement.lang = Z() ? "zh-Hant" : "en";
+  document.querySelectorAll("[data-zh]").forEach(el => { if (el.dataset.en == null) el.dataset.en = el.textContent; el.textContent = Z() ? el.dataset.zh : el.dataset.en; });
+  for (const k of ["h1", "lede", "cal", "gaps"]) { const el = document.getElementById(k); if (!el) continue;
+    if (el.dataset.en == null) el.dataset.en = el.textContent; el.textContent = (Z() && DATA.zh[k]) ? DATA.zh[k] : el.dataset.en; }
+  const DT = {"Version":"版本", "Build No":"Build 編號", "Device":"裝置", "Account":"帳號", "TRCode":"TRCode"};
+  document.querySelectorAll(".facts dt").forEach(dt => { if (dt.dataset.en == null) dt.dataset.en = dt.textContent; dt.textContent = Z() ? (DT[dt.dataset.en] || dt.dataset.en) : dt.dataset.en; });
+  const sw = document.getElementById("langsw"); sw.hidden = !DATA.zh;
+  sw.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.l === (Z() ? "zh" : "en"))));
+}
 const proposal = () => Object.fromEntries(DATA.entries.map(e => [e.iss, {action:e.action, sev:e.sev, belong:e.belong, type:e.type, note:""}]));
 // Filing defaults from the newest earlier filed batch (scripts/ebug-defaults.ts) and this batch's own filing, if done.
 const DEF = (DATA.defaults && DATA.defaults.found) ? DATA.defaults : null;
@@ -222,8 +243,8 @@ function tally(){
   const fileN = d.filter(x => x.action === "file").length;
   const sev = n => d.filter(x => x.action === "file" && +x.sev === n).length;
   document.getElementById("tally").innerHTML =
-    `${DATA.meta.cases ? `<span class="chip"><b>${DATA.meta.cases}</b> ${esc(DATA.meta.round)} cases</span><span class="chip" style="color:var(--ok)"><b>${c.Pass||0}</b> pass</span><span class="chip s1"><b>${c.Fail||0}</b> fail</span><span class="chip"><b>${c.Blocked||0}</b> blocked</span>` : ""}` +
-    `<span class="chip"><b>${DATA.entries.length}</b> entries</span><span class="chip"><b>${fileN}</b> to file</span><span class="chip"><b>${DATA.entries.length - fileN}</b> on hold</span>` +
+    `${DATA.meta.cases ? `<span class="chip">${tx(`<b>${DATA.meta.cases}</b> ${esc(DATA.meta.round)} cases`, `${esc(DATA.meta.round)} 共 <b>${DATA.meta.cases}</b> 個案例`)}</span><span class="chip" style="color:var(--ok)"><b>${c.Pass||0}</b> ${tx("pass","通過")}</span><span class="chip s1"><b>${c.Fail||0}</b> ${tx("fail","失敗")}</span><span class="chip"><b>${c.Blocked||0}</b> ${tx("blocked","Blocked")}</span>` : ""}` +
+    `<span class="chip"><b>${DATA.entries.length}</b> ${tx("entries","張卡片")}</span><span class="chip"><b>${fileN}</b> ${tx("to file","要送")}</span><span class="chip"><b>${DATA.entries.length - fileN}</b> ${tx("on hold","暫緩")}</span>` +
     `<span class="chip s1">S1 <b>${sev(1)}</b></span><span class="chip s2">S2 <b>${sev(2)}</b></span><span class="chip s3">S3 <b>${sev(3)}</b></span>`;
 }
 
@@ -233,28 +254,28 @@ function card(e){
   el.className = "card" + (s.action === "hold" ? " held" : "");
   el.id = "e" + e.n;
   el.style.setProperty("--sevc", SEVC[s.sev]);
-  const chips = [`<span class="chip">${esc(e.iss)}</span>`, `<span class="chip">Reproduced ${e.out}/${e.times}</span>`,
+  const chips = [`<span class="chip">${esc(e.iss)}</span>`, `<span class="chip">${tx("Reproduced", "重現")} ${e.out}/${e.times}</span>`,
     ...e.cases.map(c => `<span class="chip">${esc(c)}</span>`),
-    e.dup ? `<span class="chip dup">Duplicate? ${esc(e.dup.code)}</span>` : "",
-    e.imgs.length ? "" : `<span class="chip dup">Evidence gap</span>`,
-    FILED && FILED.bugs[e.iss] ? `<a class="chip filed" href="https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/${esc(FILED.bugs[e.iss].code)}" target="_blank" rel="noopener">Filed ${esc(FILED.bugs[e.iss].code)} · sev ${esc(FILED.bugs[e.iss].sev)} · ${esc(FILED.bugs[e.iss].belong)} · ${esc(FILED.bugs[e.iss].files)} files</a>` : ""].join("");
+    e.dup ? `<span class="chip dup">${tx("Duplicate?", "可能重複")} ${esc(e.dup.code)}</span>` : "",
+    e.imgs.length ? "" : `<span class="chip dup">${tx("Evidence gap", "缺證據")}</span>`,
+    FILED && FILED.bugs[e.iss] ? `<a class="chip filed" href="https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/${esc(FILED.bugs[e.iss].code)}" target="_blank" rel="noopener">${tx("Filed", "已送出")} ${esc(FILED.bugs[e.iss].code)} · ${tx("sev", "嚴重度")} ${esc(FILED.bugs[e.iss].sev)} · ${esc(FILED.bugs[e.iss].belong)} · ${esc(FILED.bugs[e.iss].files)} ${tx("files", "個附件")}</a>` : ""].join("");
   el.innerHTML = `
-    <div class="head"><span class="fid">F-${e.n}</span><h3>${esc(e.title)}</h3></div>
+    <div class="head"><span class="fid">F-${e.n}</span><h3>${esc(ez(e, "title"))}</h3></div>
     <div class="chips">${chips}</div>
-    <p class="why">${esc(e.why)}</p>
+    <p class="why">${esc(ez(e, "why"))}</p>
     <div class="sd">${esc(e.short)}</div>
-    <details><summary>Repro steps, result and note as filed</summary><pre>${esc(e.desc)}</pre></details>
-    ${(e.logs||[]).map(l => `<details class="logbox"><summary>Log <span>${esc(l.name)}</span></summary><pre>${esc(l.text)}</pre></details>`).join("")}
+    <details><summary>${tx("Repro steps, result and note as filed", "送出的重現步驟、結果與 Note（原文，不翻譯）")}</summary><pre>${esc(e.desc)}</pre></details>
+    ${(e.logs||[]).map(l => `<details class="logbox"><summary>${tx("Log", "記錄")} <span>${esc(l.name)}</span></summary><pre>${esc(l.text)}</pre></details>`).join("")}
     <div class="strip">${e.imgs.map((im,i) => `<button type="button" data-n="${e.n}" data-i="${i}" aria-label="Open ${esc(im.name)}"><img src="${im.src}" alt="${esc(im.name)}" loading="lazy"><span>${i+1}/${e.imgs.length}</span></button>`).join("")}</div>
-    ${e.dup ? `<div class="dupbox"><b>Already in ECL:</b> ${esc(e.dup.code)} (${esc(e.dup.status)}). ${esc(e.dup.text)}</div>` : ""}
-    ${e.related ? `<div class="dupbox">${esc(e.related)}</div>` : ""}
-    <div class="myread"><b>My read</b> ${esc(e.note)}</div>
+    ${e.dup ? `<div class="dupbox"><b>${tx("Already in ECL:", "ECL 已有：")}</b> ${esc(e.dup.code)} (${esc(e.dup.status)}). ${esc(e.dup.text)}</div>` : ""}
+    ${e.related ? `<div class="dupbox">${esc((Z() && e.zh && e.zh.related) ? e.zh.related : e.related)}</div>` : ""}
+    <div class="myread"><b>${tx("My read", "我的看法")}</b> ${esc(ez(e, "note"))}</div>
     <div class="bar">
-      <label class="file"><input type="checkbox" id="f-${e.n}" ${s.action === "file" ? "checked" : ""}> File</label>
+      <label class="file"><input type="checkbox" id="f-${e.n}" ${s.action === "file" ? "checked" : ""}> ${tx("File", "送出")}</label>
       <div class="seg" role="group" aria-label="Severity">${[1,2,3,4,5].map(n => `<button type="button" data-sev="${n}" aria-pressed="${+s.sev === n}">${n}</button>`).join("")}</div>
-      <label>Owner <select id="b-${e.n}">${BELONGS.map(b => `<option ${b === s.belong ? "selected" : ""}>${b}</option>`).join("")}</select></label>
-      <label>Type <select id="t-${e.n}">${TYPES.map(t => `<option ${t === s.type ? "selected" : ""}>${t}</option>`).join("")}</select></label>
-      <label class="ctx" for="c-${e.n}"><span>Add context — what am I missing?</span><textarea id="c-${e.n}" rows="1">${esc(s.note)}</textarea></label>
+      <label>${tx("Owner", "歸屬")} <select id="b-${e.n}">${BELONGS.map(b => `<option ${b === s.belong ? "selected" : ""}>${b}</option>`).join("")}</select></label>
+      <label>${tx("Type", "類型")} <select id="t-${e.n}">${TYPES.map(t => `<option ${t === s.type ? "selected" : ""}>${t}</option>`).join("")}</select></label>
+      <label class="ctx" for="c-${e.n}"><span>${tx("Add context — what am I missing?", "補充說明：我漏了什麼？")}</span><textarea id="c-${e.n}" rows="1">${esc(s.note)}</textarea></label>
     </div>`;
   el.querySelector(`#f-${e.n}`).addEventListener("change", ev => { s.action = ev.target.checked ? "file" : "hold"; el.classList.toggle("held", !ev.target.checked); upd(); });
   el.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
@@ -297,44 +318,51 @@ for (const [id, k] of [["acct","acct"],["tag","tag"],["tr","tr"]]) {
   el.addEventListener("input", () => { st[k] = el.value.trim(); upd(); });
 }
 document.querySelectorAll('input[name="method"]').forEach(r => { r.checked = r.value === st.method; r.addEventListener("change", () => { st.method = r.value; upd(); }); });
-(function prefillNotes(){
+function prefillNotes(){
+  document.querySelectorAll("small.from, .filedbar").forEach(x => x.remove());
   const add = (el, txt) => { if (!el) return; const sm = document.createElement("small"); sm.className = "from"; sm.textContent = txt; el.appendChild(sm); };
   const fA = document.getElementById("f-acct"), fT = document.getElementById("f-tr");
   if (FILED) {
     const m = FILED.meta;
-    add(document.getElementById("acct").closest("label"), `Filed as ${m.creator} on ${m.filed_on}`);
-    add(document.getElementById("tag").closest("label"), `Filed with [${m.tag}]`);
-    add(document.getElementById("tr").closest("label"), `Filed on ${m.tr} (${m.version} build ${m.build})`);
-    add(document.querySelector(".radios"), `Filed via ${m.method}`);
-    fA.textContent = `${m.creator} (filed ${m.filed_on})`; fA.classList.remove("need");
-    fT.textContent = `${m.tr} (filed)`; fT.classList.remove("need");
+    add(document.getElementById("acct").closest("label"), tx(`Filed as ${m.creator} on ${m.filed_on}`, `${m.filed_on} 以 ${m.creator} 送出`));
+    add(document.getElementById("tag").closest("label"), tx(`Filed with [${m.tag}]`, `送出時用 [${m.tag}]`));
+    add(document.getElementById("tr").closest("label"), tx(`Filed on ${m.tr} (${m.version} build ${m.build})`, `掛在 ${m.tr}（${m.version} build ${m.build}）`));
+    add(document.querySelector(".radios"), tx(`Filed via ${m.method}`, `用 ${m.method} 送出`));
+    fA.textContent = tx(`${m.creator} (filed ${m.filed_on})`, `${m.creator}（${m.filed_on} 送出）`); fA.classList.remove("need");
+    fT.textContent = tx(`${m.tr} (filed)`, `${m.tr}（已送出）`); fT.classList.remove("need");
   }
   if (DEF) {
-    const c = FILED ? "" : " — confirm";
-    add(document.getElementById("acct").closest("label"), `Prefilled from ${DEF.from}${c}`);
-    add(document.getElementById("tag").closest("label"), `[${DEF.tag}] from ${DEF.from}${c}`);
-    add(document.getElementById("tr").closest("label"), DATA.meta.trNote);
-    add(document.querySelector(".radios"), `${DEF.method} from ${DEF.from}${c}`);
-    if (!FILED) { fA.textContent = `${DEF.creator} — from ${DEF.from}, confirm`; fT.textContent = `${DEF.tr} — build ${DEF.build}, confirm`; }
+    const c = FILED ? "" : tx(" — confirm", "，請確認");
+    add(document.getElementById("acct").closest("label"), tx(`Prefilled from ${DEF.from}${c}`, `沿用 ${DEF.from}${c}`));
+    add(document.getElementById("tag").closest("label"), tx(`[${DEF.tag}] from ${DEF.from}${c}`, `[${DEF.tag}] 沿用 ${DEF.from}${c}`));
+    add(document.getElementById("tr").closest("label"), tx(DATA.meta.trNote, DATA.zh && DATA.zh.trNote));
+    add(document.querySelector(".radios"), tx(`${DEF.method} from ${DEF.from}${c}`, `${DEF.method} 沿用 ${DEF.from}${c}`));
+    if (!FILED) { fA.textContent = tx(`${DEF.creator} — from ${DEF.from}, confirm`, `${DEF.creator}（沿用 ${DEF.from}，請確認）`); fT.textContent = tx(`${DEF.tr} — build ${DEF.build}, confirm`, `${DEF.tr}（build ${DEF.build}，請確認）`); }
   }
   if (FILED) {
     const codes = Object.entries(FILED.bugs).map(([iss, b]) => `${b.code} (${iss})`).join(", ");
-    document.querySelector("header").insertAdjacentHTML("beforeend", `<div class="filedbar" role="status"><b>Filed ${esc(FILED.meta.filed_on)}</b> by ${esc(FILED.meta.creator)} on ${esc(FILED.meta.tr)} via ${esc(FILED.meta.method)}, every bug read back: ${esc(codes)}</div>`);
+    document.querySelector("header").insertAdjacentHTML("beforeend", tx(`<div class="filedbar" role="status"><b>Filed ${esc(FILED.meta.filed_on)}</b> by ${esc(FILED.meta.creator)} on ${esc(FILED.meta.tr)} via ${esc(FILED.meta.method)}, every bug read back: ${esc(codes)}</div>`, `<div class="filedbar" role="status"><b>${esc(FILED.meta.filed_on)} 已送出</b>：由 ${esc(FILED.meta.creator)} 用 ${esc(FILED.meta.method)} 掛在 ${esc(FILED.meta.tr)}，每張都已讀回確認：${esc(codes)}</div>`));
   }
-})();
+}
 document.getElementById("fileAll").addEventListener("click", () => { DATA.entries.forEach(e => st.d[e.iss].action = e.dup ? "hold" : "file"); render(); });
 document.getElementById("holdAll").addEventListener("click", () => { DATA.entries.forEach(e => st.d[e.iss].action = "hold"); render(); });
 document.getElementById("reset").addEventListener("click", () => { st.d = proposal(); render(); });
 document.getElementById("copy").addEventListener("click", () => {
   const t = document.getElementById("out"), msg = document.getElementById("copied");
-  const ok = () => { msg.textContent = "Copied. Paste it back in the chat."; };
+  const ok = () => { msg.textContent = tx("Copied. Paste it back in the chat.", "已複製，貼回聊天室即可。"); };
   t.focus(); t.select(); let done = false; try { done = document.execCommand("copy"); } catch (e) {}
   if (done) { ok(); return; }
-  (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).then(ok, () => { msg.textContent = "This window does not allow copying (an app preview pane can block it; open the file in Safari or Chrome). The text is selected: press Cmd+C."; });
+  (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).then(ok, () => { msg.textContent = tx("This window does not allow copying (an app preview pane can block it; open the file in Safari or Chrome). The text is selected: press Cmd+C.", "這個視窗不允許複製（App 的預覽窗格可能擋住；請用 Chrome 或 Safari 開這個檔案）。文字已選取，請按 Ctrl+C。"); });
 });
 
-const ftb = document.querySelector("#fxtbl tbody");
-DATA.fixes.forEach(([c, w]) => ftb.insertAdjacentHTML("beforeend", `<tr><td class="mono">${esc(c)}</td><td>${esc(w)}</td></tr>`));
+function tables(){
+  const ftb = document.querySelector("#fxtbl tbody"); ftb.innerHTML = "";
+  DATA.fixes.forEach(([c, w]) => { const z = Z() && DATA.zh.fixes ? DATA.zh.fixes[String(c).split(" — ")[0]] : null;
+    const [c2, w2] = z ? z : [c, w]; ftb.insertAdjacentHTML("beforeend", `<tr><td class="mono">${esc(c2)}</td><td>${esc(w2)}</td></tr>`); });
+  const btb = document.querySelector("#blk tbody"); btb.innerHTML = "";
+  DATA.blocked.forEach(([k, why]) => { const w2 = (Z() && DATA.zh.blocked && DATA.zh.blocked[k]) || why;
+    btb.insertAdjacentHTML("beforeend", `<tr><td class="mono">${esc(k)}</td><td>${esc(w2)}</td></tr>`); });
+}
 (function(){
   const TD = DATA.doubts || []; if (!TD.length) return;
   document.getElementById("tdpanel").hidden = false;
@@ -353,14 +381,12 @@ DATA.fixes.forEach(([c, w]) => ftb.insertAdjacentHTML("beforeend", `<tr><td clas
   });
   upd();
 })();
-const btb = document.querySelector("#blk tbody");
-DATA.blocked.forEach(([k, why]) => btb.insertAdjacentHTML("beforeend", `<tr><td class="mono">${esc(k)}</td><td>${esc(why)}</td></tr>`));
 
 let lbE = null, lbI = 0;
 const lb = document.getElementById("lb");
 function openLb(n, i){ lbE = DATA.entries.find(e => e.n === n); lbI = i; showLb(); lb.hidden = false; document.getElementById("lbclose").focus(); }
 function showLb(){ const im = lbE.imgs[lbI]; document.getElementById("lbimg").src = im.src; document.getElementById("lbimg").alt = im.name;
-  document.getElementById("lbcap").textContent = `F-${lbE.n} · ${lbI+1} of ${lbE.imgs.length} · ${im.name}`; }
+  document.getElementById("lbcap").textContent = tx(`F-${lbE.n} · ${lbI+1} of ${lbE.imgs.length} · ${im.name}`, `F-${lbE.n} · 第 ${lbI+1}／${lbE.imgs.length} 張 · ${im.name}`); }
 const step = d => { lbI = (lbI + d + lbE.imgs.length) % lbE.imgs.length; showLb(); };
 document.getElementById("lbprev").onclick = () => step(-1);
 document.getElementById("lbnext").onclick = () => step(1);
@@ -368,5 +394,12 @@ document.getElementById("lbclose").onclick = () => { lb.hidden = true; };
 lb.addEventListener("click", ev => { if (ev.target === lb) lb.hidden = true; });
 document.addEventListener("keydown", ev => { if (lb.hidden) return; if (ev.key === "Escape") lb.hidden = true; if (ev.key === "ArrowLeft") step(-1); if (ev.key === "ArrowRight") step(1); });
 
+document.querySelectorAll("#langsw button").forEach(b => b.addEventListener("click", () => {
+  LANG = b.dataset.l; try { localStorage.setItem("ebug-review-lang", LANG); } catch(e) {}
+  applyLang(); render(); prefillNotes(); tables();
+}));
+applyLang();
 render();
+prefillNotes();
+tables();
 </script>

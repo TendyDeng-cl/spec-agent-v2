@@ -1,0 +1,117 @@
+TC-001 | Toolbars and entry | R-001 | 1. Click the main-track video fx-main on the timeline
+TC-002 | Toolbars and entry | R-002 | 1. Click the main-track photo fx-photo on the timeline
+TC-003 | Toolbars and entry | R-003, R-004 | 1. Click the Photo PiP fx-photo (on the canvas or its PiP clip)
+TC-004 | Toolbars and entry | R-005 | 1. Click the video PiP fx-pipvideo
+TC-005 | Toolbars and entry | R-006 | 1. Click fx-main on the timeline
+TC-006 | Toolbars and entry | R-007, R-027 | 1. Click the Photo PiP fx-photo
+TC-007 | Adjust panel and sliders | R-008 | 1. Click fx-main
+TC-008 | Adjust panel and sliders | R-009, R-010, R-011, R-012, R-013, R-014 | 1. Open Adjust for fx-main and read the six number boxes
+TC-009 | Adjust panel and sliders | R-009, R-016 | 1. Drag the 「Saturation」 knob all the way left
+TC-010 | Adjust panel and sliders | R-010, R-016 | 1. Drag the 「Hue」 knob all the way left
+TC-011 | Adjust panel and sliders | R-011, R-016 | 1. Drag the 「Temperature」 knob all the way left
+TC-012 | Adjust panel and sliders | R-012, R-016 | 1. Drag the 「Tint」 knob all the way left
+TC-013 | Adjust panel and sliders | R-013, R-016 | 1. Drag the 「Brightness」 knob all the way left
+TC-014 | Adjust panel and sliders | R-014, R-016 | 1. Drag the 「Contrast」 knob all the way left
+TC-015 | Adjust panel and sliders | R-015 | 1. Look at the six slider tracks at their defaults
+TC-016 | Adjust panel and sliders | R-016 | 1. Press the 「Saturation」 knob
+TC-017 | Adjust number input | R-017 | 1. Click the 「Brightness」 number box
+TC-018 | Adjust number input | R-017 | 1. Type 30 in the 「Contrast」 box
+TC-019 | Adjust number input | R-018, R-009 | 1. Type 150 in the 「Saturation」 box and press Enter
+TC-020 | Adjust number input | R-018, R-010 | 1. Type 250 in the 「Hue」 box and press Enter
+TC-021 | Adjust number input | R-018, R-011 | 1. Type 150 in the 「Temperature」 box and press Enter
+TC-022 | Adjust number input | R-018, R-012 | 1. Type 150 in the 「Tint」 box and press Enter
+TC-023 | Adjust number input | R-018, R-013 | 1. Type 150 in the 「Brightness」 box and press Enter
+TC-024 | Adjust number input | R-018, R-014 | 1. Type 150 in the 「Contrast」 box and press Enter
+TC-025 | Adjust number input | R-019 | 1. Clear the 「Tint」 box and press Enter
+TC-026 | Adjust number input | R-020, R-010 | 1. Click the 「Hue」 box
+TC-027 | Adjust number input | R-020, R-009 | 1. Click the 「Saturation」 box
+TC-028 | Reset, Undo and Redo | R-022 | 1. Look at 「Reset」
+TC-029 | Reset, Undo and Redo | R-021, R-025 | 1. Click 「Reset」
+TC-030 | Reset, Undo and Redo | R-023, R-025 | 1. Drag 「Saturation」 from 0 to 20, pausing a moment at 5, 10 and 15 be
+TC-031 | Reset, Undo and Redo | R-024 | 1. Type 33 in the 「Brightness」 box (typing 3, then 3)
+TC-032 | Reset, Undo and Redo | R-021, R-023, R-007 | 1. Drag 「Contrast」 to 50
+TC-033 | Adjust scope and selection | R-026 | Drag 「Saturation」 to 60
+TC-034 | Adjust scope and selection | R-026 | Type 40 in the 「Hue」 box and press Enter
+TC-035 | Adjust scope and selection | R-026 | Click 「Reset」
+TC-036 | Adjust scope and selection | R-026, R-007 | Drag 「Brightness」 to 50
+TC-037 | Adjust scope and selection | R-027 | 1. Open Adjust for fx-main and set 「Saturation」 to -100
+TC-038 | Adjust scope and selection | R-028 | 1. Put the playhead in the middle of fx-main
+TC-039 | Adjust scope and selection | R-028 | 1. Put the playhead inside fx-photo
+TC-040 | Adjust scope and selection | R-029 | 1. Select fx-photo and copy it (Ctrl+C or its More menu)
+TC-041 | Adjust scope and selection | R-030 | 1. Open Adjust for fx-main
+TC-042 | Adjust scope and selection | R-031 | 1. Click the text
+TC-043 | Adjust scope and selection | R-032 | 1. Click ✕ on the panel
+TC-044 | Adjust scope and selection | R-033 | 1. Turn on 「BG Blur」 for fx-main
+TC-045 | Adjust scope and selection | R-034 | 1. Open Adjust for fx-photo
+TC-046 | Adjust scope and selection | R-034 | 1. Open Adjust for fx-photo and set 「Brightness」 to 60
+TC-047 | Adjust scope and selection | R-034 | 1. Open Adjust for fx-photo and set 「Saturation」 to -100
+TC-048 | Adjust scope and selection | R-035 | 1. Click the main video clip
+TC-049 | Adjust thumbnails, export and project | R-036, R-037 | 1. Set fx-main 「Saturation」 to -100
+TC-050 | Adjust thumbnails, export and project | R-036, R-037 | 1. Set the main photo's 「Hue」 to 0
+TC-051 | Adjust thumbnails, export and project | R-036, R-037 | 1. Set the Photo PiP's 「Brightness」 to -80
+TC-052 | Adjust thumbnails, export and project | R-037 | 1. Open My Projects › Video in a new tab
+TC-053 | Adjust thumbnails, export and project | R-038, R-039 | 1. Look at the main photo's timeline clip
+TC-054 | Adjust thumbnails, export and project | R-038, R-040 | Look at its PiP clip on the timeline and its Layer thumbnail
+TC-055 | Adjust thumbnails, export and project | R-038, R-040 | 1. Look at its PiP clip on the timeline
+TC-056 | Adjust thumbnails, export and project | R-041, R-009, R-010, R-011, R-012, R-013, R-014 | 1. Click 「Export」 (or 「Export & Share」) and download the MP4
+TC-057 | Adjust thumbnails, export and project | R-041 | 1. Export and download the MP4
+TC-058 | Adjust thumbnails, export and project | R-042 | 1. Reload the page (or open the project again from My Projects)
+TC-059 | Mask mode | R-043, R-046 | 1. Select fx-photo
+TC-060 | Mask mode | R-044 | 1. Note the playhead time
+TC-061 | Mask mode | R-045 | 1. Click 「Mask」
+TC-062 | Mask mode | R-047 | 1. Count the shapes in the Video Editor Mask list
+TC-063 | Mask mode | R-048, R-053, R-055 | 1. Click shape 1 of the list (counting after 「None」)
+TC-064 | Mask mode | R-048, R-053, R-055 | 1. Click shape 14 of the list (counting after 「None」)
+TC-065 | Mask mode | R-048, R-053, R-055 | 1. Click shape 27 of the list (counting after 「None」)
+TC-066 | Mask mode | R-048, R-053, R-055 | 1. Click shape 40 of the list (counting after 「None」)
+TC-067 | Mask mode | R-049 | Select fx-photo and click 「Mask」 again
+TC-068 | Mask mode | R-048, R-055 | 1. Click 「Mask」
+TC-069 | Mask mode | R-050, R-051 | 1. Hover the Rotate icon of the photo
+TC-070 | Mask mode | R-052 | 1. Click zoom in (or move the zoom slider right) twice
+TC-071 | Mask mode | R-053, R-055 | 1. Click 「Mask」 and choose a star
+TC-072 | Mask mode | R-054 | 1. Click 「Mask」
+TC-073 | Mask mode | R-063 | 1. Click 「Mask」, choose a heart, rotate by 20°, click 「Done」
+TC-074 | Mask mode | R-062 | 1. Click 「Mask」
+TC-075 | Mask mode | R-062 | 1. Note the faded main-video frame
+TC-076 | Mask with Corner and Cutout | R-056 | 1. Open 「Mask」 and choose the square (a shape that fills its box)
+TC-077 | Mask with Corner and Cutout | R-057 | Open 「Mask」 and choose the square
+TC-078 | Mask with Corner and Cutout | R-058, R-060 | 1. Click 「Mask」
+TC-079 | Mask with Corner and Cutout | R-059 | 1. Select the masked PiP and click 「Cutout」
+TC-080 | Mask with Corner and Cutout | R-060, R-061 | 1. Open 「Mask」 and move the photo inside the circle
+TC-081 | Crop & Rotate mode | R-064, R-067, R-068 | 1. Select fx-photo
+TC-082 | Crop & Rotate mode | R-065 | 1. Click 「Crop/Rotate」
+TC-083 | Crop & Rotate mode | R-066 | 1. Click 「Crop/Rotate」
+TC-084 | Crop & Rotate mode | R-071 | 1. Drag the 「Rotate」 slider to 45
+TC-085 | Crop & Rotate mode | R-072, R-073 | 1. Hover the Rotate icon of the photo
+TC-086 | Crop & Rotate mode | R-074 | 1. Click zoom in twice
+TC-087 | Crop & Rotate mode | R-075, R-078 | 1. Click 「Crop/Rotate」
+TC-088 | Crop & Rotate mode | R-070, R-087 | Select fx-photo and click 「Crop/Rotate」 again
+TC-089 | Crop & Rotate mode | R-076 | 1. Click 「Crop/Rotate」
+TC-090 | Crop & Rotate mode | R-077 | 1. Click 「Crop/Rotate」, choose 「1:1」 cutting off the blue corner, set
+TC-091 | Crop & Rotate mode | R-085 | 1. Click 「Crop/Rotate」
+TC-092 | Crop & Rotate mode | R-085 | 1. Click 「Crop/Rotate」
+TC-093 | Crop & Rotate mode | R-086 | 1. Note the main-video frame at the playhead, the Fade settings and th
+TC-094 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-095 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-096 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-097 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-098 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-099 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-100 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-101 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-102 | Crop & Rotate ratios | R-069, R-070 | 1. Click 「Crop/Rotate」
+TC-103 | Crop & Rotate ratios | R-069 | 1. In Video Editor, open Crop/Rotate on fx-photo
+TC-104 | Crop & Rotate with Cutout | R-079, R-080 | 1. Click 「Crop/Rotate」
+TC-105 | Crop & Rotate with Cutout | R-079, R-080 | 1. Choose 「1:1」 and move the box so the subject's feet fall outside
+TC-106 | Crop & Rotate with Cutout | R-079, R-082 | 1. Click 「Crop/Rotate」 again
+TC-107 | Crop & Rotate with Cutout | R-083 | 1. Click 「Crop/Rotate」
+TC-108 | Crop & Rotate with Cutout | R-081 | 1. Crop the first PiP 1:1 without the subject's feet
+TC-109 | Crop & Rotate with Cutout | R-084 | 1. Click 「Cutout」 to turn it off
+TC-110 | Rotation and thumbnails across tools | R-087 | 1. Rotate fx-photo with the canvas handle to 30
+TC-111 | Rotation and thumbnails across tools | R-088, R-087 | 1. Open 「Crop/Rotate」, set 「Rotate」 to 90, click 「Done」
+TC-112 | Rotation and thumbnails across tools | R-089, R-038 | 1. Rotate fx-photo with the canvas handle to 45
+TC-113 | Rotation and thumbnails across tools | R-090, R-055 | 1. Open 「Mask」, choose a square, rotate to 60, click 「Done」
+TC-114 | Export, project and plan | R-091 | 1. Export and download the MP4
+TC-115 | Export, project and plan | R-092 | 1. Reload the page (or reopen the project from My Projects)
+TC-116 | Export, project and plan | R-093 | 1. Select fx-main and look at 「Adjust」
+TC-117 | Export, project and plan | R-093 | Select fx-photo and use 「Adjust」, 「Mask」 and 「Crop/Rotate」 once each

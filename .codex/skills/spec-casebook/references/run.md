@@ -1,7 +1,8 @@
 # On-device run
 
 Part of the spec-casebook skill: read it for any run segment, phase wrap-up or run plan. The iPhone (Appium +
-WebDriverAgent) is described here; Android changes only the device commands (`run-android.md`, read both). *Run
+WebDriverAgent) is described here; Android changes only the device commands (`run-android.md`, read both), and so
+does the web (`run-web.md`: `scripts/device-web.ts` in Chrome, for MyEdit and other websites). *Run
 step N* means the numbered steps at the end of this file; *verdict rule N* means `analysis.md` › Coverage and
 verdict rules.
 
@@ -81,7 +82,8 @@ refuses them), and it runs in one folder, e.g. `runs/<date>-p23-regression-flows
   <run dir> (or start phase <Pn>) per <RUN-PLAN>: read the plan, run-state.md and `run-log.ts <run dir> next`;
   follow the spec-casebook skill (SKILL.md, references/run.md) and read `knowledge.ts <feature> <platform> --for run`; do exactly one segment, then pull and slice the logs,
   checkpoint, update the plan's Status and Log, and reply with at most 10 lines: tally, next case, blockers." A
-  phase's last segment adds the phase wrap-up (summary, `time`, tokens, eBug drafts and review page, report.md). The
+  phase's last segment adds the phase wrap-up (summary, `time`, tokens, eBug drafts and review page, report.md plus report.zh-Hant.md and its HTML by `scripts/report-html.ts` in
+  `comparisons/<date>_<round>-report.html`, user 2026-11-26). The
   orchestrator reads only that reply (never screenshots or logs), decides the next brief from `run-log next` and
   phases.json, and repeats until every phase in the plan is done, never asking the user between segments; after a
   compaction or restart it resumes from `run-log next`. A phase not yet released carries `hold` in phases.json

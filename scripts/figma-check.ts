@@ -31,6 +31,7 @@ import { PYTHON } from './lib/python.ts';
 import { join } from 'node:path';
 import { arg, assertIds, featureDir, ROOT, writeJson } from './lib/library.ts';
 import { listSpecSets } from './lib/specs.ts';
+import { figmaServer } from './lib/feature-config.ts';
 import { cutByHost, jsonOf, useFigmaReturns } from './lib/figma-returns.ts';
 
 const [feature, maybeSet] = process.argv.slice(2);
@@ -58,10 +59,11 @@ const groupOf = new Map(groups.flatMap(g => g.ids.map(id => [id, g.name] as [str
 const groupByName = new Map(groups.map(g => [g.name, g]));
 
 // which Figma file is which: figma-frames.json names the design / pm / mx file keys; design reads go through
-// figma-design (qa-dm), the PM and MX files through figma-pm (qa1)
+// figma-design (qa-dm), the PM and MX files through figma-pm (qa1), unless product.json › figma.servers says otherwise
+// (MyEdit: every file through figma-design)
 const frames = existsSync(join(ex, 'figma-frames.json')) ? read(join(ex, 'figma-frames.json')) : { files: {} };
 const roleOf = (key: string) => Object.entries<any>(frames.files ?? {}).find(([, f]) => f.fileKey === key)?.[0] ?? key;
-const serverOf = (role: string) => role === 'design' ? 'figma-design' : role === 'pm' || role === 'mx' ? 'figma-pm' : '(unknown: add the file to figma-frames.json files)';
+const serverOf = (role: string) => figmaServer(feature, role);
 const files = [...new Map(groups.map(g => [`${g.file} ${g.page}`, { key: g.file, page: g.page, role: roleOf(g.file) }])).values()];
 const tag = (f: { role: string; page: string }) => files.filter(x => x.role === f.role).length > 1 ? `${f.role}-${f.page.replace(':', '-')}` : f.role;
 

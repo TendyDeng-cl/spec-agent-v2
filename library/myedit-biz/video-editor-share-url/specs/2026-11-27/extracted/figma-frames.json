@@ -1,0 +1,29 @@
+{
+  "files": {
+    "pm": {
+      "file": "3GnLdOiX9G5NH27l1ltqVr",
+      "name": "[MyEdit] Video Editor",
+      "page": "6002:7",
+      "page_name": "✅ Video Projects",
+      "section": "6531:156549",
+      "server": "figma-pm",
+      "pdf": null
+    },
+    "design": null
+  },
+  "frames": [
+    {
+      "label": "20261019 Update (URL 定義)",
+      "node": "6545:62731",
+      "in_pdf": false,
+      "read": "pm-add-share-option (Figma text layer); the URL format is superseded by the KC spec of 2026-11-11 (R-006, Q-2)"
+    },
+    {
+      "label": "20261019 Update (loading 包含複製素材的時間)",
+      "node": "6545:75010",
+      "in_pdf": false,
+      "read": "pm-user-c-receive (Figma text layer); R-036"
+    }
+  ],
+  "note": "Figma-only spec set: there is no PDF, so every frame is Figma-only (in_pdf false). Section 26' 11/E Share Project URL holds an index note and five boards (sections). Design: no MyEdit Biz Design yet (UJ, due 2026-11-27); the MyEdit Design ZB9BpGIGsjikfB5p7sc8ma 5782:31535 is MyEdit-only and was not read."
+}

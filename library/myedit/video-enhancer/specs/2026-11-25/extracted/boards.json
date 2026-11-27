@@ -1,0 +1,65 @@
+{
+  "source": "figma",
+  "boards": [
+    {
+      "id": "pm-1-info",
+      "title": "1 - Info",
+      "node": "10:3957"
+    },
+    {
+      "id": "pm-2-seo",
+      "title": "2 - SEO Page",
+      "node": "10:3958"
+    },
+    {
+      "id": "pm-3-pc-flow",
+      "title": "3 - PC User flow",
+      "node": "19:482"
+    },
+    {
+      "id": "pm-4-mobile",
+      "title": "4 - Mobile UI Spec",
+      "node": "457:1883"
+    },
+    {
+      "id": "pm-5-disabled-options",
+      "title": "5 - Disabled options when the output is lower than or the same as the source",
+      "node": "37:5465"
+    },
+    {
+      "id": "pm-5-agent",
+      "title": "5 - Agent Harness Update",
+      "node": "84:7415"
+    },
+    {
+      "id": "pm-6-edm",
+      "title": "6 - EDM",
+      "node": "95:7417"
+    },
+    {
+      "id": "pm-7-library",
+      "title": "7 - My Library",
+      "node": "187:2240"
+    },
+    {
+      "id": "pm-8-old-room",
+      "title": "8 - 舊房間處理",
+      "node": "180:1134"
+    },
+    {
+      "id": "pm-9-errors",
+      "title": "9 - Error Handling – Upload Limitation — every dialog's button is 「Got it」",
+      "node": "235:1137"
+    },
+    {
+      "id": "pm-open-in-editor",
+      "title": "Open in Editor",
+      "node": "243:1458"
+    },
+    {
+      "id": "pm-10-pro-length",
+      "title": "10 - Professional Mode 長度限制（2:30）（10/28更新）",
+      "node": "358:1608"
+    }
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "spec_folder": "specs/2026-11-27",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "ds-adjust-main-video@957,19",
+      "board": "ds-adjust-main-video",
+      "x": 957,
+      "y": 19,
+      "low": false,
+      "text": "8888888888... / Split / Trim / Corner / BG Blur / Adjust",
+      "trace": "R-001"
+    },
+    {
+      "id": "ds-adjust-main-video@1558,19",
+      "board": "ds-adjust-main-video",
+      "x": 1558,
+      "y": 19,
+      "low": false,
+      "text": "Get Credits",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@318,20",
+      "board": "ds-adjust-main-video",
+      "x": 318,
+      "y": 20,
+      "low": false,
+      "text": "Product / Marketing",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@551,20",
+      "board": "ds-adjust-main-video",
+      "x": 551,
+      "y": 20,
+      "low": false,
+      "text": "Design Studio",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@703,20",
+      "board": "ds-adjust-main-video",
+      "x": 703,
+      "y": 20,
+      "low": false,
+      "text": "AI Image / AI Video",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@1786,20",
+      "board": "ds-adjust-main-video",
+      "x": 1786,
+      "y": 20,
+      "low": false,
+      "text": "Export / Layer",
+      "trace": "ui: ds-adjust boards (Export button and Layer panel title; Export disabled only in Mask and Crop modes, R-043, R-064)"
+    },
+    {
+      "id": "ds-adjust-main-video@86,72",
+      "board": "ds-adjust-main-video",
+      "x": 86,
+      "y": 72,
+      "low": false,
+      "text": "Adjust / Videos / Color / Saturation / Photos / Stickers / Temperature / Text / Tint / Music / Light / Transitions / Brightness / Subtitle / Contrast / Uploads / My Projects",
+      "trace": "R-006, R-008"
+    },
+    {
+      "id": "ds-adjust-main-video@1120,92",
+      "board": "ds-adjust-main-video",
+      "x": 1120,
+      "y": 92,
+      "low": false,
+      "text": "Fade In / Fade Out / Audio",
+      "trace": "R-001"
+    },
+    {
+      "id": "ds-adjust-main-video@1276,92",
+      "board": "ds-adjust-main-video",
+      "x": 1276,
+      "y": 92,
+      "low": false,
+      "text": "Delete",
+      "trace": "R-001"
+    },
+    {
+      "id": "ds-adjust-main-video@1075,652",
+      "board": "ds-adjust-main-video",
+      "x": 1075,
+      "y": 652,
+      "low": false,
+      "text": "00:13 / 00:30 / 00:50 / 01:00",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@657,680",
+      "board": "ds-adjust-main-video",
+      "x": 657,
+      "y": 680,
+      "low": false,
+      "text": "00:20.0 / 00:20",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@451,714",
+      "board": "ds-adjust-main-video",
+      "x": 451,
+      "y": 714,
+      "low": false,
+      "text": "00:00 / 00:10 / 00:40",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@800,714",
+      "board": "ds-adjust-main-video",
+      "x": 800,
+      "y": 714,
+      "low": false,
+      "text": "00:30 / 00:40",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@1266,714",
+      "board": "ds-adjust-main-video",
+      "x": 1266,
+      "y": 714,
+      "low": false,
+      "text": "01:10 / 01:20",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@1499,714",
+      "board": "ds-adjust-main-video",
+      "x": 1499,
+      "y": 714,
+      "low": false,
+      "text": "01:30 / 01:40",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@1732,714",
+      "board": "ds-adjust-main-video",
+      "x": 1732,
+      "y": 714,
+      "low": false,
+      "text": "01:50 / 02:00",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-main-video@229,871",
+      "board": "ds-adjust-main-video",
+      "x": 229,
+      "y": 871,
+      "low": false,
+      "text": "Reset",
+      "trace": "R-008, R-022"
+    },
+    {
+      "id": "ds-adjust-photo-pip-title@120,46",
+      "board": "ds-adjust-photo-pip-title",
+      "x": 120,
+      "y": 46,
+      "low": false,
+      "text": "Photo as PiP (Adjust)",
+      "trace": "label: board title"
+    },
+    {
+      "id": "ds-adjust-photo-pip@957,19",
+      "board": "ds-adjust-photo-pip",
+      "x": 957,
+      "y": 19,
+      "low": false,
+      "text": "8888888888... / Corner / Cutout / Split / Adjust",
+      "trace": "R-003, Q-1"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1558,19",
+      "board": "ds-adjust-photo-pip",
+      "x": 1558,
+      "y": 19,
+      "low": false,
+      "text": "Get Credits",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@318,20",
+      "board": "ds-adjust-photo-pip",
+      "x": 318,
+      "y": 20,
+      "low": false,
+      "text": "Product / Marketing",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@551,20",
+      "board": "ds-adjust-photo-pip",
+      "x": 551,
+      "y": 20,
+      "low": false,
+      "text": "Design Studio",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@703,20",
+      "board": "ds-adjust-photo-pip",
+      "x": 703,
+      "y": 20,
+      "low": false,
+      "text": "AI Image / AI Video",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1786,20",
+      "board": "ds-adjust-photo-pip",
+      "x": 1786,
+      "y": 20,
+      "low": false,
+      "text": "Export / Layer",
+      "trace": "ui: ds-adjust boards (Export button and Layer panel title; Export disabled only in Mask and Crop modes, R-043, R-064)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@86,72",
+      "board": "ds-adjust-photo-pip",
+      "x": 86,
+      "y": 72,
+      "low": false,
+      "text": "Adjust / Videos / Color / Saturation / Photos / Stickers / Temperature / Text / Tint / Music / Light / Transitions / Brightness / Subtitle / Contrast / Uploads / My Projects",
+      "trace": "R-006, R-008"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1093,92",
+      "board": "ds-adjust-photo-pip",
+      "x": 1093,
+      "y": 92,
+      "low": false,
+      "text": "Fade In / Fade Out / Order",
+      "trace": "R-003"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1249,92",
+      "board": "ds-adjust-photo-pip",
+      "x": 1249,
+      "y": 92,
+      "low": false,
+      "text": "Delete",
+      "trace": "R-003"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1075,652",
+      "board": "ds-adjust-photo-pip",
+      "x": 1075,
+      "y": 652,
+      "low": false,
+      "text": "00:13 / 00:30 / 01:00",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@451,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 451,
+      "y": 714,
+      "low": false,
+      "text": "00:00 / 00:10",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@684,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 684,
+      "y": 714,
+      "low": false,
+      "text": "00:20 / 00:30",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@917,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 917,
+      "y": 714,
+      "low": false,
+      "text": "00:40 / 00:50",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1266,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 1266,
+      "y": 714,
+      "low": false,
+      "text": "01:10 / 01:20",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1499,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 1499,
+      "y": 714,
+      "low": false,
+      "text": "01:30 / 01:40",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@1732,714",
+      "board": "ds-adjust-photo-pip",
+      "x": 1732,
+      "y": 714,
+      "low": false,
+      "text": "01:50 / 02:00",
+      "trace": "ui: ds-adjust boards (other features: top navigation, credits, timeline ruler and time codes)"
+    },
+    {
+      "id": "ds-adjust-photo-pip@229,871",
+      "board": "ds-adjust-photo-pip",
+      "x": 229,
+      "y": 871,
+      "low": false,
+      "text": "Reset",
+      "trace": "R-008, R-022"
+    },
+    {
+      "id": "pm-adjust-main-video@5219,313",
+      "board": "pm-adjust-main-video",
+      "x": 5219,
+      "y": 313,
+      "low": false,
+      "text": "滑桿樣式 / 一般：灰色底條，藍色從中間（0）往目前數值填滿 / 彩虹色條（無填色） / 橘 → 白 → 藍 漸層條（無填色） / 綠 → 洋紅 漸層條（無填色） / 一般：灰色底條，藍色從中間（0）往目前數值填滿 / 一般：灰色底條，藍色從中間（0）往目前數值填滿",
+      "trace": "R-015"
+    },
+    {
+      "id": "pm-adjust-main-video@4299,766",
+      "board": "pm-adjust-main-video",
+      "x": 4299,
+      "y": 766,
+      "low": false,
+      "text": "• 選取 main video（video / photo 皆適用）→ tool bar 於 BG Blur 右側新增 Adjust：Split, Trim, Corner, BG Blur, Adjust, Fade In, Fade Out, Audio, Delete。 / • Panel 沿用 Photo Editor Adjust panel：標題 Adjust + ✕、分組標題 Color / Light、每列 = label + slider + 數值框，最下方 Reset。 / • 開在 left panel（取代目前 tab 內容）；Adjust tool 呈 selected。 / 行為規則 / 1. 只套用到目前選取的 main video clip。Split 後兩段沿用相同設定 / 2. Reset：同 Photo Editor，一次還原 6 個滑桿，算一步 undo；全部為初始值時 disabled。 / 3. 數值輸入：同 Photo Editor——Enter 或離開欄位時套用；超出範圍改成最接近的上下限；空值或非數字恢復原值；上下箭頭 ±1，到上下限時 disabled。 / 4. Undo / Redo：同 Photo Editor。拖曳時即時預覽，放開滑桿（或數值框確認）記一步 undo。 / 5. 播放中：開始調整（拖曳 / 輸入 / Reset）時暫停播放，停在目前 playhead 預覽。 / 6. 不顯示 timeline badge；main track clip 縮圖與 Layer panel 縮圖要反映調色。 / 7. BG Blur：開啟時模糊背景也套用同樣的 Adjust。 / 8. 切換選取：panel 開著時點另一個 clip，panel 不關，改讀該 clip 的值（同 Photo Editor）。 / 9. Project 縮圖、Export 結果都套用；設定存在 project 中，重新開啟時保留。 / 10. 引擎不支援 Highlights / Shadows，所以只有 6 個滑桿。",
+      "trace": "R-001, R-002, R-006, R-008, R-018, R-019, R-020, R-021, R-022, R-023, R-025, R-026, R-027, R-028, R-030, R-033, R-036, R-037, R-041, R-042 (rule 3 number input: newer KC text, R-017, Q-5)"
+    },
+    {
+      "id": "pm-adjust-main-video@100,1150",
+      "board": "pm-adjust-main-video",
+      "x": 100,
+      "y": 1150,
+      "low": false,
+      "text": "1-1. 選取 main video（video / photo 皆適用）→ Tool bar 於 BG Blur 右側新增「Adjust」→ 點擊後 left panel 切換為 Adjust panel，Adjust 按鈕呈 selected 狀態。 / 預設值：Saturation 0 / Hue 100 / Temperature 50 / Tint 50 / Brightness 0 / Contrast 0（不支援 Highlights、Shadows）",
+      "trace": "R-001, R-002, R-006, R-008, R-009, R-010, R-011, R-012, R-013, R-014"
+    },
+    {
+      "id": "pm-adjust-main-video@2130,1150",
+      "board": "pm-adjust-main-video",
+      "x": 2130,
+      "y": 1150,
+      "low": false,
+      "text": "1-2. 拖曳 slider 或於數值框輸入（可用上下鍵 ±1），viewer 即時預覽；設定只套用在目前選取的 clip。 / 點 ✕ 或切換到其他 left nav tab 關閉 panel，設定保留。",
+      "trace": "R-016, R-017, R-020, R-027, R-032"
+    },
+    {
+      "id": "pm-adjust-photo-pip@3099,313",
+      "board": "pm-adjust-photo-pip",
+      "x": 3099,
+      "y": 313,
+      "low": false,
+      "text": "滑桿樣式 / 一般：灰色底條，藍色從中間（0）往目前數值填滿 / 彩虹色條（無填色） / 橘 → 白 → 藍 漸層條（無填色） / 綠 → 洋紅 漸層條（無填色） / 一般：灰色底條，藍色從中間（0）往目前數值填滿 / 一般：灰色底條，藍色從中間（0）往目前數值填滿",
+      "trace": "R-015"
+    },
+    {
+      "id": "pm-adjust-photo-pip@2179,766",
+      "board": "pm-adjust-photo-pip",
+      "x": 2179,
+      "y": 766,
+      "low": false,
+      "text": "• 選取 Photo PiP → tool bar 於 Mask 右側新增 Adjust：Split, Corner, Cutout, Crop/Rotate, Mask, Adjust, Fade In, Fade Out, Order, Delete。 / • Panel 與 Main video 相同（沿用 Photo Editor Adjust panel，6 個滑桿 + Reset），開在 left panel。 / 行為規則（已確認 2026/11/06） / 1. 只套用到目前選取的 Photo PiP。Split 後兩段沿用相同設定；Copy/Paste 會複製設定。 / 2. Reset、數值輸入、Undo / Redo：同 Photo Editor（規則同 Main Video spec）。 / 3. 播放中：開始調整時暫停播放，停在目前 playhead 預覽。 / 4. Cutout / Mask：技術上整張圖都會調整，使用者只看得到 cutout / mask 後可見的部分。 / 5. 不顯示 timeline badge；PiP lane clip 縮圖與 Layer panel 縮圖要反映調色。 / 6. 切換選取：panel 開著時點另一個 PiP / clip，panel 不關，改讀該物件的值（同 Photo Editor）。 / 7. Project 縮圖、Export 結果都套用；設定存在 project 中。 / 8. 本版只支援 Photo PiP；Video PiP 之後支援時沿用同一 panel（不在本版）；Text、Sticker 不支援。",
+      "trace": "R-003, R-005, R-007, R-021, R-024, R-026, R-027, R-028, R-029, R-030, R-034, R-036, R-037, R-041, R-042"
+    },
+    {
+      "id": "pm-adjust-photo-pip@100,1210",
+      "board": "pm-adjust-photo-pip",
+      "x": 100,
+      "y": 1210,
+      "low": false,
+      "text": "2-1. 選取 Photo PiP → Tool bar 於 Mask 右側新增「Adjust」→ 點擊後 left panel 切換為 Adjust panel（與 Main video 相同的 6 個滑桿 + Reset），只套用在選取的 PiP。",
+      "trace": "R-003, R-006, R-007, R-027"
+    },
+    {
+      "id": "pm-photo-crop-rotate@205,1292",
+      "board": "pm-photo-crop-rotate",
+      "x": 205,
+      "y": 1292,
+      "low": false,
+      "text": "User 選擇 photo pip 後，top bar 新增 Crop/Rotate / Top bar 功能順序調整為: Split, Corner, Cutout, Crop/Rotate, Mask, Fade In, Fade Out, Order, Delete",
+      "trace": "R-003, R-004"
+    },
+    {
+      "id": "pm-photo-crop-rotate@2145,1301",
+      "board": "pm-photo-crop-rotate",
+      "x": 2145,
+      "y": 1301,
+      "low": false,
+      "text": "選擇 Crop/Rotate 後進入 Crop/Rotate 模式，放大 Main Video 當下的 frame & Photo PiP / 隱藏 timeline, top tool bar, layer, Full screen 等功能 / Export & Share Button 呈現 disabled 狀態 / Default land 在 Custom / 若被選取的 PiP 不在playhead位置，點選 Crop / Rotate 時，將 playhead 移動至該PiP開頭處 / 若被選取的 PiP 已在 playhead 範圍內，點選 Crop / Rotate 時，playhead 無需移動 / 若被選取的 PiP 上有套用 Fade in or Fade out animation，進入 Crop / Rotate 模式後需自動移除 effect，而 Main video上的fade in / out / transition effect 皆可維持原狀，不需特別處理",
+      "trace": "R-064, R-065, R-066, R-067, R-085, R-086"
+    },
+    {
+      "id": "pm-photo-crop-rotate@10579,1317",
+      "board": "pm-photo-crop-rotate",
+      "x": 10579,
+      "y": 1317,
+      "low": false,
+      "text": "Crop & Rotate 後，Layer & timeline 上的縮圖也需顯示套用後的結果",
+      "trace": "R-078"
+    },
+    {
+      "id": "pm-photo-crop-rotate@4213,1326",
+      "board": "pm-photo-crop-rotate",
+      "x": 4213,
+      "y": 1326,
+      "low": false,
+      "text": "Crop & Rotate 選擇比例 & 套用行為皆 sync Photo Editor / Hover 在 Rotate icon 時需顯示 ”Rotate” tooltip，且Rotate需即時顯示旋轉度數 (sync Photo PiP Mask)",
+      "trace": "R-069, R-072, R-073"
+    },
+    {
+      "id": "pm-photo-crop-rotate@8471,1337",
+      "board": "pm-photo-crop-rotate",
+      "x": 8471,
+      "y": 1337,
+      "low": false,
+      "text": "點選 Done 確認 Crop & Rotate 範圍",
+      "trace": "R-075"
+    },
+    {
+      "id": "pm-photo-crop-rotate@6342,1346",
+      "board": "pm-photo-crop-rotate",
+      "x": 6342,
+      "y": 1346,
+      "low": false,
+      "text": "User 也可以用 zoom in & out 調整畫面大小",
+      "trace": "R-074"
+    },
+    {
+      "id": "pm-photo-mask@141,1228",
+      "board": "pm-photo-mask",
+      "x": 141,
+      "y": 1228,
+      "low": false,
+      "text": "User 選擇 photo pip 後，top bar 新增 Mask / Top bar 功能順序調整為: Split, Corner, Cutout, Crop/Rotate, Mask, Fade In, Fade Out, Order, Delete",
+      "trace": "R-003, R-004"
+    },
+    {
+      "id": "pm-photo-mask@6113,1237",
+      "board": "pm-photo-mask",
+      "x": 6113,
+      "y": 1237,
+      "low": false,
+      "text": "Rotate 的行為皆與 Photo Editor 相同 / Hover 到 Rotate icon 時，顯示 Rotate tool tip",
+      "trace": "R-050, R-087"
+    },
+    {
+      "id": "pm-photo-mask@8121,1241",
+      "board": "pm-photo-mask",
+      "x": 8121,
+      "y": 1241,
+      "low": false,
+      "text": "Rotate Photo 時，需即時顯示目前旋轉的度數",
+      "trace": "R-051"
+    },
+    {
+      "id": "pm-photo-mask@2081,1245",
+      "board": "pm-photo-mask",
+      "x": 2081,
+      "y": 1245,
+      "low": false,
+      "text": "選擇 Mask 後進入 Mask 模式，放大 Main Video 當下的 frame & Photo PiP / 隱藏 timeline, top tool bar, layer, Full screen 等功能 / Default land 在 None / Export & Share Button 呈現 disabled 狀態 / Mask 可討論是是否需要上到 CMS (Photo Editor Mask 是RD直接 hardcode) / 若被選取的 PiP 不在playhead位置，點選 Mask 時，將 playhead 移動至該PiP開頭處 / 若被選取的 PiP 已在 playhead 範圍內，點選 Mask 時，playhead 無需移動 / 若被選取的 PiP 上有套用 Fade in or Fade out animation，進入Mask 模式後需自動移除 effect，而 Main video上的fade in / out / transition effect 皆可維持原狀，不需特別處理",
+      "trace": "R-043, R-045, R-046, R-047, R-062, R-094, Q-2"
+    },
+    {
+      "id": "pm-photo-mask@4097,1245",
+      "board": "pm-photo-mask",
+      "x": 4097,
+      "y": 1245,
+      "low": false,
+      "text": "選擇 & 套用 Mask 的行為皆與 Photo Editor 相同",
+      "trace": "R-048"
+    },
+    {
+      "id": "pm-photo-mask@10143,1250",
+      "board": "pm-photo-mask",
+      "x": 10143,
+      "y": 1250,
+      "low": false,
+      "text": "User 也可以用 zoom in & out 調整畫面大小",
+      "trace": "R-052"
+    },
+    {
+      "id": "pm-photo-mask@12158,1255",
+      "board": "pm-photo-mask",
+      "x": 12158,
+      "y": 1255,
+      "low": false,
+      "text": "點選 Done 確認套用 Mask",
+      "trace": "R-053"
+    },
+    {
+      "id": "pm-photo-mask@14168,1275",
+      "board": "pm-photo-mask",
+      "x": 14168,
+      "y": 1275,
+      "low": false,
+      "text": "套用 Mask 後，Layer & timeline 上的縮圖也需顯示套用後的結果",
+      "trace": "R-055"
+    }
+  ]
+}

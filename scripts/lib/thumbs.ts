@@ -1,11 +1,13 @@
 // Small JPEG copies of run screenshots for the live pages (Results shows them 220 px high; the original PNGs are
 // 0.5–3 MB each). Made with macOS `sips` (as device.ts and coverage-page.ts already do) a few at a time, kept in
 // node_modules/.cache/casebook-thumbs/ (git-ignored) under the source's path, size and mtime, so a re-captured
-// screenshot gets a new copy. Where sips is missing or fails, thumbnail() gives null and the caller sends the original.
+// screenshot gets a new copy. Other systems (Windows) make it with mupdf (lib/image.ts, 2026-11-25). Where that fails,
+// thumbnail() gives null and the caller sends the original.
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, statSync, utimesSync } from 'node:fs';
 import { join } from 'node:path';
+import { toJpeg } from './image.ts';
 
 export const THUMB_DIR = join(import.meta.dirname, '..', '..', 'node_modules', '.cache', 'casebook-thumbs');
 const dir = THUMB_DIR;
@@ -23,6 +25,7 @@ export function thumbnail(src: string): Promise<string | null> {
   const was = running.get(out); if (was) return was;
   const job = slot().then(() => new Promise<string | null>(ok => {
     try { mkdirSync(dir, { recursive: true }); } catch {}
+    if (process.platform !== 'darwin') { ok(toJpeg(src, out, { max: MAX, quality: 75 }) ? out : null); return; }
     execFile('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '75', '-Z', String(MAX), src, '--out', out], { timeout: 20_000 },
       err => ok(!err && existsSync(out) ? out : null));
   })).finally(() => { done(); running.delete(out); });

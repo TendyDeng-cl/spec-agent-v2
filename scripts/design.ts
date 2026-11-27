@@ -80,6 +80,7 @@
 // settle: the same verdict on both passes stands; any disagreement, or an item one pass skipped, becomes `question`;
 // a user decision already in findings.json is kept.
 import { spawnSync } from 'node:child_process';
+import { ocrImages } from './lib/ocr.ts';
 import { PYTHON } from './lib/python.ts';
 import { createHash } from 'node:crypto';
 import { appendFileSync, copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
@@ -848,9 +849,9 @@ for i, j in enumerate(jobs):
 print(json.dumps(out))`, tmp], { input: JSON.stringify(todo), encoding: 'utf8' });
   if (prep.status !== 0) { console.error(`  OCR: images not prepared (${prep.stderr.trim().split('\n').at(-1)})`); return got; }
   const prepared: [string, boolean | null][] = JSON.parse(prep.stdout), paths = prepared.map(x => x[0]); writeFileSync(join(tmp, 'job.json'), JSON.stringify(paths));
-  const r = spawnSync('swift', [join(import.meta.dirname, 'ocr-images.swift'), join(tmp, 'job.json')], { encoding: 'utf8', maxBuffer: 64 << 20 });
-  if (r.status !== 0) { console.error(`  OCR: not read (${(r.stderr || '').trim().split('\n').at(-1)})`); return got; }
-  const res = JSON.parse(r.stdout); rmSync(tmp, { recursive: true, force: true });
+  let res: Record<string, any>;
+  try { res = ocrImages(paths); } catch (e: any) { console.error(`  OCR: not read (${String(e?.message ?? e).trim().split('\n')[0]})`); return got; }
+  rmSync(tmp, { recursive: true, force: true });
   todo.forEach((j, i) => { const o = res[paths[i]]; if (!o) return;
     const s = j.wf / o.w;   // the image spans the screen's width in Figma points
     const lines = o.lines.filter((l: any) => l.conf >= 0.3).map((l: any) => ({ text: l.text, box: [l.x, l.y, l.w, l.h].map(v => r1n(v * s)) }));

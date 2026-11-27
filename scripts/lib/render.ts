@@ -2,7 +2,7 @@
 // and as the read-only view of an approved table.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT } from './library.ts';
+import { ROOT, platformName } from './library.ts';
 import { withShared } from './page-shared.ts';
 
 export type PageData = {
@@ -14,7 +14,7 @@ export type PageData = {
   spec_files: { name: string; sha256: string }[];
   rows: Record<string, string>[];
   previous: Record<string, Record<string, string>>;
-  requirements: string; update_plan: string;
+  requirements: string; update_plan: string; update_plan_zh?: string; requirements_zh?: string;
   // Open questions and their answers (scripts/lib/questions.ts); the review page shows them above the table
   questions?: { id: string; text: string; rows: string[] }[];
   questions_zh?: Record<string, string>;   // Chinese reading copy of the questions by Q-id (questions.zh-Hant.json), shown in 中文 mode
@@ -25,5 +25,5 @@ export type PageData = {
 export function renderPage(data: PageData): string {
   const tpl = withShared(readFileSync(join(ROOT, 'templates', 'table.html'), 'utf8'));
   const json = JSON.stringify(data).replace(/</g, '\\u003c');
-  return tpl.replace('/*__DATA__*/null', json).replace('__TITLE__', `${data.title} ${data.mode === 'review' ? 'Cases' : 'Test Cases'} · ${data.platform === 'ios' ? 'iOS' : 'Android'}`);
+  return tpl.replace('/*__DATA__*/null', json).replace('__TITLE__', `${data.title} ${data.mode === 'review' ? 'Cases' : 'Test Cases'} · ${platformName(data.platform)}`);
 }

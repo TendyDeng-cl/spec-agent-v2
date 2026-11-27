@@ -1,0 +1,82 @@
+{
+ "schema_version": "ebug_form_contract/v3",
+ "expected": {
+  "validationStage": "persisted",
+  "product": "MyEdit",
+  "version": "5.11.0",
+  "productId": "274",
+  "templateId": "23404",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "featureName": "Video Enhancer(SEO page)",
+  "bugBelong": "RD",
+  "affectedLanguages": [],
+  "allowNote": true,
+  "requiresSpec": true,
+  "requiresFixture": false,
+  "priorityBefore": "N/A",
+  "bugCode": "MYE261124P0025",
+  "attachments": [
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_SEO_page_AVI_no_error_dialog.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_SEO_page_below_128px_no_error_dialog.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_SEO_page_over_120fps_no_error_dialog.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_SEO_page_unsupported_audio_no_error_dialog.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Unsupported_File_Format_dialog.png",
+    "group": "spec"
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Below_128px_resolution_dialog.png",
+    "group": "spec"
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Over_120fps_frame_rate_dialog.png",
+    "group": "spec"
+   }
+  ]
+ },
+ "live": {
+  "productId": "274",
+  "templateId": "23404",
+  "version": "5.11.0",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "bugSource": "QA",
+  "bugBelong": "RD",
+  "severity": "Must Fix",
+  "priority": "N/A",
+  "reproduceOut": "3",
+  "reproduceTimes": "3",
+  "previousBuild": "Unknown",
+  "shortDescription": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Uploading unsupported media does not show error dialog",
+  "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload an AVI video.\n3. Repeat step 2 with a video whose shorter side is below 128 px > a video above 120 fps > a video with an unsupported audio codec.\n\nResult:\nNo error dialog appears; the AVI upload is ignored and the other three videos open an empty upload box. (ref to attachment)\n\nExpect Result:\nEach upload should show its error dialog: Unsupported File Format, Video Resolution Not Supported, Video Frame Rate Not Supported or Audio Codec Not Supported.\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, Case 1 (Unsupported File Format)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1251\n2. Figma: 9 - Error Handling - Upload Limitation, Case 5 (shorter side below 128 px)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=382-1791\n3. Figma: 9 - Error Handling - Upload Limitation, Case 6 (over 120 fps)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=383-1791\n4. Spec: Video Enhancer V2 > Error Handle (unsupported audio keeps Audio Codec Not Supported)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+  "attachments": [
+   "Highlight_SEO_page_AVI_no_error_dialog.png",
+   "Highlight_SEO_page_below_128px_no_error_dialog.png",
+   "Highlight_SEO_page_over_120fps_no_error_dialog.png",
+   "Highlight_SEO_page_unsupported_audio_no_error_dialog.png",
+   "Figma_Unsupported_File_Format_dialog.png",
+   "Figma_Below_128px_resolution_dialog.png",
+   "Figma_Over_120fps_frame_rate_dialog.png"
+  ],
+  "createButtonPresent": false,
+  "bugCodePresent": true,
+  "bugCode": "MYE261124P0025"
+ }
+}

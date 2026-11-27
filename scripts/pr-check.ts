@@ -50,7 +50,7 @@ for (const l of lines(git('diff', '-U0', mergeBase, 'HEAD'))) {
 }
 
 // 4. Approved tables: both sides changed one, or cases.csv changed without a Save
-const tables = new Set(touched.filter(f => /^library\/[^/]+\/[^/]+\/(ios|android)\/(cases\.csv|manifest\.json)$/.test(f)).map(f => f.replace(/\/[^/]+$/, '')));
+const tables = new Set(touched.filter(f => /^library\/[^/]+\/[^/]+\/(ios|android|web)\/(cases\.csv|manifest\.json)$/.test(f)).map(f => f.replace(/\/[^/]+$/, '')));
 for (const t of tables) {
   if (mainChanged.has(`${t}/manifest.json`) || mainChanged.has(`${t}/cases.csv`)) {
     const v = (ref: string) => { try { return JSON.parse(git('show', `${ref}:${t}/manifest.json`)).version; } catch { return '?'; } };
@@ -75,8 +75,8 @@ for (const f of changed.filter(f => f.startsWith('library/'))) {
   if (!third) continue;                                   // library/<product>/product.json and the like
   if (second === 'knowledge' || product === 'knowledge') continue;
   const featureFiles = lines(tryGit('ls-tree', '--name-only', `HEAD:library/${product}/${second}`));
-  if (!featureFiles.some(n => ['ios', 'android', 'specs'].includes(n)))
-    blockers.push(`library/${product}/${second}/ is not a feature (no ios/, android/ or specs/) nor knowledge/; product facts go in library/${product}/knowledge/ (domain-knowledge skill).`);
+  if (!featureFiles.some(n => ['ios', 'android', 'web', 'specs'].includes(n)))
+    blockers.push(`library/${product}/${second}/ is not a feature (no ios/, android/, web/ or specs/) nor knowledge/; product facts go in library/${product}/knowledge/ (domain-knowledge skill).`);
   if (!products.has(product)) warnings.push(`New product folder library/${product}/; check it is the product's agreed slug.`);
 }
 

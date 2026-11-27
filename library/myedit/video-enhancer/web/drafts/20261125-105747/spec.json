@@ -1,0 +1,17 @@
+{
+  "feature": "myedit/video-enhancer",
+  "platform": "web",
+  "title": "Video Enhancer V2",
+  "draft": "20261125-105747",
+  "created_at": "2026-11-25T02:57:47.590Z",
+  "based_on_version": null,
+  "spec_folder": "specs/2026-11-25",
+  "spec_files": [
+    {
+      "name": "Video Enhancer V2 - PM Figma 10-2.md",
+      "sha256": "6dbcac7a0df61d388d04ffdfd3204c57e820a9e661ef5c2065c81033a1d9f846",
+      "bytes": 13558
+    }
+  ],
+  "spec_set_sha256": "a3d94dd790011228ac1518b073082ff7e548215d04cbee07c5bce67597891be3"
+}

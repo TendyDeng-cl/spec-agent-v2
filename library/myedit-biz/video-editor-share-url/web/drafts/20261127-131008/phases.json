@@ -1,0 +1,70 @@
+{
+  "draft": "20261127-131008",
+  "current": [],
+  "needs": {
+    "TC-010": [
+      "biz-pro-account (premium or studio-pro-full; Biz plan checked)"
+    ],
+    "TC-032": [
+      "biz-pro-account (premium or studio-pro-full; Biz plan checked)"
+    ],
+    "TC-048": [
+      "biz-pro-storage-full-account"
+    ],
+    "TC-049": [
+      "biz-pro-storage-full-account"
+    ],
+    "TC-039": [
+      "free-storage-full-account"
+    ],
+    "TC-017": [
+      "signed-out-profile"
+    ],
+    "TC-018": [
+      "signed-out-profile",
+      "user-sign-in"
+    ],
+    "TC-053": [
+      "signed-out-profile"
+    ],
+    "TC-058": [
+      "phone-emulation"
+    ],
+    "TC-040": [
+      "manual-user"
+    ],
+    "TC-041": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-042": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-043": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-044": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-045": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-046": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-047": [
+      "biz-pro-account-with-room (jackcy, REQ-006)"
+    ],
+    "TC-054": [
+      "network-fault"
+    ],
+    "TC-055": [
+      "load-failure-trigger"
+    ]
+  },
+  "unavailable": {
+    "network-fault": "The run tools cannot block one request; by hand with Chrome DevTools only, with the user's go-ahead.",
+    "load-failure-trigger": "No known way to make a shared project fail to load without deleting it (Q-4).",
+    "manual-user": "Run by hand by the user (REQ-008): the agent never pays; record the user's result."
+  },
+  "phases": []
+}

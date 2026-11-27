@@ -1,0 +1,4 @@
+{
+  "note": "The PM Figma boards of 26' 11/E Share Project URL draw their flows as left-to-right screen sequences with bullet notes under each screen; the read (2026-11-27, figma-pm) found no arrow vectors, connectors or frames named <from> --> <to> (only ruler_line dividers and two 6-pt playhead dots). Each step of each sequence is a requirement in requirements.md instead.",
+  "arrows": []
+}

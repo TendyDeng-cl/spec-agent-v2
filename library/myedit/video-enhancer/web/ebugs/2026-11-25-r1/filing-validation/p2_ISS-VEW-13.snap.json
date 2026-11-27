@@ -1,0 +1,54 @@
+{
+ "schema_version": "ebug_form_contract/v3",
+ "expected": {
+  "validationStage": "persisted",
+  "product": "MyEdit",
+  "version": "5.11.0",
+  "productId": "274",
+  "templateId": "23404",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "featureName": "Video Enhancer(Trimmer)",
+  "bugBelong": "RD",
+  "affectedLanguages": [],
+  "allowNote": true,
+  "requiresSpec": true,
+  "requiresFixture": false,
+  "priorityBefore": "N/A",
+  "bugCode": "MYE261124P0032",
+  "attachments": [
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_Trimmer_Standard_hint_text.png",
+    "group": "actual",
+    "embeddedHighlight": true
+   },
+   {
+    "path": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Trimmer_Standard_hint.png",
+    "group": "spec"
+   }
+  ]
+ },
+ "live": {
+  "productId": "274",
+  "templateId": "23404",
+  "version": "5.11.0",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "bugSource": "QA",
+  "bugBelong": "RD",
+  "severity": "Must Fix",
+  "priority": "N/A",
+  "reproduceOut": "3",
+  "reproduceTimes": "3",
+  "previousBuild": "Unknown",
+  "shortDescription": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Trimmer): The Standard trim hint text differs from the spec",
+  "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video longer than 8 minutes.\n2. Look at the hint at the bottom left of the Trim Video dialog.\n\nResult:\nThe hint reads \"Please trim your video to 8 minutes or shorter before proceeding.\" (ref to attachment)\n\nExpect Result:\nThe hint should read \"Standard mode supports videos up to 8 minutes long. Please trim your video to continue.\"\n\nNote:\n1. Figma: 10 - Professional Mode length limit, step 3 note (Standard Trimmer hint)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=359-1999\n2. Spec: Video Enhancer V2 > User Flow > Video length limit (Trimmer hints)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+  "attachments": [
+   "Highlight_Trimmer_Standard_hint_text.png",
+   "Figma_Trimmer_Standard_hint.png"
+  ],
+  "createButtonPresent": false,
+  "bugCodePresent": true,
+  "bugCode": "MYE261124P0032"
+ }
+}

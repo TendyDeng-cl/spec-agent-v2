@@ -1,7 +1,7 @@
 // Write library/<product>/<feature>/README.md: a generated index of the feature's spec sets and platform tables.
 import { existsSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { PLATFORMS, draftsDir, featureDir, readManifest } from './library.ts';
+import { PLATFORMS, platformName, draftsDir, featureDir, readManifest } from './library.ts';
 import { listSpecSets } from './specs.ts';
 
 const mb = (b: number) => `${(b / 1048576).toFixed(1)} MB`;
@@ -18,8 +18,8 @@ export function writeFeatureIndex(feature: string) {
     const open = existsSync(dd) ? readdirSync(dd).filter(d => !d.startsWith('.') && !(m?.history ?? []).some(h => h.draft === d)) : [];
     const set = m ? sets.find(s => s.spec_set_sha256 === m.spec_set_sha256)?.folder ?? '—' : '—';
     lines.push(m
-      ? `| ${p === 'ios' ? 'iOS' : 'Android'} | v${m.version} | ${m.approved_at.slice(0, 10)} | ${m.cases} | \`specs/${set}\` | [cases.xlsx](${p}/cases.xlsx) · [cases.csv](${p}/cases.csv) · [cases.html](${p}/cases.html) · [requirements](${p}/requirements.md)${open.length ? ` · open drafts: ${open.join(', ')}` : ''} |`
-      : `| ${p === 'ios' ? 'iOS' : 'Android'} | — | — | — | — | ${open.length ? `open drafts: ${open.join(', ')}` : 'not started'} |`);
+      ? `| ${platformName(p)} | v${m.version} | ${m.approved_at.slice(0, 10)} | ${m.cases} | \`specs/${set}\` | [cases.xlsx](${p}/cases.xlsx) · [cases.csv](${p}/cases.csv) · [cases.html](${p}/cases.html) · [requirements](${p}/requirements.md)${open.length ? ` · open drafts: ${open.join(', ')}` : ''} |`
+      : `| ${platformName(p)} | — | — | — | — | ${open.length ? `open drafts: ${open.join(', ')}` : 'not started'} |`);
   }
   lines.push('', '## Spec sets received', '', 'Original files are kept locally and are not committed; their SHA-256 is in each `spec-set.json`.', '');
   for (const s of [...sets].reverse()) {

@@ -1,0 +1,14 @@
+{
+  "Q-1": "Share 區的說明寫「Premium users can copy and edit the project.」，但 MyEdit Biz 的方案只有 Free／Pro（定價頁把已訂閱的狀態叫「Premium Access」）。假設：字串照 Spec 原文顯示，「Premium users」指的就是 Biz Pro。R-003；TC-003。",
+  "Q-2": "網址格式：PM Figma 的「20261019 Update」寫的是 https://myedit.online.en/video-editor/online-video-editor/{project token}（MyEdit 格式，沒有 /share/）；KC Spec（2026-11-11，較新、為 Biz 改寫）寫 {網站}/{工具路徑}/share/{token}，和 Biz Photo Editor 的分享連結一樣，但沒寫 Video Editor 的工具路徑是什麼。假設：以 KC 為準，連結在 https://business-demo.myedit.online 底下、含 /share/ 加一組 token；工具路徑只記錄、不判定。R-006；TC-005。",
+  "Q-3": "Spec 給了非 Pro 使用者在 Create Copy 時雲端空間已滿的提示，但 Free 接收者一按就先被 Limitation popup 擋下，根本不會走到檢查空間；只有 R-036 的順序（先訂閱、再檢查空間）才會檢查空間，而那時已經是 Pro。假設：雲端已滿的 Free 接收者看到的是 Limitation popup，不是空間已滿提示；這個流程裡不會出現非 Pro 的空間已滿提示。R-048；TC-039。",
+  "Q-4": "Spec 沒寫分享的專案在「沒有被刪除」的情況下怎樣會載入失敗（R-055），測試也不知道怎麼製造。假設：這列先擱置，等 RD 說明觸發方式。R-055；TC-055。",
+  "Q-5": "Biz 全站小螢幕規則（從程式整理）說 Video Editor 編輯畫面在視窗高度 550 px 以下也會蓋遮罩，Spec 沒說分享檢視算不算。假設：PM 確認前不測（沒有列）。R-056。",
+  "Q-6": "Spec 說未登入的接收者會先看到 Sign In 視窗、已登入的直接進下一步，但沒說從這個視窗登入後會到哪裡，也沒說關掉視窗會怎樣。假設：登入後打開分享檢視（R-017）；關掉視窗的結果只記錄、不判定。R-016、R-017；TC-017、TC-018。",
+  "Q-7": "Pro 空間已滿提示的「Manage」會「帶到 My Projects」，Spec 沒說是哪個分頁、是不是開新分頁（共通規則寫的是「該類別的 My Projects」）。假設：開到 My Projects 的 Video 分頁；實際分頁照實記錄。R-047；TC-049。",
+  "Q-8": "MyEdit Biz 的 Design 還沒出（UJ，預計 2026-11-27），所有文案與版面都來自 PM Spec 和 PM Figma（Figma 畫的是 MyEdit 的畫面與方案）。假設：各列照 KC Spec 的文字寫，Biz Design 出來後再對一次，較新的 Design 為準（coverage pass 7）。所有列。",
+  "Q-9": "Spec 沒寫複製到一半失敗會怎樣，也沒寫同一個專案複製第二次的名稱（從程式整理的雲端規則是先 _copy，再加 (1)、(2)）。假設：PM 寫清楚前兩者都不測（沒有列）。R-041。",
+  "Q-10": "Spec 沒寫的連結狀態：連結取得中有沒有載入狀態（程式整理的規則是顯示「Processing...」且複製鈕不能按），以及未登入時在 Video Editor 按「Export & Share」會怎樣。假設：都不測（沒有列）；TC-002 記錄視窗打開時連結區顯示什麼。R-002。",
+  "Q-11": "Biz 1.12 看板的 MB-451「What's New: Product Fixer / AI Shot List / Video Share URL / Batch Text」在 12 月版本，但沒有任何來源寫 Video Share URL 這張卡的內容（標題、說明、圖片、連結）。假設：內容寫出來前不加列（update-plan › Not added）。",
+  "Q-12": "Spec 沒寫 Limitation popup 的關閉鈕和 sales popup 的 X 按了會怎樣（共用的升級視窗外框一律有關閉鈕）。假設：各自關掉視窗，檢視畫面維持原狀、不會複製（R-035 只寫了「不會複製」這部分）。R-035；TC-037、TC-038。"
+}

@@ -1,0 +1,56 @@
+Dedupe — R1 eBug drafts, MyEdit 5.11.0 build 11242029 (redrafted 2026-11-25 with the current MyEdit rules)
+
+Parent TR pool read: TR261022-0018 in IF3 (https://ecl.cyberlink.com/IF3/tr/BPM/FormView/TR261022-0018), section
+"This TR Generated the following eBug(s)", 190 tickets, read only (no comment, edit or save), 2026-11-25 ~18:15 (+08).
+Every Video Enhancer / Video Restoration / Launcher / Pricing / Trimmer title was compared with the 19 findings.
+
+Left off the drafts as duplicates (same product, ticket not closed):
+- ISS-VEW-02 (TC-007, TC-107: no Video Restoration in the left tool menu)
+    = MYE261106P0045  [Manual]Video Restoration (Left Menu): No Video Restoration listed on Left menu — NeedCodeReview, RD
+    related MYE261124P0001  [Manual][UX] Video Restoration(Left panel): Suggest to not show back button — Assigned, RD
+- ISS-VEW-11 (TC-150: Video Enhancer and Video Restoration Launcher cards share one thumbnail)
+    = MYE261110P0023  [Manual][UI]Launcher page/My Library(Video restoration/Video enhancer v2): Two tools thumbnail are same
+      — RDResolved, RD. Still reproduces on 11242029 (R1-a, R1-f); for information only, no comment (overlay rule 6).
+- H-2 (TC-021 / TC-026: SEO upload over 8 minutes shows Video Duration Limit Exceeded instead of the Trimmer)
+    = MYE261118P0008  [AIAgent]Video Enhancer V2(SEO Upload): The page blocks videos over 8 minutes without opening Trim Video
+      — BuildResolved, PM. Still reproduces on 11242029; for information only, no comment.
+
+Checked, not duplicates: MYE261116P0018 (dialog title wording, closed), MYE261106P0043 (import-page limit text, closed),
+MYE261116P0016 (Trimmer text from V2 to Video Restoration, closed), MYE261120P0033 (Video Restoration card hover video),
+MYE261116P0009 (Recent Gen remaining time), MYE261124P0002 / P0007 (Recent Gen thumbnail mask).
+
+Whole MyEdit pool (ecl_query.py dedupe): not run — no ECL token on this computer. Run before filing:
+python .claude/skills/ebug-tr-filer/scripts/ecl_query.py dedupe upload/bodies.json --product "MyEdit"
+Knowledge Center eBug registry (list_ebugs, scope all): empty.
+
+Whole MyEdit pool, IF3 eBug Query (2026-11-25 evening, read only: no ticket opened for edit, nothing saved)
+Filters: Product MyEdit, all projects (5.1 - 5.12 and others), all statuses incl. Close and Cancel, created 2026-01-01 -> 2026-11-25.
+Keywords (Short Description): Enhance (132), Video Enhancer V2 (23), Video Restoration (11), 1440, Got, Popular, tag,
+Compare, Pricing, Trim, Too Long, Continue, fps, frame rate, toast, Creating, Cancel, mail, EDM, Professional, dark,
+playing, pause, play, Processing, Unsupported. Tickets opened and read in full: MYE261020-0014, MYE261116P0016, MYE261116P0018.
+Knowledge Center: list_ebugs (all, open and resolved) empty; search_knowledge names no filed ticket for any draft.
+
+Result: none of the 14 drafts is already filed (no open, resolved or closed same-issue ticket). All 14 stay.
+Related, kept (named in the draft's QA note):
+- ISS-VEW-01 ~ MYE261020-0014 [MX][AIAgent][Strapi]Top Menus: Homepage Tool lists and Enhanced tags differ from spec
+    (5.10, Fail) — top menus, not Launcher Popular Tools; its verify comment says the Enhanced-tag part is fixed.
+- ISS-VEW-03 / ISS-VEW-04 ~ MYE261116P0018 Video Enhancer V2 (Import): unsupported format dialog title reads
+    "Unsupported File Type" (Close, verified 11242029) — room dialog title, not SEO-page dialogs or the Got It button.
+- ISS-VEW-13 ~ MYE261116P0016 Video Enhancer V2 (Continue editing): "Trim to 8 mins" in Trimmer popup going to
+    Video Restoration (Close, verified 11201956) — opposite case; its RD fix switches to the default
+    "Please trim your video to ... minutes" hint when the limit is not the page tool's, which is the text VEW-13 sees:
+    possible side effect, noted for RD.
+- ISS-VEW-10 ~ 5.7.0 [CT] Video Enhancer light-mode tickets (e.g. MYE260717-0052, MYE260721-0009, all Close) — old
+    Video Enhancer (now Video Restoration), not the V2 room's progress and error dialogs.
+
+Filed / corrected 2026-11-25 (19:31-19:38 +08, IF3, TR261022-0018, creator JACKCY_LEE; filed_bugcodes.json)
+Duplicate check before each create: the TR's eBug list was re-read and had no ticket with the entry's title (none created twice).
+Corrected (title / description / added Figma images only; status, owner, severity, priority unchanged; no comments):
+- ISS-VEW-03 = MYE261124P0025 (title "Uploading unsupported media does not show error dialog"; 3 Figma dialog images -> 7 files)
+- ISS-VEW-04 = MYE261124P0026 (Figma node 237-1269 + image; Expect shortened -> 4 files)
+- ISS-VEW-06 = MYE261124P0027 ([UI] removed; Repro split; Figma node 207-1229 + image -> 2 files)
+Unchanged: ISS-VEW-07 = MYE261124P0028, ISS-VEW-08 = MYE261124P0029.
+Created:
+- ISS-VEW-09 = MYE261124P0030   - ISS-VEW-12 = MYE261124P0031   - ISS-VEW-13 = MYE261124P0032
+- ISS-VEW-14 = MYE261124P0033 (PM, Better Fix)   - ISS-VEW-15 = MYE261124P0034   - ISS-VEW-16 = MYE261124P0035
+Not filed: ISS-VEW-01, ISS-VEW-05 (user), ISS-VEW-10 (held for the user's decision).

@@ -1,0 +1,628 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑鼠移到頂端選單「Video Tools」上
+2. 點「Video Enhancer」","選單項目「Video Enhancer」帶有「Enhanced」標籤，而不是「New」
+開啟 /en/video-editor/video-enhancer（SEO 頁）或編輯頁 /video-editor/video-enhancer/edit",P1,"R-001, R-008",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-002,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Home（/en/home）","1. 查看 Home › Popular Tools
+2. 找到 Video Enhancer 卡片","Video Enhancer 卡片上沒有「Enhanced」標籤
+也沒有「New」標籤",P2,R-008,知識庫 features/video-enhancer-v2.md › 跨工具串接 › 工具標籤（#ec5715b6ac73，取代 #b29e724be991）：「Enhanced」只出現在頂端選單（TC-001）；R1 照舊的預期判這列失敗（ISS-VEW-01，暫緩，沒有開單）,修改,R-008 對 Launcher 反轉：Home › Popular Tools 的卡片不加「Enhanced」標籤（知識庫 #ec5715b6ac73，以最新 MX spec 為準；REQ-009）
+TC-003,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑鼠移到「Video Tools」上，點「HD Video Converter」
+2. 點「Choose a file」，選 480p 30 fps 7.3 秒的 MP4（fx-480p30）","步驟 1：網址為 /en/video-editor/hd-video-converter（自己的 SEO 頁）
+步驟 2：開啟新的 Video Enhancer 編輯頁，面板為「Video Enhancer Settings」
+步驟 2：預設值為 Standard、HD、1080P、Same as source（和從 Video Enhancer 入口進來時相同）",P1,"R-002, R-009",Q-3 已回答（使用者，2026-11-25，REQ-004）：維持 SEO 頁原網址,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-151,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑到「Video Tools」，點「HD Video Converter」
+2. 看上傳框的文字","步驟 2：上傳框依序列出「Supported file formats: MP4, MOV」、「Maximum file duration: 8 min」、「Maximum file size: 10 GB」
+步驟 2：沒有解析度限制那一行",P2,R-107,R1 O-1：上傳框寫的是「Maximum file duration: 30 min」／「Maximum file size: 1.8 GB」，是舊工具的限制（知識庫從官網整理的 derived-hd-video-converter-landing-page.md 也這樣記），但這頁進去的是新版房間（8 min／10 GB，TC-008）；Q-13,新增,新增 R-107：HD Video Converter SEO 頁的上傳框原本沒有測試列（R1 O-1）
+TC-004,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑鼠移到「Video Tools」上，點「AI Frame Interpolation」
+2. 點「Choose a file」，選 480p 30 fps 7.3 秒的 MP4（fx-480p30）","步驟 1：網址為 /en/video-editor/ai-frame-interpolation
+步驟 2：開啟新的 Video Enhancer 編輯頁，預設值和 TC-003 相同",P1,"R-003, R-009",Q-3 已回答（REQ-004）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-152,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑到「Video Tools」，點「AI Frame Interpolation」
+2. 看上傳框的文字","步驟 2：上傳框依序列出「Supported file formats: MP4, MOV」、「Maximum file duration: 8 min」、「Maximum file size: 10 GB」
+步驟 2：沒有解析度限制那一行",P2,R-108,R1 O-1：上傳框寫的是「Maximum file duration: 3 min」／「Maximum file size: 1.8 GB」，是舊工具的限制（知識庫從官網整理的 derived-ai-frame-interpolation-landing-page.md 也這樣記），但這頁進去的是新版房間（8 min／10 GB，TC-008）；Q-13,新增,新增 R-108：AI Frame Interpolation SEO 頁的上傳框原本沒有測試列（R1 O-1）
+TC-005,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑鼠移到「Video Tools」上，點「Video Denoiser」
+2. 上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）","步驟 2：網址為 /en/video-editor/video-denoiser/edit
+步驟 2：編輯頁為 Video Restoration，面板為「Video Restoration Settings」
+步驟 2：Video Denoise 已勾選",P1,"R-004, R-054, R-056",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-006,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 任一有頂端選單的頁面","1. 滑鼠移到「Video Tools」上，點「Video Brightener」
+2. 上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）","步驟 2：網址為 /en/video-editor/video-brightener/edit
+步驟 2：編輯頁為 Video Restoration
+步驟 2：Lighting Adjustment 已勾選",P1,"R-005, R-056",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-007,入口與房間,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已登入，停在 Home","1. 打開頂端選單「Video Tools」，看有哪些項目
+2. 打開 Launcher 的工具清單和編輯頁左側的工具選單
+3. 開啟 /en/video-editor/video-restoration/edit，上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）","步驟 1：頂端選單裡沒有「Video Restoration」項目
+步驟 2：Launcher 和左側工具選單都列有「Video Restoration」
+步驟 3：開啟 Video Restoration 編輯頁，Lighting Adjustment 和 Video Denoise 都已勾選",P1,"R-006, R-007, R-056",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-008,SEO 頁與上傳,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁（/en/video-editor/video-enhancer）","1. 查看上傳區塊
+2. 點「Choose a file」，選 480p 30 fps 7.3 秒的 MP4（fx-480p30）
+3. 上傳進行中，查看編輯頁","步驟 1：區塊依序列出「Supported file formats: MP4, MOV」、「Maximum file duration: 8 min」、「Maximum file size: 10 GB」
+步驟 1：沒有解析度限制那一行
+步驟 3：顯示「Processing...」和百分比，以及「It may take a few seconds. Please don't leave this page.」
+步驟 3：所有設定和 Enhance 都是灰色，不能按",P1,"R-010, R-011, R-012, R-013",Q-6：Figma 示意圖仍畫了解析度那一行,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-009,SEO 頁與上傳,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 等上傳完成
+2. 查看設定面板和預覽上方的區域","面板標題為「Video Enhancer Settings」
+Mode：Standard、Professional
+Enhance Style：HD、Natural
+Output Resolution：Original、720P、1080P、4K
+Frame Rate：Same as source
+預覽上方有「Replace Video」和「Trim Video」
+預設值：Standard、HD、1080P、Same as source
+所有設定和 Enhance 都可以按",P1,"R-024, R-025, R-012",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-010,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選一個 AVI 檔（fx-avi）
+2. 點「Got it」","步驟 1：跳出「Unsupported File Format」／「Only MP4 and MOV formats are supported. Please choose another video.」彈出視窗，附「Got it」
+步驟 2：視窗關閉，影片沒有匯入",P1,"R-014, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-011,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選一個超過 10 GB 的 MP4（fx-10gb）
+2. 點「Got it」","步驟 1：跳出「File Size Too Large」／「This video exceeds the 10 GB file size limit. Please choose a smaller video.」彈出視窗，附「Got it」
+步驟 2：視窗關閉，影片沒有匯入",P1,"R-015, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-012,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選一個 2160p 的 MP4（fx-2160p）
+2. 點「Got it」","步驟 1：跳出「Video Resolution Not Supported」／「This video exceeds the supported resolution limit (1440p). Please choose another video.」彈出視窗，附「Got it」
+步驟 2：視窗關閉，影片沒有匯入",P1,"R-016, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-013,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 上傳 1440p 30 fps 的 MP4（fx-1440p）
+2. 打開 Output Resolution","步驟 1：開啟編輯頁，沒有出現錯誤
+步驟 2：720P 和 1080P 是灰色，不能選
+步驟 2：Original 和 4K 可以選
+步驟 2：預設為 4K",P1,"R-016, R-025, R-026",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-014,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選一個 192×96 的 MP4（fx-192x96）
+2. 點「Got it」","步驟 1：跳出「Video Resolution Not Supported」／「This video is below the minimum supported resolution (shorter side of 128 px). Please choose another video.」彈出視窗，附「Got it」
+步驟 2：視窗關閉，影片沒有匯入",P1,"R-017, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-015,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁",1. 上傳 256×128 的 MP4（fx-128short）,"開啟編輯頁，沒有出現錯誤
+Original 可以選",P2,"R-017, R-026",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-016,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選一個 240 fps 的 MP4（fx-240fps）
+2. 點「Got it」","步驟 1：跳出「Video Frame Rate Not Supported」／「This video exceeds the supported frame rate limit (120 fps). Please choose another video.」彈出視窗，附「Got it」
+步驟 2：視窗關閉，影片沒有匯入",P1,"R-018, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-017,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 上傳 1080p 120 fps 的 MP4（fx-1080p120）
+2. 打開 Frame Rate","步驟 1：開啟編輯頁，沒有出現錯誤
+步驟 2：只列出「Same as source」",P1,"R-018, R-027",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-018,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選讀不到影格率的 MP4（fx-nofps）
+2. 點「Got it」","步驟 1：上傳完成後，跳出對話框「Unable to Use This Video」／「This video cannot be enhanced because it is missing required information, such as the frame rate. Try uploading a different video.」，附「Got it」按鈕
+步驟 2：對話框關閉，影片不會匯入",P1,"R-019, R-078",Q-1 已回答（使用者，2026-11-25，REQ-004）：錯誤在上傳完成後才出現，不是選檔當下,移除,刪除：不測（使用者，2026-11-26，REQ-013）；做不出讀不到影格率的檔案（fx-nofps 會被讀成 1 fps，R1 O-28），所以 R-019 無法測試
+TC-019,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 點「Choose a file」，選擇 AV1 編碼的 MP4（fx-av1）
+2. 點「Got it」","步驟 1：跳出對話框「Unsupported Format」／「This video contains an unsupported video codec. Please choose another video.」，附「Got it」按鈕
+步驟 2：對話框關閉，影片不會匯入",P1,"R-020, R-078",R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下,修改,R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-020,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 上傳音訊為 AC-3 的 MP4（fx-ac3）
+2. 點對話框上的按鈕","步驟 1：跳出舊版編輯室的「Audio Codec Not Supported」或「Audio Format Not Supported」對話框
+步驟 2：影片不會匯入",P2,"R-021, R-078","記錄跳出的是這兩種對話框的哪一個，以及其文字內容
+R1 重測：fx-ac3 在 SEO 頁和房間都跳「Audio Codec Not Supported」；fx-flac24（FLAC）在房間會被擋，但在 SEO 頁不跳任何對話框就放行（MYE261124P0025）
+R-078（使用者，2026-11-26，REQ-014）：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下",修改,換測試檔：fx-badaudio（Opus）其實可以用；改用會被擋的 fx-ac3（R1 TC-020 重測）；R-078 放寬：對話框在選檔當下或上傳完成後跳出都可以，只檢查有沒有跳出對話框、影片有沒有被擋下（使用者，2026-11-26，REQ-014）
+TC-021,輸入限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁","1. 上傳 8:20 的 MP4（fx-8m20）
+2. 等上傳結束後查看頁面
+3. 把結束把手拖過 8:00
+4. 點「Trim」","步驟 1：SEO 頁不會跳出「Video Duration Limit Exceeded」或其他錯誤框
+步驟 2：進入編輯室，接著在編輯室上方開啟 Trimmer
+步驟 2：左下角顯示「Standard mode supports videos up to 8 minutes long. Please trim your video to continue.」
+步驟 3：選取範圍停在 8:00
+步驟 4：編輯室裡是剪裁後的影片（8:00 以內）",P1,"R-022, R-038, R-039","知識庫 features/video-enhancer-v2.md › 影片長度限制（PM 2026-11-26）：匯入入口（SEO 頁、匯入頁）不擋影片長度；上傳區仍顯示「Maximum file duration: 8 min」（TC-009）
+R1：SEO 頁跳出「Video Duration Limit Exceeded」（MYE261118P0008，BuildResolved；MYE261124P0039 裡 8:20 的例子也是）",修改,R-022 修改：SEO 頁與匯入頁不擋超過 8:00 的影片，照常上傳、進編輯室後才開 Trimmer（PM，知識庫 2026-11-26；REQ-012）
+TC-022,輸入限制,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁",1. 上傳 8:00 的 MP4（fx-8m00）,直接進入編輯室並載入影片，不會出現 Trimmer，也沒有錯誤,P1,R-022,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-023,輸入限制,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁",1. 上傳 HEVC 編碼的 MOV（fx-hevc-mov）,進入編輯室並載入影片，沒有錯誤,P1,"R-013, R-020",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-024,輸入限制,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁",1. 把 480p 30 fps、7.3 秒的 MP4（fx-480p30）拖曳到上傳區,進入編輯室，影片上傳的結果和用 Choose a file 選檔一樣,P2,R-011,拖放需要系統的檔案視窗或真正的拖放動作：手動執行或先擱置（run-web.md）,移除,刪除：不測（使用者，2026-11-26，REQ-015）；從桌面拖放檔案需要人工操作
+TC-025,輸入限制,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer SEO 頁",1. 點選範例影片,進入編輯室並載入該範例影片,P2,R-011,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-026,輸入限制,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Trimmer 無法使用（服務暫停，需要 RD 提供切換方式）",1. 上傳 8:20 的 MP4（fx-8m20）,跳出「Video Too Long」／「This video exceeds the 8-minute length limit. Please choose a shorter video.」，附「Got it」按鈕,P3,R-023,需要有辦法讓 Trimmer 無法使用：在 RD 提供方法之前，以 --as test-data 標記為 Blocked,移除,刪除：不測（使用者，2026-11-26，REQ-015）；需要 RD 讓 Trimmer 無法使用，所以 R-023 無法測試
+TC-027,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 480p 30 fps、7.3 秒 MP4（fx-480p30）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Output Resolution,"Original、720P、1080P、4K 都可以選
+預設為 1080P",P1,"R-026, R-025",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-028,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 720p 30 fps MP4（fx-720p30）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Output Resolution,"720P 為灰色（不能選）
+Original、1080P、4K 可以選
+預設為 1080P",P1,"R-026, R-025",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-029,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 60 fps MP4（fx-1080p60）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Output Resolution,"720P 和 1080P 為灰色（不能選）
+Original 和 4K 可以選
+預設為 4K",P1,"R-026, R-025",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-030,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 480p 30 fps、7.3 秒 MP4（fx-480p30）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、50、60、100、120 fps
+未列出的選項：無",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-031,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 50 fps MP4（fx-1080p50）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、60、100、120 fps
+未列出的選項：50 fps",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-032,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 60 fps MP4（fx-1080p60）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、100、120 fps
+未列出的選項：50、60 fps",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-033,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 100 fps MP4（fx-1080p100）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、120 fps
+未列出的選項：50、60、100 fps",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-034,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 24 fps MP4（fx-1080p24）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、50、60 fps
+未列出的選項：100、120 fps（超過 24 fps 的四倍）",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-035,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 1080p 29.97 fps MP4（fx-1080p2997）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 開啟 Frame Rate,"列出的選項：Same as source、50、60、100、120 fps
+未列出的選項：無（29.97 四捨五入視為 30）",P1,R-027,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-036,設定面板,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 480p 30 fps、7.3 秒 MP4（fx-480p30）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）","1. 游標移到 Mode 的 ⓘ 上
+2. 游標移到 Enhance Style 的 ⓘ 上
+3. 游標移到 Output Resolution 的 ⓘ 上
+4. 游標移到 Frame Rate 的 ⓘ 上","步驟 1：顯示「Standard: Balanced enhancement. Works well for most videos. Professional: Stronger restoration for older or badly compressed footage. Takes much longer to process. Supports videos up to 2:30.」
+步驟 2：顯示「HD: A crisper, more detailed picture. Best when footage looks soft or blurry. Natural: A gentler result that stays true to the original. Best when footage already looks good.」
+步驟 3：顯示「Resolution adjustment is supported up to 4K. Options lower than or equal to the original resolution are unavailable.」
+步驟 4：顯示「Frame rate adjustment is supported up to 120 fps.」",P2,R-028,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-037,價格,"1. 用 Chrome 1440 × 900 開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 已上傳 480p 30 fps、7.3 秒 MP4（fx-480p30）的 Video Enhancer 編輯室（/en/video-editor/video-enhancer/edit）（web/fixtures.md）",1. 游標移到 Enhance 下方價格旁的 ⓘ 上,"顯示「Total credits depend on video duration and selected mode, resolution, and frame rate.」",P2,R-031,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-038,價格,"1. Chrome 1440 × 900，MyEdit demo (en)，以預設測試帳號登入（Studio Pro，點數足夠）
+2. Video Enhancer 編輯室 (/en/video-editor/video-enhancer/edit)，已上傳 480p 30 fps 7.3 s MP4（fx-480p30）（web/fixtures.md）","1. 查看 Enhance 上的價格
+2. 將 Enhance Style 切換為 Natural
+3. 再切回 HD",步驟 2–3：Enhance 上的價格和其下方的說明文字都不會變,P1,R-029,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-039,價格,"1. Chrome 1440 × 900，MyEdit demo，以 Free／空白狀態測試帳號登入（點數不足）
+2. Video Enhancer 編輯室，已上傳 480p 30 fps 7.3 s MP4（fx-480p30）",1. 查看 Enhance 和其下方的說明文字,"Enhance 顯示一般的點數價格（Standard 1080P Same as source：16）
+任何地方都沒有「1 Free Trial」",P1,R-034,Free 帳號（myedit-test-accounts），使用它專屬的 Chrome 設定檔,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-040,價格,"1. Chrome 1440 × 900，MyEdit demo (en)，以預設測試帳號登入（Studio Pro，點數足夠）
+2. Video Enhancer 編輯室 (/en/video-editor/video-enhancer/edit)，已上傳 1080p 60 fps MP4（fx-1080p60，5.0 s）（web/fixtures.md）","1. 設定 Standard、Original、Same as source，查看價格
+2. 設定 Professional、Original、Same as source，查看價格","步驟 1：10 點數，「Enhance 5.00 seconds (2 credits/sec)」（Original = 1080p 級距，Same as source = ≤60 級距）
+步驟 2：40 點數，「Enhance 5.00 seconds (8 credits/sec)」",P1,"R-033, R-030, R-032",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-041,價格,"1. Chrome 1440 × 900，MyEdit demo (en)，以預設測試帳號登入（Studio Pro，點數足夠）
+2. Video Enhancer 編輯室 (/en/video-editor/video-enhancer/edit)，已上傳 1440p 30 fps MP4（fx-1440p，5.0 s）（web/fixtures.md）",1. 設定 Standard、Original、Same as source，查看價格,15 點數，「Enhance 5.00 seconds (3 credits/sec)」（1440p 來源選 Original = 4K 級距）,P1,"R-033, R-030, R-032",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-042,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 Original、Frame Rate 為 Same as source（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P1,"R-030, R-032, R-033",組合 Standard · Original · Same as source；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-043,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 Original、Frame Rate 為 50 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · Original · 50 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-044,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 Original、Frame Rate 為 60 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · Original · 60 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-045,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 Original、Frame Rate 為 100 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · Original · 100 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-046,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 Original、Frame Rate 為 120 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · Original · 120 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-047,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 720P、Frame Rate 為 Same as source（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P1,"R-030, R-032, R-033",組合 Standard · 720P · Same as source；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-048,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 720P、Frame Rate 為 50 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 720P · 50 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-049,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 720P、Frame Rate 為 60 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 720P · 60 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-050,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 720P、Frame Rate 為 100 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 720P · 100 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-051,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 720P、Frame Rate 為 120 fps（Enhance Style 維持 HD）,"Enhance 顯示 8 點數
+其下方顯示「Enhance 7.30 seconds (1 credit/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 720P · 120 fps；8 秒（7.3 秒無條件進位）× 1；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,修改,R-030 修改：每秒 1 點時文案是單數「(1 credit/sec)」（R1 O-8）
+TC-052,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 1080P、Frame Rate 為 Same as source（Enhance Style 維持 HD）,"Enhance 顯示 16 點數
+其下方顯示「Enhance 7.30 seconds (2 credits/sec)」",P1,"R-030, R-032, R-033",組合 Standard · 1080P · Same as source；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-053,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 1080P、Frame Rate 為 50 fps（Enhance Style 維持 HD）,"Enhance 顯示 16 點數
+其下方顯示「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 1080P · 50 fps；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-054,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 1080P、Frame Rate 為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 16 credits
+按鈕下方顯示：「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 1080P · 60 fps；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-055,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 1080P、Frame Rate 為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 16 credits
+按鈕下方顯示：「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 1080P · 100 fps；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-056,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 1080P、Frame Rate 為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 16 credits
+按鈕下方顯示：「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 1080P · 120 fps；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-057,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 4K、Frame Rate 為 Same as source（Enhance Style 為 HD）,"Enhance 按鈕顯示 24 credits
+按鈕下方顯示：「Enhance 7.30 seconds (3 credits/sec)」",P1,"R-030, R-032, R-033",組合 Standard · 4K · Same as source；8 秒（7.3 秒無條件進位）× 3；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-058,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 4K、Frame Rate 為 50 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 48 credits
+按鈕下方顯示：「Enhance 7.30 seconds (6 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 4K · 50 fps；8 秒（7.3 秒無條件進位）× 6；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-059,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 4K、Frame Rate 為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 48 credits
+按鈕下方顯示：「Enhance 7.30 seconds (6 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 4K · 60 fps；8 秒（7.3 秒無條件進位）× 6；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-060,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 4K、Frame Rate 為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 credits
+按鈕下方顯示：「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 4K · 100 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-061,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Standard、Output Resolution 為 4K、Frame Rate 為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 credits
+按鈕下方顯示：「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Standard · 4K · 120 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-062,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 Original、Frame Rate 為 Same as source（Enhance Style 為 HD）,"Enhance 按鈕顯示 16 credits
+按鈕下方顯示：「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · Original · Same as source；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-063,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 Original、Frame Rate 為 50 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 32 credits
+按鈕下方顯示：「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · Original · 50 fps；8 秒（7.3 秒無條件進位）× 4；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-064,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 Original、Frame Rate 為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 32 credits
+按鈕下方顯示：「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · Original · 60 fps；8 秒（7.3 秒無條件進位）× 4；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-065,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 Original、Frame Rate 為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 credits
+按鈕下方顯示：「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · Original · 100 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-066,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 Original、Frame Rate 為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 credits
+按鈕下方顯示：「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · Original · 120 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-067,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 720P、Frame Rate 為 Same as source（Enhance Style 為 HD）,"Enhance 按鈕顯示 16 credits
+按鈕下方顯示：「Enhance 7.30 seconds (2 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 720P · Same as source；8 秒（7.3 秒無條件進位）× 2；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-068,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 設定 Mode 為 Professional、Output Resolution 為 720P、Frame Rate 為 50 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 32 credits
+按鈕下方顯示：「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 720P · 50 fps；8 秒（7.3 秒無條件進位）× 4；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-069,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 720P、Frame Rate 設為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 32 點
+按鈕下方顯示「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 720P · 60 fps；8 秒（7.3 秒無條件進位）× 4；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-070,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 720P、Frame Rate 設為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 點
+按鈕下方顯示「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 720P · 100 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-071,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 720P、Frame Rate 設為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 點
+按鈕下方顯示「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 720P · 120 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-072,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 1080P、Frame Rate 設為 Same as source（Enhance Style 為 HD）,"Enhance 按鈕顯示 32 點
+按鈕下方顯示「Enhance 7.30 seconds (4 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 1080P · Same as source；8 秒（7.3 秒無條件進位）× 4；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-073,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 1080P、Frame Rate 設為 50 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 點
+按鈕下方顯示「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 1080P · 50 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-074,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 1080P、Frame Rate 設為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 64 點
+按鈕下方顯示「Enhance 7.30 seconds (8 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 1080P · 60 fps；8 秒（7.3 秒無條件進位）× 8；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-075,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 1080P、Frame Rate 設為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 128 點
+按鈕下方顯示「Enhance 7.30 seconds (16 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 1080P · 100 fps；8 秒（7.3 秒無條件進位）× 16；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-076,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 1080P、Frame Rate 設為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 128 點
+按鈕下方顯示「Enhance 7.30 seconds (16 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 1080P · 120 fps；8 秒（7.3 秒無條件進位）× 16；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-077,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 4K、Frame Rate 設為 Same as source（Enhance Style 為 HD）,"Enhance 按鈕顯示 96 點
+按鈕下方顯示「Enhance 7.30 seconds (12 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 4K · Same as source；8 秒（7.3 秒無條件進位）× 12；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-078,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 4K、Frame Rate 設為 50 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 192 點
+按鈕下方顯示「Enhance 7.30 seconds (24 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 4K · 50 fps；8 秒（7.3 秒無條件進位）× 24；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-079,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 4K、Frame Rate 設為 60 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 192 點
+按鈕下方顯示「Enhance 7.30 seconds (24 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 4K · 60 fps；8 秒（7.3 秒無條件進位）× 24；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-080,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 4K、Frame Rate 設為 100 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 384 點
+按鈕下方顯示「Enhance 7.30 seconds (48 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 4K · 100 fps；8 秒（7.3 秒無條件進位）× 48；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-081,價格：每種組合,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）",1. 將 Mode 設為 Professional、Output Resolution 設為 4K、Frame Rate 設為 120 fps（Enhance Style 為 HD）,"Enhance 按鈕顯示 384 點
+按鈕下方顯示「Enhance 7.30 seconds (48 credits/sec)」",P2,"R-030, R-032, R-033",組合 Professional · 4K · 120 fps；8 秒（7.3 秒無條件進位）× 48；stage 價格，只看 demo（Q-4、Q-5 已回答，REQ-004）；不實際生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-082,Professional 長度限制,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數足夠）
+2. 進入 Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 3:00 的 MP4（fx-3m00）（web/fixtures.md）",1. 點選 Mode 「Professional」,"已選取 Professional
+Mode 下方以紅字顯示「Professional mode supports videos up to 2:30.」
+Enhance 不能按",P1,R-036,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-083,Professional 長度限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 進入 Video Enhancer 編輯頁，已上傳 3:00 的 MP4（fx-3m00），並選了 Professional（顯示紅字）
+3. Output Resolution 選 720P，Frame Rate 選 Same as source",1. 點選 Mode 「Standard」,"紅字消失
+Enhance 可以按
+Enhance 顯示 180 點
+其下方顯示「Enhance 180.00 seconds (1 credit/sec)」",P1,R-037,,修改,R-030 修改：切回 Standard 後也檢查價格那一行，每秒 1 點時是單數（R1 O-8）
+TC-084,Professional 長度限制,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數足夠）
+2. 進入 Video Enhancer 編輯頁，已上傳 3:00 的 MP4（fx-3m00），並選了 Professional（顯示紅字）",1. 點「Replace Video」，選擇 2:30 的 MP4（fx-2m30）,"紅字消失
+Enhance 可以按",P1,R-037,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-085,Professional 長度限制,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面放入 2:30 的 MP4（fx-2m30），並選擇 Professional","1. 點「Replace Video」，選擇 3:00 的 MP4（fx-3m00）
+2. 查看 Trimmer
+3. 點「Cancel」
+4. 再點一次「Replace Video」，選擇 3:00 的 MP4（fx-3m00）
+5. 把結束把手拖過 2:30
+6. 點「Trim」","步驟 1：開啟 Trimmer
+步驟 1：影片還沒有被換掉
+步驟 2：左下角顯示「Professional mode supports videos up to 2:30 long. Please trim your video to continue.」
+步驟 3：Trimmer 關閉，保留原本 2:30 的影片，仍是 Professional
+步驟 5：選取範圍停在 2:30
+步驟 6：剪好的片段（2:30 以內）取代原影片，Mode 仍是 Professional
+步驟 6：沒有 2:30 紅字，Enhance 可以按",P1,"R-037, R-038, R-111","知識庫 features/video-enhancer-v2.md › 影片長度限制（PM 2026-11-26）：Replace 成超過 2:30 的影片會開 Trimmer，取消則保留原影片；紅字只在影片已超過 2:30、再選 Professional 時出現（TC-083、TC-084）
+R1 是照舊的預期（紅字）判 Fail；MYE261124P0033 要的就是紅字，依新規格不算 bug（單子怎麼處理由使用者決定）",修改,新增 R-111、縮小 R-037：Professional 下 Replace 成超過 2:30 的影片會開 Trimmer（最多 2:30），取消則保留原影片，剪完不出現紅字（PM，知識庫 2026-11-26；REQ-012）
+TC-086,Professional 長度限制,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面放入 5:12 的 MP4（fx-5m12），並選擇 Professional（已出現紅字提示）","1. 點「Trim Video」
+2. 把結束的拖曳把手盡量往右拉到底
+3. 輸入比 Start Time 晚 3:00 的 End Time
+4. 將選取範圍設為 2:30 以內，然後點「Trim」","步驟 1：左下角顯示「Professional mode supports videos up to 2:30 long. Please trim your video to continue.」
+步驟 2：選取範圍停在 2:30
+步驟 3：End Time 自動變成 Start Time + 2:30
+步驟 4：紅字消失，Enhance 可以按",P1,"R-038, R-039, R-037",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-087,Professional 長度限制,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面放入 2:00 的 MP4（fx-2m00），並選擇 Professional",1. 點「Trim Video」,開啟 Trimmer，左下角沒有任何提示,P2,R-039,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-088,Professional 長度限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 在 Video Merger（/en/video-editor/video-merger）準備好 8:20 的片段（fx-8m20），可以接著帶進 Video Enhancer","1. 點「Continue Editing」 › Video Enhancer
+2. 裁剪到 8:00 以內，然後點「Trim」","步驟 1：進入頁面後先顯示 Trimmer（最多只能選 8:00）
+步驟 1：此時還不能使用 Enhance
+步驟 2：頁面顯示裁剪後的片段，Enhance 可以按",P2,R-040,"PM 裁定 #1c76d4b60c73（2026-11-26）：從 Video Trimmer 帶超過 8:00 的片段過來時，改在 Video Trimmer 跳「Video Too Long」（TC-154）
+來源工具：Video Merger（使用者，2026-11-26，REQ-013）；在合併結果上找 Continue Editing › Video Enhancer 的入口",修改,R-040 縮小範圍：Trimmer 先開的規則只適用 Video Trimmer 以外的工具，這裡用 Video Merger（REQ-013）；從 Video Trimmer 帶過來會跳「Video Too Long」（知識庫 #1c76d4b60c73；REQ-010，TC-154）
+TC-154,Professional 長度限制,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 在 Video Trimmer（/en/video-editor/video-trimmer）上傳 8:20 的 MP4（fx-8m20）","1. 點左側欄「AI Generate」 › 「Video Enhancer」
+2. 點「Cancel」
+3. 再點一次左側欄「AI Generate」 › 「Video Enhancer」
+4. 點「Start New」","步驟 1：還在 Video Trimmer 裡就跳出「Video Too Long」對話框，有「Cancel」和「Start New」
+步驟 1：不會開 Trimmer，也不會進 Video Enhancer 房間
+步驟 2：對話框關閉，停在 Video Trimmer，8:20 的片段還在
+步驟 4：開啟新版 Video Enhancer 的新專案（/video-editor/video-enhancer，不是 Video Restoration）",P2,R-110,"PM 裁定 #1c76d4b60c73（2026-11-26），知識庫 features/video-enhancer-v2.md › 影片長度限制；derived-video-continue-editing-checks.md 第 4 步也這樣寫；所有影片工具共用這條 Continue Editing 規則
+R1 看到的內文是「Sorry, this tool does not support videos longer than 8 minutes. To continue using this tool, please trim your video first.」（O-26）；請記錄內文，以及 Start New 有沒有把片段一起帶過去",新增,新增 R-110：PM 裁定 #1c76d4b60c73，從 Video Trimmer 用 Continue Editing 帶超過 8:00 的片段會跳「Video Too Long」（REQ-010）
+TC-089,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面（/en/video-editor/video-enhancer/edit）上傳 480p、30 fps、7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設定為 Standard、HD、720P、Same as source
+2. 讀取點數明細（device-web credits ledger）
+3. 點「Enhance」
+4. 等待工作在 Recent Gen 完成
+5. 再讀取一次點數明細
+6. 下載結果，讀取解析度與幀率（ffprobe）","步驟 1：Enhance 顯示 8 點（每秒 1 點）
+步驟 3：Recent Gen 出現一張工作卡片
+步驟 3：Recent Gen 下方顯示「The generated videos can be found in My Library」，其中「My Library」是連結
+步驟 5：MyEdit 下新增一筆 -8，對應這個 Video Enhancer 工作
+步驟 6：1280×720（或短邊為 720），30 fps",P1,"R-041, R-046, R-047, R-030",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-090,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面（/en/video-editor/video-enhancer/edit）上傳 480p、30 fps、7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設定為 Standard、Natural、4K、120 fps
+2. 讀取點數明細（device-web credits ledger）
+3. 點「Enhance」
+4. 等待工作在 Recent Gen 完成
+5. 再讀取一次點數明細
+6. 下載結果，讀取解析度與幀率（ffprobe）","步驟 1：Enhance 顯示 64 點（每秒 8 點）
+步驟 3：Recent Gen 出現一張工作卡片
+步驟 3：Recent Gen 下方顯示「The generated videos can be found in My Library」，其中「My Library」是連結
+步驟 5：MyEdit 下新增一筆 -64，對應這個 Video Enhancer 工作
+步驟 6：3840×2160（短邊為 4K），120 fps",P1,"R-041, R-046, R-047",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-091,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面（/en/video-editor/video-enhancer/edit）上傳 480p、30 fps、7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設定為 Professional、HD、1080P、60 fps
+2. 讀取點數明細（device-web credits ledger）
+3. 點「Enhance」
+4. 等待工作在 Recent Gen 完成
+5. 再讀取一次點數明細
+6. 下載結果，讀取解析度與幀率（ffprobe）","步驟 1：Enhance 顯示 64 點（每秒 8 點）
+步驟 3：Recent Gen 出現一張工作卡片
+步驟 3：Recent Gen 下方顯示「The generated videos can be found in My Library」，其中「My Library」是連結
+步驟 5：MyEdit 下新增一筆 -64，對應這個 Video Enhancer 工作
+步驟 6：1920×1080，60 fps",P1,"R-041, R-046, R-047",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-092,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面（/en/video-editor/video-enhancer/edit）上傳 480p、30 fps、7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設定為 Standard、HD、Original、50 fps
+2. 讀取點數明細（device-web credits ledger）
+3. 點「Enhance」
+4. 等待工作在 Recent Gen 完成
+5. 再讀取一次點數明細
+6. 下載結果，讀取解析度與幀率（ffprobe）","步驟 1：Enhance 顯示 8 點（每秒 1 點）
+步驟 3：Recent Gen 出現一張工作卡片
+步驟 3：Recent Gen 下方顯示「The generated videos can be found in My Library」，其中「My Library」是連結
+步驟 5：MyEdit 下新增一筆 -8，對應這個 Video Enhancer 工作
+步驟 6：與來源相同的 854×480，50 fps",P1,"R-041, R-046, R-047, R-033",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-093,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 上述某個 TC 的 Video Enhancer 工作已在 Recent Gen 完成","1. 點 Recent Gen 下方的「My Library」
+2. 開啟 Video Enhancer 資料夾","步驟 1：開啟 My Library
+步驟 2：結果影片在 Video Enhancer 資料夾中",P1,"R-043, R-041",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-094,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 頁面剛對已上傳的影片完成一次工作，設定都沒有更動","1. 查看 Enhance
+2. 更改 Frame Rate
+3. 改回原本的設定，再點「Replace Video」，換成 480p、30 fps、7.3 秒的 MP4（fx-480p30）
+4. 用「Trim Video」更改要處理的片段，然後點「Trim」","步驟 1：Enhance 不能按
+步驟 2：Enhance 可以按
+步驟 3：Enhance 可以按
+步驟 4：Enhance 可以按",P1,R-044,Q-7 已回答（使用者，2026-11-25，REQ-004）：Trim 後 Enhance 會重新亮起,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-095,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 在 Video Enhancer 頁面（/en/video-editor/video-enhancer/edit）上傳 480p、30 fps、7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 播放預覽，暫停後再拖曳時間軸
+2. 各使用一次「Trim Video」和「Replace Video」",預覽、裁剪與替換影片的行為都和原本的 Video Enhancer 一樣,P2,R-045,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-096,生成與結果,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以 Free／空狀態測試帳號登入（web-account free，port 9341；沒有任何 Video Enhancer 結果）
+2. 在 Video Enhancer 編輯頁上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），還沒按 Enhance",1. 看 Recent Gen,「Start by uploading a video to generate your video」,P3,R-042,上傳前不會出現 Recent Gen（R1 2026-11-25，KF-004），所以要先上傳影片再看這段文字；Spec 第 3 張畫板也是把它畫在 Default Settings 畫面上,修改,R-042 更正：Recent Gen 的空狀態文字是上傳後才看得到；上傳前根本沒有 Recent Gen（R1 TC-096，KF-004）
+TC-097,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. Recent Gen 中有一個 Video Enhancer 工作正在執行","1. 回到 Home
+2. 開啟 My Library › Video Enhancer",工作會列在這裡，並在這裡完成,P2,R-043,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-099,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 讓 Video Enhancer 工作失敗（使用 RD 提供的故障輸入，或違反政策的影片）",1. 等待工作失敗,"Recent Gen 顯示失敗，並附上看得懂的訊息
+頁面不會重新載入，已上傳的影片和設定都保留，可以直接重試
+點數明細中已退還點數",P2,"R-046, R-081",需要能讓工作失敗的方法：找到之前先標為 Blocked --as test-data,移除,刪除：不測（使用者，2026-11-26，REQ-015）；需要 RD 讓 demo 上的生成失敗，所以 R-081 無法測試
+TC-100,生成與結果,"1. Chrome 視窗 1440 × 900，開啟 MyEdit demo（en），以預設測試帳號登入（Studio Pro，點數足夠）
+2. 已在放入 480p、30 fps、7.3 秒 MP4（fx-480p30）的頁面中調整過設定","1. 離開頁面，回到 Home
+2. 再回到 /en/video-editor/video-enhancer/edit",頁面回到空白狀態：沒有影片，設定也恢復預設,P3,R-045,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-101,手機版網頁,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 開啟 Video Enhancer SEO 頁","1. 上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）
+2. 上傳過程中觀察畫面","顯示「Processing...」與百分比
+顯示「It may take a few seconds. Please don’t leave this page.」
+設定摘要與 Enhance 呈灰色（不能按）",P1,R-049,R1：「Processing...」蓋滿整個畫面，設定摘要和 Enhance 都看不到（MYE261124P0030）,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-102,手機版網頁,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），停在該房間",1. 查看設定摘要與 Enhance,"標題為「Video Enhancer Settings」
+Mode | Standard
+Enhance Style | HD
+Output Resolution | 1080P
+Frame Rate | Same as source
+Enhance 按鈕帶有點數，並顯示「Enhance 7.30 seconds (2 credits/sec)」",P1,R-050,,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-103,手機版網頁,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），停在該房間","1. 開啟編輯面板
+2. 點選 Frame Rate","步驟 1：顯示四項設定的所有選項，上方有「Replace Video」與「Trim Video」
+步驟 2：跳出底部選單，列出 Same as source、50、60、100、120 fps",P1,R-051,,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-104,手機版網頁,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），停在該房間，設定為 Standard 720P","1. 點選 Enhance
+2. 等待","步驟 1：顯示「Creating Your Video」與百分比，以及「Please do not close this window or click the Back button on your browser.」
+步驟 2：頁面跳轉到 My Library › Video Enhancer",P1,R-052,,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-105,手機版網頁,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 已上傳 3:00 的 MP4（fx-3m00），停在該房間","1. 開啟編輯面板並選擇 Professional
+2. 關閉編輯面板
+3. 改選 Standard","步驟 1：Mode 下方顯示「Professional mode supports videos up to 2:30.」
+步驟 2：摘要顯示「Mode | Professional」，並以紅字顯示「Video longer than 2:30」
+步驟 2：Enhance 不能按
+步驟 3：兩段紅字都消失，Enhance 可以按",P1,R-053,,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-106,Video Restoration（舊房間）,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 開啟 /en/video-editor/video-restoration/edit，並已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）",1. 查看面板標題與各選項,"標題為「Video Restoration Settings」
+選項依序為 Lighting Adjustment、Video Denoise、Video Upscaler、Frame Interpolation",P1,"R-054, R-055",,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-107,Video Restoration（舊房間）,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 已開啟 Video Restoration 面板","1. 點選面板的返回按鈕
+2. 點選左側工具選單中的「Video Restoration」","步驟 1：面板關閉
+步驟 2：再次開啟四個選項的面板",P1,R-057,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-108,Video Restoration（舊房間）,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 在 Video Restoration 房間中已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），並勾選 Lighting Adjustment","1. 點選 Generate
+2. 開啟 My Library",結果出現在 My Library › Video Restoration,P2,R-058,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-109,Video Restoration（舊房間）,"1. 用 CDP device-metrics override 把 MyEdit demo 的頁面固定在 375 × 812（桌機的窄視窗，mobile:false，不是手機 user agent；Windows 上的 Chrome 視窗無法縮到 500 px 以下），以預設測試帳號登入
+2. 在 Video Restoration 房間中已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）",1. 點選 Generate,頁面直接跳轉到 My Library › Video Restoration,P2,R-058,,修改,前置條件修正：375 × 812 的測試列是用 CDP override 撐出的桌機窄視窗，不是手機（R1 O-13；R-049 改寫）
+TC-110,My Library,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 開啟 My Library › Video","1. 開啟 Video Enhancer 資料夾
+2. 閱讀資料夾的說明文字","顯示「Results from the new Video Enhancer are saved here. For results from the original Video Enhancer, go to Video Restoration.」",P2,R-059,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-111,My Library,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 開啟 My Library › Video
+3. 該帳號有原版 Video Enhancer 產生的結果","1. 查看 Video Restoration 資料夾
+2. 將滑鼠移到資料夾的 ⓘ 上","步驟 1：名稱下方顯示「(Formerly Video Enhancer)」，資料夾內是先前的結果
+步驟 2：顯示「The original Video Enhancer has been renamed to Video Restoration. Your previous results are still here. Results from the new Video Enhancer are saved in the Video Enhancer folder.」",P2,R-060,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-112,My Library,1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）,"1. 開啟 /en/cloud/library/video/video-enhancer
+2. 開啟 /en/cloud/library/video/video-restoration","步驟 1：顯示新的 Video Enhancer 資料夾
+步驟 2：顯示 Video Restoration 資料夾",P2,R-061,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-113,通知信,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 剛完成一個 Video Enhancer 工作","1. 開啟該帳號的信箱
+2. 點選「Access Your Video Enhancer」","步驟 1：信件標題為「Your Video Enhancer result is ready!」
+步驟 1：內文為「Your Video Enhancer has been generated successfully. Click the button below to view the results and start using your video.」
+步驟 1：按鈕為「Access Your Video Enhancer」
+步驟 2：開啟 My Library › Video Enhancer",P2,R-062,"使用預設帳號的信箱（Outlook）
+知識庫 features/video-enhancer-v2.md › 跨工具串接 › EDM（Figma 2026-11-26）：句型沿用其他長時間生成工具的完成信；R1 收到的就是這段文字，所以 MYE261124P0027 依新規格不算 bug（單子怎麼處理由使用者決定）",修改,R-062 修改：信件內文改為「Your Video Enhancer has been generated successfully. …」（Figma 2026-11-26，知識庫；REQ-012）
+TC-114,通知信,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 有一個 Video Enhancer 工作失敗",1. 開啟該帳號的信箱,"信件標題為「Your Video Enhancer result failed to generate.」
+內文提到「…content that violates our policy, or temporary server issues…」，並指向 My Library › Video Enhancer",P3,R-063,在能讓工作失敗之前，先標為 Blocked --as test-data,移除,刪除：不測（使用者，2026-11-26，REQ-015）；需要一次失敗的生成（同 TC-099），所以 R-063 無法測試
+TC-115,通知信,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 剛完成一個 Video Restoration 工作","1. 開啟該帳號的信箱
+2. 點選「Access Your Video Restoration」","步驟 1：信件標題為「Your Video Restoration result is ready!」
+步驟 2：開啟 My Library › Video Restoration",P3,R-064,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-116,其他工具,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）
+2. 進入 MyEdit Agent（Home › Agent）","1. 附上 480p 30 fps 7.3 秒的 MP4（fx-480p30），並輸入「Upscale this video to 4K and make it smoother」
+2. 附上 8:20 的 MP4（fx-8m20），輸入同樣的內容","步驟 1：Agent 以 Video Enhancer 的 Standard 模式完成處理
+步驟 2：Agent 請使用者先裁剪影片",P2,R-065,會花費點數；Agent 每次的回答不盡相同，以它指定的工具和模式為判斷依據,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-117,其他工具,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 在 Video Enhancer 編輯頁，這次進房間時做完一支 60 fps 的結果（fx-480p30，Standard／HD／720P／60 fps，8 點）","1. 點已完成的 Recent Gen 卡片，開啟 Original／Result 預覽
+2. 點右下角的「Open in Editor」
+3. 在時間軸加入第二個片段
+4. 選第二個片段
+5. 再選回 60 fps 的片段","步驟 2：Video Editor 開啟，時間軸上有這個片段
+步驟 2：跳出提示訊息「This 60 fps video will export at 30 fps. Your original is unchanged.」，約 3 秒後消失
+步驟 4–5：不會再跳出第二次提示",P2,R-066,"Recent Gen 只列出這次進房間做的工作，My Library 的預覽也沒有 Open in Editor，所以結果要在同一次進房間時做出來（KF-005）
+R1：沒有提示訊息（MYE261124P0028）；這條路徑本身是 R-073，和 TC-123 一起仍暫緩（Q-2）",修改,路徑修正：結果要從預覽的「Open in Editor」進 Video Editor（R1 O-18、TC-117 重測；R-073 改寫，仍暫緩）
+TC-118,其他工具,1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）,1. 開啟 Pricing 頁,影片工具清單中列有「Video Enhancer」與「Video Restoration」,P3,R-067,,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-119,知識庫規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設定 Standard、HD、720P、Same as source
+2. 查看點數明細
+3. 點「Enhance」
+4. 上傳視窗還在跑時，再查看一次點數明細",步驟 4：上傳還沒完成，點數明細就已經有這筆工作的 -8,P2,"R-068, R-046",RD 答覆 #dfed049fda18；可和「生成與結果」第一列共用同一次生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-120,知識庫規則,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數足夠）
+2. 進入 Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 3:00 的 MP4（fx-3m00）（web/fixtures.md）","1. 設定 Standard、HD、720P、Same as source，並查看點數明細
+2. 點「Enhance」
+3. 上傳中在上傳視窗按取消
+4. 6 小時後再查看一次點數明細","步驟 3：上傳停止，Recent Gen 沒有出現工作
+步驟 3：沒有任何地方把它回報成生成失敗（顯示為已取消，或只是直接停止）
+步驟 4：扣掉的點數已退回（有 +180 的退點紀錄，或餘額恢復）",P2,"R-069, R-080",RD 答覆 #dfed049fda18：3～6 小時內退回；記錄實際退回的時間,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-128,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 開始 device-web 錄影
+2. 用「Replace Video」再上傳一次 480p 30 fps 7.3 秒的 MP4（fx-480p30），並觀察百分比
+3. 設為 Standard 720P，點「Enhance」
+4. 在 Recent Gen 觀察工作卡片，直到結束
+5. 停止錄影","步驟 2：百分比從 0 開始，不會倒退
+步驟 4：工作進度從 0 開始，不會倒退，最後顯示完成（或失敗），不會一直卡在處理中",P2,R-079,產品規則 KP-007、KP-008（library/myedit/knowledge；2026-11-25 匯入）；與第一筆 Generate 列共用同一次生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-129,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Recent Gen 中有一個 Video Enhancer 工作正在生成","1. 點「Replace Video」，選 480p 30 fps 7.3 秒的 MP4（fx-480p30）
+2. 如果「Trim Video」可以按，就點它",Replace Video 和 Trim Video 不能按，或是執行中的工作仍用開始時的影片完成,P2,R-082,產品規則 KP-011（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-130,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 第一筆 Generate 列產生的完成結果（fx-480p30，有音訊）","1. 在預覽中播放結果
+2. 下載結果
+3. 播放下載的檔案，並用 ffprobe 讀取
+4. 再下載一次，兩個檔案都播放","步驟 3：內容、方向、長寬比和長度（約 7.3 秒）都和預覽一致
+步驟 3：有音軌
+步驟 3：副檔名和格式相符（MP4 → .mp4），檔名不是空的
+步驟 4：兩個下載檔都能播放",P2,"R-083, R-085, R-086",產品規則 KP-012、KP-014、KP-017、KP-070（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-131,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳帶旋轉中繼資料的直式手機影片（fx-rotated，顯示為 1080×1920，實際儲存 1920×1080 + rotate 90）（web/fixtures.md）","1. 查看預覽
+2. 開啟「Trim Video」
+3. 設為 Standard 720P，Enhance 後下載結果",步驟 1–3：每個地方的畫面都是正的：預覽、Trimmer、結果和下載檔,P2,R-084,產品規則 KP-013、KP-069（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-132,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 5:12 的 MP4（fx-5m12）（web/fixtures.md）","1. 點「Trim Video」並播放
+2. 播放時點時間軸約 3:00 的位置
+3. 設定範圍 1:00 – 1:10，從 1:00 開始播放","步驟 2：播放頭跳到約 3:00，並從那裡繼續播放
+步驟 3：播放到 1:10 就停止",P2,R-087,產品規則 KP-023（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-133,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 把 Output Resolution 改成 4K
+2. 點頂端選單「Image Tools」› 任一工具
+3. 選擇留在此頁
+4. 重新整理頁面（F5）
+5. 選擇離開","步驟 2：跳出離開確認
+步驟 3：留在編輯頁，影片和 4K 設定都還在
+步驟 4：瀏覽器或網站會先詢問
+步驟 5：頁面離開",P2,R-088,產品規則 KP-025、KP-026（library/myedit/knowledge；2026-11-25 匯入）；規格沒有寫：沒有警告就回報 PM,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-134,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 進入 Video Enhancer 編輯頁，尚未上傳任何東西",1. 點頂端選單「Image Tools」› 任一工具,直接離開頁面，沒有未儲存變更的警告,P3,R-089,產品規則 KP-027（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-135,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 設為 Professional、Natural、4K、60 fps
+2. 把視窗設成 1000 × 900（device-web window 1000 900）
+3. 再改回 1440 × 900","步驟 2：行動版摘要顯示 Professional、Natural、4K、60 fps
+步驟 3：面板顯示的設定相同",P2,R-090,產品規則 KP-028（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-136,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 播放預覽
+2. 點「Enhance」（Standard 720P）
+3. 再次播放預覽，然後點「Replace Video」","步驟 2：預覽暫停或停止
+步驟 3：預覽暫停或停止",P3,R-091,產品規則 KP-029（library/myedit/knowledge；2026-11-25 匯入）；可以和第一筆 Generate 列共用同一次生成,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-137,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. 剛從編輯頁送出一個 Video Enhancer 工作","1. 處理中開啟 My Library › Video Enhancer
+2. 完成後重新整理頁面","步驟 1：該項目顯示處理中
+步驟 2：該項目仍然在，並顯示已完成
+步驟 2：它的縮圖和長度（約 0:07）是結果影片的",P2,"R-092, R-093",產品規則 KP-031、KP-032、KP-034、KP-068（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-138,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 看編輯頁的右上角
+2. 查看帳號選單中的點數餘額
+3. 以 Standard 720P 執行 Enhance，不關閉任何東西
+4. 不重新整理，再查看一次帳號選單中的點數餘額","步驟 1：編輯頁右上角有「Get Credits」
+步驟 3：沒有點數不足的對話框
+步驟 4：餘額比步驟 2 少 8 點",P2,"R-094, R-095","產品規則 KP-039、KP-040、KP-043（library/myedit/knowledge）；可以和第一筆 Generate 列共用
+KP-038 衝突：KP-038（團隊規則，現已標為有爭議）要求每個工作畫面都有 Get Credits，包含 SEO 頁；知識庫從程式碼整理的 derived-tool-header-credit-and-upgrade-buttons（未經人確認）則寫點數工具的匯入頁不顯示，R1 看到的也是這樣（O-20，沒開 bug）；Q-15",修改,R-094 修改：只檢查編輯頁的 Get Credits；點數工具的匯入（SEO）頁不顯示（知識庫 derived-tool-header-credit-and-upgrade-buttons）
+TC-139,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo，未登入（使用獨立連接埠上全新的 Chrome 設定檔）
+2. 進入 Video Enhancer 編輯頁，已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）",1. 點「Enhance」,"網站要求先登入
+沒有送出工作，也沒有扣款",P2,R-096,產品規則 KP-041（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-140,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Home（/en/home）","1. 查看 Launcher 裡的工具名稱
+2. 查看頂端選單「Video Tools」裡的名稱
+3. 查看編輯頁左側工具選單裡的名稱
+4. 查看 Pricing 頁上的名稱","「Video Enhancer」和「Video Restoration」在每個出現的地方寫法都一樣
+沒有任何地方用別的工具名稱來稱呼它們",P3,R-097,產品規則 KP-045（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-141,產品規則,"1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數足夠）
+2. 進入 Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 3:00 的 MP4（fx-3m00）（web/fixtures.md）","1. 選 Professional（Enhance 不能按），並點「Enhance」
+2. 用滑鼠移過、用 Tab 鍵移到並選取每個設定選項","步驟 1：Enhance 看起來是不能按的，點了沒有任何反應
+步驟 2：移過、聚焦、選取和不能按的選項看起來各不相同，而且都清楚可讀",P3,R-098,產品規則 KP-050、KP-056（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-142,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 開啟 Frame Rate 選單
+2. 再開啟另一個設定選單或提示說明","步驟 1：選單就在 Frame Rate 旁邊展開，不會蓋住它，並顯示全部選項（或可捲動）
+步驟 2：第一個選單會關閉
+步驟 2：不會同時開著兩個選單",P3,R-099,產品規則 KP-051、KP-058（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-143,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 把視窗設成 1280 × 720
+2. 把頁面縮放到 150 %
+3. 用滑鼠移過每個 ⓘ","步驟 1–2：每個設定、Enhance 和 Recent Gen 都能操作到（必要時捲動）
+步驟 3：沒有任何提示說明會一直擋住 Enhance",P3,R-100,產品規則 KP-052、KP-053（library/myedit/knowledge；2026-11-25 匯入）；結束後把縮放恢復成 100 %,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-144,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）（web/fixtures.md）","1. 開啟每個設定選單和提示說明
+2. 開啟 Trimmer
+3. 點「Enhance」，觀察進度和 Recent Gen 卡片
+4. 開啟再關閉結果預覽
+5. 觸發一個對話框（用 fx-avi 做 Replace Video）","每個元素都是淺色：選單、Trimmer、進度、卡片、預覽、對話框和提示訊息
+關閉預覽時不會閃一下深色
+每種狀態下文字和圖示都看得清楚，包括不能按和處理中
+設計稿裡畫的外框和分隔線都還在",P3,R-101,產品規則 KP-054、KP-055、KP-057（library/myedit/knowledge；2026-11-25 匯入）；Q-11；顏色之後再對照 Design 檢查,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-145,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Video Enhancer 編輯頁（/en/video-editor/video-enhancer/edit），已上傳 1:00 的 MP4（fx-1m00）（web/fixtures.md）","1. 把預覽播放到結尾
+2. 開啟 Trimmer
+3. Enhance（Standard 720P），並查看 Recent Gen 卡片和 My Library 上的長度",每個時間碼在結尾都顯示 01:00，不會是 00:60,P3,R-102,產品規則 KP-060（library/myedit/knowledge；2026-11-25 匯入）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-147,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo，以 Free 儲存空間已滿的測試帳號登入（使用自己的 Chrome 設定檔；空間本來就是滿的，不是這次執行塞滿的）
+2. 進入 Video Enhancer 編輯頁，已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）","1. 查看 My Library 的儲存空間（已用 / 總量）
+2. 點「Enhance」","步驟 1：空間已滿（已用 = 總量）
+步驟 2：跳出空間已滿的提示「You’ve reached your cloud storage limit.」，有「Generate Anyway」和「Upgrade」
+步驟 2：沒有「Manage」",P2,R-104,"知識庫 derived-cloud-storage-warnings-and-video-download-limit（從程式碼整理，未經人確認）：還有更高一層雲端方案時顯示 Upgrade，只有 Studio Pro 才顯示 Manage；KP-065（Generate Anyway 和 Manage）已標為有爭議；Q-16
+不要按 Upgrade（會開購買視窗），用提示右上的 X 關掉。Manage 見 TC-153",修改,R-104 修改：空間已滿的 Free 帳號看到的是「Upgrade」，不是「Manage」（知識庫 derived-cloud-storage-warnings-and-video-download-limit；R1 TC-147）
+TC-153,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo，以雲端空間已滿的 Studio Pro 測試帳號登入（web-account studio-pro-full，port 9344；空間於 2026-11-26 塞滿）
+2. 進入 Video Enhancer 編輯頁，已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30）","1. 點「Enhance」
+2. 點「Manage」","步驟 1：跳出空間已滿的提示「You’ve reached your cloud storage limit.」，有「Generate Anyway」和「Manage」
+步驟 1：沒有「Upgrade」
+步驟 2：開啟 My Library",P2,R-109,知識庫 derived-cloud-storage-warnings-and-video-download-limit（從程式碼整理，未經人確認）：只有已經在最高雲端方案（Studio Pro）時才有 Manage，按下開啟 My Library；KP-065／KP-067 寫的是開啟此工具的相簿（My Library › Video Enhancer），請記錄實際開到哪個資料夾；Q-16,新增,新增 R-109：Manage 從 R-104 拆出來，需要空間已滿的 Studio Pro 帳號（R1 TC-147）
+TC-148,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo，以 Free 儲存空間已滿的測試帳號登入（使用自己的 Chrome 設定檔）
+2. 進入 Video Enhancer 編輯頁，已上傳 480p 30 fps 7.3 秒的 MP4（fx-480p30），設為 Standard 720P","1. 點「Enhance」
+2. 點「Generate Anyway」",步驟 2：工作在 Recent Gen 開始執行，並照畫面顯示的點數扣款,P2,R-104,產品規則 KP-065、KP-068（library/myedit/knowledge；2026-11-25 匯入）；記錄結果有沒有被儲存（空間已滿）,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-149,產品規則,1. Chrome 1440 × 900，在 MyEdit demo（en）上以預設測試帳號登入（Studio Pro，點數充足）,"1. 開啟 /en/video-editor/video-enhancer，查看瀏覽器分頁標題
+2. 對 /en/video-editor/video-enhancer/edit、/en/video-editor/hd-video-converter、/en/video-editor/ai-frame-interpolation 和 /en/video-editor/video-restoration/edit 做同樣的檢查","每個分頁標題都清楚可讀，並寫出該工具或頁面的名稱
+沒有任何一頁顯示字串 key、「undefined」或其他工具的標題",P3,R-105,產品規則 KP-074（library/myedit/knowledge；2026-11-25 匯入）；分頁列要截圖,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）
+TC-150,產品規則,"1. 用 Chrome（1440 × 900）開啟 MyEdit demo（en），以預設測試帳號（Studio Pro，點數足夠）登入
+2. Home（/en/home）和公開的 Home（未登入）","1. 拿 Video Enhancer 卡片的縮圖和其他每個工具卡片比對
+2. 對 Video Restoration 做同樣的比對",這兩張卡片都沒有和其他工具用同一張縮圖,P3,R-106,產品規則 KP-075（library/myedit/knowledge；2026-11-25 匯入）；共用縮圖就是失敗,未變更,新表格（PM Figma＋知識庫 Spec，2026-11-25）

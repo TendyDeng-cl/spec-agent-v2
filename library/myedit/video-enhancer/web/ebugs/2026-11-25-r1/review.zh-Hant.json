@@ -1,0 +1,113 @@
+{
+ "note": "Traditional Chinese for what the review page says about the drafts (user, 2026-11-25). The eBug text itself (Short Description, Repro Steps, Result, Expect Result, Note) stays in English and is never translated here.",
+ "lede": "以下卡片就是已送出或已修正的 eBug，內容和草稿檔一字不差（英文的標題與描述不會翻譯）。2026-11-25 19:31–19:38 依使用者的 ebug-writing 與 create-ebug 兩個 skill（Contract Runner 版本，全文讀過）送出，單號見 filed_bugcodes.json。已在 ECL 修正（只改標題、描述並補上 Figma 圖；狀態、負責單位、Severity、Priority 都沒動，也沒留言）：ISS-VEW-03 = MYE261124P0025（標題改成使用者的寫法，補 3 張 Figma 對話框圖）、ISS-VEW-04 = P0026（Figma 節點與圖）、ISS-VEW-06 = P0027（文字問題拿掉 [UI]，加 Figma 節點與圖）。不需改：ISS-VEW-07 = P0028、ISS-VEW-08 = P0029。新開：ISS-VEW-09 = P0030、ISS-VEW-12 = P0031、ISS-VEW-13 = P0032、ISS-VEW-14 = P0033、ISS-VEW-15 = P0034、ISS-VEW-16 = P0035。每一張送出前在表單上、送出後在存好的頁面上都跑過 validate-ebug-form-contract.ts，全部通過；新附件都下載回來比對過 SHA-256。ISS-VEW-10 不發：使用者 2026-11-26 判定不是 bug（PM Figma 第 9 版把錯誤視窗畫成深色，和 App 一樣）。ISS-VEW-01、05 依使用者決定不發。重現 3/3（VEW-04 實際 4/4）；RD 為 Must Fix，[UX] 給 PM 為 Better Fix，Priority (RD) 為 N/A。",
+ "trNote": "Parent TR 是 TR261022-0018（MyEdit v5.11 版本 TR，IF3；依據見 parent-tr.txt）。版本 MyEdit-5.11.0-11242029，取自 demo 站的 version.json（執行資料夾的 build-info.json）。",
+ "cal": "產品缺陷（F-1 – F-5、F-7、F-8、F-9、F-10、F-12、F-14）歸 RD；待 PM 決定的（F-6、F-11）歸 PM。嚴重度是草稿的建議值。",
+ "gaps": "有 5 列受阻、沒有結論，都是使用者決定這輪不測。",
+ "entries": {
+  "ISS-VEW-01": {
+   "title": "首頁熱門工具：Video Enhancer 卡片沒有「Enhanced」標籤",
+   "why": "產品缺陷：首頁熱門工具的 Video Enhancer 卡片沒有「Enhanced」標籤",
+   "note": "規格（video-enhancer-v2.md › 跨工具串接 › 工具標籤，#b29e724be991）：Launcher 首頁的熱門工具和頂端選單都要把 Video Enhancer 標成「Enhanced」，不能是「New」。頂端選單有顯示 ENHANCED（TC-001 通過）。知識庫把關（2026-11-25）：通過。這是 UI 問題，但 PM 版面沒有畫 Launcher，所以沒有規格圖，規格文字寫在 Note。相關但不重複：MYE261020-0014（5.10，Fail）講的是頂端選單的工具清單與 Enhanced 標籤，不是熱門工具卡片，而且它的驗證留言說 Enhanced 標籤那部分已修好。"
+  },
+  "ISS-VEW-03": {
+   "title": "SEO 頁：上傳 AVI、短邊小於 128 px、超過 120 fps、音訊不支援的影片都沒有錯誤提示",
+   "why": "產品缺陷：從 SEO 頁上傳這幾種影片都不會跳錯誤提示",
+   "note": "已發為 MYE261124P0025（2026-11-25 19:07），要修改那一張，不要新開。標題用使用者的寫法。從 SEO 頁上傳：AVI 完全沒反應；192×96、240 fps 和 FLAC 音訊的影片直接進到工具頁的空白上傳框，沒有提示。測試檔只留本機。知識庫把關（19:20）：Error Handle 表與沿用舊房間的「Audio Codec Not Supported」——相符。Figma：第 9 版 Case 1、5、6 的對話框節點；音訊對話框沒有畫在第 9 版（只有規格文字）。"
+  },
+  "ISS-VEW-04": {
+   "title": "SEO 頁上傳錯誤提示的按鈕寫「Got It」，規格是「Got it」",
+   "why": "產品缺陷：SEO 頁錯誤提示的按鈕大小寫和規格不同",
+   "note": "已發為 MYE261124P0026（19:08），要修改那一張。文字問題歸 RD，不加 [UI]。實際試了 4 次，所以用 4/4。知識庫（19:20）：所有彈窗按鈕都是 Got it——相符。Figma 圖為第 9 版 Case 1–3，綠框標按鈕；Note 引用 Case 2 按鈕節點。"
+  },
+  "ISS-VEW-05": {
+   "title": "從其他工具帶超過 8 分鐘的影片過來，跳「Video Too Long」而不是開 Trimmer",
+   "why": "產品缺陷：超過 8 分鐘的影片從 Video Trimmer 帶過來，被擋下而不是先開 Trimmer",
+   "note": "PM Figma 10 和 PM 規格：從其他工具帶過來超過 8 分鐘的影片，要在房間裡先開 Trimmer（最多 8:00）。知識庫裡從程式碼整理的文件說，從 Video Trimmer 本身過來時，共用規則會跳「Video Too Long」——也就是網站照程式碼的做法，和已核准的規格不同；預期結果依 PM 規格與 Figma（把關：通過），但 RD 可能會轉給 PM。來源是在 Video Trimmer 放 8:20 的影片。按「Start New」會開空的房間，影片就不見了。2026-11-25 重測（O-25，使用者要求試 10 秒）：同樣路徑帶 10 秒影片會正常進房間、可以按 Enhance，所以只有超過 8:00 的影片受影響，問題在長度檢查，不是路徑。用 8:20 再測（O-26）：提示出現時畫面還停在 Video Trimmer，按 Cancel 影片還在。使用者決定（2026-11-25）照草稿給 RD。"
+  },
+  "ISS-VEW-07": {
+   "title": "60 fps 的 Video Enhancer 成品進 Video Editor 沒有 60 fps 提示",
+   "why": "產品缺陷：60 fps 成品帶進 Video Editor 時沒有出現規格寫的提示",
+   "note": "已發為 MYE261124P0028（19:09），內容已符合 skill，不需修改。知識庫（19:21）：toast 文案、3 秒、同一 session 一次——相符。這個 toast 沒有 Figma 節點（只有規格文字），所以不附規格圖。團隊 [CT]（看板 ME-1690）。"
+  },
+  "ISS-VEW-08": {
+   "title": "按 Enhance 後的上傳視窗沒有取消鍵（待 PM 決定）",
+   "why": "待 PM 決定：上傳前就扣點了，但上傳視窗沒有取消鍵",
+   "note": "已發為 MYE261124P0029（19:10），內容已符合 skill，不需修改。RD 在知識庫的回答（#dfed049fda18，19:24 讀全文）：上傳前就扣點，上傳中取消 3–6 小時退回；App 卻沒有取消鈕。[UX]、PM、Better Fix。沒有 Figma 節點。"
+  },
+  "ISS-VEW-09": {
+   "title": "手機寬度：Processing 蓋住整個頁面，而不是讓設定摘要淡化",
+   "why": "UI 問題：附左右比對圖（左為實際畫面、右為 PM Figma 4 上傳中畫面）；375 px 窄視窗。",
+   "note": "待新開。PM Figma 4 - Mobile UI Spec 的「uploading」畫面（457:3443）與規格「新房間（手機）› 上傳中」：Processing 下方的摘要與 Enhance 要淡化、不可按。知識庫（19:24）相符。條件：Windows Chrome 375 × 812（1200 px 以下套手機版面），沒有在實機上看到。UI 問題：附左右比對圖，再附 Figma 畫面圖。"
+  },
+  "ISS-VEW-10": {
+   "title": "不發：淺色工具頁上的深色對話框（使用者判定不是 bug）",
+   "why": "不發：使用者 2026-11-26 判定不是 bug；PM Figma 第 9 版把上傳錯誤視窗畫成深色，和 App 一樣。",
+   "note": "使用者 2026-11-26 看過截圖與 PM Figma 第 9 版後說「這不是bug」，不開單。"
+  },
+  "ISS-VEW-12": {
+   "title": "超過 1440p 的提示寫「2560x1440」，規格是「1440p」（原 H-1）",
+   "why": "產品缺陷：解析度提示的文字和規格不同",
+   "note": "待新開。文字問題歸 RD，不加 [UI]。規格 Input Format：對外文案一律寫 1440p；Figma 第 9 版 Case 3 內文（237:1273）寫 (1440p)。知識庫（19:20）相符。"
+  },
+  "ISS-VEW-13": {
+   "title": "Standard 模式的 Trimmer 提示文字和規格不同（原 H-3）",
+   "why": "產品缺陷：Trimmer 的提示文字和規格不同",
+   "note": "待新開。文字問題歸 RD，不加 [UI]。Figma 第 10 版步驟 ③ 註記（359:1999）與規格給的 Standard 提示；知識庫（19:21）規格與程式推導頁同一句，App 都不同。相關不重複：MYE261116P0016（Close）的修正可能造成這個預設文案。"
+  },
+  "ISS-VEW-14": {
+   "title": "Professional 模式換成超過 2:30 的影片會直接開 Trimmer，沒有 2:30 的紅字",
+   "why": "違反 PM 規格與 Figma 10：應顯示紅字、Enhance 停用（RD）",
+   "note": "已發 MYE261124P0033；2026-11-26 更正：原本當成規格衝突交 PM（[UX]、Better Fix），重查後 PM 規格「影片長度限制」與 Figma 10 步驟 ②（360:1789）一致，「開 Trimmer」只出自知識庫的程式碼整理頁。已改成 RD、Must Fix、拿掉 [UX]，Expect 照規格。"
+  },
+  "ISS-VEW-15": {
+   "title": "Pricing 的「Compare All Plans」有 Video Restoration，沒有 Video Enhancer（原 H-5）",
+   "why": "產品缺陷：Pricing 比較表缺少 Video Enhancer",
+   "note": "待新開。規格 › 跨工具串接 › Pricing page（#89dc53e3a2b3）；知識庫（19:21）相符。Video Tools 有 Video Restoration、沒有 Video Enhancer。Pricing 頁沒有 Figma 節點，不附規格圖。"
+  },
+  "ISS-VEW-16": {
+   "title": "按 Enhance 之後預覽影片還在繼續播放（原 H-6）",
+   "why": "知識庫沒有這條規則（只有 KP-029）；使用者已同意照開（2026-11-25）",
+   "note": "待新開。使用者已在知情下同意發（「兩隻都開」）。知識庫（19:24）仍沒有 Video Enhancer 的規則，同意的範圍不變。動態問題：附標示畫面與操作錄影（從執行錄影裁出，沒有游標標示、未重錄）。沒有來源連結，所以沒有 Note。"
+  },
+  "ISS-VEW-06": {
+   "title": "「成品完成」通知信的內文和規格不同",
+   "why": "文字問題：依 ebug-writing 拿掉 [UI]；加上 Figma 6 - EDM 內文節點 207:1229 與圖。",
+   "note": "已發為 MYE261124P0027（19:09）且帶 [UI]；要修改那一張：拿掉 [UI]（ebug-writing：文字問題不是 UI 問題）。Outlook 網頁版截圖，第一句與 PM Figma 6 - EDM 內文節點 207:1229 不同。知識庫沒有 EDM 文案，預期以 Figma 為準。"
+  }
+ },
+ "related": "這次查重沒有找到同平台的重複單（dedupe.txt）。",
+ "fixes": {
+  "ISS-VEW-02": [
+   "ISS-VEW-02 — TC-007／TC-107：左側工具選單沒有 Video Restoration，按 Back 之後就打不開設定面板",
+   "已有人發過，只記在 dedupe.txt — MYE261106P0045「Video Restoration (Left Menu): No Video Restoration listed on Left menu」，NeedCodeReview（RD）；相關單 MYE261124P0001（UX，拿掉 Back），Assigned"
+  ],
+  "ISS-VEW-11": [
+   "ISS-VEW-11 — TC-150：Launcher 上 Video Enhancer 和 Video Restoration 兩張卡片用同一張縮圖",
+   "已有人發過，只記在 dedupe.txt — MYE261110P0023「Launcher page/My Library(Video restoration/Video enhancer v2): Two tools thumbnail are same」，RDResolved——11242029 還是看得到（僅供參考，不留言）"
+  ],
+  "H-2": [
+   "H-2 — TC-021／TC-026：從 SEO 頁上傳 8:20 的影片，跳「Video Duration Limit Exceeded」而不是開 Trimmer",
+   "已有人發過，只記在 dedupe.txt — MYE261118P0008「Video Enhancer V2(SEO Upload): The page blocks videos over 8 minutes without opening Trim Video」，BuildResolved（PM）——11242029 還是看得到（僅供參考，不留言）"
+  ],
+  "TC-138": [
+   "TC-138 — SEO 頁上方沒有 Get Credits（房間裡有）",
+   "不開 — 知識庫把關（2026-11-25，derived-tool-header-credit-and-upgrade-buttons）：需要點數的工具，匯入頁本來就不顯示 Get Credits，所以網站是對的；和 KP-038 矛盾 · 表格修正：TC-138 步驟 1 改成只檢查房間（或請 PM 決定）"
+  ],
+  "TC-147": [
+   "TC-147 — Free 帳號空間已滿時只有 Generate Anyway 和 Upgrade，沒有 Manage",
+   "不開 — 知識庫把關（derived-cloud-storage-warnings…）：還有更高的雲端方案可升級時顯示 Upgrade，只有 Studio Pro 才顯示 Manage，網站是對的 · 表格修正：TC-147 在 Free 帳號預期 Upgrade；要測 Manage 需要空間已滿的 Studio Pro 帳號"
+  ],
+  "TC-010 – TC-021 timing": [
+   "TC-010～TC-021 提示時機 — 上傳錯誤提示在選檔當下就出現，不是上傳完才出現",
+   "不開 — 規格裡還是待 RD 回覆的問題，決定前不算 bug · 要決定 R-078 和這個未決問題以哪個為準"
+  ]
+ },
+ "blocked": {
+  "TC-018": "使用者決定這輪不測：做不出網站讀不到幀率的測試檔（fx-nofps 讀成 1 fps、單一畫格照常匯入、改名成 .mp4 的 MKV 完全沒反應，O-28）；RD 只用手做的 MKV 重現過",
+  "TC-024": "使用者決定這輪不測：從桌面拖放檔案要手動測",
+  "TC-026": "使用者決定這輪不測：要 RD 提供讓 Trimmer 無法使用的方法",
+  "TC-099": "使用者決定這輪不測：要 RD 提供讓 demo 站生成失敗的方法",
+  "TC-114": "使用者決定這輪不測：需要一次失敗的生成（同 TC-099）"
+ }
+}

@@ -59,6 +59,10 @@ def parse(md):
         desc = re.search(r"\*\*Description:\*\*\s*\n\s*```\n(.+?)\n```", body, re.S)
         rep = re.search(r"\*\*Reproduce:\*\*\s*(\d+)\s*/\s*(\d+)", body)
         img = re.search(r"\*\*Images:\*\*\s*`([^`]+)`", body)
+        # MyEdit / MyEdit Biz (user, 2026-11-25): the description carries no {file} citations, so the files are
+        # listed on an **Attachments:** line in upload order, and the ebug-writing severity on a **Severity:** line
+        att = re.search(r"^\*\*Attachments:\*\*\s*(.+)$", body, re.M)
+        sevtxt = re.search(r"^\*\*Severity:\*\*\s*(Must Fix|Better Fix)\s*$", body, re.M)
         note = re.search(r"^> \*\*(?:⛔ )?QA note[^*]*\*\*\s*(.+?)(?=\n[^>]|\Z)", body, re.S | re.M)
         if not (sd and desc):
             sys.exit(f"{md} entry {n} ({iss}): missing Short Description or Description block")
@@ -70,13 +74,15 @@ def parse(md):
             "sev": int(sev), "belong": OWNER.get(owner, owner),
             "out": int(rep.group(1)), "times": int(rep.group(2)),
             "short": sd.group(1).strip(), "desc": desc.group(1).rstrip(),
-            "files": list(dict.fromkeys(CITE.findall(desc.group(1)))),
+            "files": list(dict.fromkeys(CITE.findall(desc.group(1)) + (CITE.findall(att.group(1)) if att else []))),
             "images_dir": os.path.join(os.path.dirname(os.path.abspath(md)),
                                        img.group(1).rstrip("/")) if img else None,
             "qa_note": re.sub(r"\n>\s?", " ", note.group(1)).strip() if note else "",
             "ux": "[UX]" in sd.group(1),
             "basis": "; ".join(BASIS.findall(desc.group(1).split("\nNote:")[-1])),
         }
+        if sevtxt:
+            out[key]["severity"] = sevtxt.group(1)
     return out
 
 

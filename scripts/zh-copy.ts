@@ -2,7 +2,7 @@
 // (user, 2026-11-11). The English table stays the source of truth (AGENTS.md); this copy is for reading in 中文 mode
 // on Cases, Results, Progress and Coverage. Translation style: spec-casebook/references/zh-copy.md.
 //
-// Usage: node scripts/zh-copy.ts <product>/<feature> <ios|android> [--draft <id>] <command>
+// Usage: node scripts/zh-copy.ts <product>/<feature> <ios|android|web> [--draft <id>] <command>
 //   status            rows translated, stale (English changed since) and missing
 //   export [--chars N] writes the rows to translate to <table or draft>/zh-work/batch-NN.json (git-ignored), about N
 //                     English characters each (default 9000). Text already translated anywhere in the library (the
@@ -31,7 +31,7 @@ const draft = arg('draft');
 const cmd = argv.filter((a, i) => i > 1 && !a.startsWith('--') && argv[i - 1] !== '--draft' && argv[i - 1] !== '--chars' && argv[i - 1] !== '--from')[0];
 assertIds(feature, platform);
 if (!['status', 'export', 'merge', 'adopt'].includes(cmd ?? '')) {
-  console.error('Usage: node scripts/zh-copy.ts <product>/<feature> <ios|android> [--draft <id>] status|export|merge|adopt');
+  console.error('Usage: node scripts/zh-copy.ts <product>/<feature> <ios|android|web> [--draft <id>] status|export|merge|adopt');
   process.exit(2);
 }
 const table = tableDir(feature, platform);
@@ -71,7 +71,7 @@ function memory() {
   const mem = new Map<string, string>();
   const tables: string[] = [];
   for (const feat of listFeatures())
-    for (const pf of ['ios', 'android']) {
+    for (const pf of ['ios', 'android', 'web']) {
       const dir = join(LIBRARY, feat, pf);
       if (existsSync(join(dir, 'cases.csv'))) tables.push(join(dir, 'cases.csv'));
       if (existsSync(join(dir, 'drafts'))) for (const d of readdirSync(join(dir, 'drafts'))) if (existsSync(join(dir, 'drafts', d, 'draft.csv'))) tables.push(join(dir, 'drafts', d, 'draft.csv'));

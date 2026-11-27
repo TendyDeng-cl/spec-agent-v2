@@ -1,0 +1,57 @@
+{
+    "schema_version":  "ebug_form_contract/v3",
+    "expected":  {
+                     "validationStage":  "persisted",
+                     "product":  "MyEdit",
+                     "version":  "5.11.0",
+                     "productId":  "274",
+                     "templateId":  "23404",
+                     "buildNo":  "11242029",
+                     "parentTR":  "TR261022-0018",
+                     "featureName":  "Video Enhancer(Professional)",
+                     "bugBelong":  "RD",
+                     "issueClassification":  "functional",
+                     "affectedLanguages":  [
+
+                                           ],
+                     "allowNote":  true,
+                     "requiresSpec":  true,
+                     "requiresFixture":  false,
+                     "priorityBefore":  "N/A",
+                     "bugCode":  "MYE261124P0033",
+                     "attachments":  [
+                                         {
+                                             "path":  "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Highlight_Professional_Replace_opens_Trimmer.png",
+                                             "group":  "actual",
+                                             "embeddedHighlight":  true
+                                         },
+                                         {
+                                             "path":  "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/upload/Figma_Professional_over_2-30_red_text.png",
+                                             "group":  "spec"
+                                         }
+                                     ]
+                 },
+    "live":  {
+                 "productId":  "274",
+                 "templateId":  "23404",
+                 "version":  "5.11.0",
+                 "buildNo":  "11242029",
+                 "parentTR":  "TR261022-0018",
+                 "bugSource":  "QA",
+                 "bugBelong":  "RD",
+                 "severity":  "Must Fix",
+                 "priority":  "N/A",
+                 "reproduceOut":  "3",
+                 "reproduceTimes":  "3",
+                 "previousBuild":  "Unknown",
+                 "shortDescription":  "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Professional): Replace Video over 2:30 opens the Trimmer instead of showing the 2:30 limit text",
+                 "description":  "Repro Steps:\n1. Open demo server \u003e open Video Enhancer \u003e upload a video of 2:30 or less.\n2. Select Professional \u003e click Replace Video \u003e upload a 3-minute video.\n\nResult:\nThe Trimmer opens at once; the red 2:30 text and disabled Enhance never show. (ref to attachment)\n\nExpect Result:\nThe new video should replace the current one without opening the Trimmer. Mode stays Professional, the red text \"Professional mode supports videos up to 2:30.\" shows under Mode, and Enhance stays disabled until the user switches to Standard, replaces it with a video of 2:30 or less, or trims it to 2:30 or less.\n\nNote:\n1. Figma: 10 - Professional Mode length limit, step 2 (Replace Video over 2:30 gives this state)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=360-1789\n2. Spec: Video Enhancer V2 \u003e User Flow \u003e Video length limit (Professional over 2:30: red text under Mode, Enhance disabled; checked again on Replace Video)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+                 "attachments":  [
+                                     "Highlight_Professional_Replace_opens_Trimmer.png",
+                                     "Figma_Professional_over_2-30_red_text.png"
+                                 ],
+                 "createButtonPresent":  false,
+                 "bugCodePresent":  true,
+                 "bugCode":  "MYE261124P0033"
+             }
+}

@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-25T07:31:33.684Z",
+  "env": "demo",
+  "url": "https://stage2.cyberlink.com/account/credits",
+  "signedIn": true,
+  "balance": 5169,
+  "rows": [
+    {
+      "Time": "Nov 25, 2026 15:23",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    },
+    {
+      "Time": "Nov 25, 2026 15:23",
+      "Credits": "5",
+      "Category": "Returned",
+      "Product": "MyEdit Business",
+      "Details": "Generation failed, credits returned"
+    },
+    {
+      "Time": "Nov 25, 2026 15:23",
+      "Credits": "-80",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "Showcase Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:22",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    },
+    {
+      "Time": "Nov 25, 2026 15:14",
+      "Credits": "-80",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "Showcase Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:14",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    },
+    {
+      "Time": "Nov 25, 2026 15:08",
+      "Credits": "-50",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Image To Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:07",
+      "Credits": "-60",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Image To Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:03",
+      "Credits": "-80",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "Showcase Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:03",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    }
+  ],
+  "texts": [
+    "Products",
+    "Downloads",
+    "Support & Learning",
+    "Special Offers",
+    "FaceMe AI Solutions",
+    "Search",
+    "User",
+    "Global",
+    "Member Zone",
+    ">",
+    "Credits",
+    "J",
+    "My Credits",
+    "John Doe",
+    "credits available",
+    "credit icon",
+    "5169",
+    "JackCY_Lee@cyberlink.com",
+    "Overview",
+    "Details",
+    "Product",
+    "Available Credits",
+    "Expiration Date",
+    "Credits Details",
+    "All Categories",
+    "Time",
+    "Category",
+    "Referral Center",
+    "Nov 25, 2026 15:23",
+    "-5",
+    "Consume",
+    "MyEdit Business",
+    "AI Music Generator",
+    "Redeem",
+    "Generation failed, credits returned",
+    "5",
+    "Returned",
+    "Account",
+    "-80",
+    "Showcase Video",
+    "My Order",
+    "Nov 25, 2026 15:22",
+    "Nov 25, 2026 15:14",
+    "Get Support"
+  ]
+}

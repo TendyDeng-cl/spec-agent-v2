@@ -67,3 +67,32 @@ skill's body. Rule numbers are cited elsewhere (AGENTS.md: "rule 5 of the eBug o
    translation sheet, else from the user, asked before the run, and live in `library/<product>/<feature>/mui.json`.
    Each entry has a `MUI: <translation|truncation> — <tags|all>` Note line and the sheet as Spec Link;
    `check_ebug_format.py --mui <mui.json>` enforces it.
+
+## MyEdit and MyEdit Biz (user, 2026-11-25)
+
+**Mandatory, every MyEdit / MyEdit Biz eBug (user, 2026-11-25: 「之後發 bug 前務必要套用 ebug-writing 跟 create-ebug 這兩個 skill」).**
+These products' failures are drafted and filed **only** by the user's `ebug-writing` and `create-ebug` skills. They
+replace this overlay's reviewer rules 1–3 and 5, AGENTS.md's PowerDirector eBug rules (text bugs `[UI]`, Spec Link
+lines, owner/type rules) and any summary in this repo; where anything here differs, the skills win. No summary of
+them is kept here on purpose: a summary drifted from the skills once (R1 Video Enhancer, 2026-11-25) and bugs were
+filed with a wording bug tagged `[UI]` and Figma nodes without their images.
+
+Before drafting, and again before filing, in every session and every subagent that writes or files a MyEdit bug:
+1. Read in full, from disk: `ebug-writing/SKILL.md` and every file it names (`ebug-format-template.md`, the
+   prompt snippet, lessons learned), and `create-ebug/SKILL.md` with `references/if3-tr-ebug.md`,
+   `references/ebug-creation-sop.md`, `references/ui-comparison-image.md` and the scripts its final gate names. The
+   installed copies in `~/.claude/skills/` are the same files (refreshed 2026-11-25); if they differ from the
+   Contract Runner's `.codex/skills/`, the Contract Runner copy wins — say so and refresh the installed copy.
+2. Follow their workflow, not the casebook's shortcut: Knowledge Center gate; Parent TR from the live IF3 TR query;
+   build from `version.json`; Figma evidence **fetched** for every bug whose Expect Result has a Figma node (the PM
+   board through `figma-pm`, the Design board through `figma-design`; "no saved image" is not "no design"), and the
+   combined actual-left / spec-right comparison image for every UI bug; draft in the live form, one page at a time,
+   and hand it to the user before Create unless the user asked in that turn to publish.
+3. Run `create-ebug`'s `validate-ebug-form-contract.ts` on the live form before Create and on the saved detail after.
+   `check_ebug_format.py --product MyEdit` is only an extra pre-check; its pass never stands in for the skills' gate.
+4. The same applies to every place a draft is shown: the drafts file, the review page and the eBug section of run
+   reports (`report.md`, `report.zh-Hant.md`, their HTML copy), user 2026-11-25. Brief every drafting, reporting or filing subagent with steps 1–3 word for word. Never edit an already-filed ticket without
+   the user's explicit go-ahead for that ticket.
+
+The casebook still dedupes (rule 7, per product: MyEdit and MyEdit Biz are separate pools), keeps no comments on
+existing tickets (rule 6) and builds the review page.

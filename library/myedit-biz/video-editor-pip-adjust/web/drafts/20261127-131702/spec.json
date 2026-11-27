@@ -1,0 +1,37 @@
+{
+  "feature": "myedit-biz/video-editor-pip-adjust",
+  "platform": "web",
+  "title": "Video Editor: PiP Adjust, Mask, Crop & Rotate",
+  "draft": "20261127-131702",
+  "created_at": "2026-11-27T05:17:02.360Z",
+  "based_on_version": null,
+  "spec_folder": "specs/2026-11-27",
+  "spec_files": [
+    {
+      "name": "KC video-editor-photo-pip-adjust.md",
+      "sha256": "6e7b171b6b155f433c5c6d37c8e8d5c7d6e5110e6be209880256c089387bdae7",
+      "bytes": 4042
+    },
+    {
+      "name": "Figma PM and Design text 2026-11-27.md",
+      "sha256": "8409a824eb1b29ee84ca1a53f2d775f8ab7a3702460c7ff73585341f143ef540",
+      "bytes": 11114
+    },
+    {
+      "name": "KC video-editor-main-video-adjust.md",
+      "sha256": "d63f6554034691b9d2c22ef4f82e21973180842b4b494666e9ecf89e753b0bfb",
+      "bytes": 6267
+    },
+    {
+      "name": "KC video-editor-photo-pip-crop-rotate.md",
+      "sha256": "f3630fc5dd6b49a08211c4e947fd8af8e85a1c939bf74c91d78247ce81f44ecd",
+      "bytes": 3750
+    },
+    {
+      "name": "KC video-editor-photo-pip-mask.md",
+      "sha256": "ff1e8968055c69347b9c9baf06ef6a7a7f0e86c1a1ba37cf365c4140450cf380",
+      "bytes": 4130
+    }
+  ],
+  "spec_set_sha256": "ce67aafe5a402684c83c1bf71d59dfd9c9debe6b7aca066c00fac1187fa63d4b"
+}

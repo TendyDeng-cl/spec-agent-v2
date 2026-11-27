@@ -1,0 +1,137 @@
+{
+  "spec_folder": "specs/2026-11-25",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "pm-1-info@0,80",
+      "board": "pm-1-info",
+      "x": 0,
+      "y": 80,
+      "low": false,
+      "text": "新舊兩個房間怎麼並存 / Video Enhancer（新房間）：原先 Video Enhancer、HD Video Converter、AI Frame Interpolation 的入口都進新房間。 / Video Restoration（舊房間改名）：原先 Video Denoiser、Video Brightener 的入口都進舊房間。 / My Library 分成兩個資料夾，各自放兩個房間的成品。 / Video Enhancer — Use case：把影片升級成高畫質（input 最高1440p，輸出最高 4K）、讓動作更流暢；TA：要高畫質成品的創作者，例如短影音、行銷素材、遊戲錄影 / Video Restoration — Use case：修好太暗、雜訊多的影片；TA：用手機隨手拍、想快速把畫面救回來的一般使用者",
+      "trace": "R-001, R-002, R-003, R-004, R-005, R-059, R-060"
+    },
+    {
+      "id": "pm-10-pro-length@0,40",
+      "board": "pm-10-pro-length",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "(10/28更新) 影片長度規則 / • Standard：影片長度上限 8:00。上傳超過 8 分鐘的影片會跳錯誤，見 9 - Case 4。 / • Professional：只支援 ≤ 2:30。影片超過 2:30 時，Professional 仍可點選，但 Enhance disabled，Mode 下方顯示紅字。 / • 重新檢查 2:30 的時機：切換 Mode、Replace Video、Trim 完成時。 / • (10/28更新) 在 Professional 下按 Trim Video：Trimmer 最多只能選 2:30。原片超過上限（Professional 2:30、Standard 8:00）時，左下角才顯示提示。 / • 切回 Standard：紅字消失，Enhance 恢復。 / • (10/28更新) 從 Continue Editing 帶過來超過 8 分鐘的片段：進房間後先開 Trimmer（最多可選 8:00），Trim 完才能 Enhance。 / ① 影片 05:12、Mode = Standard — 影片在 8:00 以內，Standard 可正常 Enhance。（點數數字為示意）「Enhance 312.00 seconds (3 credits/sec)」 / ② 切到 Professional（影片 > 2:30）— Professional 可點選，但 Enhance disabled，Mode 下方出現紅字「Professional mode supports videos up to 2:30.」。Replace Video 換成超過 2:30 的影片時，也是這個狀態。 / ③ Professional 下開 Trimmer（最多 2:30）— Trimmer 沿用現有 Trim Video，新增兩點：• Professional 下選取範圍最多 2:30：拖把手到上限就拉不動；End Time 輸入超過也會被限制在 Start Time + 2:30。• 左下角提示「Professional mode supports videos up to 2:30 long. Please trim your video to continue.」：只在原片超過上限時才顯示；原片在上限內不顯示。Standard 下開 Trimmer：上限 8:00，提示改成「Standard mode supports videos up to 8 minutes long. Please trim your video to continue.」按 Trim 後回到 ④。(Trimmer: Start Time 00:15.0, End Time 02:45.0, Cancel, Trim) / ④ Trim 到 2:30 以內 — Trim 完成後重新檢查：影片 ≤ 2:30，紅字消失、Enhance 亮起。「Enhance 150.00 seconds (3 credits/sec)」",
+      "trace": "R-022, R-023, R-036, R-037, R-038, R-039, R-040"
+    },
+    {
+      "id": "pm-2-seo@0,160",
+      "board": "pm-2-seo",
+      "x": 0,
+      "y": 160,
+      "low": false,
+      "text": "(10/19更新) Maximum file resolution: 1440p >> 11/16更新移除, sync其他影片工具不特別顯示 / (10/28更新) Maximum video length: 8 minutes.",
+      "trace": "R-010, Q-6"
+    },
+    {
+      "id": "pm-3-pc-flow@0,40",
+      "board": "pm-3-pc-flow",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "① Entrance – SEO Page — • 點 Choose a file / 拖放 / 點範例 → 進入 Tool Room。 / 上傳完成前，左側設定全部 disabled 不可操作，Enhance 按鈕也 disabled。",
+      "trace": "R-011, R-012"
+    },
+    {
+      "id": "pm-3-pc-flow@0,320",
+      "board": "pm-3-pc-flow",
+      "x": 0,
+      "y": 320,
+      "low": false,
+      "text": "有四個項目(Mode/Enhance Style/Output Resolution/Frame Rate)可供user設定，各個項目提供的 option 直接參照此畫面。 / 預設值：Standard + HD + 1080p + Same as source。 / 原片為 1080p 或 1440p 時，1080P 會被 disable，預設值改為 4K。 / 只有 Mode / Output Resolution / Frame Rate 會影響 Enhance 按鈕顯示的價格。 / Enhance 按鈕下方顯示 ”Enhance {duration:.2f} seconds ({credits} credits/sec)” / Hover ⓘ 顯示計價說明: ”Total credits depend on video duration and selected mode, resolution, and frame rate.” / ④ Tool Room – Output Resolution Dropdown — Output Resolution選項：Original (call API時，需要偵測 uploaded video 的 / resolution，並作為參數送出) / 720P / 1080P / 4K；低於原始解析度的選項需要 disable。詳見: 5 - Disabled options ↗ / ⑤ Tool Room – Frame Rate Dropdown — Frame Rate 選項：Same as source（Default）/ 50 / 60 / 100 / 120 fps。 / ⑥ Tool Room – Generating — User 按下 Enhance 後就可會開始生成（沿用既有的 Recent Gen 的 flow) / Recent Gen 下方顯示「The generated videos can be found in My Library」 (My Library is a link) / ⑦ Tool Room – Result Ready — 同一支影片完成後 Enhance 維持 disabled（沿用舊房間行為）；改 Video Enhancer Settings 或 / Replace Video 後，Enhance 按紐才會亮起。成品同步存到 My Library。Preview, Replace, Trim 行為都 sync 原本 Video Enhancer 的行為。 / Professional: Stronger restoration for older or badly compressed footage. Takes much longer to process. Supports videos up to 2:30. (10/28更新)",
+      "trace": "R-024, R-025, R-026, R-028, R-029, R-030, R-031, Q-4"
+    },
+    {
+      "id": "pm-4-mobile@0,280",
+      "board": "pm-4-mobile",
+      "x": 0,
+      "y": 280,
+      "low": false,
+      "text": "Professional Mode 長度限制（2:30）: Video longer than 2:30 (summary: 「Mode | Professional」 + 「Video longer than 2:30」);",
+      "trace": "R-053"
+    },
+    {
+      "id": "pm-5-agent@0,40",
+      "board": "pm-5-agent",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "Agent Harness 需要調整： / Video Enhance V2 的 Use Case => 要用 Video Enhance 做 => Complete in Agent / Video Restoration 的 Use Case => 繼續用 Video Edit by Chat 完成 => Complete in Agent / (10/28更新) Agent 一律使用 Standard mode；影片超過 8 分鐘要請 User Trim。",
+      "trace": "R-065"
+    },
+    {
+      "id": "pm-5-disabled-options@0,40",
+      "board": "pm-5-disabled-options",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "Output Resolution — 依原始解析度 disable 選項 / Case 1 — 原始 480p (Source video: 854×480) · Case 2 — 原始 720p (1280×720) · Case 3 — 原始 1080p (1920×1080) · / Case 4 — 原始 1440p (2560×1440); panel note 「Video length 00:07 · Credits vary by settings」 / Frame Rate — 依原始 fps disable 選項 (input Fps 四捨五入) / Case 1 — 原始 30 fps · Case 2 — 原始 50 fps · Case 3 — 原始 60 fps · Case 4 — 原始 100 fps · Case 5 — 原始 120 fps",
+      "trace": "R-026, R-027"
+    },
+    {
+      "id": "pm-6-edm@0,40",
+      "board": "pm-6-edm",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "Video Enhancer 和 Video Restoration 都需要寄 Task Complete 的 EDM。 / 新房間 Video Enhancer V2 — success: 「Your Video Enhancer result is ready!」 / 「Hey <name>,」 / 「Your enhanced video is",
+      "trace": "R-062, R-063"
+    },
+    {
+      "id": "pm-6-edm@0,400",
+      "board": "pm-6-edm",
+      "x": 0,
+      "y": 400,
+      "low": false,
+      "text": "舊房間改名 Video Restoration — success: 「Your Video Restoration result is ready!」 / 「Your video restoration is complete.",
+      "trace": "R-064"
+    },
+    {
+      "id": "pm-7-library@0,40",
+      "board": "pm-7-library",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "新增 ’Video Enhancer’ 的 Folder，給新房間使用 — folder note: 「Results from the new Video Enhancer are saved here. For / 原本 ’Video Enhancer’ 的 Folder，改名為 ’Video Restoration’，下面顯示說明文字 (Formerly Video Enhancer) — folder note:",
+      "trace": "R-059, R-060"
+    },
+    {
+      "id": "pm-8-old-room@0,40",
+      "board": "pm-8-old-room",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "8-1 舊房間改名 Video Restoration，設定選項重新排序 — 房間改名為 Video Restoration；順序調整: Lighting Adjustment / Video / Denoise / Video Upscaler / Frame Interpolation；從哪個入口進來，該選項就預設勾選 (同原本行為) / 8-2 Video Tools 選單：各工具入口導向新／舊房間 — URL: Video Enhancer: 新房間 (/video-editor/video-enhancer/edit); / Video Denoiser: 舊房間 (/video-editor/video-denoiser/edit); HD Video Converter: 新房間 (/video-editor/video-enhancer/edit); / AI Frame Interpolation: 新房間 (/video-editor/video-enhancer/edit); Video Brightener: 舊房間 / (/video-editor/video-brightener/edit); (10/21更新) Video Restoration: 舊房間 (/video-editor/video-restoration/edit) / 8-3 舊房間成品在 My Library 歸在 Video Restoration（桌機＋Mobile）— My Library › Video Restoration (+ Create New; / 261008_1243; 00:07; Processing...; 5 minutes remaining...)；舊房間的 Mobile 也會直接跳轉到 ’Video Restoration’ 的 My Library。",
+      "trace": "R-054, R-055, R-056, R-001, R-004, R-005, R-006, R-058"
+    },
+    {
+      "id": "pm-9-errors@0,40",
+      "board": "pm-9-errors",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "Case 1 — 檔案格式不支援: 上傳的檔案不是 MP4 / MOV（例如 AVI、MKV、WebM）→ 「Unsupported File Format」 / 「Only MP4 and MOV formats are supported. Please choose another video.」 / Case 2 — 檔案大小超過 10 GB: 單一檔案 > 10 GB → 「File Size Too Large」 / 「This video exceeds the 10 GB file size limit. Please choose a smaller video.」 / Case 3 — 解析度超過上限: 影片解析度超過 1440p → 「Video Resolution Not Supported」 / 「This video exceeds the supported resolution limit (1440p). Please choose another video.」 / (10/28更新) Case 4 — 影片長度超過 8 分鐘: 影片長度 > 8:00（剛好 8:00 可以上傳）→ 「Video Too Long」 / 「This video exceeds the 8-minute length limit. Please choose a shorter video.」 / (10/29更新) Case 5 — 短邊小於 128 px: 影片短邊 < 128 px（例如 192×96）→ 「Video Resolution Not Supported」 / 「This video is below the minimum supported resolution (shorter side of 128 px). Please choose another video.」 / (10/29更新) Case 6 — 影片幀率超過 120 fps: 影片幀率 > 120 fps（直接比實際值，不四捨五入）→ 「Video Frame Rate Not Supported」 / 「This video exceeds the supported frame rate limit (120 fps). Please choose another video.」 / (10/30更新) Case 7 — 讀不到影片幀率: 讀不到影片幀率（無法判斷可選幀率與應收點數，不接受匯入）→ 「Unable to Use This Video」 / 「This video cannot be enhanced because it is missing required information, such as the frame rate. Try uploading a different video.」",
+      "trace": "R-014, R-015, R-016, R-017, R-018, R-019, R-023"
+    },
+    {
+      "id": "pm-open-in-editor@0,40",
+      "board": "pm-open-in-editor",
+      "x": 0,
+      "y": 40,
+      "low": false,
+      "text": "會需要支援 Open in Editor，詳請見 Spec。",
+      "trace": "held: Open in Editor skipped for now (user, 2026-11-25, Q-2)"
+    }
+  ]
+}

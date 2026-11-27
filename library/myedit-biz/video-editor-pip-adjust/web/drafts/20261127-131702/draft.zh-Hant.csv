@@ -1,0 +1,935 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停","1. 在時間軸點選主軌影片 fx-main
+2. 由左至右讀工具列","工具列依序為「Split」、「Trim」、「Corner」、「BG Blur」、「Adjust」、「Fade In」、「Fade Out」、「Audio」、「Delete」
+「Adjust」緊接在「BG Blur」右邊",P1,R-001,Design ds-adjust-main-video 與 PM 一致。MyEdit 目前還沒有主軌影片的 Adjust（REQ-002）。,新增,新表格（REQ-001）
+TC-002,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：fx-photo 放在主軌 fx-main 之後（主軌照片）（web/fixtures.md）
+3. 播放已暫停","1. 在時間軸點選主軌照片 fx-photo
+2. 讀工具列",工具列中「Adjust」緊接在「BG Blur」右邊,P1,R-002,,新增,新表格（REQ-001）
+TC-003,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停","1. 點選 Photo PiP fx-photo（在畫布上或點它的 PiP 片段）
+2. 由左至右讀工具列","「Cutout」、「Crop/Rotate」、「Mask」、「Adjust」依此順序排列，「Fade In」緊接在「Adjust」之後
+工具列最後依序為「Fade In」、「Fade Out」、「Order」、「Delete」
+記錄「Split」和「Corner」的位置（PM：「Split」、「Corner」在最前面；Biz Design：「Corner」、「Cutout」、「Split」）",P1,"R-003, R-004",Q-1：Biz Design（ds-adjust-photo-pip）畫的是 Corner、Cutout、Split、Adjust……，沒有 Crop/Rotate 和 Mask；PM 的順序是 Split、Corner、Cutout、Crop/Rotate、Mask、Adjust、Fade In、Fade Out、Order、Delete。如果建置版本缺少某個工具，改檢查 R-004 的部分順序。Contract ME-PIP-20261104-S001-B001（MyEdit 順序）。,新增,新表格（REQ-001）
+TC-004,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的 ""full"" 專案：主軌有 fx-main 和 fx-main2，中間有轉場，fx-photo 和 fx-photo2 是 Photo PiP，fx-pipvideo 是影片 PiP，另有一段文字、一個貼圖和一軌音樂
+3. 播放已暫停","1. 點選影片 PiP fx-pipvideo
+2. 點選文字
+3. 點選貼圖
+4. 每次都讀工具列","步驟 1–3：工具列都沒有「Adjust」按鈕
+步驟 1–3：也都沒有「Crop/Rotate」或「Mask」按鈕",P2,R-005,本次發行 Adjust 只開放 Photo PiP，影片 PiP 之後才做（KC）。Crop/Rotate 和 Mask 是 Photo PiP 的工具（KC）。,新增,新表格（REQ-001）
+TC-005,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 左側面板顯示 Videos 分頁","1. 在時間軸點選 fx-main
+2. 點工具列的「Adjust」","左側面板內容換成 Adjust 面板
+工具列的「Adjust」按鈕呈現選取狀態",P1,R-006,Design 畫的是面板底下左側導覽的 Videos 分頁仍維持亮起（主軌影片），PiP 則是 Photos。,新增,新表格（REQ-001）
+TC-006,工具列與入口,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停","1. 點選 Photo PiP fx-photo
+2. 點「Adjust」
+3. 將「Brightness」拖到 60","步驟 2：開啟的 Adjust 面板和主軌影片相同（標題、Color 與 Light 群組、六個滑桿、Reset）
+步驟 3：只有 PiP 照片變亮
+步驟 3：下方的主軌影片沒有變",P1,"R-007, R-027",,新增,新表格（REQ-001）
+TC-007,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 從未調整過","1. 點選 fx-main
+2. 點「Adjust」
+3. 讀整個面板","頂端是標題「Adjust」，右上角有 ✕
+「Color」群組：「Saturation」、「Hue」、「Temperature」、「Tint」
+「Light」群組：「Brightness」、「Contrast」
+每一列都有標籤、滑桿和數值框
+面板底部有「Reset」
+沒有「Highlights」或「Shadows」列（只有六個滑桿）",P1,R-008,Photo Editor 有 8 個滑桿（含 Highlights、Shadows），Video Editor 的引擎只支援 6 個（KC）。,新增,新表格（REQ-001）
+TC-008,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 和 fx-photo 都從未調整過","1. 開啟 fx-main 的 Adjust，讀六個數值框
+2. 開啟 Photo PiP fx-photo 的 Adjust，同樣讀六個數值框","步驟 1–2：「Saturation」 0、「Hue」 100、「Temperature」 50、「Tint」 50、「Brightness」 0、「Contrast」 0
+步驟 1–2：每個滑桿圓鈕都在預設位置（軌道正中央）",P1,"R-009, R-010, R-011, R-012, R-013, R-014",,新增,新表格（REQ-001）
+TC-009,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Saturation」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Saturation」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 -100，預覽畫面有跟著改變
+步驟 4：數值框顯示 100，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P1,"R-009, R-016",,新增,新表格（REQ-001）
+TC-010,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Hue」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Hue」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 0，預覽畫面有跟著改變
+步驟 4：數值框顯示 200，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P2,"R-010, R-016",,新增,新表格（REQ-001）
+TC-011,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Temperature」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Temperature」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 0，預覽畫面有跟著改變
+步驟 4：數值框顯示 100，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P2,"R-011, R-016",,新增,新表格（REQ-001）
+TC-012,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Tint」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Tint」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 0，預覽畫面有跟著改變
+步驟 4：數值框顯示 100，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P2,"R-012, R-016",,新增,新表格（REQ-001）
+TC-013,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Brightness」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Brightness」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 -100，預覽畫面有跟著改變
+步驟 4：數值框顯示 100，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P1,"R-013, R-016",,新增,新表格（REQ-001）
+TC-014,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 將「Contrast」滑桿圓鈕一路拖到最左邊
+2. 讀它的數值框並看預覽畫面
+3. 將「Contrast」滑桿圓鈕一路拖到最右邊
+4. 讀它的數值框並看預覽畫面","步驟 2：數值框顯示 -100，預覽畫面有跟著改變
+步驟 4：數值框顯示 100，預覽畫面有跟著改變
+步驟 1–4：滑桿圓鈕停在軌道兩端",P2,"R-014, R-016",,新增,新表格（REQ-001）
+TC-015,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 看預設狀態下的六條滑桿軌道
+2. 將「Saturation」拖到 50
+3. 將「Saturation」拖到 -50
+4. 將「Brightness」拖到 40","步驟 1：「Hue」是彩虹色軌道，沒有填色
+步驟 1：「Temperature」是暖色到藍色的漸層軌道，「Tint」是綠色到洋紅色的漸層軌道，兩者都沒有填色
+步驟 2–4：「Saturation」和「Brightness」是灰色軌道，帶藍色填色
+記錄藍色填色從哪裡開始（PM：從正中央的 0 開始，Design：從最左端開始）以及漸層方向",P3,R-015,Q-3：PM 的 Temperature 是橘色 → 白色 → 藍色，Tint 是綠色 → 洋紅色，填色從 0 開始。Biz Design 畫的是 Temperature 黃色 → 藍色、Tint 洋紅色 → 綠色，填色從最左端開始。日期無法判斷時以 Design 為優先（先在裝置上確認，開 bug 前和使用者決定）。,新增,新表格（REQ-001）
+TC-016,Adjust 面板與滑桿,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板
+5. 已開始螢幕錄影（Evidence：整段拖曳的螢幕錄影）","1. 按住「Saturation」滑桿圓鈕
+2. 不放開，花約 3 秒慢慢從 0 拖到 100
+3. 放開","步驟 2：拖曳過程中的好幾個時間點，預覽畫面的顏色都已經跟著滑桿圓鈕和數值框變化
+步驟 2：滑桿圓鈕和預覽畫面之間看不出延遲
+步驟 3：預覽畫面停在放開時的數值",P1,R-016,Q-4：規格沒有訂允許的延遲時間，本列假設看不出延遲。手勢進行中的規則（analysis pass 4）。,新增,新表格（REQ-001）
+TC-017,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 點「Brightness」數值框
+2. 選取其中文字並輸入 45
+3. 先不要按任何鍵，看預覽畫面
+4. 按 Enter","步驟 3：記錄預覽畫面是否已經顯示 45（過渡期 Photo Editor 的行為：輸入時即時預覽），還是仍是舊的數值（MyEdit 目標行為）
+步驟 4：數值框顯示 45，滑桿圓鈕移到 45，預覽畫面也顯示 45",P1,R-017,Q-5：在 Enter/離開欄位的 UX 項目上線之前，步驟 3 兩種行為都算通過，以發行版本決定採用哪一種（KC）。,新增,新表格（REQ-001）
+TC-018,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Contrast」數值框輸入 30
+2. 點面板中的空白處離開欄位",步驟 2：「Contrast」在數值框、滑桿圓鈕和預覽畫面都是 30,P2,R-017,,新增,新表格（REQ-001）
+TC-019,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Saturation」數值框輸入 150 並按 Enter
+2. 在「Saturation」數值框輸入 -150 並按 Enter","步驟 1：數值框變成 100，滑桿圓鈕在最右端
+步驟 2：數值框變成 -100，滑桿圓鈕在最左端",P1,"R-018, R-009",,新增,新表格（REQ-001）
+TC-020,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Hue」數值框輸入 250 並按 Enter
+2. 在「Hue」數值框輸入 -50 並按 Enter","步驟 1：數值框變成 200，滑桿圓鈕在最右端
+步驟 2：數值框變成 0，滑桿圓鈕在最左端",P2,"R-018, R-010",,新增,新表格（REQ-001）
+TC-021,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Temperature」數值框輸入 150 並按 Enter
+2. 在「Temperature」數值框輸入 -50 並按 Enter","步驟 1：數值框變成 100，滑桿圓鈕在最右端
+步驟 2：數值框變成 0，滑桿圓鈕在最左端",P2,"R-018, R-011",,新增,新表格（REQ-001）
+TC-022,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Tint」數值框輸入 150 並按 Enter
+2. 在「Tint」數值框輸入 -50 並按 Enter","步驟 1：數值框變成 100，滑桿圓鈕在最右端
+步驟 2：數值框變成 0，滑桿圓鈕在最左端",P2,"R-018, R-012",,新增,新表格（REQ-001）
+TC-023,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Brightness」數值框輸入 150 並按 Enter
+2. 在「Brightness」數值框輸入 -150 並按 Enter","步驟 1：數值框變成 100，滑桿圓鈕在最右端
+步驟 2：數值框變成 -100，滑桿圓鈕在最左端",P2,"R-018, R-013",,新增,新表格（REQ-001）
+TC-024,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板","1. 在「Contrast」數值框輸入 150 並按 Enter
+2. 在「Contrast」數值框輸入 -150 並按 Enter","步驟 1：數值框變成 100，滑桿圓鈕在最右端
+步驟 2：數值框變成 -100，滑桿圓鈕在最左端",P2,"R-018, R-014",,新增,新表格（REQ-001）
+TC-025,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板
+5. 「Tint」設為 70","1. 清空「Tint」數值框並按 Enter
+2. 在「Tint」數值框輸入 abc，然後點欄位外面
+3. 只輸入 -（一個減號）並按 Enter","步驟 1–3：數值框都恢復成 70
+步驟 1–3：預覽畫面維持 70 的效果",P2,R-019,,新增,新表格（REQ-001）
+TC-026,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板
+5. 「Hue」為 198","1. 點「Hue」數值框
+2. 按 ↑ 三次
+3. 按 ↓ 一次
+4. 如果數值框有上下箭頭按鈕，也用箭頭按鈕做同樣的操作","步驟 2：依序是 199、200，之後停在 200
+步驟 2：到 200 時，向上箭頭按鈕變成不能按
+步驟 3：199
+步驟 4：每點一次數值變化 1",P2,"R-020, R-010",,新增,新表格（REQ-001）
+TC-027,Adjust 數值輸入,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板
+5. 「Saturation」為 -99","1. 點「Saturation」數值框
+2. 按 ↓ 兩次","步驟 2：依序是 -100，之後停在 -100
+步驟 2：到 -100 時，向下箭頭按鈕變成不能按",P2,"R-020, R-009",,新增,新表格（REQ-001）
+TC-028,Reset、Undo 與 Redo,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板，所有滑桿都在預設值","1. 看「Reset」
+2. 將「Temperature」拖到 70
+3. 將「Temperature」拖回 50（或直接輸入 50）","步驟 1：「Reset」不能按
+步驟 2：「Reset」變成可以按
+步驟 3：「Reset」又變成不能按",P1,R-022,,新增,新表格（REQ-001）
+TC-029,Reset、Undo 與 Redo,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板
+5. 六個滑桿都調離預設值（40、130、30、62、20、-15，同 PM 的 adjusted 畫面）","1. 點「Reset」
+2. 點一次 Undo
+3. 點一次 Redo","步驟 1：六個滑桿都回到 0、100、50、50、0、0，預覽畫面看起來和原本一樣
+步驟 1：「Reset」變成不能按
+步驟 2：一次 Undo 就讓六個滑桿都回到 40、130、30、62、20、-15
+步驟 3：六個滑桿再次全部重設",P1,"R-021, R-025",,新增,新表格（REQ-001）
+TC-030,Reset、Undo 與 Redo,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板，所有滑桿都在預設值","1. 將「Saturation」從 0 拖到 20，途中在 5、10、15 各停一下，最後在 20 放開
+2. 點一次 Undo
+3. 點一次 Redo","步驟 2：「Saturation」直接回到 0（一次拖曳算一步）
+步驟 3：「Saturation」又變回 20",P1,"R-023, R-025",,新增,新表格（REQ-001）
+TC-031,Reset、Undo 與 Redo,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板，「Brightness」為 0","1. 在「Brightness」數值框輸入 33（先輸入 3，再輸入 3）
+2. 按 Enter
+3. 點一次 Undo",步驟 3：一次 Undo 就讓「Brightness」回到 0，而不是回到 3,P1,R-024,Q-5：不論是過渡期還是目標行為，一次輸入都只算一個 Undo 步驟。,新增,新表格（REQ-001）
+TC-032,Reset、Undo 與 Redo,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已選取 Photo PiP fx-photo，並開啟 Adjust 面板，所有滑桿都在預設值","1. 將「Contrast」拖到 50
+2. 點「Reset」
+3. 點兩次 Undo","步驟 2：所有滑桿都回到預設值
+步驟 3：第一次 Undo 讓「Contrast」回到 50
+步驟 3：第二次 Undo 讓「Contrast」回到 0",P2,"R-021, R-023, R-007",,新增,新表格（REQ-001）
+TC-033,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. fx-main 正在播放，播放頭在 fx-main 之內
+4. 已開啟 fx-main 的 Adjust 面板",將「Saturation」拖到 60,"開始拖曳時，播放就暫停
+預覽畫面在暫停的播放頭時間點預覽變化",P1,R-026,,新增,新表格（REQ-001）
+TC-034,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. fx-main 正在播放
+4. 已開啟 fx-main 的 Adjust 面板",在「Hue」數值框輸入 40 並按 Enter,"開始輸入時播放就暫停，最晚在數值套用時暫停
+預覽畫面在暫停的播放頭顯示新的色相",P2,R-026,,新增,新表格（REQ-001）
+TC-035,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. fx-main 正在播放
+4. 已開啟 fx-main 的 Adjust 面板，「Saturation」為 60",點「Reset」,"播放暫停
+預覽畫面在暫停的播放頭顯示重設後的效果",P2,R-026,,新增,新表格（REQ-001）
+TC-036,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. Photo PiP fx-photo 正在播放
+4. 已開啟 fx-photo 的 Adjust 面板",將「Brightness」拖到 50,"開始拖曳時，播放就暫停
+預覽畫面在播放頭的時間點預覽變亮的 PiP",P2,"R-026, R-007",,新增,新表格（REQ-001）
+TC-037,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的 ""full"" 專案：主軌有 fx-main 和 fx-main2，中間有轉場，fx-photo 和 fx-photo2 是 Photo PiP，fx-pipvideo 是影片 PiP，另有一段文字、一個貼圖和一軌音樂
+3. 播放已暫停","1. 開啟 fx-main 的 Adjust，將「Saturation」設為 -100
+2. 從 fx-main 播放到 fx-main2","步驟 2：fx-main 以黑白播放
+步驟 2：fx-main2、PiP 和貼圖都維持原本的顏色",P1,R-027,,新增,新表格（REQ-001）
+TC-038,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 已調整（「Saturation」 -100、「Brightness」 30）","1. 將播放頭移到 fx-main 的中間
+2. 點「Split」
+3. 分別選取兩段並開啟 Adjust","步驟 3：兩段都顯示「Saturation」 -100 和「Brightness」 30
+步驟 3：兩段播放時的效果相同",P1,R-028,,新增,新表格（REQ-001）
+TC-039,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. Photo PiP fx-photo 已調整（「Hue」 150、「Contrast」 40）","1. 將播放頭移到 fx-photo 之內
+2. 點「Split」
+3. 分別選取兩段並開啟 Adjust",步驟 3：兩段都顯示「Hue」 150 和「Contrast」 40,P1,R-028,,新增,新表格（REQ-001）
+TC-040,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. Photo PiP fx-photo 已調整（「Tint」 80、「Brightness」 -30）","1. 選取 fx-photo 並複製（Ctrl+C 或它的 More 選單）
+2. 貼上（Ctrl+V 或 More 選單）
+3. 選取貼上的 PiP 並開啟 Adjust",步驟 3：複本顯示「Tint」 80 和「Brightness」 -30，看起來和原本的相同,P1,R-029,Video Editor 沒有 Duplicate 功能（KC）。,新增,新表格（REQ-001）
+TC-041,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的 ""full"" 專案：主軌有 fx-main 和 fx-main2，中間有轉場，fx-photo 和 fx-photo2 是 Photo PiP，fx-pipvideo 是影片 PiP，另有一段文字、一個貼圖和一軌音樂
+3. 播放已暫停
+4. fx-main 已調整（「Saturation」 -60），fx-main2 未調整，fx-photo 已調整（「Hue」 160）","1. 開啟 fx-main 的 Adjust
+2. 在時間軸點選 fx-main2
+3. 點選 Photo PiP fx-photo
+4. 再點選 fx-main","步驟 2–4：Adjust 面板維持開啟
+步驟 2：面板顯示 fx-main2 的預設值
+步驟 3：面板顯示「Hue」 160
+步驟 4：面板顯示「Saturation」 -60",P1,R-030,,新增,新表格（REQ-001）
+TC-042,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的 ""full"" 專案：主軌有 fx-main 和 fx-main2，中間有轉場，fx-photo 和 fx-photo2 是 Photo PiP，fx-pipvideo 是影片 PiP，另有一段文字、一個貼圖和一軌音樂
+3. 播放已暫停
+4. fx-photo 已調整（「Brightness」 40）
+5. 已開啟 fx-photo 的 Adjust 面板","1. 點選文字
+2. 選取 fx-photo，再次開啟 Adjust，然後點選貼圖
+3. 對音樂軌重複同樣的操作
+4. 對轉場重複同樣的操作
+5. 對影片 PiP fx-pipvideo 重複同樣的操作
+6. 對畫布或時間軸的空白處重複同樣的操作（取消選取）","步驟 1–6：Adjust 面板每次都會關閉
+步驟 2–6：重新對 fx-photo 開啟 Adjust，仍顯示「Brightness」 40",P1,R-031,,新增,新表格（REQ-001）
+TC-043,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 fx-main 的 Adjust 面板，「Contrast」設為 25","1. 點面板上的 ✕
+2. 再次開啟 Adjust
+3. 點左側選單的「Music」分頁
+4. 選取 fx-main，再次開啟 Adjust","步驟 1：面板關閉，預覽畫面維持調整後的畫面效果
+步驟 2：「Contrast」為 25
+步驟 3：Music 分頁取代原本的面板
+步驟 4：「Contrast」為 25",P1,R-032,,新增,新表格（REQ-001）
+TC-044,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 是橫式影片，且擺放後會露出 BG Blur 的模糊背景（例如直式畫布或較小的片段）","1. 開啟 fx-main 的「BG Blur」
+2. 開啟 Adjust，將「Saturation」設為 -100",步驟 2：片段與它的模糊背景都變成黑白,P1,R-033,,新增,新表格（REQ-001）
+TC-045,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. 建立 Video Editor 專案，主軌上 fx-main 之後放 fx-photo（主軌照片）（web/fixtures.md）
+4. 播放已暫停
+5. 主軌照片 fx-photo 已套用 Cutout","1. 開啟 fx-photo 的 Adjust
+2. 將「Hue」設為 0
+3. 關閉 Cutout","步驟 2：看得到（保留）的部分色相改變
+步驟 3：整張照片（含背景）都呈現相同色相（整張圖都被調整）",P2,R-034,,新增,新表格（REQ-001）
+TC-046,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. Photo PiP fx-photo 已套用 Cutout","1. 開啟 fx-photo 的 Adjust，將「Brightness」設為 60
+2. 關閉 Cutout","步驟 1：只有去背後的主體可見，且變亮
+步驟 2：整張照片呈現相同亮度",P2,R-034,,新增,新表格（REQ-001）
+TC-047,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. Photo PiP fx-photo 已套用 Mask 形狀（例如圓形）","1. 開啟 fx-photo 的 Adjust，將「Saturation」設為 -100
+2. 開啟 Mask，選擇「None」
+3. 點「Done」","步驟 1：看得到的圓形範圍變成黑白
+步驟 3：整張照片都是黑白",P2,R-034,,新增,新表格（REQ-001）
+TC-048,Adjust 的作用範圍與選取,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 使用 web/fixtures.md 的檔案遺失專案（其主軌影片、主軌照片與 Photo PiP 的來源檔已從 Uploads 移除）
+3. 播放已暫停","1. 點主軌影片片段
+2. 點主軌照片片段
+3. 點 Timeline 上的 Photo PiP 片段","步驟 1：「Adjust」呈灰色，點了沒有反應，和「BG Blur」、「Trim」、「Corner」、「Fade In」、「Fade Out」、「Audio」一樣
+步驟 2：「Adjust」呈灰色，點了沒有反應
+步驟 3：「Adjust」呈灰色，點了沒有反應",P2,R-035,Fixture：如果網站沒有辦法讓來源檔變成遺失，就記為 Blocked --as test-data。檔案遺失的片段在 Timeline 上會顯示為灰色（KC tech guide）。,新增,新表格（REQ-001）
+TC-049,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板","1. 將 fx-main 的「Saturation」設為 -100
+2. 查看 Timeline 上的 fx-main 片段與它的 Layer 縮圖","Timeline 上的片段縮圖變成黑白
+Layer 縮圖變成黑白
+片段上不會因為 Adjust 多出任何標記或圖示",P1,"R-036, R-037",,新增,新表格（REQ-001）
+TC-050,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 建立 Video Editor 專案，主軌上 fx-main 之後放 fx-photo（主軌照片）（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板","1. 將主軌照片的「Hue」設為 0
+2. 查看它在 Timeline 上的片段與它的 Layer 縮圖","Timeline 縮圖與 Layer 縮圖都顯示新的色相
+片段上沒有標記",P2,"R-036, R-037",,新增,新表格（REQ-001）
+TC-051,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板","1. 將 Photo PiP 的「Brightness」設為 -80
+2. 查看它在 Timeline 上的 PiP 片段與它的 Layer 縮圖","PiP 片段縮圖與 Layer 縮圖都變暗
+PiP 片段上沒有標記",P1,"R-036, R-037",,新增,新表格（REQ-001）
+TC-052,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 是專案的第一個片段，已調整為「Saturation」-100
+5. 等到雲端儲存圖示顯示已儲存","1. 在新分頁開啟 My Projects › Video
+2. 找到該專案的卡片",專案縮圖顯示黑白的第一個畫面,P2,R-037,,新增,新表格（REQ-001）
+TC-053,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. 建立 Video Editor 專案，主軌上 fx-main 之後放 fx-photo（主軌照片）（web/fixtures.md）
+4. 播放已暫停
+5. 已開啟 Layer 面板
+6. 主軌照片 fx-photo 已套用 Cutout 與「Corner」30，並用畫布控制點旋轉 45°
+7. 已加上 Fade In","1. 查看主軌照片在 Timeline 上的片段
+2. 查看它的 Layer 縮圖
+3. 查看 My Projects 的卡片（當它是第一個片段時）","步驟 1：Timeline 縮圖顯示原始完整照片，直角且未旋轉
+步驟 2：Layer 縮圖顯示去背、圓角且旋轉後的照片
+步驟 1–3：所有縮圖都不會顯示淡入淡出",P2,"R-038, R-039",,新增,新表格（REQ-001）
+TC-054,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板
+5. Photo PiP fx-photo 只套用「Corner」40（沒有 Cutout、Crop 或 Mask）",查看它在 Timeline 上的 PiP 片段與它的 Layer 縮圖,兩個縮圖都顯示圓角,P2,"R-038, R-040",即使沒有 Cutout、Crop 或 Mask，Timeline 的 PiP 縮圖也會顯示 Corner（KC 縮圖規則，與 MyEdit 較舊的規則不同）。,新增,新表格（REQ-001）
+TC-055,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. 已開啟 Layer 面板
+6. Photo PiP fx-photo 已套用 Cutout、圓形 Mask、「Brightness」-50，並加上 Fade In 與 Fade Out","1. 查看它在 Timeline 上的 PiP 片段
+2. 查看它的 Layer 縮圖","步驟 1–2：兩者都顯示圓形範圍內、變暗的去背照片
+步驟 1–2：兩者都不會顯示淡入淡出",P2,"R-038, R-040",,新增,新表格（REQ-001）
+TC-056,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 已調整（「Saturation」-100、「Contrast」50），Photo PiP 已調整（「Hue」0、「Brightness」40），且其中一個另外改了 Temperature 與 Tint","1. 點「Export」（或「Export & Share」），下載 MP4
+2. 播放下載的檔案","步驟 2：fx-main 是黑白且對比較高，與預覽畫面一致
+步驟 2：PiP 顯示改變後的色相與亮度，與預覽畫面一致",P1,"R-041, R-009, R-010, R-011, R-012, R-013, R-014",等 Share Project URL 項目上線（另一個功能）後，按鈕會變成「Export & Share」；Biz Design 目前仍畫成「Export」。,新增,新表格（REQ-001）
+TC-057,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 建立 Video Editor 專案，主軌上 fx-main 之後放 fx-photo（主軌照片）（web/fixtures.md）
+3. 播放已暫停
+4. 主軌照片已調整（「Tint」90）","1. 匯出並下載 MP4
+2. 播放該檔案",主軌照片呈現預覽畫面中看到的洋紅色調,P2,R-041,,新增,新表格（REQ-001）
+TC-058,Adjust 縮圖、匯出與專案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已調整 fx-main（「Saturation」-50）與 Photo PiP（「Brightness」30）
+5. 雲端儲存圖示顯示已儲存","1. 重新整理頁面（或從 My Projects 重新開啟專案）
+2. 開啟 fx-main 的 Adjust
+3. 開啟 PiP 的 Adjust","步驟 1：預覽畫面顯示兩項調整
+步驟 2：fx-main 的「Saturation」為 -50
+步驟 3：PiP 的「Brightness」為 30",P1,R-042,,新增,新表格（REQ-001）
+TC-059,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 播放頭在 Photo PiP fx-photo 範圍內，且 fx-photo 從未套用 Mask","1. 選取 fx-photo
+2. 點「Mask」
+3. 查看整個頁面","步驟 3：選取的 PiP 與它下方的主軌影片畫面放大顯示
+步驟 3：Timeline、編輯工具列、Layer 面板與全螢幕按鈕都隱藏
+步驟 3：「Export」（「Export & Share」）無法點選
+步驟 3：顯示「Done」與「Discard」
+步驟 3：左側面板標題為「Mask」，清單第一項是「None」，且為已選取",P1,"R-043, R-046",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-060,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 從 0:05 開始
+5. 播放頭在 0:02（fx-photo 範圍之外），並已選取 fx-photo
+6. fx-main 在 0:02 與 0:05 顯示不同畫面（已燒入時間碼）","1. 記下播放頭的時間
+2. 點「Mask」
+3. 讀取照片後方的主軌影片畫面
+4. 點「Discard」，再讀取播放頭","步驟 3：背景是主軌影片 0:05（PiP 起點）的畫面
+步驟 2–4：播放頭一直停在 0:02",P1,R-044,Q-2：KC Mask 規格（2026-11-25）寫播放頭不會移動；PM Figma 20261019 更新則寫會移到 PiP 起點（和 Crop & Rotate 一樣）。以較新的 KC 為準。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-061,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 播放頭在 0:07，位於 fx-photo（0:05 – 0:10）範圍內","1. 點「Mask」
+2. 點「Discard」
+3. 讀取播放頭","步驟 1：背景是 0:07 的畫面
+步驟 3：播放頭仍在 0:07",P2,R-045,PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-062,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式
+5. 同一帳號的 Photo Editor 在另一個分頁開啟，已選取一張照片並開啟其 Mask 面板","1. 數一數 Video Editor 的 Mask 清單中有幾個形狀
+2. 將清單與 Photo Editor 的 Mask 清單比對","步驟 1：「None」加上 52 個形狀
+步驟 2：形狀與順序和 Photo Editor 相同",P1,R-047,形狀清單是固定的，不是從 CMS 取得（KC）。Photo Editor：兩欄，「None」排第一（KC 由程式碼推得）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-063,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式（fx-photo 不是正方形，web/fixtures.md）","1. 點清單中的第 1 個形狀（「None」之後開始算）
+2. 依序點下一個形狀直到第 13 個，每點一個都看一下畫布
+3. 在第 13 個形狀上點「Done」
+4. 查看畫布與 Layer 縮圖","步驟 2：每點一次，該形狀立刻套用到照片上，且在清單中以外框標示為已選取
+步驟 2：每個形狀都維持原本比例（不會被拉伸）
+步驟 4：畫布與 Layer 縮圖都顯示照片套用第 13 個形狀",P1,"R-048, R-053, R-055",形狀位置 1–13（數值檢查：52 個形狀分四排逐一檢查）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-064,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式（fx-photo 不是正方形，web/fixtures.md）","1. 點清單中的第 14 個形狀（「None」之後開始算）
+2. 依序點下一個形狀直到第 26 個，每點一個都看一下畫布
+3. 在第 26 個形狀上點「Done」
+4. 查看畫布與 Layer 縮圖","步驟 2：每點一次，該形狀立刻套用到照片上，且在清單中以外框標示為已選取
+步驟 2：每個形狀都維持原本比例（不會被拉伸）
+步驟 4：畫布與 Layer 縮圖都顯示照片套用第 26 個形狀",P2,"R-048, R-053, R-055",形狀位置 14–26（數值檢查：52 個形狀分四排逐一檢查）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-065,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式（fx-photo 不是正方形，web/fixtures.md）","1. 點清單中的第 27 個形狀（「None」之後開始算）
+2. 依序點下一個形狀直到第 39 個，每點一個都看一下畫布
+3. 在第 39 個形狀上點「Done」
+4. 查看畫布與 Layer 縮圖","步驟 2：每點一次，該形狀立刻套用到照片上，且在清單中以外框標示為已選取
+步驟 2：每個形狀都維持原本比例（不會被拉伸）
+步驟 4：畫布與 Layer 縮圖都顯示照片套用第 39 個形狀",P2,"R-048, R-053, R-055",形狀位置 27–39（數值檢查：52 個形狀分四排逐一檢查）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-066,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式（fx-photo 不是正方形，web/fixtures.md）","1. 點清單中的第 40 個形狀（「None」之後開始算）
+2. 依序點下一個形狀直到第 52 個，每點一個都看一下畫布
+3. 在第 52 個形狀上點「Done」
+4. 查看畫布與 Layer 縮圖","步驟 2：每點一次，該形狀立刻套用到照片上，且在清單中以外框標示為已選取
+步驟 2：每個形狀都維持原本比例（不會被拉伸）
+步驟 4：畫布與 Layer 縮圖都顯示照片套用第 52 個形狀",P2,"R-048, R-053, R-055",形狀位置 40–52（數值檢查：52 個形狀分四排逐一檢查）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-067,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已套用愛心形狀的 Mask，並在遮罩內移動，只顯示左半邊",選取 fx-photo，再次點「Mask」,"清單中的愛心為已選取
+照片維持在愛心內原本的位置",P1,R-049,PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-068,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已套用圓形 Mask","1. 點「Mask」
+2. 點「None」
+3. 點「Done」","步驟 2：整張照片重新顯示
+步驟 3：畫布與 Layer 縮圖都顯示整張照片",P2,"R-048, R-055",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-069,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式，套用方形形狀
+5. 螢幕錄影進行中","1. 將滑鼠移到照片的 Rotate 圖示上
+2. 慢慢拖曳旋轉控制點約 40°
+3. 放開","步驟 1：顯示提示文字「Rotate」
+步驟 2：顯示目前角度，拖曳時即時變化
+步驟 3：照片維持在所顯示的角度",P1,"R-050, R-051",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-070,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 開啟 Mask 模式","1. 點放大（或把縮放滑桿往右移）兩次
+2. 點縮小兩次","步驟 1：每次畫面都變大
+步驟 2：畫面再變小",P2,R-052,PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-071,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未套用 Mask","1. 點「Mask」，選擇星形
+2. 點「Done」","步驟 2：模式關閉，Timeline、工具列與 Layer 面板恢復顯示
+步驟 2：畫布顯示套用星形 Mask 的照片
+步驟 2：PiP 片段縮圖與 Layer 縮圖都顯示星形",P1,"R-053, R-055",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-072,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已套用圓形 Mask","1. 點「Mask」
+2. 選擇三角形，並將照片旋轉 30°
+3. 點「Discard」","步驟 3：模式關閉
+步驟 3：fx-photo 的圓形、角度與位置都和進入前相同
+步驟 3：縮圖仍顯示圓形",P1,R-054,Q-12：規格只寫有 Discard；此列假設它會捨棄這次進入模式後的變更。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-073,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未套用 Mask","1. 點「Mask」，選擇愛心，旋轉 20°，點「Done」
+2. 點一次復原（Undo）
+3. 點一次重做（Redo）","步驟 2：復原一次就同時移除愛心與 20° 旋轉
+步驟 3：愛心與角度都回來",P2,R-063,Q-7：假設每次進入 Mask 只算一次 Undo，和 Crop & Rotate 一樣（ME-PIP-20261104-S006-B014）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-074,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 設有 Fade In 與 Fade Out（各 1 秒）
+5. 播放頭在 fx-photo 的第一個畫面，此時照片處於淡入狀態","1. 點「Mask」
+2. 查看照片
+3. 點「Done」
+4. 播放 fx-photo","步驟 2：照片完整顯示，沒有淡入淡出效果
+步驟 4：Fade In 與 Fade Out 仍會播放",P2,R-062,Q-6：PM Figma 20261019（「自動移除 effect」）；KC Mask 規格沒有提到。假設比照 Contract Runner 對 Crop & Rotate 的解讀（ME-PIP-20261104-S003-B007、B008）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-075,Mask 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-main 設有 Fade In
+5. fx-photo 蓋住 fx-main 淡入的第一秒，播放頭在淡入區間內","1. 記下主軌影片淡入中的畫面
+2. 選取 fx-photo，開啟「Mask」，點「Done」
+3. 查看同一個畫面
+4. 開啟 fx-main 的 Fade In 設定","步驟 3：主軌影片的淡入效果和之前一樣
+步驟 4：Fade In 仍為開啟，時間長度不變",P3,R-062,PM Figma 20261019：主軌影片的淡入淡出與轉場維持不變。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-076,Mask 搭配 Corner 與 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已設定「Corner」50","1. 開啟「Mask」，選擇正方形（填滿其框的形狀）
+2. 點「Done」
+3. 再次開啟「Mask」，選擇圓形
+4. 點「Done」
+5. 用星形重複同樣操作","步驟 2：正方形有圓角
+步驟 4–5：圓形與星形看不出圓角有任何變化
+步驟 1–5：Corner 一直維持 50（兩者同時作用）",P1,R-056,Corner 與 Mask 同時作用：2026-03-04 週會決議；目前與 Photo Editor V2 不同（KC）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-077,Mask 搭配 Corner 與 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已設定「Corner」50
+5. 此版本在 Crop & Rotate 模式會即時顯示 Corner 圓角（先對有 Corner 的 PiP 開啟 Crop/Rotate 確認）",開啟「Mask」，選擇正方形,在 Mask 模式內，正方形就已經顯示圓角,P3,R-057,與 Crop & Rotate 的即時 Corner 同時上線（KC）。如果此版本的 Crop & Rotate 模式不會即時顯示，就記為 Not run。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-078,Mask 搭配 Corner 與 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. fx-photo 已套用 Cutout（以主體照片 fx-subject 作為 PiP）
+6. 螢幕錄影進行中","1. 點「Mask」
+2. 選擇會切掉部分主體的圓形
+3. 改選正方形
+4. 點「Done」","步驟 1：模式內顯示完整的去背照片
+步驟 2–4：不會出現 Cutout 處理中的畫面
+步驟 4：畫布上只在正方形範圍內顯示去背後的主體",P1,"R-058, R-060",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-079,Mask 搭配 Corner 與 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. fx-subject 作為 Photo PiP，已套用圓形 Mask，且從未去背
+6. 另放一份 fx-subject 作為另一個 PiP，未套用 Mask，供比對
+7. 螢幕錄影進行中","1. 選取已套用 Mask 的 PiP，點「Cutout」
+2. 等待結果
+3. 對未套用 Mask 的那一份點「Cutout」
+4. 在已套用 Mask 的 PiP 開啟「Mask」，選擇「None」","步驟 1 與 3：兩者都顯示相同的 Cutout 處理中畫面
+步驟 2：圓形維持，只有圓形內的主體可見
+步驟 4：整個主體（包含原本在圓形之外的部分）都已去背",P1,R-059,兩邊等待時間不必相同（Cutout 快取可能讓其中一個變短；contract ME-PIP-20261104-S006-B011 無法測試）。PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-080,Mask 搭配 Corner 與 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. fx-subject PiP 已套用 Cutout 與圓形 Mask","1. 開啟「Mask」，在圓形內移動照片
+2. 旋轉 30°
+3. 點「Done」
+4. 點「Cutout」關閉
+5. 再點「Cutout」重新開啟","步驟 1–3：不會出現 Cutout 處理中的畫面
+步驟 3：主體的去背邊緣不變，只是位置移動、角度旋轉
+步驟 4：先前的去背效果回來，圓形 Mask 仍保留",P2,"R-060, R-061",PM-only：MyEdit Biz 尚無 Design frame（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-081,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 播放頭在 fx-photo 範圍內，且 fx-photo 從未裁切過","1. 選取 fx-photo
+2. 點「Crop/Rotate」
+3. 看整個頁面","步驟 3：選取的 PiP 與主軌影片畫面會放大顯示
+步驟 3：時間軸、編輯工具列、Layer 面板和 Full screen 都會隱藏
+步驟 3：「Export」（「Export & Share」）不能按
+步驟 3：顯示「Done」和「Discard」
+步驟 3：左側「Crop & Rotate」面板顯示「Aspect Ratio」，內有「Original」、「Custom」、「1:1」、「4:5」、「5:4」、「16:9」、「9:16」、「21:9」、「9:21」，以及「Rotate」滑桿
+步驟 3：預設選取「Custom」",P1,"R-064, R-067, R-068",第一次進入預設選 Custom；Figma 標在「Original」是筆誤（PM，2026-11-11）。Contracts ME-PIP-20261104-S003-B001、B002、B003、B004、B012、S004-B001、B006。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-082,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 從 0:05 開始
+5. 播放頭在 0:02，已選取 fx-photo
+6. fx-main 在 0:02 和 0:05 的畫面不同","1. 點「Crop/Rotate」
+2. 看照片後方的主軌影片畫面
+3. 不做任何修改，點「Done」
+4. 看播放頭位置","步驟 2：背景是 0:05 的畫面
+步驟 4：播放頭在 0:05（移到 PiP 的起點）",P1,R-065,Contracts ME-PIP-20261104-S003-B005、B013。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-083,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 播放頭在 fx-photo（0:05 – 0:10）內的 0:07","1. 點「Crop/Rotate」
+2. 不做任何修改，點「Done」
+3. 看播放頭位置",步驟 3：播放頭仍在 0:07,P2,R-066,Contract ME-PIP-20261104-S003-B006。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-084,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 上開啟 Crop & Rotate 模式（左半是紅色，右上角是藍色）","1. 把「Rotate」滑桿拖到 45
+2. 看滑桿數值和照片
+3. 把滑桿分別拖到最左端和最右端","步驟 2：照片以中心為軸即時轉 45°
+步驟 3：記錄滑桿兩端的值（Photo Editor 為 -180 和 180，每格 1°；KC 由程式碼推得）",P1,R-071,Contracts ME-PIP-20261104-S004-B006、B007。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-085,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 上開啟 Crop & Rotate 模式
+5. 螢幕錄影進行中","1. 滑鼠移到照片的旋轉圖示上
+2. 慢慢拖曳旋轉控點，轉約 60°","步驟 1：顯示提示文字「Rotate」
+步驟 2：拖曳過程中會即時顯示並更新角度，和 Mask 模式一樣",P1,"R-072, R-073",Contracts ME-PIP-20261104-S004-B004、B005。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-086,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已在 fx-photo 上開啟 Crop & Rotate 模式","1. 點兩次放大
+2. 點兩次縮小","步驟 1：畫面變大
+步驟 2：畫面再變小",P2,R-074,Contracts ME-PIP-20261104-S005-B001、B002。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-087,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 從未裁切過
+5. 進入前已開啟 Layer 面板","1. 點「Crop/Rotate」
+2. 把「Rotate」滑桿設為 30
+3. 選「1:1」，移動裁切框，保留藍色角落、裁掉大部分紅色那一半
+4. 點「Done」","步驟 4：模式關閉，時間軸和工具列恢復顯示
+步驟 4：畫布上顯示保留藍色角落的正方形裁切，並旋轉 30°
+步驟 4：Layer 縮圖和 PiP 片段縮圖都顯示裁切並旋轉後的照片",P1,"R-075, R-078",REQ-002：Timeline 上 PiP 縮圖會顯示 Crop & Rotate 的旋轉角度（MyEdit 的行為），優先於 KC 中「旋轉 … 維持正向」那一句。Contracts ME-PIP-20261104-S006-B001、B002、S002-B001、B002。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-088,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已裁切為 1:1 並旋轉 30°（上一列）",選取 fx-photo，再次點「Crop/Rotate」,"選取「1:1」
+裁切框停在上次離開時的位置
+「Rotate」滑桿顯示 30",P1,"R-070, R-087",Contracts ME-PIP-20261104-S007-B001、B002。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-089,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 已裁切為 16:9，角度 0°","1. 點「Crop/Rotate」
+2. 選「9:16」，把 Rotate 設為 -40
+3. 點「Discard」","步驟 3：模式關閉
+步驟 3：畫布和縮圖上，fx-photo 仍是 16:9 裁切、0°
+步驟 3：重新開啟後顯示「16:9」和 0",P1,R-076,Q-12：假設 Discard 會捨棄這次進入後的所有修改。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-090,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切，角度 0°","1. 點「Crop/Rotate」，選「1:1」並裁掉藍色角落，把 Rotate 設為 60，點「Done」
+2. 不做其他編輯，點一次 Undo
+3. 點一次 Redo","步驟 2：Undo 一次就回到未裁切、0° 的照片（藍色角落重新出現，且是正的）
+步驟 3：裁切和 60° 會一起回來",P1,R-077,Contract ME-PIP-20261104-S006-B014。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-091,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 設有 Fade In（1 s）
+5. 播放頭在 fx-photo 的第一格，此時畫面處於淡入狀態","1. 點「Crop/Rotate」
+2. 看照片
+3. 點「Done」，播放 fx-photo","步驟 2：照片完整顯示，沒有淡入淡出效果
+步驟 3：Fade In 仍會播放",P2,R-085,Q-6（離開後保留淡入淡出）。Contract ME-PIP-20261104-S003-B007。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-092,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 設有 Fade Out（1 s）
+5. 播放頭在 fx-photo 的最後幾格，此時畫面處於淡出狀態","1. 點「Crop/Rotate」
+2. 看照片
+3. 點「Done」，播放 fx-photo 的結尾","步驟 2：照片完整顯示，沒有淡入淡出效果
+步驟 3：Fade Out 仍會播放",P2,R-085,Q-6。Contract ME-PIP-20261104-S003-B008。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-093,Crop & Rotate 模式,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的「full」專案：主軌放 fx-main 和 fx-main2，兩者之間有轉場，fx-photo 和 fx-photo2 為 Photo PiP，fx-pipvideo 為影片 PiP，另有文字、貼圖和一軌音樂
+3. 播放已暫停
+4. fx-main 設有 Fade In 和 Fade Out
+5. fx-main 和 fx-main2 之間有轉場（例如 dissolve）
+6. fx-photo 疊在 fx-main 處於淡入狀態的開頭","1. 記下播放頭位置的主軌影片畫面、Fade 設定和轉場
+2. 選取 fx-photo，點「Crop/Rotate」，不做任何修改，點「Done」
+3. 看同一格畫面
+4. 開啟 fx-main 的 Fade 設定和轉場","步驟 3：主軌影片的淡入淡出狀態和之前一樣
+步驟 4：Fade In、Fade Out（開啟、時間長度相同）和轉場樣式都沒有改變",P2,R-086,Contracts ME-PIP-20261104-S003-B009、B010、B011。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-094,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「Original」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持照片本身的比例（fx-photo 為 3:2）
+步驟 4：畫布上的照片套用了該裁切（Original）
+步驟 5：選取「Original」，裁切框停在上次離開時的位置",P2,"R-069, R-070",比例 Original。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-095,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「Custom」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框可以是任何形狀：只拖其中一邊，就能調成 2:1
+步驟 4：畫布上的照片套用了該裁切（Custom）
+步驟 5：選取「Custom」，裁切框停在上次離開時的位置",P1,"R-069, R-070",比例 Custom。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-096,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「1:1」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持正方形
+步驟 4：畫布上的照片套用了該裁切（1:1）
+步驟 5：選取「1:1」，裁切框停在上次離開時的位置",P1,"R-069, R-070",比例 1:1。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-097,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「4:5」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持直式 4:5
+步驟 4：畫布上的照片套用了該裁切（4:5）
+步驟 5：選取「4:5」，裁切框停在上次離開時的位置",P2,"R-069, R-070",比例 4:5。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-098,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「5:4」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持橫式 5:4
+步驟 4：畫布上的照片套用了該裁切（5:4）
+步驟 5：選取「5:4」，裁切框停在上次離開時的位置",P2,"R-069, R-070",比例 5:4。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-099,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「16:9」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持橫式 16:9
+步驟 4：畫布上的照片套用了該裁切（16:9）
+步驟 5：選取「16:9」，裁切框停在上次離開時的位置",P1,"R-069, R-070",比例 16:9。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-100,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「9:16」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持直式 9:16
+步驟 4：畫布上的照片套用了該裁切（9:16）
+步驟 5：選取「9:16」，裁切框停在上次離開時的位置",P1,"R-069, R-070",比例 9:16。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-101,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「21:9」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持橫式 21:9
+步驟 4：畫布上的照片套用了該裁切（21:9）
+步驟 5：選取「21:9」，裁切框停在上次離開時的位置",P2,"R-069, R-070",比例 21:9。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-102,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 未裁切","1. 點「Crop/Rotate」
+2. 選「9:21」
+3. 拖曳裁切框的一個角
+4. 點「Done」
+5. 再次點「Crop/Rotate」","步驟 3：裁切框維持直式 9:21
+步驟 4：畫布上的照片套用了該裁切（9:21）
+步驟 5：選取「9:21」，裁切框停在上次離開時的位置",P2,"R-069, R-070",比例 9:21。比例的選擇與套用和 Photo Editor 一致（contracts ME-PIP-20261104-S004-B002、B003；另有一列驗證一致性）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-103,Crop & Rotate 比例,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 另一個分頁開著 Biz Photo Editor，畫布上已加入 fx-photo 這張照片（同一帳號）","1. 在 Video Editor 開啟 fx-photo 的 Crop/Rotate
+2. 選「16:9」
+3. 把「Rotate」設為 90
+4. 選「Original」
+5. 點「Done」
+6. 在 Photo Editor 對同一張照片重複步驟 1–4，然後點「Apply」
+7. 每個步驟後都比對兩邊的裁切框，最後再比對兩個結果","步驟 7：兩邊裁切框的行為一致（鎖定比例、轉 90° 後的貼合方式、Original 會回到完整照片）
+步驟 7：兩個結果的裁切相同",P2,R-069,與 Photo Editor 一致（KC：「行為跟 Photo Editor 的裁切一致」）。Photo Editor 以「Apply」離開裁切模式，Video Editor 則是「Done」。Contracts ME-PIP-20261104-S004-B002、B003（RATIO-PARITY）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-104,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. fx-subject 為 Photo PiP，已套用 Cutout，從未裁切過
+6. 螢幕錄影進行中","1. 點「Crop/Rotate」
+2. 逐格觀察切換到該模式的過程
+3. 看模式中的照片","步驟 2：畫面短暫淡出再淡入
+步驟 2：沒有載入圖示（切換不到 0.3 s）
+步驟 3：顯示完整的去背照片",P1,"R-079, R-080",只有切換超過 0.3 s 還沒完成時，才可能出現載入圖示（KC）。Contracts ME-PIP-20261104-S004-B008、B009、S006-B008。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-105,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. 已在去背後的 fx-subject 上開啟 Crop & Rotate 模式
+6. 螢幕錄影進行中","1. 選「1:1」，移動裁切框，讓主體的腳落在框外
+2. 點「Done」
+3. 逐格觀察切換回來的過程","步驟 1–2：不會出現 Cutout 處理畫面
+步驟 3：畫面短暫淡出再淡入，沒有載入圖示
+步驟 3：畫布上顯示去背後、沒有腳的主體",P1,"R-079, R-080",Contracts ME-PIP-20261104-S006-B003、B007、B009。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-106,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. 去背後的 fx-subject 已裁切為 1:1，且裁掉腳（上一列）","1. 再次點「Crop/Rotate」
+2. 看裁切框外的區域
+3. 選「Original」（或拖曳裁切框），讓腳重新納入範圍
+4. 點「Done」","步驟 2：裁切框外看得到去背後的腳（顯示的是完整的去背照片）
+步驟 3–4：不會出現 Cutout 處理畫面
+步驟 4：畫布上重新出現腳，且已和背景去背分離",P1,"R-079, R-082",Contracts ME-PIP-20261104-S004-B008、S006-B012。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-107,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. 去背後的 fx-subject 疊在辨識度高的主軌影片上","1. 點「Crop/Rotate」
+2. 不改裁切，把「Rotate」設為 45
+3. 點「Done」","步驟 3：主體旋轉了 45°
+步驟 3：去背輪廓不變，透明區域可看到下方的主軌影片",P2,R-083,Contract ME-PIP-20261104-S006-B013。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-108,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. fx-subject 為 Photo PiP，從未去背
+6. 另有第二個 fx-subject PiP，未裁切、從未去背，用來對照
+7. 螢幕錄影進行中","1. 把第一個 PiP 裁成 1:1，並裁掉主體的腳
+2. 點「Done」
+3. 點「Cutout」並等待完成
+4. 對未裁切的那份點「Cutout」並等待完成
+5. 開啟第一個 PiP 的 Crop/Rotate，選「Original」
+6. 點「Done」","步驟 4：去背後的主體維持相同的 1:1 裁切
+步驟 3–5：兩者出現的 Cutout 處理畫面相同
+步驟 6：腳出現了，而且已去背（整張原始照片都已去背）",P1,R-081,等待時間不必相同（S006-B011 無法測試）。Contracts ME-PIP-20261104-S006-B004、B005、B010。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-109,Crop & Rotate 搭配 Cutout,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停
+5. 去背後的 fx-subject 已裁切為 1:1，角度 20°
+6. 螢幕錄影進行中","1. 點「Cutout」關閉
+2. 再點「Cutout」重新開啟","步驟 1：背景重新出現，裁切和角度維持不變
+步驟 2：回到相同的去背輪廓，裁切和角度維持不變
+步驟 2：可能會短暫出現 Cutout 處理畫面",P2,R-084,KC：關閉再開啟會沿用已儲存的結果；使用者接受 MyEdit 出現短暫的處理畫面（contract ME-PIP-20261104-S006-B006）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-110,旋轉與縮圖（跨工具）,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. fx-photo 角度 0°","1. 用畫布上的控點把 fx-photo 旋轉到 30
+2. 開啟「Crop/Rotate」，看「Rotate」的值
+3. 設為 50，點「Done」
+4. 開啟「Mask」，看它的角度
+5. 在 Mask 模式把角度轉到 70，點「Done」
+6. 開啟「Crop/Rotate」，看「Rotate」的值","步驟 2：30
+步驟 4：50
+步驟 6：70
+步驟 1–6：畫布上的照片角度一律是最後一次設定的角度",P1,R-087,畫布控點、Mask 的 Rotate 和 Crop & Rotate 的 Rotate 共用同一個角度（KC，PM 2026-11-11；REQ-002：MyEdit 在拖曳控點後讀到 170）。,新增,新表格（REQ-001）
+TC-111,旋轉與縮圖（跨工具）,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板
+5. fx-photo 未裁切，角度 0°","1. 開啟「Crop/Rotate」，把「Rotate」設為 90，點「Done」
+2. 看 PiP 片段縮圖和 Layer 縮圖
+3. 用畫布上的控點把照片再轉到 170
+4. 再看一次兩個縮圖
+5. 開啟「Crop/Rotate」，看「Rotate」的值","步驟 2：兩個縮圖都顯示照片轉了 90°
+步驟 4：Layer 縮圖顯示 170°
+步驟 4：Timeline 縮圖仍是上次 Crop & Rotate 的 90°
+步驟 5：「Rotate」顯示 170",P1,"R-088, R-087",REQ-002（使用者裁定，MyEdit-5.11.0-11262258）：Timeline 跟隨 Crop & Rotate 的 Done，不跟隨畫布控點；Photo PiP 以此為準，優先於 KC 的縮圖那一句。,新增,新表格（REQ-001）
+TC-112,旋轉與縮圖（跨工具）,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板
+5. fx-photo 從未在 Crop/Rotate 或 Mask 開啟過，角度 0°","1. 用畫布上的控點把 fx-photo 旋轉到 45
+2. 看 PiP 片段縮圖、Layer 縮圖，以及（若 fx-photo 在第一格）My Projects 的專案卡片","Timeline 縮圖維持正的
+Layer 縮圖顯示 45°",P2,"R-089, R-038",,新增,新表格（REQ-001）
+TC-113,旋轉與縮圖（跨工具）,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停
+4. 已開啟 Layer 面板
+5. fx-photo 未裁切，角度 0°","1. 開啟「Mask」，選正方形，旋轉到 60，點「Done」
+2. 看 PiP 片段縮圖和 Layer 縮圖",兩個縮圖都顯示套用正方形遮罩並轉了 60° 的照片,P2,"R-090, R-055",Q-11：假設 Timeline 縮圖跟隨 Mask 的 Done，就像跟隨 Crop & Rotate 的 Done 一樣（REQ-002）。PM-only：目前還沒有 MyEdit Biz 的 Design 畫面（Design UJ，預計 2026-11-27 完成）,新增,新表格（REQ-001）
+TC-114,匯出、專案與方案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的「full」專案：主軌放 fx-main 和 fx-main2，兩者之間有轉場，fx-photo 和 fx-photo2 為 Photo PiP，fx-pipvideo 為影片 PiP，另有文字、貼圖和一軌音樂
+3. 播放已暫停
+4. fx-photo 已裁切為 1:1，角度 30°
+5. fx-photo2 已套用愛心遮罩","1. 匯出並下載 MP4
+2. 播放該檔案","fx-photo 顯示 1:1 裁切並旋轉 30°，和畫布上一致
+fx-photo2 顯示愛心遮罩，和畫布上一致",P1,R-091,Q-9：KC 只提到 Adjust 會被匯出；假設匯出結果會和畫布一致。,新增,新表格（REQ-001）
+TC-115,匯出、專案與方案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. web/fixtures.md 的「full」專案：主軌放 fx-main 和 fx-main2，兩者之間有轉場，fx-photo 和 fx-photo2 為 Photo PiP，fx-pipvideo 為影片 PiP，另有文字、貼圖和一軌音樂
+3. 播放已暫停
+4. fx-photo 已裁切為 1:1，角度 30°
+5. fx-photo2 已套用愛心遮罩
+6. 雲端儲存圖示顯示已儲存","1. 重新整理頁面（或從 My Projects 重新開啟專案）
+2. 開啟 fx-photo 的 Crop/Rotate
+3. 開啟 fx-photo2 的 Mask","步驟 1：畫布上兩者都和之前一樣
+步驟 2：fx-photo 顯示「1:1」和 30
+步驟 3：fx-photo2 已選取愛心",P1,R-092,Q-9：假設專案會保留這些設定，就像保留 Adjust 一樣（R-042）。,新增,新表格（REQ-001）
+TC-116,匯出、專案與方案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo，以沒有 Biz Pro 的帳號登入（web/fixtures.md）
+2. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+3. 播放已暫停","1. 選取 fx-main，看「Adjust」
+2. 選取 fx-photo，看「Crop/Rotate」、「Mask」、「Adjust」和「Cutout」
+3. 依序開啟 Adjust、Mask 和 Crop/Rotate，各做一次修改","步驟 1–2：「Adjust」、「Crop/Rotate」和「Mask」都沒有 Premium 標記
+步驟 2：記錄「Cutout」的標記（沒有 Biz Pro 的帳號會顯示 Premium，KC 由程式碼推得）
+步驟 3：每次修改都能直接套用，不會跳出升級提示",P2,R-093,Q-10：KC 規格沒有提到這些工具的方案限制；假設所有已登入的方案都能使用。,新增,新表格（REQ-001）
+TC-117,匯出、專案與方案,"1. 用 Chrome（1440 × 900）開啟 MyEdit Biz demo（business-demo.myedit.online，en），以主要測試帳號登入（web/fixtures.md）
+2. 以 Biz Pro 帳號登入（Cutout 僅限 Biz Pro；web/fixtures.md）
+3. Video Editor 專案：主軌放 fx-main，上方疊一個 Photo PiP fx-photo（web/fixtures.md）
+4. 播放已暫停",選取 fx-photo，依序各使用一次「Adjust」、「Mask」和「Crop/Rotate」,每個工具都能開啟並套用，沒有 Premium 標記，也沒有升級提示,P3,R-093,,新增,新表格（REQ-001）

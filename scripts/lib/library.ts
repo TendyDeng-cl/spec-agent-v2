@@ -13,7 +13,10 @@ export const COLUMNS = ['ID', 'Section', 'Precondition', 'Action', 'Expected Res
 /** Extra columns a draft may carry while it is under review. They are never stored in the approved table. */
 export const DRAFT_COLUMNS = [...COLUMNS, 'Change', 'Change Reason'];
 export const CHANGES = ['new', 'modified', 'removed', 'unchanged'];
-export const PLATFORMS = ['ios', 'android'];
+// web: a website (MyEdit and other CyberLink web apps) run in Chrome by scripts/device-web.ts (user, 2026-11-24).
+export const PLATFORMS = ['ios', 'android', 'web'];
+/** Display name of a platform id: ios → iOS, android → Android, web → Web. */
+export const platformName = (p: string) => p === 'ios' ? 'iOS' : p === 'android' ? 'Android' : p === 'web' ? 'Web' : p;
 
 export type SpecFile = { name: string; sha256: string; bytes: number };
 export type HistoryEntry = { version: number; approved_at: string; spec_set_sha256: string; draft: string; cases: number; csv: string; requirements: string };

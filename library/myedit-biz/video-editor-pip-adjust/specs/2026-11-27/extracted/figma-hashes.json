@@ -1,0 +1,47 @@
+{
+  "boards": {
+    "667:47666": {
+      "hash": "0d118c9d",
+      "overlay": "",
+      "at": "2026-11-27T05:15:07.322Z",
+      "group": "ds-adjust-main-video"
+    },
+    "671:28111": {
+      "hash": "0dbaab5a",
+      "overlay": "",
+      "at": "2026-11-27T05:15:07.609Z",
+      "group": "ds-adjust-photo-pip"
+    },
+    "671:28750": {
+      "hash": "5a3b6f8c",
+      "overlay": "",
+      "at": "2026-11-27T05:15:07.609Z",
+      "group": "ds-adjust-photo-pip"
+    },
+    "7270:16640": {
+      "hash": "439bc22a",
+      "overlay": "",
+      "at": "2026-11-27T05:10:35.227Z",
+      "group": "pm-adjust-main-video"
+    },
+    "7273:35737": {
+      "hash": "7b20d99e",
+      "overlay": "7b20d99e",
+      "at": "2026-11-27T05:11:55.688Z",
+      "group": "pm-adjust-photo-pip"
+    },
+    "6564:25919": {
+      "hash": "ae18956f",
+      "overlay": "109b2d6d",
+      "at": "2026-11-27T05:11:57.647Z",
+      "group": "pm-photo-crop-rotate"
+    },
+    "6556:11894": {
+      "hash": "ecb53500",
+      "overlay": "fe268dd4",
+      "at": "2026-11-27T05:11:56.012Z",
+      "group": "pm-photo-mask"
+    }
+  },
+  "files": {}
+}

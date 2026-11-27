@@ -1,0 +1,8 @@
+{
+  "Q-8": "Design 稿（頁面 1045:10519）還沒盤點，所以控制項與文案都取自 PM Figma（第 10 步待補）。",
+  "Q-13": "PM Spec 定了 V2 的上傳限制（8 min、10 GB），也說 HD Video Converter 和 AI Frame Interpolation 的 SEO 頁會進新版房間，但沒寫這兩頁的上傳框要不要改；網站和知識庫從官網整理的落地頁說明都還是 30 min／3 min 與 1.8 GB。假設：兩個上傳框都應該和 R-010 一樣顯示 V2 的限制（TC-151、TC-152）。",
+  "Q-14": "Spec 的文案範本是「({credits} credits/sec)」（複數）；每秒 1 點時網站顯示「(1 credit/sec)」。假設：單數是正確的英文，算通過（TC-042～TC-051、TC-083）。",
+  "Q-15": "團隊規則（knowledge.md 中已標為有爭議）要求所有工作畫面右上角都有 Get Credits；知識庫從程式碼整理的頁首說明則寫點數工具的匯入（SEO）頁不顯示，和網站一致。假設：只檢查房間裡的 Get Credits（TC-138），請 PM 確認。",
+  "Q-16": "團隊規則（knowledge.md 中已標為有爭議）說雲端空間已滿的提示有 Manage；知識庫從程式碼整理的說明則寫：還有更高一層雲端方案時顯示 Upgrade，只有 Studio Pro 才顯示 Manage，和 Free 帳號看到的一致。假設：照知識庫（TC-147 檢查 Upgrade，TC-153 檢查 Manage），請 PM 確認。",
+  "Q-17": "知識庫問題 #ae8127264e43（2026-11-26，等 PM 回答）：Enhance 下方的秒數可能從小數兩位改成整數秒（「Enhance 5 seconds (2 credits/sec)」）。假設：PM 回答前測試列維持小數兩位；若改了，所有價格列的第二行都要跟著改。"
+}

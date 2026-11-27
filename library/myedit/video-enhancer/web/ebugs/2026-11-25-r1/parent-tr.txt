@@ -1,0 +1,7 @@
+Parent TR: TR261022-0018 — https://ecl.cyberlink.com/IF3/tr/BPM/FormView/TR261022-0018
+Release: MyEdit v5.11, project (23403)MyEdit 5.11.0 (2026 November); TR Type Retail; status Assigned; due 2026/11/30;
+testers include JACKCY_LEE.
+Looked up: 2026-11-25 ~18:10 (Asia/Taipei), IF3 TR query, Product MyEdit (274), created 2026-01-01 – 2026-11-25.
+Basis: the only open release TR for MyEdit 5.11 (the other non-daily TRs are 5.10 / 5.9 release TRs and a CMS content
+TR); bugs on 5.11.0 builds were attached to it up to 2026-11-25 (5.11.0-11242029, the build this run tested).
+Tested build: MyEdit-5.11.0-11242029 on demo — same release, no mismatch.

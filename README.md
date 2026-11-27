@@ -146,12 +146,21 @@ scripts. The full workflow needs **macOS**; Windows covers everything except rea
 | --- | --- | --- |
 | Tables: `status`, `fingerprint`, `add-spec`, `new-draft`, `check`, `review`, `export`, `annotations`, `spec-agent-gaps` | ✓ | ✓ |
 | Rendering spec frames (`render-region.ts`, `render-tiles.ts`) | ✓ | ✓ |
-| Reading a new spec set (`spec-boards.ts`: OCR through Apple's Vision framework and `swift`) | ✓ | ✗ (run it on a Mac and pull the committed `extracted/` text) |
+| Reading a new spec set (`spec-boards.ts`, `board-lint.ts`, design-check OCR: `lib/ocr.ts`) | ✓ (Apple Vision, `swift`) | ✓ (built-in Windows OCR, `ocr-windows.ps1`; needs the OCR language packs, below) |
 | Run log, log slicing, run plan and results pages (`run-log.ts`, `log-slice.ts`, `plan-page.ts`, `results-page.ts`) | ✓ | ✓ |
 | Control inventory, review sheets, control trace, coverage page (`inventory.ts`, `inventory-sheets.ts`, `controls.ts`, `coverage-page.ts`) | ✓ | ✓ |
 | iPhone runs (`device.ts`, `app-setup.ts`: XCUITest, `xcrun`, `ditto`) | ✓ | ✗ |
 | Android runs | see [Phone (Android)](#4b-phone-android) | see [Phone (Android)](#4b-phone-android) |
+| Website runs (`device-web.ts`: Chrome, recordings need `ffmpeg`) | ✓ | ✓ |
+| Small image copies on the pages (`lib/thumbs.ts`, coverage boards, eBug review) | ✓ (`sips`) | ✓ (`lib/image.ts`, mupdf) |
 | eBug drafts, format check, filing | ✓ | ✓ |
+
+**Windows OCR languages (2026-11-25).** Windows OCR reads only the languages whose OCR pack is installed; check with
+`powershell -c "[Windows.Media.Ocr.OcrEngine,Windows.Foundation,ContentType=WindowsRuntime]|Out-Null; [Windows.Media.Ocr.OcrEngine]::AvailableRecognizerLanguages"`.
+Install Traditional Chinese, English and Japanese (Settings › Time & language › Language & region › add the
+language, or as administrator `Add-WindowsCapability -Online -Name "Language.OCR~~~en-US~0.0.1.0"`, likewise
+`~~~zh-TW~` and `~~~ja-JP~`). The Chinese engine alone misreads Latin letter case and Japanese kana. Windows OCR has
+no confidence score, so `extracted/boards/*.md` marks no line `(?)` there.
 
 ```bash
 npm install
@@ -303,6 +312,26 @@ appium --relaxed-security
 
 Set an environment variable for the session in PowerShell with `$env:NAME = "value"`, in Git Bash or macOS with
 `export NAME=value`.
+
+### 4c. Website (Chrome, for MyEdit and other web apps)
+
+Website tables (platform `web`, e.g. `myedit/<feature>`, `myedit-biz/<feature>`) run in Google Chrome through
+`scripts/device-web.ts` (playwright-core over Chrome's DevTools port; no browser download, it uses your installed
+Chrome). Nothing else to install beyond `npm install`.
+
+1. `node scripts/device-web.ts <run dir> start --env demo` opens a Chrome window with the casebook's own profile
+   (`~/.casebook/web/profiles/default`, kept between runs).
+2. Sign in to the test account in that window yourself, once; the agent never types passwords.
+3. Later segments attach to the same Chrome (`restart`), so the sign-in carries over.
+
+| Variable | What | Default |
+| --- | --- | --- |
+| `CASEBOOK_WEB_PORT` | Chrome's DevTools port (one Chrome per port; use another port for a second account) | `9333` |
+| `CASEBOOK_CHROME` | Path to chrome(.exe) when it is not in the usual place | found automatically |
+| `CASEBOOK_WEB_BASE_URL` | Base URL when the run folder is outside `library/` | `product.json` › `web.base_urls` |
+
+Environments (demo, preview, production) and the viewport come from `library/<product>/product.json` › `web`; the
+command list is the header of `scripts/device-web.ts` and the run rules are `spec-casebook/references/run-web.md`.
 
 ### 5. Figma (for spec analyses)
 
@@ -621,7 +650,9 @@ Make `library/<product>/` with a `product.json` (copy `library/pdr/product.json`
 product names), then start the first feature with `node scripts/new-draft.ts <product>/<feature> <platform> …`.
 Give the feature its own `feature.json` (log files and tags, Pink menu) before its first on-device run. Scripts read
 the app ids from `product.json` through the run folder, so a run folder must sit under `library/<product>/…/runs/`
-(or set `CASEBOOK_APP_BUNDLE` / `CASEBOOK_ANDROID_PACKAGE`).
+(or set `CASEBOOK_APP_BUNDLE` / `CASEBOOK_ANDROID_PACKAGE`). A website product has a `web` block instead of `ios` /
+`android` (see `library/myedit/product.json`: base URL per environment, default environment, viewport, optional
+`build_js` and `ecl_product`).
 
 ### Domain knowledge
 
@@ -721,7 +752,7 @@ All scripts run from the repository root with `node scripts/<name>.ts`. In the u
 | `new-draft.ts <feature> <platform> --title "<Name>" <files…>` | Starts a draft and records its spec set |
 | `render-region.ts <pdf> <out.png> [x y w h]` | Renders part of a huge Figma page to look at a frame |
 | `render-tiles.ts <pdf> <out dir> [x y w h]` | Renders a region as a grid of readable tiles |
-| `spec-boards.ts <feature> <spec-set> [--file] [--jobs 3]` | Renders and OCRs every board in `boards.json` (uses `ocr-tiles.swift`) |
+| `spec-boards.ts <feature> <spec-set> [--file] [--jobs 3]` | Renders and OCRs every board in `boards.json` (`lib/ocr.ts`: `ocr-tiles.swift` on macOS, `ocr-windows.ps1` on Windows) |
 | `annotations.ts <feature> <platform> --draft <id>` | Groups every board's annotations into blocks to trace to requirements (`annotation-trace.json`) |
 | `spec-agent-gaps.ts <feature> <platform> --draft <id>` | Comparison report data (on request): spec agent cases the table doesn't cover, with their source, from the snapshot in `library/<product>/<feature>/spec-agent/` (`--refresh` updates it from a local spec agent clone, read with git only) |
 | `check.ts <feature> <platform> [--draft <id>]` | Validates a table or draft, incl. arrows, controls, ledger, annotation trace and grids |

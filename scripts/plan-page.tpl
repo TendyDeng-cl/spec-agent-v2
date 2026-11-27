@@ -242,7 +242,7 @@ function renderUsage(tableId, subset, totalLabel, emptyText) {
   const sum = k => ps.some(p => p.stats[k] != null) ? ps.reduce((a, p) => a + (p.stats[k] ?? 0), 0) : null;
   const body = rounds.map(r => r.phases.map(id => { const p = ps.find(x => x.id === id);
       return row(`<b>${esc(p.id)}</b> ${span(p.stats)}`, seatLabel(p.stats), p.stats) + estCells(p.stats) + acctCells(p.stats.fiveHour, p.stats.weekly, p.stats.approx) + '</tr>'
-        + p.segments.map(s => sub(`<span title="${esc(s.name)}">${esc(s.id)}</span>`, s.stats)).join('') + sub(tx('wrap-up', '收尾'), p.wrapUp); }).join('')
+        + p.segments.map(s => sub(`<span title="${esc(tx(s.name, s.name_zh || s.name))}">${esc(s.id)}</span>`, s.stats)).join('') + sub(tx('wrap-up', '收尾'), p.wrapUp); }).join('')
     + (r.phases.length > 1 ? row(`${tx(`Round ${r.n} total`, `第 ${r.n} 輪合計`)} <span class="eq">${esc(r.phases.join(' + '))}</span>`, seatLabel(r), r, 'tot round') + estCells(r) + acctCells(r.readings ? r.fiveHour : null, r.readings ? r.weekly : null, r.approx) + '</tr>' : '')).join('');
   const outside = U.outside5 || U.outsideW ? `<tr><td>${tx('Outside any run', '執行以外')}</td><td></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n est">—</td><td class="n est">—</td>${acctCells(U.outside5, U.outsideW, U.approx)}</tr>` : '';
   const acctTitle = tx("Snapshot increments during the run's active time, including other users of the account", '執行期間帳號用量快照的增加量，包含帳號的其他使用者');
@@ -369,14 +369,14 @@ const phaseSegs = p => p.segments.map(s => {
   const st = tally(s.cases), left = st['Not run'];
   const ss = p.skip ? ['skip', 'Skipped'] : left === 0 ? ['done', 'Recorded'] : left < s.cases.length ? ['active', 'In progress'] : ['pending', 'Pending'];
   const isOpen = openSegs.has(`${p.id}--${s.id}`);
-  return `<details class="seg" id="${esc(p.id)}--${esc(s.id)}"${isOpen ? ' open' : ''}><summary><span class="seg-id">${esc(s.id)}</span><span class="seg-name">${esc(s.name)}${statLine(s.stats)}</span><span class="seg-count num">${s.cases.length - left}/${s.cases.length} ${tx('recorded', '已記錄')}</span><span class="bar">${bar(st)}</span><span class="state ${ss[0]}">${stateName(ss[1])}</span></summary>
+  return `<details class="seg" id="${esc(p.id)}--${esc(s.id)}"${isOpen ? ' open' : ''}><summary><span class="seg-id">${esc(s.id)}</span><span class="seg-name">${esc(tx(s.name, s.name_zh || s.name))}${statLine(s.stats)}</span><span class="seg-count num">${s.cases.length - left}/${s.cases.length} ${tx('recorded', '已記錄')}</span><span class="bar">${bar(st)}</span><span class="state ${ss[0]}">${stateName(ss[1])}</span></summary>
     <div class="cases">${isOpen ? segTable(s) : ''}</div></details>`;
 }).join('');
 function phaseHtml(p, history) {
   const cs = p.segments.flatMap(s => s.cases), t = tally(cs);
   const state = p.skip ? ['skip', 'Skipped this round'] : p.hold ? ['hold', 'Deferred'] : t['Not run'] === 0 ? ['done', 'Recording complete'] : t['Not run'] < cs.length ? ['active', 'In progress'] : ['pending', 'Pending'];
-  const head = `<div class="phase-head"><span class="phase-id">${esc(p.id)}</span><h2>${esc(p.name)} <span class="eyebrow num">${tx(`${cs.length} cases · ${p.segments.length} segments`, `${cs.length} 個案例 · ${p.segments.length} 個區段`)}</span></h2><span class="state ${state[0]}">${stateName(state[1])}${state[0] === 'done' && t.Blocked ? tx(` — ${t.Blocked} blocked`, ` — ${t.Blocked} 個受阻`) : ''}</span>
-    <div class="phase-note">${esc(p.skip || p.hold || p.note || '')}${p.runDir ? ` <code>${esc(p.runDir)}</code>` : ''}${history ? statLine(p.stats) : ''}${history && p.runDir ? ` <span class="run-links">${resultsLink(p)} ${DATA.phases.length > 1 ? `<a href="?run=${encodeURIComponent(p.id)}" data-run="${esc(p.id)}">${tx('Show at the top', '移到最上方')} ↑</a>` : ''}</span>` : ''}</div><div class="bar" style="grid-column:1/-1">${bar(t)}</div></div>`;
+  const head = `<div class="phase-head"><span class="phase-id">${esc(p.id)}</span><h2>${esc(tx(p.name, p.name_zh || p.name))} <span class="eyebrow num">${tx(`${cs.length} cases · ${p.segments.length} segments`, `${cs.length} 個案例 · ${p.segments.length} 個區段`)}</span></h2><span class="state ${state[0]}">${stateName(state[1])}${state[0] === 'done' && t.Blocked ? tx(` — ${t.Blocked} blocked`, ` — ${t.Blocked} 個受阻`) : ''}</span>
+    <div class="phase-note">${esc(p.skip || p.hold || tx(p.note || '', p.note_zh || p.note || ''))}${p.runDir ? ` <code>${esc(p.runDir)}</code>` : ''}${history ? statLine(p.stats) : ''}${history && p.runDir ? ` <span class="run-links">${resultsLink(p)} ${DATA.phases.length > 1 ? `<a href="?run=${encodeURIComponent(p.id)}" data-run="${esc(p.id)}">${tx('Show at the top', '移到最上方')} ↑</a>` : ''}</span>` : ''}</div><div class="bar" style="grid-column:1/-1">${bar(t)}</div></div>`;
   const histOpen = openSegs.has(`hist--${p.id}`);
   const body = history ? `<details class="hist" id="hist--${esc(p.id)}"${histOpen ? ' open' : ''}><summary>${tx(`Show ${p.segments.length} segments and their cases`, `顯示 ${p.segments.length} 個區段與其案例`)}</summary>${histOpen ? phaseSegs(p) : ''}</details>` : phaseSegs(p);
   return `<section class="phase" aria-label="${esc(p.id)}">${head}${body}</section>`;
@@ -402,7 +402,7 @@ const all = cur.flatMap(p => p.skip || p.hold ? [] : p.segments.flatMap(s => s.c
 const nowCase = cur.flatMap(p => p.skip || p.hold ? [] : p.segments.flatMap(s => s.cases.map(c => ({ ...c, seg: s.id })))).find(c => c.result === 'Not run');
 const T = tally(all);
 const links = cur.map(resultsLink).filter(Boolean);
-document.getElementById('runname').innerHTML = picker + esc(cur.map(p => picker && cur.length === 1 ? p.name : `${p.id} · ${p.name}`).join(' · ')) + (links.length ? ` <span class="run-links">${links.length > 1 ? cur.filter(resultsLink).map(p => resultsLink(p).replace(/(→<\/a>)$/, `(${esc(p.id)}) $1`)).join(' ') : links[0]}</span>` : '');
+document.getElementById('runname').innerHTML = picker + esc(cur.map(p => picker && cur.length === 1 ? tx(p.name, p.name_zh || p.name) : `${p.id} · ${tx(p.name, p.name_zh || p.name)}`).join(' · ')) + (links.length ? ` <span class="run-links">${links.length > 1 ? cur.filter(resultsLink).map(p => resultsLink(p).replace(/(→<\/a>)$/, `(${esc(p.id)}) $1`)).join(' ') : links[0]}</span>` : '');
 const testedV = cur.map(p => p.name.match(/\btable v(\d+)/i)?.[1]).find(Boolean), lastAct = cur.map(p => p.stats?.to).filter(Boolean).sort().at(-1);
 document.getElementById('meta').innerHTML = [
   [tx('Approved table', '核准的測試表'), `v${DATA.version} · ${tx(`${DATA.totalCases} cases`, `${DATA.totalCases} 個案例`)}`],

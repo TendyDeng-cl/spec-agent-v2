@@ -1,0 +1,117 @@
+{
+  "at": "2026-11-25T09:35:33.364Z",
+  "env": "demo",
+  "url": "https://stage2.cyberlink.com/account/credits",
+  "signedIn": true,
+  "balance": 4414,
+  "rows": [
+    {
+      "Time": "Nov 25, 2026 17:35",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:34",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:34",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:33",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:32",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:31",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:31",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:30",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:29",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    },
+    {
+      "Time": "Nov 25, 2026 17:28",
+      "Credits": "-6",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Trending AI Templates"
+    }
+  ],
+  "texts": [
+    "Products",
+    "Downloads",
+    "Support & Learning",
+    "Special Offers",
+    "FaceMe AI Solutions",
+    "Search",
+    "User",
+    "Global",
+    "Member Zone",
+    ">",
+    "Credits",
+    "J",
+    "My Credits",
+    "John Doe",
+    "credits available",
+    "credit icon",
+    "4414",
+    "JackCY_Lee@cyberlink.com",
+    "Overview",
+    "Details",
+    "Product",
+    "Available Credits",
+    "Expiration Date",
+    "Credits Details",
+    "All Categories",
+    "Time",
+    "Category",
+    "Referral Center",
+    "Nov 25, 2026 17:35",
+    "-6",
+    "Consume",
+    "MyEdit",
+    "Trending AI Templates",
+    "Redeem",
+    "Nov 25, 2026 17:34",
+    "Account"
+  ]
+}

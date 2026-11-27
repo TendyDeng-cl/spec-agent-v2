@@ -84,7 +84,7 @@ export function parseFile(path: string, scope: Scope): { entries: Entry[]; probl
   for (const e of entries) {
     const at = `${e.file}:${e.line} ${e.id}`;
     if (!KINDS.includes(e.kind)) problems.push(`${at}: kind must be one of ${KINDS.join(', ')}`);
-    if (!['ios', 'android', 'both'].includes(e.platform)) problems.push(`${at}: platform must be ios, android or both`);
+    if (!['ios', 'android', 'web', 'both', 'mobile'].includes(e.platform)) problems.push(`${at}: platform must be ios, android, web, mobile (iOS and Android) or both (every platform)`);
     for (const u of e.use) if (!USES.includes(u)) problems.push(`${at}: use "${u}" is not one of ${USES.join(', ')}`);
     if (!e.source) problems.push(`${at}: no source (who said it or where it came from, and when)`);
     if (e.kind === 'rule' && !AUTHORITIES.includes(e.authority ?? '')) problems.push(`${at}: a rule needs authority: ${AUTHORITIES.join(' | ')}`);
@@ -129,7 +129,7 @@ export function applicable(entries: Entry[], f: Filter = {}): { shown: Entry[]; 
   for (const e of entries) {
     if (e.status !== 'current') { hidden.push({ id: e.id, why: e.status }); continue; }
     if (overridden.has(e.id)) { hidden.push({ id: e.id, why: `overridden by ${overridden.get(e.id)}` }); continue; }
-    if (f.platform && e.platform !== 'both' && e.platform !== f.platform) continue;
+    if (f.platform && e.platform !== 'both' && e.platform !== f.platform && !(e.platform === 'mobile' && f.platform !== 'web')) continue;
     if (f.use && !e.use.includes(f.use)) continue;
     if (f.tags?.length && !f.tags.some(t => e.tags.includes(t.toLowerCase()))) continue;
     if (g && !`${e.id} ${e.aka.join(' ')} ${e.title} ${e.tags.join(' ')} ${e.body}`.toLowerCase().includes(g)) continue;

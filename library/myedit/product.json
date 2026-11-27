@@ -1,0 +1,32 @@
+{
+  "name": "MyEdit",
+  "web": {
+    "ecl_product": "MyEdit",
+    "base_urls": {
+      "demo": "https://demo.myedit.online",
+      "preview": "https://preview.myedit.online",
+      "production": "https://myedit.online"
+    },
+    "default_env": "demo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "build_js": "window.SENTRY_RELEASE && window.SENTRY_RELEASE.id",
+    "credits": {
+      "menu_id": "POL_DefaultPhd_AccountMenuButton",
+      "pattern": "Credits:\\s*([\\d,]+)",
+      "ledger_urls": {
+        "demo": "https://stage2.cyberlink.com/account/credits",
+        "production": "https://membership.cyberlink.com/account/credits"
+      }
+    }
+  },
+  "figma": {
+    "servers": {
+      "design": "figma-design",
+      "pm": "figma-pm",
+      "mx": "figma-pm"
+    }
+  }
+}

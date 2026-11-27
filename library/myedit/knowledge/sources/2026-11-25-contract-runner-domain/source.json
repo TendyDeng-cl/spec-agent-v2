@@ -1,0 +1,137 @@
+{
+ "from": "qadm-myedit-web-spec-contract-runner-agent/domain_knowledge (MyEdit 2026-09-27, additions to 2026-11-17; shared guides 2026-11-02/04/17; MyEdit Biz kept for later)",
+ "received": "2026-11-25",
+ "note": "One-time import (user, 2026-11-25: use it when building MyEdit cases). MyEdit category rules and the shared guides become KP entries in library/myedit/knowledge; the MyEdit Biz folder waits here until a myedit-biz table needs it; ebug-intake-gate.md is a curator procedure, kept as a source only. Originals stay local (git-ignored).",
+ "files": [
+  {
+   "name": "myedit/categories/01_輸入驗證與限制.yaml",
+   "bytes": 4905,
+   "sha256": "a0880da2b4dfbc1fec48d671511556749bc052ac6944f56818f2e660e32a1207"
+  },
+  {
+   "name": "myedit/categories/02_生成與處理生命週期.yaml",
+   "bytes": 2722,
+   "sha256": "764f770c6dc6ad7cef2c24bbd4a161c659561bf1f05437bf99b3220f5b0279ac"
+  },
+  {
+   "name": "myedit/categories/03_結果預覽與匯出完整性.yaml",
+   "bytes": 3016,
+   "sha256": "ec94cd757e611897f1a4d3d70c32c39ba7fcf59cd1cf48e74e466dc971ee32ba"
+  },
+  {
+   "name": "myedit/categories/04_編輯與選取一致性.yaml",
+   "bytes": 4149,
+   "sha256": "59e0752e3b1e24e8751d2d0a5dd2ec29213e9cf8b1f2558414c3b859f3b7343d"
+  },
+  {
+   "name": "myedit/categories/05_工作階段狀態與未儲存變更.yaml",
+   "bytes": 4283,
+   "sha256": "ccd1199535c903a67b08e9f1a80f52e64f75b4964b79a708c5cc2575a1deb0ee"
+  },
+  {
+   "name": "myedit/categories/06_素材庫歷史紀錄與專案復原.yaml",
+   "bytes": 4999,
+   "sha256": "8415d2ff07ed8e0cfc55e687cd8f330deb4a5098686f6f0fc5e01779ea90250f"
+  },
+  {
+   "name": "myedit/categories/07_帳戶點數與使用權限.yaml",
+   "bytes": 3921,
+   "sha256": "fa51e88ef7e4d583406b53a1e45d45aafcdf9a34294f59a820bcc7481102ed17"
+  },
+  {
+   "name": "myedit/categories/08_導覽路由與存取控制.yaml",
+   "bytes": 4962,
+   "sha256": "cd25563fb24a55c175c21a6219c63fb3ccbe5057821feee543e5caece51a8c52"
+  },
+  {
+   "name": "myedit/categories/09_共用控制項與響應式版面.yaml",
+   "bytes": 9375,
+   "sha256": "0241a42e053c22a4ae4bc395ff3e431c7cffd4ee66264e66f36041a3a72f0c75"
+  },
+  {
+   "name": "myedit/categories/10_本地化與瀏覽器相容性.yaml",
+   "bytes": 3397,
+   "sha256": "4fb95d634eecbe17bc927992a03467a58d36e32bb87c24344bcfdc1f881ba94c"
+  },
+  {
+   "name": "myedit/README.md",
+   "bytes": 7365,
+   "sha256": "c3647c7e65d7ff7c8b12359b756512767f6ed793918a958a3dcf96abfb0d5f47"
+  },
+  {
+   "name": "myedit-biz/categories/01_輸入檔案與驗證.yaml",
+   "bytes": 4551,
+   "sha256": "1a9beaec1409a68bc7865cb1e3ac5e966b26dca86cf03c97865796cd1ea0a565"
+  },
+  {
+   "name": "myedit-biz/categories/02_模型提示詞與生成設定.yaml",
+   "bytes": 4704,
+   "sha256": "5c4151316f1f4d3346eebe631b5c3c8cfdbae017b6d5903763b1ff8eb33e28e7"
+  },
+  {
+   "name": "myedit-biz/categories/03_任務執行與錯誤處理.yaml",
+   "bytes": 3262,
+   "sha256": "9d7954241c1d2e8beb4031a8e33f7acd6b460b7525c000441f6232304d305c2a"
+  },
+  {
+   "name": "myedit-biz/categories/04_結果預覽保存與匯出.yaml",
+   "bytes": 3870,
+   "sha256": "bb5965fe311b73b35be1d592c9cebd2affe0d08f4f2534cab7257b0f98c375cf"
+  },
+  {
+   "name": "myedit-biz/categories/05_編輯操作與數值控制.yaml",
+   "bytes": 2694,
+   "sha256": "8103886c879e7415f7d9fabed869c09e302f6d99f1e9ce1a649c5dd53358dd4c"
+  },
+  {
+   "name": "myedit-biz/categories/06_專案素材與狀態保存.yaml",
+   "bytes": 3013,
+   "sha256": "a315bda1dadb370736deea6110db4da96b5f248a828b5ab1e12e04ac7b729308"
+  },
+  {
+   "name": "myedit-biz/categories/07_導覽返回與存取控制.yaml",
+   "bytes": 3484,
+   "sha256": "8d7d2f9e1edf325496456505375ff289605fe5412c07fef8fc1b5a0c21c79e68"
+  },
+  {
+   "name": "myedit-biz/categories/08_點數試用與購買流程.yaml",
+   "bytes": 3866,
+   "sha256": "25289c72983b9644aca8dcacb831c09bcb291eced2ce602b2e278febcabd7952"
+  },
+  {
+   "name": "myedit-biz/categories/09_共用控制項與響應式呈現.yaml",
+   "bytes": 3895,
+   "sha256": "ad573c680eec9f51399eab2c115e0e8b67a25d4bc6e7ad9093bc55e1c305c752"
+  },
+  {
+   "name": "myedit-biz/categories/10_多語系與文案一致性.yaml",
+   "bytes": 3392,
+   "sha256": "78cea4bac78b1ad2b606b1d8fa4a96a3764a6ca375bf2916d1b4ec19c72a8f7a"
+  },
+  {
+   "name": "myedit-biz/README.md",
+   "bytes": 3374,
+   "sha256": "f9c9bb8ef017eea87e2816156b916740b0cf4cfa62a8a89c8705164b4dc07662"
+  },
+  {
+   "name": "myedit-biz/storage-full-and-import-orientation.md",
+   "bytes": 4298,
+   "sha256": "a6efec21b0a3c24eea71458dc1d1d83562c15f174239dff8c35a87aabda3847c"
+  },
+  {
+   "name": "shared/ebug-intake-gate.md",
+   "bytes": 4098,
+   "sha256": "8f6b04c687df730d032956a22ae49d6ca5e9ab59679c8f6fa11b4153f796880d"
+  },
+  {
+   "name": "shared/new-tool-entry-coverage.md",
+   "bytes": 9368,
+   "sha256": "79477706d3a0d6bcb3612a20db07f63c3efe8dc2e53e082de48d1274c175292e"
+  },
+  {
+   "name": "shared/storage-full-and-import-orientation.md",
+   "bytes": 3763,
+   "sha256": "e63735b08dde9e348dfece97ba00af1cc682ede4d8fdafac35d96aeb79ab94ab"
+  }
+ ]
+}

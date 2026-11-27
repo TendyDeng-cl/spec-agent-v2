@@ -1,0 +1,130 @@
+{
+  "at": "2026-11-25T08:13:17.324Z",
+  "env": "demo",
+  "url": "https://stage2.cyberlink.com/account/credits",
+  "signedIn": true,
+  "balance": 4661,
+  "rows": [
+    {
+      "Time": "Nov 25, 2026 16:13",
+      "Credits": "-8",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:12",
+      "Credits": "-180",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:00",
+      "Credits": "-16",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Restoration"
+    },
+    {
+      "Time": "Nov 25, 2026 15:55",
+      "Credits": "-8",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 15:49",
+      "Credits": "-80",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "Showcase Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:49",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    },
+    {
+      "Time": "Nov 25, 2026 15:41",
+      "Credits": "-64",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 15:36",
+      "Credits": "-64",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 15:32",
+      "Credits": "-70",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "Showcase Video"
+    },
+    {
+      "Time": "Nov 25, 2026 15:32",
+      "Credits": "-5",
+      "Category": "Consume",
+      "Product": "MyEdit Business",
+      "Details": "AI Music Generator"
+    }
+  ],
+  "texts": [
+    "Products",
+    "Downloads",
+    "Support & Learning",
+    "Special Offers",
+    "FaceMe AI Solutions",
+    "Search",
+    "User",
+    "Global",
+    "Member Zone",
+    ">",
+    "Credits",
+    "J",
+    "My Credits",
+    "John Doe",
+    "credits available",
+    "credit icon",
+    "4661",
+    "JackCY_Lee@cyberlink.com",
+    "Overview",
+    "Details",
+    "Product",
+    "Available Credits",
+    "Expiration Date",
+    "Credits Details",
+    "All Categories",
+    "Time",
+    "Category",
+    "Referral Center",
+    "Nov 25, 2026 16:13",
+    "-8",
+    "Consume",
+    "MyEdit",
+    "Video Enhancer",
+    "Redeem",
+    "Nov 25, 2026 16:12",
+    "-180",
+    "Nov 25, 2026 16:00",
+    "-16",
+    "Video Restoration",
+    "Account",
+    "Nov 25, 2026 15:55",
+    "My Order",
+    "Nov 25, 2026 15:49",
+    "-80",
+    "MyEdit Business",
+    "Showcase Video",
+    "Get Support",
+    "-5",
+    "AI Music Generator"
+  ]
+}

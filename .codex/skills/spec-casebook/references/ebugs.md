@@ -1,6 +1,13 @@
 # eBug drafts and review page
 
 Part of the spec-casebook skill. The eBug skills carry the full rules (their casebook overlay comes first); this is the casebook order of work.
+
+**MyEdit and MyEdit Biz (user, 2026-11-25): written only with `ebug-writing` and `create-ebug`.** Every bug draft for
+these products — the drafts file, the review page, and the eBug / failures section of every run report
+(`report.md`, `report.zh-Hant.md`, its HTML copy) — is written by reading and applying both skills in full (overlay ›
+*MyEdit and MyEdit Biz*, steps 1–4), Figma images fetched and UI comparison images made before the draft is shown.
+Steps 1–4 below apply to them only where those skills say nothing; the PowerDirector rules in step 1 (one action per
+step, `Spec Link:` lines, `[UI]` for text) do not apply. A report never lists a draft the skills have not shaped.
 Before drafting, read `node scripts/knowledge.ts <feature> <platform> --for ebug` once: the app's names for screens and
 controls, and the `decision` entries (Won't Fix, NAB, PM rulings) that make a finding not a bug.
 
@@ -63,7 +70,9 @@ controls, and the `decision` entries (Won't Fix, NAB, PM rulings) that make a fi
 4. Build the review page with `node scripts/ebug-review.ts library/<product>/<feature>/<platform>/ebugs/<batch>` right
    after the drafts, every time they change (user, 2026-11-19): it runs `drafts_to_bodies.py` and the format check, then
    writes `<date>_eBug_review_<…>.html` next to the drafts from `scripts/ebug-review-page.tpl`; no per-batch review
-   generator. What the drafts do not say (TR, a card's one-line why, context) goes in the batch's optional
+   generator. **In Chinese (user, 2026-11-26):** every batch also gets `review.zh-Hant.json` (keys in the script header:
+   lede, TR line, captions, each card's title / why / my read, the held and Blocked tables), so the page opens in 中文 with
+   an English switch; the eBug text itself stays as drafted. What the drafts do not say (TR, a card's one-line why, context) goes in the batch's optional
    `review.json` (keys in the script header). Hand it over without being asked (user, 2026-11-19): open it for the user in the browser pane (a
    static server on the batch folder, tab fronted) and send the HTML file itself in chat, then stop. Log excerpts on
    the cards start collapsed (`<details>`) and wrap (`pre-wrap`); nothing on the page may run past the right edge in a

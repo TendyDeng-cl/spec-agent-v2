@@ -138,7 +138,10 @@ The first time the form is filled on a new template, record the field names you 
 - Account (user, 2026-11-05, REQ-100): the account the phone is signed in to, as the app's menu shows it (Launcher ☰,
   the account at the top), with its tier: `Account: cltqauiap2@gmail.com (Premium)`. Read it from the menu at the start
   of the verify run (it changes when someone signs in another account) and write it in the run's `result.md`; never
-  copy it from an earlier run.
+  copy it from an earlier run. On the web (MyEdit, user 2026-11-25) it is the site's account menu with the active
+  plan, read by `device-web.ts <run dir> credits <ID>` (`ledger/<ID>-<time>.json`: account, plans, balance):
+  `Account: JackCY_Lee@cyberlink.com (Studio Pro Plan)`, and the device line names the browser, the environment and
+  its build from `device-web.ts … build` (`Chrome 158 · demo · MyEdit 5.11.0 build 11240106`).
 - Reasons in English, short, no test IDs, tool names, timestamps or retry history; the detail lives in the run
   folder. Never write a `.zip` file name in a Reason (ECL links it as a web address). The last line is
   `Evidence: {file.png} {file_log.txt}`, the names of the files on that eBug, like a description (OK rows too).

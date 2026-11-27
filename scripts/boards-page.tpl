@@ -64,7 +64,7 @@ let D = __DATA__;
 let L = 'en'; try { if (localStorage.getItem('casebook-lang') === 'zh') L = 'zh'; } catch (e) {}
 const $ = id => document.getElementById(id), tx = (en, zh) => L === 'zh' ? zh : en;
 const PAGES = [['cases', 'Cases', '案例'], ['progress', 'Progress', '進度'], ['results', 'Results', '結果'], ['coverage', 'Coverage', '覆蓋率'], ['design', 'Design', '設計比對']];
-const platName = p => p === 'ios' ? 'iOS' : 'Android';
+const platName = p => p === 'ios' ? 'iOS' : p === 'android' ? 'Android' : p === 'web' ? 'Web' : p;
 // what this browser opened last, per table (the tab bar writes it): Recent, and where a table's name leads
 const seen = () => { try { return JSON.parse(localStorage.getItem('casebook-seen') || '{}'); } catch (e) { return {}; } };
 const lastTab = (root, s) => s[root]?.path ?? 'cases';
@@ -78,7 +78,7 @@ function status(p, root) {
 }
 function recent(s) {
   const names = new Map(D.products.flatMap(p => p.features.map(f => [f.id, f.title]))), label = { cases: ['Cases', '案例'], progress: ['Progress', '進度'], results: ['Results', '結果'], coverage: ['Coverage', '覆蓋率'], design: ['Design', '設計比對'] };
-  const list = Object.entries(s).map(([root, v]) => ({ root, ...v, m: root.match(/^\/([^/]+\/[^/]+)\/(ios|android)(?:\/draft\/(.+))?$/) })).filter(x => x.m && names.has(x.m[1])).sort((a, b) => b.at - a.at).slice(0, 5);
+  const list = Object.entries(s).map(([root, v]) => ({ root, ...v, m: root.match(/^\/([^/]+\/[^/]+)\/(ios|android|web)(?:\/draft\/(.+))?$/) })).filter(x => x.m && names.has(x.m[1])).sort((a, b) => b.at - a.at).slice(0, 5);
   $('recent').hidden = !list.length;
   $('recent').innerHTML = list.length ? `<span>${tx('Recent', '最近')}</span>${list.map(x => `<a href="${cbEsc(`${x.root}/${x.path}/`)}">${cbEsc(names.get(x.m[1]))} · ${platName(x.m[2])}${x.m[3] ? ` · ${tx('draft', '草稿')}` : ''} <span>${tx(...(label[x.path] ?? [x.path, x.path]))}</span></a>`).join('')}` : '';
 }
@@ -125,7 +125,7 @@ function render() {
   const hit = f => !q || `${f.title} ${f.id}`.toLowerCase().includes(q);
   const shown = D.products.map(p => ({ ...p, features: p.features.filter(hit).sort(order) })).filter(p => p.features.length);
   $('list').innerHTML = shown.map(p => `<h2>${cbEsc(p.name)}</h2><div class="rows">${p.features.map(f => `<div class="row"><div class="name"><strong>${cbEsc(f.title)}</strong><span>${cbEsc(f.id)}</span></div>
-    ${['ios', 'android'].map(x => cell(f, f.platforms.find(y => y.platform === x), s)).join('')}</div>`).join('')}</div>`).join('');
+    ${(f.platforms.some(y => y.platform === 'web') ? ['web'] : ['ios', 'android']).map(x => cell(f, f.platforms.find(y => y.platform === x), s)).join('')}</div>`).join('')}</div>`).join('');
   $('none').hidden = !!shown.length; $('none').textContent = tx('No feature matches.', '沒有符合的功能。');
   $('f').textContent = tx(`A page starts when it is opened and stops after ${D.idleMinutes} idle minutes. Running now: ${D.live}. All times Taipei.`,
     `頁面開啟時才啟動，閒置 ${D.idleMinutes} 分鐘後停止。目前執行中：${D.live}。時間皆為台北時間。`);

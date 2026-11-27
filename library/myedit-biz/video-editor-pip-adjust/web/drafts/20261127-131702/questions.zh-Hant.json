@@ -1,0 +1,15 @@
+{
+  "Q-1": "Photo PiP 工具列順序：PM 規格（KC 2026-11-25、Figma 2026-11-06）把「Split」放最前面：Split、Corner、Cutout、Crop/Rotate、Mask、Adjust、Fade In、Fade Out、Order、Delete；MyEdit Biz Design（ds-adjust-photo-pip，未標日期）畫的是 Biz 現行順序再加 Adjust：Corner、Cutout、Split、Adjust、Fade In、Fade Out、Order、Delete，而且沒有 Crop/Rotate 和 Mask。Biz 要出哪一種順序？Split 放哪裡？假設：只檢查兩邊都成立的順序（Cutout → Crop/Rotate → Mask → Adjust → Fade In），Split 和 Corner 的位置只記錄、不判定。R-003、TC-003",
+  "Q-2": "播放頭在 PiP 範圍外時進入 Mask：PM Figma 的 20261019 更新寫播放頭要移到 PiP 開頭（跟 Crop & Rotate 一樣）；KC Mask 規格（2026-11-25）寫播放頭不動，只有背景顯示 PiP 開頭那一刻的畫面。假設：以較新的 KC 為準（播放頭不動）。R-044、TC-060",
+  "Q-3": "滑桿軌道的畫法：PM 寫從中間 0 開始填色、Temperature 橘 → 白 → 藍、Tint 綠 → 洋紅；Biz Design 畫的是從左端開始填色、Temperature 黃 → 藍、Tint 洋紅 → 綠。假設：以 Design 為準（日期分不出先後，到實機確認，開單前先跟使用者確認）。R-015、TC-015",
+  "Q-4": "拖曳滑桿時，預覽畫面最多可以延遲多久？規格只寫「即時預覽」。假設：看不出延遲，預覽畫面跟得上滑桿圓鈕。R-016、TC-016",
+  "Q-5": "這個建置版本的數值框行為：KC 規格預期按 Enter 或離開欄位才套用（跟 MyEdit 一樣，另一個 UX 項目在做），那個項目完成前維持 Photo Editor 打字即時預覽。12 月的建置版本是哪一種？假設：兩種都算通過，測試時記錄是哪一種；兩種情況下一次輸入都只記一步 Undo。R-017、R-024、TC-017、TC-031",
+  "Q-6": "Mask 與 Crop & Rotate 模式中的 PiP 淡入淡出：PM Figma 20261019 更新寫進入模式時 PiP 的 Fade In / Fade Out「自動移除」（主軌影片的淡入淡出和轉場不動）；KC 規格沒寫。假設（Contract Runner 的解讀，使用者已在 MyEdit 審過）：只是在模式中不顯示，按 Done 或 Discard 後 PiP 的 Fade In / Fade Out 設定都還在、照樣播放。R-062、R-085、TC-074、TC-091、TC-092",
+  "Q-7": "Mask 按 Done 後的 Undo：KC 規格只寫行為跟 Photo Editor 一樣，沒有 Undo 規則。假設：按一次 Undo 就還原整次 Mask 操作，跟 Crop & Rotate 一樣（CR S006-B014）。R-063、TC-073",
+  "Q-8": "同一張照片同時用 Mask 和 Crop & Rotate：Photo Editor 從程式碼整理的規則寫 Mask 形狀和裁切比例會互相取代（套了形狀再開 Crop 會顯示 Custom）；Video Editor 規格沒寫。套了 Mask 的 Photo PiP 進 Crop & Rotate 該顯示什麼？裁切過的進 Mask 又該如何？假設：無；沒有任何列判定這件事，測試時只記錄實際行為。R-048、R-069（沒有對應的列）",
+  "Q-9": "Mask 與 Crop & Rotate 的匯出和重新開啟專案：KC 只有 Adjust 寫了匯出和存進專案。假設：匯出的影片和重新開啟的專案，Mask、裁切和角度都跟畫布上一樣。R-091、R-092、TC-114、TC-115",
+  "Q-10": "方案限制：KC 規格沒有替 Adjust、Mask、Crop/Rotate 指定方案（Cutout 只限 Biz Pro，來自程式碼整理）。假設：登入的任何方案都能用這三個工具，而且沒有 Premium 標記。R-093、TC-116、TC-117",
+  "Q-11": "Mask 旋轉後的時間軸縮圖：KC 縮圖規則寫 Photo PiP 在時間軸上不顯示旋轉、維持正向；Mask 規格寫時間軸縮圖要顯示套用後的結果；REQ-002 只裁示了 Crop & Rotate。假設：Mask 按 Done 後時間軸縮圖跟著更新角度，跟 Crop & Rotate 按 Done 一樣。R-090、TC-113",
+  "Q-12": "「Discard」會做什麼？兩份規格都只寫「另有 Discard」。假設：離開模式並丟掉這次的修改，照片回到進入前的樣子，也不會多一步 Undo。R-054、R-076、TC-072、TC-089",
+  "Q-13": "MyEdit Biz 的 Mask 和 Crop & Rotate 還沒有 Design（UJ，預計 2026-11-27）；這些列都是 PM-only，文字取自 PM Figma 和 KC，Design 出來後要再對一次。R-043 – R-063、R-064 – R-086"
+}

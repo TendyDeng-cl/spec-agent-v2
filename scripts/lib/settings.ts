@@ -6,6 +6,7 @@
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
+import { PLATFORMS } from './library.ts';
 
 export type SeatEntry = { at: string; seat: number; note?: string };
 export type Settings = { seats: SeatEntry[] };
@@ -37,7 +38,7 @@ export const SEAT_PRESETS: { seat: number; en: string; zh: string }[] = [
 export function activeRunsDirs(library: string, hours = 12): string[] {
   const out: string[] = [], since = Date.now() - hours * 3_600_000;
   const dirs = (d: string) => { try { return readdirSync(d, { withFileTypes: true }).filter(e => e.isDirectory()).map(e => join(d, e.name)); } catch { return []; } };
-  for (const product of dirs(library)) for (const feature of dirs(product)) for (const platform of ['ios', 'android']) {
+  for (const product of dirs(library)) for (const feature of dirs(product)) for (const platform of PLATFORMS) {
     const runs = join(feature, platform, 'runs');
     if (dirs(runs).some(r => { const a = join(r, 'activity.log'); return existsSync(a) && statSync(a).mtimeMs >= since; })) out.push(runs);
   }

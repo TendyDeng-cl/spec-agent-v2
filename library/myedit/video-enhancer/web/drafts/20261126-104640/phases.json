@@ -1,0 +1,289 @@
+{
+ "draft": "20261126-104640",
+ "current": [
+  "R2"
+ ],
+ "needs": {
+  "TC-039": [
+   "free-account"
+  ],
+  "TC-096": [
+   "free-account"
+  ],
+  "TC-147": [
+   "storage-full-account"
+  ],
+  "TC-148": [
+   "storage-full-account"
+  ],
+  "TC-113": [
+   "mailbox"
+  ],
+  "TC-115": [
+   "mailbox"
+  ],
+  "TC-153": [
+   "storage-full-studio-pro-account"
+  ]
+ },
+ "unavailable": {},
+ "phases": [
+  {
+   "id": "R1",
+   "name": "Full run of approved v1 (web, MyEdit demo)",
+   "round": true,
+   "note": "MyEdit demo, Chrome 1440 × 900 unless a row says otherwise, default account (Chrome profile default, port 9333) unless the segment says so. Build from device-web build (version.json) at every segment start. Credits: stage2 ledger before and after every charge.",
+   "segments": [
+    {
+     "id": "R1-a",
+     "name": "Entries, SEO page and upload, input limits",
+     "note": "Build check and credits (balance + stage2 ledger) first. Upload rows use device-web upload with the fx- videos; no generation. fx-10gb is a sparse file made at the row.",
+     "cases": [
+      "TC-001",
+      "TC-002",
+      "TC-003",
+      "TC-004",
+      "TC-005",
+      "TC-006",
+      "TC-007",
+      "TC-008",
+      "TC-009",
+      "TC-010",
+      "TC-011",
+      "TC-012",
+      "TC-013",
+      "TC-014",
+      "TC-015",
+      "TC-016",
+      "TC-017",
+      "TC-019",
+      "TC-020",
+      "TC-021",
+      "TC-022",
+      "TC-023",
+      "TC-025"
+     ],
+     "name_zh": "入口、SEO 頁與上傳、輸入限制"
+    },
+    {
+     "id": "R1-b",
+     "name": "Settings panel, price, Professional length limit",
+     "note": "One 480p upload carries the settings and price rows; the fps and resolution rows each upload their own fx- video. TC-036 and TC-088 are the only charged rows here.",
+     "cases": [
+      "TC-027",
+      "TC-028",
+      "TC-029",
+      "TC-030",
+      "TC-031",
+      "TC-032",
+      "TC-033",
+      "TC-034",
+      "TC-035",
+      "TC-036",
+      "TC-037",
+      "TC-038",
+      "TC-040",
+      "TC-041",
+      "TC-082",
+      "TC-083",
+      "TC-084",
+      "TC-085",
+      "TC-086",
+      "TC-087",
+      "TC-088"
+     ],
+     "name_zh": "設定面板、價格、Professional 長度限制"
+    },
+    {
+     "id": "R1-c",
+     "name": "Price: every combination (40 rows)",
+     "note": "One upload of fx-480p30; read the price line for each combination; nothing is charged.",
+     "cases": [
+      "TC-042",
+      "TC-043",
+      "TC-044",
+      "TC-045",
+      "TC-046",
+      "TC-047",
+      "TC-048",
+      "TC-049",
+      "TC-050",
+      "TC-051",
+      "TC-052",
+      "TC-053",
+      "TC-054",
+      "TC-055",
+      "TC-056",
+      "TC-057",
+      "TC-058",
+      "TC-059",
+      "TC-060",
+      "TC-061",
+      "TC-062",
+      "TC-063",
+      "TC-064",
+      "TC-065",
+      "TC-066",
+      "TC-067",
+      "TC-068",
+      "TC-069",
+      "TC-070",
+      "TC-071",
+      "TC-072",
+      "TC-073",
+      "TC-074",
+      "TC-075",
+      "TC-076",
+      "TC-077",
+      "TC-078",
+      "TC-079",
+      "TC-080",
+      "TC-081"
+     ],
+     "name_zh": "價格：所有組合（40 列）"
+    },
+    {
+     "id": "R1-d",
+     "name": "Generate and result, My Library, emails, other tools, Knowledge Center rules",
+     "note": "The four reference generations (TC-089 – TC-092) feed the result, My Library and email rows; Agent TC-116 last. Read credits and the ledger before and after each charge.",
+     "cases": [
+      "TC-089",
+      "TC-090",
+      "TC-091",
+      "TC-092",
+      "TC-093",
+      "TC-094",
+      "TC-095",
+      "TC-097",
+      "TC-100",
+      "TC-110",
+      "TC-111",
+      "TC-112",
+      "TC-113",
+      "TC-115",
+      "TC-116",
+      "TC-117",
+      "TC-118",
+      "TC-119",
+      "TC-120"
+     ],
+     "name_zh": "生成與結果、My Library、電子郵件、其他工具、知識庫規則"
+    },
+    {
+     "id": "R1-e",
+     "name": "Mobile web (375 × 812) and Video Restoration (old room)",
+     "note": "Set the window to 375 × 812 for the mobile rows and restore 1440 × 900 after.",
+     "cases": [
+      "TC-101",
+      "TC-102",
+      "TC-103",
+      "TC-104",
+      "TC-105",
+      "TC-106",
+      "TC-107",
+      "TC-108",
+      "TC-109"
+     ],
+     "name_zh": "手機版網頁（375 × 812）與 Video Restoration（舊房間）"
+    },
+    {
+     "id": "R1-f",
+     "name": "Product rules (default account)",
+     "note": "Rotated video, leave-page warnings, 1201 px crossing, 150 % zoom, Light Mode, time codes, tab titles, card thumbnails.",
+     "cases": [
+      "TC-128",
+      "TC-129",
+      "TC-130",
+      "TC-131",
+      "TC-132",
+      "TC-133",
+      "TC-134",
+      "TC-135",
+      "TC-136",
+      "TC-137",
+      "TC-138",
+      "TC-140",
+      "TC-141",
+      "TC-142",
+      "TC-143",
+      "TC-144",
+      "TC-145",
+      "TC-149",
+      "TC-150"
+     ],
+     "name_zh": "產品規則（預設帳號）"
+    },
+    {
+     "id": "R1-g",
+     "name": "Other accounts last: Free, signed out, storage full",
+     "note": "TC-096 runs first (empty Recent Gen on the Free account, before anything is generated there), then TC-039 on Free, TC-139 in a fresh signed-out profile, TC-147/148 on the storage-full account. Switch with device-web account NAME; never sign out and in.",
+     "cases": [
+      "TC-096",
+      "TC-039",
+      "TC-139",
+      "TC-147",
+      "TC-148"
+     ],
+     "name_zh": "最後跑其他帳號：Free、未登入、空間已滿"
+    }
+   ],
+   "name_zh": "核准 v1 完整執行（網頁版，MyEdit demo）",
+   "note_zh": "MyEdit demo，Chrome 1440 × 900（列上另有指定除外），預設帳號（Chrome 設定檔 default，連接埠 9333，區段另有指定除外）。每個區段開始時用 device-web build 讀版本（version.json）。點數：每次扣點前後都讀 stage2 點數明細。"
+  },
+  {
+   "id": "R2",
+   "name": "Rows v2 added or changed (web, MyEdit demo)",
+   "round": true,
+   "note": "Rows draft 20261126-104640 added or changed (REQ-008), in journey order; same setup as R1. Price rows spend nothing; TC-117 needs one 8-credit 60 fps job; TC-138 one 8-credit job.",
+   "name_zh": "v2 新增或修改的測試列（web，MyEdit demo）",
+   "note_zh": "草稿 20261126-104640 新增或修改的測試列（REQ-008），依使用流程排序；設定同 R1。價格列不扣點；TC-117 需要一次 8 點的 60 fps 工作，TC-138 一次 8 點。",
+   "segments": [
+    {
+     "id": "R2-a",
+     "name": "Entries, upload limits and price wording",
+     "note": "Default account. TC-151/152 read the SEO upload boxes; TC-018 removed (not tested).",
+     "cases": [
+      "TC-002",
+      "TC-151",
+      "TC-152",
+      "TC-020",
+      "TC-042",
+      "TC-043",
+      "TC-044",
+      "TC-045",
+      "TC-046",
+      "TC-047",
+      "TC-048",
+      "TC-049",
+      "TC-050",
+      "TC-051",
+      "TC-083",
+      "TC-085",
+      "TC-088",
+      "TC-154"
+     ],
+     "name_zh": "入口、上傳限制與價格文字"
+    },
+    {
+     "id": "R2-b",
+     "name": "Generate, other tools, narrow window and product rules",
+     "note": "TC-117 and TC-138 spend credits (stage2 ledger before and after). Narrow rows hold 375 × 812 with the CDP override. TC-096 on the free account, TC-147 on the storage-full account; TC-153 Blocked until a full Studio Pro account exists.",
+     "cases": [
+      "TC-117",
+      "TC-101",
+      "TC-102",
+      "TC-103",
+      "TC-104",
+      "TC-105",
+      "TC-109",
+      "TC-138",
+      "TC-096",
+      "TC-147",
+      "TC-153"
+     ],
+     "name_zh": "生成、其他工具、窄視窗與產品規則"
+    }
+   ]
+  }
+ ]
+}

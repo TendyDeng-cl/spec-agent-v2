@@ -1,0 +1,307 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）",看編輯器的右上角,"按鈕文字為「Export & Share」
+畫面上沒有另外的「Export」按鈕",P1,R-001,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-002,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）",點選「Export & Share」,"跳出一個視窗
+上半部：「Share」，顯示專案連結和複製圖示
+下半部：「Export Format: mp4」，以及「Cancel」和「Download」
+視窗右上角有一個 X",P1,R-002,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+記錄視窗開啟的過程中，連結區域顯示什麼（Q-10）。",新增,
+TC-003,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗",查看「Share」下方的文字,文字完全等於「Share access to this project. Anyone with the link can sign in to view it. Premium users can copy and edit the project.」,P3,R-003,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-1：文字寫「Premium users」，但 Biz 的方案是 Free / Pro；這一列只檢查是否與規格的文字一致。",新增,
+TC-004,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗",把滑鼠移到連結上,跳出提示文字，顯示完整的網址，包含在欄位中被截掉的部分,P2,R-004,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-005,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗","1. 點選連結旁邊的複製圖示
+2. 把剪貼簿的內容貼到文字欄位（新分頁的瀏覽器網址列，不要真的開啟）","步驟 1：跳出提示文字「Copied」
+步驟 2：貼上的文字與提示文字中顯示的完整網址相同
+步驟 2：網址開頭是 https://business-demo.myedit.online，並包含 /share/ 加上一組 token",P1,"R-005, R-006","只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-2：Figma 20261019 的註解寫的是 MyEdit 的格式 …/video-editor/online-video-editor/{project token}；KC 規格（2026-11-11，Biz，較新）為準。記錄實際的工具路徑。",新增,
+TC-006,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗",點選「Download」,"下載一個副檔名為 .mp4 的影片檔
+影片內容是專案時間軸的內容",P1,R-007,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+記錄檔名和匯出花了多久。",新增,
+TC-007,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗",點選「Cancel」,"視窗關閉
+沒有下載任何檔案
+編輯器維持原來的狀態",P2,R-008,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-008,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. 已開啟 Export & Share 視窗",點選視窗右上角的 X,"視窗關閉
+沒有下載任何檔案",P3,R-009,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+X 是畫在 PM 的 Figma 稿上，KC 規格裡沒有寫。",新增,
+TC-009,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 帳號登入（web-account free，同時是 P2 的分享者）
+3. 在 Video Editor 開啟它的專案 P2","1. 點選「Export & Share」
+2. 點選複製圖示","步驟 1：視窗顯示「Share」區塊和連結（沒有升級提示）
+步驟 2：跳出「Copied」，剪貼簿裡是該連結",P1,R-010,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+這是 R-010 的變化 Plan=Free。P2 的連結會用在 TC-016 和 Pro 接收者的各列。",新增,
+TC-010,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Biz Pro 帳號登入（web-account premium；先確認 Biz 方案，見 fixtures.md）
+3. 在 Video Editor 開啟它的其中一個影片專案","1. 點選「Export & Share」
+2. 點選複製圖示","步驟 1：視窗顯示「Share」區塊和連結
+步驟 2：跳出「Copied」，剪貼簿裡是該連結",P2,R-010,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+這是 R-010 的變化 Plan=Pro。這個帳號的雲端空間已滿：分享不應該受剩餘空間影響（規格沒有對分享設方案或儲存空間的限制）。",新增,
+TC-011,從編輯器分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入（web-account jackcy）
+3. 在 Video Editor 開啟 A 的專案 P1（fixtures.md：素材包含 A 自己上傳的影片）
+4. P1 之前已分享過（連結已在 TC-005 複製）","1. 開啟 Export & Share 視窗，找找看有沒有停止分享的方式
+2. 關閉視窗
+3. 開啟 My Projects › Video，點開 P1 的更多選單
+4. 在接收者 B 的 Chrome 再開一次 P1 的連結","步驟 1–3：沒有任何控制項可以停止分享或關閉連結
+步驟 4：連結仍然可以開啟 P1 的檢視畫面",P3,R-011,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-012,從 My Projects 分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入
+3. Launcher › My Projects › 「Video」分頁，列表中有 P1",點選 P1 卡片上的更多圖示,"選單依序列出「Duplicate」、「Share」、「Rename」、「Delete」
+沒有「Download」",P2,R-012,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-013,從 My Projects 分享連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入
+3. 在 My Projects › Video 已開啟 P1 的更多選單",點選「Share」,"更多選單關閉
+跳出訊息「Share link copied. You can now share the link.」",P1,R-013,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-014,從 My Projects 分享連結,"1. 在 TC-013 複製的連結
+2. 接收者 B 的 Chrome（web-account free）已登入",在 B 的 Chrome 開啟複製的連結,開啟 P1 的分享檢視畫面（名稱和素材都和 A 的專案相同）,P1,R-014,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-015,擁有者開啟自己的連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以分享者 A 登入
+3. 已複製 P1 的分享連結（TC-005）",在 A 的 Chrome 新分頁開啟該連結,"開啟的是 P1 可編輯的編輯器，不是唯讀檢視畫面
+「Export & Share」可以按，名稱旁顯示 Cloud 圖示
+左側面板和時間軸都可以操作
+沒有「Create Copy of Project」按鈕",P1,R-015,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-016,擁有者開啟自己的連結,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 帳號登入（P2 的擁有者）
+3. 已複製 P2 的分享連結（TC-009）",在新分頁開啟該連結,"開啟的是 P2 可編輯的編輯器，不是唯讀檢視畫面
+沒有「Create Copy of Project」按鈕",P2,R-015,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+擁有者是 Free 方案：不論哪種方案，擁有者規則都要成立。",新增,
+TC-017,接收者：登入與檢視,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 未登入的 Chrome 設定檔（fixtures.md）
+3. P1 的分享連結","1. 開啟連結
+2. 點 X 關閉 Sign In 視窗","步驟 1：先跳出「Sign In」視窗，看不到任何專案內容
+步驟 2：記錄頁面會跳到哪裡，以及未登入時無法檢視 P1",P1,R-016,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-6：規格沒有寫關閉視窗後會怎樣；步驟 2 只記錄，不判定對錯。",新增,
+TC-018,接收者：登入與檢視,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 未登入的 Chrome 設定檔
+3. 已開啟 P1 的分享連結，畫面上顯示「Sign In」視窗",在視窗中以接收者 B 的帳號登入（由使用者本人登入）,登入後，開啟 P1 的分享檢視畫面,P2,R-017,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-6。Agent 不會輸入密碼：這一步由使用者自己登入。",新增,
+TC-019,接收者：登入與檢視,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. 記下 B 的 My Projects › Video 的專案數量","1. 開啟 P1 的分享連結
+2. 再開啟一次 B 的 My Projects › Video","步驟 1：直接開啟 P1 的分享檢視畫面，沒有 Sign In 視窗，也沒有複製提示
+步驟 2：專案數量沒有變（開啟連結並不會產生副本）",P1,"R-018, R-059","只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+這是 R-059 的變化 Plan=Free。",新增,
+TC-020,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）","1. 點 Play
+2. 點 Pause
+3. 點 Play
+4. 點 Stop","步驟 1：影片開始播放，時間往前走
+步驟 2：播放暫停在目前的時間
+步驟 3：從該時間繼續播放
+步驟 4：播放停止，時間回到起點",P1,R-019,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-021,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",把播放頭拖到時間軸中間,"播放頭會跟著拖曳移動
+預覽畫面顯示新時間點的畫面，並從那裡繼續播放",P2,R-020,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-022,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）","1. 點全螢幕圖示
+2. 離開全螢幕（Esc）","步驟 1：影片放大成全螢幕播放
+步驟 2：畫面恢復成原本的樣子",P2,R-021,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-023,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）","1. 滑鼠移到上方選單「Video Tools」
+2. 點使用者個人檔案圖示","步驟 1：上方選單展開
+步驟 2：個人檔案選單展開",P2,R-022,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-024,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",點左側面板的圖示（Videos、Photos、Stickers、Text、Music、Transitions）,"開啟檢視時，面板是收合的
+點了不會展開，也不能加入任何素材",P2,R-023,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-025,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",點右側的 Layer 面板圖示,"開啟檢視時，Layer 面板是收合的
+點了不會展開",P2,R-024,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-026,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）","1. 點時間軸上的一個片段
+2. 試著拖曳它",片段不會被選取，也不會移動,P2,R-025,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-027,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）","1. 點放大
+2. 點縮小
+3. 拖曳縮放滑桿",時間軸的縮放比例不會改變（這些控制項是灰色，不能按）,P2,R-026,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-028,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",點復原與重做,兩個都是灰色（不能按），畫面也沒有任何變化,P2,R-027,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-029,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",點「Export & Share」,"按鈕是灰色（不能按）
+不會跳出任何視窗",P2,R-028,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-030,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",點上方列的專案名稱,"名稱維持原本的顏色
+不會出現重新命名的欄位
+名稱旁邊不會顯示 Cloud 圖示",P3,R-029,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-031,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）",看檢視畫面的最下方,顯示「Create Copy of Project」按鈕,P1,R-030,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-032,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Biz Pro 帳號登入（web-account premium，已確認方案）",開啟 P1 的分享連結,"P1 的分享檢視開啟，不會跳出 Sign In 視窗
+被停用的控制項與 B 看到的相同，並有「Create Copy of Project」按鈕",P2,R-059,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+R-059 的變化版本：Plan=Pro。",新增,
+TC-033,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）
+4. A 在自己的 Chrome 開著 P1","1. 在 A 的 Chrome 幫 P1 加一個文字標題，等到 Cloud 圖示顯示已儲存
+2. 在 B 的 Chrome 再開一次 P1 的分享連結",步驟 2：B 的檢視畫面顯示 A 剛加的標題,P1,R-031,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-034,接收者：登入與檢視,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. A 有一個沒有任何片段的專案 P0（fixtures.md），並已複製它的分享連結
+3. 以 Free 接收者 B 在另一個 Chrome 登入",在 B 的 Chrome 開啟 P0 的分享連結,"P0 的分享檢視開啟
+不會顯示「Create Copy of Project」按鈕",P2,R-032,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-035,Create Copy：Free 接收者,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）
+4. 記下 B 的 My Projects › Video 目前的專案數量",點「Create Copy of Project」,"跳出 Limitation 彈出視窗：「Your account has limited access to copying projects.」
+「Upgrade to unlock this feature for seamless project management.」，以及「Upgrade now」按鈕
+圖片是 Video Editor 的封面圖
+不會建立副本（B 的專案數量不變）",P1,"R-033, R-060","只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+R-060 的變化版本：Plan=Free。PM Figma 畫的是範例照片，之後要換成 Video Editor 封面圖。",新增,
+TC-036,Create Copy：Free 接收者,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）
+4. Limitation 彈出視窗已開啟（TC-035）",點「Upgrade now」,跳出銷售彈出視窗，顯示 Biz Pro 方案,P1,R-034,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+不要真的訂閱：購買的列是 TC-040。",新增,
+TC-037,Create Copy：Free 接收者,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）
+4. 銷售彈出視窗已開啟（TC-036）",點銷售彈出視窗的 X 關閉,"彈出視窗關閉，B 回到 P1 的檢視畫面
+不會建立副本，也不會購買任何東西",P2,R-035,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-12：規格沒寫 X 的行為；不建立副本這部分是規格的規則。",新增,
+TC-038,Create Copy：Free 接收者,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 開啟了 A 的專案 P1 的分享連結（畫面是分享檢視）
+4. Limitation 彈出視窗已開啟",點 Limitation 彈出視窗的關閉按鈕,"彈出視窗關閉，B 回到原本 P1 的檢視畫面
+不會建立副本",P2,R-035,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-12。",新增,
+TC-039,Create Copy：Free 接收者,"1. MyEdit Biz demo (en), Chrome 1440 × 900
+2. 以雲端儲存空間已滿的 Free 帳號登入（web-account storage-full；不要塞滿也不要清空它）
+3. 已開啟 P1 的分享連結（分享檢視）",點「Create Copy of Project」,"跳出 TC-035 的 Limitation 彈出視窗
+在這之前不會先出現儲存空間訊息「You’ve reached your cloud storage limit.」
+不會建立副本",P2,"R-048, R-033","只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-3：規格另外有非 Pro 帳號的儲存空間已滿訊息，但 Free 接收者會先被方案限制擋下來。",新增,
+TC-040,Create Copy：Free 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入（web-account free）
+3. B 已開啟 A 的專案 P1 的分享連結（顯示分享檢視畫面）
+4. 人工測試列：由使用者親自完成訂閱付款（REQ-008）
+5. 已從「Upgrade now」開啟銷售彈出視窗","1. 在銷售彈出視窗中完成 Pro 訂閱
+2. 查看畫面
+3. 再次點選「Create Copy of Project」
+4. 點選「Copy」","步驟 2：B 回到 P1 的檢視畫面，頁面沒有重新載入（播放頭與捲動位置都保留），也沒有開始複製
+步驟 3：雲端儲存空間檢查通過後，開啟「Copy Project to Start Editing」
+步驟 4：依 TC-043 的方式完成複製",P1,R-036,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+人工測試列：由使用者手動測（REQ-008）；MyEdit Biz demo 沒有測試購買（REQ-007）。自動執行時跳過，結果照使用者回報記錄。",新增,
+TC-041,Create Copy：Pro 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以雲端還有空間的 Pro 接收者 C 登入（fixtures.md）
+3. C 已開啟 P2 的分享連結，P2 是另一個帳號的專案，內含片段與已上傳的影片（fixtures.md）",點選「Create Copy of Project」,"開啟「Copy Project to Start Editing」對話框
+「You’re about to copy this project as a template for your own use. The original project will remain unchanged. Once copied, you can edit it freely.」
+按鈕有「Cancel」與「Copy」",P1,R-037,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+需要雲端還有空間的 Biz Pro 帳號（fixtures.md）。",新增,
+TC-042,Create Copy：Pro 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以雲端還有空間的 Pro 接收者 C 登入（fixtures.md）
+3. C 已開啟 P2 的分享連結，P2 是另一個帳號的專案，內含片段與已上傳的影片（fixtures.md）
+4. 記下 C 的 My Projects › Video 的專案數量
+5. 「Copy Project to Start Editing」對話框已開啟",點選「Cancel」,"對話框關閉，C 停留在 P2 的檢視畫面
+沒有建立複本（C 的專案數量不變）",P2,R-038,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-043,Create Copy：Pro 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以雲端還有空間的 Pro 接收者 C 登入（fixtures.md）
+3. C 已開啟 P2 的分享連結，P2 是另一個帳號的專案，內含片段與已上傳的影片（fixtures.md）
+4. 記下 C 的分頁數量與雲端儲存空間用量
+5. 「Copy Project to Start Editing」對話框已開啟",點選「Copy」,"在同一個分頁建立複本（不會開新分頁）
+完成前會顯示載入中對話框（「Loading Project...」，附百分比）
+進度持續前進：不會有超過 10 秒都沒變化的情況",P1,"R-039, R-040, R-060","只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+是 R-060 的 Plan=Pro 變化版本。佐證：錄下載入過程的螢幕錄影，並記錄總花費時間。",新增,
+TC-044,Create Copy：Pro 接收者,剛完成 TC-043 的複製,查看開啟的編輯器,"開啟複本的可編輯編輯器
+專案名稱是 P2 的名稱加上「_copy」
+「Export & Share」可以按，名稱旁顯示雲端圖示
+時間軸上的片段與 P2 相同",P1,"R-041, R-042",只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-045,Create Copy：Pro 接收者,"1. TC-043 的複本已在 C 的 Chrome 中開啟
+2. P2 的擁有者（web-account free）在另一個 Chrome 登入","1. 在 C 的複本中刪除一個片段，等到儲存完成
+2. 開啟 C 的 My Projects › Video
+3. 在擁有者的 Chrome 開啟 P2","步驟 2：複本出現在 C 的 My Projects › Video 清單中
+步驟 3：P2 的片段都還在（原專案沒有被更動）",P1,"R-042, R-043",只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-046,Create Copy：Pro 接收者,"1. 已完成 TC-043 的複製
+2. 複製前（TC-043）已記下 C 的 My Uploads 與雲端儲存空間用量","1. 開啟 C 的 My Uploads
+2. 查看 C 的雲端儲存空間用量","步驟 1：P2 擁有者上傳到 P2 的影片會列在 C 的 Uploads 中
+步驟 2：C 的儲存空間用量增加了約等於所複製媒體的大小",P1,R-044,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+PM 已確認（KC spec）。",新增,
+TC-047,Create Copy：Pro 接收者,"1. TC-046 已通過
+2. P2 的擁有者在另一個 Chrome 登入","1. 在擁有者的 Chrome，從 My Uploads 刪除上傳到 P2 的那支影片
+2. 在 C 的 Chrome 開啟複本並播放",步驟 2：複本仍能播放該片段，沒有任何內容遺失,P2,R-045,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+會刪掉擁有者上傳的影片：要排在所有需要 P2 完整的列之後執行（TC-041 – TC-046）。",新增,
+TC-048,Create Copy：Pro 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以雲端儲存空間已滿的 Biz Pro 帳號登入（web-account premium 或 studio-pro-full，要確認方案；不要自行塞滿或清空）
+3. 已開啟 P1 的分享連結（分享檢視畫面）
+4. 記下該帳號 My Projects › Video 的專案數量",點選「Create Copy of Project」,"跳出訊息「Your Cloud Storage is Full.」/「You cannot use this tool because your storage is full. Please manage your storage space to continue.」，並附「Manage」
+不會開啟「Copy Project to Start Editing」
+沒有建立複本",P1,R-046,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-049,Create Copy：Pro 接收者,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. TC-048 的儲存空間已滿訊息已開啟",點選「Manage」,開啟 My Projects（記錄開在哪個分頁，以及是否在新分頁開啟）,P2,R-047,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+Q-7：先假設是 Video 分頁。",新增,
+TC-056,小螢幕,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入
+3. 視窗已調整為剛好 1200 px 寬（device-web window 1200 900）",開啟 P1 的分享連結,"整個畫面被遮罩蓋住：「Your screen size is too small for this feature. Please adjust your browser window to a larger size for the best experience.」
+遮罩底下的內容都不能點選或播放",P2,R-056,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+此列做完後要把視窗還原成 1440 × 900。",新增,
+TC-057,小螢幕,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入
+3. 視窗已調整為 1201 px 寬",開啟 P1 的分享連結,"開啟 P1 的分享檢視畫面，沒有遮罩
+可以正常播放",P2,R-057,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+此列做完後要把視窗還原成 1440 × 900。",新增,
+TC-058,小螢幕,"1. Chrome 裝置模擬手機（iPhone，手機 user agent；fixtures.md）
+2. 以 Free 接收者 B 登入",開啟 P1 的分享連結,"整個畫面被遮罩蓋住：「This service is only available on larger screens. Please switch to a desktop for full access.」
+遮罩底下的內容都不能使用",P3,R-058,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+需要手機 user agent：只把桌面視窗縮窄的話，顯示的會是桌面版的文字。",新增,
+TC-050,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入
+3. P1 的分享連結，其中 token 改掉幾個字元",開啟改過的連結,"B 會到 My Projects › 「Video」
+出現訊息「The shared project has been deleted and is no longer available.」",P2,"R-053, R-049",只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-051,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. A 建立了一個只用來測試的專案 P3（含一個片段），並複製了它的分享連結（fixtures.md）
+3. B（web-account free）在另一個 Chrome 開著 P3 的分享檢視畫面
+4. 已開始錄 B 視窗的螢幕錄影","1. 在 A 的 Chrome，到 My Projects › Video 刪除 P3（確認刪除）
+2. 觀察 B 的畫面 10 秒
+3. 嘗試關閉橫幅","步驟 2：約 5 秒內，上方出現橫幅，內容為「The shared project has been deleted and is no longer available.」
+步驟 2：「Create Copy of Project」消失
+步驟 3：橫幅沒有關閉按鈕，會一直留著",P1,R-052,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+佐證：螢幕錄影，並記錄從刪除到出現橫幅的時間。",新增,
+TC-052,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. P3 已刪除（TC-051）
+3. 以 Free 接收者 B 登入","1. 開啟 P3 的分享連結
+2. 重新整理 My Projects","步驟 1：B 會到 My Projects › 「Video」，並出現訊息「The shared project has been deleted and is no longer available.」
+步驟 2：該訊息不會再出現",P1,"R-049, R-050",只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-053,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. P3 已刪除（TC-051）
+3. 使用未登入的 Chrome 設定檔",開啟 P3 的分享連結,"開啟 Video Editor 的入口頁
+不會顯示任何訊息",P2,R-051,只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。,新增,
+TC-054,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入
+3. 手動在 Chrome DevTools › Network request blocking 設定封鎖 P1 的專案請求",開啟 P1 的分享連結,"B 會到 My Projects › 「Video」，並出現「The shared project has been deleted and is no longer available.」
+不會再出現其他說明原因的錯誤訊息",P3,R-054,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+暫緩：需要製造網路或伺服器故障，執行工具做不到；等 RD 或使用者同意後手動執行。",新增,
+TC-055,專案已刪除或無法取得,"1. MyEdit Biz demo（en），Chrome 1440 × 900
+2. 以 Free 接收者 B 登入
+3. 有一個已分享的專案，沒有被刪除但載入失敗（觸發方式由 RD 提供，Q-4）",開啟它的分享連結,"跳出訊息「The project may have been updated. Try copying the link again.」
+B 被帶到 My Projects",P3,R-055,"只有 PM 規格：還沒有 Design 稿（Biz Design 由 UJ 負責，預計 2026-11-27）。
+先暫緩，等 RD 說明怎麼讓載入失敗（Q-4）。",新增,

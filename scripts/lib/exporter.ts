@@ -2,7 +2,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import ExcelJS from 'exceljs';
-import { COLUMNS, readManifest, readTable, tableDir } from './library.ts';
+import { COLUMNS, platformName, readManifest, readTable, tableDir } from './library.ts';
 import { renderPage } from './render.ts';
 import { readZhCopy } from './zh.ts';
 
@@ -25,7 +25,7 @@ export async function exportTable(feature: string, platform: string, htmlOnly = 
   ws.autoFilter = { from: 'A1', to: { row: 1, column: COLUMNS.length } };
   const info = wb.addWorksheet('Info');
   info.columns = [{ width: 22 }, { width: 90 }];
-  [['Feature', m.title], ['Feature ID', m.feature], ['Platform', platform === 'ios' ? 'iOS' : 'Android'], ['Version', String(m.version)],
+  [['Feature', m.title], ['Feature ID', m.feature], ['Platform', platformName(platform)], ['Version', String(m.version)],
    ['Approved', m.approved_at], ['Cases', String(rows.length)], ['Spec set SHA-256', m.spec_set_sha256],
    ...m.spec_files.map(f => ['Spec file', `${f.name}  (${f.sha256})`])].forEach(r => info.addRow(r));
   info.getColumn(1).font = { bold: true };

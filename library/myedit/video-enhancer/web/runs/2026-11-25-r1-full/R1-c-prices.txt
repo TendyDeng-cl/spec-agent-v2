@@ -1,0 +1,41 @@
+TC-042 standard original source => Same as source#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-043 standard original 50 => 50 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-044 standard original 60 => 60 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-045 standard original 100 => 100 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-046 standard original 120 => 120 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-047 standard 720p source => Same as source#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-048 standard 720p 50 => 50 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-049 standard 720p 60 => 60 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-050 standard 720p 100 => 100 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-051 standard 720p 120 => 120 fps#Enhance 8#Enhance 7.30 seconds (1 credit/sec)#
+TC-052 standard 1080p source => Same as source#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-053 standard 1080p 50 => 50 fps#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-054 standard 1080p 60 => 60 fps#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-055 standard 1080p 100 => 100 fps#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-056 standard 1080p 120 => 120 fps#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-057 standard 4k source => Same as source#Enhance 24#Enhance 7.30 seconds (3 credits/sec)#
+TC-058 standard 4k 50 => 50 fps#Enhance 48#Enhance 7.30 seconds (6 credits/sec)#
+TC-059 standard 4k 60 => 60 fps#Enhance 48#Enhance 7.30 seconds (6 credits/sec)#
+TC-060 standard 4k 100 => 100 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-061 standard 4k 120 => 120 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-062 professional original source => Same as source#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-063 professional original 50 => 50 fps#Enhance 32#Enhance 7.30 seconds (4 credits/sec)#
+TC-064 professional original 60 => 60 fps#Enhance 32#Enhance 7.30 seconds (4 credits/sec)#
+TC-065 professional original 100 => 100 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-066 professional original 120 => 120 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-067 professional 720p source => Same as source#Enhance 16#Enhance 7.30 seconds (2 credits/sec)#
+TC-068 professional 720p 50 => 50 fps#Enhance 32#Enhance 7.30 seconds (4 credits/sec)#
+TC-069 professional 720p 60 => 60 fps#Enhance 32#Enhance 7.30 seconds (4 credits/sec)#
+TC-070 professional 720p 100 => 100 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-071 professional 720p 120 => 120 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-072 professional 1080p source => Same as source#Enhance 32#Enhance 7.30 seconds (4 credits/sec)#
+TC-073 professional 1080p 50 => 50 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-074 professional 1080p 60 => 60 fps#Enhance 64#Enhance 7.30 seconds (8 credits/sec)#
+TC-075 professional 1080p 100 => 100 fps#Enhance 128#Enhance 7.30 seconds (16 credits/sec)#
+TC-076 professional 1080p 120 => 120 fps#Enhance 128#Enhance 7.30 seconds (16 credits/sec)#
+TC-077 professional 4k source => Same as source#Enhance 96#Enhance 7.30 seconds (12 credits/sec)#
+TC-078 professional 4k 50 => 50 fps#Enhance 192#Enhance 7.30 seconds (24 credits/sec)#
+TC-079 professional 4k 60 => 60 fps#Enhance 192#Enhance 7.30 seconds (24 credits/sec)#
+TC-080 professional 4k 100 => 100 fps#Enhance 384#Enhance 7.30 seconds (48 credits/sec)#
+TC-081 professional 4k 120 => 120 fps#Enhance 384#Enhance 7.30 seconds (48 credits/sec)#
+DONE

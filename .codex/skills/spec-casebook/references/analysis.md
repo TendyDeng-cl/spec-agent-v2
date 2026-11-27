@@ -225,6 +225,26 @@ Read these on every new or updated draft, even when the spec set has not changed
      domain-knowledge skill to be marked `disputed`.
    `check.ts` fails a draft that leaves an applicable rule out and warns when the knowledge changed after the draft
    read it.
+7. **Knowledge Center, MyEdit and MyEdit Biz (user, 2026-11-25).** These products keep their rules, PM decisions,
+   Spec change log and known eBugs in the CyberLink Knowledge Center MCP: `cl-knowledge-center-myedit` for `myedit/…`,
+   `cl-knowledge-center-myedit-biz` for `myedit-biz/…` (one connection per feature, never both; follow the server's
+   own instructions). Before the coverage passes: `search_knowledge` for the feature and each of its jobs, `list_specs`
+   for its Spec and status, `get_spec_change_log` for changes since the newest spec set, and `list_ebugs` for its
+   open tickets (rule 3). Write what applies into `<draft>/knowledge-center.md` with each answer's source link; use it
+   like a `rule` / `decision` entry of 6 (cite `[KC: <link>]`), the spec still winning for its feature (an Open
+   question when they disagree). A spec whose status is not `ready_for_rd` is named in `update-plan.md`. Questions
+   the analysis leaves open may go to PM through the server's `ask_question` only when the user asks.
+   **How (user, 2026-11-25, after the Contract Runner's myedit-qa-knowledge skill).** Check that every reply says
+   「📌 專案」 = the feature's product, else discard it. Also search the feature's shared rules (upload, Trimmer,
+   Recent Gen, credits and refunds, My Library) and `list_ebugs` (it lists only agent-registered tickets: 0 is not
+   proof of none). Mark each source's authority in `knowledge-center.md`: an approved spec, an answered question or a
+   person's decision may set an Expected Result; a document written from the code by the schedule (「未經人確認」) or a
+   search summary may not — its rows record what the site does and a difference goes to PM (an Open question such as
+   video-enhancer Q-9); omission from a newer spec neither removes nor keeps a rule (a question). Stage credit data
+   never establishes production charges. Log every call actually made in the draft's append-only `mcp-checkpoints.md`
+   (time, stage, product and connection, environment and build, the calls and their outcome, what stays unresolved);
+   repeat a fresh, stage-specific search at Test Case review, before and after a run, and before each eBug (overlay ›
+   MyEdit), never reusing an earlier stage's answer as this stage's check.
 
 ## Spec agent comparison (only when the user asks; user, 2026-10-27, REQ-036 / REQ-037; replaces REQ-031)
 

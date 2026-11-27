@@ -1,0 +1,14 @@
+{
+ "tr": "TR261022-0018",
+ "build": "11242029",
+ "trNote": "Parent TR TR261022-0018 (MyEdit v5.11 release TR, IF3; parent-tr.txt). Build MyEdit-5.11.0-11242029 from demo version.json (run build-info.json).",
+ "lede": "Filed and corrected 2026-11-25 19:31-19:38 by the user's ebug-writing and create-ebug skills (Contract Runner copies, read in full); filed_bugcodes.json. Corrected in ECL (title, description and the new Figma images only; status, owner, severity and priority untouched; no comments): ISS-VEW-03 = MYE261124P0025 (title in the user's wording; 3 Figma dialog images), ISS-VEW-04 = P0026 (Figma node and image), ISS-VEW-06 = P0027 ([UI] removed: wording bug; Figma node and image). Unchanged: ISS-VEW-07 = P0028, ISS-VEW-08 = P0029. Created: ISS-VEW-09 = P0030, ISS-VEW-12 = P0031, ISS-VEW-13 = P0032, ISS-VEW-14 = P0033, ISS-VEW-15 = P0034, ISS-VEW-16 = P0035. Every ticket passed validate-ebug-form-contract.ts on the live form before Create/Save and on the saved detail after; every new attachment was downloaded back and matched by SHA-256. ISS-VEW-10 is not filed: the user ruled it not a bug (2026-11-26); PM Figma board 9 draws the error dialog dark, like the app. ISS-VEW-01 and 05 stay unfiled (user). Reproduce 3/3 (VEW-04 4/4 actual); Must Fix to RD, [UX] Better Fix to PM, Priority (RD) N/A.",
+ "why": {
+  "ISS-VEW-08": "PM decision: credits are taken before the upload but the upload dialog offers no Cancel.",
+  "ISS-VEW-09": "UI: comparison image (actual left, PM Figma 4 uploading frame right); narrow desktop window at 375 px.",
+  "ISS-VEW-10": "NOT FILED: the user ruled it not a bug (2026-11-26); PM Figma 9 draws the upload error dialog dark, as the app does.",
+  "ISS-VEW-14": "RD: the PM spec and Figma 10 want the red text and a disabled Enhance (corrected from PM, 2026-11-26).",
+  "ISS-VEW-16": "No Knowledge Center rule (KP-029 only); the user gave the go-ahead to file it (2026-11-25).",
+  "ISS-VEW-06": "Wording bug: [UI] removed (ebug-writing); Figma 6 - EDM body node 207:1229 and its image added."
+ }
+}

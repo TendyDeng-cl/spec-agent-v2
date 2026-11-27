@@ -1,0 +1,242 @@
+[
+ {
+  "mode": "Standard",
+  "res": "Original",
+  "fps": "Same as source",
+  "id": "TC-042"
+ },
+ {
+  "mode": "Standard",
+  "res": "Original",
+  "fps": "50 fps",
+  "id": "TC-043"
+ },
+ {
+  "mode": "Standard",
+  "res": "Original",
+  "fps": "60 fps",
+  "id": "TC-044"
+ },
+ {
+  "mode": "Standard",
+  "res": "Original",
+  "fps": "100 fps",
+  "id": "TC-045"
+ },
+ {
+  "mode": "Standard",
+  "res": "Original",
+  "fps": "120 fps",
+  "id": "TC-046"
+ },
+ {
+  "mode": "Standard",
+  "res": "720P",
+  "fps": "Same as source",
+  "id": "TC-047"
+ },
+ {
+  "mode": "Standard",
+  "res": "720P",
+  "fps": "50 fps",
+  "id": "TC-048"
+ },
+ {
+  "mode": "Standard",
+  "res": "720P",
+  "fps": "60 fps",
+  "id": "TC-049"
+ },
+ {
+  "mode": "Standard",
+  "res": "720P",
+  "fps": "100 fps",
+  "id": "TC-050"
+ },
+ {
+  "mode": "Standard",
+  "res": "720P",
+  "fps": "120 fps",
+  "id": "TC-051"
+ },
+ {
+  "mode": "Standard",
+  "res": "1080P",
+  "fps": "Same as source",
+  "id": "TC-052"
+ },
+ {
+  "mode": "Standard",
+  "res": "1080P",
+  "fps": "50 fps",
+  "id": "TC-053"
+ },
+ {
+  "mode": "Standard",
+  "res": "1080P",
+  "fps": "60 fps",
+  "id": "TC-054"
+ },
+ {
+  "mode": "Standard",
+  "res": "1080P",
+  "fps": "100 fps",
+  "id": "TC-055"
+ },
+ {
+  "mode": "Standard",
+  "res": "1080P",
+  "fps": "120 fps",
+  "id": "TC-056"
+ },
+ {
+  "mode": "Standard",
+  "res": "4K",
+  "fps": "Same as source",
+  "id": "TC-057"
+ },
+ {
+  "mode": "Standard",
+  "res": "4K",
+  "fps": "50 fps",
+  "id": "TC-058"
+ },
+ {
+  "mode": "Standard",
+  "res": "4K",
+  "fps": "60 fps",
+  "id": "TC-059"
+ },
+ {
+  "mode": "Standard",
+  "res": "4K",
+  "fps": "100 fps",
+  "id": "TC-060"
+ },
+ {
+  "mode": "Standard",
+  "res": "4K",
+  "fps": "120 fps",
+  "id": "TC-061"
+ },
+ {
+  "mode": "Professional",
+  "res": "Original",
+  "fps": "Same as source",
+  "id": "TC-062"
+ },
+ {
+  "mode": "Professional",
+  "res": "Original",
+  "fps": "50 fps",
+  "id": "TC-063"
+ },
+ {
+  "mode": "Professional",
+  "res": "Original",
+  "fps": "60 fps",
+  "id": "TC-064"
+ },
+ {
+  "mode": "Professional",
+  "res": "Original",
+  "fps": "100 fps",
+  "id": "TC-065"
+ },
+ {
+  "mode": "Professional",
+  "res": "Original",
+  "fps": "120 fps",
+  "id": "TC-066"
+ },
+ {
+  "mode": "Professional",
+  "res": "720P",
+  "fps": "Same as source",
+  "id": "TC-067"
+ },
+ {
+  "mode": "Professional",
+  "res": "720P",
+  "fps": "50 fps",
+  "id": "TC-068"
+ },
+ {
+  "mode": "Professional",
+  "res": "720P",
+  "fps": "60 fps",
+  "id": "TC-069"
+ },
+ {
+  "mode": "Professional",
+  "res": "720P",
+  "fps": "100 fps",
+  "id": "TC-070"
+ },
+ {
+  "mode": "Professional",
+  "res": "720P",
+  "fps": "120 fps",
+  "id": "TC-071"
+ },
+ {
+  "mode": "Professional",
+  "res": "1080P",
+  "fps": "Same as source",
+  "id": "TC-072"
+ },
+ {
+  "mode": "Professional",
+  "res": "1080P",
+  "fps": "50 fps",
+  "id": "TC-073"
+ },
+ {
+  "mode": "Professional",
+  "res": "1080P",
+  "fps": "60 fps",
+  "id": "TC-074"
+ },
+ {
+  "mode": "Professional",
+  "res": "1080P",
+  "fps": "100 fps",
+  "id": "TC-075"
+ },
+ {
+  "mode": "Professional",
+  "res": "1080P",
+  "fps": "120 fps",
+  "id": "TC-076"
+ },
+ {
+  "mode": "Professional",
+  "res": "4K",
+  "fps": "Same as source",
+  "id": "TC-077"
+ },
+ {
+  "mode": "Professional",
+  "res": "4K",
+  "fps": "50 fps",
+  "id": "TC-078"
+ },
+ {
+  "mode": "Professional",
+  "res": "4K",
+  "fps": "60 fps",
+  "id": "TC-079"
+ },
+ {
+  "mode": "Professional",
+  "res": "4K",
+  "fps": "100 fps",
+  "id": "TC-080"
+ },
+ {
+  "mode": "Professional",
+  "res": "4K",
+  "fps": "120 fps",
+  "id": "TC-081"
+ }
+]

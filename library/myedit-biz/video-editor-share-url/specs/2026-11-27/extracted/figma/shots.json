@@ -1,0 +1,32 @@
+{
+  "pm-add-share-option.png": {
+    "board": "pm-add-share-option",
+    "group": null,
+    "hash": null,
+    "captured_at": "2026-11-27T05:12:00.948Z"
+  },
+  "pm-user-a-copy-link.png": {
+    "board": "pm-user-a-copy-link",
+    "group": null,
+    "hash": null,
+    "captured_at": "2026-11-27T05:12:01.140Z"
+  },
+  "pm-user-b-receive.png": {
+    "board": "pm-user-b-receive",
+    "group": null,
+    "hash": null,
+    "captured_at": "2026-11-27T05:12:01.317Z"
+  },
+  "pm-user-c-receive.png": {
+    "board": "pm-user-c-receive",
+    "group": null,
+    "hash": null,
+    "captured_at": "2026-11-27T05:12:01.499Z"
+  },
+  "pm-my-projects-share.png": {
+    "board": "pm-my-projects-share",
+    "group": null,
+    "hash": null,
+    "captured_at": "2026-11-27T05:12:01.683Z"
+  }
+}

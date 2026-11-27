@@ -27,13 +27,14 @@ import { tmpdir } from 'node:os';
 import { basename, join, relative, resolve } from 'node:path';
 import { readRecords } from './lib/csv.ts';
 import { ROOT } from './lib/library.ts';
+import { toJpeg } from './lib/image.ts';
 
 const args = process.argv.slice(2);
 const opt = (n: string) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : undefined; };
 const dirArg = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--drafts');
 if (!dirArg) { console.error('Usage: node scripts/ebug-review.ts <batch dir> [--drafts <file.md>] [--no-check]'); process.exit(2); }
 const DIR = resolve(dirArg);
-const rel = relative(join(ROOT, 'library'), DIR).split('/');
+const rel = relative(join(ROOT, 'library'), DIR).split(/[\\/]/); // Windows paths too
 if (rel.length !== 5 || rel[3] !== 'ebugs') { console.error(`Not a batch folder (library/<product>/<feature>/<platform>/ebugs/<batch>): ${DIR}`); process.exit(2); }
 const [product, feature, platform, , batch] = rel;
 
@@ -65,6 +66,13 @@ if (!args.includes('--no-check') && pv) {
 
 // 3. what the drafts say
 const extra = existsSync(join(DIR, 'review.json')) ? JSON.parse(readFileSync(join(DIR, 'review.json'), 'utf8')) : {};
+// Optional `review.zh-Hant.json` (user, 2026-11-25): Traditional Chinese for what the page says ABOUT the drafts — lede,
+// TR line, captions, each card's title / why / my read, the held and Blocked tables. The eBug text itself (Short
+// Description and description as filed) is never translated. With it the page opens in 中文 and has an English switch.
+// { "lede", "trNote", "cal", "gaps", "related", "entries": { "ISS-…": { "title", "why", "note" } },
+//   "fixes": { "<item prefix before ' — '>": ["item", "outcome"] }, "blocked": { "TC-…": "why" } }
+const zhFile = join(DIR, 'review.zh-Hant.json');
+const zh = existsSync(zhFile) ? JSON.parse(readFileSync(zhFile, 'utf8')) : null;
 const h1 = (md.match(/^# (.+)$/m) || [, `${feature} eBug drafts`])[1]!;
 const line = (label: string) => (md.match(new RegExp(`^\\*\\*${label}[^*]*:\\*\\*(.*)$`, 'm')) || [, ''])[1]!.trim();
 const recheck = line('Recheck'), source = line('Source');
@@ -115,13 +123,15 @@ if (existsSync(filedJson)) {
     bugs: Object.fromEntries(fj.bugs.map((x: any) => [x.iss, { code: x.bugcode, sev: x.severity, belong: x.belong, files: (x.attachments || []).length }])) };
 }
 
-// images as small inline copies (sips on macOS, else the file as is)
+// images as small inline copies (sips on macOS, mupdf elsewhere: lib/image.ts; else the file as is)
 const tmp = mkdtempSync(join(tmpdir(), 'ebug-review-'));
 const thumb = (p: string) => {
   const out = join(tmp, 't.jpg');
-  const r = spawnSync('sips', ['-Z', '900', '-s', 'format', 'jpeg', '-s', 'formatOptions', '60', p, '--out', out], { stdio: 'ignore' });
-  const buf = r.status === 0 && existsSync(out) ? readFileSync(out) : readFileSync(p);
-  const mime = r.status === 0 ? 'image/jpeg' : (/\.png$/i.test(p) ? 'image/png' : 'image/jpeg');
+  const made = process.platform === 'darwin'
+    ? spawnSync('sips', ['-Z', '900', '-s', 'format', 'jpeg', '-s', 'formatOptions', '60', p, '--out', out], { stdio: 'ignore' }).status === 0 && existsSync(out)
+    : toJpeg(p, out, { max: 900, quality: 60 });
+  const buf = made ? readFileSync(out) : readFileSync(p);
+  const mime = made ? 'image/jpeg' : (/\.png$/i.test(p) ? 'image/png' : 'image/jpeg');
   return `data:${mime};base64,${buf.toString('base64')}`;
 };
 const filingDir = join(DIR, 'upload_filing');
@@ -137,7 +147,8 @@ const entries = Object.values(bodies).map(b => {
   const ux = b.ux === true || b.ux === 'True';
   return { n: +b.entry, iss: b.iss, title: b.title, type: ux ? 'UX' : b.type, sev: +b.sev, belong: b.belong, out: +b.out, times: +b.times,
     short: b.short, desc: b.desc, note: b.qa_note, why: extra.why?.[b.iss] || `${pm ? 'PM decision' : 'Defect'}: ${b.title}`,
-    imgs, cases: cases[b.iss] || [], dup: null, related, logs, action: 'file', kind: pm ? 'pm' : 'defect' };
+    imgs, cases: cases[b.iss] || [], dup: null, related, logs, action: 'file', kind: pm ? 'pm' : 'defect',
+    zh: zh?.entries?.[b.iss] ? { ...zh.entries[b.iss], related: extra.related?.[b.iss] ? '' : (zh.related || '') } : null };
 });
 rmSync(tmp, { recursive: true, force: true });
 
@@ -164,6 +175,8 @@ const data = {
   entries: entries.map(({ kind, ...e }) => e), blocked, counts, rechecks: [], fixes, doubts,
   defaults: DEF.found ? { ...DEF, from: `the ${feature} ${platform} batch ${DEF.from} (filed ${DEF.filed_on})`, tr, tr_prev: DEF.tr, version, build } : { found: false },
   filed,
+  zh: zh ? { lede: zh.lede || '', trNote: zh.trNote || '', cal: zh.cal || '', gaps: zh.gaps || '', fixes: zh.fixes || {}, blocked: zh.blocked || {},
+    h1: `${titlePart} — 第 ${round} 輪，版本 ${version}.${build}：${entries.length} 張卡片（產品缺陷 ${defects.length}、待 PM 決定 ${pms.length}）` } : null,
 };
 const fill: Record<string, string> = {
   TITLE: esc(`${titlePart.replace(/\s*\(.*?\)\s*/g, ' ').trim()} ${round} eBugs`),

@@ -1,0 +1,20 @@
+# Requests — myedit/video-enhancer
+
+Every request about this feature's tables or runs, from anyone (AGENTS.md › Request ledger).
+
+| ID | Date | From | Request | Status |
+|---|---|---|---|---|
+| REQ-001 | 2026-11-25 | JackCY Lee | Build the web test-case table for MyEdit Video Enhancer V2 from the PM Figma page (node 10-2). | done (approved v1, 141 rows, 2026-11-25) |
+| REQ-002 | 2026-11-25 | JackCY Lee | MyEdit Figma reads: Design as qa-dm (figma-design), PM and MX as qa1 (figma-pm). | done (product.json › figma.servers) |
+| REQ-003 | 2026-11-25 | JackCY Lee | Read the Knowledge Center for test cases the way the Contract Runner's myedit-qa-knowledge skill does (checkpoints, source authority, audit log). | done (R-068 – R-077, knowledge-center.md, mcp-checkpoints.md) |
+| REQ-004 | 2026-11-25 | JackCY Lee | Answers on the review page: Q-1 errors after upload; Q-2 skip Open in Editor; Q-3/4/6/7 assumptions confirmed; Q-5 demo only; Q-9 leave the code-derived rules out; Q-10 skip. | done (draft 20261125-105747) |
+| REQ-005 | 2026-11-25 | JackCY Lee | Import the Contract Runner domain knowledge (MyEdit + shared guides) and use it for this and later MyEdit cases. | done (KP-001 – KP-075; R-079 – R-106, TC-128 – TC-150) |
+| REQ-006 | 2026-11-25 | JackCY Lee | Answers on the review page: Q-11 Light Mode as assumed; Q-12 UI languages not checked for now. | done (R-103 held) |
+| REQ-007 | 2026-11-25 | JackCY Lee | Redo the R1 eBug drafts with the current MyEdit rules (Contract Runner ebug-writing / create-ebug): Parent TR TR261022-0018, 3/3 default, comparison images from saved sources only, closed attachment list, KC gate again, duplicate audit of the TR in IF3 (read only). | done (13 drafts, 1 held, 3 duplicates; ebugs/2026-11-25-r1/, nothing filed) |
+| REQ-008 | 2026-11-26 | JackCY Lee | 「改下一版表格」: build the next table version with the R1 run's table fixes (report.md › Table fixes; fixtures; O-1, O-8; TC-085 kept, MYE261124P0033). | in progress (draft 20261126-104640) |
+| REQ-009 | 2026-11-26 | JackCY Lee | 「Launcher 不需要新增 Enhanced 標籤」: the Launcher (Home › Popular Tools) Video Enhancer card has no Enhanced tag; only the top menu has it (KC #ec5715b6ac73, replaces #b29e724be991). | in progress (draft 20261126-104640: R-008, TC-002) |
+| REQ-010 | 2026-11-26 | PM Erin Chiu via KC #1c76d4b60c73 | Continue Editing from Video Trimmer with a clip over 8 min: no Trimmer, 「Video Too Long」 in Video Trimmer; Start New opens a new Video Enhancer project, Cancel stays in Video Trimmer (other tools still open the Trimmer in the room). | in progress (draft 20261126-104640: R-040, R-110, TC-088, TC-154) |
+| REQ-011 | 2026-11-26 | JackCY Lee | 「幫我改這支bug」: MYE261124P0033 (ISS-VEW-14, TC-085) was filed to PM as a spec conflict, but the PM spec and Figma 10 agree (Professional over 2:30 after Replace: red text, Enhance disabled); re-file it as an RD bug. | done (title without [UX], Must Fix, Bug Belong RD, Expect from the spec; KF-001 and TC-085 note updated) |
+| REQ-012 | 2026-11-26 | PM via KC (relayed by JackCY Lee) | 「這兩隻pm說知識庫有更新」: the KC now says the result-ready mail body is 「Your Video Enhancer has been generated successfully. …」 (Figma 2026-11-26; MYE261124P0027) and Replace Video over 2:30 in Professional opens the Trimmer (PM 2026-11-26; MYE261124P0033); entry pages do not block over-8:00 videos. Update the draft. | in progress (draft 20261126-104640: R-022, R-037, R-062, R-111; TC-021, TC-085, TC-113; TC-153 fixture available) |
+| REQ-013 | 2026-11-26 | JackCY Lee | 「TC-018 不用測」, 「TC-088：video merger 可以」, 「R-078：上傳完才跳」. | in progress (draft 20261126-104640: TC-018 removed, R-019 not testable; TC-088 from Video Merger; R-078 first kept, then relaxed by REQ-014) |
+| REQ-015 | 2026-11-26 | JackCY Lee | 「Remove all four」: drop R1's remaining Blocked rows TC-024 (drag and drop), TC-026 (Trimmer unavailable), TC-099 (failed generation refund), TC-114 (failure mail). | in progress (draft 20261126-104640: removed; R-023, R-063, R-081 not testable) |

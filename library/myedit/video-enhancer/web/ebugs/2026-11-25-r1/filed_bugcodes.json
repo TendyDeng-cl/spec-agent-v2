@@ -1,0 +1,377 @@
+{
+ "meta": {
+  "creator": "JACKCY_LEE",
+  "creators_read_back": [
+   "JACKCY_LEE"
+  ],
+  "method": "IF3 web form (casebook test Chrome, CDP 9333)",
+  "tag": "AIAgent",
+  "product": "MyEdit",
+  "productId": "274",
+  "project": "(23404)MyEdit 5.11.0 (2026 November)",
+  "tr": "TR261022-0018",
+  "server": "demo",
+  "version": "5.11.0",
+  "build": "11242029",
+  "filed_on": "2026-11-25",
+  "notes": "ISS-VEW-01 and 05 held by the user; ISS-VEW-10 held for the user (Figma contradicts the Expect). Edits changed only title, description and added attachments; status, owner, severity, priority untouched; no comments.",
+  "not_filed": {
+   "ISS-VEW-01": "held by the user",
+   "ISS-VEW-05": "held by the user",
+   "ISS-VEW-10": "held for the user decision (PM Figma 9 draws the dialogs dark)"
+  },
+  "fixture_attachments": {
+   "note": "User 2026-11-26: attach the fixtures used to the [Strapi] copies (Marketing) of P0025/P0026/P0031; only Attachments changed, via the edit form, no comment.",
+   "MYE261124P0038": [
+    "fx-avi.avi",
+    "fx-192x96.mp4",
+    "fx-240fps.mp4",
+    "fx-flac24.mp4"
+   ],
+   "MYE261124P0039": [
+    "fx-2160p.mp4",
+    "fx-av1.mp4",
+    "fx-8m20.mp4",
+    "(fx-10gb.mp4 not attached: 10 GB)"
+   ],
+   "MYE261124P0040": [
+    "fx-2160p.mp4"
+   ]
+  }
+ },
+ "bugs": [
+  {
+   "iss": "ISS-VEW-03",
+   "bugcode": "MYE261124P0025",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0025",
+   "action": "corrected",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Uploading unsupported media does not show error dialog",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_SEO_page_AVI_no_error_dialog.png",
+    "Highlight_SEO_page_below_128px_no_error_dialog.png",
+    "Highlight_SEO_page_over_120fps_no_error_dialog.png",
+    "Highlight_SEO_page_unsupported_audio_no_error_dialog.png",
+    "Figma_Unsupported_File_Format_dialog.png",
+    "Figma_Below_128px_resolution_dialog.png",
+    "Figma_Over_120fps_frame_rate_dialog.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "pre-save edit form (validationStage persisted, BugCode of the ticket)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:33:04.296Z"
+   },
+   "changes": [
+    "Title: replaced by the user's wording \"Uploading unsupported media does not show error dialog\" (was the list of four media).",
+    "Repro step 3: \"a video with an unsupported audio codec\" replaces \"a video whose audio the room rejects\"; \"> then with\" shortened to \">\".",
+    "Result: same meaning, reworded as one plain sentence (\"the AVI upload is ignored and the other three videos open an empty upload box\").",
+    "Note: the whole-board link 235-1137 replaced by the three exact dialog nodes 237-1251, 382-1791, 383-1791; spec item names the audio dialog; now 4 numbered items.",
+    "Attachments: add Figma_Unsupported_File_Format_dialog.png, Figma_Below_128px_resolution_dialog.png, Figma_Over_120fps_frame_rate_dialog.png after the 4 highlights (filed ticket has only the 4 highlights)."
+   ]
+  },
+  {
+   "iss": "ISS-VEW-04",
+   "bugcode": "MYE261124P0026",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0026",
+   "action": "corrected",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Upload error dialogs show the button Got It instead of Got it",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "4/4",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_SEO_File_Size_Too_Large_Got_It.png",
+    "Highlight_SEO_Unsupported_Format_Got_It.png",
+    "Highlight_SEO_Resolution_dialog_Got_It.png",
+    "Figma_Got_it_button_cases_1-3.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "pre-save edit form (validationStage persisted, BugCode of the ticket)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:34:02.667Z"
+   },
+   "changes": [
+    "Title unchanged (no [UI], wording bug).",
+    "Repro step 3: \"> then with\" shortened to \">\".",
+    "Expect Result: \"The button should read Got it.\" (drops \"as in the spec and the room's own error dialogs\").",
+    "Note: board link 235-1137 replaced by the exact Got it button node 237-1269; spec item says every dialog button is Got it.",
+    "Attachments: add Figma_Got_it_button_cases_1-3.png after the 3 highlights."
+   ]
+  },
+  {
+   "iss": "ISS-VEW-06",
+   "bugcode": "MYE261124P0027",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0027",
+   "action": "corrected",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Email): The result-ready email body text differs from the spec",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Ready_mail_body_text.png",
+    "Figma_EDM_result_ready_body_text.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "pre-save edit form (validationStage persisted, BugCode of the ticket)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:34:34.026Z"
+   },
+   "changes": [
+    "Title: [UI] removed (wording/text defect is not a UI defect per ebug-writing): \"MyEdit 5.11.0 - [AIAgent]Video Enhancer(Email): ...\".",
+    "Repro: step 1 (four actions) split into steps 1-2, mailbox becomes step 3.",
+    "Note: board link 95-7417 replaced by the exact body-text node 207-1229.",
+    "Attachments: add Figma_EDM_result_ready_body_text.png after the highlight."
+   ]
+  },
+  {
+   "iss": "ISS-VEW-07",
+   "bugcode": "MYE261124P0028",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0028",
+   "action": "unchanged",
+   "short": "MyEdit 5.11.0 - [AIAgent][CT]Video Editor: Opening a 60 fps Video Enhancer result shows no export-at-30-fps toast",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Video_Editor_no_30fps_toast.png"
+   ],
+   "remote_sha256_verified": false,
+   "validator": "not re-run (ticket not touched; validated when filed earlier today)"
+  },
+  {
+   "iss": "ISS-VEW-08",
+   "bugcode": "MYE261124P0029",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0029",
+   "action": "unchanged",
+   "short": "MyEdit 5.11.0 - [AIAgent][UX]Video Enhancer: The Creating Your Video upload dialog has no Cancel after credits are deducted",
+   "status": "BugNeedReview",
+   "severity": 3,
+   "severity_text": "Better Fix",
+   "priority": 5,
+   "belong": "PM",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Creating_Your_Video_no_Cancel.png"
+   ],
+   "remote_sha256_verified": false,
+   "validator": "not re-run (ticket not touched; validated when filed earlier today)"
+  },
+  {
+   "iss": "ISS-VEW-09",
+   "bugcode": "MYE261124P0030",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0030",
+   "action": "created",
+   "short": "MyEdit 5.11.0 - [AIAgent][UI][Mobile]Video Enhancer: Processing covers the whole page instead of dimming the settings summary",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Mobile_Processing_covers_room.png",
+    "Figma_Mobile_uploading_state.png",
+    "Comparison_Mobile_uploading_state.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:35:16.950Z"
+   }
+  },
+  {
+   "iss": "ISS-VEW-12",
+   "bugcode": "MYE261124P0031",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0031",
+   "action": "created",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): The resolution error dialog says 2560x1440 instead of 1440p",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Resolution_dialog_2560x1440.png",
+    "Figma_Resolution_dialog_1440p.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:35:48.967Z"
+   }
+  },
+  {
+   "iss": "ISS-VEW-13",
+   "bugcode": "MYE261124P0032",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0032",
+   "action": "created",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Trimmer): The Standard trim hint text differs from the spec",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Trimmer_Standard_hint_text.png",
+    "Figma_Trimmer_Standard_hint.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:36:14.516Z"
+   }
+  },
+  {
+   "iss": "ISS-VEW-14",
+   "bugcode": "MYE261124P0033",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0033",
+   "action": "corrected",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Professional): Replace Video over 2:30 opens the Trimmer instead of showing the 2:30 limit text",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Professional_Replace_opens_Trimmer.png",
+    "Figma_Professional_over_2-30_red_text.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:36:39.614Z",
+    "edited": "pass",
+    "edited_stage": "persisted after edit (p3_ISS-VEW-14.snap.json)",
+    "edited_at": "2026-11-26T07:17:25.209Z"
+   },
+   "changes": [
+    "Re-classified 2026-11-26 (user request): the PM spec and PM Figma agree (Professional over 2:30 after Replace Video: red text under Mode, Enhance disabled); the Trimmer route came only from the Knowledge Center code-derived page, so this is an RD bug, not a PM decision.",
+    "Title: [UX] removed.",
+    "Severity: Better Fix -> Must Fix (Priority(RD) N/A kept).",
+    "Bug Belong: PM -> RD (Edit BugBelong, saved 15:15 by JACKCY_LEE).",
+    "Expect Result: replaces the PM-to-decide sentence with the specified behaviour; Note item 2 names the spec rule."
+   ]
+  },
+  {
+   "iss": "ISS-VEW-15",
+   "bugcode": "MYE261124P0034",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0034",
+   "action": "created",
+   "short": "MyEdit 5.11.0 - [AIAgent]Pricing(Compare All Plans): Video Tools lists Video Restoration but not Video Enhancer",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Pricing_Video_Tools_no_Video_Enhancer.png"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:37:09.098Z"
+   }
+  },
+  {
+   "iss": "ISS-VEW-16",
+   "bugcode": "MYE261124P0035",
+   "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0035",
+   "action": "created",
+   "short": "MyEdit 5.11.0 - [AIAgent]Video Enhancer: The preview keeps playing after clicking Enhance",
+   "status": "BugNeedReview",
+   "severity": 2,
+   "severity_text": "Must Fix",
+   "priority": 5,
+   "belong": "RD",
+   "reproduce": "3/3",
+   "bug_source": "QA",
+   "version": "5.11.0",
+   "build": "11242029",
+   "tr": "TR261022-0018",
+   "attachments": [
+    "Highlight_Preview_keeps_playing_behind_Creating_Your_Video.png",
+    "Recording_preview_keeps_playing_after_Enhance.mp4"
+   ],
+   "remote_sha256_verified": true,
+   "validator": {
+    "before": "pass",
+    "before_stage": "draft (live IF3 create form)",
+    "persisted": "pass",
+    "persisted_at": "2026-11-25T11:37:36.196Z"
+   }
+  }
+ ]
+}

@@ -315,7 +315,7 @@ const fmtDay = s => { const m = String(s).match(/(\d{4})-(\d{2})-(\d{2})/); retu
 
 function header() {
   document.documentElement.lang = L === 'zh' ? 'zh-Hant' : 'en';
-  $('h').textContent = t('title')(D.title, D.platform === 'ios' ? 'iOS' : 'Android');
+  $('h').textContent = t('title')(D.title, (D.platform === 'ios' ? 'iOS' : D.platform === 'android' ? 'Android' : D.platform === 'web' ? 'Web' : D.platform));
   $('lead').textContent = t('lead');
   $('sub').innerHTML = t('sub')(D.version, esc(D.spec_folder), D.runs.length, fmtDay(D.runs[0] ?? ''), fmtDay(D.runs.at(-1) ?? ''), D.taps, cbWhenZ(D.built_at, L));
   $('sub').title = D.runs.join('\n');

@@ -1,0 +1,39 @@
+{
+  "built_at": "2026-11-27T05:17:42.792Z",
+  "groups": [
+    "figma-inventory-ds-adjust-main-video.json",
+    "figma-inventory-ds-adjust-photo-pip.json",
+    "figma-inventory-pm-adjust-main-video.json",
+    "figma-inventory-pm-adjust-photo-pip.json",
+    "figma-inventory-pm-photo-crop-rotate.json",
+    "figma-inventory-pm-photo-mask.json"
+  ],
+  "files": {
+    "bAifqou7WA06GYoiXisWXk": {"key":"bAifqou7WA06GYoiXisWXk","page":"667:24564","section":{"id":"667:24564","name":"✅ Main Video Track: Adjust","box":[-37,-463,1945,1473]},"groups":[{"boards":["ds-adjust-main-video"]},{"boards":["ds-adjust-photo-pip","ds-adjust-photo-pip-title"]}],"boards":{"ds-adjust-main-video":{"id":"667:47666","box":[-12,98,1920,912]},"ds-adjust-photo-pip":{"id":"671:28111","box":[0,0,1920,912]},"ds-adjust-photo-pip-title":{"id":"671:28750","box":[-1,-602,1717,268]}}},
+    "3GnLdOiX9G5NH27l1ltqVr": {"key":"3GnLdOiX9G5NH27l1ltqVr","page":"6001:246885","section":{"id":"6534:57257","name":"26' 4/E Fade in & Fade out effect for main video 'audio'","box":[13460,463,10593,1299]},"groups":[{"boards":["pm-adjust-main-video"]},{"boards":["pm-adjust-photo-pip"]},{"boards":["pm-photo-crop-rotate"]},{"boards":["pm-photo-mask"]}],"boards":{"pm-adjust-main-video":{"id":"7270:16640","box":[13460,1932,6548,1669]},"pm-adjust-photo-pip":{"id":"7273:35737","box":[9650,12128,4378,1669]},"pm-photo-crop-rotate":{"id":"6564:25919","box":[9650,6142,19982,2068]},"pm-photo-mask":{"id":"6556:11894","box":[9650,8920,19982,2987]}}}
+  },
+  "screens": [
+    {"id":"667:47666","file":"bAifqou7WA06GYoiXisWXk","board":"ds-adjust-main-video","name":"adjust","box":[-12,98,1920,912],"platform":"web"},
+    {"id":"671:28111","file":"bAifqou7WA06GYoiXisWXk","board":"ds-adjust-photo-pip","name":" Photo as PiP (Adjust)","box":[0,0,1920,912],"platform":"web"},
+    {"id":"671:28750","file":"bAifqou7WA06GYoiXisWXk","board":"ds-adjust-photo-pip-title","name":"Title","box":[-1,-602,1717,268],"platform":"web"},
+    {"id":"7271:16765","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-adjust-main-video","name":"Adjust Panel","box":[13630,2168,380,889],"platform":"ios"},
+    {"id":"7271:16934","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-adjust-main-video","name":"Adjust Panel","box":[15660,2168,380,889],"platform":"ios"},
+    {"id":"6560:23445","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[11817,9115,349,1124],"platform":"ios"},
+    {"id":"6560:23533","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[11817,9120,348,993],"platform":"ios"},
+    {"id":"6560:23693","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[13833,9115,349,1124],"platform":"ios"},
+    {"id":"6560:23781","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[13833,9120,348,993],"platform":"ios"},
+    {"id":"6560:24205","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[15849,9115,349,1124],"platform":"ios"},
+    {"id":"6560:24293","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[15849,9120,348,993],"platform":"ios"},
+    {"id":"6560:24454","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[17865,9115,349,1124],"platform":"ios"},
+    {"id":"6560:24542","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[17865,9120,348,993],"platform":"ios"},
+    {"id":"6560:23940","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[21894,9129,349,1124],"platform":"ios"},
+    {"id":"6560:24028","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[21894,9134,348,993],"platform":"ios"},
+    {"id":"6564:25581","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533260","box":[19884,9115,349,1124],"platform":"ios"},
+    {"id":"6564:25669","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-photo-mask","name":"Frame 758533017","box":[19884,9120,348,993],"platform":"ios"}
+  ],
+  "controls": [
+    {"id":"K-d303bd","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-adjust-main-video","name":"Button / Reset (disabled)","label":"Reset","kind":"button","box":[16,829,348,36],"screens":["7271:16765"],"node":"7272:16785","parent":null,"group":"K-a42876","platforms":["android","ios"],"set":false},
+    {"id":"K-14743b","file":"3GnLdOiX9G5NH27l1ltqVr","board":"pm-adjust-main-video","name":"Button / Reset (enabled)","label":"Reset","kind":"button","box":[16,829,348,36],"screens":["7271:16934"],"node":"7272:16787","parent":null,"group":"K-a42876","platforms":["android","ios"],"set":false}
+  ],
+  "arrows": []
+}

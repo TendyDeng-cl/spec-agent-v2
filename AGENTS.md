@@ -7,7 +7,7 @@ table; their casebook overlay (`ebug-tr-filer/references/casebook-overlay.md`) c
 `.claude/skills/`, then run `node scripts/sync-skills.ts` to copy them to `.codex/skills/` (`check.ts` warns when the
 two differ).
 
-- The approved table for a feature is `library/<product>/<feature>/<ios|android>/cases.csv`. Treat it as the correct answer
+- The approved table for a feature is `library/<product>/<feature>/<ios|android|web>/cases.csv`. Treat it as the correct answer
   for that feature; change it only through the review page's Save or an explicit user request.
 - Keep this repo independent from the exploration-test folder, the spec agent repo and other QA tools. (One user-approved
   exception, 2026-11-03: a one-time copy of the exploration knowledge bases into `knowledge/sources/`, see below.)
@@ -110,6 +110,10 @@ lines; put the full rule in the skill or reference file that applies it and poin
   README Setup 5. Figma is not a gate (user, 2026-10-30): without the sign-ins an analysis runs **PDF-only**
   (`extracted/figma-pending.json`) and a machine with them catches up later (`reading-the-spec.md`, *No Figma access*). Quota is small: bulk reads per board group, changes found by fingerprint (`figma-check.ts`), every
   read committed (`reading-the-spec.md` step 10).
+- **MyEdit Figma account (user, 2026-11-25; PM back to qa1 the same day).** MyEdit and MyEdit Biz follow the usual
+  split: Design through `figma-design` (qa-dm), PM and MX through `figma-pm` (qa1). qa-dm alone was tried first, but its
+  View seat in PM Workspace hit Figma's call limit after two reads of the MyEdit PM file (`product.json` ›
+  `figma.servers`, `reading-the-spec.md` step 10).
 - **Figma reads by plan, call, save (user, 2026-11-05).** Inventory re-reads go `figma-check.ts --plan` → the printed
   calls, one at a time per server, with their exact description → `--save` (replies copied from the transcripts,
   never retyped; leftovers re-packed) until nothing is left; a read stops at its time budget and keeps what it read
@@ -244,6 +248,33 @@ lines; put the full rule in the skill or reference file that applies it and poin
   (`analysis.md` pass 10b); Figma-only board text is compared exactly (`figma-text.ts`) (`SKILL.md` step 0).
 - **Both platforms by default (user, 2026-11-04).** A feature gets an iOS and an Android table unless the user names
   one platform (`SKILL.md` step 0).
+- **Websites are platform `web` (user, 2026-11-24).** MyEdit (`myedit/…`) and MyEdit Biz (`myedit-biz/…`) tables are
+  `web/`, run in a real Chrome by `scripts/device-web.ts` (playwright-core over the DevTools port, one shared Chrome
+  and profile per port, sign-in by the user); environments come from `product.json` › `web.base_urls`
+  (`spec-casebook/references/run-web.md`).
+- **Web test accounts (user, 2026-11-25).** One Chrome profile and port per test account (`scripts/web-account.ts`),
+  signed in once by the user; runs switch with `device-web.ts <run> account NAME`, never by signing out and in
+  (`run-web.md`).
+- **Consent dialogs on test accounts (user, 2026-11-26).** The app's data-processing and consent dialogs on a test
+  account or test phone (MyEdit 「Allow Data Processing for Better Experience」: tick the box, Continue; cookie
+  banners) are accepted by the agent in any case or task, without asking; passwords and purchases keep their rules.
+- **MyEdit web flow (user, 2026-11-25).** MyEdit / MyEdit Biz eBugs follow the user's `ebug-writing` and `create-ebug` skills as kept in the Contract Runner (`qadm-myedit-web-spec-contract-runner-agent/.codex/skills/`, read directly, user 2026-11-25: wording and Parent TR lookup), not
+  overlay rules 1–3 and 5 (overlay › *MyEdit and MyEdit Biz*; `check_ebug_format.py --product MyEdit`); their
+  analyses also read the Knowledge Center MCP (`analysis.md` standing input 7); credits are read with
+  `device-web.ts credits` and the build from `version.json` (`run-web.md`). OCR and page thumbnails work on
+  Windows too (`lib/ocr.ts`, `lib/image.ts`; README › Windows OCR languages).
+- **MyEdit bugs: both skills, always (user, 2026-11-25).** Before drafting and before filing any MyEdit / MyEdit Biz
+  eBug, read and apply `ebug-writing` and `create-ebug` in full (Figma images fetched, comparison image for UI bugs,
+  draft shown before Create, their `validate-ebug-form-contract.ts` gate); every subagent brief repeats this. The
+  same goes for the bug drafts in run reports and review pages (`ebugs.md`, user 2026-11-25). The
+  PowerDirector eBug rules above do not apply to them (overlay › *MyEdit and MyEdit Biz*).
+- **MyEdit SEO bugs: `[Strapi]`, Marketing (user, 2026-11-26).** Every MyEdit / MyEdit Biz SEO bug has `[Strapi]`
+  right after the source tag and Bug belongs to `Marketing`, over the RD / PC-Doc / UX → PM owners (`ebug-writing`
+  › form-value contract; `validate-ebug-form-contract.ts` fails one without both).
+- **MyEdit domain knowledge (user, 2026-11-25).** The Contract Runner's MyEdit domain knowledge and shared guides were
+  imported once as `library/myedit/knowledge/` KP-001 – KP-075 (sources local in `sources/2026-11-25-contract-runner-domain/`,
+  the MyEdit Biz part kept there for later); every MyEdit analysis applies them through Standing inputs 6 (cited or n/a
+  under *Domain rules*), the spec winning for its tool's values.
 - **A Figma link is the spec (user, 2026-11-04).** When the user sends a Figma link and no PDF, read the spec from
   Figma directly; do not ask for a PDF export (`reading-the-spec.md`, *Figma-only spec*).
 - **Build downloads (user, 2026-11-05).** The build under test from a TR's OneDrive folder is always downloaded
@@ -330,6 +361,10 @@ lines; put the full rule in the skill or reference file that applies it and poin
   drafts by `node scripts/ebug-review.ts <batch dir>` from `scripts/ebug-review-page.tpl` (per-batch wording in an
   optional `review.json`), never by a batch's own generator, and handed over by opening it in the browser pane and
   sending the file (`spec-casebook/references/ebugs.md` step 4).
+- **Reports in Chinese (user, 2026-11-26).** Every run ends with `report.md` and `report.zh-Hant.md`, the Chinese one
+  also as HTML (`node scripts/report-html.ts`, to `comparisons/<date>_<round>-report.html`); every eBug review page
+  opens in 中文 with an English switch, from the batch's `review.zh-Hant.json` (the eBug text itself stays English)
+  (`run.md` phase wrap-up, `ebugs.md` step 4).
 - **Test purchases in the app (user, 2026-11-19).** The agent may always buy the Pro test subscription and credit
   packs in PowerDirector on the test account, with no separate go-ahead, as long as the Google Play sheet shows a test
   purchase (license tester, 「Test card, always approves」); a sheet showing a real payment method stops for the user

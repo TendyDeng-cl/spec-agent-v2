@@ -35,7 +35,7 @@ import { createGzip, gzipSync } from 'node:zlib';
 import { hasDraft, listBoards, newestPlan, openDrafts } from './lib/boards.ts';
 import { trPending } from './lib/tr-info.ts';
 import { housekeeping } from './lib/housekeeping.ts';
-import { LIBRARY, PLATFORMS, arg, assertIds, readManifest, tableDir } from './lib/library.ts';
+import { LIBRARY, PLATFORMS, arg, assertIds, platformName, readManifest, tableDir } from './lib/library.ts';
 import { isLocal } from './lib/local.ts';
 import { COOKIE, attempts, hasSession, makePasscode, passcodeMatches, safeNext, sessionOf } from './lib/passcode.ts';
 import { withShared } from './lib/page-shared.ts';
@@ -201,7 +201,7 @@ for (const s of ['SIGINT', 'SIGTERM', 'SIGHUP'] as const) process.once(s, () => 
 const esc = (s: string) => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
 const tx = (en: string, zh: string) => `<span data-en="${esc(en)}" data-zh="${esc(zh)}">${esc(en)}</span>`;
 const tabName = (d: Def, r: Ref) => d.id === 'review' ? tx(`${d.label}${reviewOf(r)}`, `${d.zh}${reviewOf(r).replace('draft', '草稿')}`) : tx(d.label, d.zh);
-const platformName = (p: string) => p === 'ios' ? 'iOS' : 'Android';
+
 // a tab is a link unless the page cannot open: no run plan yet, or it failed the last time it was started
 // (a "no run plan" error left from an earlier visit no longer counts once the plan is there)
 const problem = (d: Def, r: Ref) => (d.id === 'plan' && !d.argv(r) ? d.why : undefined) ?? (({ proc, error }) => proc || error === d.why ? undefined : error)(childOf(d, r));
@@ -355,7 +355,7 @@ function sendText(req: import('node:http').IncomingMessage, res: import('node:ht
 const html200 = (res: import('node:http').ServerResponse, status: number) => res.writeHead(status, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
 const notFound = (req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse, what: string) => sendText(req, res, 404, { 'content-type': 'text/html; charset=utf-8' },
   `<!doctype html><meta charset="utf-8"><title>Not found</title><body style="font:15px system-ui;padding:24px"><p>${esc(what)}</p><p><a href="/">All features</a></p></body>`);
-const BOARD = /^\/([a-z0-9-]+\/[a-z0-9-]+)\/(ios|android)(?:\/draft\/([\w.-]+))?(?:\/([a-z]+)(\/.*)?|\/)?$/;
+const BOARD = /^\/([a-z0-9-]+\/[a-z0-9-]+)\/(ios|android|web)(?:\/draft\/([\w.-]+))?(?:\/([a-z]+)(\/.*)?|\/)?$/;
 // Other computers sign in with the passcode; everything but the sign-in itself waits behind it. Local requests skip it.
 async function signIn(req: import('node:http').IncomingMessage, res: import('node:http').ServerResponse) {
   const who = String(req.socket.remoteAddress);

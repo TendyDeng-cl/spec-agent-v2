@@ -5,7 +5,7 @@ description: Turn a CyberLink product feature spec (PowerDirector, PhotoDirector
 
 # Spec casebook
 
-Produces one reviewed test-case table per **feature × platform** (`ios`, `android`) from the feature's spec files.
+Produces one reviewed test-case table per **feature × platform** (`ios`, `android`, `web`) from the feature's spec files.
 Everything for a feature lives in `library/<product>/<feature>/`; `library/<product>/product.json` holds the
 product's app ids and eBug product names:
 
@@ -14,7 +14,7 @@ library/<product>/<feature>/
   README.md            generated index (spec sets, platform tables, versions)
   specs/<date>/        one folder per spec set received: original files (git-ignored), spec-set.json,
                        extracted/ (text and notes pulled from the spec; renders in extracted/regions/ are local)
-  ios/ | android/      cases.csv (approved table, source of truth), cases.xlsx / cases.html (generated views),
+  ios/ | android/ | web/  cases.csv (approved table, source of truth), cases.xlsx / cases.html (generated views),
                        requirements.md, manifest.json, history/, drafts/<id>/,
                        runs/<date>/ (evidence from running the table), ebugs/<date>/ (eBug drafts and filing)
 ```
@@ -100,8 +100,9 @@ that showed it). No comparison runs during an analysis or before a proposal.
 - Feature ID: `<product>/<feature>`, both kebab-case, e.g. `pdr/ai-mini-drama` (product ids: the folders under
   `library/`; a new product also needs `library/<product>/product.json`, README › Adding a product). Reuse an existing ID from
   `node scripts/status.ts` when the feature is already in the library.
-- Platform: `ios` or `android`. Each platform has its own table, reviewed and approved separately. **When the user
-  names no platform, do both (user, 2026-11-04)**; do not ask. For both, run the whole workflow once per platform (the second draft may start from the first platform's
+- Platform: `ios`, `android` or `web`. Each platform has its own table, reviewed and approved separately. A website
+  (MyEdit `myedit/…`, MyEdit Biz `myedit-biz/…`) is `web` only, run in Chrome (`references/run-web.md`, user
+  2026-11-24). **For a phone app, when the user names no platform, do both iOS and Android (user, 2026-11-04)**; do not ask. For both, run the whole workflow once per platform (the second draft may start from the first platform's
   rows, adjusted for platform differences the spec states). Then read every Precondition and Action against the second
   platform's controls (its debug menu, log, tier switch, install path, system settings): a step that names a control the
   platform lacks is rewritten or parked, never copied (2026-10-27: 13 Android rows named iOS Pink, Developer Server or
@@ -263,12 +264,13 @@ CSV rather than asking the user to open the page. Never edit an approved `cases.
 | `references/formats.md` | Writing `requirements.md`, `draft.csv` / `cases.csv`, `update-plan.md` |
 | `references/run.md` | Any on-device run segment, phase wrap-up or run plan (iPhone and shared run rules) |
 | `references/run-android.md` | Android runs, together with `run.md` |
+| `references/run-web.md` | Website runs (MyEdit…) in Chrome, together with `run.md` |
 | `references/ebugs.md` | Turning run failures into eBug drafts, the review page and filing |
 | `references/mui.md` | The MUI test: languages, translation sheet and tags, MUI rows, running them, MUI eBug tags |
 | `references/page-checks.md` | The formatting check every HTML page or artifact gets before hand-over |
 
 Paths are relative to this skill's folder (`.claude/skills/spec-casebook/`, Codex: `.codex/skills/spec-casebook/`).
-A segment subagent reads this file and `run.md` (plus `run-android.md` on Android), not the analysis references.
+A segment subagent reads this file and `run.md` (plus `run-android.md` on Android, `run-web.md` on the web), not the analysis references.
 
 ## Running cases and filing eBugs
 

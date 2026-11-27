@@ -1,0 +1,22 @@
+{
+  "feature": "myedit-biz/video-editor-share-url",
+  "platform": "web",
+  "title": "Video Editor: Share Project URL",
+  "draft": "20261127-131008",
+  "created_at": "2026-11-27T05:10:08.233Z",
+  "based_on_version": null,
+  "spec_folder": "specs/2026-11-27",
+  "spec_files": [
+    {
+      "name": "Video Editor Share Project URL - KC spec 2026-11-11.md",
+      "sha256": "3d32b52d4c3e9fc1b5199b263df768402d350bd673a97e66a7388bff6c598e61",
+      "bytes": 7759
+    },
+    {
+      "name": "Video Editor Share Project URL - PM Figma 6531-156549.md",
+      "sha256": "45cdc73efe341dc193cf065c7728f8096dcc5740d64f8b4b1c7eb27190255767",
+      "bytes": 6483
+    }
+  ],
+  "spec_set_sha256": "f9acad7160a30c6e67ab842122057aae772b9974c9b301204cb4b0349573560d"
+}

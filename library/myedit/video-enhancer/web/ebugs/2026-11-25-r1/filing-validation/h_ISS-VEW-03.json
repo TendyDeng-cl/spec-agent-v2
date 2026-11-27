@@ -1,0 +1,51 @@
+[
+ {
+  "name": "Highlight_SEO_page_AVI_no_error_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 158749,
+  "sha": "e2e7624d43725464279079db941ab105ff0dd33b29e6f30d60ca59dddae02711"
+ },
+ {
+  "name": "Highlight_SEO_page_below_128px_no_error_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 400688,
+  "sha": "b8bc160833eb952b442522d5d0a92ca384a24197d8f4a911f85b8582b43efd53"
+ },
+ {
+  "name": "Highlight_SEO_page_over_120fps_no_error_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 400855,
+  "sha": "3f6979699ead24bc7dd03194f10697c46776d3812a4f46ec3348312c22a943cd"
+ },
+ {
+  "name": "Highlight_SEO_page_unsupported_audio_no_error_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 114747,
+  "sha": "36c0551ba80d7cc983c35cb98dfab46069e259dc90baafd3b90a75feba3576cd"
+ },
+ {
+  "name": "Figma_Unsupported_File_Format_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 21336,
+  "sha": "2c609c662b759b528aedff945605660e4125158a40f6305e895261a4f0430f1c"
+ },
+ {
+  "name": "Figma_Below_128px_resolution_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 22861,
+  "sha": "0cf6e005274a751a5264d3fb74b1e061e2603191f95a9c16db30dd3674d68d47"
+ },
+ {
+  "name": "Figma_Over_120fps_frame_rate_dialog.png",
+  "status": 200,
+  "ct": "image/png",
+  "len": 23812,
+  "sha": "3af42bbcdd069771e1f98d591788886df3821974bd6235f1046f86ee0a9ca499"
+ }
+]

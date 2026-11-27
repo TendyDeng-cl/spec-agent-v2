@@ -1,0 +1,68 @@
+{
+  "files": {
+    "pm": {
+      "file": "3GnLdOiX9G5NH27l1ltqVr",
+      "name": "[MyEdit] Video Editor",
+      "page": "6001:246887",
+      "page_name": "✅Photo (as PiP)",
+      "pages": {
+        "6001:246885": "✅ Main Video (board 7270:16640)",
+        "6001:246887": "✅Photo (as PiP) (boards 7273:35737, 6556:11894, 6564:25919)"
+      },
+      "server": "figma-pm",
+      "pdf": null,
+      "fileKey": "3GnLdOiX9G5NH27l1ltqVr"
+    },
+    "design": {
+      "file": "bAifqou7WA06GYoiXisWXk",
+      "name": "Video-Editor (MyEdit Biz)",
+      "page": "667:24564",
+      "pages": {
+        "667:24564": "✅ Main Video Track: Adjust (frame 667:47666)",
+        "667:24563": "✅ Photo as PiP (Adjust) (frames 671:28111, 671:28750)"
+      },
+      "server": "figma-design",
+      "pdf": null,
+      "fileKey": "bAifqou7WA06GYoiXisWXk"
+    }
+  },
+  "frames": [
+    {
+      "label": "26' 12/E Adjust - Main Video",
+      "node": "7270:16640",
+      "in_pdf": false,
+      "read": "pm-adjust-main-video (Figma text layer); R-001 – R-040"
+    },
+    {
+      "label": "26' 12/E Adjust - Photo PiP",
+      "node": "7273:35737",
+      "in_pdf": false,
+      "read": "pm-adjust-photo-pip (Figma text layer); R-041 – R-053"
+    },
+    {
+      "label": "26' 11/E Photo Mask",
+      "node": "6556:11894",
+      "in_pdf": false,
+      "read": "pm-photo-mask (Figma text layer); R-054 – R-080"
+    },
+    {
+      "label": "26' 11/E Photo Mask › 20261019 Update",
+      "node": "6556:11894",
+      "in_pdf": false,
+      "read": "pm-photo-mask; the playhead move is superseded by the KC Mask spec of 2026-11-25 (R-058, Q-2); the PiP fade rule is R-060"
+    },
+    {
+      "label": "26' 11/E Photo Crop & Rotate(P2)",
+      "node": "6564:25919",
+      "in_pdf": false,
+      "read": "pm-photo-crop-rotate (Figma text layer); R-081 – R-110"
+    },
+    {
+      "label": "26' 11/E Photo Crop & Rotate(P2) › 20261019 Update",
+      "node": "6564:25919",
+      "in_pdf": false,
+      "read": "pm-photo-crop-rotate; R-085, R-086, R-087"
+    }
+  ],
+  "note": "Figma-only spec set: no PDF, so every frame is Figma-only (in_pdf false). The PM file draws the four boards on two pages. The MyEdit Biz Design draws only the two Adjust boards; Mask and Crop & Rotate have no Biz Design yet (UJ, due 2026-11-27)."
+}

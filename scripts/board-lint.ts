@@ -20,6 +20,7 @@
 // error handling, top mockups) are too small to read reliably: only their arrows are checked. Exit 0 none, 10 warnings.
 import { spawnSync } from 'node:child_process';
 import { PYTHON } from './lib/python.ts';
+import { ocrTiles } from './lib/ocr.ts';
 import { existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -80,7 +81,7 @@ print(json.dumps(tiles))`, src, dir], { encoding: 'utf8' });
     if (cut.status !== 0) { console.error(`Cannot cut ${png} into tiles (python3 with Pillow needed): ${cut.stderr.trim().split('\n').pop()}`); return []; }
     const tiles = JSON.parse(cut.stdout).map(([file, px, py]: [string, number, number]) => ({ file, x: box[0] + px / scale, y: box[1] + py / scale, w: 0, h: 0 }));
     writeFileSync(join(dir, 'index.json'), JSON.stringify({ scale, tiles }));
-    const r = spawnSync('swift', [join(ROOT, 'scripts', 'ocr-tiles.swift'), dir], { encoding: 'utf8' });
+    const r = ocrTiles(dir);
     const found: any[] = r.status === 0 && existsSync(join(dir, 'ocr.json')) ? read(join(dir, 'ocr.json')).flatMap((t: any) => t.lines) : [];
     rmSync(dir, { recursive: true, force: true });
     const res = { lines: found.filter((l, i) => !found.slice(0, i).some(k => k.text === l.text && Math.abs(k.x - l.x) <= 8 && Math.abs(k.y - l.y) <= 8)) };

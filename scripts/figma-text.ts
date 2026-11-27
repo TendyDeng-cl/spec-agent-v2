@@ -61,7 +61,7 @@ if (has('accept')) {
 // spec notes of the approved tables (their draft's annotation-trace.json; a direct edit's version has no draft folder,
 // so the newest version that has one)
 const blocks: { board: string; text: string; reqs: string[] }[] = [];
-for (const platform of ['ios', 'android']) {
+for (const platform of ['ios', 'android', 'web']) {
   const m = readManifest(feature, platform); if (!m) continue;
   const p = [m.draft, ...[...(m.history ?? [])].reverse().map((h: any) => h.draft)].map(d => join(draftsDir(feature, platform), d ?? '', 'annotation-trace.json')).find(existsSync);
   if (p) for (const b of read(p).blocks) blocks.push({ board: b.board, text: norm(b.text ?? ''), reqs: String(b.trace ?? '').match(/R-\d+/g) ?? [] });

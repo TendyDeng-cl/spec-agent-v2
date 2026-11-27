@@ -1,0 +1,623 @@
+{
+  "spec_folder": "specs/2026-11-27",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "kc-spec@0,800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 800,
+      "low": false,
+      "text": "§ 分享者（User A）取得連結",
+      "trace": "label: heading 分享者（User A）取得連結"
+    },
+    {
+      "id": "kc-spec@0,1000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 1000,
+      "low": false,
+      "text": "• Video Editor 右上角 — 原本的 Export 按鈕改成 Export & Share",
+      "trace": "R-001"
+    },
+    {
+      "id": "kc-spec@0,1200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 1200,
+      "low": false,
+      "text": "• 點 Export & Share — 跳出視窗，上半部是 Share（複製連結），下半部是下載影片（Export Format: mp4，按鈕 Cancel／Download）",
+      "trace": "R-002, R-007, R-008"
+    },
+    {
+      "id": "kc-spec@0,1400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 1400,
+      "low": false,
+      "text": "• Share 區說明文字 — 「Share access to this project. Anyone with the link can sign in to view it. Premium users can copy and edit the project.」",
+      "trace": "R-003, Q-1"
+    },
+    {
+      "id": "kc-spec@0,1600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 1600,
+      "low": false,
+      "text": "• 滑鼠移到網址上 — 用 tooltip 顯示完整網址",
+      "trace": "R-004"
+    },
+    {
+      "id": "kc-spec@0,1800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 1800,
+      "low": false,
+      "text": "• 點複製 icon — 複製連結，顯示 tooltip「Copied」；之後 A 自行把連結分享給別人",
+      "trace": "R-005"
+    },
+    {
+      "id": "kc-spec@0,2000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 2000,
+      "low": false,
+      "text": "• My Projects › Video 卡片「更多」選單 — 顯示 Share 選項；選單為 Duplicate／Share／Rename／Delete（不含 Download，要下載需開啟專案用 Export & Share）",
+      "trace": "R-012"
+    },
+    {
+      "id": "kc-spec@0,2200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 2200,
+      "low": false,
+      "text": "• 在 My Projects 點 Share — 收起「更多」選單，顯示 toast「Share link copied. You can now share the link.」",
+      "trace": "R-013, R-014"
+    },
+    {
+      "id": "kc-spec@0,2400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 2400,
+      "low": false,
+      "text": "• 網址格式：沿用 MyEdit Biz 現有的分享網址格式 `{網站}/{工具路徑}/share/{token}`，跟 Biz 的 Photo Editor（設計專案）分享連結一致。",
+      "trace": "R-006, Q-2"
+    },
+    {
+      "id": "kc-spec@0,2800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 2800,
+      "low": false,
+      "text": "§ 分享規則",
+      "trace": "label: heading 分享規則"
+    },
+    {
+      "id": "kc-spec@0,3000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 3000,
+      "low": false,
+      "text": "• 誰能分享 — 所有登入的使用者都能分享自己的專案，不分方案；方案門檻只在接收者建立副本時",
+      "trace": "R-010, R-060"
+    },
+    {
+      "id": "kc-spec@0,3200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 3200,
+      "low": false,
+      "text": "• 分享者開自己的連結 — 直接進入可編輯的編輯器，不是唯讀畫面",
+      "trace": "R-015"
+    },
+    {
+      "id": "kc-spec@0,3400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 3400,
+      "low": false,
+      "text": "• 接收者看到的版本 — 永遠是專案最新版；A 分享後繼續修改，B 再開連結看到修改後的內容",
+      "trace": "R-031"
+    },
+    {
+      "id": "kc-spec@0,3600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 3600,
+      "low": false,
+      "text": "• 停止分享 — 目前沒有讓連結失效的方法（沒有「停止分享」入口）",
+      "trace": "R-011"
+    },
+    {
+      "id": "kc-spec@0,3800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 3800,
+      "low": false,
+      "text": "• 分享者刪除專案後 B 開連結 — 見下方「分享者刪除專案後」",
+      "trace": "R-049, R-051, R-052"
+    },
+    {
+      "id": "kc-spec@0,4200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 4200,
+      "low": false,
+      "text": "§ 分享者刪除專案後",
+      "trace": "label: heading 分享者刪除專案後"
+    },
+    {
+      "id": "kc-spec@0,4400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 4400,
+      "low": false,
+      "text": "• 已登入的接收者開連結 — 導到 My Projects 的 Video 分類，並跳一次性提示「The shared project has been deleted and is no longer available.」（zh_TW：分享的專案已被刪除，無法再使用。）",
+      "trace": "R-049, R-050"
+    },
+    {
+      "id": "kc-spec@0,4600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 4600,
+      "low": false,
+      "text": "• 未登入的接收者開連結 — 導回 Video Editor 入口頁，沒有提示",
+      "trace": "R-051"
+    },
+    {
+      "id": "kc-spec@0,4800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 4800,
+      "low": false,
+      "text": "• 接收者已在分享頁時專案被刪除 — 約每 5 秒偵測一次；頂部出現不能關閉的同一則提示，並隱藏 Create Copy of Project",
+      "trace": "R-052"
+    },
+    {
+      "id": "kc-spec@0,5000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 5000,
+      "low": false,
+      "text": "• 取不到專案（連結無效、網路失敗、伺服器錯誤） — 一律當成「已刪除」，不區分原因",
+      "trace": "R-053, R-054"
+    },
+    {
+      "id": "kc-spec@0,5200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 5200,
+      "low": false,
+      "text": "• 專案載入失敗（非刪除） — 提示「The project may have been updated. Try copying the link again.」（zh_TW：專案可能已更新。請嘗試重新複製連結。），同樣導回 My Projects",
+      "trace": "R-055, Q-4"
+    },
+    {
+      "id": "kc-spec@0,5400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 5400,
+      "low": false,
+      "text": "• My Projects 頁已有上面兩則提示文字，見 `myedit-biz/product-rules/derived-my-projects-page.md`。",
+      "trace": "R-049, R-055"
+    },
+    {
+      "id": "kc-spec@0,5800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 5800,
+      "low": false,
+      "text": "§ 手機與小螢幕開啟分享連結",
+      "trace": "label: heading 手機與小螢幕開啟分享連結"
+    },
+    {
+      "id": "kc-spec@0,6000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 6000,
+      "low": false,
+      "text": "• 在手機、平板，或視窗寬度 1200 px 以下開分享連結 — 照 MyEdit Biz 全站規則，整個畫面被小螢幕遮罩蓋住，不能操作",
+      "trace": "R-056, R-057, R-058"
+    },
+    {
+      "id": "kc-spec@0,6200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 6200,
+      "low": false,
+      "text": "• 遮罩文字（手機／平板） — 「This service is only available on larger screens. Please switch to a desktop for full access.」",
+      "trace": "R-058"
+    },
+    {
+      "id": "kc-spec@0,6400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 6400,
+      "low": false,
+      "text": "• 遮罩文字（電腦上把視窗縮小） — 「Your screen size is too small for this feature. Please adjust your browser window to a larger size for the best experience.」",
+      "trace": "R-056"
+    },
+    {
+      "id": "kc-spec@0,6600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 6600,
+      "low": false,
+      "text": "• 全站規則見 `myedit-biz/product-rules/derived-small-screen-mask.md`。",
+      "trace": "R-056, R-058, Q-5"
+    },
+    {
+      "id": "kc-spec@0,7000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 7000,
+      "low": false,
+      "text": "§ 接收者開啟連結（User B、User C 共通）",
+      "trace": "label: heading 接收者開啟連結（User B、User C 共通）"
+    },
+    {
+      "id": "kc-spec@0,7200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 7200,
+      "low": false,
+      "text": "• 未登入開啟連結 — 先跳 Sign in 對話框要求登入",
+      "trace": "R-016, Q-6"
+    },
+    {
+      "id": "kc-spec@0,7400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 7400,
+      "low": false,
+      "text": "• 已登入開啟連結 — 直接進入被分享專案的檢視畫面（不是一打開就自動建立副本）",
+      "trace": "R-018"
+    },
+    {
+      "id": "kc-spec@0,7600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 7600,
+      "low": false,
+      "text": "• 檢視畫面可做的事 — Play／Pause／Stop、拖曳播放頭跳轉、全螢幕播放、點 top menu 與 user profile",
+      "trace": "R-019, R-020, R-021, R-022"
+    },
+    {
+      "id": "kc-spec@0,7800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 7800,
+      "low": false,
+      "text": "• 左側面板、Layer 面板 — 預設收合且 disabled",
+      "trace": "R-023, R-024"
+    },
+    {
+      "id": "kc-spec@0,8000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 8000,
+      "low": false,
+      "text": "• 時間軸上的物件、zoom in／out、undo／redo、Export & Share — disabled",
+      "trace": "R-025, R-026, R-027, R-028"
+    },
+    {
+      "id": "kc-spec@0,8200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 8200,
+      "low": false,
+      "text": "• 專案名稱 — 維持原本顏色，但不能點名稱改名，不顯示 Cloud 圖示",
+      "trace": "R-029"
+    },
+    {
+      "id": "kc-spec@0,8400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 8400,
+      "low": false,
+      "text": "• 畫面下方 — 顯示「Create Copy of Project」按鈕",
+      "trace": "R-030"
+    },
+    {
+      "id": "kc-spec@0,8800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 8800,
+      "low": false,
+      "text": "§ 點 Create Copy of Project",
+      "trace": "label: heading 點 Create Copy of Project"
+    },
+    {
+      "id": "kc-spec@0,9000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 9000,
+      "low": false,
+      "text": "• Free — 跳 Limitation popup「Your account has limited access to copying projects. Upgrade to unlock this feature for seamless project management.」（圖片用 Video Editor 的 cover image）；按 Upgrade now 跳 sales popup",
+      "trace": "R-033, R-034"
+    },
+    {
+      "id": "kc-spec@0,9200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 9200,
+      "low": false,
+      "text": "• Pro — 跳確認框「Copy Project to Start Editing」：「You’re about to copy this project as a template for your own use. The original project will remain unchanged. Once copied, you can edit it freely.」，按鈕 Cancel／Copy",
+      "trace": "R-037, R-038"
+    },
+    {
+      "id": "kc-spec@0,9400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 9400,
+      "low": false,
+      "text": "• Pro 按 Copy — 在同一個分頁複製專案，建立期間顯示 loading 對話框；建立完成後進入可編輯的編輯器，專案名稱後面加上「_copy」",
+      "trace": "R-039, R-041"
+    },
+    {
+      "id": "kc-spec@0,9600",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 9600,
+      "low": false,
+      "text": "• 專案沒有任何片段 — 不顯示 Create Copy of Project 按鈕",
+      "trace": "R-032"
+    },
+    {
+      "id": "kc-spec@0,9800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 9800,
+      "low": false,
+      "text": "• B 的雲端空間放不下這份專案 — 先擋下、不複製，跳 Biz 現行的雲端空間已滿提示：非 Pro 是「You’ve reached your cloud storage limit.／Upgrade now to increase your Cloud storage.」可升級；Pro（Biz Pro）是「Your Cloud Storage is Full.／You cannot use this tool because your storage is full. Please manage your storage space to continue.」，按 Manage 帶到 My Projects（見 `myedit-biz/product-rules/derived-cloud-storage.md`）",
+      "trace": "R-046, R-047, R-048, Q-3, Q-7"
+    },
+    {
+      "id": "kc-spec@0,10000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 10000,
+      "low": false,
+      "text": "• Free 在 sales popup 完成訂閱後 — 購買完成後回到原本的分享畫面，頁面不 reload、狀態保留；不會自動繼續複製，使用者要自己再按一次 Create Copy of Project，之後依序經過雲端空間檢查 → 「Copy Project to Start Editing」確認框 → 按 Copy 才複製",
+      "trace": "R-036"
+    },
+    {
+      "id": "kc-spec@0,10200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 10200,
+      "low": false,
+      "text": "• 副本裡原作者上傳的素材 — 會出現在 B 的 Uploads，並算進 B 的雲端空間；之後 A 刪素材不影響 B 的副本（PM 確認）",
+      "trace": "R-044, R-045"
+    },
+    {
+      "id": "kc-spec@0,10800",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 10800,
+      "low": false,
+      "text": "• Free — 可以（需登入） — 不行，跳 Limitation popup → sales popup",
+      "trace": "R-059, R-060, R-033, R-034"
+    },
+    {
+      "id": "kc-spec@0,11000",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 11000,
+      "low": false,
+      "text": "• Pro — 可以（需登入） — 可以",
+      "trace": "R-059, R-060"
+    },
+    {
+      "id": "kc-spec@0,11200",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 11200,
+      "low": false,
+      "text": "• 分享（產生、複製連結）不分方案，所有登入使用者都能用。",
+      "trace": "R-010"
+    },
+    {
+      "id": "kc-spec@0,11400",
+      "board": "kc-spec",
+      "x": 0,
+      "y": 11400,
+      "low": false,
+      "text": "• 方案內容見 `myedit-biz/product-rules/derived-subscription-plans.md`。",
+      "trace": "R-010, R-059, R-060"
+    },
+    {
+      "id": "pm-add-share-option@2214,1267",
+      "board": "pm-add-share-option",
+      "x": 2214,
+      "y": 1267,
+      "low": false,
+      "text": "• User 點選 Export and Share 後顯示可以複製 link & Download video 的選項",
+      "trace": "R-002"
+    },
+    {
+      "id": "pm-add-share-option@4225,1267",
+      "board": "pm-add-share-option",
+      "x": 4225,
+      "y": 1267,
+      "low": false,
+      "text": "• User hover 到 url 上會用 tooltip 顯示完整的 url / • 20261019 Update URL 定義為: https://myedit.online.en/video-editor/online-video-editor/{project token} (定義方式 sync Photo Editor & Podcast, RD 有困難可以建議作法)",
+      "trace": "R-004, R-006, Q-2"
+    },
+    {
+      "id": "pm-add-share-option@203,1276",
+      "board": "pm-add-share-option",
+      "x": 203,
+      "y": 1276,
+      "low": false,
+      "text": "• 將右上角 Export button 調整為 Export & Share",
+      "trace": "R-001"
+    },
+    {
+      "id": "pm-index@110,102",
+      "board": "pm-index",
+      "x": 110,
+      "y": 102,
+      "low": false,
+      "text": "Share Project URL - Add Share Project Option / User A Copy Shared Link Flow / User B (Free & Audio Pro User) Receive Share Link Flow / User C (Creator Pro & Studio Pro User) Receive Share Link Flow / Copy Project Link from My Projects",
+      "trace": "label: index of the five boards"
+    },
+    {
+      "id": "pm-my-projects-share@182,1043",
+      "board": "pm-my-projects-share",
+      "x": 182,
+      "y": 1043,
+      "low": false,
+      "text": "• 在 Launcher My Projects: Video Projects 的 more 選單內新增 ”Share” 的選項",
+      "trace": "R-012"
+    },
+    {
+      "id": "pm-my-projects-share@2136,1043",
+      "board": "pm-my-projects-share",
+      "x": 2136,
+      "y": 1043,
+      "low": false,
+      "text": "• User 點選 share 後，more menu 將被收合，並顯示 toast 讓 user 知道 shared link 被複製成功",
+      "trace": "R-013"
+    },
+    {
+      "id": "pm-user-a-copy-link@2160,1294",
+      "board": "pm-user-a-copy-link",
+      "x": 2160,
+      "y": 1294,
+      "low": false,
+      "text": "• User A 點選 copy link 的 icon 複製連結後，顯示 tooltip: Copied / • User A 就可以把連結分享給其他 User",
+      "trace": "R-005, R-014"
+    },
+    {
+      "id": "pm-user-a-copy-link@124,1303",
+      "board": "pm-user-a-copy-link",
+      "x": 124,
+      "y": 1303,
+      "low": false,
+      "text": "• User A 點選 Export and Share 後顯示可以複製 link & Download video 的選項",
+      "trace": "R-002"
+    },
+    {
+      "id": "pm-user-b-receive@105,95",
+      "board": "pm-user-b-receive",
+      "x": 105,
+      "y": 95,
+      "low": false,
+      "text": "以下 Flow 假設 User B 為沒有購買Video Tools Access 的 user，包含 Free user 或 Audio Pro user / MyEdit User 分成",
+      "trace": "R-059, R-060 (the KC spec maps User B, MyEdit Free / Audio Pro, to Biz Free)"
+    },
+    {
+      "id": "pm-user-b-receive@105,1516",
+      "board": "pm-user-b-receive",
+      "x": 105,
+      "y": 1516,
+      "low": false,
+      "text": "• 若 user B 在未登入狀態下開啟 Shared Link，會先跳 sign in dialogue 要求 user 登入 / • 若 user B 在登入狀態開啟 Share Link，可直接跳至下一個步驟",
+      "trace": "R-016, R-017, R-018, Q-6"
+    },
+    {
+      "id": "pm-user-b-receive@8356,1658",
+      "board": "pm-user-b-receive",
+      "x": 8356,
+      "y": 1658,
+      "low": false,
+      "text": "• 點 Upgrade now 後跳 sales popup",
+      "trace": "R-034"
+    },
+    {
+      "id": "pm-user-b-receive@6341,1666",
+      "board": "pm-user-b-receive",
+      "x": 6341,
+      "y": 1666,
+      "low": false,
+      "text": "• 由於 user 權限，因此會跳 Limitation popup 請 user upgrade / • 圖片需換成 Video Editor 的 cover image / • 點 Upgrade now 後跳 sales popup",
+      "trace": "R-033, R-034"
+    },
+    {
+      "id": "pm-user-b-receive@2273,1668",
+      "board": "pm-user-b-receive",
+      "x": 2273,
+      "y": 1668,
+      "low": false,
+      "text": "• User B 登入後可以看到被分享的 Video Project 內容，可進行的操作為: / • 點選 full screen 放大播放影片 / • 點選 top menu & user profile / • 此模式下無法進行的操作包含 / • 點選 left side panel >> default收合且呈現 disabled 狀態 / • 點選 Layer panel >>  default收合且呈現 disabled 狀態 / • 選取 timeline 上的物件 >> 呈現 disabled 狀態 / • 點選 zoom in & out scaler >> 呈現 disabled 狀態 / • 點選 undo & redo >> 呈現 disabled 狀態 / • 點選 Export & Share >> 呈現 disabled 狀態 / • Rename project >> 維持原來顏色，但不可點選名稱進行編輯，且不需要顯示Cloud",
+      "trace": "R-019, R-020, R-021, R-022, R-023, R-024, R-025, R-026, R-027, R-028, R-029"
+    },
+    {
+      "id": "pm-user-b-receive@4291,1673",
+      "board": "pm-user-b-receive",
+      "x": 4291,
+      "y": 1673,
+      "low": false,
+      "text": "• 當 User B 點選 ”Create Copy of Project”",
+      "trace": "R-033"
+    },
+    {
+      "id": "pm-user-c-receive@105,95",
+      "board": "pm-user-c-receive",
+      "x": 105,
+      "y": 95,
+      "low": false,
+      "text": "以下 Flow 假設 User C 為有購買Video Tools Access 的 user，包含 Creator Pro user 或 Studio Pro user / MyEdit User 分成",
+      "trace": "R-059, R-060 (the KC spec maps User C, MyEdit Creator Pro / Studio Pro, to Biz Pro)"
+    },
+    {
+      "id": "pm-user-c-receive@105,1516",
+      "board": "pm-user-c-receive",
+      "x": 105,
+      "y": 1516,
+      "low": false,
+      "text": "• 若 user C 在未登入狀態下開啟 Shared Link，會先跳 sign in dialogue 要求 user 登入 / • 若 user C 在登入狀態開啟 Share Link，可直接跳至下一個步驟",
+      "trace": "R-016, R-017, R-018, Q-6"
+    },
+    {
+      "id": "pm-user-c-receive@6292,1652",
+      "board": "pm-user-c-receive",
+      "x": 6292,
+      "y": 1652,
+      "low": false,
+      "text": "• 顯示 dialogue 內容讓 user 知道會 create a copy of the video project",
+      "trace": "R-037"
+    },
+    {
+      "id": "pm-user-c-receive@8281,1667",
+      "board": "pm-user-c-receive",
+      "x": 8281,
+      "y": 1667,
+      "low": false,
+      "text": "• 幫 user 在同一個分頁複製 video project / • 在建立 project 期間顯示 loading dialogue，此 loading包含複製 user project 素材的時間  (20261019 Update)",
+      "trace": "R-039, R-040"
+    },
+    {
+      "id": "pm-user-c-receive@2273,1668",
+      "board": "pm-user-c-receive",
+      "x": 2273,
+      "y": 1668,
+      "low": false,
+      "text": "• User C 登入後可以看到被分享的 Video Project 內容，可進行的操作為: / • 點選 full screen 放大播放影片 / • 點選 top menu & user profile / • 此模式下無法進行的操作包含 / • 點選 left side panel >> default收合且呈現 disabled 狀態 / • 點選 Layer panel >>  default收合且呈現 disabled 狀態 / • 選取 timeline 上的物件 >> 呈現 disabled 狀態 / • 點選 zoom in & out scaler >> 呈現 disabled 狀態 / • 點選 undo & redo >> 呈現 disabled 狀態 / • 點選 Export & Share >> 呈現 disabled 狀態 / • Rename project >> 維持原來顏色，但不可點選名稱進行編輯，且不需要顯示Cloud",
+      "trace": "R-019, R-020, R-021, R-022, R-023, R-024, R-025, R-026, R-027, R-028, R-029"
+    },
+    {
+      "id": "pm-user-c-receive@4291,1673",
+      "board": "pm-user-c-receive",
+      "x": 4291,
+      "y": 1673,
+      "low": false,
+      "text": "• 當 User C 點選 ”Create Copy of Project”",
+      "trace": "R-037"
+    },
+    {
+      "id": "pm-user-c-receive@10738,1679",
+      "board": "pm-user-c-receive",
+      "x": 10738,
+      "y": 1679,
+      "low": false,
+      "text": "• Video project 建立後，project name 後方顯示 _copy",
+      "trace": "R-041, R-042"
+    }
+  ]
+}

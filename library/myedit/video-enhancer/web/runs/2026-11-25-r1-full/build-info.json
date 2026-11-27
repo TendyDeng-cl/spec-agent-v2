@@ -1,0 +1,9 @@
+{
+  "url": "https://demo.myedit.online/version.json",
+  "capturedAt": "2026-11-25T09:11:48.724Z",
+  "statusCode": 200,
+  "rawResponse": "{\"version\": \"MyEdit-5.11.0-11242029\"}\n",
+  "raw": "MyEdit-5.11.0-11242029",
+  "version": "5.11.0",
+  "buildNo": "11242029"
+}

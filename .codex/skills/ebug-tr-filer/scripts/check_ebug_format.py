@@ -454,10 +454,90 @@ def check_meta(key, e, rep):
             rep.err(key, f"reproduce probability is {out}/{times}, which is impossible")
 
 
+# MyEdit / MyEdit Biz (user, 2026-11-25): these products follow the user's ebug-writing rules, not the PowerDirector
+# reviewer rules above (casebook-overlay.md › MyEdit). Selected by --product "MyEdit" / "MyEdit Biz".
+MYEDIT_SHORT = re.compile(r"^(?P<product>MyEdit(?: Biz)?) (?P<version>\d+\.\d+\.\d+) - (?P<tags>(?:\[[^\]]+\])+)(?P<area>[^:\[\]]+): (?P<sentence>\S.*)$")
+MYEDIT_SOURCE = ("[AIAgent]", "[Manual]")
+MYEDIT_TEAMS = {"[JT]", "[RT]", "[CT]", "[KT]"}
+MYEDIT_FORBIDDEN_DESC = re.compile(r"^\s*(Build( No)?|Impact|Evidence|Severity|Source)\s*:|<GPT Reviewed>|<Claude Reviewed>", re.I | re.M)
+
+
+def check_myedit(key, e, product, version, rep):
+    short = (e.get("short") or "").strip()
+    m = MYEDIT_SHORT.match(short)
+    if not m:
+        rep.err(key, f"Short Description is not '<Product> <Version> - [AIAgent][tags]Tool(Subfeature): sentence': {short[:80]!r}")
+    else:
+        if m.group("product") != product:
+            rep.err(key, f"product is {m.group('product')!r}, expected {product!r}")
+        if m.group("version") != version:
+            rep.err(key, f"version is {m.group('version')}, expected {version} (read from version.json)")
+        tags = re.findall(r"\[[^\]]+\]", m.group("tags"))
+        if not tags or tags[0] not in MYEDIT_SOURCE:
+            rep.err(key, "the first tag must be [AIAgent] (or [Manual] for a 'wait for new design' UI Review finding)")
+        if "[AIAgent]" in tags and "[Manual]" in tags:
+            rep.err(key, "never both [AIAgent] and [Manual]")
+        if any(t in ("[AIFound]", "[Agent Filed]") for t in tags):
+            rep.err(key, "[AIFound] / [Agent Filed] are not MyEdit source tags; use [AIAgent]")
+        # ebug-writing (Contract Runner copy, 2026-11-25): one RD team tag from column E of the tool Kanban, except
+        # the product's omitted team — MyEdit omits [JT], MyEdit Biz omits [RT] (then no team tag at all)
+        team = [t for t in tags if t in MYEDIT_TEAMS]
+        omitted = "[JT]" if product == "MyEdit" else "[RT]"
+        if omitted in team:
+            rep.err(key, f"{product} omits the {omitted} team tag (ebug-writing › RD team title tag)")
+        if len(team) > 1:
+            rep.err(key, "at most one RD team tag ([JT]/[RT]/[CT]/[KT]) from column E of the tool Kanban")
+        elif team and tags[-1] != team[0]:
+            rep.err(key, f"the team tag {team[0]} goes last, immediately before the tool name")
+        if re.search(r"\s\(", m.group("area")):
+            rep.err(key, "Tool(Subfeature) has no space before the parenthesis")
+        if short.endswith((".", "。")):
+            rep.err(key, "Short Description must not end with a period")
+        ux = "[UX]" in tags
+        sev, belong = e.get("severity"), e.get("belong")
+        if ux and (belong != "PM" or sev not in (None, "Better Fix")):
+            rep.err(key, "a [UX] bug is Bug belongs to PM, Severity Better Fix")
+        if not ux and sev not in (None, "Must Fix"):
+            rep.err(key, f"Severity {sev!r}: every non-UX MyEdit bug is Must Fix")
+    if len(short) > 148:
+        rep.warn(key, f"Short Description is {len(short)} characters (p90 148)")
+    desc = e.get("desc") or ""
+    parts = [p for p in ("Repro Steps:", "Result:", "Expect Result:") if p in desc]
+    if parts != ["Repro Steps:", "Result:", "Expect Result:"] or not (desc.index("Repro Steps:") < desc.index("Result:") < desc.index("Expect Result:")):
+        rep.err(key, "Description must be Repro Steps: / Result: / Expect Result: in that order")
+    else:
+        result = desc.split("Result:", 1)[1].split("Expect Result:", 1)[0].strip()
+        if len(result) > 150:
+            rep.err(key, f"Result is {len(result)} characters; shorten it to one sentence (over 150 is not allowed)")
+        steps = desc.split("Repro Steps:", 1)[1].split("Result:", 1)[0]
+        if re.search(r"[A-Za-z]:[\\/]|\.(png|jpe?g|mp4|mov|webp|mp3|wav)\b", steps, re.I):
+            rep.err(key, "Repro Steps name a file or path; write 'Upload an image' and keep the file in the attachments")
+    if MYEDIT_FORBIDDEN_DESC.search(desc):
+        rep.err(key, "no Build / Impact / Evidence / Severity / Source lines or review marks in the Description")
+    # Note (ebug-writing, 2026-11-25): the Spec / Figma / Knowledge Center links that support the Expect Result, a
+    # text-only spec summary with its link, a Production line, or a user-supplied UI Review file — nothing else
+    if re.search(r"^\s*Note:", desc, re.M) and not e.get("note_allowed"):
+        note = desc.split("Note:", 1)[1]
+        if not re.search(r"https?://", note) and "Production: [" not in note:
+            rep.warn(key, "Note holds source links (Spec / Figma / Knowledge Center), a Production line or a UI Review file only")
+    # Reproduce Probability (ebug-writing, 2026-11-25): 3/3 by default; the actual counts only when more than three
+    # attempts were made (no cap at five)
+    out, times = e.get("out"), e.get("times")
+    if not (isinstance(out, int) and isinstance(times, int) and 1 <= out <= times and times >= 3):
+        rep.err(key, f"reproduce {out}/{times}: 3/3 by default, or the actual counts when more than three attempts were made")
+    if e.get("belong") not in ("RD", "PM", "PC-Doc"):
+        rep.err(key, f"Bug belongs to {e.get('belong')!r}: RD (default), PM (UX) or PC-Doc (localization)")
+    files = e.get("files") or []
+    if not any(re.search(r"\.(png|jpe?g|webp|gif)$", x, re.I) for x in files):
+        rep.err(key, "attach the current UI screenshot (first attachment)")
+    elif not re.search(r"\.(png|jpe?g|webp|gif)$", files[0], re.I):
+        rep.err(key, "the current UI screenshot goes first, then Figma, highlight, fixtures")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("bodies")
-    ap.add_argument("--product", required=True, help="PDR-I / PDR-A / PHD")
+    ap.add_argument("--product", required=True, help="PDR-I / PDR-A / PHD / MyEdit / \"MyEdit Biz\"")
     ap.add_argument("--version", required=True, help="16.8.0")
     ap.add_argument("--upload-dir", default=None,
                     help="folder the attachments live in; existence is checked when given")
@@ -491,8 +571,16 @@ def main():
         features = {l.strip() for l in open(a.features, encoding="utf-8") if l.strip()}
 
     seen = {}
+    myedit = a.product.startswith("MyEdit")
     for key, e in data.items():
         short = (e.get("short") or "").strip()
+        if myedit:
+            check_myedit(key, e, a.product, a.version, rep)
+            norm = re.sub(r"\s+", " ", short.lower())
+            if norm and norm in seen:
+                rep.err(key, f"Short Description is identical to {seen[norm]}")
+            seen[norm] = key
+            continue
         tags = check_short(key, short, a.product, a.version, rep, features)
         check_desc(key, e.get("desc", ""), a.version, rep, e.get("files"), a.upload_dir,
                    tags=tags, belong=e.get("belong"), allow_agent_ux=a.allow_agent_ux,

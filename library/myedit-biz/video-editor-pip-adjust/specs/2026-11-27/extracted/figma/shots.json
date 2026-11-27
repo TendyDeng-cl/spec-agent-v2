@@ -1,0 +1,44 @@
+{
+  "pm-adjust-main-video.png": {
+    "board": "7270:16640",
+    "group": "pm-adjust-main-video",
+    "hash": "439bc22a",
+    "overlay": "",
+    "captured_at": "2026-11-27T05:17:36.468Z"
+  },
+  "pm-adjust-photo-pip.png": {
+    "board": "7273:35737",
+    "group": "pm-adjust-photo-pip",
+    "hash": "7b20d99e",
+    "overlay": "7b20d99e",
+    "captured_at": "2026-11-27T05:17:36.676Z"
+  },
+  "pm-photo-mask.png": {
+    "board": "6556:11894",
+    "group": "pm-photo-mask",
+    "hash": "ecb53500",
+    "overlay": "fe268dd4",
+    "captured_at": "2026-11-27T05:17:36.894Z"
+  },
+  "pm-photo-crop-rotate.png": {
+    "board": "6564:25919",
+    "group": "pm-photo-crop-rotate",
+    "hash": "ae18956f",
+    "overlay": "109b2d6d",
+    "captured_at": "2026-11-27T05:17:37.120Z"
+  },
+  "ds-adjust-main-video.png": {
+    "board": "667:47666",
+    "group": "ds-adjust-main-video",
+    "hash": "0d118c9d",
+    "overlay": "",
+    "captured_at": "2026-11-27T05:17:37.332Z"
+  },
+  "ds-adjust-photo-pip.png": {
+    "board": "671:28111",
+    "group": "ds-adjust-photo-pip",
+    "hash": "0dbaab5a",
+    "overlay": "",
+    "captured_at": "2026-11-27T05:17:37.528Z"
+  }
+}

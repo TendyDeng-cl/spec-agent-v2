@@ -1,0 +1,118 @@
+{
+  "at": "2026-11-25T06:22:43.253Z",
+  "env": "demo",
+  "url": "https://stage2.cyberlink.com/account/credits",
+  "signedIn": true,
+  "balance": 5824,
+  "rows": [
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:12",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Subtitle Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:06",
+      "Credits": "-105",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Video Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:06",
+      "Credits": "-105",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Video Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:06",
+      "Credits": "-105",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Video Generation"
+    },
+    {
+      "Time": "Nov 25, 2026 14:06",
+      "Credits": "-105",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Mini Drama Video Generation"
+    }
+  ],
+  "texts": [
+    "Products",
+    "Downloads",
+    "Support & Learning",
+    "Special Offers",
+    "FaceMe AI Solutions",
+    "Search",
+    "User",
+    "Global",
+    "Member Zone",
+    ">",
+    "Credits",
+    "J",
+    "My Credits",
+    "John Doe",
+    "credits available",
+    "credit icon",
+    "5824",
+    "JackCY_Lee@cyberlink.com",
+    "Overview",
+    "Details",
+    "Product",
+    "Available Credits",
+    "Expiration Date",
+    "Credits Details",
+    "All Categories",
+    "Time",
+    "Category",
+    "Referral Center",
+    "AI Mini Drama Subtitle Generation",
+    "Nov 25, 2026 14:12",
+    "-1",
+    "Consume",
+    "MyEdit",
+    "Redeem",
+    "Account",
+    "My Order",
+    "Get Support"
+  ]
+}

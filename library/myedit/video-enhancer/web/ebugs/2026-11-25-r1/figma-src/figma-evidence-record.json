@@ -1,0 +1,235 @@
+[
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\02/Figma_Unsupported_File_Format_dialog.png",
+  "outSha256": "2c609c662b759b528aedff945605660e4125158a40f6305e895261a4f0430f1c",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board9_235-1137.png",
+  "srcSha256": "4c26015681e1e1e5fc15b6842b085af25a5c1c9679afc9b19b5f61951e836e8c",
+  "crop_px": [
+   140,
+   142,
+   780,
+   472
+  ],
+  "green_boxes_src_px": [
+   [
+    160,
+    245,
+    440,
+    187
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1251",
+  "shows": "Case 1 dialog Unsupported File Format (AVI)"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\02/Figma_Below_128px_resolution_dialog.png",
+  "outSha256": "0cf6e005274a751a5264d3fb74b1e061e2603191f95a9c16db30dd3674d68d47",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board9_235-1137.png",
+  "srcSha256": "4c26015681e1e1e5fc15b6842b085af25a5c1c9679afc9b19b5f61951e836e8c",
+  "crop_px": [
+   2780,
+   142,
+   3420,
+   472
+  ],
+  "green_boxes_src_px": [
+   [
+    2800,
+    245,
+    440,
+    187
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=382-1791",
+  "shows": "Case 5 dialog Video Resolution Not Supported (shorter side below 128 px)"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\02/Figma_Over_120fps_frame_rate_dialog.png",
+  "outSha256": "3af42bbcdd069771e1f98d591788886df3821974bd6235f1046f86ee0a9ca499",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board9_235-1137.png",
+  "srcSha256": "4c26015681e1e1e5fc15b6842b085af25a5c1c9679afc9b19b5f61951e836e8c",
+  "crop_px": [
+   3440,
+   142,
+   4080,
+   472
+  ],
+  "green_boxes_src_px": [
+   [
+    3460,
+    245,
+    440,
+    187
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=383-1791",
+  "shows": "Case 6 dialog Video Frame Rate Not Supported (over 120 fps)"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\03/Figma_Got_it_button_cases_1-3.png",
+  "outSha256": "6be716c4492728d8446ac225070e7677d1f55a29880ad8ed16e2d28b126e38c3",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board9_235-1137.png",
+  "srcSha256": "4c26015681e1e1e5fc15b6842b085af25a5c1c9679afc9b19b5f61951e836e8c",
+  "crop_px": [
+   140,
+   142,
+   2100,
+   472
+  ],
+  "green_boxes_src_px": [
+   [
+    491,
+    375,
+    77,
+    33
+   ],
+   [
+    1151,
+    375,
+    77,
+    33
+   ],
+   [
+    1811,
+    375,
+    77,
+    33
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1269",
+  "shows": "Cases 1-3 dialogs, button Got it (lower-case i) on each"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\09/Figma_Resolution_dialog_1440p.png",
+  "outSha256": "67788b1397f1c7a3db25c9cf93b7f1f1e3280d73dcccd54f4c614ba47381a7e1",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board9_235-1137.png",
+  "srcSha256": "4c26015681e1e1e5fc15b6842b085af25a5c1c9679afc9b19b5f61951e836e8c",
+  "crop_px": [
+   1460,
+   142,
+   2100,
+   472
+  ],
+  "green_boxes_src_px": [
+   [
+    1512,
+    311,
+    376,
+    40
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1273",
+  "shows": "Case 3 dialog body: ... resolution limit (1440p) ..."
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\10/Figma_Trimmer_Standard_hint.png",
+  "outSha256": "dfb47f52a31f73d40722c6b40be9f29cd947abf7df270fe5081a16e1a4c65bb5",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board10_step3_362-1882.png",
+  "srcSha256": "4a18c82d140e393271ad407b14cc95fac0e0b2bf80e76fbd63cc616a41860cab",
+  "crop_px": [
+   0,
+   640,
+   1680,
+   1130
+  ],
+  "green_boxes_src_px": [
+   [
+    4,
+    1066,
+    1290,
+    32
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=359-1999",
+  "shows": "Trimmer step 3 note: Standard hint text Standard mode supports videos up to 8 minutes long..."
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\11/Figma_Professional_over_2-30_red_text.png",
+  "outSha256": "333a32bd835ecc1572dc4e5929a212c884c70183426b9de60c08295a39158594",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\board10_step2_360-1789.png",
+  "srcSha256": "2d32134837ae25b3eafb7536a335453fd27a51e66e4a994faa6309f40ff00995",
+  "crop_px": [
+   0,
+   0,
+   1240,
+   1003
+  ],
+  "green_boxes_src_px": [
+   [
+    90,
+    254,
+    272,
+    24
+   ],
+   [
+    92,
+    866,
+    350,
+    44
+   ],
+   [
+    4,
+    970,
+    1232,
+    32
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=360-1789",
+  "shows": "Step 2: Professional over 2:30 shows the red 2:30 text, Enhance disabled; note says Replace Video over 2:30 gives this state"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\14/Figma_EDM_result_ready_body_text.png",
+  "outSha256": "9c0ee68e2bfe23673e6d68c831e1886174cd34d61384a6e2932659f30c8ba8d4",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\edm_207-1216.png",
+  "srcSha256": "c2cd2a4c66bed96ae547c418df1b404b5fbbd71dbc4bf9e1b2635cf3dbe82ac9",
+  "crop_px": [
+   0,
+   0,
+   1264,
+   938
+  ],
+  "green_boxes_src_px": [
+   [
+    402,
+    374,
+    420,
+    54
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=207-1229",
+  "shows": "Result-ready mail body: Your enhanced video is ready! Click the button below..."
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\07/Figma_Mobile_uploading_state.png",
+  "outSha256": "1d8b036b603cc807e341916d558dfb477bf509da25ae3d6b3a204e58444d4169",
+  "src": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\figma-src\\mobile_uploading_457-3443.png",
+  "srcSha256": "c766503303708b5d3afe4743527584998c2c5e58b3709cfc400b92ed566167fb",
+  "crop_px": [
+   0,
+   0,
+   375,
+   640
+  ],
+  "green_boxes_src_px": [
+   [
+    10,
+    402,
+    355,
+    236
+   ]
+  ],
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=457-3443",
+  "shows": "Mobile uploading: Processing above, settings summary and Enhance dimmed below"
+ },
+ {
+  "out": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\07\\Comparison_Mobile_uploading_state.png",
+  "outSha256": "9b9b0bc755ef163678ddbdc47160d8917d042142d5f065f97d1d6326b94fc51c",
+  "left": "C:/Users/JackCY_Lee/spec-agent-v2-main/spec-agent-v2-main/library/myedit/video-enhancer/web/ebugs/2026-11-25-r1/20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images/07/Highlight_Mobile_Processing_covers_room.png",
+  "leftSha256": "542666e139864d5a6c1a5262370377bf8a1b5bf854d8b9eb79d110c5e1cf3ce2",
+  "right": "C:\\Users\\JackCY_Lee\\spec-agent-v2-main\\spec-agent-v2-main\\library\\myedit\\video-enhancer\\web\\ebugs\\2026-11-25-r1\\20261125_eBug_drafts_Video-Enhancer-R1_5.11.0_images\\07/Figma_Mobile_uploading_state.png",
+  "rightSha256": "1d8b036b603cc807e341916d558dfb477bf509da25ae3d6b3a204e58444d4169",
+  "node": "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=457-3443",
+  "transform": "no scaling; left at (24,44), right at (447,44); neutral padding",
+  "shows": "red: Processing covers the whole screen (actual); green: summary and Enhance dimmed below Processing (Figma)"
+ }
+]

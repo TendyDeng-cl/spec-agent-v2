@@ -1,0 +1,935 @@
+ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused","1. Click the main-track video fx-main on the timeline
+2. Read the editing toolbar from left to right","The toolbar reads 「Split」, 「Trim」, 「Corner」, 「BG Blur」, 「Adjust」, 「Fade In」, 「Fade Out」, 「Audio」, 「Delete」
+「Adjust」 sits directly right of 「BG Blur」",P1,R-001,Design ds-adjust-main-video and PM agree. MyEdit has no main-video Adjust yet (REQ-002).,new,New table (REQ-001)
+TC-002,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-photo on the main track (a main photo) after fx-main (web/fixtures.md)
+3. Playback paused","1. Click the main-track photo fx-photo on the timeline
+2. Read the editing toolbar",「Adjust」 is in the toolbar directly right of 「BG Blur」,P1,R-002,,new,New table (REQ-001)
+TC-003,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused","1. Click the Photo PiP fx-photo (on the canvas or its PiP clip)
+2. Read the editing toolbar from left to right","「Cutout」, 「Crop/Rotate」, 「Mask」, 「Adjust」 follow each other in this order, and 「Fade In」 comes right after 「Adjust」
+「Fade In」, 「Fade Out」, 「Order」, 「Delete」 end the toolbar in this order
+Record where 「Split」 and 「Corner」 sit (PM: 「Split」, 「Corner」 first; Biz Design: 「Corner」, 「Cutout」, 「Split」)",P1,"R-003, R-004","Q-1: the Biz Design (ds-adjust-photo-pip) draws Corner, Cutout, Split, Adjust, … without Crop/Rotate and Mask; the PM order is Split, Corner, Cutout, Crop/Rotate, Mask, Adjust, Fade In, Fade Out, Order, Delete. If a tool is missing on the build, check the partial order of R-004 instead. Contract ME-PIP-20261104-S001-B001 (MyEdit order).",new,New table (REQ-001)
+TC-004,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused","1. Click the video PiP fx-pipvideo
+2. Click the text
+3. Click the sticker
+4. Read the toolbar each time","Steps 1–3: no 「Adjust」 button in the toolbar
+Steps 1–3: no 「Crop/Rotate」 or 「Mask」 button either",P2,R-005,Adjust is Photo PiP only in this release; Video PiP later (KC). Crop/Rotate and Mask are Photo PiP tools (KC).,new,New table (REQ-001)
+TC-005,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. The left panel shows the Videos tab","1. Click fx-main on the timeline
+2. Click 「Adjust」 in the toolbar","The left panel content is replaced by the Adjust panel
+The 「Adjust」 toolbar button shows its selected state",P1,R-006,Design draws the Videos left-nav tab still highlighted under the panel (main video) and Photos for a PiP.,new,New table (REQ-001)
+TC-006,Toolbars and entry,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused","1. Click the Photo PiP fx-photo
+2. Click 「Adjust」
+3. Drag 「Brightness」 to 60","Step 2: the same Adjust panel opens (title, Color and Light groups, six sliders, Reset) as for the main video
+Step 3: only the PiP photo gets brighter
+Step 3: the main video under it is unchanged",P1,"R-007, R-027",,new,New table (REQ-001)
+TC-007,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main never adjusted","1. Click fx-main
+2. Click 「Adjust」
+3. Read the whole panel","Title 「Adjust」 with ✕ at the top right
+Group 「Color」: 「Saturation」, 「Hue」, 「Temperature」, 「Tint」
+Group 「Light」: 「Brightness」, 「Contrast」
+Each row: label, slider and number box
+「Reset」 at the bottom of the panel
+No 「Highlights」 or 「Shadows」 row (six sliders only)",P1,R-008,"Photo Editor has 8 sliders (Highlights, Shadows); the engine supports only 6 in Video Editor (KC).",new,New table (REQ-001)
+TC-008,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main and fx-photo never adjusted","1. Open Adjust for fx-main and read the six number boxes
+2. Open Adjust for the Photo PiP fx-photo and read them","Steps 1–2: 「Saturation」 0, 「Hue」 100, 「Temperature」 50, 「Tint」 50, 「Brightness」 0, 「Contrast」 0
+Steps 1–2: each knob sits at its default position (centre of the track)",P1,"R-009, R-010, R-011, R-012, R-013, R-014",,new,New table (REQ-001)
+TC-009,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Saturation」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Saturation」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads -100 and the viewer shows the change
+Step 4: the box reads 100 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P1,"R-009, R-016",,new,New table (REQ-001)
+TC-010,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Hue」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Hue」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads 0 and the viewer shows the change
+Step 4: the box reads 200 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P2,"R-010, R-016",,new,New table (REQ-001)
+TC-011,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Temperature」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Temperature」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads 0 and the viewer shows the change
+Step 4: the box reads 100 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P2,"R-011, R-016",,new,New table (REQ-001)
+TC-012,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Tint」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Tint」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads 0 and the viewer shows the change
+Step 4: the box reads 100 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P2,"R-012, R-016",,new,New table (REQ-001)
+TC-013,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Brightness」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Brightness」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads -100 and the viewer shows the change
+Step 4: the box reads 100 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P1,"R-013, R-016",,new,New table (REQ-001)
+TC-014,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Drag the 「Contrast」 knob all the way left
+2. Read its number box and look at the viewer
+3. Drag the 「Contrast」 knob all the way right
+4. Read its number box and look at the viewer","Step 2: the box reads -100 and the viewer shows the change
+Step 4: the box reads 100 and the viewer shows the change
+Steps 1–4: the knob stops at the track ends",P2,"R-014, R-016",,new,New table (REQ-001)
+TC-015,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Look at the six slider tracks at their defaults
+2. Drag 「Saturation」 to 50
+3. Drag 「Saturation」 to -50
+4. Drag 「Brightness」 to 40","Step 1: 「Hue」 has a rainbow track with no fill
+Step 1: 「Temperature」 has a warm-to-blue gradient track and 「Tint」 a green–magenta gradient track, with no fill
+Steps 2–4: 「Saturation」 and 「Brightness」 are grey tracks with a blue fill
+Record where the blue fill starts (PM: from 0 in the centre; Design: from the left end) and the gradient directions",P3,R-015,"Q-3: PM Temperature orange → white → blue, Tint green → magenta, fill from 0; the Biz Design draws Temperature yellow → blue, Tint magenta → green and the fill from the left end. Design first when dates cannot tell (check on device, decide with the user before filing).",new,New table (REQ-001)
+TC-016,Adjust panel and sliders,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main
+5. Screen recording running (Evidence: screen recording of the whole drag)","1. Press the 「Saturation」 knob
+2. Drag it slowly from 0 to 100 over about 3 seconds without releasing
+3. Release it","Step 2: at several moments during the drag the viewer colour already follows the knob and the number box
+Step 2: no visible lag between the knob and the viewer
+Step 3: the viewer stays at the released value",P1,R-016,Q-4: the spec gives no allowed delay; the row assumes no visible lag. During-a-gesture rule (analysis pass 4).,new,New table (REQ-001)
+TC-017,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Click the 「Brightness」 number box
+2. Select its text and type 45
+3. Look at the viewer before pressing anything else
+4. Press Enter","Step 3: record whether the viewer already shows 45 (interim Photo Editor behaviour: live preview while typing) or still the old value (target MyEdit behaviour)
+Step 4: the box reads 45, the knob moves to 45 and the viewer shows it",P1,R-017,Q-5: either behaviour at step 3 passes until the UX item for Enter/leave ships; the release decides which (KC).,new,New table (REQ-001)
+TC-018,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 30 in the 「Contrast」 box
+2. Click empty space in the panel to leave the field","Step 2: 「Contrast」 is 30 on the box, the knob and the viewer",P2,R-017,,new,New table (REQ-001)
+TC-019,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 150 in the 「Saturation」 box and press Enter
+2. Type -150 in the 「Saturation」 box and press Enter","Step 1: the box changes to 100 and the knob is at the right end
+Step 2: the box changes to -100 and the knob is at the left end",P1,"R-018, R-009",,new,New table (REQ-001)
+TC-020,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 250 in the 「Hue」 box and press Enter
+2. Type -50 in the 「Hue」 box and press Enter","Step 1: the box changes to 200 and the knob is at the right end
+Step 2: the box changes to 0 and the knob is at the left end",P2,"R-018, R-010",,new,New table (REQ-001)
+TC-021,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 150 in the 「Temperature」 box and press Enter
+2. Type -50 in the 「Temperature」 box and press Enter","Step 1: the box changes to 100 and the knob is at the right end
+Step 2: the box changes to 0 and the knob is at the left end",P2,"R-018, R-011",,new,New table (REQ-001)
+TC-022,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 150 in the 「Tint」 box and press Enter
+2. Type -50 in the 「Tint」 box and press Enter","Step 1: the box changes to 100 and the knob is at the right end
+Step 2: the box changes to 0 and the knob is at the left end",P2,"R-018, R-012",,new,New table (REQ-001)
+TC-023,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 150 in the 「Brightness」 box and press Enter
+2. Type -150 in the 「Brightness」 box and press Enter","Step 1: the box changes to 100 and the knob is at the right end
+Step 2: the box changes to -100 and the knob is at the left end",P2,"R-018, R-013",,new,New table (REQ-001)
+TC-024,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main","1. Type 150 in the 「Contrast」 box and press Enter
+2. Type -150 in the 「Contrast」 box and press Enter","Step 1: the box changes to 100 and the knob is at the right end
+Step 2: the box changes to -100 and the knob is at the left end",P2,"R-018, R-014",,new,New table (REQ-001)
+TC-025,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main
+5. 「Tint」 set to 70","1. Clear the 「Tint」 box and press Enter
+2. Type abc in the 「Tint」 box and click outside the field
+3. Type - (a minus sign only) and press Enter","Steps 1–3: the box goes back to 70
+Steps 1–3: the viewer keeps the 70 look",P2,R-019,,new,New table (REQ-001)
+TC-026,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main
+5. 「Hue」 at 198","1. Click the 「Hue」 box
+2. Press ↑ three times
+3. Press ↓ once
+4. Use the box's up/down arrow buttons the same way if the box shows them","Step 2: 199, then 200, then it stays at 200
+Step 2: at 200 the up arrow button is disabled
+Step 3: 199
+Step 4: each click changes the value by 1",P2,"R-020, R-010",,new,New table (REQ-001)
+TC-027,Adjust number input,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main
+5. 「Saturation」 at -99","1. Click the 「Saturation」 box
+2. Press ↓ twice","Step 2: -100, then it stays at -100
+Step 2: at -100 the down arrow button is disabled",P2,"R-020, R-009",,new,New table (REQ-001)
+TC-028,"Reset, Undo and Redo","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main, every slider at its default","1. Look at 「Reset」
+2. Drag 「Temperature」 to 70
+3. Drag 「Temperature」 back to 50 (or type 50)","Step 1: 「Reset」 is disabled
+Step 2: 「Reset」 becomes enabled
+Step 3: 「Reset」 is disabled again",P1,R-022,,new,New table (REQ-001)
+TC-029,"Reset, Undo and Redo","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main
+5. All six sliders set away from their defaults (40, 130, 30, 62, 20, -15, as the PM adjusted frame)","1. Click 「Reset」
+2. Click Undo once
+3. Click Redo once","Step 1: all six return to 0, 100, 50, 50, 0, 0 and the viewer looks as the original
+Step 1: 「Reset」 becomes disabled
+Step 2: all six come back to 40, 130, 30, 62, 20, -15 in one Undo
+Step 3: all six are reset again",P1,"R-021, R-025",,new,New table (REQ-001)
+TC-030,"Reset, Undo and Redo","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main, every slider at its default","1. Drag 「Saturation」 from 0 to 20, pausing a moment at 5, 10 and 15 before releasing at 20
+2. Click Undo once
+3. Click Redo once","Step 2: 「Saturation」 goes straight back to 0 (one drag is one step)
+Step 3: 「Saturation」 is 20 again",P1,"R-023, R-025",,new,New table (REQ-001)
+TC-031,"Reset, Undo and Redo","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main, 「Brightness」 0","1. Type 33 in the 「Brightness」 box (typing 3, then 3)
+2. Press Enter
+3. Click Undo once","Step 3: 「Brightness」 returns to 0 in one Undo, not to 3",P1,R-024,Q-5: one entry is one undo step under both the interim and the target behaviour.,new,New table (REQ-001)
+TC-032,"Reset, Undo and Redo","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Photo PiP fx-photo selected, Adjust panel open, every slider at its default","1. Drag 「Contrast」 to 50
+2. Click 「Reset」
+3. Click Undo twice","Step 2: all sliders back to their defaults
+Step 3: the first Undo brings 「Contrast」 50 back
+Step 3: the second Undo returns 「Contrast」 to 0",P2,"R-021, R-023, R-007",,new,New table (REQ-001)
+TC-033,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. fx-main playing with the playhead inside it
+4. Adjust panel open for fx-main",Drag 「Saturation」 to 60,"Playback pauses when the drag starts
+The viewer previews the change at the paused playhead time",P1,R-026,,new,New table (REQ-001)
+TC-034,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. fx-main playing
+4. Adjust panel open for fx-main",Type 40 in the 「Hue」 box and press Enter,"Playback pauses when typing starts or at the latest when the value applies
+The viewer shows the new hue at the paused playhead",P2,R-026,,new,New table (REQ-001)
+TC-035,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. fx-main playing
+4. Adjust panel open for fx-main with 「Saturation」 at 60",Click 「Reset」,"Playback pauses
+The viewer shows the reset look at the paused playhead",P2,R-026,,new,New table (REQ-001)
+TC-036,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. The Photo PiP fx-photo playing
+4. Adjust panel open for fx-photo",Drag 「Brightness」 to 50,"Playback pauses when the drag starts
+The viewer previews the brighter PiP at the playhead",P2,"R-026, R-007",,new,New table (REQ-001)
+TC-037,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused","1. Open Adjust for fx-main and set 「Saturation」 to -100
+2. Play across fx-main into fx-main2","Step 2: fx-main plays in black and white
+Step 2: fx-main2, the PiPs and the sticker keep their colours",P1,R-027,,new,New table (REQ-001)
+TC-038,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main adjusted (「Saturation」 -100, 「Brightness」 30)","1. Put the playhead in the middle of fx-main
+2. Click 「Split」
+3. Select each part and open Adjust","Step 3: both parts show 「Saturation」 -100 and 「Brightness」 30
+Step 3: both parts play with the same look",P1,R-028,,new,New table (REQ-001)
+TC-039,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Photo PiP fx-photo adjusted (「Hue」 150, 「Contrast」 40)","1. Put the playhead inside fx-photo
+2. Click 「Split」
+3. Select each part and open Adjust",Step 3: both parts show 「Hue」 150 and 「Contrast」 40,P1,R-028,,new,New table (REQ-001)
+TC-040,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Photo PiP fx-photo adjusted (「Tint」 80, 「Brightness」 -30)","1. Select fx-photo and copy it (Ctrl+C or its More menu)
+2. Paste it (Ctrl+V or the More menu)
+3. Select the pasted PiP and open Adjust",Step 3: the copy shows 「Tint」 80 and 「Brightness」 -30 and looks the same as the original,P1,R-029,Video Editor has no Duplicate (KC).,new,New table (REQ-001)
+TC-041,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused
+4. fx-main adjusted (「Saturation」 -60), fx-main2 not adjusted, fx-photo adjusted (「Hue」 160)","1. Open Adjust for fx-main
+2. Click fx-main2 on the timeline
+3. Click the Photo PiP fx-photo
+4. Click fx-main again","Steps 2–4: the Adjust panel stays open
+Step 2: the panel shows fx-main2's defaults
+Step 3: the panel shows 「Hue」 160
+Step 4: the panel shows 「Saturation」 -60",P1,R-030,,new,New table (REQ-001)
+TC-042,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused
+4. fx-photo adjusted (「Brightness」 40)
+5. Adjust panel open for fx-photo","1. Click the text
+2. Select fx-photo, open Adjust again and click the sticker
+3. Repeat with the music track
+4. Repeat with the transition
+5. Repeat with the video PiP fx-pipvideo
+6. Repeat with an empty spot of the canvas or timeline (deselect)","Steps 1–6: the Adjust panel closes each time
+Steps 2–6: reopening Adjust on fx-photo still shows 「Brightness」 40",P1,R-031,,new,New table (REQ-001)
+TC-043,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Adjust panel open for fx-main with 「Contrast」 25","1. Click ✕ on the panel
+2. Open Adjust again
+3. Click the left-nav 「Music」 tab
+4. Select fx-main and open Adjust again","Step 1: the panel closes and the viewer keeps the adjusted look
+Step 2: 「Contrast」 25
+Step 3: the Music tab replaces the panel
+Step 4: 「Contrast」 25",P1,R-032,,new,New table (REQ-001)
+TC-044,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main is a landscape video placed so BG Blur shows a blurred background (e.g. a portrait canvas or a smaller clip)","1. Turn on 「BG Blur」 for fx-main
+2. Open Adjust and set 「Saturation」 to -100",Step 2: the clip and its blurred background both turn black and white,P1,R-033,,new,New table (REQ-001)
+TC-045,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-photo on the main track (a main photo) after fx-main (web/fixtures.md)
+4. Playback paused
+5. Cutout applied to the main photo fx-photo","1. Open Adjust for fx-photo
+2. Set 「Hue」 to 0
+3. Turn Cutout off","Step 2: the visible (kept) part changes hue
+Step 3: the whole photo, background included, shows the same hue (the whole image was adjusted)",P2,R-034,,new,New table (REQ-001)
+TC-046,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. Cutout applied to the Photo PiP fx-photo","1. Open Adjust for fx-photo and set 「Brightness」 to 60
+2. Turn Cutout off","Step 1: only the cut-out subject is visible and brighter
+Step 2: the whole photo shows the same brightness",P2,R-034,,new,New table (REQ-001)
+TC-047,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. A Mask shape (e.g. a circle) applied to the Photo PiP fx-photo","1. Open Adjust for fx-photo and set 「Saturation」 to -100
+2. Open Mask and choose 「None」
+3. Click 「Done」","Step 1: the visible circle turns black and white
+Step 3: the whole photo is black and white",P2,R-034,,new,New table (REQ-001)
+TC-048,Adjust scope and selection,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The missing-file project of web/fixtures.md (its main video, main photo and Photo PiP sources removed from Uploads)
+3. Playback paused","1. Click the main video clip
+2. Click the main photo clip
+3. Click the Photo PiP clip on the timeline","Step 1: 「Adjust」 is grey and does nothing when clicked, like 「BG Blur」, 「Trim」, 「Corner」, 「Fade In」, 「Fade Out」 and 「Audio」
+Step 2: 「Adjust」 is grey and does nothing when clicked
+Step 3: 「Adjust」 is grey and does nothing when clicked",P2,R-035,"Fixture: if the site gives no way to make a source missing, record Blocked --as test-data. A missing-file clip draws grey on the timeline (KC tech guide).",new,New table (REQ-001)
+TC-049,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open","1. Set fx-main 「Saturation」 to -100
+2. Look at the fx-main clip on the timeline and at its Layer thumbnail","The timeline clip thumbnails turn black and white
+The Layer thumbnail turns black and white
+No badge or icon is added to the clip for Adjust",P1,"R-036, R-037",,new,New table (REQ-001)
+TC-050,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-photo on the main track (a main photo) after fx-main (web/fixtures.md)
+3. Playback paused
+4. Layer panel open","1. Set the main photo's 「Hue」 to 0
+2. Look at its timeline clip and its Layer thumbnail","The timeline thumbnail and the Layer thumbnail show the new hue
+No badge on the clip",P2,"R-036, R-037",,new,New table (REQ-001)
+TC-051,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open","1. Set the Photo PiP's 「Brightness」 to -80
+2. Look at its PiP clip on the timeline and its Layer thumbnail","The PiP clip thumbnail and the Layer thumbnail are darker
+No badge on the PiP clip",P1,"R-036, R-037",,new,New table (REQ-001)
+TC-052,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main is the first clip of the project, adjusted to 「Saturation」 -100
+5. Wait until the cloud save icon shows saved","1. Open My Projects › Video in a new tab
+2. Find the project card",The project thumbnail shows the black-and-white first frame,P2,R-037,,new,New table (REQ-001)
+TC-053,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-photo on the main track (a main photo) after fx-main (web/fixtures.md)
+4. Playback paused
+5. Layer panel open
+6. The main photo fx-photo has Cutout and 「Corner」 30, and is rotated 45° with the canvas handle
+7. Fade In on it","1. Look at the main photo's timeline clip
+2. Look at its Layer thumbnail
+3. Look at the My Projects card (when it is the first clip)","Step 1: the timeline thumbnail shows the original full photo, square-cornered and upright
+Step 2: the Layer thumbnail shows the cut-out, rounded and rotated photo
+Steps 1–3: no thumbnail shows the fade",P2,"R-038, R-039",,new,New table (REQ-001)
+TC-054,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open
+5. The Photo PiP fx-photo has only 「Corner」 40 (no Cutout, Crop or Mask)",Look at its PiP clip on the timeline and its Layer thumbnail,Both thumbnails show the rounded corners,P2,"R-038, R-040","Corner shows on the Timeline PiP thumbnail even without Cutout, Crop or Mask (KC thumbnail rule, changed from MyEdit's older rule).",new,New table (REQ-001)
+TC-055,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. Layer panel open
+6. The Photo PiP fx-photo has Cutout, a circle Mask, 「Brightness」 -50 and Fade In and Fade Out","1. Look at its PiP clip on the timeline
+2. Look at its Layer thumbnail","Steps 1–2: both show the darker cut-out photo inside the circle
+Steps 1–2: neither shows the fade",P2,"R-038, R-040",,new,New table (REQ-001)
+TC-056,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main adjusted (「Saturation」 -100, 「Contrast」 50), the Photo PiP adjusted (「Hue」 0, 「Brightness」 40), Temperature and Tint changed on one of them","1. Click 「Export」 (or 「Export & Share」) and download the MP4
+2. Play the downloaded file","Step 2: fx-main is black and white with higher contrast, as in the viewer
+Step 2: the PiP shows the changed hue and brightness, as in the viewer",P1,"R-041, R-009, R-010, R-011, R-012, R-013, R-014",The button is 「Export & Share」 once the Share Project URL item ships (separate feature); the Biz Design still draws 「Export」.,new,New table (REQ-001)
+TC-057,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-photo on the main track (a main photo) after fx-main (web/fixtures.md)
+3. Playback paused
+4. The main photo adjusted (「Tint」 90)","1. Export and download the MP4
+2. Play the file",The main photo has the magenta tint seen in the viewer,P2,R-041,,new,New table (REQ-001)
+TC-058,"Adjust thumbnails, export and project","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main (「Saturation」 -50) and the Photo PiP (「Brightness」 30) adjusted
+5. The cloud save icon shows saved","1. Reload the page (or open the project again from My Projects)
+2. Open Adjust for fx-main
+3. Open Adjust for the PiP","Step 1: the viewer shows both adjustments
+Step 2: 「Saturation」 -50 for fx-main
+Step 3: 「Brightness」 30 for the PiP",P1,R-042,,new,New table (REQ-001)
+TC-059,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. The playhead inside the Photo PiP fx-photo, fx-photo never masked","1. Select fx-photo
+2. Click 「Mask」
+3. Look at the whole page","Step 3: the selected PiP and the main-video frame under it are shown zoomed
+Step 3: the timeline, the editing toolbar, the Layer panel and the Full screen button are hidden
+Step 3: 「Export」 (「Export & Share」) is disabled
+Step 3: 「Done」 and 「Discard」 show
+Step 3: the left panel titled 「Mask」 lists 「None」 first, selected",P1,"R-043, R-046","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-060,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo starts at 0:05
+5. The playhead at 0:02 (outside fx-photo), fx-photo selected
+6. fx-main shows a different frame at 0:02 and 0:05 (time code burnt in)","1. Note the playhead time
+2. Click 「Mask」
+3. Read the main-video frame behind the photo
+4. Click 「Discard」 and read the playhead","Step 3: the background is the main-video frame at 0:05 (the PiP's start)
+Steps 2–4: the playhead stays at 0:02",P1,R-044,"Q-2: KC Mask spec (2026-11-25) says the playhead does not move; the PM Figma 20261019 update says it moves to the PiP start (as Crop & Rotate does). The newer KC wins. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-061,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. The playhead at 0:07, inside fx-photo (0:05 – 0:10)","1. Click 「Mask」
+2. Click 「Discard」
+3. Read the playhead","Step 1: the background is the frame at 0:07
+Step 3: the playhead is still at 0:07",P2,R-045,"PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-062,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo
+5. Photo Editor (same account) open in another tab with a photo selected and its Mask panel open","1. Count the shapes in the Video Editor Mask list
+2. Compare the list with Photo Editor's Mask list","Step 1: 「None」 plus 52 shapes
+Step 2: the same shapes in the same order as Photo Editor",P1,R-047,"The shape list is fixed, not from CMS (KC). Photo Editor: two columns, None first (KC code-derived). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-063,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo (fx-photo is non-square, web/fixtures.md)","1. Click shape 1 of the list (counting after 「None」)
+2. Click each next shape up to shape 13, looking at the canvas each time
+3. Click 「Done」 on shape 13
+4. Look at the canvas and the Layer thumbnail","Step 2: each click applies that shape to the photo at once, outlined as selected in the list
+Step 2: each shape keeps its proportions (not stretched)
+Step 4: the photo shows shape 13 on the canvas and in the Layer thumbnail",P1,"R-048, R-053, R-055","Shape positions 1–13 (value check: the 52 shapes are walked in four rows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-064,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo (fx-photo is non-square, web/fixtures.md)","1. Click shape 14 of the list (counting after 「None」)
+2. Click each next shape up to shape 26, looking at the canvas each time
+3. Click 「Done」 on shape 26
+4. Look at the canvas and the Layer thumbnail","Step 2: each click applies that shape to the photo at once, outlined as selected in the list
+Step 2: each shape keeps its proportions (not stretched)
+Step 4: the photo shows shape 26 on the canvas and in the Layer thumbnail",P2,"R-048, R-053, R-055","Shape positions 14–26 (value check: the 52 shapes are walked in four rows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-065,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo (fx-photo is non-square, web/fixtures.md)","1. Click shape 27 of the list (counting after 「None」)
+2. Click each next shape up to shape 39, looking at the canvas each time
+3. Click 「Done」 on shape 39
+4. Look at the canvas and the Layer thumbnail","Step 2: each click applies that shape to the photo at once, outlined as selected in the list
+Step 2: each shape keeps its proportions (not stretched)
+Step 4: the photo shows shape 39 on the canvas and in the Layer thumbnail",P2,"R-048, R-053, R-055","Shape positions 27–39 (value check: the 52 shapes are walked in four rows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-066,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo (fx-photo is non-square, web/fixtures.md)","1. Click shape 40 of the list (counting after 「None」)
+2. Click each next shape up to shape 52, looking at the canvas each time
+3. Click 「Done」 on shape 52
+4. Look at the canvas and the Layer thumbnail","Step 2: each click applies that shape to the photo at once, outlined as selected in the list
+Step 2: each shape keeps its proportions (not stretched)
+Step 4: the photo shows shape 52 on the canvas and in the Layer thumbnail",P2,"R-048, R-053, R-055","Shape positions 40–52 (value check: the 52 shapes are walked in four rows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-067,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo masked with a heart shape and moved inside the mask to show its left half",Select fx-photo and click 「Mask」 again,"The heart is selected in the list
+The photo keeps the position it had inside the heart",P1,R-049,"PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-068,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo masked with a circle","1. Click 「Mask」
+2. Click 「None」
+3. Click 「Done」","Step 2: the whole photo shows again
+Step 3: the canvas and the Layer thumbnail show the whole photo",P2,"R-048, R-055","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-069,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo with a square shape
+5. Screen recording running","1. Hover the Rotate icon of the photo
+2. Drag the rotate handle slowly by about 40°
+3. Release","Step 1: the tooltip 「Rotate」 shows
+Step 2: the current angle shows and changes live during the drag
+Step 3: the photo stays rotated at the shown angle",P1,"R-050, R-051","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-070,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Mask mode open on fx-photo","1. Click zoom in (or move the zoom slider right) twice
+2. Click zoom out twice","Step 1: the view gets larger each time
+Step 2: the view gets smaller again",P2,R-052,"PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-071,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo not masked","1. Click 「Mask」 and choose a star
+2. Click 「Done」","Step 2: the mode closes and the timeline, toolbar and Layer panel come back
+Step 2: the canvas shows the star-masked photo
+Step 2: the PiP clip thumbnail and the Layer thumbnail show the star",P1,"R-053, R-055","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-072,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo masked with a circle","1. Click 「Mask」
+2. Choose a triangle and rotate the photo by 30°
+3. Click 「Discard」","Step 3: the mode closes
+Step 3: fx-photo is the same circle with the same angle and position as before entering
+Step 3: the thumbnails still show the circle",P1,R-054,"Q-12: the spec only says there is a Discard; the row assumes it drops this visit's changes. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-073,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo not masked","1. Click 「Mask」, choose a heart, rotate by 20°, click 「Done」
+2. Click Undo once
+3. Click Redo once","Step 2: one Undo removes the heart and the 20° together
+Step 3: the heart and the angle come back",P2,R-063,"Q-7: assumption one Undo per Mask visit, as for Crop & Rotate (ME-PIP-20261104-S006-B014). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-074,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo has Fade In and Fade Out (1 s each)
+5. The playhead at fx-photo's first frame, where the photo is faded","1. Click 「Mask」
+2. Look at the photo
+3. Click 「Done」
+4. Play fx-photo","Step 2: the photo shows fully, without the fade
+Step 4: Fade In and Fade Out still play",P2,R-062,"Q-6: PM Figma 20261019 (「自動移除 effect」); the KC Mask spec says nothing. Assumption as the Contract Runner reading for Crop & Rotate (ME-PIP-20261104-S003-B007, B008). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-075,Mask mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-main has Fade In
+5. fx-photo covers fx-main's faded first second, playhead in the fade","1. Note the faded main-video frame
+2. Select fx-photo, open 「Mask」, click 「Done」
+3. Look at the same frame
+4. Open fx-main's Fade In setting","Step 3: the main video is faded the same way as before
+Step 4: Fade In is still on with the same duration",P3,R-062,"PM Figma 20261019: main-video fades and transitions stay as they are. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-076,Mask with Corner and Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo with 「Corner」 50","1. Open 「Mask」 and choose the square (a shape that fills its box)
+2. Click 「Done」
+3. Open 「Mask」 again and choose the circle
+4. Click 「Done」
+5. Repeat with the star","Step 2: the square has rounded corners
+Steps 4–5: circle and star show no visible rounding change
+Steps 1–5: Corner stays 50 (both apply together)",P1,R-056,"Corner + Mask together: weekly meeting 2026-03-04; differs from Photo Editor V2 for now (KC). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-077,Mask with Corner and Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo with 「Corner」 50
+5. Corner rounding shows live in Crop & Rotate mode on this build (open Crop/Rotate on a cornered PiP first and look)",Open 「Mask」 and choose the square,Inside Mask mode the square already shows the rounded corners,P3,R-057,"Ships together with Crop & Rotate's live corner (KC). If Crop & Rotate mode does not show it live on the build, record Not run. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-078,Mask with Corner and Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. Cutout applied to fx-photo (the subject photo fx-subject as the PiP)
+6. Screen recording running","1. Click 「Mask」
+2. Choose a circle that cuts off part of the subject
+3. Choose a square instead
+4. Click 「Done」","Step 1: the mode shows the whole cut-out photo
+Steps 2–4: no Cutout processing screen appears
+Step 4: the canvas shows the cut-out subject inside the square only",P1,"R-058, R-060","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-079,Mask with Corner and Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. fx-subject as Photo PiP, masked with a circle, never cut out
+6. A second copy of fx-subject as another PiP, unmasked, for comparison
+7. Screen recording running","1. Select the masked PiP and click 「Cutout」
+2. Wait for the result
+3. Click 「Cutout」 on the unmasked copy
+4. Open 「Mask」 on the masked PiP and choose 「None」","Steps 1 and 3: the same Cutout processing screen shows for both
+Step 2: the circle stays and only the subject inside it is visible
+Step 4: the whole subject, also the part that was outside the circle, is cut out",P1,R-059,"The waits need not be equal (the Cutout cache can shorten one; contract ME-PIP-20261104-S006-B011 not testable). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-080,Mask with Corner and Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. fx-subject PiP with Cutout and a circle Mask","1. Open 「Mask」 and move the photo inside the circle
+2. Rotate it 30°
+3. Click 「Done」
+4. Click 「Cutout」 to turn it off
+5. Click 「Cutout」 to turn it on again","Steps 1–3: no Cutout processing screen
+Step 3: the cutout edge of the subject is unchanged, only shifted and rotated
+Step 4: the earlier cutout comes back with the circle kept",P2,"R-060, R-061","PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-081,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. The playhead inside fx-photo, fx-photo never cropped","1. Select fx-photo
+2. Click 「Crop/Rotate」
+3. Look at the whole page","Step 3: the selected PiP and the main-video frame are shown zoomed
+Step 3: the timeline, the editing toolbar, the Layer panel and Full screen are hidden
+Step 3: 「Export」 (「Export & Share」) is disabled
+Step 3: 「Done」 and 「Discard」 show
+Step 3: the left panel 「Crop & Rotate」 shows 「Aspect Ratio」 with 「Original」, 「Custom」, 「1:1」, 「4:5」, 「5:4」, 「16:9」, 「9:16」, 「21:9」, 「9:21」 and a 「Rotate」 slider
+Step 3: 「Custom」 is selected",P1,"R-064, R-067, R-068","First entry is Custom; the Figma 「Original」 is a typo (PM, 2026-11-11). Contracts ME-PIP-20261104-S003-B001, B002, B003, B004, B012, S004-B001, B006. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-082,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo starts at 0:05
+5. The playhead at 0:02, fx-photo selected
+6. fx-main shows different frames at 0:02 and 0:05","1. Click 「Crop/Rotate」
+2. Read the main-video frame behind the photo
+3. Click 「Done」 without changes
+4. Read the playhead","Step 2: the background is the frame at 0:05
+Step 4: the playhead is at 0:05 (moved to the PiP's start)",P1,R-065,"Contracts ME-PIP-20261104-S003-B005, B013. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-083,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. The playhead at 0:07 inside fx-photo (0:05 – 0:10)","1. Click 「Crop/Rotate」
+2. Click 「Done」 without changes
+3. Read the playhead",Step 3: the playhead is still at 0:07,P2,R-066,"Contract ME-PIP-20261104-S003-B006. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-084,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Crop & Rotate mode open on fx-photo (red left half, blue top-right corner)","1. Drag the 「Rotate」 slider to 45
+2. Read the slider value and look at the photo
+3. Drag the slider to its left end and to its right end","Step 2: the photo turns 45° about its centre, live
+Step 3: record the slider ends (Photo Editor: -180 and 180, 1° steps; KC code-derived)",P1,R-071,"Contracts ME-PIP-20261104-S004-B006, B007. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-085,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Crop & Rotate mode open on fx-photo
+5. Screen recording running","1. Hover the Rotate icon of the photo
+2. Drag the rotate handle slowly by about 60°","Step 1: the tooltip 「Rotate」 shows
+Step 2: the angle shows and changes live during the drag, as in Mask mode",P1,"R-072, R-073","Contracts ME-PIP-20261104-S004-B004, B005. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-086,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Crop & Rotate mode open on fx-photo","1. Click zoom in twice
+2. Click zoom out twice","Step 1: the view gets larger
+Step 2: the view gets smaller again",P2,R-074,"Contracts ME-PIP-20261104-S005-B001, B002. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-087,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo never cropped
+5. Layer panel open before entering","1. Click 「Crop/Rotate」
+2. Set the 「Rotate」 slider to 30
+3. Choose 「1:1」 and move the box to keep the blue corner and cut most of the red half
+4. Click 「Done」","Step 4: the mode closes and the timeline and toolbar come back
+Step 4: the canvas shows the square crop with the blue corner, turned 30°
+Step 4: the Layer thumbnail and the PiP clip thumbnail show the cropped, rotated photo",P1,"R-075, R-078","REQ-002: the Timeline PiP thumbnail shows the Crop & Rotate rotation (MyEdit behaviour), over the KC line 「旋轉 … 維持正向」. Contracts ME-PIP-20261104-S006-B001, B002, S002-B001, B002. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-088,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo cropped 1:1 at 30° (previous row)",Select fx-photo and click 「Crop/Rotate」 again,"「1:1」 is selected
+The crop box is where it was left
+The 「Rotate」 slider reads 30",P1,"R-070, R-087","Contracts ME-PIP-20261104-S007-B001, B002. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-089,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo cropped 16:9 at 0°","1. Click 「Crop/Rotate」
+2. Choose 「9:16」, set Rotate to -40
+3. Click 「Discard」","Step 3: the mode closes
+Step 3: fx-photo keeps the 16:9 crop at 0° on the canvas and thumbnails
+Step 3: reopening shows 「16:9」 and 0",P1,R-076,"Q-12: Discard assumed to drop this visit's changes. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-090,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped, at 0°","1. Click 「Crop/Rotate」, choose 「1:1」 cutting off the blue corner, set Rotate to 60, click 「Done」
+2. Click Undo once without other edits
+3. Click Redo once","Step 2: one Undo brings back the uncropped photo at 0° (the blue corner shows again, upright)
+Step 3: the crop and the 60° come back together",P1,R-077,"Contract ME-PIP-20261104-S006-B014. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-091,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo has Fade In (1 s)
+5. The playhead on its first frame, where it is faded","1. Click 「Crop/Rotate」
+2. Look at the photo
+3. Click 「Done」 and play fx-photo","Step 2: the photo shows fully, without the fade
+Step 3: Fade In still plays",P2,R-085,"Q-6 (fade kept after leaving). Contract ME-PIP-20261104-S003-B007. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-092,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo has Fade Out (1 s)
+5. The playhead on its last frames, where it is faded","1. Click 「Crop/Rotate」
+2. Look at the photo
+3. Click 「Done」 and play the end of fx-photo","Step 2: the photo shows fully, without the fade
+Step 3: Fade Out still plays",P2,R-085,"Q-6. Contract ME-PIP-20261104-S003-B008. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-093,Crop & Rotate mode,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused
+4. fx-main has Fade In and Fade Out
+5. A transition (e.g. a dissolve) between fx-main and fx-main2
+6. fx-photo over fx-main's faded start","1. Note the main-video frame at the playhead, the Fade settings and the transition
+2. Select fx-photo, click 「Crop/Rotate」, click 「Done」 without changes
+3. Look at the same frame
+4. Open fx-main's Fade settings and the transition","Step 3: the main video is faded as before
+Step 4: Fade In, Fade Out (on, same durations) and the transition style are unchanged",P2,R-086,"Contracts ME-PIP-20261104-S003-B009, B010, B011. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-094,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「Original」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps the photo's own ratio (3:2 for fx-photo)
+Step 4: the canvas photo has that crop (Original)
+Step 5: 「Original」 is selected and the box is where it was left",P2,"R-069, R-070","Ratio Original. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-095,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「Custom」
+3. Drag the right edge of the crop box inwards
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps any shape: drag one side alone to make it 2:1
+Step 4: the canvas photo has that crop (Custom)
+Step 5: 「Custom」 is selected and the box is where it was left",P1,"R-069, R-070","Ratio Custom. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-096,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「1:1」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps square
+Step 4: the canvas photo has that crop (1:1)
+Step 5: 「1:1」 is selected and the box is where it was left",P1,"R-069, R-070","Ratio 1:1. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-097,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「4:5」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps portrait 4:5
+Step 4: the canvas photo has that crop (4:5)
+Step 5: 「4:5」 is selected and the box is where it was left",P2,"R-069, R-070","Ratio 4:5. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-098,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「5:4」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps landscape 5:4
+Step 4: the canvas photo has that crop (5:4)
+Step 5: 「5:4」 is selected and the box is where it was left",P2,"R-069, R-070","Ratio 5:4. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-099,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「16:9」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps landscape 16:9
+Step 4: the canvas photo has that crop (16:9)
+Step 5: 「16:9」 is selected and the box is where it was left",P1,"R-069, R-070","Ratio 16:9. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-100,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「9:16」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps portrait 9:16
+Step 4: the canvas photo has that crop (9:16)
+Step 5: 「9:16」 is selected and the box is where it was left",P1,"R-069, R-070","Ratio 9:16. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-101,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「21:9」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps landscape 21:9
+Step 4: the canvas photo has that crop (21:9)
+Step 5: 「21:9」 is selected and the box is where it was left",P2,"R-069, R-070","Ratio 21:9. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-102,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo uncropped","1. Click 「Crop/Rotate」
+2. Choose 「9:21」
+3. Drag a corner of the crop box
+4. Click 「Done」
+5. Click 「Crop/Rotate」 again","Step 3: the box keeps portrait 9:21
+Step 4: the canvas photo has that crop (9:21)
+Step 5: 「9:21」 is selected and the box is where it was left",P2,"R-069, R-070","Ratio 9:21. Ratio choice and apply as Photo Editor (contracts ME-PIP-20261104-S004-B002, B003; parity row follows). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-103,Crop & Rotate ratios,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Biz Photo Editor open in another tab with fx-photo added as a photo on a canvas (same account)","1. In Video Editor, open Crop/Rotate on fx-photo
+2. Choose 「16:9」
+3. Set 「Rotate」 to 90
+4. Choose 「Original」
+5. Click 「Done」
+6. In Photo Editor, repeat steps 1–4 on the same photo and click 「Apply」
+7. Compare the two crop boxes after each step and the two results","Step 7: the box behaves the same in both (locks to the ratio, how it fits after the 90° turn, Original back to the full photo)
+Step 7: the two results have the same crop",P2,R-069,"Photo Editor parity (KC: 「行為跟 Photo Editor 的裁切一致」). Photo Editor leaves crop mode with 「Apply」, Video Editor with 「Done」. Contracts ME-PIP-20261104-S004-B002, B003 (RATIO-PARITY). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-104,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. fx-subject as Photo PiP with Cutout applied, never cropped
+6. Screen recording running","1. Click 「Crop/Rotate」
+2. Watch the change into the mode frame by frame
+3. Look at the photo in the mode","Step 2: the view fades out and in briefly
+Step 2: no loading icon (the change takes under 0.3 s)
+Step 3: the whole cut-out photo shows",P1,"R-079, R-080","A loading icon may show only when the change is not done after 0.3 s (KC). Contracts ME-PIP-20261104-S004-B008, B009, S006-B008. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-105,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. Crop & Rotate mode open on the cut-out fx-subject
+6. Screen recording running","1. Choose 「1:1」 and move the box so the subject's feet fall outside
+2. Click 「Done」
+3. Watch the change back frame by frame","Steps 1–2: no Cutout processing screen
+Step 3: the view fades out and in briefly with no loading icon
+Step 3: the canvas shows the cut-out subject without its feet",P1,"R-079, R-080","Contracts ME-PIP-20261104-S006-B003, B007, B009. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-106,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. The cut-out fx-subject cropped 1:1 without its feet (previous row)","1. Click 「Crop/Rotate」 again
+2. Look at the area outside the box
+3. Choose 「Original」 (or drag the box) to include the feet again
+4. Click 「Done」","Step 2: the cut-out feet are visible outside the box (the whole cut-out photo is shown)
+Steps 3–4: no Cutout processing screen
+Step 4: the feet show on the canvas, cut out from the background",P1,"R-079, R-082","Contracts ME-PIP-20261104-S004-B008, S006-B012. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-107,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. The cut-out fx-subject over a recognisable main video","1. Click 「Crop/Rotate」
+2. Set 「Rotate」 to 45 without changing the crop
+3. Click 「Done」","Step 3: the subject is turned 45°
+Step 3: the cutout outline is the same and the main video shows through the transparent area",P2,R-083,"Contract ME-PIP-20261104-S006-B013. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-108,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. fx-subject as Photo PiP, never cut out
+6. A second fx-subject PiP, uncropped and never cut out, for comparison
+7. Screen recording running","1. Crop the first PiP 1:1 without the subject's feet
+2. Click 「Done」
+3. Click 「Cutout」 and wait
+4. Click 「Cutout」 on the uncropped copy and wait
+5. Open Crop/Rotate on the first PiP and choose 「Original」
+6. Click 「Done」","Step 4: the cut-out subject keeps the same 1:1 crop
+Steps 3–5: the same Cutout processing screen shows for both
+Step 6: the feet appear, already cut out (the whole original photo was cut)",P1,R-081,"Waits need not be equal (S006-B011 not testable). Contracts ME-PIP-20261104-S006-B004, B005, B010. PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-109,Crop & Rotate with Cutout,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused
+5. The cut-out fx-subject cropped 1:1 at 20°
+6. Screen recording running","1. Click 「Cutout」 to turn it off
+2. Click 「Cutout」 to turn it on again","Step 1: the background shows again, crop and angle kept
+Step 2: the same cutout outline comes back, crop and angle kept
+Step 2: a short Cutout processing screen may show",P2,R-084,"KC: off and on reuses the stored result; the user accepted a short processing screen for MyEdit (contract ME-PIP-20261104-S006-B006). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-110,Rotation and thumbnails across tools,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. fx-photo at 0°","1. Rotate fx-photo with the canvas handle to 30
+2. Open 「Crop/Rotate」 and read 「Rotate」
+3. Set it to 50 and click 「Done」
+4. Open 「Mask」 and read its angle
+5. Rotate in Mask mode to 70 and click 「Done」
+6. Open 「Crop/Rotate」 and read 「Rotate」","Step 2: 30
+Step 4: 50
+Step 6: 70
+Steps 1–6: the canvas photo always has the angle last set",P1,R-087,"One shared angle for the canvas handle, Mask Rotate and Crop & Rotate Rotate (KC, PM 2026-11-11; REQ-002: MyEdit read 170 after a handle drag).",new,New table (REQ-001)
+TC-111,Rotation and thumbnails across tools,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open
+5. fx-photo uncropped at 0°","1. Open 「Crop/Rotate」, set 「Rotate」 to 90, click 「Done」
+2. Look at the PiP clip thumbnail and the Layer thumbnail
+3. Rotate the photo further with the canvas handle to 170
+4. Look at both thumbnails again
+5. Open 「Crop/Rotate」 and read 「Rotate」","Step 2: both thumbnails show the photo turned 90°
+Step 4: the Layer thumbnail shows 170°
+Step 4: the Timeline thumbnail still shows the 90° of the last Crop & Rotate
+Step 5: 「Rotate」 reads 170",P1,"R-088, R-087","REQ-002 (user ruling, MyEdit-5.11.0-11262258): Timeline follows Crop & Rotate Done, not the canvas handle; overrides the KC thumbnail line for Photo PiP.",new,New table (REQ-001)
+TC-112,Rotation and thumbnails across tools,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open
+5. fx-photo never opened in Crop/Rotate or Mask, at 0°","1. Rotate fx-photo with the canvas handle to 45
+2. Look at the PiP clip thumbnail, the Layer thumbnail and (if fx-photo is in the first frame) the My Projects card","The Timeline thumbnail stays upright
+The Layer thumbnail shows 45°",P2,"R-089, R-038",,new,New table (REQ-001)
+TC-113,Rotation and thumbnails across tools,"1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused
+4. Layer panel open
+5. fx-photo uncropped at 0°","1. Open 「Mask」, choose a square, rotate to 60, click 「Done」
+2. Look at the PiP clip thumbnail and the Layer thumbnail",Both thumbnails show the square-masked photo turned 60°,P2,"R-090, R-055","Q-11: assumption the Timeline thumbnail follows Mask Done as it follows Crop & Rotate Done (REQ-002). PM-only: no MyEdit Biz Design frame yet (Design UJ, due 2026-11-27)",new,New table (REQ-001)
+TC-114,"Export, project and plan","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused
+4. fx-photo cropped 1:1 at 30°
+5. fx-photo2 masked with a heart","1. Export and download the MP4
+2. Play the file","fx-photo shows the 1:1 crop at 30°, as on the canvas
+fx-photo2 shows the heart mask, as on the canvas",P1,R-091,Q-9: the KC states export only for Adjust; assumption the export matches the canvas.,new,New table (REQ-001)
+TC-115,"Export, project and plan","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. The ""full"" project of web/fixtures.md: fx-main and fx-main2 on the main track with a transition between them, fx-photo and fx-photo2 as Photo PiPs, fx-pipvideo as a video PiP, a text, a sticker and a music track
+3. Playback paused
+4. fx-photo cropped 1:1 at 30°
+5. fx-photo2 masked with a heart
+6. The cloud save icon shows saved","1. Reload the page (or reopen the project from My Projects)
+2. Open Crop/Rotate on fx-photo
+3. Open Mask on fx-photo2","Step 1: the canvas shows both as before
+Step 2: 「1:1」 and 30 for fx-photo
+Step 3: the heart is selected for fx-photo2",P1,R-092,"Q-9: assumption the project keeps them, as it keeps Adjust (R-042).",new,New table (REQ-001)
+TC-116,"Export, project and plan","1. Chrome at 1440 × 900 on MyEdit Biz demo signed in as an account without Biz Pro (web/fixtures.md)
+2. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+3. Playback paused","1. Select fx-main and look at 「Adjust」
+2. Select fx-photo and look at 「Crop/Rotate」, 「Mask」, 「Adjust」 and 「Cutout」
+3. Open Adjust, Mask and Crop/Rotate in turn and apply a change with each","Steps 1–2: 「Adjust」, 「Crop/Rotate」 and 「Mask」 carry no Premium mark
+Step 2: record the 「Cutout」 mark (Premium for accounts without Biz Pro, KC code-derived)
+Step 3: each change applies without an upgrade prompt",P2,R-093,Q-10: the KC specs name no plan gate for these tools; assumption every signed-in plan may use them.,new,New table (REQ-001)
+TC-117,"Export, project and plan","1. Chrome at 1440 × 900 on MyEdit Biz demo (business-demo.myedit.online, en), signed in as the main test account (web/fixtures.md)
+2. Signed in as a Biz Pro account (Cutout is Biz Pro only; web/fixtures.md)
+3. A Video Editor project with fx-main on the main track and fx-photo as a Photo PiP over it (web/fixtures.md)
+4. Playback paused","Select fx-photo and use 「Adjust」, 「Mask」 and 「Crop/Rotate」 once each",Each tool opens and applies with no Premium mark or upgrade prompt,P3,R-093,,new,New table (REQ-001)

@@ -40,6 +40,7 @@ import { thumbnail } from './lib/thumbs.ts';
 import { LINK_STEP, linkBlocks } from './lib/links.ts';
 import { arrowRequirement, matchTaps, requirementRows, tcList, type MatchGroup, type TapMatch } from './lib/coverage.ts';
 import { withShared } from './lib/page-shared.ts';
+import { toJpeg } from './lib/image.ts';
 
 const [feature, platform] = process.argv.slice(2);
 assertIds(feature, platform);
@@ -240,7 +241,11 @@ for (const [pdf, list] of jobs) {
   writeFileSync(jobsFile, JSON.stringify(list.map(({ out, region, max }) => ({ out, region, max }))));
   spawnSync('node', [join(ROOT, 'scripts', 'render-region.ts'), pdf, '--jobs', jobsFile], { stdio: 'inherit' });
   unlinkSync(jobsFile);
-  for (const j of list) if (existsSync(j.out)) { spawnSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '72', j.out, '--out', j.img], { stdio: 'ignore' }); unlinkSync(j.out); saveImgBox(j.img, j.box); }
+  // JPEG copy by sips on macOS, mupdf elsewhere (lib/image.ts); the rendered PNG goes only once the copy exists
+  for (const j of list) if (existsSync(j.out)) {
+    const made = process.platform === 'darwin' ? spawnSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '72', j.out, '--out', j.img], { stdio: 'ignore' }).status === 0 && existsSync(j.img) : toJpeg(j.out, j.img, { quality: 72 });
+    if (made) { unlinkSync(j.out); saveImgBox(j.img, j.box); }
+  }
 }
 // PM and MX boards are named by the read (pm-update-11, mx-b-left: their Figma frames are unnamed "Frame 1430…"), so
 // the page shows the spec region's title from boards.json instead; the name stays the key. Two boards in one region
@@ -306,7 +311,7 @@ const groups = trace.map(e => {
   const hits = assigned.get(e.group) ?? [];
   // a keyboard closed later in the same case (hidekb, Done, return) dismisses the input
   const dismissed = e.kind === 'input' && (hits.some(({ tap }) => { const i = taps.indexOf(tap);
-    return taps.slice(i + 1, i + 40).some(n => n.run === tap.run && n.case === tap.case && (n.cmd === 'hidekb' || DISMISS.test(n.el?.label || n.el?.name || ''))); })
+    return taps.slice(i + 1, i + 40).some(n => n.run === tap.run && n.case === tap.case && (n.cmd === 'hidekb' || n.cmd === 'key' && /^(Escape|Enter|Tab)$/.test(n.el?.label ?? '') || DISMISS.test(n.el?.label || n.el?.name || ''))); })
     || dismiss.some(ran));
   const res = press.map(id => result.get(id)?.result ?? 'Not run');
   const status = /^n\/a:/.test(e.press) ? 'na' : hits.length ? 'proof' : !press.length ? 'none' : press.some(ran) ? 'ran'

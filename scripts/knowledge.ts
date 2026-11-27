@@ -35,7 +35,7 @@ if (maybePlatform === 'inbox') {
   }
   process.exit(0);
 }
-const platform = ['ios', 'android'].includes(maybePlatform) ? maybePlatform : undefined;
+const platform = ['ios', 'android', 'web'].includes(maybePlatform) ? maybePlatform : undefined;
 const { entries, problems } = loadKnowledge(id);
 
 if (process.argv.includes('--check')) {

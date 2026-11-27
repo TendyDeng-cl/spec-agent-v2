@@ -33,7 +33,7 @@ const lan = process.argv.includes('--lan'), host = lan ? '0.0.0.0' : '127.0.0.1'
 const table = tableDir(feature, platform);
 let manifest = readManifest(feature, platform);
 
-let draftId: string, draftDir: string | null, rows: Record<string, string>[], spec: any, requirements = '', plan = '';
+let draftId: string, draftDir: string | null, rows: Record<string, string>[], spec: any, requirements = '', plan = '', planZh = '', reqZh = '';
 let previous: Record<string, Record<string, string>> = {};
 // Chinese reading copy (lib/zh.ts) and its Open questions copy; Save copies both to the table, never back into the rows.
 let zh: Record<string, Record<string, string>> = {};
@@ -41,7 +41,7 @@ let qzh: Record<string, string> = {};
 // read on every page load, so a draft or table changed on disk shows without restarting the server
 function load() {
   manifest = readManifest(feature, platform);
-  requirements = ''; plan = '';
+  requirements = ''; plan = ''; planZh = ''; reqZh = '';
   if (draftArg) {
     draftId = draftArg;
     draftDir = join(draftsDir(feature, platform), draftArg);
@@ -50,6 +50,9 @@ function load() {
     spec = JSON.parse(readFileSync(join(draftDir, 'spec.json'), 'utf8'));
     if (existsSync(join(draftDir, 'requirements.md'))) requirements = readFileSync(join(draftDir, 'requirements.md'), 'utf8');
     if (existsSync(join(draftDir, 'update-plan.md'))) plan = readFileSync(join(draftDir, 'update-plan.md'), 'utf8');
+    // Chinese reading copies of the plan and the requirements (user, 2026-11-25), shown in 中文 mode only
+    if (existsSync(join(draftDir, 'requirements.zh-Hant.md'))) reqZh = readFileSync(join(draftDir, 'requirements.zh-Hant.md'), 'utf8');
+    if (existsSync(join(draftDir, 'update-plan.zh-Hant.md'))) planZh = readFileSync(join(draftDir, 'update-plan.zh-Hant.md'), 'utf8');
   } else {
     if (!manifest) throw new Error(`No approved table for ${feature} / ${platform}; pass --draft <id>.`);
     draftId ??= `edit-${stamp()}`;
@@ -57,6 +60,7 @@ function load() {
     rows = readTable(join(table, 'cases.csv'));
     spec = { title: manifest.title, spec_folder: manifest.spec_folder, spec_files: manifest.spec_files, spec_set_sha256: manifest.spec_set_sha256 };
     if (existsSync(join(table, 'requirements.md'))) requirements = readFileSync(join(table, 'requirements.md'), 'utf8');
+    if (existsSync(join(table, 'requirements.zh-Hant.md'))) reqZh = readFileSync(join(table, 'requirements.zh-Hant.md'), 'utf8');
   }
   zh = readZhCopy(draftDir ? join(draftDir, 'draft.zh-Hant.csv') : join(table, 'cases.zh-Hant.csv'), rows);   // stale rows show English
   qzh = readQuestionsZh(draftDir ?? table);
@@ -65,11 +69,22 @@ function load() {
 }
 load();
 
+// The draft still matches the approved table: same IDs, same table cells. A draft rebuilt after its Save (a row held
+// by a later answer) is not "saved" and offers Save again (2026-11-25).
+function sameAsApproved(): boolean {
+  const ids = Object.keys(previous);
+  if (ids.length !== rows.length) return false;
+  return rows.every(r => {
+    const p = previous[r.ID];
+    return !!p && Object.keys(p).every(k => (p[k] ?? '') === (r[k] ?? ''));
+  });
+}
+
 const page = (local: boolean) => renderPage({
   mode: 'review', save: local, feature, platform, title: spec.title ?? feature, draft: draftId,
   based_on_version: manifest?.version ?? null, version: manifest?.version ?? null, approved_at: manifest?.approved_at ?? null,
-  saved_from_draft: !!draftArg && manifest?.draft === draftId,
-  spec_files: spec.spec_files, rows, previous: draftArg ? previous : {}, requirements, update_plan: plan, zh,
+  saved_from_draft: !!draftArg && manifest?.draft === draftId && sameAsApproved(),
+  spec_files: spec.spec_files, rows, previous: draftArg ? previous : {}, requirements, update_plan: plan, update_plan_zh: planZh, requirements_zh: reqZh, zh,
   questions: parseQuestions(requirements), answers: readAnswers(feature), questions_zh: qzh,
 });
 

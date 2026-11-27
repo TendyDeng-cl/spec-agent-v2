@@ -226,10 +226,10 @@ function buildData() {
     feature: manifest.title ?? feature, version: manifest.version ?? '?', totalCases: readRecords(readFileSync(join(base, 'cases.csv'), 'utf8')).length,
     build: build || '?', unavailable: phasesFile.unavailable ?? {}, generated: new Date().toISOString().replace('T', ' ').slice(0, 16) + ' UTC',
     phases: phases.map((p: any) => ({
-      id: p.id, name: p.name, current: currentIds.has(p.id), build: phaseBuild[p.id] ?? '', fromDraft: p.fromDraft ?? '',
+      id: p.id, name: p.name, name_zh: p.name_zh ?? '', note_zh: p.note_zh ?? '', current: currentIds.has(p.id), build: phaseBuild[p.id] ?? '', fromDraft: p.fromDraft ?? '',
       log: currentIds.has(p.id) && planFor(p.id) === planPath ? null : logOf(planFor(p.id)), note: p.note ?? '', skip: p.skip ?? '', hold: p.hold ?? '', runDir: phaseRun[p.id] ?? '', stats: pub(stat[p.id]),
       wrapUp: pub(stat[`${p.id}/wrap-up`]),
-      segments: p.segments.map((s: any) => ({ id: s.id, name: s.name, stats: pub(stat[`${p.id}/${s.id}`]), cases: s.cases.map((id: string) => {
+      segments: p.segments.map((s: any) => ({ id: s.id, name: s.name, name_zh: s.name_zh ?? '', stats: pub(stat[`${p.id}/${s.id}`]), cases: s.cases.map((id: string) => {
         const runName = (phaseRun[p.id] ?? '').replace(/^runs\/|\/$/g, '');
         const l = p.round ? byRun[runName]?.[id] : latest[id];
         return { id, origin: p.origin?.[id] ?? '', needs: (p.needsOf[id] ?? []).join(' '), section: cases[id]?.Section ?? '', action: short(cases[id]?.Action ?? ''), zh: zh[id] ? { section: zh[id].section, action: short(zh[id].action ?? '') } : undefined, result: l?.result ?? 'Not run', disp: l?.disp ?? '', actual: short(l?.actual ?? '', 400),

@@ -1,0 +1,98 @@
+{
+  "at": "2026-11-25T08:26:59.549Z",
+  "env": "demo",
+  "url": "https://stage2.cyberlink.com/account/credits",
+  "signedIn": true,
+  "balance": 4586,
+  "rows": [
+    {
+      "Time": "Nov 25, 2026 16:26",
+      "Credits": "-16",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Restoration"
+    },
+    {
+      "Time": "Nov 25, 2026 16:24",
+      "Credits": "-8",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:17",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Agent Request"
+    },
+    {
+      "Time": "Nov 25, 2026 16:16",
+      "Credits": "-48",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:16",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Agent Request"
+    },
+    {
+      "Time": "Nov 25, 2026 16:15",
+      "Credits": "-1",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "AI Agent Request"
+    },
+    {
+      "Time": "Nov 25, 2026 16:13",
+      "Credits": "-8",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:12",
+      "Credits": "-180",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    },
+    {
+      "Time": "Nov 25, 2026 16:00",
+      "Credits": "-16",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Restoration"
+    },
+    {
+      "Time": "Nov 25, 2026 15:55",
+      "Credits": "-8",
+      "Category": "Consume",
+      "Product": "MyEdit",
+      "Details": "Video Enhancer"
+    }
+  ],
+  "texts": [
+    "3",
+    "Credits",
+    "My Credits",
+    "credits available",
+    "credit icon",
+    "4586",
+    "Credits Details",
+    "All Categories",
+    "Time",
+    "Nov 25, 2026 16:26",
+    "-16",
+    "Category",
+    "Consume",
+    "Product",
+    "MyEdit",
+    "Details",
+    "Video Restoration"
+  ]
+}

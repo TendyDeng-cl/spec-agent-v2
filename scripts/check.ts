@@ -139,8 +139,9 @@ if (reqText && reqIds) {
     const p: { since?: string; reason?: string; owed?: string[] } = JSON.parse(readFileSync(pendingPath, 'utf8'));
     warnings.push(`PDF-only analysis since ${p.since ?? '?'} (${p.reason ?? 'no Figma access'}): Figma reads owed: ${(p.owed ?? []).join(', ') || 'steps 8 and 10'} (figma-pending.json)`);
     // One source for both platforms (SKILL.md step 0, 2026-11-11): the other table read this feature's Figma
-    const other = platform === 'ios' ? 'android' : 'ios';
-    const otherSet = readManifest(feature, other)?.spec_folder;
+    // the web table has no twin: the website's Design is not the phone's (user, 2026-11-24)
+    const other = platform === 'ios' ? 'android' : platform === 'android' ? 'ios' : '';
+    const otherSet = other ? readManifest(feature, other)?.spec_folder : undefined;
     const otherSpec = otherSet ? join(featureDir(feature), otherSet, 'spec-set.json') : '';
     if (otherSet && otherSet !== specFolder && existsSync(otherSpec)) {
       const o = JSON.parse(readFileSync(otherSpec, 'utf8'));

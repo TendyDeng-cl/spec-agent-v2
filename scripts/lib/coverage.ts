@@ -60,7 +60,8 @@ export function words(s: string) {
   for (const w of raw) { if (!w || STOP.has(w) || /^\d+$/.test(w)) continue; out.add(SYN.find(([re]) => re.test(w))?.[1] ?? w); }
   return out;
 }
-const PRESS = /^(tap|hold|burst|id|lbl|tapif|clear|setval)$/;
+// device-web.ts adds click (CSS selector), dbl and rclick (user, 2026-11-25)
+const PRESS = /^(tap|hold|burst|id|lbl|tapif|clear|setval|click|dbl|rclick)$/;
 function positionScore(t: TapLog, m: { box: number[]; sw: number; sh: number }) {
   if (!t.win) return { score: 0, how: '' };
   const [W, H] = t.win.split('x').map(Number), [x, y, w, h] = m.box, k = W / m.sw;

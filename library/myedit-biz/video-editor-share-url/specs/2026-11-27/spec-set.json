@@ -1,0 +1,37 @@
+{
+  "feature": "myedit-biz/video-editor-share-url",
+  "folder": "2026-11-27",
+  "received_at": "2026-11-27T05:10:08.229Z",
+  "spec_set_sha256": "f9acad7160a30c6e67ab842122057aae772b9974c9b301204cb4b0349573560d",
+  "files": [
+    {
+      "name": "Video Editor Share Project URL - KC spec 2026-11-11.md",
+      "sha256": "3d32b52d4c3e9fc1b5199b263df768402d350bd673a97e66a7388bff6c598e61",
+      "bytes": 7759
+    },
+    {
+      "name": "Video Editor Share Project URL - PM Figma 6531-156549.md",
+      "sha256": "45cdc73efe341dc193cf065c7728f8096dcc5740d64f8b4b1c7eb27190255767",
+      "bytes": 6483
+    }
+  ],
+  "source_priority": [
+    "design",
+    "pm"
+  ],
+  "figma": {
+    "pm": "https://www.figma.com/design/3GnLdOiX9G5NH27l1ltqVr/?node-id=6531-156549",
+    "design": null,
+    "design_reference_myedit_only": "https://www.figma.com/design/ZB9BpGIGsjikfB5p7sc8ma/?node-id=5782-31535"
+  },
+  "figma_only": true,
+  "knowledge_center": {
+    "connection": "cl-knowledge-center-myedit-biz",
+    "path": "myedit-biz/features/video-editor-share-project-url.md",
+    "status": "ready_for_rd",
+    "updated": "2026-11-11",
+    "read": "2026-11-27",
+    "jira": "MB-387"
+  },
+  "note": "Figma-only + Knowledge Center spec set (no PDF; 2026-11-27). Spec files: the KC PM spec text (myedit-biz/features/video-editor-share-project-url.md, Christine Lin, ready_for_rd 2026-11-11, moved from the MyEdit spec) and the text snapshot of the PM Figma section 6531:156549 and its five boards (file 3GnLdOiX9G5NH27l1ltqVr, read through figma-pm / qa1). No MyEdit Biz Design yet (UJ, due 2026-11-27): rows are PM-only. The MyEdit Design (ZB9BpGIGsjikfB5p7sc8ma 5782:31535) is MyEdit-only and was not read."
+}

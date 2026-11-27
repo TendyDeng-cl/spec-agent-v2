@@ -1,0 +1,432 @@
+{
+ "batch": "library/myedit/video-enhancer/web/ebugs/2026-11-25-r1",
+ "prepared": "2026-11-25T19:35+08:00",
+ "skills": "qadm-myedit-web-spec-contract-runner-agent/.codex/skills/{ebug-writing,create-ebug} (read in full)",
+ "target": {
+  "product": "MyEdit",
+  "productId": "274",
+  "project": "(23404)MyEdit 5.11.0 (2026 November) [eBug template seen on the filed tickets]",
+  "version": "5.11.0",
+  "buildNo": "11242029",
+  "parentTR": "TR261022-0018",
+  "versionJson": {
+   "url": "https://demo.myedit.online/version.json",
+   "raw": "MyEdit-5.11.0-11242029",
+   "capturedAt": "2026-11-25T19:22:46+08:00"
+  }
+ },
+ "commonFields": {
+  "bugSource": "QA",
+  "priorityRD": "N/A",
+  "previousBuild": "Unknown"
+ },
+ "figmaCalls": {
+  "server": "figma-pm (qa1@cyberlink.com, whoami checked)",
+  "file": "3u8Oau1mvpNc8qKqBNFGlf",
+  "calls": [
+   "whoami",
+   "create_session",
+   "get_metadata 235:1137",
+   "get_metadata 358:1608",
+   "get_metadata 95:7417",
+   "get_metadata 457:1883",
+   "get_screenshot 235:1137",
+   "get_screenshot 207:1216",
+   "get_screenshot 457:3443",
+   "get_screenshot 360:1789",
+   "get_screenshot 362:1882"
+  ],
+  "record": "figma-src/figma-evidence-record.json"
+ },
+ "gate": "validate-ebug-form-contract.ts runs on the live IF3 form / saved detail only; not run here (no form opened). check_ebug_format.py --product MyEdit: 14 bugs, 0 errors, 0 warnings (extra pre-check only).",
+ "bugs": [
+  {
+   "iss": "ISS-VEW-03",
+   "action": "edit MYE261124P0025",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Uploading unsupported media does not show error dialog",
+   "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload an AVI video.\n3. Repeat step 2 with a video whose shorter side is below 128 px > a video above 120 fps > a video with an unsupported audio codec.\n\nResult:\nNo error dialog appears; the AVI upload is ignored and the other three videos open an empty upload box. (ref to attachment)\n\nExpect Result:\nEach upload should show its error dialog: Unsupported File Format, Video Resolution Not Supported, Video Frame Rate Not Supported or Audio Codec Not Supported.\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, Case 1 (Unsupported File Format)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1251\n2. Figma: 9 - Error Handling - Upload Limitation, Case 5 (shorter side below 128 px)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=382-1791\n3. Figma: 9 - Error Handling - Upload Limitation, Case 6 (over 120 fps)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=383-1791\n4. Spec: Video Enhancer V2 > Error Handle (unsupported audio keeps Audio Codec Not Supported)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_SEO_page_AVI_no_error_dialog.png",
+    "Highlight_SEO_page_below_128px_no_error_dialog.png",
+    "Highlight_SEO_page_over_120fps_no_error_dialog.png",
+    "Highlight_SEO_page_unsupported_audio_no_error_dialog.png",
+    "Figma_Unsupported_File_Format_dialog.png",
+    "Figma_Below_128px_resolution_dialog.png",
+    "Figma_Over_120fps_frame_rate_dialog.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_SEO_page_AVI_no_error_dialog.png": "e2e7624d43725464279079db941ab105ff0dd33b29e6f30d60ca59dddae02711",
+    "Highlight_SEO_page_below_128px_no_error_dialog.png": "b8bc160833eb952b442522d5d0a92ca384a24197d8f4a911f85b8582b43efd53",
+    "Highlight_SEO_page_over_120fps_no_error_dialog.png": "3f6979699ead24bc7dd03194f10697c46776d3812a4f46ec3348312c22a943cd",
+    "Highlight_SEO_page_unsupported_audio_no_error_dialog.png": "36c0551ba80d7cc983c35cb98dfab46069e259dc90baafd3b90a75feba3576cd",
+    "Figma_Unsupported_File_Format_dialog.png": "2c609c662b759b528aedff945605660e4125158a40f6305e895261a4f0430f1c",
+    "Figma_Below_128px_resolution_dialog.png": "0cf6e005274a751a5264d3fb74b1e061e2603191f95a9c16db30dd3674d68d47",
+    "Figma_Over_120fps_frame_rate_dialog.png": "3af42bbcdd069771e1f98d591788886df3821974bd6235f1046f86ee0a9ca499"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1251",
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=382-1791",
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=383-1791"
+   ],
+   "filed": {
+    "bugCode": "MYE261124P0025",
+    "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0025",
+    "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Uploading an AVI, below-128 px, over-120 fps or unsupported-audio video shows no error dialog",
+    "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload an AVI video.\n3. Repeat step 2 with a video whose shorter side is below 128 px > then with a video above 120 fps > then with a video whose audio the room rejects.\n\nResult:\nNo error dialog appears: the AVI is ignored and the other three open an empty upload box. (ref to attachment)\n\nExpect Result:\nEach upload should show its error dialog: Unsupported File Format, Video Resolution Not Supported, Video Frame Rate Not Supported or Audio Codec Not Supported.\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, cases 1, 5 and 6\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=235-1137\n2. Spec: Video Enhancer V2 > Error Handle\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+    "bugBelong": "RD",
+    "severity": "Must Fix",
+    "reproduce": "3/3",
+    "attachments": [
+     "Highlight_SEO_page_AVI_no_error_dialog.png",
+     "Highlight_SEO_page_below_128px_no_error_dialog.png",
+     "Highlight_SEO_page_over_120fps_no_error_dialog.png",
+     "Highlight_SEO_page_unsupported_audio_no_error_dialog.png"
+    ]
+   },
+   "changesVsFiled": [
+    "Title: replaced by the user's wording \"Uploading unsupported media does not show error dialog\" (was the list of four media).",
+    "Repro step 3: \"a video with an unsupported audio codec\" replaces \"a video whose audio the room rejects\"; \"> then with\" shortened to \">\".",
+    "Result: same meaning, reworded as one plain sentence (\"the AVI upload is ignored and the other three videos open an empty upload box\").",
+    "Note: the whole-board link 235-1137 replaced by the three exact dialog nodes 237-1251, 382-1791, 383-1791; spec item names the audio dialog; now 4 numbered items.",
+    "Attachments: add Figma_Unsupported_File_Format_dialog.png, Figma_Below_128px_resolution_dialog.png, Figma_Over_120fps_frame_rate_dialog.png after the 4 highlights (filed ticket has only the 4 highlights)."
+   ],
+   "changed": {
+    "title": true,
+    "description": true,
+    "attachments": true
+   },
+   "editNote": "Existing ticket: the user's explicit go-ahead for this ticket is needed before saving; preserve existing remote attachments; add new ones in the listed order; reread the saved detail and validate it (persisted)."
+  },
+  {
+   "iss": "ISS-VEW-04",
+   "action": "edit MYE261124P0026",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Upload error dialogs show the button Got It instead of Got it",
+   "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload a video larger than 10 GB.\n3. Repeat step 2 with an AV1 video > a video above 1440p.\n\nResult:\nThe error dialogs on the SEO page show the button Got It with a capital I. (ref to attachment)\n\nExpect Result:\nThe button should read Got it.\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, Case 2 button Got it (Cases 1 and 3 use the same button)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1269\n2. Spec: Video Enhancer V2 > Error Handle (every dialog button is Got it)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "4/4",
+   "attachments": [
+    "Highlight_SEO_File_Size_Too_Large_Got_It.png",
+    "Highlight_SEO_Unsupported_Format_Got_It.png",
+    "Highlight_SEO_Resolution_dialog_Got_It.png",
+    "Figma_Got_it_button_cases_1-3.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_SEO_File_Size_Too_Large_Got_It.png": "ba887ae2d71f9b8f4b408a9823ed6864fc5977ab9b12621abee2193cf9be235d",
+    "Highlight_SEO_Unsupported_Format_Got_It.png": "507b5254b82ef83ec21eba881b06c3b775a9f35726b4096c6b09f0fff916f1f0",
+    "Highlight_SEO_Resolution_dialog_Got_It.png": "f1cde67bfe01888da780fcfb07d45ec539029c12e2e024d6c280f38619e2d436",
+    "Figma_Got_it_button_cases_1-3.png": "6be716c4492728d8446ac225070e7677d1f55a29880ad8ed16e2d28b126e38c3"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1269"
+   ],
+   "filed": {
+    "bugCode": "MYE261124P0026",
+    "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0026",
+    "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): Upload error dialogs show the button Got It instead of Got it",
+    "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload a video larger than 10 GB.\n3. Repeat step 2 with an AV1 video > then with a video above 1440p.\n\nResult:\nThe error dialogs on the SEO page show the button Got It with a capital I. (ref to attachment)\n\nExpect Result:\nThe button should read Got it, as in the spec and the room's own error dialogs.\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation (every dialog's button is Got it)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=235-1137\n2. Spec: Video Enhancer V2 > Error Handle\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+    "bugBelong": "RD",
+    "severity": "Must Fix",
+    "reproduce": "4/4",
+    "attachments": [
+     "Highlight_SEO_File_Size_Too_Large_Got_It.png",
+     "Highlight_SEO_Unsupported_Format_Got_It.png",
+     "Highlight_SEO_Resolution_dialog_Got_It.png"
+    ]
+   },
+   "changesVsFiled": [
+    "Title unchanged (no [UI], wording bug).",
+    "Repro step 3: \"> then with\" shortened to \">\".",
+    "Expect Result: \"The button should read Got it.\" (drops \"as in the spec and the room's own error dialogs\").",
+    "Note: board link 235-1137 replaced by the exact Got it button node 237-1269; spec item says every dialog button is Got it.",
+    "Attachments: add Figma_Got_it_button_cases_1-3.png after the 3 highlights."
+   ],
+   "changed": {
+    "title": false,
+    "description": true,
+    "attachments": true
+   },
+   "editNote": "Existing ticket: the user's explicit go-ahead for this ticket is needed before saving; preserve existing remote attachments; add new ones in the listed order; reread the saved detail and validate it (persisted)."
+  },
+  {
+   "iss": "ISS-VEW-06",
+   "action": "edit MYE261124P0027",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Email): The result-ready email body text differs from the spec",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video.\n2. Click Enhance > wait for the result.\n3. Open the account's mailbox > open the mail Your Video Enhancer result is ready!\n\nResult:\nThe mail body reads \"Your Video Enhancer has been generated successfully.\" instead of the specified text. (ref to attachment)\n\nExpect Result:\nThe body should read \"Your enhanced video is ready! Click the button below to view the results and start using your video.\"\n\nNote:\nFigma: 6 - EDM, Video Enhancer result-ready mail body\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=207-1229",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Ready_mail_body_text.png",
+    "Figma_EDM_result_ready_body_text.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Ready_mail_body_text.png": "452dbb1b2d61c19f16058c1239e6298e9ea84f8785c721d62fa71ea0c9170982",
+    "Figma_EDM_result_ready_body_text.png": "9c0ee68e2bfe23673e6d68c831e1886174cd34d61384a6e2932659f30c8ba8d4"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=207-1229"
+   ],
+   "filed": {
+    "bugCode": "MYE261124P0027",
+    "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0027",
+    "title": "MyEdit 5.11.0 - [AIAgent][UI]Video Enhancer(Email): The result-ready email body text differs from the spec",
+    "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video > click Enhance > wait for the result.\n2. Open the account's mailbox > open the mail Your Video Enhancer result is ready!\n\nResult:\nThe mail body reads \"Your Video Enhancer has been generated successfully.\" instead of the specified text. (ref to attachment)\n\nExpect Result:\nThe body should read \"Your enhanced video is ready! Click the button below to view the results and start using your video.\"\n\nNote:\nFigma: 6 - EDM\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=95-7417",
+    "bugBelong": "RD",
+    "severity": "Must Fix",
+    "reproduce": "3/3",
+    "attachments": [
+     "Highlight_Ready_mail_body_text.png"
+    ]
+   },
+   "changesVsFiled": [
+    "Title: [UI] removed (wording/text defect is not a UI defect per ebug-writing): \"MyEdit 5.11.0 - [AIAgent]Video Enhancer(Email): ...\".",
+    "Repro: step 1 (four actions) split into steps 1-2, mailbox becomes step 3.",
+    "Note: board link 95-7417 replaced by the exact body-text node 207-1229.",
+    "Attachments: add Figma_EDM_result_ready_body_text.png after the highlight."
+   ],
+   "changed": {
+    "title": true,
+    "description": true,
+    "attachments": true
+   },
+   "editNote": "Existing ticket: the user's explicit go-ahead for this ticket is needed before saving; preserve existing remote attachments; add new ones in the listed order; reread the saved detail and validate it (persisted)."
+  },
+  {
+   "iss": "ISS-VEW-07",
+   "action": "none (filed as MYE261124P0028; already matches the skills)",
+   "title": "MyEdit 5.11.0 - [AIAgent][CT]Video Editor: Opening a 60 fps Video Enhancer result shows no export-at-30-fps toast",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a 30 fps video.\n2. Set Frame Rate to 60 fps > click Enhance > wait for the result.\n3. Click the result in Recent Gen > click Open in Editor.\n\nResult:\nVideo Editor opens the 60 fps clip but shows no toast about exporting at 30 fps. (ref to attachment)\n\nExpect Result:\nA toast \"This 60 fps video will export at 30 fps. Your original is unchanged.\" should show for about 3 seconds, once per video per session.\n\nNote:\nSpec: Video Enhancer V2 > User Flow > Video Editor high frame rate toast\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Video_Editor_no_30fps_toast.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Video_Editor_no_30fps_toast.png": "3072fee09d71b6d236f3153fb0a2edd1799d509726960a51a67810ceecc75edf"
+   },
+   "figmaNodes": [],
+   "figmaNote": "No Figma node: the toast is spec text only (Knowledge Center feature spec); no spec image.",
+   "filed": {
+    "bugCode": "MYE261124P0028",
+    "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0028",
+    "title": "MyEdit 5.11.0 - [AIAgent][CT]Video Editor: Opening a 60 fps Video Enhancer result shows no export-at-30-fps toast",
+    "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a 30 fps video.\n2. Set Frame Rate to 60 fps > click Enhance > wait for the result.\n3. Click the result in Recent Gen > click Open in Editor.\n\nResult:\nVideo Editor opens the 60 fps clip but shows no toast about exporting at 30 fps. (ref to attachment)\n\nExpect Result:\nA toast \"This 60 fps video will export at 30 fps. Your original is unchanged.\" should show for about 3 seconds, once per video per session.\n\nNote:\nSpec: Video Enhancer V2 > User Flow > Video Editor high frame rate toast\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+    "bugBelong": "RD",
+    "severity": "Must Fix",
+    "reproduce": "3/3",
+    "attachments": [
+     "Highlight_Video_Editor_no_30fps_toast.png"
+    ]
+   },
+   "changesVsFiled": [
+    "No change: filed title, description, owner, severity, counts and attachment already match the skills (no Figma node exists for this toast)."
+   ],
+   "changed": {
+    "title": false,
+    "description": false,
+    "attachments": false
+   }
+  },
+  {
+   "iss": "ISS-VEW-08",
+   "action": "none (filed as MYE261124P0029; already matches the skills)",
+   "title": "MyEdit 5.11.0 - [AIAgent][UX]Video Enhancer: The Creating Your Video upload dialog has no Cancel after credits are deducted",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video.\n2. Slow down the network > click Enhance.\n3. Look for a way to cancel in the Creating Your Video dialog.\n\nResult:\nThe dialog has no Cancel or close button, so the upload cannot be stopped after credits are deducted. (ref to attachment)\n\nExpect Result:\nThe dialog should let the user cancel the upload (RD: credits are then refunded within 3-6 hours); PM to decide.\n\nNote:\nKnowledge Center (RD answer): Video Enhancer V2 Settings > Credit Deduction and Cancel\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/product-rules/derived-video-enhancer-v2-settings.md",
+   "bugBelongsTo": "PM",
+   "severity": "Better Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Creating_Your_Video_no_Cancel.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Creating_Your_Video_no_Cancel.png": "8b790260dbd7a47961ac4471bb2c37431067ca92cf6174075225e705202c7f4b"
+   },
+   "figmaNodes": [],
+   "figmaNote": "No Figma node: Expect rests on the RD answer in the Knowledge Center; no spec image.",
+   "filed": {
+    "bugCode": "MYE261124P0029",
+    "url": "https://ecl.cyberlink.com/IF3/ebug/BPM/FormView/MYE261124P0029",
+    "title": "MyEdit 5.11.0 - [AIAgent][UX]Video Enhancer: The Creating Your Video upload dialog has no Cancel after credits are deducted",
+    "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video.\n2. Slow down the network > click Enhance.\n3. Look for a way to cancel in the Creating Your Video dialog.\n\nResult:\nThe dialog has no Cancel or close button, so the upload cannot be stopped after credits are deducted. (ref to attachment)\n\nExpect Result:\nThe dialog should let the user cancel the upload (RD: credits are then refunded within 3-6 hours); PM to decide.\n\nNote:\nKnowledge Center (RD answer): Video Enhancer V2 Settings > Credit Deduction and Cancel\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/product-rules/derived-video-enhancer-v2-settings.md",
+    "bugBelong": "PM",
+    "severity": "Better Fix",
+    "reproduce": "3/3",
+    "attachments": [
+     "Highlight_Creating_Your_Video_no_Cancel.png"
+    ]
+   },
+   "changesVsFiled": [
+    "No change: filed title, description, owner PM, Better Fix, counts and attachment already match the skills."
+   ],
+   "changed": {
+    "title": false,
+    "description": false,
+    "attachments": false
+   }
+  },
+  {
+   "iss": "ISS-VEW-09",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent][UI][Mobile]Video Enhancer: Processing covers the whole page instead of dimming the settings summary",
+   "description": "Repro Steps:\n1. Open demo server in a 375 px wide browser window > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload a video > look at the page while Processing is shown.\n\nResult:\nProcessing fills the whole screen, and the settings summary and Enhance are not shown. (ref to attachment)\n\nExpect Result:\nWhile uploading, the settings summary and Enhance should stay visible below Processing, dimmed and disabled.\n\nNote:\n1. Figma: 4 - Mobile UI Spec, uploading state\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=457-3443\n2. Spec: Video Enhancer V2 > User Flow > New room (mobile), uploading\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Mobile_Processing_covers_room.png",
+    "Figma_Mobile_uploading_state.png",
+    "Comparison_Mobile_uploading_state.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Mobile_Processing_covers_room.png": "542666e139864d5a6c1a5262370377bf8a1b5bf854d8b9eb79d110c5e1cf3ce2",
+    "Figma_Mobile_uploading_state.png": "1d8b036b603cc807e341916d558dfb477bf509da25ae3d6b3a204e58444d4169",
+    "Comparison_Mobile_uploading_state.png": "9b9b0bc755ef163678ddbdc47160d8917d042142d5f065f97d1d6326b94fc51c"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=457-3443"
+   ]
+  },
+  {
+   "iss": "ISS-VEW-10",
+   "action": "hold (user decision needed; do not create)",
+   "title": "MyEdit 5.11.0 - [AIAgent][UI]Video Enhancer: The Creating Your Video and upload error dialogs are dark on the light tool page",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video.\n2. Click Enhance > look at the Creating Your Video dialog.\n3. Click Replace Video > upload an AVI video > look at the error dialog.\n\nResult:\nThe progress and error dialogs are dark grey with white text on the light Video Enhancer tool page. (ref to attachment)\n\nExpect Result:\nThese dialogs should use the light theme like the rest of the Video Enhancer tool page.",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Creating_Your_Video_dark_dialog.png",
+    "Highlight_Unsupported_File_Format_dark_dialog.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Creating_Your_Video_dark_dialog.png": "2134a2d43912c6fd17ac400fcca6dcfbc82f726a6a66917a1d6733b7febec797",
+    "Highlight_Unsupported_File_Format_dark_dialog.png": "5835f71b8630b9162071a7750caf56563ce090715d87b4b8077838ea771a8b47"
+   },
+   "figmaNodes": [],
+   "figmaNote": "The only design source (PM Figma 9, 237:1251, dark dialog) contradicts the Expect; Creating Your Video not drawn. No comparison image (none may be fabricated)."
+  },
+  {
+   "iss": "ISS-VEW-12",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(SEO page): The resolution error dialog says 2560x1440 instead of 1440p",
+   "description": "Repro Steps:\n1. Open demo server > go to the Video Enhancer SEO page.\n2. Click Choose a file > upload a 4K video.\n\nResult:\nThe Video Resolution Not Supported dialog names the limit as (2560x1440). (ref to attachment)\n\nExpect Result:\nThe body should read \"This video exceeds the supported resolution limit (1440p). Please choose another video.\"\n\nNote:\n1. Figma: 9 - Error Handling - Upload Limitation, Case 3 dialog body\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1273\n2. Spec: Video Enhancer V2 > Input Format (public text always says 1440p) and Error Handle\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Resolution_dialog_2560x1440.png",
+    "Figma_Resolution_dialog_1440p.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Resolution_dialog_2560x1440.png": "09ae0d0bfbef67f10767623a8aef5dd256c6473ec6bf2d91c2653e1e2ecc3f52",
+    "Figma_Resolution_dialog_1440p.png": "67788b1397f1c7a3db25c9cf93b7f1f1e3280d73dcccd54f4c614ba47381a7e1"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=237-1273"
+   ]
+  },
+  {
+   "iss": "ISS-VEW-13",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer(Trimmer): The Standard trim hint text differs from the spec",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video longer than 8 minutes.\n2. Look at the hint at the bottom left of the Trim Video dialog.\n\nResult:\nThe hint reads \"Please trim your video to 8 minutes or shorter before proceeding.\" (ref to attachment)\n\nExpect Result:\nThe hint should read \"Standard mode supports videos up to 8 minutes long. Please trim your video to continue.\"\n\nNote:\n1. Figma: 10 - Professional Mode length limit, step 3 note (Standard Trimmer hint)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=359-1999\n2. Spec: Video Enhancer V2 > User Flow > Video length limit (Trimmer hints)\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Trimmer_Standard_hint_text.png",
+    "Figma_Trimmer_Standard_hint.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Trimmer_Standard_hint_text.png": "c172f79193869c6fcc4d59a8eca398746f8d40af4b9edef2ec0c08b369eba668",
+    "Figma_Trimmer_Standard_hint.png": "dfb47f52a31f73d40722c6b40be9f29cd947abf7df270fe5081a16e1a4c65bb5"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=359-1999"
+   ]
+  },
+  {
+   "iss": "ISS-VEW-14",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent][UX]Video Enhancer(Professional): Replace Video over 2:30 opens the Trimmer instead of showing the 2:30 limit text",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video of 2:30 or less.\n2. Select Professional > click Replace Video > upload a 3-minute video.\n\nResult:\nThe Trimmer opens at once; the red 2:30 text and disabled Enhance never show. (ref to attachment)\n\nExpect Result:\nPM to decide: Figma shows \"Professional mode supports videos up to 2:30.\" with Enhance disabled, while the spec sends over-limit Replace to the Trimmer.\n\nNote:\n1. Figma: 10 - Professional Mode length limit, step 2 (Replace Video over 2:30 gives this state)\nhttps://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=360-1789\n2. Spec: Video Enhancer V2 > User Flow > Video length limit\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "PM",
+   "severity": "Better Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Professional_Replace_opens_Trimmer.png",
+    "Figma_Professional_over_2-30_red_text.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Professional_Replace_opens_Trimmer.png": "3ac93c85dd3786b7f66e3e1be15d2ae6e6bf98e2c3f7e1cddf0ec2a8c1a78287",
+    "Figma_Professional_over_2-30_red_text.png": "333a32bd835ecc1572dc4e5929a212c884c70183426b9de60c08295a39158594"
+   },
+   "figmaNodes": [
+    "https://www.figma.com/design/3u8Oau1mvpNc8qKqBNFGlf/-MyEdit--Video-Enhancer?node-id=360-1789"
+   ]
+  },
+  {
+   "iss": "ISS-VEW-15",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent]Pricing(Compare All Plans): Video Tools lists Video Restoration but not Video Enhancer",
+   "description": "Repro Steps:\n1. Open demo server > open Pricing.\n2. Open Compare All Plans > read the Video Tools rows.\n\nResult:\nVideo Restoration is listed, but Video Enhancer is missing from Video Tools. (ref to attachment)\n\nExpect Result:\nVideo Tools should list both Video Enhancer and Video Restoration.\n\nNote:\nSpec: Video Enhancer V2 > User Flow > Cross-tool links > Pricing page\nhttps://rdccwebengine.clt.gocyberlink.com/doc/myedit/features/video-enhancer-v2.md",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Pricing_Video_Tools_no_Video_Enhancer.png"
+   ],
+   "attachmentSha256": {
+    "Highlight_Pricing_Video_Tools_no_Video_Enhancer.png": "f033c01872cf78e3441508ab7d732103547427fc241f23fca40ad92e75df4442"
+   },
+   "figmaNodes": [],
+   "figmaNote": "No Figma node: the Pricing page rule is spec text only; no spec image."
+  },
+  {
+   "iss": "ISS-VEW-16",
+   "action": "create",
+   "title": "MyEdit 5.11.0 - [AIAgent]Video Enhancer: The preview keeps playing after clicking Enhance",
+   "description": "Repro Steps:\n1. Open demo server > open Video Enhancer > upload a video.\n2. Play the preview > click Enhance.\n\nResult:\nThe preview keeps playing behind the Creating Your Video dialog until the clip ends. (ref to attachment)\n\nExpect Result:\nClicking Enhance should pause the preview, as Replace Video does.",
+   "bugBelongsTo": "RD",
+   "severity": "Must Fix",
+   "reproduce": "3/3",
+   "attachments": [
+    "Highlight_Preview_keeps_playing_behind_Creating_Your_Video.png",
+    "Recording_preview_keeps_playing_after_Enhance.mp4"
+   ],
+   "attachmentSha256": {
+    "Highlight_Preview_keeps_playing_behind_Creating_Your_Video.png": "91d1943fc663ab385a3122c15413f88341ffd6f9abc754dac23b754c6c4d4c22",
+    "Recording_preview_keeps_playing_after_Enhance.mp4": "357a7fb9a5ac6b5fcba609b06b54554e1619a5b9bc9c9b1f2133a2a2b76f4c1a"
+   },
+   "figmaNodes": [],
+   "figmaNote": "No source at all (user override); no spec image."
+  }
+ ],
+ "notFiled": {
+  "ISS-VEW-01": "held by the user (not touched)",
+  "ISS-VEW-05": "held by the user (not touched)"
+ },
+ "localPrecheck": {
+  "what": "validate-ebug-form-contract.ts run on the PREPARED values (not a live IF3 snapshot); the real gate still runs on the live form before Create/Save and on the saved detail after.",
+  "ranAt": "2026-11-25 +08",
+  "errors": {
+   "ISS-VEW-03": [],
+   "ISS-VEW-04": [],
+   "ISS-VEW-06": [],
+   "ISS-VEW-07": [],
+   "ISS-VEW-08": [],
+   "ISS-VEW-09": [],
+   "ISS-VEW-10": [],
+   "ISS-VEW-12": [],
+   "ISS-VEW-13": [],
+   "ISS-VEW-14": [],
+   "ISS-VEW-15": [],
+   "ISS-VEW-16": []
+  }
+ }
+}
