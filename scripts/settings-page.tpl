@@ -135,7 +135,7 @@ const pills = (name, cur, list) => list.map(([v, en, zh]) => `<label><input type
 // language, the theme, your name, or answers typed and not yet saved)
 const VIEWS = [['casebook-dash', 'Dashboard: product, platform, tab and version', 'Dashboard：產品、平台、分頁與版本'], ['casebook-sort', 'Dashboard: sort', 'Dashboard：排序'],
   ['casebook-fold', 'Dashboard: versions folded or opened', 'Dashboard：收合或展開的版本'],
-  ['casebook-seen', 'The page each feature opened on last', '每個功能上次開啟的頁面'], ['cases-wide', 'Cases: all columns', 'Cases：顯示全部欄位'],
+  ['casebook-seen', 'The page each feature opened on last', '每個功能上次開啟的頁面'], ['cases-wide', 'Cases: Spec Ref and Notes shown', 'Cases：顯示規格對應與備註'],
   ['results-compact', 'Results: compact list', 'Results：精簡清單'], ['design-sort', 'Design: plan order', 'Design：計畫排序'], ['design-rsort', 'Design: result order', 'Design：結果排序']];
 let forgot = false;
 function browser() {
