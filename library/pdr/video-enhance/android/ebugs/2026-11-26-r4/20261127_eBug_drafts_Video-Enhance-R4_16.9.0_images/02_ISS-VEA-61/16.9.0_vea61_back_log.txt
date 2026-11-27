@@ -1,0 +1,5 @@
+# PowerDirector 16.9.0.2611251, SM-A5360. 「Turn on notifications」 window added 19:49:08.261; system Back at 19:49:1x (Appium) and 19:49:2x (adb KEYCODE_BACK): the dialog window (1cea508) stays until 19:49:35.658, when the run closed it and Recent task opened.
+2026-11-26 19:49:08.200 12608 12608 I WindowManager: WindowManagerGlobal#removeView, ty=2, view=com.android.internal.policy.DecorView{c4ddfa8 V.E...... R....... 0,0-1080,2400 aid=1073741824}[VideoEnhanceSetupActivity], caller=android.view.W
+2026-11-26 19:49:08.261 12608 12608 I WindowManager: WindowManagerGlobal#addView, ty=2, view=com.android.internal.policy.DecorView{1cea508 V.E...... R.....I. 0,0-0,0}[VideoEnhanceSetupActivity], caller=android.view.WindowManagerImpl.addView
+2026-11-26 19:49:35.658 12608 12608 I WindowManager: WindowManagerGlobal#removeView, ty=2, view=com.android.internal.policy.DecorView{1cea508 V.E...... R....... 0,0-759,561 aid=1073741826}[VideoEnhanceSetupActivity], caller=android.view.Win
+2026-11-26 19:49:35.716 12608 12608 V VideoEnhanceRecentTasksActivity: GDPRHandler.checkGDPRPrivacyPolicy: None

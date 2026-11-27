@@ -1,0 +1,45 @@
+# MUI truncation walk, one language (AIGC Watermark TC-131 … TC-156): Settings row, ⓘ info sheet, export dialog.
+# Starts: anywhere in PowerDirector; the app is relaunched in the language. Ends: the editor's project closed, back on
+# the Launcher, app still in the language: run `locale reset` (and `locale status`) after it.
+# Needs: 「Remove AIGC Watermark」 Off, the export 「Don't show again」 unticked, and the project 「Project 11-25」 (an
+# Image to Video result opened in Full Editor, 0 credits; it shows the export dialog like an AI Anime project) at the
+# top of the Project tab. Generates and exports nothing: the dialog ends in Cancel.
+# Steps 5–8 of the row (AI Music Generator) are not walked: Android shows no music dialog (DRA262611P0229) and
+# 「Generate」 would charge 6 credits.
+# Args: $1 = case ID, $2 = launch code (zh-Hant-TW, ja-JP …), $3 = 「Remove AIGC Watermark」 in that language
+# (mui/mui-strings.json › setting_page_remove_aigc_watermark). One `texts` read (screenshot + strings) per screen:
+# $1-settings, $1-info, $1-export, $1-cancel. Coordinates: Sony XQ-BT52 1080 × 2520, 16.9.0 (2611201).
+case $1
+launch --lang $2
+wait 5
+locale status
+?tapif [AID]IAP_Back
+tap 107 2335
+wait 1
+tap 92 115
+wait 2
+scrollto "$3"
+texts $1-settings
+id remove_aigc_watermark_info
+wait 2
+texts $1-info
+id button_aigc_watermark_info_got_it
+wait 1
+back
+wait 1
+tap 756 2335
+wait 2
+id iv_thumbnail
+wait 10
+?tapif [AID]IAP_Back
+id btn_save_menu
+# A tap while the editor still loads can be lost (O-3, 2026-11-25 run). If this waitfor times out, tap
+# 「Export」 by hand (`id btn_save_menu`) and go on from `texts $1-export`.
+waitfor [AID]ConfirmDialog_Cancel --timeout 8
+texts $1-export
+els help_disable_tip
+lbl [AID]ConfirmDialog_Cancel
+wait 1
+texts $1-cancel
+lbl [AID]TimeLine_Home
+wait 2

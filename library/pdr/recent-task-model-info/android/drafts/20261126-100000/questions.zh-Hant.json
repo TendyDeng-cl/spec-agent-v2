@@ -1,0 +1,7 @@
+{
+  "Q-1": "Text to Image：Jira 標題寫「(I2V/T2V/TTI)」，但 Design 1006 畫面、規則和 Guideline 都只說 I2V、T2V 顯示 model，而且 Text to Image 的 Recent 頁畫的是 prompt 卡片，不是 Recent task 卡片。Text to Image 要不要顯示 model（例如「GPT-Image-2.6 Sunburst」）？要的話顯示在哪？假設：以 Design 為準，Text to Image 不顯示 model 標籤。R-022、TC-033。",
+  "Q-2": "這個版本之前產生的任務要不要顯示 model？規格沒寫。假設：顯示 model 標籤或整行不顯示都可以，但不能出現空白標籤，卡片高度維持 120 pt。R-041、TC-041。",
+  "Q-3": "範本：Guideline 寫範本生成不開 model（「範本生成不開」）。如果 Image to Video 或 Text to Video 的範本讓使用者選 model，卡片要顯示嗎？假設：範本產生的任務一律不顯示標籤。R-020、TC-029、TC-030。",
+  "Q-4": "標籤寬度：規格說名稱過長以「…」截斷，但沒寫標籤最寬多少。假設：標籤可以用到名稱下方、卡片右側內距為止，不能蓋到「View」。R-014、TC-027、TC-028。",
+  "Q-5": "編輯模式下按系統返回鍵：規格只畫了「Cancel」。假設：返回鍵和「Cancel」一樣，不會刪除任何任務。R-070、TC-045。"
+}

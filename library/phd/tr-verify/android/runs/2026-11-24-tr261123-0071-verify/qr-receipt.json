@@ -1,0 +1,15 @@
+{
+ "qr": "QR261124-0033",
+ "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261124-0033",
+ "tr": "TR261123-0071",
+ "template": "Standard Report (QRTemplateID=14830)",
+ "created": "2026-11-24",
+ "testResult": "PHD-A - Bug verification [OK=6, Fail=0]",
+ "ok": ["PHA262026P0071","PHA262026P0104","PHA262026P0105","PHA262026P0106","PHA262026P0111","PHA262026P0147"],
+ "fail": [],
+ "held": [],
+ "filesOnBugs": "none (text only)",
+ "readBack": "Short Description, Test Result, Testing Date, Details and all 6 States and Reasons match qr-text.txt; Product Version, Build Day, Build No., OS, OS Language and Attachment empty.",
+ "decisions": "P0106 OK and P0104 OK by the user (see orchestrator-notes.md)",
+ "mismatch": null
+}

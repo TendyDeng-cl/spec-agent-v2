@@ -29,6 +29,9 @@ first segment; a new row that needs something new adds it here in the same draft
   saved file: `c2patool <file>` prints the manifest and its signer, or says none is found.
 - Saved files come off the phone with `adb -s HQ61563393 pull /sdcard/DCIM/…` (or the app's output folder); keep them
   in the run folder's `files/` (local only, never committed).
+- Draft 20261125-190000: keep the files TC-065, TC-066 and TC-071 exported in `files/`: TC-157 reads their Content
+  Credentials. TC-083 and TC-158 need an Image to Video result that was never saved with the switch Off (a new
+  generation, or a result saved only with the switch On).
 
 ## Reset
 - The default-value row (TC-008) and the 「Don’t show again」 rows are one-way: they run last (segment R1-h). The

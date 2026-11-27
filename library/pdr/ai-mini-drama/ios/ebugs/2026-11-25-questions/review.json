@@ -1,0 +1,14 @@
+{
+ "tr": "TR261022-0031",
+ "build": "189872",
+ "trNote": "Evidence is from the P9 run on 16.9.0 (189872), TR261022-0031; no device was used for this batch. Confirm the TR to file on (the newest filed batch used TR261022-0031).",
+ "lede": "Open questions flagged to-file, drafted as PM decisions from the P9 run's own screenshots. Q-5 and Q-18 are not drafted: the observation they need was never recorded (see Not drafted: needs a device check in the drafts).",
+ "why": {
+  "ISS-AMD-74": "PM decision (Q-28), Type UX: the PM Error Handling frame draws a ⋯ on the regenerated scene image, the Design and the app have none.",
+  "ISS-AMD-75": "PM / MX decision (Q-31), Type UX: the MX mockups draw an older chat (add-image button, edit icon, Customize my characters…) that the app and the Design do not have."
+ },
+ "related": {
+  "ISS-AMD-74": "TC-141 (Pass) regenerated the image; TC-397, the row for the PM arrow, was never run.",
+  "ISS-AMD-75": "DRI261893-0118 (NAB) already settled the aspect-ratio item; the 「Consume credits?」 card is Q-3."
+ }
+}

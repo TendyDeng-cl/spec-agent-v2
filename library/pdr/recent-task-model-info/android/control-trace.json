@@ -1,0 +1,628 @@
+{
+ "spec_folder": "specs/2026-11-23",
+ "platform": "android",
+ "inventory": "specs/2026-11-23/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-54a138",
+   "kind": "toggle",
+   "board": "Recent edit mode",
+   "boards": [
+    "Recent edit mode"
+   ],
+   "name": "Checkbox",
+   "label": "",
+   "set": false,
+   "instances": 30,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-26035b",
+    "K-a4383a",
+    "K-a93842",
+    "K-353fda",
+    "K-2c3fcc"
+   ],
+   "app": [],
+   "press": "TC-036",
+   "how": "manual"
+  },
+  {
+   "group": "K-ed8f10",
+   "kind": "button",
+   "board": "Recent edit mode",
+   "boards": [
+    "Recent edit mode"
+   ],
+   "name": "Nav/Bottom/Item",
+   "label": "Delete",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-22c05f"
+   ],
+   "app": [],
+   "press": "n/a: destructive: 「Delete」 removes tasks; the rows only look at edit mode (My Artwork redesign, not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-75cbf2",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "btn",
+   "label": "Manage",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-83d8c4"
+   ],
+   "app": [],
+   "press": "TC-035",
+   "how": "manual"
+  },
+  {
+   "group": "K-20376d",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "btn_play",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-a53562"
+   ],
+   "app": [],
+   "press": "n/a: other feature: My Artwork redesign (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-577a7f",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Button/Credit/Balance",
+   "label": "182",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-fc53c8"
+   ],
+   "app": [],
+   "press": "n/a: other feature: My Artwork redesign (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-435038",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video",
+    "Recent edit mode"
+   ],
+   "name": "Button/Pill",
+   "label": "View",
+   "set": false,
+   "instances": 40,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-4c78da",
+    "K-bb5341",
+    "K-505ae8",
+    "K-4e5ae5",
+    "K-4b58a1",
+    "K-ac2527",
+    "K-07918d",
+    "K-1c986a",
+    "K-1a9867",
+    "K-179624"
+   ],
+   "app": [],
+   "press": "TC-005, TC-018",
+   "how": "manual"
+  },
+  {
+   "group": "K-d21849",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Button/ViewMore",
+   "label": "View more",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-75e124"
+   ],
+   "app": [],
+   "press": "n/a: other feature: My Artwork redesign (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-11e55b",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Card/Artwork",
+   "label": "+ 4",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-7fc721"
+   ],
+   "app": [],
+   "press": "TC-001",
+   "how": "manual"
+  },
+  {
+   "group": "K-3561e5",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Card/Artwork",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-fb20c6",
+    "K-001e8f",
+    "K-781b7b"
+   ],
+   "app": [],
+   "press": "TC-002, TC-031, TC-033",
+   "how": "manual"
+  },
+  {
+   "group": "C-f330fe",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Card/RecentMedia",
+   "label": "choice of 3",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-0f1245",
+    "K-c22258",
+    "K-95c252"
+   ],
+   "app": [],
+   "press": "n/a: other feature: My Artwork redesign (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-733527",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video",
+    "Recent edit mode"
+   ],
+   "name": "Card/RecentTask",
+   "label": "2026/08/16 · 0:12",
+   "set": false,
+   "instances": 40,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-f3fac5",
+    "K-576c00",
+    "K-81ef1a",
+    "K-c4f1d9",
+    "K-5ee16c",
+    "K-b95663",
+    "K-6c619e",
+    "K-bc0e5e",
+    "K-cfd999",
+    "K-fca1c9",
+    "K-82f8be",
+    "K-b0611c",
+    "K-64a24c",
+    "K-347e35",
+    "K-125447",
+    "K-f2c9df",
+    "K-f62176",
+    "K-e29cfd",
+    "K-a120a7",
+    "K-1a5d91"
+   ],
+   "app": [],
+   "press": "TC-004",
+   "how": "manual"
+  },
+  {
+   "group": "C-42ecbc",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video",
+    "Recent edit mode"
+   ],
+   "name": "Card/Thumbnail",
+   "label": "choice of 10",
+   "set": true,
+   "instances": 40,
+   "screens": [
+    "Recent"
+   ],
+   "controls": [
+    "K-6c28d2",
+    "K-f73b61",
+    "K-f43b5c",
+    "K-f03917",
+    "K-eb390f",
+    "K-44e47e",
+    "K-56ab70",
+    "K-53ab6b",
+    "K-4fa926",
+    "K-4aa91f"
+   ],
+   "app": [],
+   "press": "n/a: the thumbnail is looked at, not tapped (tapping the card is not drawn as an action)",
+   "how": "manual"
+  },
+  {
+   "group": "C-42262a",
+   "kind": "item",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Launcher_icon",
+   "label": "choice of 3: 「Template」 「Project」 「Mine」",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-ad1bf0",
+    "K-f36d32",
+    "K-542dd2"
+   ],
+   "app": [],
+   "press": "TC-029",
+   "how": "manual"
+  },
+  {
+   "group": "K-141cb9",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Main Tab_Fixed_unselect_L",
+   "label": "AI Magic",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-19f9e9"
+   ],
+   "app": [],
+   "press": "TC-001",
+   "how": "manual"
+  },
+  {
+   "group": "K-b71385",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Main Tab_Flexible_select_L",
+   "label": "My Artwork",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-3a6c37"
+   ],
+   "app": [],
+   "press": "TC-001",
+   "how": "manual"
+  },
+  {
+   "group": "K-4ea6d3",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Nav/Bottom",
+   "label": "Home",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-544289"
+   ],
+   "app": [],
+   "press": "n/a: other feature: My Artwork redesign (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "C-1fee36",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "Nav/Bottom/Item",
+   "label": "choice of 2: 「Home」 「AI Magic」",
+   "set": true,
+   "instances": 4,
+   "screens": [
+    "My Artwork"
+   ],
+   "controls": [
+    "K-d22bf8",
+    "K-c9b887"
+   ],
+   "app": [],
+   "press": "TC-001",
+   "how": "manual"
+  },
+  {
+   "group": "K-9cfe06",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video",
+    "Recent edit mode"
+   ],
+   "name": "round/ic_chevron_left",
+   "label": "",
+   "set": false,
+   "instances": 10,
+   "screens": [
+    "Recent",
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-9ed22e",
+    "K-9866dd"
+   ],
+   "app": [],
+   "press": "TC-005, TC-040",
+   "how": "manual"
+  },
+  {
+   "group": "K-4c9196",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_download",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-3454ef"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-62596d",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_edit_video",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-7be6a1"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-18b282",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_home",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-0660b0"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-acdf4e",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_ig",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-20eaf8"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-1b9cec",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_ig_reels",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-1d0902"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-6b7907",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_music",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-880cf5"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-c19e35",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_text",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-dbbf13"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-470666",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_tiktok",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-c02f69"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  },
+  {
+   "group": "K-e8f9bc",
+   "kind": "button",
+   "board": "Recent video",
+   "boards": [
+    "Recent video"
+   ],
+   "name": "round/ic_youtube_stroke",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory_Preview"
+   ],
+   "controls": [
+    "K-66499e"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page share and quick actions (not this ticket)",
+   "how": "manual"
+  }
+ ]
+}

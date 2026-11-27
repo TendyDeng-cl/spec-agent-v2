@@ -1,0 +1,14 @@
+library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md
+  2 entries · 7 images · 2 Spec Link lines · 0/0 ▲ rows · max ShortDesc 115
+FAILED:
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e1 (ISS-VEA-58): links 'AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance (settings) board (Length: playhead and play button drawn, no note on play at the selection's end, Q-28)' but Description never names that sheet in full (ambiguous=True)
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e1: unknown sheet 'AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance (settings) board (Length: playhead and play button drawn, no note on play at the selection's end, Q-28)'
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e1 (ISS-VEA-58): Class UX needs 'Basis: External — …' or 'Basis: None — …'
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e1 (ISS-VEA-58): [AIAgent] entries never carry [UX]
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e2 (ISS-VEA-59): links 'AI Video Enhance PM spec (Spec - Video Enhance with Byteplus), Gaps & Open questions board (item 3: disclosure wording, existing GenAI consent dialog, ByteDance cloud, Legal; Q-14)' but Description never names that sheet in full (ambiguous=True)
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e2: unknown sheet 'AI Video Enhance PM spec (Spec - Video Enhance with Byteplus), Gaps & Open questions board (item 3: disclosure wording, existing GenAI consent dialog, ByteDance cloud, Legal; Q-14)'
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e2 (ISS-VEA-59): Class UX needs 'Basis: External — …' or 'Basis: None — …'
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md e2 (ISS-VEA-59): [AIAgent] entries never carry [UX]
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md: owner split
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md: filing order
+  library/pdr/video-enhance/android/ebugs/2026-11-26-q1/20261126_eBug_drafts_Video-Enhance-Q1_16.9.0.md: row map omits ['ISS-VEA-58', 'ISS-VEA-59']

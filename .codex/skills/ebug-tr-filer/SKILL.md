@@ -279,7 +279,9 @@ instead of writing `Spec Link: none`:
 1. **Identify the ticket system.** 4-digit TR serial = IF3 (API available); 3-digit = old ASP (web
    form only). See `references/api-filing.md`. The TR module lives under `/TR/`, not `/Ebug/`
    (URL table in `references/api-filing.md`).
-2. Read the TR: build, OS Language string, and form `FA`'s `ProductID` / `TemplateID` / `ParentTRCode`.
+2. Read the TR: build, OS Language string, and form `FA`'s `ProductID` / `TemplateID` / `ParentTRCode`. **The eBug
+   template is the TR's own** (its `TemplateName`, e.g. 「Generic v16.9」; the ID from `preflight`), never
+   「AIFound eBugs pool」 unless the user names it; `ecl_if3.py create` refuses a mismatch (`references/api-filing.md`).
 3. **Re-verify every finding on the device** against that build (*Verifying on the device*).
 4. **Dedupe** with `TSR.EbugSearch`, or a fresh export if the API is unavailable
    (`references/dedupe.md`). Say on the review page what you searched and what you found.
@@ -334,4 +336,4 @@ decision and wastes their time.
 | `references/casebook-overlay.md` | the casebook's reviewer rules 1–7, shared with `ebug-draft-generator`; read first |
 | `scripts/check_ebug_format.py` | the pre-filing validator; run it on every batch |
 | `scripts/ecl_if3.py` | the IF3 REST client — `preflight` / `create` (Creator-verified) / `assign` / `resolve` / `codereview` / `buildresolve` / `readback` / `export-filing`. Stdlib only; token from `~/.ecl_token` |
-| `scripts/ecl_query.py` | **searching, without spending tokens** — `bugs` / `bug` / `tr` / `dedupe` / `calibrate`. Use this instead of the MCP for anything repetitive |
+| `scripts/ecl_query.py` | **searching, without spending tokens** — `bugs` / `bug` / `tr` / `comments` / `dedupe` / `calibrate`. Use this instead of the MCP for anything repetitive |

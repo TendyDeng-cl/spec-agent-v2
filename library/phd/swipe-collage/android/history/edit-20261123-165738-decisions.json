@@ -1,0 +1,85 @@
+{
+  "saved_at": "2026-11-23T08:57:57.971Z",
+  "version": 5,
+  "decisions": [
+    {
+      "id": "TC-056",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "One horizontally scrolling bar: 「Replace」 「Flip H」 「Flip V」 「Adjust」 「Filter」 「Removal」 「Enhance」 「Lock」 「Delete」; Removal and Enhance carry a 「PRO」 tag",
+      "after": "One horizontally scrolling bar: 「Replace」 「Horizontal Flip」 「Vertical Flip」 「Adjustments」 「Filter」 「Removal」 「AI Enhance」 「Lock」 「Delete」\nRemoval and AI Enhance carry a 「PRO」 tag"
+    },
+    {
+      "id": "TC-056",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "The Design draws no PRO tag on Removal / Enhance (Q-20) and spells 「Fliter」 (Q-30): record what the app shows.",
+      "after": "The Design draws no PRO tag on Removal / Enhance (Q-20) and spells 「Fliter」 (Q-30): record what the app shows. Ruling REQ-013 (2026-11-23, PHA262026P0081 OK) 「P0081是對的」: the build's labels Horizontal Flip / Vertical Flip / Adjustments / AI Enhance are accepted (R-049)."
+    },
+    {
+      "id": "TC-172",
+      "field": "Action",
+      "decision": "modified",
+      "before": "1. Tap 「Enhance」\n2. Tap 「Advanced」\n3. Read the 「Enhance」 button and the credit button\n4. Tap 「Enhance」\n5. Tap ✓\n6. Tap the credit button",
+      "after": "1. Tap 「Enhance」\n2. Tap 「Advanced」\n3. Read the 「Enhance」 button and the top bar\n4. Tap 「Enhance」\n5. Tap ✓"
+    },
+    {
+      "id": "TC-172",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "The credit button shows the account's balance with 「+」; 「Enhance」 shows a price of 5 credits under 「Advanced」 (「Maximize detail and clarity with advanced AI.」); the balance after ✓ is recorded; the credit button opens Buy Credit",
+      "after": "Step 3: The top bar has no credit button\nStep 3: 「Enhance」 shows a price of 5 credits under 「Advanced」 (「Maximize detail and clarity with advanced AI.」)\nStep 5: The balance after ✓ is recorded"
+    },
+    {
+      "id": "TC-172",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "D4-01 says the feature charges no credits; the Design draws 5 credits (Q-27). Record the charge; do not file before Q-27 is answered.",
+      "after": "D4-01 says the feature charges no credits; the Design draws 5 credits (Q-27). Record the charge; do not file before Q-27 is answered. Ruling REQ-018 (2026-11-23, PHA262026P0086 OK) 「UI已經改動了 算過」: the credit button was removed from this room (R-211)."
+    },
+    {
+      "id": "TC-103",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "The Edit Room Sticker panel opens (store button, category tabs such as 「Favorites」 「AI Sticker」 「Flower」 「Holiday」, a 「More」 tile, ✕ / ✓); the sticker is added to the Canvas and stays after ✓",
+      "after": "The Sticker panel opens with category tabs such as 「Favorites」 and 「Trending」 and ✕ / ✓\nThe panel has no store button, 「AI Sticker」 tab or 「More」 tile\nThe sticker is added to the Canvas and stays after ✓"
+    },
+    {
+      "id": "TC-103",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "Category names come from content. The PM mock draws 「Search by keywords」: if the panel has it, search one keyword and close the keyboard.",
+      "after": "Category names come from content. The PM mock draws 「Search by keywords」: if the panel has it, search one keyword and close the keyboard. Ruling REQ-014 (2026-11-23, PHA262026P0090 OK) 「sticker已經把這些按鈕取消了 不需要出現」: store, AI Sticker and More were removed on purpose (R-090)."
+    },
+    {
+      "id": "TC-106",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "The Edit Room Text Bubble panel opens (「∅」 first, bubble styles, ✕ / ✓); the bubble is added to the Canvas",
+      "after": "The Text Bubble panel opens with bubble styles and ✕ / ✓ (no 「∅」 item)\nThe bubble is added to the Canvas"
+    },
+    {
+      "id": "TC-106",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "",
+      "after": "Ruling REQ-015 (2026-11-23, PHA262026P0091 OK) 「第一個那個不需要」: no 「∅」 item is needed (R-092)."
+    },
+    {
+      "id": "TC-115",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "Each fixed ratio gives every page that ratio: the page width (short side) stays, only the long side changes; elements keep their place and the canvas grows downward or shrinks upward. 「Original」 and 「Custom」: record what they do (Q-25)",
+      "after": "Each fixed ratio gives every page that ratio: the page width (short side) stays, only the long side changes\nNo frame is squashed or stretched (the canvas may resize from its centre and elements may move)\n「Original」 and 「Custom」: record what they do (Q-25)"
+    },
+    {
+      "id": "TC-115",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "",
+      "after": "Ruling REQ-016 (2026-11-23, PHA262026P0093 OK) 「看起來不會被壓扁就好」: only no squashed frames is required (R-101)."
+    }
+  ],
+  "summary": "TR261123-0041 rulings: TC-056 labels (REQ-013), TC-103 sticker panel (REQ-014), TC-106 no ∅ (REQ-015), TC-115 ratio (REQ-016), TC-172 no credit button (REQ-018)",
+  "notes": []
+}

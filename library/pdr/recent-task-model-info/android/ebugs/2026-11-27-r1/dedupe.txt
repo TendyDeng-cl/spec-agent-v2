@@ -1,0 +1,22 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# 2026-11-27, product PowerDirector Mobile for Android, whole pool:
+#   ecl_query.py dedupe upload/bodies.json: 158 candidates (「Recent task」), 113 (「Text to Video」); 4 open on 16.9.0, all AI Video Enhance, read against all nine entries (dedupe-query.txt)
+#   ecl_query.py bugs --text "Recent task" / "Select All" / "My Artwork" / "Text to Video" / "Text to Image" / "Menu" / "selection" / "PIP" / "Back" / "light" / "model" / "tag"
+#
+# Same-OS matches, left off:
+#   Edit mode has no 「Select All」 / 「Deselect All」 — TC-035, TC-037 (Fail), and the same step in TC-076, 080, 084, 088, 095, 100, 117, 122, 131, 136, 147, 151 — DRA262609-0033 (QA Propose Won't Fix, RD, 16.6.1 2609071, 「[AIFound][UX] Image to Video: task list Select mode offers no Select All or Deselect All control」; not closed)
+#
+# New entries, no same-OS match:
+#   ISS-RTM-01 Recent page dark in light mode: no candidate (DRA262607-0055 is Cinematic Creator's Recent background colour in dark, closed 16.5.5).
+#   ISS-RTM-02 Text to Image preview close skips the list: no candidate (DRA262603-0258 was a crash on back, closed 16.3.0).
+#   ISS-RTM-03 Text to Video ‹ after Generate skips the tool page: no candidate (DRA262610P0317 is Create Now on an empty history page).
+#   ISS-RTM-04 Back in edit mode (Q-5): no candidate.
+#   ISS-RTM-05 tag tap opens the result: no candidate.
+#   ISS-RTM-06 editor selection cleared after Text to Image (Q-10): no candidate.
+#   ISS-RTM-07 PIP Tools entry name (Q-10): no candidate.
+#   ISS-RTM-08 banner-opened Recent tasks have only Home: 25 % with DRA262611P0081 (AI Video Enhance's Recent task has no ‹, other feature and screen): new card.
+#   ISS-RTM-09 ☰ › My Artwork no way back: no candidate (DRA262603-0093/0094 are Menu options in landscape, closed).
+#
+# Filed 2026-11-27 (TR261125-0064): the two same-OS duplicates of the AIGC Watermark E1 batch were not filed again:
+#   ISS-RTM-06 = ISS-AWA-24 = DRA262611P0345 (Text to Image from a selected photo clears the editor selection; TC-109, TC-110, TC-113, TC-114)
+#   ISS-RTM-09 = ISS-AWA-29 = DRA262611P0350 (My Artwork from the Home ☰ Menu has no way back to the Menu; TC-081)

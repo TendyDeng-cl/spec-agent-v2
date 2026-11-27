@@ -59,12 +59,24 @@ if (!LANGS.length) die('No MUI languages (mui.json / product.json › mui)');
 // string resources: name → { qualifier: text }
 const strings = new Map<string, Record<string, string>>();
 let cur: Record<string, string> | null = null;
+const unesc = (s: string) => s.replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+// a value with a real line break is printed over several lines, each continuation indented by aapt2 (seen 2026-11-25:
+// aigc_watermark_export_reminder_message was dropped before this)
+let open: { q: string; parts: string[] } | null = null;
 for (const line of dump.split('\n')) {
+  if (open) {
+    const end = line.match(/^\s*(.*)"\s*$/);
+    open.parts.push(end ? end[1] : line.replace(/^\s+/, ''));
+    if (end) { cur![open.q] = unesc(open.parts.join('\n')); open = null; }
+    continue;
+  }
   const r = line.match(/^\s+resource 0x[0-9a-f]+ string\/(\S+)/);
   if (r) { cur = {}; strings.set(r[1], cur); continue; }
   if (/^\s+resource /.test(line) || /^\s*type /.test(line)) { cur = null; continue; }
   const v = cur && line.match(/^\s+\(([^)]*)\) (?:\[[^\]]*\] )?"(.*)"\s*$/);
-  if (v) cur![v[1]] = v[2].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+  if (v) { cur![v[1]] = unesc(v[2]); continue; }
+  const o = cur && line.match(/^\s+\(([^)]*)\) (?:\[[^\]]*\] )?"(.*)$/);
+  if (o) open = { q: o[1], parts: [o[2]] };
 }
 
 // the feature's strings

@@ -1,0 +1,193 @@
+{
+ "draft": "20261125-190000",
+ "current": [
+  "R3"
+ ],
+ "needs": {},
+ "unavailable": {},
+ "phases": [
+  {
+   "id": "MUI",
+   "name": "MUI: app strings in every language from the APK",
+   "note": "REQ-002 (user, 2026-11-24). Run on request, never in a full run. Truncation per language is checked by the Language rows of the full run. Doubtful translations go to mui-doubts.md (references/mui.md §3).",
+   "segments": [
+    {
+     "id": "MUI-apk",
+     "name": "Translations from the APK (no phone)",
+     "cases": [
+      "TC-076"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q1",
+   "name": "Question round: rows that observe Open questions (REQ-111 / REQ-045 / REQ-014 / REQ-009)",
+   "round": true,
+   "origin": {
+    "TC-077": "Q1",
+    "TC-079": "Q1",
+    "TC-078": "Q1"
+   },
+   "note": "Every row here is recorded Fail (question) for PM with what it saw, never Pass, unless its Expected Result passes outright. Credits: use what a row needs (AGENTS.md, 2026-11-26).",
+   "segments": [
+    {
+     "id": "Q1-a",
+     "name": "Photo tips sheet gestures (Q-3) and offline data source (Q-4)",
+     "note": "Q-3: dimmed-area tap and swipe-down on the sheet. Q-4: offline after a sheet loaded (TC-079), then a cold start offline (TC-078). Wi-Fi back on after each row.",
+     "cases": [
+      "TC-077",
+      "TC-079",
+      "TC-078"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "R3",
+   "name": "Round 3: language rows changed since R2 (chip in its pill, the sheet sentence) and TC-076 never run",
+   "round": true,
+   "origin": {
+    "TC-024": "R2",
+    "TC-017": "R2",
+    "TC-025": "R2",
+    "TC-026": "R2",
+    "TC-027": "R2",
+    "TC-018": "R2",
+    "TC-028": "R2",
+    "TC-029": "R2",
+    "TC-030": "R2",
+    "TC-031": "R2",
+    "TC-032": "R2",
+    "TC-033": "R2",
+    "TC-034": "R2",
+    "TC-035": "R2",
+    "TC-036": "R2",
+    "TC-037": "R2",
+    "TC-038": "R2",
+    "TC-039": "R2",
+    "TC-040": "R2",
+    "TC-041": "R2",
+    "TC-042": "R2",
+    "TC-043": "R2",
+    "TC-044": "R2",
+    "TC-045": "R2",
+    "TC-046": "R2",
+    "TC-047": "R2",
+    "TC-048": "R2",
+    "TC-049": "R2",
+    "TC-050": "R2",
+    "TC-051": "R2",
+    "TC-052": "R2",
+    "TC-053": "R2",
+    "TC-054": "R2",
+    "TC-055": "R2",
+    "TC-056": "R2",
+    "TC-057": "R2",
+    "TC-058": "R2",
+    "TC-059": "R2",
+    "TC-060": "R2",
+    "TC-061": "R2",
+    "TC-064": "R2",
+    "TC-065": "R2",
+    "TC-066": "R2",
+    "TC-067": "R2",
+    "TC-068": "R2",
+    "TC-069": "R2",
+    "TC-070": "R2",
+    "TC-071": "R2",
+    "TC-072": "R2",
+    "TC-073": "R2",
+    "TC-074": "R2",
+    "TC-075": "R2",
+    "TC-076": "MUI"
+   },
+   "note": "REQ-014 (user, 2026-11-26, \"Run VE, AMD, CR gaps\"): approved rows never run or changed since their last run, after the pull to 61dcda8. Sony XQ-BT52 on 16.9.0 (2611201); 2611251 needs Android 13.",
+   "segments": [
+    {
+     "id": "R3-c",
+     "name": "Language 1 (as R2-c)",
+     "cases": [
+      "TC-024",
+      "TC-017",
+      "TC-025",
+      "TC-026",
+      "TC-027",
+      "TC-018",
+      "TC-028",
+      "TC-029",
+      "TC-030",
+      "TC-031",
+      "TC-032",
+      "TC-033"
+     ]
+    },
+    {
+     "id": "R3-d",
+     "name": "Language 2 (as R2-d)",
+     "cases": [
+      "TC-034",
+      "TC-035",
+      "TC-036",
+      "TC-037",
+      "TC-038",
+      "TC-039",
+      "TC-040",
+      "TC-041",
+      "TC-042",
+      "TC-043",
+      "TC-044",
+      "TC-045",
+      "TC-046",
+      "TC-047",
+      "TC-048",
+      "TC-049"
+     ]
+    },
+    {
+     "id": "R3-e",
+     "name": "Language 3 (as R2-e)",
+     "cases": [
+      "TC-050",
+      "TC-051",
+      "TC-052",
+      "TC-053",
+      "TC-054",
+      "TC-055",
+      "TC-056",
+      "TC-057",
+      "TC-058",
+      "TC-059",
+      "TC-060",
+      "TC-061"
+     ]
+    },
+    {
+     "id": "R3-f",
+     "name": "Language 4 (as R2-f)",
+     "cases": [
+      "TC-064",
+      "TC-065",
+      "TC-066",
+      "TC-067",
+      "TC-068",
+      "TC-069",
+      "TC-070",
+      "TC-071",
+      "TC-072",
+      "TC-073",
+      "TC-074",
+      "TC-075"
+     ]
+    },
+    {
+     "id": "R3-mui",
+     "name": "MUI-apk: app strings from the APK (no phone)",
+     "cases": [
+      "TC-076"
+     ]
+    }
+   ]
+  }
+ ]
+}

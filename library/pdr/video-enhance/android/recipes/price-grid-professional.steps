@@ -2,6 +2,10 @@
 # then the fps and Resolution chips, and read the CTA price and 「Selected Length」 at 00:30, 01:30, the 02:30 cap and
 # 00:30 again; ends by tapping Standard and pushing the selection back to 08:00 for the next row.
 # Charges nothing: Enhance is never tapped.
+# Recalibrated 2026-11-26 on 2611251 (R4-d2): the 12:30 source draws the strip 66 px lower (O-6), handles at y 1224;
+# 「Selected Length」 now rounds up (P0075 fix), so finger 210 = 「00:30」 (bills 30), 313 = 「01:30」 (bills 90);
+# 212 / 315 now read 「00:31」 / 「01:31」. Never drag from x 980 unless the handle is at the cap: beside a short
+# selection that drag scrolls the strip and moves the whole selection.
 # Starts and ends: as price-grid-standard.steps (ve-1230-1080p30 panel scrolled down, Standard, 00:00–08:00, the style
 # already set: tap chip_style_natural / chip_style_sharp before the block, no cap bubble).
 # Args: $1 = case ID, $2 = fps chip id, $3 = resolution chip id.
@@ -9,7 +13,7 @@
 # per pixel), so finger 212 = 「00:30」 (30.x s), 315 = 「01:30」 (90.x s), 1060 pushes to the 02:30 cap, where the
 # handle is grabbed at x 416. Wait 3 s after a cap push (the cap bubble swallows the next touch).
 case $1
-fingerdrag 980 1158 212 1158 20
+fingerdrag 980 1224 210 1224 20
 fingerdrag 540 1750 540 1250 10
 id chip_mode_professional
 expect-not "supports clips|Shorten your selection"
@@ -23,17 +27,17 @@ fingerdrag 540 1250 540 1750 10
 wait 1
 els tv_
 shot $1-30s
-fingerdrag 212 1158 315 1158 20
+fingerdrag 210 1224 313 1224 20
 els tv_
 shot $1-90s
-fingerdrag 315 1158 1060 1158 15
+fingerdrag 313 1224 1060 1224 15
 shot $1-cap
 wait 3
 els tv_
-fingerdrag 416 1158 212 1158 20
+fingerdrag 416 1224 210 1224 20
 els tv_
 els chip_
 shot $1-back30
 id chip_mode_standard
-fingerdrag 212 1158 1060 1158 15
+fingerdrag 210 1224 1060 1224 15
 wait 3

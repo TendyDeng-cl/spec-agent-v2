@@ -1,0 +1,199 @@
+{
+  "draft": "20261126-111221",
+  "current": [
+    "MUI"
+  ],
+  "needs": {},
+  "unavailable": {},
+  "phases": [
+    {
+      "id": "MUI",
+      "name": "MUI: 26 languages (translation and truncation on the phone)",
+      "note": "REQ-002 (user, 2026-11-24). Run on request, never in a full run. One segment per language; every segment ends with a plain launch. Doubtful translations go to mui-doubts.md (references/mui.md §3).",
+      "segments": [
+        {
+          "id": "MUI-CHT",
+          "name": "Traditional Chinese (zh-Hant-TW)",
+          "cases": [
+            "TC-020"
+          ]
+        },
+        {
+          "id": "MUI-CHS",
+          "name": "Simplified Chinese (zh-Hans-CN)",
+          "cases": [
+            "TC-021"
+          ]
+        },
+        {
+          "id": "MUI-JPN",
+          "name": "Japanese (ja-JP)",
+          "cases": [
+            "TC-022"
+          ]
+        },
+        {
+          "id": "MUI-ESP",
+          "name": "Spanish (es-ES)",
+          "cases": [
+            "TC-023"
+          ]
+        },
+        {
+          "id": "MUI-KOR",
+          "name": "Korean (ko-KR)",
+          "cases": [
+            "TC-024"
+          ]
+        },
+        {
+          "id": "MUI-DEU",
+          "name": "German (de-DE)",
+          "cases": [
+            "TC-025"
+          ]
+        },
+        {
+          "id": "MUI-FRA",
+          "name": "French (fr-FR)",
+          "cases": [
+            "TC-026"
+          ]
+        },
+        {
+          "id": "MUI-ITA",
+          "name": "Italian (it-IT)",
+          "cases": [
+            "TC-027"
+          ]
+        },
+        {
+          "id": "MUI-RUS",
+          "name": "Russian (ru-RU)",
+          "cases": [
+            "TC-028"
+          ]
+        },
+        {
+          "id": "MUI-PTB",
+          "name": "Portuguese (Brazil) (pt-BR)",
+          "cases": [
+            "TC-029"
+          ]
+        },
+        {
+          "id": "MUI-NLD",
+          "name": "Dutch (nl-NL)",
+          "cases": [
+            "TC-030"
+          ]
+        },
+        {
+          "id": "MUI-IND",
+          "name": "Indonesian (id-ID)",
+          "cases": [
+            "TC-031"
+          ]
+        },
+        {
+          "id": "MUI-THA",
+          "name": "Thai (th-TH)",
+          "cases": [
+            "TC-032"
+          ]
+        },
+        {
+          "id": "MUI-MAY",
+          "name": "Malay (ms-MY)",
+          "cases": [
+            "TC-033"
+          ]
+        },
+        {
+          "id": "MUI-HIN",
+          "name": "Hindi (hi-IN)",
+          "cases": [
+            "TC-034"
+          ]
+        },
+        {
+          "id": "MUI-ESM",
+          "name": "Spanish (Mexico) (es-MX)",
+          "cases": [
+            "TC-035"
+          ]
+        },
+        {
+          "id": "MUI-ARA",
+          "name": "Arabic (ar-SA)",
+          "cases": [
+            "TC-036"
+          ]
+        },
+        {
+          "id": "MUI-VIT",
+          "name": "Vietnamese (vi-VN)",
+          "cases": [
+            "TC-037"
+          ]
+        },
+        {
+          "id": "MUI-PLK",
+          "name": "Polish (pl-PL)",
+          "cases": [
+            "TC-038"
+          ]
+        },
+        {
+          "id": "MUI-TRK",
+          "name": "Turkish (tr-TR)",
+          "cases": [
+            "TC-039"
+          ]
+        },
+        {
+          "id": "MUI-FAR",
+          "name": "Persian (fa-IR)",
+          "cases": [
+            "TC-040"
+          ]
+        },
+        {
+          "id": "MUI-HEB",
+          "name": "Hebrew (he-IL)",
+          "cases": [
+            "TC-041"
+          ]
+        },
+        {
+          "id": "MUI-SVE",
+          "name": "Swedish (sv-SE)",
+          "cases": [
+            "TC-042"
+          ]
+        },
+        {
+          "id": "MUI-DAN",
+          "name": "Danish (da-DK)",
+          "cases": [
+            "TC-043"
+          ]
+        },
+        {
+          "id": "MUI-NOR",
+          "name": "Norwegian Bokmål (nb-NO)",
+          "cases": [
+            "TC-044"
+          ]
+        },
+        {
+          "id": "MUI-UKR",
+          "name": "Ukrainian (uk-UA)",
+          "cases": [
+            "TC-045"
+          ]
+        }
+      ]
+    }
+  ]
+}

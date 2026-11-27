@@ -1,0 +1,72 @@
+[
+  {
+    "bug": "PHA262026-0051",
+    "verdict": "FIXED",
+    "summary": "Settings › User Sign in now opens the full Sign In page with the Email and Password fields, Sign Up, Forgot Password and the Google and Facebook buttons.",
+    "screenshots": [
+      "a_03_0051_signin_page.png",
+      "a_04_0051_signin_page.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0025",
+    "verdict": "FIXED",
+    "summary": "AI Background now has a My AI Artwork button that opens My AI Artwork on the AI Background tab, and Back returns to the room.",
+    "screenshots": [
+      "a_09_p0025_ai_background_room.png",
+      "a_10_p0025_artwork.png",
+      "a_11_p0025_back_room.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0029",
+    "verdict": "HOLD",
+    "summary": "The AI Hair Color hint bubble no longer shows on this phone (one-time hint already used) and the Portrait list is not auto-scrolled, so the fix cannot be seen without clearing the app's data.",
+    "screenshots": [
+      "a_13_p0029_portrait_tab.png",
+      "a_15_p0029_hair.png"
+    ],
+    "note": "Needs a fresh hint state (pm clear or reinstall on the S23); RD's impact field says it cannot be verified in this app version. User decision."
+  },
+  {
+    "bug": "PHA262026-0289",
+    "verdict": "FIXED",
+    "summary": "In ID Photo › Beautify › Makeup, [X] returns to the normal preview every time (8 tries, with and without a lipstick picked), other Beautify tools' [X] are fine and [V] still applies the makeup.",
+    "screenshots": [
+      "a_34a_0289_lipstick_applied.png",
+      "a_37_0289_x_cycle7_immediate.png",
+      "a_42_0289_v_beautify_applied.png"
+    ]
+  },
+  {
+    "bug": "PHA242024-1271",
+    "verdict": "FIXED",
+    "summary": "In AI Art, which now holds the gender-split style lists, selecting a Male style clears the Female selection, so only one style is selected at a time.",
+    "screenshots": [
+      "a_54_1271_tap_clean_nophoto.png",
+      "a_56_1271_male_cine_selected.png",
+      "a_57_1271_back_to_female.png"
+    ],
+    "note": "AI Sketch no longer exists as an entry; checked in AI Art as RD's note says."
+  },
+  {
+    "bug": "PHA262026P0056",
+    "verdict": "FIXED",
+    "summary": "The rules page says video generation costs 4 credits per second and the video generation dialog says the same 4 credits per second.",
+    "screenshots": [
+      "a_61_p0056_info.png",
+      "a_67_p0056_after_send.png"
+    ],
+    "note": "Dialog cancelled, no credits spent. Image generation (rules page: 6 credits) was not run in this no-cost segment."
+  },
+  {
+    "bug": "PHA262026-0407",
+    "verdict": "FIXED",
+    "summary": "In light mode the Happy Horse 1.1 icon in the Custom model list is a black horse that stands out clearly on the light card, and in dark mode it is white.",
+    "screenshots": [
+      "a_76_0407_happyhorse_light.png",
+      "a_76_0407_happyhorse_light_icon_zoom.png",
+      "a_74_0407_happyhorse_dark.png"
+    ]
+  }
+]

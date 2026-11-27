@@ -1,0 +1,39 @@
+[
+  {
+    "bug": "PHA262026P0142",
+    "verdict": "FIXED",
+    "summary": "Reuse of the finished Kling 2.6 Custom video now shows the Image To Video explanation sheet first, as the AI Videos entry does; Try now and Continue open Custom with Kling 2.6, the prompt, 10 s, Pro, Sound Off and the toast Settings applied. After Don't show again, Reuse and the AI Videos entry open Custom directly.",
+    "screenshots": [
+      "c_02_p0142_aivideos_entry.png",
+      "c_07_p0142_reuse_sheet.png",
+      "c_09_p0142_custom_toast.png",
+      "c_10_p0142_reuse_settings.png",
+      "c_18_p0142_reuse_after_dontshow.png"
+    ],
+    "note": "Prompt-only reuse could not be tried: the only other I2V artwork (Feeling Good template) has no Reuse button. Deep links not tried. Don't show again is now set on this install; the next segment's pm clear resets it."
+  },
+  {
+    "bug": "PHA262026P0145",
+    "verdict": "FIXED",
+    "summary": "Nine screen recordings of Reuse (with and without the sheet), Try now, Continue and the AI Videos entry: 1,711 decoded frames (plus 1,412 at 30 fps) are all portrait with no rotated or letterboxed frame, and ImageToVideoActivity requests portrait.",
+    "screenshots": [
+      "recordings/frames-sheets/p0145-reuse-1_native.png",
+      "recordings/frames-sheets/p0145-fullpath-4_native.png",
+      "recordings/frames-sheets/p0145-reuse-5-nosheet_native.png"
+    ]
+  },
+  {
+    "bug": "PHA262026-0243",
+    "verdict": "FIXED",
+    "summary": "After changing the system language to Traditional Chinese, ten Image to Video styles tapped right away each showed their own sample photo at once, identical to the same style in English, and unchanged 30 s later.",
+    "screenshots": [
+      "d_bzh_01.png",
+      "d_bzh_05.png",
+      "d_bzh_06.png",
+      "d_czh30_01s.png",
+      "d_aen_01s.png",
+      "d_aen_09s.png"
+    ],
+    "note": "System language changed in Samsung Settings (not only per-app) and restored to en-US with the original locale list. The log reported 'Template Content is not modified' after each change, so the style-folder re-download RD describes was not forced on this phone; a pass right after the next segment's pm clear would cover that path if wanted."
+  }
+]

@@ -1,0 +1,490 @@
+DRA262611P0314    Assigned        2    RD         2611231    SAM_CHANG       PDR-A 16.9.0 - [AIAgent] AI Mini Drama: Credit Details shows fewer credits than deducted
+DRA262611P0238    Assigned        2    RD         2611171    SAM_CHANG       PDR-A 16.9.0 - [AIFound] AI Mini Drama (職場戀情禁止中): Default-template storyboard preview fails with TextToSpeech 4000
+DRA262611P0237    Assigned        2    RD         2611171    SAM_CHANG       PDR-A 16.9.0 - [AIFound] AI Mini Drama (職場戀情禁止中): Two Standard preview scenes fail with Seedance 4005
+DRA262611P0198    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): Missing "MiniDrama_Generate_Alert" when generating video without enough credit
+DRA262611P0197    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): Missing "MiniDrama_Response_Received" when generating outline/storyboard/ video with inspiration text
+DRA262611P0196    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): "response_text" in "MiniDrama_Response_Received" is always "(empty string)" when generating outline
+DRA262611P0195    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): Show parameter "inspiration_style" in "MiniDrama_Response_Received" when generating video without inspiration text. It doesn't follow spec
+DRA262611P0194    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): Show parameter "template" in "MiniDrama_Response_Received" when generating video without template. It doesn't follow spec
+DRA262611P0193    Assigned        2    RD         2611121    ALLENCW_CHEN    PDR-A 16.8.1 - Mixpanel(AI Mini Drama): Missing "MiniDrama_Response_Received" when generating outline with template
+DRA262611P0121    QA Propose Won  2    RD         2611061    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (大小姐，請選擇我): Scene 5 shows overlapping captions
+DRA262611P0070    NewCreated      2    PM         2611091    BALLY_HSU       PDR-A 16.9.0 - [AIFound][MUI] AI Mini Drama: Traditional Chinese template covers show Western faces and English titles
+DRA262611P0069    Assigned        2    RD         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Storyboard summary reply stays English in Traditional Chinese templates
+DRA262611P0068    Close           2    PM         2611061    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (大小姐，請選擇我): Scene 4 image still fails after three repairs
+DRA262611P0067    Assigned        2    RD         2611061    ALLENCW_CHEN    PDR-A 16.8.0 - Mixpanel(AI Mini Drama): Missing "close" in "MiniDrama_Dialog_Click -> cta_type"
+DRA262611P0066    Assigned        2    RD         2611061    ALLENCW_CHEN    PDR-A 16.8.0 - Mixpanel(AI Mini Drama): Only "en/kor" in the "MiniDrama_Generate_Success/ MiniDrama_Generate_Click -> video_language". It doesn't follow spec
+DRA262611P0065    Assigned        2    RD         2611061    ALLENCW_CHEN    PDR-A 16.8.0 - Mixpanel(AI Mini Drama): Missing "cl_library" in "MiniDrama_Generate_Success -> character_source"
+DRA262611P0064    Close           2    RD         2611061    ALLENCW_CHEN    PDR-A 16.8.0 - Mixpanel(AI Mini Drama): Parameter name is "template_guid". It doesn't follow spec
+DRA262611P0063    Cancelled       2    RD         2611061    ALLENCW_CHEN    PDR-A 16.8.0 - Mixpanel(AI Mini Drama): Missing "ai_mini_drama" in "Shortcut_Produce_Save -> shortcut_type" after generating AI mini drama
+DRA262611P0062    Assigned        2    RD         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Retry on the error card asks about adding a character instead of retrying
+DRA262611P0061    Assigned        2    RD         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Voice reference fails with Error 4000 for characters whose first look failed
+DRA262611P0060    QA Propose Won  2    RD         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Re-added character's look is said to be restored but the card is empty
+DRA262611P0059    QA Propose Won  3    RD         2611061    JAMIE_YEH       PDR-A 16.8.0 - [Quality][UI] AI Mini Drama: Subtitles unnecessarily wrap into two lines
+DRA262611P0058    Assigned        3    RD         2611061    JAMIE_YEH       PDR-A 16.8.0 - [Quality] AI Mini Drama: Subtitles split phrases at unnatural points
+DRA262611P0057    Assigned        2    RD         2611061    JAMIE_YEH       PDR-A 16.8.0 - [Quality] AI Mini Drama: Subtitles do not match the audio in some parts of generated videos
+DRA262611P0055    NewCreated      2    PM         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama (The Heiress and Her Protector, Japanese): Scene 4 image generation fails
+DRA262611P0054    NewCreated      2    PM         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama (The Heiress and Her Protector): Scene 4 image generation fails
+DRA262611P0053    NewCreated      2    PM         2611061    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama (Merger Season, Japanese): Scene 5 image generation fails
+DRA262611P0052    QA Propose Won  2    RD         2611052    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Regenerate Image button shows 7 credits but only 3 are charged
+DRA262611P0051    QA Propose Won  2    RD         2611052    BALLY_HSU       PDR-A 16.8.0 - AI Mini Drama [Custom story] : The character's voice in the custom story generated video is "說話沒感情".
+DRA262611P0049    Close           3    PM         2611041    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Magic: AI Mini Drama shows placeholder "AI Mini Drama (Andriod)" in SV/DA/NB/UK
+DRA262611P0048    Close           2    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Create my character failure text is too dark to read on the image area
+DRA262611P0047    Assigned        3    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Video caption shows the stage direction 「（對鏡頭）」
+DRA262611P0046    QA Propose Won  2    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Video status 「Preparing video generation with Seedance 2.0.」 stays English
+DRA262611P0045    Close           2    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Storyboard result cards show 「Scene N —」 while the viewer shows 「場景 N」
+DRA262611P0044    NeedCodeReview  3    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Storyboard status 「正在生成故事板分鏡畫面...」 mixes two terms
+DRA262611P0043    Close           3    PC-Doc     2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: 「在您繼續之前，請先逐一預覽。」 does not match 「Add a look to continue.」
+DRA262611P0042    NeedMoreInfo    2    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed character says credits were refunded, but 1 credit is kept
+DRA262611P0041    Close           2    PC-Doc     2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: 「I'll create a story outline — give me a moment...」 is not translated
+DRA262611P0040    Close           3    PC-Doc     2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Format card title reads 「您要將影片匯出為哪種格式？」 (export)
+DRA262611P0039    NewCreated      2    PCDoc      2611041    BALLY_HSU       PDR-A 16.8.0 - [MUI] AI Mini Drama: Storyboard card's "You'll have N left" is not localized
+DRA262611P0038    Close           2    RD         2611041    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard card's "You'll have N left" text too faint to read on blue card
+DRA262611P0037    NeedCodeReview  3    RD         2611041    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Japanese video caption leaves one word alone on line 2
+DRA262611P0036    NAB             3    PM         2611021    SHERRY_LEE      PDR-A 16.8.0 - [UX] AI Mini Drama: Exported captions sit above Auto Captions with a different position and size
+DRA262611P0035    Close           3    RD         2611041    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Video captions show a period at the end of sentences
+DRA262611P0032    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Template detail 「Make my version」 label is smaller than the Design
+DRA262611P0031    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: 「Ready for the next episode?」 is regular weight instead of semibold
+DRA262611P0030    Assigned        3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI][Light] AI Mini Drama: Storyboard Preview scrubber thumb is barely visible
+DRA262611P0029    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Full-screen description editor 「Done」 is bold instead of regular weight
+DRA262611P0028    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Recent Task Manage 「Delete」 label is regular weight with a smaller icon
+DRA262611P0027    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Create my character 「Generating」 button label is darker grey than the Design
+DRA262611P0026    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Create my character Age input scrim is far lighter than the Design
+DRA262611P0025    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Create my character ⓘ tooltip fill is darker blue than the Design
+DRA262611P0024    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Create my character Age placeholder is lighter than the Design grey
+DRA262611P0023    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI][Light] AI Mini Drama: Character Library panel and Create tile miss the Design fills
+DRA262611P0022    Close           3    PC-Doc     2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Age filter chip reads 「Age 1–23」 instead of 「Age: 1-23」
+DRA262611P0021    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: The card has no 「Model · Seedance」 heading over Best / Standard / Fast, and the length heading reads "Video length"
+DRA262611P0020    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Storyboard and full-video offers lack the frame around the question and card
+DRA262611P0019    Close           3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Input max-length notice is a system toast instead of the Design's pill toast
+DRA262611P0018    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Max-height input box shows no scroll bar while its text scrolls
+DRA262611P0017    QA Propose Won  3    PM         2611041    BALLY_HSU       PDR-A 16.8.0 - [MUI][JPN] AI Mini Drama: Japanese template character names stay in romaji/English
+DRA262611P0016    Close           2    PC-Doc     2611031    BALLY_HSU       PDR-A 16.7.0 - [MUI] AI Mini Drama (Demo page): "Turn your idea into a video—same characters, same voices, every scene." is not localized
+DRA262611P0015    QA Propose Won  2    RD         2611021    SAM_CHANG       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama : Inconsistent voice output for the same character in the generated Japanese video
+DRA262611P0014    QA Propose Won  3    RD         2611021    SAM_CHANG       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama : Some Japanese words are pronounced incorrectly in the generated video
+DRA262611P0013    Close           3    RD         2611031    BALLY_HSU       PDR-A 16.8.0 - [UI] AI Mini Drama: History placeholder icon for a drama without images is blurry.
+DRA262611P0012    Assigned        3    RD         2611021    JAMIE_YEH       PDR-A 16.8.0 - [AIFound][Quality][UI] AI Mini Drama (Merger Season): "No competitor..." subtitle disappears after 0.3s
+DRA262611P0011    Close           3    RD         2611031    BALLY_HSU       PDR-A 16.8.0 - [AIFound][ALL] AI Mini Drama: Home Top 6 does not match CMS sheet
+DRA262611P0010    QA Propose Won  3    RD         2611021    JAMIE_YEH       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama: Two Mandarin words are mispronounced
+DRA262611P0009    Close           3    RD         2611021    JAMIE_YEH       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: AV unsync, Lauren's subtitle ends before her voice
+DRA262611P0008    Close           2    RD         2611031    BALLY_HSU       PDR-A 16.8.0 - [UI] AI Mini Drama: Intro page with demo video has no History icon when the user has recent tasks
+DRA262611P0007    Close           2    RD         2611031    ANGOL_HUANG     PDR-A 16.8.0 - [UI] Opening Intro: AI Mini Drama intro video is cropped on left and top edges on some devices
+DRA262611P0006    Close           2    RD         2611021    BALLY_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Export Full Video adds the Free watermark to a drama paid for with credits
+DRA262611P0005    NAB             2    RD         2611021    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Stop button is shown during outline generation and chat updates
+DRA262611P0004    QA Propose Won  2    PM         2611021    ANGOL_HUANG     PDR-A 16.8.0 - [JPN] AI Mini Drama: "台本のない恋" template generates non-East Asian characters when video language is Chinese
+DRA262610P0444    QA Propose Won  2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [Quality] AI Mini Drama: The generated story lacks a clear transition between confrontation and resolution
+DRA262611P0003    Close           2    RD         2611021    ANGOL_HUANG     PDR-A 16.8.0 - [AIFound] Opening Intro: Continue on the AI Mini Drama page opens Image to Video instead of AI Mini Drama
+DRA262611P0002    NeedCodeReview  3    RD         2611021    ANGOL_HUANG     PDR-A 16.8.0 - [AIFound][MUI][KR] Opening Intro: AI Mini Drama Korean subtitle breaks mid-word (보세 / 요.)
+DRA262611P0001    Close           3    PC-Doc     2611021    ANGOL_HUANG     PDR-A 16.8.0 - [AIFound][MUI][JP] Opening Intro: AI Mini Drama Japanese subtitle splits ショートドラマ across lines
+DRA262610P0443    NAB             3    RD         2610292    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: 「The frames are drawn from the characters' faces…」 reply stays English in all languages
+DRA262610P0442    Close           3    RD         2610301    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard Preview card shows 1 second more than the player's total time
+DRA262610P0441    QA Propose Won  2    RD         2610292    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][MUI] AI Mini Drama: Next-episode status card text stays English in Chinese
+DRA262610P0440    Close           2    PC-Doc     2610292    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][MUI] AI Mini Drama: Storyboard toast and 「Updating storyboard」 text stay English
+DRA262610P0439    Close           3    PC-Doc     2610292    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][MUI] AI Mini Drama: 「Leave while we're preparing?」 dialog stays English in Chinese
+DRA262610P0438    QA Propose Won  3    RD         2610292    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][MUI] AI Mini Drama: Chinese template outlines keep English role names (HR Manager…)
+DRA262610P0437    Close           2    RD         2610301    ANGOL_HUANG     PDR-A 16.8.0 - AI Magic: AI Mini Drama is missing from the AI Creation list
+DRA262610P0436    Close           3    PM         2610292    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Russian Create my character Other chip is 「Другое」, Filter 「Прочее」
+DRA262610P0435    Close           3    PM         2610292    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Italian Create my character East Asian chip is 「Asia orientale」, Filter 「Asia Orientale」
+DRA262610P0434    Close           3    PM         2610292    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: es-MX Spanish Create my character Female/Male/East Asian differ from Filter
+DRA262610P0433    Close           3    PM         2610292    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Spanish Create my character Male chip is 「Hombre」, Filter 「Masculino」
+DRA262610P0432    Close           2    RD         2610292    BALLY_HSU       PDR-A 16.8.0 - [AIAgent][UKR] AI Mini Drama: Video length Preview option is truncated and hides the length
+DRA262610P0431    Close           2    PC-Doc     2610292    BALLY_HSU       PDR-A 16.8.0 - [AIAgent][PLK] AI Mini Drama: Chat questions and video settings stay English in Polish
+DRA262610P0430    Close           2    RD         2610292    BALLY_HSU       PDR-A 16.8.0 - [AIAgent][RUS] AI Mini Drama: Video length Preview option is truncated and hides the length
+DRA262610P0429    Close           2    RD         2610292    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Magic: AI Mini Drama entry is missing from the AI Creation section
+DRA262610P0428    Close           2    RD         2610292    ANGOL_HUANG     PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Tablet landscape enlarged character preview has no close button
+DRA262610P0427    Close           2    RD         2610292    ANGOL_HUANG     PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Tablet landscape Storyboard Preview crops images; faces and captions cut off
+DRA262610P0425    QA Propose Won  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: History times use the English 「AM」 format in Chinese, Japanese and French
+DRA262610P0424    Close           3    PC-Doc     2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: French copy: 「Crédits seront consommés」 lacks an article; 「Langage de la vidéo」
+DRA262610P0423    Close           3    PCDoc      2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Template category headers and names stay English in Chinese and French
+DRA262610P0422    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: A clean install opens the landing page with no intro page
+DRA262610P0421    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Asking to update two characters charges for and regenerates three
+DRA262610P0420    NotReproducibl  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: A Mine character's face turns about 25 years younger in the full episode's clips
+DRA262610P0419    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Scene description editor at 1,000 characters: no red counter or limit message
+DRA262610P0418    NotReproducibl  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: One video sends a 「Your drama is ready」 push per clip, four for one episode
+DRA262610P0417    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Leaving a scene regenerate shows a raw 「MiniDrama FAIL」 debug toast
+DRA262610P0416    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Full Video 90 s is quoted 4 credits above the per-second price (Standard 364, not 360)
+DRA262610P0415    Assigned        2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Failed storyboard images claim a refund, but the 15 credits never return
+DRA262610P0414    Close           3    RD         2610292    BALLY_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Typed-idea outline shows the template status 「based on this template」
+DRA262610P0413    Close           2    RD         2610292    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Storyboard Preview and drama preview shrink after custom characters are applied
+DRA262610P0412    NeedCodeReview  3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Record voice does nothing after microphone access is denied twice
+DRA262610P0411    Assigned        3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Export Full Video adds 18 px black bars at top and bottom
+DRA262610P0409    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Player download icon has no background
+DRA262610P0408    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Player shows black edges above and below the video
+DRA262610P0407    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Full-episode card spacing to the text and the input box is wrong
+DRA262610P0406    NeedCodeReview  3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Create my character description box background is too dark in Light mode
+DRA262610P0405    NeedCodeReview  3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Video settings card credit cost is not aligned with Generate video
+DRA262610P0404    QA Propose Pos  3    PM         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Selected clip in the player clip strip is hard to see in Light mode
+DRA262610P0403    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard Result scene description is clipped on its last line
+DRA262610P0402    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: History placeholder icon for a drama without images doesn't follow UI guideline
+DRA262610P0401    NewCreated      3    PM         2610212    SHERRY_LEE      PDR-A 16.8.0 - [UX] AI Mini Drama: Generated video cards and player show no duration
+DRA262610P0400    NewCreated      3    PM         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: History cards show no video duration
+DRA262610P0398    NotReproducibl  2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - AI Mini Drama: all 6 storyboard scene images fail after using a template
+DRA262610P0397    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: "Thinking..." card appears before the user's video format message
+DRA262610P0396    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Regenerate icon on Characters Result thumbnails doesn't follow UI guideline
+DRA262610P0395    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Report icon in the enlarged character preview menu is blurry
+DRA262610P0394    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Create my character: credit icon on the disabled Generate button is not dimmed
+DRA262610P0392    NAB             2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Stopping the cast confirmation shows 「Something went wrong on my end」
+DRA262610P0391    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: System Back on the Export Full Video sheet also closes the result page
+DRA262610P0390    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Asking Iris to change the story title does not rename the drama in History
+DRA262610P0389    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: System Back in History Manage mode leaves History instead of exiting Manage
+DRA262610P0388    Assigned        2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Failed scene images in a chat update show no 「!」 and keep their 6 credits
+DRA262610P0387    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: System Back on the enlarged character preview closes Choose Character
+DRA262610P0386    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: System Back on the Add Media album list closes the whole picker
+DRA262610P0385    Assigned        2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Character filter with no match shows a blank grid and no empty-state message
+DRA262610P0384    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Generate all with one failed character shows the single error and no 「!」
+DRA262610P0383    NewCreated      3    PM         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: 「Finish your characters」 plural subtitle differs from the spec
+DRA262610P0382    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Policy-refused idea gets a cut-off 「I cannot」 reply, not the terms message
+DRA262610P0381    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Credit pill leaves a generating outline with no 「Leave this chat?」 dialog
+DRA262610P0380    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Chat shows no 「More ideas +」 chip once it has content
+DRA262610P0379    NeedCodeReview  3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: "is ready" banner appears while that drama's video is still generating
+DRA262610P0378    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: "is ready" banner still appears after the user has already opened that drama's result
+DRA262610P0377    Close           2    PM         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Non-English Forbidden Office Romance dramas use the category name as title
+DRA262610P0376    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Regenerate Image fails as denied when the credit prompt is hidden by Scene view
+DRA262610P0372    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: long names in Characters Result are cut off with an ellipsis
+DRA262610P0369    Assigned        3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Unset-character lead has no break between its sentences: 「set yetThey need」
+DRA262610P0368    Close           3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Tapping the video-ready push opens History instead of the drama's chat
+DRA262610P0367    Close           2    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Picking a Mine character leaves the slot empty without saying why
+DRA262610P0366    Close           3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Character change in chat replaces the portrait on the earlier outline card
+DRA262610P0365    Assigned        3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Generate all fails and leaves the slots empty though the images were made
+DRA262610P0363    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: History opens an empty new chat for about 2 minutes after leaving a video job
+DRA262610P0362    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: First video on a fresh install skips the 「Get notified」 pre-prompt
+DRA262610P0361    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Generation waits exceed 10 seconds with only Stop or leaving possible
+DRA262610P0360    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Export producing and done pages show another drama's thumbnail
+DRA262610P0359    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Leaving the export page asks to leave and cancels the export
+DRA262610P0358    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Renaming a drama during a video job: the push uses the old name and no toast shows
+DRA262610P0357    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Play on the video card opens the player paused; it needs a second tap
+DRA262610P0356    TRCreated       3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Download during a scene video update saves the old clips at once
+DRA262610P0355    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Scene video update shows no Updating line and appends a new card
+DRA262610P0354    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Video and storyboard cards show no 「You'll have N left」 line under Generate
+DRA262610P0353    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Opening a drama and cancelling Choose Character moves it to the top of History
+DRA262610P0352    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: History thumbnail shows a character look instead of the first storyboard frame
+DRA262610P0351    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Returning from History, Choose Character or Full Edit keeps the old scroll position
+DRA262610P0350    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Sent message is not moved to the top and the view follows the reply
+DRA262610P0349    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Scroll-to-bottom button sits at the bottom centre instead of the bottom right
+DRA262610P0348    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Chat loses earlier messages and cards after a reopen, a Stop or a resume
+DRA262610P0347    QA Propose Won  2    PM         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Reopened dramas lose the confirmed cast and the characters card
+DRA262610P0346    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard and video dramas reopen at the outline, not their latest stage
+DRA262610P0345    Cancelled       3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: First storyboard shows one skeleton row instead of per-scene skeletons
+DRA262610P0344    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard stops when the app is swiped away and resumes only on reopen
+DRA262610P0343    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard stage ②: Back still asks 「Stop and lose your credits?」
+DRA262610P0342    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Video stage ①: exits leave with no 「Leave while we're preparing?」 dialog
+DRA262610P0341    TRCreated       3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Stop button stays in the input bar after Generate (10/22: only the mic)
+DRA262610P0340    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard and video generation skip the 10/22 stage messages and charge per image
+DRA262610P0339    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Delete character dialog body differs from the spec text
+DRA262610P0338    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Generated character page has no Discard button
+DRA262610P0337    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Closing a generated character with X, swipe down or Back saves it to Mine anyway
+DRA262610P0336    NAB             2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Dragging inside the description box opens the editor instead of scrolling the text
+DRA262610P0335    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Expanded description editor cuts text to 1,000 characters and writes it back
+DRA262610P0334    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Back during a chat character update leaves with no stop dialog
+DRA262610P0333    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Character update shows other progress and result messages than the spec
+DRA262610P0332    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: A typed character name does not lead to the Update characters card
+DRA262610P0331    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Asking to change a character shows a different question and a single chip
+DRA262610P0330    QA Propose Won  2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Leave anyway drops finished character looks but keeps their credits
+DRA262610P0329    NeedCodeReview  3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: X on 「Your characters are ready」 still applies the looks and commits the cast
+DRA262610P0328    Close           3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Update characters card shows no character count
+DRA262610P0327    Assigned        3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Character generation is priced at 4 credits instead of 6
+DRA262610P0326    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Character filter lists 「Other」 twice under Gender
+DRA262610P0325    TRCreated       3    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: First outline card is titled 「Story Outline Result」
+DRA262610P0324    Close           2    RD         2610212    ETHAN_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Surprise me appends the same inspiration on every tap
+DRA262610P0316    NeedCodeReview  3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI][ARA] AI Mini Drama: Layout is not mirrored for Arabic and "More" overlaps the title
+DRA262610P0314    Wont Fix        2    PM         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Next episode gets an unrelated title with no link to episode 1
+DRA262610P0313    QA Propose Won  3    PM         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Next Episode resets the video settings instead of keeping episode 1's choice
+DRA262610P0312    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Finished video still shows a loading card when the drama is reopened
+DRA262610P0311    Close           3    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard outfit edit says visuals are updated but scene images stay unchanged
+DRA262610P0310    Close           2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Finished video shows "無法新增字幕" and Retry fails again
+DRA262610P0308    Close           2    RD         2610212    JAMIE_YEH       PDR-A 16.8.0 - AI Mini Drama: 5 of 6 storyboard images fail but Credit Details shows only 2 refunds
+DRA262610P0307    NAB             2    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Outline task is missing from History after closing during generation
+DRA262610P0306    Assigned        3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Recovered character output requires a new chat request to view
+DRA262610P0305    Close           3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Storyboard progress returns from Creating your scene to Thinking
+DRA262610P0304    Assigned        3    RD         2610212    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Generation status uses technical terms instead of user-facing names
+DRA262610P0303    Close           2    RD         2610212    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama: Storyboard Preview card is removed from the chat after the drama is generated
+DRA262610P0302    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Generate all says it takes about 1 minute but takes over 4 minutes
+DRA262610P0299    NewCreated      3    PM         2610212    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama: Replacing one actor discards the Create storyboard card and makes the assistant think again
+DRA262610P0297    Close           3    RD         2610212    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Clip strip does not scroll with playback, so the last playing clip stays off screen
+DRA262610P0296    Close           2    RD         2610212    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Selecting Best, Standard or Fast in video settings makes the chat jump up and back
+DRA262610P0290    Wont Fix        2    RD         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character description shows story role only, not outfit, hair or accessories
+DRA262610P0289    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Idea suggestion chips stay English in the Japanese app
+DRA262610P0288    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: End of long captions is dropped (Chinese) or flashes for 0.6 s (Spanish)
+DRA262610P0287    NAB             3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Japanese template name 「来てよかった、君に会えた」 is clipped without ellipsis
+DRA262610P0286    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Player preview and the clip strip below show different clips
+DRA262610P0285    NewFeature      2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Story Outline is rewritten without notice after characters are confirmed
+DRA262610P0284    Close           2    PM         2610212    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Character filter Gender and Ethnicity options stay English in Japanese
+DRA262610P0276    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Result card download saves two raw 15-sec clips without captions
+DRA262610P0275    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Chinese captions split words across pages and start a page with a comma
+DRA262610P0274    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Best (Seedance 2.5) and Standard (Seedance 2.0) quote the same credits
+DRA262610P0273    NAB             2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Credit Details records only half of the video generation charge
+DRA262610P0268    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Template chat stops after the outline with no Create storyboard card
+DRA262610P0267    Close           3    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: "Your drama is ready" notification is sent while the chat shows a failed scene
+DRA262610P0266    Close           2    RD         2610212    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Chat says a scene failed and was refunded, but the clip later succeeds
+DRA262610P0264    QA Propose Won  2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][Performance] AI Mini Drama: Android AI generation is slower than iPhone
+DRA262610P0262    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: X closes a completed character without discard confirmation
+DRA262610P0261    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Captions split words and names across lines (compare to AI Storytelling)
+DRA262610P0260    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Chat jumps back to the Story Outline after Generate, hiding new messages
+DRA262610P0259    Close           2    PC-Doc     2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama (Home): Drama-ready banner stays English in Traditional Chinese
+DRA262610P0258    Close           2    PC-Doc     2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama (Chat): Video settings and agent cards stay English in Traditional Chinese
+DRA262610P0257    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed character says credits refunded but the 4 credits are kept
+DRA262610P0256    Close           3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Count strings use plural for one ("1 scenes", "1 characters")
+DRA262610P0255    Assigned        3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: User-given title is replaced by an AI title; request to keep it ignored
+DRA262610P0254    QA Propose Won  3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Scripted lines, scene count and dialect requests change without notice
+DRA262610P0253    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama (Choose Characters): Ready sheet text stays English in Traditional Chinese
+DRA262610P0251    QA Propose Won  3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: French scene description uses Japanese 「」 quote brackets
+DRA262610P0250    NotReproducibl  3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: "Your drama is ready" notification arrives late, at the next Generate
+DRA262610P0249    Close           3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Assistant message exposes internal writing rules to the user
+DRA262610P0248    QA Propose Won  2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Assistant replies switch between English and the video language
+DRA262610P0246    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Video ignores the library character picked for a role
+DRA262610P0245    NAB             3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard Preview shows captions when No captions was chosen
+DRA262610P0244    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Video and storyboard captions break mid-word or leave a lone word on line 2
+DRA262610P0243    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama(Export): Show export panel after tapping "Export Full Video"
+DRA262610P0242    NAB             3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: daily chat usage and reset are not shown
+DRA262610P0241    QA Propose Won  2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [UX] AI MIni Drama(Stroyboard): Cannot regenerate multiple failed Stroyboards at the same time
+DRA262610P0240    Close           3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Next episode of a No-captions drama is generated with burned-in captions
+DRA262610P0239    Close           3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Export sheet resets to 1080p Standard 30fps after every export
+DRA262610P0238    NeedCodeReview  3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed scene image keeps saying service busy and Regenerate cannot fix it
+DRA262610P0237    Assigned        3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama (Custom): Format card always resets to English and captions on
+DRA262610P0236    QA Propose Won  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Same library look can be assigned to two roles without any warning
+DRA262610P0235    Close           3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: History keeps showing "Processing..." on a drama that has finished
+DRA262610P0234    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Generate video stops silently when the server cannot be reached
+DRA262610P0233    NotReproducibl  3    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: "is ready" banner names the drama last opened, not the finished one
+DRA262610P0232    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed host_detached clips keep their credits though a refund is announced
+DRA262610P0231    Close           2    RD         2610171    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Opening Full Edit of another drama makes the running video generation fail
+DRA262610P0230    QA Propose Pos  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Mini Drama result player has no progress bar or time
+DRA262610P0229    QA Propose Won  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Add New character regenerates immediately, with no way to say who to add
+DRA262610P0228    QA Propose Won  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Blocked ideas are refused only after the language/captions card
+DRA262610P0227    QA Propose Won  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Preview and full-episode cards look identical, no label or length
+DRA262610P0226    Assigned        3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Pending video shows Here's your drama. over an empty card, no progress
+DRA262610P0225    Close           3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create my character leaves Gender and Age empty despite the outline
+DRA262610P0224    QA Propose Won  3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Choose Character accepts a gender-mismatched character without warning
+DRA262610P0223    NeedCodeReview  3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Returning from background mid-generation shows a false offline error
+DRA262610P0222    NotReproducibl  3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Re-offered video settings card lacks model and quotes 120 for a 60 job
+DRA262610P0221    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Video request silently dropped after switching chats; settings card gone
+DRA262610P0220    Close           3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Create Next Episode sometimes reverts silently with no error
+DRA262610P0219    Assigned        3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Export Full Video shows the preview's 51.6 MB estimate for the 90 s full episode
+DRA262610P0218    TRCreated       3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Reference photo crop hint says "clip" instead of "photo"
+DRA262610P0217    Close           3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Downloaded character sheet is PNG data saved as ".png.jpg" (MIME image/jpeg)
+DRA262610P0216    Cancelled       2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Dramas created with "No captions" export without the Free watermark
+DRA262610P0215    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Stopping a storyboard keeps deducted credits with no warning
+DRA262610P0214    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: After stopping the outline, the next message loses the user's original idea
+DRA262610P0213    NewCreated      3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: After stopping the outline, the chat shows no stopped state and no retry
+DRA262610P0212    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Stopping the outline shows a raw debug toast "MiniDrama FAIL"
+DRA262610P0211    NewCreated      3    PM         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Send button stays Stop during a job, so sending cancels the job
+DRA262610P0210    Close           2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Reference-photo character ignores Age while the chip still shows it
+DRA262610P0209    Assigned        3    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Message sent during the format card discards it and applies default settings
+DRA262610P0208    Close           3    RD         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Narration text is too large in The New Guy's Secret video
+DRA262610P0207    NotReproducibl  2    RD         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (The New Guy's Secret): Scene 3 image generation fails
+DRA262610P0206    Close           2    RD         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama: No visible credit refund after storyboard failure in The New Guy's Secret
+DRA262610P0205    Close           2    RD         2610151    SAM_CHANG       PDR-A 16.8.0 - [SPEC][Tablet] Launcher: The "AI Mini Drama" shortcut entry is missing in portrait mode
+DRA262610P0204    Close           2    PM         2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (US, The Ring He Worked For): Preset character thumbnails are empty
+DRA262610P0203    Close           2    PM         2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (US, The Dog Who Remembered Her): Murphy has no preset reference image
+DRA262610P0202    QA Propose Won  2    PM         2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (US, Glad We Came): Lily reference conflicts with the script appearance
+DRA262610P0201    Close           2    RD         2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (JP, The Ring He Worked For): Preset character thumbnails are empty
+DRA262610P0200    Close           2    PM         2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama (JP, The Dog Who Remembered Her): Shiro has no preset reference image
+DRA262610P0199    Assigned        2    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard regeneration ignores the requested scene image change
+DRA262610P0198    Assigned        2    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard credit rate differs from the article expectation
+DRA262610P0197    Assigned        3    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create storyboard message remains after storyboard generation succeeds
+DRA262610P0196    Assigned        3    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character selection omits the next-role hint
+DRA262610P0195    NAB             3    PM         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: History omits active storyboard processing state
+DRA262610P0194    NotReproducibl  3    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: After returning to the app, the clip strip highlights the previous clip
+DRA262610P0193    Close           2    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Generate all creates characters that look like real celebrities
+DRA262610P0192    Close           2    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Export Full Video saves a shorter video while a clip is still regenerating
+DRA262610P0191    Close           3    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Preview keeps "Couldn't create clip" after the clip regenerates
+DRA262610P0190    NotReproducibl  2    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Edit on a regenerating clip opens another scene's description
+DRA262610P0189    QA Propose Pos  3    PM         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character from a male photo is saved as Female when Female was selected
+DRA262610P0188    Close           2    RD         2610151    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Selected clip in the clip strip does not match the clip in the preview
+DRA262610P0187    TRCreated       3    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Empty storyboard card appears after changing a character's look
+DRA262610P0186    Close           2    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Changing a preset character's look in chat charges credits but never updates it
+DRA262610P0185    Cancelled       3    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Scene page shows the location image full size instead of a Location row
+DRA262610P0184    Close           2    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Leaving a template chat before the outline shows no confirm and still saves it
+DRA262610P0183    Close           2    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Characters Result shows only 3 of 4 characters on a 720x1600 screen
+DRA262610P0182    QA Propose Won  2    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama: Lighting jumps from sunset to night and back to sunset within one scene
+DRA262610P0181    QA Propose Won  2    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama: A sheet of paper appears from nowhere and floats in mid-air
+DRA262610P0180    QA Propose Won  3    RD         2610151    BALLY_HSU       PDR-A 16.8.0 - [AIFound][Quality] AI Mini Drama: Character speaks to an empty frame in a two-person dialogue scene
+DRA262610P0178    Close           3    RD         2610151    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama (Custom topic): Remove the redundant "Ready to create your characters?" header
+DRA262610P0177    NewCreated      3    PM         2610151    JAMIE_YEH       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create my character result is not applied to the character after generating
+DRA262610P0175    Close           2    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - AI Mini Drama: The app gets stuck in a loop between the template page and the chat room when the system back button is tapped
+DRA262610P0174    Assigned        3    RD         2610151    JAMIE_YEH       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Assistant says the storyboard is created before Create storyboard is tapped
+DRA262610P0173    Close           2    PM         2610151    JAMIE_YEH       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Pop Star's Secret Girlfriend default actors are gender-swapped for Maya and Chase
+DRA262610P0172    Close           2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [AIFound][Performance] AI Mini Drama(Scene Regenerate): Each attempt takes about 7–12 minutes
+DRA262610P0171    Wont Fix        2    RD         2610142    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Seedance 90-sec video fails scenes with Ref-to-Video 429 Too many requests
+DRA262610P0170    QA Propose Won  3    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [Quality] AI Mini Drama: Some scenes in the generated drama do not follow real-world logic
+DRA262610P0169    Close           2    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard Preview captions are split in the middle of a word
+DRA262610P0168    Wont Fix        3    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [Quality] AI Mini Drama: Characters sometimes have unnatural body proportions
+DRA262610P0167    Close           2    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Home in Landscape edit mode has no AI Mini Drama shortcut
+DRA262610P0163    Close           2    PM         2610151    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama (The Art of Falling): Default actors are assigned to characters with the wrong gender
+DRA262610P0162    QA Propose Won  2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [Quality] AI Mini Drama: Incorrect character arrangement is displayed in Scene 4 of AI Mini Drama
+DRA262610P0161    QA Propose Won  2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [Quality] AI Mini Drama: Incorrect character image is applied to Character B in Scene 3 of AI Mini Drama
+DRA262610P0160    Close           2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [AI Agent] AI Mini Drama: The "Regenerate Clip" button becomes disabled after starting regeneration for another scene
+DRA262610P0159    Close           2    PM         2610142    SAM_CHANG       PDR-A 16.8.0 - [AI Agent] AI Mini Drama: "Create the full episode" shows 60 sec instead of 90 sec in AI Mini Drama
+DRA262610P0158    QA Propose Won  2    PM         2610142    SAM_CHANG       PDR-A 16.8.0 - [UX] AI Mini Drama: Unable to enlarge character thumbnails or regenerate characters in Finsh your characters
+DRA262610P0157    Close           2    RD         2610142    SAM_CHANG       PDR-A 16.8.0 - [SPEC][UX] AI Mini Drama: Unable to copy user-entered text in the AI Mini Drama chat
+DRA262610P0156    QA Propose Won  2    PM         2610142    JAMIE_YEH       PDR-A 16.8.0 - [Quality] AI Mini Drama: Generated video contains illogical actions and scene continuity issues
+DRA262610P0155    Close           2    RD         2610142    JAMIE_YEH       PDR-A 16.8.0 - [Quality] AI Mini Drama: A/V unsync in some part of produced video
+DRA262610P0154    NewFeature      2    RD         2610142    JAMIE_YEH       PDR-A 16.8.0 - [Quality] AI Mini Drama: Male character's outfit changes unexpectedly during the video
+DRA262610P0153    QA Propose Won  2    RD         2610142    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Subtitles remain visible after the corresponding audio ends
+DRA262610P0152    Close           2    RD         2610142    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: discarded composer text persists in a new chat
+DRA262610P0151    Close           2    RD         2610142    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Generated video subtitles extend beyond canvas boundaries
+DRA262610P0150    NewCreated      3    PM         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Failed-scene message says "Tap Edit" but the button is "Fix scenes"
+DRA262610P0149    Close           2    RD         2610142    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard prompt editor text touches the 1000/1000 counter and trash icon
+DRA262610P0148    Close           3    RD         2610142    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: The Beer Heir and The Ring He Worked For show no preset characters
+DRA262610P0147    Close           2    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create my character cannot be closed or stopped while Generating
+DRA262610P0146    Close           3    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Create storyboard shows "Cancelling…" right after Generate is tapped
+DRA262610P0145    QA Propose Won  2    PM         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Story role names in Choose your characters cannot be renamed
+DRA262610P0143    Propose Wont F  3    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] Auto Captions: New captions are drawn on top of an AI Mini Drama's own captions
+DRA262610P0142    Close           2    RD         2610142    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Template preset characters are assigned to the wrong roles
+DRA262610P0141    Close           3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Cancel recording reports speech recognition failure
+DRA262610P0140    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Chat Save to gallery opens generic export page
+DRA262610P0139    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Character filters persist after switching cast slots
+DRA262610P0138    NotReproducibl  2    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: No templates load in English and More opens a blank page
+DRA262610P0137    QA Propose Won  2    PM         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Completed storyboard scene descriptions cannot be edited manually
+DRA262610P0136    Cancelled       2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard failure has no aggregate count or Fix scenes action
+DRA262610P0135    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: AI Suggestion fills only the description and leaves required attributes unset
+DRA262610P0134    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Storyboard image updates use a generic in-place regeneration flow
+DRA262610P0133    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Character regeneration with unset cast loses the character picker
+DRA262610P0132    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Regenerating a fully mapped cast returns No reply instead of a priced offer
+DRA262610P0131    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Repeated character failures never change the action from Got it to Retry or Edit
+DRA262610P0130    QA Propose Won  2    PM         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Generated character lacks edit/version and alternative-image actions
+DRA262610P0129    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Character-generation failure does not state that credits were refunded
+DRA262610P0128    Cancelled       2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Got it on character failure returns to the form instead of the picker
+DRA262610P0127    Cancelled       3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: The 1000-character idea limit has no visible warning
+DRA262610P0126    NAB             2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Completed Story Outline has no manual editor or save controls
+DRA262610P0125    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Sending an outline revision does not auto-scroll to the newest message
+DRA262610P0124    Assigned        3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Launcher never promotes AI Mini Drama in the rotating banner
+DRA262610P0123    TRCreated       3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Offline Regenerate Image reports service busy instead of a network problem
+DRA262610P0122    NAB             3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Storyboard confirmation bubble shows the wrong text
+DRA262610P0121    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Back during outline generation before deduction does not show interruption choices.
+DRA262610P0120    Close           3    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: First manual character look does not show the next-slot coachmark
+DRA262610P0119    Close           2    RD         2610131    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Offline idea submission lacks the required retryable connection error
+DRA262610P0118    Close           2    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Overly long captions run off both edges of the video instead of wrapping
+DRA262610P0117    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Network interruptions show raw HTTP errors without a retry action
+DRA262610P0116    NAB             2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: History does not identify a task that is still generating
+DRA262610P0115    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Tapping X during Regenerate Image skips the exit warning
+DRA262610P0114    Close           3    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Missing required character fields are not highlighted
+DRA262610P0113    Close           2    RD         2610142    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama: Add clear credit usage information to the Finish Your Characters sheet and tooltip
+DRA262610P0112    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Regenerate Image sends the old prompt after saving a new description
+DRA262610P0111    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Unmodified Merger Season template fails to generate Scene 5
+DRA262610P0108    NAB             1    PM         2610142    SHERRY_LEE      PDR-A 16.8.0 - [UX] AI Mini Drama: A character saved to the gallery cannot be imported back as a character
+DRA262610P0107    NewCreated      3    PM         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Failed scene images can only be retried one scene at a time
+DRA262610P0106    Close           3    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: After Stop during outline generation there is no Continue or Try again
+DRA262610P0105    NotReproducibl  3    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Undo after a 1:1 switch leaves the drama's captions enlarged in Full Edit
+DRA262610P0104    NotReproducibl  2    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Create my character with a reference photo does nothing when Generate is tapped
+DRA262610P0103    Close           3    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create Your Drama reopens the last drama instead of starting a new chat
+DRA262610P0102    Close           3    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: A chat step that fails to connect offers no Try again and the chat gets stuck
+DRA262610P0101    Close           3    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: After Rename, Full Edit export still defaults to the original drama title
+DRA262610P0100    Close           2    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed scene image stays blank with no error or retry, blocking the drama
+DRA262610P0098    Close           2    PC-Doc     2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: Chat prompt reads "1 characters isn't set yet"
+DRA262610P0097    Close           2    RD         2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound][JPN] AI Mini Drama: History shows 「12:38 午前」 instead of a Japanese time format
+DRA262610P0096    Close           2    PM         2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Three Japanese template covers show a different title from the name
+DRA262610P0095    Close           2    PC-Doc     2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound][MUI] AI Mini Drama: The template "More" link is translated as 「その他」 (Other)
+DRA262610P0094    Close           3    RD         2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Japanese templates preselect English as the video language
+DRA262610P0093    Close           2    PM         2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Outline and scene titles are generated in English when Japanese is selected
+DRA262610P0092    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [SPEC] AI Mini Drama: AI incorrectly prompts users to modify characters in the chat room
+DRA262610P0091    Close           2    RD         2610131    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create storyboard takes about 5.5 minutes to finish
+DRA262610P0090    NAB             2    RD         2610121    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Free session accepts 11 manual sends before the limit
+DRA262610P0089    Cancelled       2    RD         2610121    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Generation exit warning differs from the selected PM wording
+DRA262610P0088    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - AI Mini Drama: Unexpected "Consume credits?" card appears during TTI character generation and character generation gets stuck on "Working on it..." and ends with a credit timeout error
+DRA262610P0086    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [UX] AI Mini Drama: Voice recognition stays in English after switching to the Chinese keyboard
+DRA262610P0084    QA Propose Won  3    PM         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Full Edit marks the drama's own captions as Pro, blocking free Export
+DRA262610P0083    Close           3    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Scene clips are auto-saved to Movies with internal file names
+DRA262610P0082    NotReproducibl  2    RD         2610131    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Failed Generate video shows raw 'HTTP request to cc team gateway failed' error
+DRA262610P0081    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: "(No reply)" appears instead of AI-generated questions after answering
+DRA262610P0080    Close           2    RD         2610131    SAM_CHANG       PDR-A 16.8.0 - [SPEC] AI Mini Drama: Story Outline/Character result board is missing from the chat room after changes
+DRA262610P0078    Close           3    PM         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Merger Season template pre-assigns a male character to female lead Ayaka
+DRA262610P0077    Close           2    RD         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Leaving right after Generate storyboard shows no 'Stop and lose your credits?' warning
+DRA262610P0076    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama:  Loading hint remains fixed at "Working on it..." during generation
+DRA262610P0075    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama:  "New Chat" button remains enabled when chat and prompt input are empty
+DRA262610P0074    Close           5    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UX] AI Mini Drama (Story outline):  Character carousel lacks a visual hint for horizontal scrolling
+DRA262610P0073    Close           3    RD         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Asking Iris in chat to update a scene image shows no update card
+DRA262610P0072    NAB             3    PM         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Chat text scrolls under the Back, credit and History buttons
+DRA262610P0071    NAB             3    RD         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Export Full Video leaves out the text, sticker and filter added in Full Edit
+DRA262610P0070    Close           2    RD         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Full Editor on the Export Full Video result page does not open the editor
+DRA262610P0069    NAB             2    RD         2610121    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Re-entering Full Edit creates a new project instead of reopening the edited one
+DRA262610P0068    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama (Story outline):   Redundant message blocks appear above character selection cards
+DRA262610P0067    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama(Choose Character): Space at the top is too wide. It doesn't follow UI guideline
+DRA262610P0066    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama (Choose Character):  Character thumbnail preview icons do not match the design spec
+DRA262610P0065    QA Propose Won  2    PM         2610121    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Template rows lack a cue to discover more items by swiping
+DRA262610P0064    Wont Fix        2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI][Light] AI Mini Drama: Text show shadow effect. It doesn't follow UI guideline
+DRA262610P0063    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Prompt question disappears from chat history after tapping Continue
+DRA262610P0062    Close           3    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: Input box's border color doesn't follow UI guideline
+DRA262610P0061    Close           2    RD         2610121    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: closing Create my character discards all input without confirmation
+DRA262610P0060    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: "Generate" button's text is not bold
+DRA262610P0059    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: Missing dividing line in the options panel
+DRA262610P0058    Close           2    RD         2610121    JAMIE_YEH       PDR-A 16.8.0 - [UI] AI Mini Drama: Prompt input field does not gain focus automatically after tapping "Create Your Drama"
+DRA262610P0057    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: Generate button is not in option panel. It doesn't follow UI guideline
+DRA262610P0056    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: Generate button's position doesn't follow UI guideline
+DRA262610P0055    Close           3    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] AI Mini Drama: Back button, credits button, and recent task button are too small. It doesn't follow UI gudieline
+DRA262610P0054    Close           2    RD         2610121    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Chat quota blocks template creation with an unclear dialog
+DRA262610P0050    Close           2    PM         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] Shortcut(AI Mini Drama): Missing "New" tag. It doesn't follow UI guideline
+DRA262610P0049    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Scene page crops the 9:16 scene image to a square
+DRA262610P0048    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Storyboard Result thumbnails are square instead of 9:16
+DRA262610P0047    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Renaming a drama does not move it to the top of History
+DRA262610P0046    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: History card shows the chat creation time instead of the last change
+DRA262610P0045    Close           2    RD         2610121    ALLENCW_CHEN    PDR-A 16.8.0 - [UI] Shortcut(AI Mini Drama): The icon doesn't follow UI guideline
+DRA262610P0043    Close           3    PM         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI][UI] AI Mini Drama: Japanese template covers show English titles
+DRA262610P0042    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Surprise me and suggestion chips are missing in non-English app languages
+DRA262610P0041    Close           2    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Choose Character lists no preset characters when the app language is not English
+DRA262610P0040    Close           3    PC-Doc     2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][MUI][UI] AI Mini Drama: Mini Drama screens stay in English when the app language is not English
+DRA262610P0039    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI][MUI] AI Mini Drama: French caption wraps so "!" starts the second line
+DRA262610P0038    NotReproducibl  2    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Regenerate Clip fails again with "Couldn't create clip" on an unedited clip
+DRA262610P0037    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Unsent text from a new chat appears in another drama opened from History
+DRA262610P0036    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Template section and More show with no templates in German/French
+DRA262610P0033    Close           1    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: App crashes when tapping Start in Bilingual Subtitles on a Mini Drama caption
+DRA262610P0032    Cancelled       2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Seedance 720p video request is billed with a 480p credit action ID
+DRA262610P0031    NAB             2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: "Fix these issues" card lists no issue after a clip fails
+DRA262610P0030    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Failed clip suggests editing the description regardless of cause
+DRA262610P0027    NotReproducibl  3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Storyboard Preview stays "unavailable" even after the missing scene image is regenerated
+DRA262610P0026    Close           2    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound] AI Mini Drama: Video generation stops while the user is in another feature and restarts on return
+DRA262610P0025    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [UI] AI Mini Drama: Informational text missing above the loading box (not sync to guideline)
+DRA262610P0023    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [UI] AI Mini Drama: Incorrect step number shown on the Format Settings page
+DRA262610P0022    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [UI] AI Mini Drama: The Generate button is not synced with the guideline
+DRA262610P0019    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Leaving the chat during video generation shows no "keep making" notice
+DRA262610P0018    Close           3    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create my character description accepts more than 1000 characters
+DRA262610P0017    Close           4    RD         2610081    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Rename dialog OK stays enabled with an empty name and does nothing
+DRA262610-0063    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Template dramas get titles that differ from the template name in history
+DRA262610-0062    Close           3    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Retry option is misspelled "Create chraracters"
+DRA262610-0061    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Finish your characters sheet text and button differ from spec
+DRA262610-0060    Close           3    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Generation shows only "Working on it…" with no progress messages
+DRA262610-0059    NewCreated      2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Add Media permission notice cannot be closed after denying access
+DRA262610-0058    NotReproducibl  2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Error toast text blends into character thumbnails
+DRA262610-0057    Close           2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Paid storyboard Stop gives no cancellation or credit explanation
+DRA262610-0056    NAB             3    PM         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Saved custom character menu has no Rename action
+DRA262610-0055    NotReproducibl  2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Full Video length options differ between dramas
+DRA262610-0054    Close           2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Applying the cream-onesie infant fails with a raw validation error
+DRA262610-0053    Close           2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Character regeneration repeats the confirmation without starting
+DRA262610-0052    QA Propose Won  2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Generate all leaves Grace unset after Daniel and Richard succeed
+DRA262610-0051    Close           3    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Template title Six Things You Didnt Know misses its apostrophe
+DRA262610-0050    Close           3    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: English storyboard dialogue uses Chinese corner quotes
+DRA262610-0049    Close           2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Stopping outline generation removes progress without explanatory feedback
+DRA262610-0048    Close           3    PM         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: The Fake Engagement cover reads Billionaire Romance
+DRA262610-0047    Close           3    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Caption options and Continue have no horizontal divider
+DRA262610-0046    TRCreated       3    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Delete confirmation does not name the selected drama
+DRA262610-0045    NewCreated      3    PM         2610081    SAM_CHANG       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Unchecked My characters only checkbox has a gray outline
+DRA262610-0044    Close           3    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Video generation saves intermediate clips to the gallery with internal file names
+DRA262610-0043    Assigned        2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: "Create the full episode (30 sec)" produces a 60-second video
+DRA262610-0042    Close           3    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Credit counter keeps the old balance after a charge until the user leaves the screen
+DRA262610-0041    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: The same character appears with a different face and hair in different video clips
+DRA262610-0040    Close           2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard scenes dress the character differently from their generated reference sheet
+DRA262610-0039    Close           3    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: System Back in the full-screen character description editor discards the typed text
+DRA262610-0038    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Finished sheet reads "0 characters still need a look"
+DRA262610-0037    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: "Leave this chat?" dialog appears on an empty chat with nothing to lose
+DRA262610-0036    Postpone        2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Credit details list its charges as Text to Image and Text to Speech
+DRA262610-0035    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: "Choose your video settings" heading is shown twice
+DRA262610-0034    Close           3    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Chat input silently stops at 1000 characters with no toast
+DRA262610-0033    Close           2    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Daily Free Chat Limit dialog has no close button or reset time
+DRA262610-0032    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Generate all blocks the screen for 12-14 minutes with no cancel
+DRA262610-0031    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: System Back on the landing opens a chat and loops instead of exiting
+DRA262610-0030    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Chat shows raw error "(No reply) token_request fired outside a turn worker thread"
+DRA262610-0029    Close           2    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Storyboard is shown as done but most scene images are missing
+DRA262610-0028    NotReproducibl  2    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Credits are not refunded when a character fails in Generate all
+DRA262610-0027    Close           1    RD         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Generate video makes no video yet offers the full episode
+DRA262610-0026    Close           2    RD         2610081    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Surprise me appends different inspirations in the same session
+DRA262610-0025    Close           2    RD         2610081    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UX] AI Mini Drama: Inspiration overwrites edited text without confirmation
+DRA262610-0024    Close           2    RD         2610081    SAM_CHANG       PDR-A 16.8.0 - AI Mini Drama (Create my character): AI Mini Drama generates a male-looking character when Gender is set to Female
+DRA262610-0022    Close           3    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Closing Create my character discards all entered details without confirmation
+DRA262610-0021    Close           3    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create my character accepts Age 0 with no error while Generate stays disabled
+DRA262610-0020    Close           3    PM         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Character filter Gender chip reads "Others" while every other list uses "Other"
+DRA262610-0019    Close           3    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Ethnicity options in character filter do not match Create my character
+DRA262610-0018    Close           3    PM         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character filter set for one role stays applied when switching to another role
+DRA262610-0017    NotReproducibl  3    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character filter Age slider shows no selected value while dragging
+DRA262610-0016    Close           2    PC-Doc     2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: Video format card numbering jumps from "1. Video language" to "3. Captions"
+DRA262610-0015    Close           2    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Create my character "AI Suggestion" copies the outline role line instead of describing appearance
+DRA262610-0014    Close           2    RD         2610072    BALLY_HSU       PDR-A 16.8.0 - [AIFound] AI Mini Drama: Chat input bar and Send button are hidden behind the soft keyboard while typing
+
+488 bug(s)

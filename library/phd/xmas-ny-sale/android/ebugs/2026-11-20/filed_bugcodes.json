@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261118-0070",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611181947",
+    "filed_on": "2026-11-23"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0152",
+      "short": "PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Launcher: NY Sale IAP icon stays regular orange crown, no champagne-glasses animation",
+      "status": "NewCreated",
+      "severity": 2,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-23T11:16:28",
+      "build": "202611181947",
+      "tr": "TR261118-0070",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "JANE_LAI",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "5/5",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Set the phone clock to 2026/12/30 10:00 local time (automatic date and time off)\n2. Force-stop PhotoDirector\n3. Launch the APP\n4. Look at the IAP icon at the Launcher's top right\n5. Check the result\n\nResult:\nDuring the NY Sale the Launcher IAP icon is the regular orange crown, not the champagne glasses.\n摘要：新年特賣期間 Launcher IAP 圖示仍為一般橘色皇冠，不是香檳杯。\n{20.19.0_xns05_ny_regular_crown.jpg} {20.19.0_xns05_ny_icon_crop.jpg} {20.19.0_xns05_xmas_icon_before.jpg} {20.19.0_xns05_after_midnight_crown.jpg} {20.19.0_xns05_design_ny_launcher.jpg} {20.19.0_xns05_log.txt}\n\nExpect Result:\nDuring the NY Sale a free user's IAP icon is the animated two champagne glasses (NY_ani).\n摘要：新年特賣期間免費用戶的 IAP 圖示應為香檳杯動畫（NY_ani）。\n\nNote:\nDevice: Samsung Galaxy A55 (SM-A5560) / Android 15, Test Server, Free account\nSpec Link: Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), Launcher NY frame (NY_ani annotation) -\nhttps://www.figma.com/design/2ogGJ14xElxFo4V8QjteOM/IAP?node-id=9740-344\nSpec Link: Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board -\nhttps://www.figma.com/design/taJPs6ntbB61LQG0wJ0PiZ/PhD-MX-IAP-Page?node-id=14724-43580\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_xns05_ny_regular_crown.jpg",
+        "20.19.0_xns05_ny_icon_crop.jpg",
+        "20.19.0_xns05_xmas_icon_before.jpg",
+        "20.19.0_xns05_after_midnight_crown.jpg",
+        "20.19.0_xns05_design_ny_launcher.jpg",
+        "20.19.0_xns05_log.txt"
+      ],
+      "key": "Xmas-NY-Sale-R1-05",
+      "iss": "ISS-XNS-05",
+      "feature": "Xmas-NY-Sale-R1",
+      "problem_type": "Functional"
+    }
+  ],
+  "dispositions": {}
+}

@@ -1,0 +1,14 @@
+{
+  "PHA262026P0029": {
+    "verdict": "FIXED",
+    "summary": "Effects tab first-visit hint 'Now turn photos into reels with Transitions!' shows whole with its arrow on Reel Creator: at 450 dpi bubble [0,1657]-[900,1828], item 180-360; at 680 dpi after pm clear the bubble is capped at the screen width [0,1400]-[1080,1626], item 246-480, both rounded ends on screen. Caveat: the hinted item is index 1, so the list stays at offset 0 (item centre 270/363 vs list centre 540, cannot scroll further); the middle-scroll for a scrolled-away item could not be exercised (one-time hint, fires on the first tab tap).",
+    "decisive": [
+      "screenshots/f_03_effects_settled.png",
+      "screenshots/f_03_effects_settled.xml",
+      "screenshots/f_19_clear1_d680_effects_settled.png",
+      "screenshots/f_19_clear1_d680_effects_settled.xml",
+      "screenshots/f_02_effects_burst_1.png",
+      "recordings/p0029-f-clear1-d680-effects.mp4"
+    ]
+  }
+}

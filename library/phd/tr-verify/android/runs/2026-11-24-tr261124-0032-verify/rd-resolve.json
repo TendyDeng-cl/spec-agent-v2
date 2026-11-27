@@ -1,0 +1,488 @@
+[
+  {
+    "bug": "PHA262026P0070",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Recent's sendResultSaveEvent was empty, and each feature's save log lived in its own tab fragment, so Recent could not reuse it.",
+      "Solution": "Move each feature's save log into its own ArtworkResultSaveLogger, registered on ArtworkFeatureType.saveLogger. The base fragments now find each saved item's feature by its pack type and call that feature's logger, so the tabs and Recent share one path.",
+      "Function": "only affect artwork log",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7f5aefc3769be3cbb9b9995a7da0b4a8305ae38b\n7f5aefc3769be3cbb9b9995a7da0b4a8305ae38b"
+    },
+    "all": [
+      {
+        "RootCause": "Recent's sendResultSaveEvent was empty, and each feature's save log lived in its own tab fragment, so Recent could not reuse it.",
+        "Solution": "Move each feature's save log into its own ArtworkResultSaveLogger, registered on ArtworkFeatureType.saveLogger. The base fragments now find each saved item's feature by its pack type and call that feature's logger, so the tabs and Recent share one path.",
+        "Function": "only affect artwork log",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7f5aefc3769be3cbb9b9995a7da0b4a8305ae38b\n7f5aefc3769be3cbb9b9995a7da0b4a8305ae38b"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0072",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "that is the mockData",
+      "Solution": "that is the mockData",
+      "Function": "need to use the latest build to verify.",
+      "Changeset": ""
+    },
+    "all": [
+      {
+        "RootCause": "that is the mockData",
+        "Solution": "that is the mockData",
+        "Function": "need to use the latest build to verify.",
+        "Changeset": ""
+      },
+      {
+        "RootCause": "that is the mockData",
+        "Solution": "that is the mockData",
+        "Function": "need to use the latest build to verify.",
+        "Changeset": ""
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0073",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "ui modify",
+      "Solution": "After discussing , we decided to display the outline and hide the stock in Photo Picker.",
+      "Function": "only affect swipe collage photo Picker.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7c0be758820b23bfa90dd2ce8281191304c9cacc\n7c0be758820b23bfa90dd2ce8281191304c9cacc"
+    },
+    "all": [
+      {
+        "RootCause": "ui modify",
+        "Solution": "After discussing , we decided to display the outline and hide the stock in Photo Picker.",
+        "Function": "only affect swipe collage photo Picker.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7c0be758820b23bfa90dd2ce8281191304c9cacc\n7c0be758820b23bfa90dd2ce8281191304c9cacc"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0074",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "ux modify",
+      "Solution": "Tapping an empty slot now hands the empty slots of every page to the picker, so its limit is the total left. Photos fill the tapped slot first, then the same page, then the other pages in page order.",
+      "Function": "only affect swipe collage photo picker.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/b4f075f8c59a1b4550bf56282aba904f1ac6d68c\nb4f075f8c59a1b4550bf56282aba904f1ac6d68c"
+    },
+    "all": [
+      {
+        "RootCause": "ux modify",
+        "Solution": "Tapping an empty slot now hands the empty slots of every page to the picker, so its limit is the total left. Photos fill the tapped slot first, then the same page, then the other pages in page order.",
+        "Function": "only affect swipe collage photo picker.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/b4f075f8c59a1b4550bf56282aba904f1ac6d68c\nb4f075f8c59a1b4550bf56282aba904f1ac6d68c"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0076",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "UX change: going back from the main page should return to the template preview so the user can apply it again",
+      "Solution": "- startWithTemplate no longer replaces the preview page; the fragment stack stays intact\n- Back from the main page clears the project and draft but keeps the selected template, so the preview page still shows it\n- If there is no template data (restored after process death, or resumed from a draft), back goes to the template page",
+      "Function": "only affect swipe collage room",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7bd41469d4ee7a68e7655f9873ad78689a9df6ee\n7bd41469d4ee7a68e7655f9873ad78689a9df6ee"
+    },
+    "all": [
+      {
+        "RootCause": "UX change: going back from the main page should return to the template preview so the user can apply it again",
+        "Solution": "- startWithTemplate no longer replaces the preview page; the fragment stack stays intact\n- Back from the main page clears the project and draft but keeps the selected template, so the preview page still shows it\n- If there is no template data (restored after process death, or resumed from a draft), back goes to the template page",
+        "Function": "only affect swipe collage room",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7bd41469d4ee7a68e7655f9873ad78689a9df6ee\n7bd41469d4ee7a68e7655f9873ad78689a9df6ee"
+      },
+      {
+        "RootCause": "UX change: going back from the main page should return to the template preview so the user can apply it again",
+        "Solution": "- startWithTemplate no longer replaces the preview page; the fragment stack stays intact\n- Back from the main page clears the project and draft but keeps the selected template, so the preview page still shows it\n- If there is no template data (restored after process death, or resumed from a draft), back goes to the template page",
+        "Function": "only affect swipe collage room",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7bd41469d4ee7a68e7655f9873ad78689a9df6ee\n7bd41469d4ee7a68e7655f9873ad78689a9df6ee"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0077",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "A hidden bottom sheet kept its fragment and back callback, which took Back before the main page; the Discard dialog was not cancelable",
+      "Solution": "- Remove the sheet fragment when the user closes the sheet, so its back callback goes away\n- Make the Discard dialog cancelable so Back acts as Keep; tapping outside still does not close it",
+      "Function": "only affect swipe collage room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/a03db0d4419f50f16c8871483855b66d6d961d93\na03db0d4419f50f16c8871483855b66d6d961d93"
+    },
+    "all": [
+      {
+        "RootCause": "A hidden bottom sheet kept its fragment and back callback, which took Back before the main page; the Discard dialog was not cancelable",
+        "Solution": "- Remove the sheet fragment when the user closes the sheet, so its back callback goes away\n- Make the Discard dialog cancelable so Back acts as Keep; tapping outside still does not close it",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/a03db0d4419f50f16c8871483855b66d6d961d93\na03db0d4419f50f16c8871483855b66d6d961d93"
+      },
+      {
+        "RootCause": "A hidden bottom sheet kept its fragment and back callback, which took Back before the main page; the Discard dialog was not cancelable",
+        "Solution": "- Remove the sheet fragment when the user closes the sheet, so its back callback goes away\n- Make the Discard dialog cancelable so Back acts as Keep; tapping outside still does not close it",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/a03db0d4419f50f16c8871483855b66d6d961d93\na03db0d4419f50f16c8871483855b66d6d961d93"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0079",
+    "resolvedIn": [
+      "20.19.0.v202611231214",
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "no implement",
+      "Solution": "implement shadow function",
+      "Function": "only affect swipe collage room",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/c6cd257aaf68d8f97cf8b8a5adc9d28c803b7de5\nc6cd257aaf68d8f97cf8b8a5adc9d28c803b7de5"
+    },
+    "all": [
+      {
+        "RootCause": "Not Implemented",
+        "Solution": "Implemented",
+        "Function": "only affect swipe collage room.\nverify using the latest build.",
+        "Changeset": ""
+      },
+      {
+        "RootCause": "no implement",
+        "Solution": "implement shadow function",
+        "Function": "only affect swipe collage room",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/c6cd257aaf68d8f97cf8b8a5adc9d28c803b7de5\nc6cd257aaf68d8f97cf8b8a5adc9d28c803b7de5"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0080",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "ux modify",
+      "Solution": "Tapping in Normal mode only cycles between an element and its slot; Pages mode still selects pages. New text, stickers, bubbles, photos and frames go to the screen center, pulled back inside the pages if needed, and photo grids go to the page at the screen center. In Pages mode, items still go to the selected page.",
+      "Function": "only affect swipe collage room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/2108ea777c0fd96b7515ecd54f90377d3e72d9f6\n2108ea777c0fd96b7515ecd54f90377d3e72d9f6"
+    },
+    "all": [
+      {
+        "RootCause": "ux modify",
+        "Solution": "Tapping in Normal mode only cycles between an element and its slot; Pages mode still selects pages. New text, stickers, bubbles, photos and frames go to the screen center, pulled back inside the pages if needed, and photo grids go to the page at the screen center. In Pages mode, items still go to the selected page.",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/2108ea777c0fd96b7515ecd54f90377d3e72d9f6\n2108ea777c0fd96b7515ecd54f90377d3e72d9f6"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0082",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "no need fix",
+      "Solution": "After discussion, we decided this notification is unnecessary because the original Collage feature already supports the same behavior. Users are expected to be familiar with this interaction, so there is no need to display an additional Toast message.",
+      "Function": "only affect swipe collage room.",
+      "Changeset": ""
+    },
+    "all": [
+      {
+        "RootCause": "no need fix",
+        "Solution": "After discussion, we decided this notification is unnecessary because the original Collage feature already supports the same behavior. Users are expected to be familiar with this interaction, so there is no need to display an additional Toast message.",
+        "Function": "only affect swipe collage room.",
+        "Changeset": ""
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0083",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "no need fix",
+      "Solution": "After discussion, we decided this is unnecessary because the thumbnail should already provide a clear indication of how many slots each PhotoFrame contains. If more types are introduced in the future, they can be organized using category tabs.",
+      "Function": "only affect swipe collage",
+      "Changeset": ""
+    },
+    "all": [
+      {
+        "RootCause": "no need fix",
+        "Solution": "After discussion, we decided this is unnecessary because the thumbnail should already provide a clear indication of how many slots each PhotoFrame contains. If more types are introduced in the future, they can be organized using category tabs.",
+        "Function": "only affect swipe collage",
+        "Changeset": ""
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0094",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "ui modify",
+      "Solution": "Show \"Page N / total\" and −/+ above the bottom panel. − removes, and + adds after, the selected page (the last page if none is selected); − is disabled with one page left, + at the page limit. The stepper fades in after the panel settles and hides at once on exit. The old page toolbar buttons are hidden behind IS_PAGE_CONTROLS_VISIBLE. Tapping empty space no longer leaves Pages mode; only ✕/✓ (or Back) do.",
+      "Function": "only affect swipe collage.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7a73cbbba5e62d1c98076cc1cda8a5602bd11e2f\n7a73cbbba5e62d1c98076cc1cda8a5602bd11e2f"
+    },
+    "all": [
+      {
+        "RootCause": "ui modify",
+        "Solution": "Show \"Page N / total\" and −/+ above the bottom panel. − removes, and + adds after, the selected page (the last page if none is selected); − is disabled with one page left, + at the page limit. The stepper fades in after the panel settles and hides at once on exit. The old page toolbar buttons are hidden behind IS_PAGE_CONTROLS_VISIBLE. Tapping empty space no longer leaves Pages mode; only ✕/✓ (or Back) do.",
+        "Function": "only affect swipe collage.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/7a73cbbba5e62d1c98076cc1cda8a5602bd11e2f\n7a73cbbba5e62d1c98076cc1cda8a5602bd11e2f"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0095",
+    "resolvedIn": [
+      "20.19.0.v202611231214",
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "no handle back key",
+      "Solution": "Route ✕ and Back in Pages mode through requestPagesCancel: if pages were added, removed or moved, confirm with the discard dialog before reverting; otherwise leave at once. ✓ still applies the changes.",
+      "Function": "only affect swipe collage",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/dda37cd466a8daba95e0083648ab825e4290b805\ndda37cd466a8daba95e0083648ab825e4290b805"
+    },
+    "all": [
+      {
+        "RootCause": "Verify using the latest build.",
+        "Solution": "Verify using the latest build.",
+        "Function": "only affect swipe collage room",
+        "Changeset": ""
+      },
+      {
+        "RootCause": "no handle back key",
+        "Solution": "Route ✕ and Back in Pages mode through requestPagesCancel: if pages were added, removed or moved, confirm with the discard dialog before reverting; otherwise leave at once. ✓ still applies the changes.",
+        "Function": "only affect swipe collage",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/dda37cd466a8daba95e0083648ab825e4290b805\ndda37cd466a8daba95e0083648ab825e4290b805"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0097",
+    "resolvedIn": [
+      "20.19.0.v202611181947",
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "ux modify",
+      "Solution": "After discussion, we decided to keep the long-press-and-drag interaction and remove the Toast message",
+      "Function": "only affect swipe collage page mode.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/cd21509869062a13afa51a757a555be684dd3728\ncd21509869062a13afa51a757a555be684dd3728"
+    },
+    "all": [
+      {
+        "RootCause": "Make it clear which page is being moved",
+        "Solution": "While dragging, the lifted page and its elements are scaled 1.1x, rotated 4° and drawn at 0.7 alpha around the page center; a 150ms animation runs on pick-up and drop",
+        "Function": "only affect swipe collage page move",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/3f24683acfe6ebb1404148d4bb0fe86d29e37464\n3f24683acfe6ebb1404148d4bb0fe86d29e37464"
+      },
+      {
+        "RootCause": "ux modify",
+        "Solution": "After discussion, we decided to keep the long-press-and-drag interaction and remove the Toast message",
+        "Function": "only affect swipe collage page mode.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/cd21509869062a13afa51a757a555be684dd3728\ncd21509869062a13afa51a757a555be684dd3728"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0103",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 2,
+    "newest": {
+      "RootCause": "Users should be able to try a Pro template first and only pay when they export",
+      "Solution": "Template tap no longer asks for IAP; exporting a project started from a Pro template shows the SWIPE_COLLAGE IAP for non-subscribers and exports only after purchase; the flag is kept in the draft",
+      "Function": "only affect swipe collage room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ac449f30ad9c4f153a239f7799393fab38bc29ac\nac449f30ad9c4f153a239f7799393fab38bc29ac"
+    },
+    "all": [
+      {
+        "RootCause": "Users should be able to try a Pro template first and only pay when they export",
+        "Solution": "Template tap no longer asks for IAP; exporting a project started from a Pro template shows the SWIPE_COLLAGE IAP for non-subscribers and exports only after purchase; the flag is kept in the draft",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ac449f30ad9c4f153a239f7799393fab38bc29ac\nac449f30ad9c4f153a239f7799393fab38bc29ac"
+      },
+      {
+        "RootCause": "Users should be able to try a Pro template first and only pay when they export",
+        "Solution": "Template tap no longer asks for IAP; exporting a project started from a Pro template shows the SWIPE_COLLAGE IAP for non-subscribers and exports only after purchase; the flag is kept in the draft",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ac449f30ad9c4f153a239f7799393fab38bc29ac\nac449f30ad9c4f153a239f7799393fab38bc29ac"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0138",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Creative Reel Apply Effect lost its answer (Wi-Fi off), and the session status could not be read either. The pack was kept in UPLOAD for My AI Artwork to follow. Yet the confirm page showed the apply-failed dialog: \"Unsuccessful, please try again. Credits refunded.\" Nothing had been refunded: the credit may have been spent.\n\nAI Transition and CineStory show the same dialog when their Apply Effect gets no usable answer, although both charged at Create Session.",
+      "Solution": "An Apply Effect without a usable answer (no answer, a 5xx, a 401, or an answer that cannot be read) now ends in NETWORK_ERROR. The confirm page then shows the existing network error: a dialog without a connection, a toast with one. Packs and the Artwork follow-up are unchanged.\n- ReelCreatorGenerateUseCase.applyUnconfirmed:\n  - AI Transition returns NETWORK_ERROR;\n  - Creative Reel returns NETWORK_ERROR when the session status cannot tell;\n  - when the status shows the Apply Effect was not taken, Creative Reel still discards the pack and returns APPLY_EFFECT_FAILED.\n- AICineStoryGenerateUseCase.applyEffect:\n  - a 2xx whose body cannot be read or parsed is treated as no answer;\n  - the NETWORK_ERROR it throws for no answer is no longer turned into APPLY_EFFECT_FAILED.\n- Refused requests (400 / 403 / 422) keep APPLY_EFFECT_FAILED, or NO_ENOUGH_CREDIT for Creative Reel's charged 403.\n- Tests:\n  - The Creative, Transition and CineStory use case tests now expect NETWORK_ERROR for the unanswered cases.\n  - The CineStory no-answer case stubs the API service.\n  - A CineStory case with an unreadable answer is added.\n  - The changed cases failed before the fix.",
+      "Function": "n/a",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2197/changes/80a97c912b06b85d6d86811b2d49aa4f0119962e"
+    },
+    "all": [
+      {
+        "RootCause": "Creative Reel Apply Effect lost its answer (Wi-Fi off), and the session status could not be read either. The pack was kept in UPLOAD for My AI Artwork to follow. Yet the confirm page showed the apply-failed dialog: \"Unsuccessful, please try again. Credits refunded.\" Nothing had been refunded: the credit may have been spent.\n\nAI Transition and CineStory show the same dialog when their Apply Effect gets no usable answer, although both charged at Create Session.",
+        "Solution": "An Apply Effect without a usable answer (no answer, a 5xx, a 401, or an answer that cannot be read) now ends in NETWORK_ERROR. The confirm page then shows the existing network error: a dialog without a connection, a toast with one. Packs and the Artwork follow-up are unchanged.\n- ReelCreatorGenerateUseCase.applyUnconfirmed:\n  - AI Transition returns NETWORK_ERROR;\n  - Creative Reel returns NETWORK_ERROR when the session status cannot tell;\n  - when the status shows the Apply Effect was not taken, Creative Reel still discards the pack and returns APPLY_EFFECT_FAILED.\n- AICineStoryGenerateUseCase.applyEffect:\n  - a 2xx whose body cannot be read or parsed is treated as no answer;\n  - the NETWORK_ERROR it throws for no answer is no longer turned into APPLY_EFFECT_FAILED.\n- Refused requests (400 / 403 / 422) keep APPLY_EFFECT_FAILED, or NO_ENOUGH_CREDIT for Creative Reel's charged 403.\n- Tests:\n  - The Creative, Transition and CineStory use case tests now expect NETWORK_ERROR for the unanswered cases.\n  - The CineStory no-answer case stubs the API service.\n  - A CineStory case with an unreadable answer is added.\n  - The changed cases failed before the fix.",
+        "Function": "n/a",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2197/changes/80a97c912b06b85d6d86811b2d49aa4f0119962e"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0141",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Reuse opened the Custom page with the saved settings but never showed a toast",
+      "Solution": "After Reuse restores the settings, the Custom page shows the \"Settings applied\" toast once",
+      "Function": "low",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2192/commits"
+    },
+    "all": [
+      {
+        "RootCause": "Reuse opened the Custom page with the saved settings but never showed a toast",
+        "Solution": "After Reuse restores the settings, the Custom page shows the \"Settings applied\" toast once",
+        "Function": "low",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2192/commits"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0143",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "The Reuse button closed Save & Share (finish()) before opening the Custom room. Back then had nowhere to go but My AI Artwork.",
+      "Solution": "removed that finish(). Save & Share stays on the back stack, so ‹ and system Back return to it",
+      "Function": "low",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2193/commits"
+    },
+    "all": [
+      {
+        "RootCause": "The Reuse button closed Save & Share (finish()) before opening the Custom room. Back then had nowhere to go but My AI Artwork.",
+        "Solution": "removed that finish(). Save & Share stays on the back stack, so ‹ and system Back return to it",
+        "Function": "low",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2193/commits"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0144",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "The Reuse button logged Artwork_Reuse_Click, which has no parameters. ImageToVideo_Reuse_Click didn't exist.",
+      "Solution": "added the ImageToVideo_Reuse_Click event. The Reuse button now logs it with model set to the video's model guid",
+      "Function": "low",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2194/commits"
+    },
+    "all": [
+      {
+        "RootCause": "The Reuse button logged Artwork_Reuse_Click, which has no parameters. ImageToVideo_Reuse_Click didn't exist.",
+        "Solution": "added the ImageToVideo_Reuse_Click event. The Reuse button now logs it with model set to the video's model guid",
+        "Function": "low",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2194/commits"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0152",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "It implement on last build.",
+      "Solution": "It implement on last build.",
+      "Function": "N/A",
+      "Changeset": "It implement on last build."
+    },
+    "all": [
+      {
+        "RootCause": "It implement on last build.",
+        "Solution": "It implement on last build.",
+        "Function": "N/A",
+        "Changeset": "It implement on last build."
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0160",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "ux modify",
+      "Solution": "Tapping in Normal mode only cycles between an element and its slot; Pages mode still selects pages. New text, stickers, bubbles, photos and frames go to the screen center, pulled back inside the pages if needed, and photo grids go to the page at the screen center. In Pages mode, items still go to the selected page.",
+      "Function": "only affect swipe collage room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/2108ea777c0fd96b7515ecd54f90377d3e72d9f6\n2108ea777c0fd96b7515ecd54f90377d3e72d9f6"
+    },
+    "all": [
+      {
+        "RootCause": "ux modify",
+        "Solution": "Tapping in Normal mode only cycles between an element and its slot; Pages mode still selects pages. New text, stickers, bubbles, photos and frames go to the screen center, pulled back inside the pages if needed, and photo grids go to the page at the screen center. In Pages mode, items still go to the selected page.",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/2108ea777c0fd96b7515ecd54f90377d3e72d9f6\n2108ea777c0fd96b7515ecd54f90377d3e72d9f6"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0162",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Removal opened the original photo (or the AI base), so the brightened photo on the canvas looked different in the Removal room.",
+      "Solution": "Send the canvas image (with Adjust and Filter) to Removal. Save the result as the new base and clear Adjust and Filter, so they are not applied twice.",
+      "Function": "only affect swipe collage room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ae76648684091124535356b303e6a61e841328b1\nae76648684091124535356b303e6a61e841328b1"
+    },
+    "all": [
+      {
+        "RootCause": "Removal opened the original photo (or the AI base), so the brightened photo on the canvas looked different in the Removal room.",
+        "Solution": "Send the canvas image (with Adjust and Filter) to Removal. Save the result as the new base and clear Adjust and Filter, so they are not applied twice.",
+        "Function": "only affect swipe collage room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ae76648684091124535356b303e6a61e841328b1\nae76648684091124535356b303e6a61e841328b1"
+      }
+    ]
+  }
+]

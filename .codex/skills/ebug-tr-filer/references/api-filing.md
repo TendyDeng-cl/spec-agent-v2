@@ -142,6 +142,16 @@ python3 scripts/ecl_if3.py create upload/bodies.json --dry-run \
 # 2. then for real — same command without --dry-run
 ```
 
+**`--template-id` is the TR's own template (2026-11-27).** Read it from the TR header (`ecl_query.py tr <TR>` prints
+`Product … · <TemplateName>`, e.g. 「Generic v16.9」) and take that name's ID from `preflight --product …`; check it
+against the template of a bug already on the TR (`ecl_query.py bug <code>`). Never pick 「AIFound eBugs pool」 (23321)
+for a casebook batch: Video Enhance R4 went there by mistake (DRA262611P0335 – P0337, cancelled and refiled as
+P0338 – P0340) while Q1 and every other bug on TR261125-0064 used 「Generic v16.9」 (23176). `create` now enforces
+it: it reads the TR and refuses, sending nothing, when the template's name or product differs from the TR's (printing
+the right ID) or the TR's build is not `--version.--build`. `--other-template "<reason>"` overrides only when the
+user named another pool for that batch. A **cancelled** ticket with the same Short Description is not a duplicate,
+so a withdrawn bug can be refiled without `--allow-duplicate`.
+
 `create` reads the **same `bodies.json` that `check_ebug_format.py` validates**, so run the format
 check first and get it to zero errors. Per finding it sends BugBelong in the web-form spelling (old
 `RDSK` / `PCArt` / `PCDoc` values are mapped back to `Setup Kit` / `PC-Art` / `PC-Doc`), sends every value-typed field

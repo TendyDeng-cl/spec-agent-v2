@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0015",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611201",
+    "filed_on": "2026-11-24"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0289",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips",
+      "status": "BugNeedReview",
+      "severity": 2,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-24T17:38:04",
+      "build": "2611201",
+      "tr": "TR261123-0015",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "6/6",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「Cinematic Reel Creator」 on the Launcher\n3. Swipe the template cards to the 「Micro Cinema」 card\n4. Tap 「Import a photo」 on that card\n5. Check the Add Media header\n\nResult:\nAdd Media shows only ‹, 「Add Media」 and the camera button; no 「?」 or other entry opens the photo tips sheet.\n摘要：從範本進入的 Add Media 只有 ‹、標題與相機鈕，沒有可開啟拍照建議的「?」。\n{16.9.0_cra01_add_media_header.jpg} {16.9.0_cra01_add_media_scrolled.jpg}\n\nExpect Result:\nPM to decide whether Add Media has a 「?」 that opens this template's photo tips, as Jira asks; the Design draws none.\n摘要：請 PM 決定 Add Media 是否要有開啟該範本拍照建議的「?」（Jira 要求，Design 未畫）。\nSpec string: 「每個 template 會有 chip & media room \"?\" 都可以打開 recommendation page」\n\nNote:\nDevice: Sony XQ-BT52 (Xperia 10 III) / Android 12\nSpec Link: Jira PDRA-661 description (UI: the chip and the media room 「?」 both open the recommendation page) -\nhttps://cyberlinkcorp.atlassian.net/browse/PDRA-661\nSpec Link: Cinematic Reel Creator Design spec (CineStory, frame 26.07_v2), Add Media board (no 「?」 drawn, ic_info layer hidden) -\nhttps://www.figma.com/design/w2cTi3WTU9vGDE3laY1H1t/Cinematic-Reel-Creator--CineStory-?node-id=107-2556\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_cra01_add_media_header.jpg",
+        "16.9.0_cra01_add_media_scrolled.jpg"
+      ],
+      "key": "Cinematic-Reel-Recommendation-R1-01",
+      "iss": "ISS-CRA-01",
+      "feature": "Cinematic-Reel-Recommendation-R1",
+      "problem_type": "UX"
+    },
+    {
+      "bugcode": "DRA262611P0290",
+      "short": "PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語",
+      "status": "BugNeedReview",
+      "severity": 2,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-24T17:38:09",
+      "build": "2611201",
+      "tr": "TR261123-0015",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Set the phone's system language to 中文（繁體）\n3. Switch back to PowerDirector\n4. Tap 「AI電影感運鏡」 on the Launcher\n5. Swipe the template cards to the 「微電影畫境」 card\n6. Tap 「View photo tips」 on that card\n7. Check the result\n\nResult:\nThe chip and the sheet's first sentence stay English while headings, captions and the button are localized (zh-TW, ja).\n摘要：繁中與日文下，提示標籤與面板首句仍是英文，標題、說明與按鈕則已翻譯。\n{16.9.0_cra02_zh_card_chip.jpg} {16.9.0_cra02_zh_sheet.jpg} {16.9.0_cra02_ja_card_chip.jpg} {16.9.0_cra02_ja_sheet.jpg}\n\nExpect Result:\nPM to supply the chip and sentence in each app language; no spec gives them, and the JP captions are not in the CMS.\n摘要：請 PM 提供標籤與首句的各語系文字；規格未提供，日文說明亦不在 CMS。\n\n[AI Recommendation]\nChip (zh-TW): 「查看拍攝建議」\nSentence (zh-TW): 「想讓「微電影畫境」範本效果最好，請參考以下建議：」\nChip (ja): 「撮影のヒント」\nSentence (ja): 「「マイクロシネマ」テンプレートで最適な結果を得るためのアドバイス：」\n\nNote:\nDevice: Sony XQ-BT52 (Xperia 10 III) / Android 12\nSpec Link: Cinematic Reel Creator Design spec (CineStory, frame 26.07_v2), 0820 add photo tips board (chip and sentence drawn in English only) -\nhttps://www.figma.com/design/w2cTi3WTU9vGDE3laY1H1t/Cinematic-Reel-Creator--CineStory-?node-id=1106-5162\nSpec Link: Cinestory CMS, Recommendation tab (picture list: JP and EN columns empty) -\nhttps://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_cra02_zh_card_chip.jpg",
+        "16.9.0_cra02_zh_sheet.jpg",
+        "16.9.0_cra02_ja_card_chip.jpg",
+        "16.9.0_cra02_ja_sheet.jpg"
+      ],
+      "key": "Cinematic-Reel-Recommendation-R1-02",
+      "iss": "ISS-CRA-02",
+      "feature": "Cinematic-Reel-Recommendation-R1",
+      "problem_type": "UI"
+    }
+  ],
+  "dispositions": {}
+}

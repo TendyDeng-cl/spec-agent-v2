@@ -141,7 +141,7 @@ Android (2026-10-27, REQ-042): built from the iOS analysis of the same spec set 
 - Q-2 1,000-character limit feedback: older Design frame shows a toast "You've reached the maximum length"; PM §13.11 (10/2) specifies red counter + "You've reached the 1,000-character limit.". Cases follow §13.11. (R-015, R-043)
 - Q-3 Credit confirmation: MX link shows "You'll have {n} left / Confirm" before spending; the PM chat frames show the action card's Generate charging directly. Cases follow MX (R-100).
 - Q-4 Error copy: 10/6 decided v1 uses the 5xxx copy for every error and defers the 4xxx copy + ⓘ dialog; the 10/13–10/14 frames reinstate the 4xx moderation copy and ⓘ dialog. Cases follow the newest (R-056, R-057).
-- Q-5 storyboard.all_videos.q and ladder.beat_video.q share the same English ("Every frame is done. Ready to create your video?") — intended?
+- Q-5 storyboard.all_videos.q and ladder.beat_video.q share the same English ("Every frame is done. Ready to create your video?") — intended? No assumption can be made: TC-581 records the assistant's messages after a finished storyboard and TC-582 those after a Preview video, and either outcome goes to PM (REQ-111).
 - Q-6 Withdrawn 2026-10-21: the manual outline editor is not in the 10/16, 10/19 or 10/21 PM spec (it came from older PM versions).
 - Q-7 Withdrawn 2026-10-21: the storyboard text/image-version editor and thumbnail refresh are not in the current PM spec.
 - Q-8 Withdrawn 2026-10-21: separate From Text / From Photo routes are not in the current PM spec.
@@ -154,7 +154,7 @@ Android (2026-10-27, REQ-042): built from the iOS analysis of the same spec set 
 - Q-15 Decided 2026-10-22 (user): test the PM 10/16 three video models (Best / Standard / Fast = Seedance 2.5 / 2.0 / 2.0 Mini, 6 / 4 / 2 credits per second); the app will follow the PM. Default model still TBD.
 - Q-16 Decided 2026-10-22 (user): test the PM 10/16 charged character change in chat (Update characters card → "Here's your updated cast.").
 - Q-17 Decided 2026-10-22 (user): the PM 10/20 §13.2 ③ rule applies — new results come as a new message and earlier cards are not updated.
-- Q-18 PM main flow note 「day 1 只有 US & JP」 beside the template grid: are templates limited to the US and JP stores on day 1? Affects R-289 and the template rows (REQ-032).
+- Q-18 PM main flow note 「day 1 只有 US & JP」 beside the template grid: are templates limited to the US and JP stores on day 1? Affects R-289 and the template rows (REQ-032). TC-580 records the store region, the price currency and the template counts; a store outside the US and JP goes to PM with its figures (REQ-111).
 - Q-19 「More ideas +」 above the composer: no Design frame, arrow or PM note says what a tap shows (more inspiration chips, a filled input, a new suggestion message?). TC-019 records what appears (R-338, REQ-039).
 - Q-A20 (PM 11/4 §13.2 ② vs 10/22 frame 4422:2) Tapping Generate now sends the card's Answer as a pinned user message, but the 10/22 note on 4422:2 still says the video settings card turns into the 「Advancing the mini drama production.」 skeleton in place (its mockup draws a 「Generate Video / Model … / Length …」 bubble). Does Generate Video also send a user message? Assumption: the card turns into the skeleton in place with no user message, as before. (R-279, R-333; TC-405)
 - Q-A21 (RD to confirm; PM 11/3 board 4982:27069) Can v1 tell moderation (4xxx) failures from server-busy (5xxx) ones? If not, the Fix card uses the generic 「Some scenes couldn't be generated. Edit the description or try again.」. Assumption: the cause-specific copy; the generic copy is accepted if RD says v1 cannot split them. (R-080, R-487, R-488; TC-091, TC-559, TC-560, TC-499)
@@ -382,6 +382,8 @@ Every cell names the rows that check it, or n/a when the spec defines nothing fo
 | REQ-032 The analysis finds spec rules itself (2026-10-22) | R-267 – R-305 (annotation trace, passes 9 and 10) |
 | REQ-076 Design screens no row reached (figma source read, 2026-11-03) | R-482, R-483, R-484 |
 | REQ-103 Credit System 「Publish Feature List」 forms: prices and action ids (2026-11-06) | R-033, R-040, R-050, R-059, R-061, R-069, R-081, R-147, R-254, R-259, R-260, R-379, R-452, R-453, R-466, R-481; Q-A18 superseded, Q-A19 answered; Q-A24, Q-A25 |
+| REQ-109 MUI section for the 26 PowerDirector languages (2026-11-24) | not applied yet: this table has no MUI section; its rows come with their own draft (`mui.json`, `references/mui.md`), and MUI is its own phase |
+| REQ-111 Every Open question that is still open gets an observing row (2026-11-25) | Q-5 (TC-581, TC-582), Q-18 (TC-580); R-289, R-006, R-064, R-075, R-424 |
 
 ## Added 2026-10-21 — PM Spec 20261021 (16:04)
 PM-only rows carry 「PM-only: no Design frame yet (Design 2026-10-19)」 in Notes and change when the Design spec draws them (REQ-024).
@@ -1105,3 +1107,16 @@ Changed in place, IDs kept: R-033, R-040, R-050, R-059, R-061, R-069, R-081, R-1
 no discount price or id. Rows modified: 23 (update-plan.md).
 
 Open questions added: Q-A24, Q-A25 (listed under Open questions).
+
+## Added 2026-11-25 — observing rows for the Open questions (REQ-111)
+User, 2026-11-25: 「if it's a new question it should be added to the cases and be run next round」, 「shouldn't they be
+added to cases already?」 Every Open question that the completed runs left open (`question-status.json`: not reached or
+to file) now names a row that takes the app to the point in question and records what it does (analysis.md, "Every Open
+question gets an observing row"). No requirement is added or changed: the new rows cite the requirements the questions
+affect. Where the Design gives an assumption the row asserts it; where nothing can be assumed (Q-5, Q-18 outside the US and JP)
+the row says what to record and the outcome is a Fail (question) for the owner, not a pass.
+
+New rows: TC-580 (Q-18), TC-581 and TC-582 (Q-5). Modified: TC-003 (Notes).
+Judged already observed: Q-19 (TC-019 taps the chip and records what appears; the build shows no chip, DRA262610P0380, so
+there is nothing more a row can do until it exists). The Android-only questions Q-A1 – Q-A25 are not read by the tooling
+(its parser takes Q-<digits>) and are not renumbered or changed here; update-plan.md lists which of them a row observes.

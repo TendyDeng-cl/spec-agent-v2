@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261125-0064",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611251",
+    "filed_on": "2026-11-27"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0338",
+      "short": "PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Mode bubble reads 「up to 8 min」 / 「up to 2:30」, not 「up to 08:00」 / 「up to 02:30」",
+      "status": "BugNeedReview",
+      "severity": 2,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-27T10:28:27",
+      "build": "2611251",
+      "tr": "TR261125-0064",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "4/4",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「Video Enhance」 on the Launcher\n3. Tap 「Try It Now」 on the Demo page\n4. Tap a 2:30 1080p video in Add Media\n5. Tap ⓘ next to 「Mode」\n6. Check the result\n\nResult:\nThe bubble reads 「… up to 8 min」 and 「… up to 2:30」, from every entry.\n摘要：Mode 泡泡顯示「up to 8 min」/「up to 2:30」，各入口皆同。\n{16.9.0_vea60_mode_bubble_launcher.jpg} {16.9.0_vea60_mode_bubble_ai_magic.jpg}\n\nExpect Result:\nThe bubble reads 「Standard: Great quality · up to 08:00」 / 「Professional: Maximum detail · up to 02:30」.\n摘要：泡泡應為「up to 08:00」與「up to 02:30」，依 Design。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android 15\nSpec Link: AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance board (Mode ⓘ bubble, redrawn 2026-11-26) -\nhttps://www.figma.com/design/HceGLJVaxnKsv7gXSXzKWh/Video-Enhance?node-id=3300-32003\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_vea60_mode_bubble_launcher.jpg",
+        "16.9.0_vea60_mode_bubble_ai_magic.jpg"
+      ],
+      "key": "Video-Enhance-R4-01",
+      "iss": "ISS-VEA-60",
+      "feature": "Video-Enhance-R4",
+      "problem_type": "UI"
+    },
+    {
+      "bugcode": "DRA262611P0339",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: System Back does nothing on the 「Turn on notifications」 dialog",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-27T10:28:31",
+      "build": "2611251",
+      "tr": "TR261125-0064",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP (app data cleared, PowerDirector notifications off)\n2. Sign in with the Google button\n3. Tap 「Video Enhance」 on the Launcher\n4. Tap a 3 s 720p video in Add Media\n5. Tap 「Enhance」\n6. Wait until 「Turn on notifications」 shows\n7. Press system Back\n8. Press system Back again\n9. Check the result\n\nResult:\nThe dialog stays open after each Back; only 「Turn On」 or 「Later」 closes it.\n摘要：「Turn on notifications」對話框按系統返回鍵沒有反應，只能點「Turn On」或「Later」關閉。\n{16.9.0_vea61_dialog_before_back.jpg} {16.9.0_vea61_dialog_after_back.jpg} {16.9.0_vea61_back_log.txt}\n\nExpect Result:\nPM to decide what system Back does on this dialog; assumed: it closes it like 「Later」 (Q-20).\n摘要：請 PM 決定此對話框按系統返回鍵的行為；目前假設應與「Later」相同（關閉）。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android 15\nSpec Link: AI Video Enhance PM spec, 主線 - 選片到拿到成品 board (§4.2 step 6 / §9, arrow 397-1241: notification prompt after the first upload; no Back rule, Q-20) -\nhttps://www.figma.com/design/mppB4GYkuVMVvHrdBeSAAU/AI-Video-Enhance?node-id=397-1241\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_vea61_dialog_before_back.jpg",
+        "16.9.0_vea61_dialog_after_back.jpg",
+        "16.9.0_vea61_back_log.txt"
+      ],
+      "key": "Video-Enhance-R4-02",
+      "iss": "ISS-VEA-61",
+      "feature": "Video-Enhance-R4",
+      "problem_type": "UX"
+    },
+    {
+      "bugcode": "DRA262611P0340",
+      "short": "PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: 「Selected Length」 has no ⓘ on a video within the Mode limit",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-27T10:28:34",
+      "build": "2611251",
+      "tr": "TR261125-0064",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "5/5",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap the AI Magic tab\n3. Tap 「Video Enhance」\n4. Tap a 00:30 1080p video in Add Media\n5. Look next to 「Selected Length」\n6. Check the result\n\nResult:\nNo ⓘ next to 「Selected Length」 for a 00:30 or 02:30 video; a 12:30 video's panel has it.\n摘要：00:30 或 02:30 的影片在「Selected Length」旁沒有 ⓘ，只有 12:30 的影片才有。\n{16.9.0_vea62_no_info_0030.jpg} {16.9.0_vea62_info_on_1230.jpg}\n\nExpect Result:\n「Selected Length ⓘ」 shows on every panel, and the ⓘ opens its bubble, as the Design draws.\n摘要：每個面板的「Selected Length」旁都應有 ⓘ，點擊可再次顯示說明泡泡。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android 15\nSpec Link: AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), Main Flow (Free user → IAP) board (VE · 01: 「Selected Length ⓘ」 on a 01:30 video) -\nhttps://www.figma.com/design/HceGLJVaxnKsv7gXSXzKWh/Video-Enhance?node-id=3293-13054\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_vea62_no_info_0030.jpg",
+        "16.9.0_vea62_info_on_1230.jpg"
+      ],
+      "key": "Video-Enhance-R4-03",
+      "iss": "ISS-VEA-62",
+      "feature": "Video-Enhance-R4",
+      "problem_type": "UI"
+    }
+  ],
+  "dispositions": {}
+}

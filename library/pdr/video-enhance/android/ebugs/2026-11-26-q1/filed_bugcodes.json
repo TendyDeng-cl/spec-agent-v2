@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0070",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611231",
+    "filed_on": "2026-11-26"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0325",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: No rule for what play does at the end of the selection",
+      "status": "BugNeedReview",
+      "severity": 2,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:37:02",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「Video Enhance」 on the Launcher\n3. Tap a 12:30 1080p video in Add Media\n4. Drag the left trim handle to 00:30\n5. Drag the right trim handle to 02:00\n6. Drag the ◀▶ knob to 01:50\n7. Tap play under the Preview\n8. Wait 30 seconds\n9. Tap play under the Preview again\n10. Check the result\n\nResult:\nPlay stops by itself at the right handle (「02:01/12:30」) and stays there; the next play starts from 00:30.\n摘要：播放到右側裁剪把手會自動停止並停在把手處；再按播放會從選取起點 00:30 開始，而非停住的位置。\n{16.9.0_vea58_playhead_0150_before_play.jpg} {16.9.0_vea58_stopped_at_right_handle.jpg} {16.9.0_vea58_next_play_from_0030.jpg}\n\nExpect Result:\nPM to decide what play does at the right trim handle (stop, jump back or loop) and where the next play starts (Q-28).\n摘要：請 PM 決定播放到右側裁剪把手時的行為（停止、跳回或循環），以及再次播放的起點。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android 15\nSpec Link: AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance (settings) board (Length: playhead and play button drawn, no note on play at the selection's end, Q-28) -\nhttps://www.figma.com/design/HceGLJVaxnKsv7gXSXzKWh/Video-Enhance?node-id=3300-32003\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_vea58_playhead_0150_before_play.jpg",
+        "16.9.0_vea58_stopped_at_right_handle.jpg",
+        "16.9.0_vea58_next_play_from_0030.jpg"
+      ],
+      "key": "Video-Enhance-Q1-01",
+      "iss": "ISS-VEA-58",
+      "feature": "Video-Enhance-Q1",
+      "problem_type": "UX"
+    },
+    {
+      "bugcode": "DRA262611P0326",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: No GenAI consent or disclosure before the first upload after a reset",
+      "status": "BugNeedReview",
+      "severity": 2,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:37:07",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Clear PowerDirector's app data (the account had used AI Video Enhance before)\n2. Launch the APP\n3. Tap 「Get Started」\n4. Sign in with the Google button\n5. Tap 「Video Enhance」 on the Launcher\n6. Tap 「Try It Now」\n7. Tap a 1 s 720p video in Add Media\n8. Tap 「Enhance」\n9. Check the result\n\nResult:\n「Video uploading...」 shows at once; no screen since the reset says a third party's cloud processes the video.\n摘要：重置後第一次按 Enhance 直接進入上傳，重置以來沒有任何畫面告知影片會上傳至第三方雲端做 AI 處理。\n{16.9.0_vea59_panel_before_enhance.jpg} {16.9.0_vea59_upload_dialog_no_consent.jpg} {16.9.0_vea59_first_launch_terms_only.jpg} {16.9.0_vea59_first_upload_log.txt}\n\nExpect Result:\nPM and Legal to decide if the GenAI consent dialog (ByteDance cloud) shows before the first upload, and its text (Q-14).\n摘要：請 PM 與法務決定第一次上傳前是否須顯示 GenAI 同意 dialog（涵蓋 ByteDance 上雲）及其文案。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android 15\nSpec Link: AI Video Enhance PM spec (Spec - Video Enhance with Byteplus), Gaps & Open questions board (item 3: disclosure wording, existing GenAI consent dialog, ByteDance cloud, Legal; Q-14) -\nhttps://www.figma.com/design/mppB4GYkuVMVvHrdBeSAAU/AI-Video-Enhance?node-id=369-442\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_vea59_panel_before_enhance.jpg",
+        "16.9.0_vea59_upload_dialog_no_consent.jpg",
+        "16.9.0_vea59_first_launch_terms_only.jpg",
+        "16.9.0_vea59_first_upload_log.txt"
+      ],
+      "key": "Video-Enhance-Q1-02",
+      "iss": "ISS-VEA-59",
+      "feature": "Video-Enhance-Q1",
+      "problem_type": "UX"
+    }
+  ],
+  "dispositions": {}
+}

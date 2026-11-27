@@ -1,0 +1,3 @@
+{ "run": false, "tr": "TR261123-0041", "build": "202611231214",
+  "trNote": "S23 APK MD5 matches the Pixel 8a used for the TR261123-0041 verify today (versionCode 90201902).",
+  "lede": "One finding from the 2026-11-23 free-trial credit check on the S23. It has no spec link yet: paste the Kanban or spec URL, or approve filing without one." }

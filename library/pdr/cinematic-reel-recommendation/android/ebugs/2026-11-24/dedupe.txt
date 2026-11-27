@@ -1,0 +1,6 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# 2026-11-24, product PowerDirector Mobile for Android, whole pool:
+#   ecl_query.py dedupe upload/bodies.json: 73 candidates per entry (「Cinematic Reel Creator」), no likely duplicate; 0 open on 16.9.0 (dedupe-query.txt)
+#   ecl_query.py bugs --text: 「Cinematic Reel」 75, 「photo tips」 0, 「Recommendation」 53 (Image to Video / Talking Avatar / AI Sketch / AI Anime Video recommendation pages, 12.7.0 – 15.2.0, all other features), 「CineStory」 3 (Launcher banner)
+#   Closest read: DRA262607-0052 (Tutorial 「?」 no reaction, 16.5.5, Close: the template page's tutorial 「?」, not Add Media), DRA262607-0105 / -0210 / DRA241225-0156 ([MUI] tutorial / other features' recommendation page, Close)
+# No same-OS match: both entries stay as new cards.

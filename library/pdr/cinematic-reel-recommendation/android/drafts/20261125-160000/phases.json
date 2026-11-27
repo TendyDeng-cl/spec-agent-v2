@@ -1,0 +1,24 @@
+{
+  "draft": "20261125-160000",
+  "current": [
+    "MUI"
+  ],
+  "needs": {},
+  "unavailable": {},
+  "phases": [
+    {
+      "id": "MUI",
+      "name": "MUI: app strings in every language from the APK",
+      "note": "REQ-002 (user, 2026-11-24). Run on request, never in a full run. Truncation per language is checked by the Language rows of the full run. Doubtful translations go to mui-doubts.md (references/mui.md §3).",
+      "segments": [
+        {
+          "id": "MUI-apk",
+          "name": "Translations from the APK (no phone)",
+          "cases": [
+            "TC-076"
+          ]
+        }
+      ]
+    }
+  ]
+}

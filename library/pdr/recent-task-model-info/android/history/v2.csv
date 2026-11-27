@@ -1,0 +1,1421 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes
+TC-001,My Artwork entry,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Tap the 「Image to Video」 card row","Step 1: My Artwork lists a card row per feature, including 「Image to Video」 and 「Text to Video」
+Step 2: the Image to Video Recent page opens, titled 「Image to Video」, with one Recent task card per task (newest first)",P1,"R-001, R-060",
+TC-002,My Artwork entry,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Tap the 「Text to Video」 card row","The Text to Video Recent page opens, titled 「Text to Video」, with one Recent task card per task",P1,R-001,
+TC-003,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Kling 4.0」 last (KP-083)
+3. Tap Generate
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","Step 5: the new task's card is in the processing state: 「processing...」 over the thumbnail, the time left and a progress bar, no button
+Step 5: under the task name the card shows a grey filled tag reading 「Kling 4.0」",P1,"R-010, R-030","Keep this task: TC-004, TC-005 and the state rows use it."
+TC-004,Image to Video — model tag,The Image to Video task of TC-003 has finished,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The task's card shows, top to bottom beside the thumbnail: the date and length (「YYYY/MM/DD · m:ss」), the task name, then one grey filled tag reading 「Kling 4.0」
+The tag is one line, 20 pt high, and does not touch the 「View」 button at the bottom right
+The card is as tall as a card without a tag (120 pt)",P1,"R-010, R-012, R-015, R-016, R-030",
+TC-005,Image to Video — model tag,The Image to Video Recent page shows the finished task of TC-003,"1. Tap 「View」 on that card
+2. Tap ‹","Step 1: the Image to Video result page of that task opens (its video plays)
+Step 2: back on the Image to Video Recent page, the card still shows 「Kling 4.0」",P1,"R-002, R-061",
+TC-006,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Veo 3.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Veo 3.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-007,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Vidu Q2」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Vidu Q2」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-008,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Kling O3」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Kling O3」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-009,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Pixverse V6」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Pixverse V6」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-010,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Wan 2.7」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Wan 2.7」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-011,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Gemini Omni Flash 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Gemini Omni Flash 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-012,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Happy Horse 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Happy Horse 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-013,Image to Video — model tag,"1. Signed in with the Pro test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Seedance 2.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Seedance 2.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-014,Image to Video — model tag,"1. Signed in with the Pro test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Seedance 2.5」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Seedance 2.5」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-015,Image to Video — model tag,"The Image to Video Recent page holds tasks made with two or more different models (TC-003, TC-006 …)","1. Open AI Magic › 「Image to Video」 and pick a model none of those tasks used, without generating
+2. Go back
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Image to Video」","Each card still shows the model its own task was generated with
+No card shows the model picked in step 1",P2,R-013,
+TC-016,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Kling 4.0」 last
+3. Tap Generate
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","Step 5: the new task's card shows 「processing...」, the time left and a progress bar, no button
+Step 5: under the task name the card shows a grey filled tag reading 「Kling 4.0」",P1,"R-011, R-030",Close the keyboard (Done or tap outside) before picking the model.
+TC-017,Text to Video — model tag,The Text to Video task of TC-016 has finished,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Text to Video」","The card shows the date and length, the task name, then one grey filled tag reading 「Kling 4.0」
+The tag is one line and does not touch 「View」
+The card is as tall as a card without a tag (120 pt)",P1,"R-011, R-012, R-015, R-016, R-030",
+TC-018,Text to Video — model tag,The Text to Video Recent page shows the finished task of TC-016,"1. Tap 「View」 on that card
+2. Tap ‹","Step 1: the Text to Video result page of that task opens
+Step 2: back on the Text to Video Recent page, the card still shows 「Kling 4.0」",P1,R-002,
+TC-019,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Wan 3.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Wan 3.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-020,Text to Video — model tag,Signed in with the Pro test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Seedance 2.5」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Seedance 2.5」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-021,Text to Video — model tag,Signed in with the Pro test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Seedance 2.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Seedance 2.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-022,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Gemini Omni Flash」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Gemini Omni Flash」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-023,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Happy Horse 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Happy Horse 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-024,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Wan 2.7」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Wan 2.7」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-025,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Veo 3.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Veo 3.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-026,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Kling O3」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Kling O3」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-027,Long model names,"The Image to Video Recent page holds a task made with 「Gemini Omni Flash 1.1」 (TC-011), the longest model name","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」
+3. Look at that task's card","The tag shows the whole name on one line, or, when it does not fit, the start of the name ending in 「…」
+The tag never wraps to a second line and does not overlap 「View」",P2,R-014,Q-4: the spec gives no maximum tag width; the row assumes the tag may use the width under the name up to the card's right padding.
+TC-028,Long model names,As TC-027,"1. Set the phone's font size (and display size) to the largest
+2. Open AI Magic › 「My Artwork」
+3. Tap 「Image to Video」
+4. Look at the 「Gemini Omni Flash 1.1」 card
+5. Set the font and display size back","Step 4: the tag is cut with 「…」 on one line and does not overlap 「View」 or leave the card
+Step 4: the card keeps the height of the cards around it",P3,"R-014, R-016",Phone setting changed and restored by the run (AGENTS.md › Phone settings for fixtures).
+TC-029,Cards without a model,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Start an Image to Video template (Launcher 「What's Trending」 or the Template tab) with the photo
+2. Generate and wait until it finishes
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Image to Video」","The template task's card shows the date and length and the name, and no model tag
+No empty line or gap is left where the tag would be
+The card is as tall as a card with a tag (120 pt)",P1,"R-020, R-016","Q-3: if the template lets the user pick a model, record whether the card shows it."
+TC-030,Cards without a model,Signed in with the test account (fixtures.md),"1. Start a Text to Video template (Launcher or the Template tab)
+2. Generate and wait until it finishes
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Text to Video」","The template task's card shows no model tag and no empty line
+The card is as tall as a card with a tag (120 pt)",P2,"R-020, R-016","Q-3 as TC-029. If the build offers no Text to Video template, record Blocked as test-data."
+TC-031,Cards without a model,The account has at least one finished Cinematic Reel Creator task,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Cinematic Reel Creator」","No card on the Cinematic Reel Creator Recent page shows a model tag
+No card leaves an empty line for one
+Every card is 120 pt tall",P1,"R-021, R-016",Use an existing task; a new Cinematic Reel costs 70 credits (KP-091).
+TC-032,Cards without a model,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Open the Recent page of every other feature My Artwork lists (not Image to Video, Text to Video, Text to Image or Cinematic Reel Creator)",No card on those pages shows a model tag or an empty line for one,P2,R-021,"Record which features My Artwork lists; if none besides the four, record that and pass on TC-031."
+TC-033,Cards without a model,"The account has at least one finished Text to Image task (default model 「GPT-Image-2.6 Sunburst」, KP-082)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Text to Image」",The Text to Image Recent page shows no model tag on its items (Design 1006 names only I2V and T2V),P2,R-022,"Q-1: the Jira title also names TTI. If the build shows a model here, record it: a PM decision, not a Fail."
+TC-034,Card states,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Start an Image to Video template with the photo and tap Generate
+2. Open AI Magic › 「My Artwork」
+3. Tap 「Image to Video」 while it is processing","The processing card (「processing...」, time left, progress bar) shows no model tag
+It is as tall as the other cards",P2,"R-030, R-020","Can be the generation of TC-029, looked at while it runs."
+TC-035,Card states,The Image to Video Recent page holds tagged cards (TC-003) and a template card (TC-029),"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」
+3. Tap 「Manage」","Step 3: every card shows an empty checkbox at its top right
+Step 3: tagged cards keep their model tag and template cards still show none
+Step 3: the page shows 「Select All」 and 「Cancel」 and a 「Delete」 bar
+Step 3: every card keeps its height",P2,R-030,Design: 「點擊 Select 進入編輯狀態」; the board draws 「Manage」 as the entry. Never tap 「Delete」.
+TC-036,Card states,"As TC-035, in edit mode",Tap the checkbox of a card with a model tag,"Its checkbox is ticked
+Its model tag still shows, unchanged
+The other cards stay unticked",P2,R-030,
+TC-037,Card states,"As TC-035, in edit mode","1. Tap 「Select All」
+2. Tap 「Deselect All」
+3. Tap 「Cancel」","Step 1: every checkbox is ticked and the button reads 「Deselect All」
+Steps 1–2: every tagged card keeps its tag and template cards show none
+Step 2: every checkbox is empty
+Step 3: the page leaves edit mode and every card shows 「View」 again with the same tags",P2,R-030,Never tap 「Delete」.
+TC-038,Card states,An Image to Video task made with a chosen model has failed (needs a failure fixture),"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The failed card shows 「Error」 with the caution icon over the thumbnail and 「Retry」
+It still shows the model tag of the chosen model
+It is 120 pt tall",P2,R-030,Parked: no fault switch on Android (KP-003); run when a task fails by itself. KP-081: the Image to Video page itself reads 「An Error Has Occurred」.
+TC-039,Card states,An Image to Video or Text to Video task made with a chosen model was flagged as inappropriate (needs an NSFW fixture),"1. Open AI Magic › 「My Artwork」
+2. Open that feature's Recent page","The card shows the visibility-off icon over the thumbnail and 「View Details」
+It still shows the model tag
+It is 120 pt tall",P3,R-030,Parked: needs an input the server flags.
+TC-040,Persistence,The Image to Video Recent page shows tagged cards (TC-003 …),"1. Tap ‹ to go back to My Artwork
+2. Tap 「Image to Video」 again
+3. Close the app completely and open it again
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","Step 1: My Artwork shows again
+Steps 2 and 5: every card shows the same model tag as before",P2,R-040,
+TC-041,Persistence,The account has Image to Video or Text to Video tasks generated with a chosen model before this build was installed,"1. Open AI Magic › 「My Artwork」
+2. Open the Image to Video and Text to Video Recent pages
+3. Look at the older cards","Each older card shows either its model tag or no tag line at all
+No card shows an empty tag
+Every card is 120 pt tall",P3,R-041,Q-2: the spec does not say whether older tasks get the tag; record which.
+TC-042,Appearance,"1. The app shows the dark appearance (phone in dark theme)
+2. Tagged cards exist (TC-003 …)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The model tag is a grey filled tag with readable text on the dark card, as on the Dark board",P3,R-050,Phone setting changed and restored by the run.
+TC-043,Appearance,"1. The app shows the light appearance (phone in light theme)
+2. Tagged cards exist (TC-003 …)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The model tag is a grey filled tag with readable text on the light card, as on the Light board",P3,R-050,Phone setting changed and restored by the run.
+TC-044,System Back,The Image to Video Recent page is open,Press system Back,My Artwork shows again,P3,R-070,
+TC-045,System Back,The Image to Video Recent page is in edit mode with one card ticked,Press system Back,"Edit mode closes as with 「Cancel」
+No task is deleted and every card keeps its tag",P3,R-070,Q-5: the spec draws only 「Cancel」; the row assumes Back acts like it.
+TC-046,System Back,The result page of a tagged task is open (TC-005 step 1),Press system Back,The Image to Video Recent page shows again with the card's tag unchanged,P3,R-070,
+TC-047,MUI,"1. The APK of the build under test in `~/.casebook/android/apks/<build>/` (the one installed for the run)
+2. `mui.json` has no `android_prefixes` for this feature yet: the read takes the strings of three or more words this table quotes (the feature names and the notice)","1. Run `node scripts/mui-strings.ts pdr/recent-task-model-info --apk <build dir> --out <run dir>/mui`
+2. Read every string of `mui-strings.json` in each language against its English","1. Each of the 26 languages (CHT, CHS, JPN, ESP, KOR, DEU, FRA, ITA, RUS, PTB, NLD, IND, THA, MAY, HIN, ESM, ARA, VIT, PLK, TRK, FAR, HEB, SVE, DAN, NOR, UKR) has its own text for every string read (「Image to Video」, 「Text to Video」, 「Text to Image」, 「Cinematic Reel Creator」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」): none shows the English default or another locale's text
+2. No string is left identical to English
+3. Placeholders and line breaks match the English in every language
+4. Each translation says what the English says, in that language's script and regional wording (CHT traditional and Taiwan, CHS simplified, PTB Brazilian, ESM Mexican)
+5. A feature name that several resources hold (card row, page title, shortcut) has one translation in each language
+6. The model tag adds no string of its own: a model name is data, shown as the picker names it, and is not part of this read
+7. The short labels of the Recent page (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) are shared resources this read cannot attribute to the feature: their translation is judged on the phone rows (TC-048 – TC-073) until `android_prefixes` names them
+8. 「An Error Has Occurred」 (the Image to Video page's own error title, KP-081, quoted by TC-038) is read too and held to the same lines
+9. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail",P2,R-080; REQ-002,"MUI, all languages from the APK (no phone, no credits). The phone rows below check truncation and the short labels."
+TC-048,MUI,"1. App language set to Traditional Chinese (`launch --lang zh-Hant-TW`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Traditional Chinese (traditional characters, Taiwan wording), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI CHT (zh-Hant-TW). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-049,MUI,"1. App language set to Simplified Chinese (`launch --lang zh-Hans-CN`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Simplified Chinese (simplified characters), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI CHS (zh-Hans-CN). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-050,MUI,"1. App language set to Japanese (`launch --lang ja-JP`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Japanese, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI JPN (ja-JP). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-051,MUI,"1. App language set to Spanish (`launch --lang es-ES`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Spanish (Spanish of Spain), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI ESP (es-ES). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-052,MUI,"1. App language set to Korean (`launch --lang ko-KR`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Korean, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI KOR (ko-KR). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-053,MUI,"1. App language set to German (`launch --lang de-DE`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in German, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI DEU (de-DE). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-054,MUI,"1. App language set to French (`launch --lang fr-FR`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in French, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI FRA (fr-FR). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-055,MUI,"1. App language set to Italian (`launch --lang it-IT`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Italian, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI ITA (it-IT). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-056,MUI,"1. App language set to Russian (`launch --lang ru-RU`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Russian, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI RUS (ru-RU). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-057,MUI,"1. App language set to Portuguese (Brazil) (`launch --lang pt-BR`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Portuguese (Brazil) (Brazilian Portuguese), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI PTB (pt-BR). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-058,MUI,"1. App language set to Dutch (`launch --lang nl-NL`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Dutch, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI NLD (nl-NL). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-059,MUI,"1. App language set to Indonesian (`launch --lang id-ID`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Indonesian, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI IND (id-ID). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-060,MUI,"1. App language set to Thai (`launch --lang th-TH`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Thai, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI THA (th-TH). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-061,MUI,"1. App language set to Malay (`launch --lang ms-MY`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Malay, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI MAY (ms-MY). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-062,MUI,"1. App language set to Hindi (`launch --lang hi-IN`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Hindi, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI HIN (hi-IN). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-063,MUI,"1. App language set to Spanish (Mexico) (`launch --lang es-MX`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Spanish (Mexico) (Mexican Spanish), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI ESM (es-MX). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-064,MUI,"1. App language set to Arabic (`launch --lang ar-SA`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. Arabic is right-to-left: text runs from the right, the thumbnail, the tag and the button mirror, no string is clipped at the left edge, and the model name (Latin letters) still reads left to right inside its tag
+9. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Arabic, none left in English or as a key (TC-047 line 7)
+10. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+11. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+12. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+13. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+14. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+15. Edit mode with every card ticked: 「Deselect All」
+16. Image to Video result page: its title (the other controls there belong to other features)
+17. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+18. Text to Video result page: its title
+19. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+20. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+21. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+22. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+23. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI ARA (ar-SA). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-065,MUI,"1. App language set to Vietnamese (`launch --lang vi-VN`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Vietnamese, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI VIT (vi-VN). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-066,MUI,"1. App language set to Polish (`launch --lang pl-PL`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Polish, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI PLK (pl-PL). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-067,MUI,"1. App language set to Turkish (`launch --lang tr-TR`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Turkish, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI TRK (tr-TR). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-068,MUI,"1. App language set to Persian (`launch --lang fa-IR`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. Persian is right-to-left: text runs from the right, the thumbnail, the tag and the button mirror, no string is clipped at the left edge, and the model name (Latin letters) still reads left to right inside its tag
+9. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Persian, none left in English or as a key (TC-047 line 7)
+10. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+11. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+12. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+13. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+14. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+15. Edit mode with every card ticked: 「Deselect All」
+16. Image to Video result page: its title (the other controls there belong to other features)
+17. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+18. Text to Video result page: its title
+19. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+20. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+21. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+22. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+23. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI FAR (fa-IR). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-069,MUI,"1. App language set to Hebrew (`launch --lang he-IL`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. Hebrew is right-to-left: text runs from the right, the thumbnail, the tag and the button mirror, no string is clipped at the left edge, and the model name (Latin letters) still reads left to right inside its tag
+9. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Hebrew, none left in English or as a key (TC-047 line 7)
+10. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+11. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+12. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+13. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+14. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+15. Edit mode with every card ticked: 「Deselect All」
+16. Image to Video result page: its title (the other controls there belong to other features)
+17. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+18. Text to Video result page: its title
+19. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+20. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+21. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+22. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+23. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI HEB (he-IL). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-070,MUI,"1. App language set to Swedish (`launch --lang sv-SE`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Swedish, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI SVE (sv-SE). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-071,MUI,"1. App language set to Danish (`launch --lang da-DK`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Danish, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI DAN (da-DK). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-072,MUI,"1. App language set to Norwegian Bokmål (`launch --lang nb-NO`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Norwegian Bokmål (Norwegian Bokmål), none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI NOR (nb-NO). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."
+TC-073,MUI,"1. App language set to Ukrainian (`launch --lang uk-UA`)
+2. After the row a plain `launch` (`locale reset`) restores the language
+3. Signed in with the test account (fixtures.md)
+4. The account holds finished Image to Video tasks with a model tag, the 「Gemini Omni Flash 1.1」 one among them (TC-004, TC-011)
+5. The account holds a finished Text to Video task with a model tag (TC-017)
+6. The account holds a template task (TC-029), a finished Cinematic Reel Creator task (TC-031) and a finished Text to Image task (TC-033)
+7. The MUI phase runs after the rows that generate those tasks: the walk generates nothing","1. Open AI Magic › 「My Artwork」 and read the page (TC-001)
+2. Tap the 「Image to Video」 card row and read the Recent page (TC-001, TC-004)
+3. Tap 「Manage」 and read edit mode (TC-035)
+4. Tap the checkbox of a card with a model tag (TC-036)
+5. Tap 「Select All」 and read the button that replaces it (TC-037)
+6. Tap 「Deselect All」 (TC-037)
+7. Tap 「Cancel」 (TC-037: 「Delete」 is never tapped)
+8. Tap 「View」 on a card with a model tag and read the result page (TC-005)
+9. Go back to the Recent page and on to My Artwork (TC-005, TC-040)
+10. Tap the 「Text to Video」 card row and read the Recent page (TC-002, TC-017)
+11. Tap 「View」 on a card with a model tag and read the result page (TC-018)
+12. Go back to My Artwork
+13. Tap the 「Cinematic Reel Creator」 card row and read the Recent page (TC-031)
+14. Go back to My Artwork
+15. Tap the 「Text to Image」 card row and read the Recent page (TC-033)
+16. Go back to My Artwork
+17. Open the Recent page of every other feature My Artwork lists and read each (TC-032)
+18. Open AI Magic › 「Image to Video」 (not a template) and read the model picker without generating (TC-015)
+19. Go back without generating","1. Every string on every screen of the walk but the model tag shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. The model tag stays on one line under the task name, whole or cut with 「…」 as R-014 allows, and never touches the translated 「View」, 「Retry」 or 「View Details」 button
+3. No string overlaps another element or runs out of its card, button, title bar, tab or notice
+4. Every Recent task card is as tall as in English (120 pt), with and without a model tag
+5. The notice wraps inside its box with every word showing, and 「Manage」 stays on the screen
+6. In edit mode 「Select All」 / 「Deselect All」 and 「Cancel」 each stay on one line inside the top bar, and the 「Delete」 bar stays inside the screen
+7. Longest strings first: the notice, 「Deselect All」, 「View Details」, the 「Cinematic Reel Creator」 title and card row, the time-left line
+8. The short labels the APK row leaves to the phone (「View」, 「Manage」, 「Select All」, 「Deselect All」, 「Cancel」, 「Delete」, 「Retry」, 「View Details」, 「processing...」 and the time-left line) show in Ukrainian, none left in English or as a key (TC-047 line 7)
+9. The model tag reads the same model name as in English and as the model picker shows it: a model name is a proper name, not translated and never a doubt
+10. No translation sheet (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+11. My Artwork: the tabs 「AI Magic」 and 「My Artwork」, the 「Recent」 strip title, the card rows 「Cinematic Reel Creator」, 「Text to Video」, 「Image to Video」 and 「Text to Image」
+12. Image to Video Recent page: the title 「Image to Video」, the notice 「Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage.」, 「Manage」, and on each card the date and length, the task name, the model tag and 「View」
+13. Edit mode: 「Select All」, 「Cancel」 and the 「Delete」 bar, a checkbox on every card
+14. Edit mode with every card ticked: 「Deselect All」
+15. Image to Video result page: its title (the other controls there belong to other features)
+16. Text to Video Recent page: the title 「Text to Video」, the same notice, 「Manage」, the model tag and 「View」 on each card
+17. Text to Video result page: its title
+18. Cinematic Reel Creator Recent page: the title 「Cinematic Reel Creator」, the same notice, 「Manage」 and 「View」, no model tag on any card
+19. Text to Image Recent page: the title 「Text to Image」 and its items, no model tag
+20. Recent page of any other feature My Artwork lists: its title, the notice, 「Manage」 and 「View」, no model tag
+21. Model picker of Image to Video: each model name as the tags quote it (read for the names only)
+22. Cards in another state, when the account holds one (else recorded as not reached): processing 「processing...」 with the time-left line 「9 minutes left ...」 (TC-003), failed 「Error」 and 「Retry」 (TC-038), flagged 「View Details」 (TC-039)",P2,R-081; R-080; REQ-002,"MUI UKR (uk-UA). Truncation, and the translation of the short labels only (the other translations come from the APK, TC-047). One `texts` read and screenshot per screen. Labels are quoted in English: tap the control in the same place. No task is generated or deleted."

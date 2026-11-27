@@ -1,0 +1,3 @@
+{ "run": false, "tr": "TR261124-0075", "build": "202611241937",
+  "trNote": "Verified on TR261124-0075's own build (20.19.0.v202611241937, R11) on the S23, Premium.",
+  "lede": "One finding from your AI Removal report (2026-11-25), reproduced on the S23. Filed without [AIAgent] as you asked. It has no spec link: no AI Removal spec is in the repo — approve filing without one." }

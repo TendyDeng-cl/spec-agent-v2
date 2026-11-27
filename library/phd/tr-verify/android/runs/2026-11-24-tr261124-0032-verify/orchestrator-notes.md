@@ -1,0 +1,9 @@
+- 2026-11-24: user: verify every bug on TR261124-0032 with the S23; build already installed.
+- 2026-11-24: user (P0138): buy 100 credits in the app on the S23 yourself; go ahead only when the Google Play sheet shows the test card.
+- 2026-11-24: user (P0141 / P0143 / P0144): if the S23 has no finished Kling 2.6 Custom I2V video, generate one yourself; buy credits (test card) if short.
+- 2026-11-25: user (P0074): 「P0074 是正常的 請看RD在bug單底下的回覆」. RD resolve (ARCHER_CHEN): the picker gets the empty slots of every page, limit = total left; no 20 cap. P0074 → OK.
+- 2026-11-25: user: 「那就把這五個都設定成PASS」 — P0082, P0083, P0094, P0097, P0160 → OK per RD's resolve notes (rd-resolve.json).
+- 2026-11-25: user: 「PASS吧」 — P0103 → OK per RD's resolve (no PRO icon on the preview, not filed).
+- 2026-11-25: user: server now accepts Creative Reel jobs; 「只補測 P0138」 on the S23 with the build installed now (app updated 2026-11-25 08:56; new TR TR261124-0075 R11 is NOT in scope). Result goes into the R9 QR (TR261124-0032).
+- 2026-11-25: segment F: P0138 FIXED on the build installed 2026-11-25 08:56 (APK MD5 4f2ad716f99b1127222e6f97aa062650, differs from R9 E8BB420B…; taken as R11 202611241937). Reason names 202611241937. A 2000-credit pack (09:04) was bought before the segment's first action, not by the agent.
+- 2026-11-25: user: 「送出QR」 → QR261125-0009 created (OK=21, Fail=0), read back clean; qr-receipt.json.

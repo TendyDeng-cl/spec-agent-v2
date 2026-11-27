@@ -1,0 +1,8 @@
+[
+  {
+    "bug": "PHA262026P0138",
+    "verdict": "HOLD",
+    "summary": "Every Creative Reel Generate is refused by the Test Server with HTTP 400 \"duration invalid\" even with Wi-Fi on, so no job is accepted or charged and the interrupted-upload resume or refund path cannot be reached (an upload cut now ends in Network Error with no job and no charge).",
+    "screenshots": ["d_04_room.png", "d_11_confirm.png", "d_18_after_cut.png", "d_26_after_cut.png", "d_28_history.png", "d_33_dialog3.png", "d_34_detail_end.png"]
+  }
+]

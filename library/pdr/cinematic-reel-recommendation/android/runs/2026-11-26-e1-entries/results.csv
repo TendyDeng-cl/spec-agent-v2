@@ -1,0 +1,522 @@
+﻿ID,Phase,Segment,Needs,Section,Action,Expected Result,Result,Disposition,Actual,Evidence,Recorded At
+TC-080,E1,E1-a,,View photo tips chip,"1. Tap 「Cinematic Reel Creator」 on the Launcher
+2. Tap ‹ on the template page
+3. Tap 「Cinematic Reel Creator」 on the Launcher
+4. Press system Back","Step 1: the Launcher shows 「Cinematic Reel Creator」
+Step 1: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 1: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 1: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the Launcher (Home tab) is shown again
+Step 3: the template page opens again
+Step 4: system Back leaves the template page to the Launcher (Home tab)",Pass,,"Step 1: Launcher shows 「Cinematic Reel Creator」 (shortcut row 1, 3rd); tap opens the template page directly, no tutorial; card 「Horror Movie」 centred with 「View photo tips」 chip and 「Import a photo」, neighbouring cards show their chips; header ‹ (iv_back), credit pill 「2362」, 「?」 (iv_tutorial), history (iv_history) pass. Step 2: ‹ returns to the Launcher Home tab (yellow Stage bar, banner) pass. Step 3: template page opens again on 「Horror Movie」 pass. Step 4: system Back returns to the Launcher Home tab pass.",screenshots/TC-080-1-template.png screenshots/TC-080-2-launcher.png screenshots/TC-080-3-template.png screenshots/TC-080-4-launcher.png,2026-11-26T08:20:22.036Z
+TC-081,E1,E1-a,,View photo tips chip,"1. Read the credit pill on the template page
+2. Swipe the template cards to the 「Micro Cinema」 card
+3. Tap 「Import a Photo」
+4. In Add Media, tap the generation photo (skip when Add Media does not open)
+5. Tap 「Generate」 on the preview
+6. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+7. Wait until Analyzing & Generating hands over to the task list
+8. Read the credit pill","Step 1: record the balance
+Step 3: Add Media opens
+Before step 5: the preview shows the generation photo
+Before step 5: 「Generate」 shows its credit price (record it)
+Step 6: record each dialog's title and text (none is in the spec)
+Step 7: Analyzing & Generating runs its steps, then the task list shows a 「Micro Cinema <MMDD>」 task in progress
+Step 8: the balance is lower by exactly the price on 「Generate」, charged once",Pass,,"Step 1: pill 2362. Step 2: second card 「Micro Cinema」. Step 3: Add Media opens (Photo only, album 00PDRa_Testing_Material, header shows 「?」). Generation photo: the woman in a checked shirt (00PDRa_Testing_Material, not in the project). Before step 5: preview 「Micro Cinema」 shows the picked photo with a swap badge; 「Generate ◆ 48」. Step 6: no notice or confirmation dialog opened. Step 7: Analyzing & Generating… (Analyzing your photo / Planning video idea / Creating video, 「View later」, 「Create another one」) handed over to the task list by itself within ~30 s; task 「Micro Cinema 01」 2026/11/26 · 0:08, Processing…, 「13 minutes left…」 (name is a counter, not <MMDD> as the row words it; the row's name came from exploration notes, no spec rule: table wording to fix, O-1). Step 8: pill 2314 = 2362 − 48, charged once (logcat totalRemain 2362 at 16:21:08 → 2314 at 16:21:47).",screenshots/TC-081-4-preview.png screenshots/TC-081-5-after-generate.png screenshots/TC-081-7-tasklist.png screenshots/TC-081-8-pill.png,2026-11-26T08:22:03.754Z
+TC-082,E1,E1-a,,View photo tips chip,"1. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+2. In Add Media, tap the generation photo (skip when Add Media does not open)
+3. Tap 「Generate」 on the preview
+4. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+5. While 「Uploading」 or Analyzing & Generating shows, press system Back
+6. If the app is still on that page, tap 「View later」
+7. Open the Cinematic Reel Creator task list from the template page's history icon, reaching the template page through this Section's entry if the app left it","Step 5: record what happens: the page closes to the template page, to the Launcher (Home tab), a leave or cancel dialog opens (quote it), or nothing
+Step 5: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 7: record whether the task is in the list (in progress, done or failed)
+Step 7: the credit pill shows one charge for this generation, or a refund if the generation was cancelled (record which)
+Steps 1–7: the app does not crash or freeze",Fail,question,"System Back while the photo uploaded (spinner over the preview, before Analyzing & Generating showed) only removed the spinner and left the app on the preview with 「Generate ◆ 48」 active, while the task went on in the background: no leave or cancel dialog and no word that the reel is still being made; no spec draws Back here (Q-10), recorded for PM. Steps 1–4: Import a photo › same generation photo › Generate 48, no dialog. Step 5 (16:22:19): spinner gone, preview stays (page not closed); logcat: both S3 uploads finished 16:22:18.5–18.9 and 「apply effect response code->200」 at 16:22:19.356, then status polling 「Applying 0」 continues. Step 6: 「View later」 never shown (Analyzing & Generating page skipped). Step 7: history icon › task list: 「Micro Cinema 02」 Processing…, 7 minutes left (above 「Micro Cinema 01」); ‹ from the task list returns to the preview with the photo still picked; pill 2266 = 2314 − 48, one charge, task not cancelled. No crash or freeze.",screenshots/TC-082-5a-generating.png screenshots/TC-082-5b-after-back.png screenshots/TC-082-7-tasklist.png screenshots/TC-082-7b-pill.png,2026-11-26T08:23:16.440Z
+TC-083,E1,E1-a,,View photo tips chip,"1. Tap the history icon on the template page
+2. Wait until the task started by TC-081 shows 「View」
+3. Tap 「View」
+4. Press system Back on the result page
+5. Tap ‹ until Cinematic Reel Creator is left
+6. Open the Launcher's 「Project」 tab
+7. Open the 「AI Magic」 tab › 「My Artwork」","Step 3: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 4: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 5: the Launcher (Home tab) is shown again
+Step 6: record whether a new project appeared
+Step 7: My Artwork's 「Cinematic Reel Creator」 block shows the reel",Fail,question,"System Back on the reel's result page leads to the Cinematic Reel Creator task list; no spec draws this exit (Q-10), recorded for PM. Steps 1–3: history icon › task list 「Micro Cinema 02」 and 「Micro Cinema 01」 both 「View」 (finished by 16:26); 「View」 on Micro Cinema 01 opens the result page: the reel's cover (the picked photo) with ▶, Share to YouTube / TikTok / Instagram / Facebook / More, Quick actions Save / Full Edit / 「Add Text」 / 「Edit Music」 / Add Sticker pass. Step 4: system Back → task list (question). Step 5: task list ‹ → template page, ‹ → Launcher Home tab pass. Step 6: Project tab: newest is the run's fixture 「Project 11-26(3)」 (16:18), no new project pass. Step 7: My Artwork shows a 「Cinematic Reel Creator」 block with both reels (and both in Recent), no 「Processing...」 pass.",screenshots/TC-083-2-tasks.png screenshots/TC-083-3-result.png screenshots/TC-083-4-back.png screenshots/TC-083-5-launcher.png screenshots/TC-083-6-projects.png screenshots/TC-083-7-artwork.png,2026-11-26T08:30:55.176Z
+TC-084,E1,E1-a,,Entry › AI Magic tab › Cinematic Reel Creator,"1. Tap the 「AI Magic」 tab at the bottom
+2. Tap 「Cinematic Reel Creator」 in the AI Magic list","Step 1: the AI Magic list shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence for the phase wrap-up (a PM question there) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)",Pass,,"Step 1: AI Magic tab › AI Creation lists 「Cinematic Reel Creator」 3rd (row 2 left, after Image to Video and Character Motion Swap). Step 2: the template page opens directly, no tutorial; 「Horror Movie」 card with 「View photo tips」 and 「Import a photo」; header ‹, pill 2266 (the account's balance), 「?」, history. First three cards Horror Movie, Micro Cinema, Fast Cut, as from the Launcher (Q1/E1).",screenshots/TC-084-1-aimagic.png screenshots/TC-084-2-template.png,2026-11-26T08:24:04.689Z
+TC-085,E1,E1-a,,Entry › AI Magic tab › Cinematic Reel Creator,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Press system Back
+13. Tap 「View photo tips」 on the same card again
+14. Tap 「Got it」
+15. Swipe the template cards to the 「One-Take Shot」 card
+16. Tap 「View photo tips」 on that card
+17. Tap 「Got it」
+18. Swipe the template cards to the 「Time Lapse」 card
+19. Tap 「View photo tips」 on that card
+20. Tap 「Got it」
+21. Swipe the template cards to the 「Handheld Camera」 card
+22. Tap 「View photo tips」 on that card
+23. Tap 「Got it」
+24. Swipe the template cards to the 「Fast Cut」 card
+25. Tap 「View photo tips」 on that card
+26. Tap 「Got it」
+27. Tap 「?」 in the template page header
+28. Close the tutorial with its X
+29. Tap the history icon in the header
+30. Press system Back","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, back on the 「Micro Cinema」 card
+Step 14: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 16: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 17: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 19: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 20: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 22: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 23: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 25: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 26: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 27: the Cinematic Reel Creator tutorial opens (record its title)
+Step 28: the template page is shown again
+Step 29: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 30: the template page is shown again
+Steps 1–30: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",Pass,,"Entry AI Magic tab › Cinematic Reel Creator. Step 2: 「For best results with the Horror Movie template, follow this advice:」 Recommendation People in Frame, Layered Depth; Avoid Flat Composition, Visible Text or Logos, Extreme Close-up, pictures loaded. Step 3: Got it closes, Horror Movie card. Step 5: Micro Cinema sheet (Mid-Distance Framing, Rich Visual Details / Flat Composition, Visible Text or Logos, Extreme Close-up). Steps 6–7: Avoid row scrolls to 「Extreme Close-up」 fully shown and back; Recommendation row stays. Step 8 (Q-3): a tap on the dimmed page closes the sheet, card stays 「Micro Cinema」, nothing behind reacts; steps 9–10 skipped (sheet closed). Steps 11–14: sheet reopens; system Back closes it on Micro Cinema; reopened, Got it closes it. Steps 15–26: One-Take Shot (Mid-Distance Framing, Layered Depth), Time Lapse (Visible Sky, Cityscape or Landscape / Portrait as Subject, Indoor Close-up, Extreme Close-up), Handheld Camera (Layered Depth, Rich Visual Details), Fast Cut (Sense of Motion, Rich Visual Details / Static Composition, Visible Text or Logos, Extreme Close-up): each sentence names its template, 2 + 3 items, pictures loaded, Got it closes to the same card. Step 27: 「What is Cinematic Reel Creator?」 「Turn One Photo into a Cinematic Reel.」 Step 28: X closes to the template page. Step 29: task list (Micro Cinema 02 / 01, View). Step 30: system Back to the template page (Fast Cut). No error, crash or wrong name. Interruption: at step 22 (16:26:21) the app jumped to the finished TC-081 reel's result page by itself (deep link pdr://click_cinematic_reel_creator, O-2); steps 21–30 were redone after re-entering from the AI Magic tab.",screenshots/TC-085-02-horror.png screenshots/TC-085-06-avoid-left.png screenshots/TC-085-08-dimtap.png screenshots/TC-085-19-Time-Lapse.png screenshots/TC-085-22-Handheld-Camera.png screenshots/TC-085-25-Fast-Cut.png screenshots/TC-085-27-tutorial.png screenshots/TC-085-29-tasks.png,2026-11-26T08:29:23.531Z
+TC-086,E1,E1-a,,Entry › AI Magic tab › Cinematic Reel Creator,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap 「?」 in the Add Media header
+6. Press system Back
+7. Tap each Add Media source tab once, ending on 「Recents」
+8. Tap ‹ in the Add Media header
+9. Tap 「Import a Photo」
+10. Press system Back
+11. Tap 「Import a Photo」
+12. Tap the generation photo
+13. Tap ‹ on the preview","Step 2: Add Media opens
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 6: the sheet closes, Add Media is shown again
+Step 7: each tab shows its photos or its own sign-in or empty state, with no error
+Step 8: the template page is shown again on the 「Micro Cinema」 card
+Step 10: Add Media closes to the template page
+Step 12: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 12: the photo on the preview is the one picked, whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 12: the price is the one the Launcher entry shows for Micro Cinema (TC-081)
+Step 13: record where it leads (Add Media or the template page), with no photo kept that was not picked",Pass,,"Entry AI Magic tab. Step 2: Add Media opens (title 「Add Media」, Photo only, album 00PDRa_Testing_Material). Step 3: Add Media's header 「?」 (btn_cine_story_photo_tips, present on 2611251: DRA262611P0289 looks fixed here) opens the Micro Cinema photo tips sheet over Add Media. Step 4: Got it → Add Media, no photo picked. Step 5–6: sheet reopens; system Back closes it to Add Media. Step 7: source tabs: Photo, gettyimages | iStock (Pro badge; search box and stock photos load), the sort sheet (Sort by Best match / Newest / Random / Most popular, Orientation…; Back closes it), the album list (All, then back to 00PDRa_Testing_Material); no error. There is no 「Recents」 tab on Android: ended on the local album. Step 8: ‹ → template page on 「Micro Cinema」. Steps 9–10: Import a photo › system Back → template page. Steps 11–12: picked the generation photo: preview 「Micro Cinema」 with that photo as its thumbnail (upright, same square-cropped thumbnail as from the Launcher), 「Generate ◆ 48」 = Launcher price (TC-081). Step 13: ‹ on the preview → template page (Micro Cinema), no photo kept.",screenshots/TC-086-03-tips.png screenshots/TC-086-07a-getty.png screenshots/TC-086-07b-sort.png screenshots/TC-086-12-preview.png screenshots/TC-086-13-back.png,2026-11-26T08:33:30.276Z
+TC-087,E1,E1-a,,Entry › AI Magic tab › Cinematic Reel Creator,"1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, press system Back
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Press system Back on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Tap the 「AI Magic」 tab at the bottom
+16. Tap 「Cinematic Reel Creator」 in the AI Magic list
+17. Press system Back
+18. Open the Launcher's 「Project」 tab
+19. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the AI Magic tab, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the AI Magic tab is shown again
+Step 16: the template page opens again
+Step 17: system Back leaves the template page to the AI Magic tab
+Step 18: no new project appeared, as from the Launcher entry
+Step 19: My Artwork's 「Cinematic Reel Creator」 block shows the reel",Fail,question,"System Back on Analyzing & Generating returns to the preview with 「Generate ◆ 48」 active while the reel goes on in the background, and system Back on the result page returns to the task list: neither exit is drawn (Q-10), recorded for PM. Entry AI Magic tab. Step 1: pill 2266. Steps 2–4: Import a photo › generation photo › Generate 48. Step 5: no dialog. Step 6 (16:33:50, Analyzing & Generating… shown 3 s after Generate): system Back → the preview (「Micro Cinema」, photo kept, Generate active); no dialog, no word that the task runs on. Step 7: 「View later」 not reachable (page left). Step 8: task list: 「Micro Cinema 03」 Processing…, 14 minutes left, not cancelled; step 9 skipped. Step 10: 「View」 by 16:40 (the phone's notification 「Good news! Your Cinematic Reel Creator task has been completed. Tap here to view your results.」 was posted at 16:40:08; the app stayed on the template page). Step 11: pill 2218 = 2266 − 48, one charge (logcat 16:37:34). Step 12: result page: cover, Add Text, Edit Music, Save pass. Step 13: system Back → task list (question). Step 14: task list ‹ → template page, ‹ → AI Magic tab pass. Steps 15–17: AI Magic › Cinematic Reel Creator opens the template page (Horror Movie); system Back → AI Magic tab pass. Step 18: no new project (newest still the fixture 「Project 11-26(3)」) pass. Step 19: My Artwork 「Cinematic Reel Creator」 block shows three reels pass.",screenshots/TC-087-06a-analyzing.png screenshots/TC-087-06b-after-back.png screenshots/TC-087-08-tasks.png screenshots/TC-087-12-result.png screenshots/TC-087-13-back.png screenshots/TC-087-14-left.png screenshots/TC-087-17-back.png screenshots/TC-087-19-artwork.png,2026-11-26T08:45:28.616Z
+TC-088,E1,E1-a,,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. Tap 「AI Magic」 on the editor toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence for the phase wrap-up (a PM question there) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: the page brings nothing in from the project, as from the Launcher entry",Pass,,"Step 1: with nothing selected the Global Toolbar (Edit, Audio, Text, Overlay, Effects, Sticker, AI Magic, Aspect Ratio, Audio Mixing; AI Magic after a scroll) › 「AI Magic」 opens a panel: Image to Video, Text to Video, AI Art, Text to Image, Text to Speech (Pro), AI Music Generator, Talking Avatar, 「Cinematic Reel Creator」 (8th, row 2), Video Edit by Chat. Step 2: the template page opens directly, no tutorial; Horror Movie card with 「View photo tips」 and 「Import a photo」; header ‹, pill 2218 (balance), 「?」, history; first three cards Horror Movie, Micro Cinema, Fast Cut as from the Launcher; no project photo on any card (nothing brought in).",screenshots/TC-088-1-aimagic.png screenshots/TC-088-2-template.png,2026-11-26T08:46:53.527Z
+TC-089,E1,E1-a,,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Press system Back
+13. Tap 「View photo tips」 on the same card again
+14. Tap 「Got it」
+15. Swipe the template cards to the 「One-Take Shot」 card
+16. Tap 「View photo tips」 on that card
+17. Tap 「Got it」
+18. Swipe the template cards to the 「Time Lapse」 card
+19. Tap 「View photo tips」 on that card
+20. Tap 「Got it」
+21. Swipe the template cards to the 「Handheld Camera」 card
+22. Tap 「View photo tips」 on that card
+23. Tap 「Got it」
+24. Swipe the template cards to the 「Fast Cut」 card
+25. Tap 「View photo tips」 on that card
+26. Tap 「Got it」
+27. Tap 「?」 in the template page header
+28. Close the tutorial with its X
+29. Tap the history icon in the header
+30. Press system Back","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, back on the 「Micro Cinema」 card
+Step 14: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 16: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 17: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 19: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 20: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 22: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 23: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 25: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 26: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 27: the Cinematic Reel Creator tutorial opens (record its title)
+Step 28: the template page is shown again
+Step 29: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 30: the template page is shown again
+Steps 1–30: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",Pass,,"Entry Editor (nothing selected) › Global Toolbar › AI Magic › Cinematic Reel Creator. Steps 2–3: Horror Movie sheet (sentence names Horror Movie; People in Frame, Layered Depth / Flat Composition, Visible Text or Logos, Extreme Close-up; pictures loaded), Got it closes to the card. Step 5: Micro Cinema sheet (Mid-Distance Framing, Rich Visual Details / same Avoid items). Steps 6–7: Avoid row scrolls to 「Extreme Close-up」 and back, Recommendation row still. Step 8 (Q-3): tap on the dim closes the sheet, card stays Micro Cinema; steps 9–10 skipped. Steps 11–14: reopen, system Back closes, reopen, Got it closes. Steps 15–26: One-Take Shot, Time Lapse, Handheld Camera, Fast Cut sheets each name their template with 2 + 3 items and pictures (same items as from the Launcher / AI Magic entries), Got it back to the same card. Step 27: 「What is Cinematic Reel Creator?」 tutorial; step 28: X → template page. Step 29: task list (Micro Cinema 03, 02 …). Step 30: system Back → template page (Fast Cut). No error, crash or wrong name.",screenshots/TC-089-02-horror.png screenshots/TC-089-06-avoid-left.png screenshots/TC-089-08-dimtap.png screenshots/TC-089-25-Fast-Cut.png screenshots/TC-089-27-tutorial.png screenshots/TC-089-29-tasks.png,2026-11-26T08:49:11.398Z
+TC-090,E1,E1-a,,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap 「?」 in the Add Media header
+6. Press system Back
+7. Tap each Add Media source tab once, ending on 「Recents」
+8. Tap ‹ in the Add Media header
+9. Tap 「Import a Photo」
+10. Press system Back
+11. Tap 「Import a Photo」
+12. Tap the generation photo
+13. Tap ‹ on the preview","Step 2: Add Media opens
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 6: the sheet closes, Add Media is shown again
+Step 7: each tab shows its photos or its own sign-in or empty state, with no error
+Step 8: the template page is shown again on the 「Micro Cinema」 card
+Step 10: Add Media closes to the template page
+Step 12: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 12: the photo on the preview is the one picked, whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 12: the price is the one the Launcher entry shows for Micro Cinema (TC-081)
+Step 13: record where it leads (Add Media or the template page), with no photo kept that was not picked",Pass,,"Entry Editor › Global Toolbar › AI Magic. Step 2: Add Media opens (Photo, album 00PDRa_Testing_Material, header 「?」). Step 3: 「?」 opens the Micro Cinema photo tips sheet over Add Media. Step 4: Got it → Add Media, nothing picked. Steps 5–6: reopened, system Back closes it to Add Media. Step 7: Photo, gettyimages | iStock (search and stock photos load), sort sheet (Sort by …; Back closes), album list All and back to 00PDRa_Testing_Material; no error (no 「Recents」 tab on Android). Step 8: ‹ → template page on Micro Cinema. Steps 9–10: Import a photo › system Back → template page. Steps 11–12: the generation photo → preview 「Micro Cinema」 with that photo (upright), 「Generate ◆ 48」 = Launcher price. Step 13: ‹ → template page (Micro Cinema). No project photo was taken.",screenshots/TC-090-02-addmedia.png screenshots/TC-090-03-tips.png screenshots/TC-090-07a-getty.png screenshots/TC-090-12-preview.png screenshots/TC-090-13-back.png,2026-11-26T08:51:10.024Z
+TC-091,E1,E1-a,,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, press system Back
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Press system Back on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. If a clip is selected, tap an empty part of the timeline
+17. Tap 「AI Magic」 on the editor toolbar
+18. Tap 「Cinematic Reel Creator」
+19. Press system Back
+20. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+21. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 15: the reel is not added to the project, as from the Launcher entry
+Step 15: both photos are where they were, and nothing else on the timeline changed
+Step 18: the template page opens again
+Step 19: system Back leaves the template page to the editor, and nothing is selected and the timeline has the same two photos, none added, replaced or removed
+Step 20: no new project appeared, as from the Launcher entry
+Step 21: My Artwork's 「Cinematic Reel Creator」 block shows the reel",Fail,question,"System Back on Analyzing & Generating returns to the preview with 「Generate ◆ 48」 active while the reel goes on, and system Back on the result page returns to the task list: neither exit is drawn (Q-10), recorded for PM. Entry Editor (nothing selected) › Global Toolbar › AI Magic. Step 1: pill 2218. Steps 2–5: generation photo › Generate 48, no dialog. Step 6 (16:51:28, Analyzing & Generating… up 2 s after Generate): system Back → the preview (photo kept, Generate active), no dialog; the page did not go to the editor. Step 7: 「View later」 not reachable. Step 8: task list 「Micro Cinema 04」 Processing…, 14 minutes left (not cancelled); step 9 skipped. Step 10: done 16:55:58 (logcat 「applyEffect status: Done」; no phone notification this time), 「View」. Step 11: pill 2170 = 2218 − 48, one charge. Step 12: result page with cover, Add Text, Edit Music pass. Step 13: system Back → task list (question). Step 14: task list ‹ → preview, ‹ → template page, ‹ → the editor pass. Step 15: timeline unchanged: dog photo on the main track, baseball photo on the overlay track, 00:05, no reel added pass; step 16 skipped (nothing selected). Steps 17–18: AI Magic › Cinematic Reel Creator opens the template page pass. Step 19: system Back → editor, nothing selected, same two photos pass. Step 20: ⌂ → Launcher; Project tab: no new project (newest still 「Project 11-26(3)」) pass. Step 21: My Artwork 「Cinematic Reel Creator」 block shows four reels pass.",screenshots/TC-091-06a-analyzing.png screenshots/TC-091-06b-after-back.png screenshots/TC-091-08-tasks.png screenshots/TC-091-12-result.png screenshots/TC-091-13-back.png screenshots/TC-091-14-editor.png screenshots/TC-091-19-editor.png screenshots/TC-091-20-projects.png screenshots/TC-091-21-artwork.png,2026-11-26T09:01:57.711Z
+TC-092,E1,E1-a,,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. Tap 「Effects」 on the Photo Toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence as Fail (question) for PM (Q-8) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: record whether the page brings in the selected main-track photo (shown on a card or a preview, 「Import a Photo」 replaced or skipped)
+Step 2: the Launcher entry brings nothing in, which is assumed here (Q-8): anything brought in is recorded as Fail (question) for PM",Fail,question,"Cinematic Reel Creator is not under the Photo Toolbar's 「Effects」 (the toolbar sheet's place, 7/E): with the main-track photo selected, Effects opens Auto Mosaic (Pro), Filter, Effects, Effect Overlay, Body Effects only; instead 「Cinematic Reel Creator」 is a first-layer Photo Toolbar button, 2nd after Split (Split, Cinematic Reel Creator, Duration, Transform, Effects, Adjust, Background, Enhance, Tools, Duplicate, Mask, Portrait). Recorded for PM (Q-8: is it in the build, and where). Step 2 through that first-layer button: the template page opens directly, no tutorial; Horror Movie card with chip and 「Import a photo」; header ‹, pill 2170, 「?」, history; first three cards Horror Movie, Micro Cinema, Fast Cut as from the Launcher; the selected main-track photo is not brought in (no card or preview shows it, Import a photo stays) pass. The rest of the Section ran through the first-layer button rather than being Blocked, since the entry exists on the Photo Toolbar.",screenshots/TC-092-1-effects.png screenshots/TC-092-1b-toolbar.png screenshots/TC-092-2-landing.png,2026-11-26T09:04:00.300Z
+TC-093,E1,E1-a,,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Press system Back
+13. Tap 「View photo tips」 on the same card again
+14. Tap 「Got it」
+15. Swipe the template cards to the 「One-Take Shot」 card
+16. Tap 「View photo tips」 on that card
+17. Tap 「Got it」
+18. Swipe the template cards to the 「Time Lapse」 card
+19. Tap 「View photo tips」 on that card
+20. Tap 「Got it」
+21. Swipe the template cards to the 「Handheld Camera」 card
+22. Tap 「View photo tips」 on that card
+23. Tap 「Got it」
+24. Swipe the template cards to the 「Fast Cut」 card
+25. Tap 「View photo tips」 on that card
+26. Tap 「Got it」
+27. Tap 「?」 in the template page header
+28. Close the tutorial with its X
+29. Tap the history icon in the header
+30. Press system Back","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, back on the 「Micro Cinema」 card
+Step 14: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 16: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 17: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 19: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 20: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 22: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 23: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 25: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 26: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 27: the Cinematic Reel Creator tutorial opens (record its title)
+Step 28: the template page is shown again
+Step 29: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 30: the template page is shown again
+Steps 1–30: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",Pass,,"Entry Editor › main-track photo selected › Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button; not under Effects, TC-092 / Q-8). Steps 2–3: Horror Movie sheet (sentence names it; People in Frame, Layered Depth / Flat Composition, Visible Text or Logos, Extreme Close-up; pictures), Got it back to the card. Step 5: Micro Cinema sheet. Steps 6–7: Avoid row to 「Extreme Close-up」 and back, Recommendation row still. Step 8 (Q-3): a tap on the dim closes the sheet, card unchanged; steps 9–10 skipped. Steps 11–14: reopen, system Back closes, reopen, Got it closes. Steps 15–26: One-Take Shot, Time Lapse, Handheld Camera, Fast Cut sheets with their names, 2 + 3 items, pictures; Got it back to each card. Step 27: 「What is Cinematic Reel Creator?」; step 28 X → template page. Step 29: task list (Micro Cinema 04, 03 …). Step 30: system Back → template page. No error, crash or wrong name.",screenshots/TC-093-02-horror.png screenshots/TC-093-06-avoid-left.png screenshots/TC-093-08-dimtap.png screenshots/TC-093-27-tutorial.png screenshots/TC-093-29-tasks.png,2026-11-26T09:06:23.389Z
+TC-094,E1,E1-a,,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap 「?」 in the Add Media header
+6. Press system Back
+7. Tap each Add Media source tab once, ending on 「Recents」
+8. Tap ‹ in the Add Media header
+9. Tap 「Import a Photo」
+10. Press system Back
+11. Tap 「Import a Photo」
+12. Tap the generation photo
+13. Tap ‹ on the preview","Step 2: record whether Add Media opens or the selected main-track photo is taken without it
+Step 2: the Launcher entry opens Add Media, which is assumed here (Q-8): a photo taken from the editor is recorded as Fail (question) for PM
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 6: the sheet closes, Add Media is shown again
+Step 7: each tab shows its photos or its own sign-in or empty state, with no error
+Step 8: the template page is shown again on the 「Micro Cinema」 card
+Step 10: Add Media closes to the template page
+Step 12: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 12: the photo on the preview is the one picked (record if it is the selected main-track photo instead), whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 12: the price is the one the Launcher entry shows for Micro Cinema (TC-081)
+Step 13: record where it leads (Add Media or the template page), with no photo kept that was not picked",Pass,,"Entry Editor › main-track photo selected › Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button, TC-092). Step 2: Add Media opens (Photo, 00PDRa_Testing_Material); the selected dog photo is not taken without it (Q-8 assumption holds). Step 3: 「?」 opens the Micro Cinema sheet over Add Media. Step 4: Got it → Add Media, nothing picked. Steps 5–6: reopen, system Back → Add Media. Step 7: Photo, gettyimages | iStock (search, stock photos), sort sheet, album list All and back; no error (no 「Recents」 tab on Android). Step 8: ‹ → template page on Micro Cinema. Steps 9–10: Import a photo › system Back → template page. Steps 11–12: the generation photo (not the main-track dog) on the preview, upright, 「Generate ◆ 48」 = Launcher price. Step 13: ‹ → template page.",screenshots/TC-094-02-addmedia.png screenshots/TC-094-03-tips.png screenshots/TC-094-07a-getty.png screenshots/TC-094-12-preview.png screenshots/TC-094-13-back.png,2026-11-26T09:08:12.183Z
+TC-095,E1,E1-a,,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, press system Back
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Press system Back on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. If the main-track photo is no longer selected, tap it
+17. Tap 「Effects」 on the Photo Toolbar
+18. Tap 「Cinematic Reel Creator」
+19. Press system Back
+20. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+21. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 14: no spec draws this entry's way back (Q-8): the editor is assumed
+Step 15: record where the reel is: replacing the main-track photo, added as a new clip, or not in the project
+Step 15: the Launcher entry adds nothing to any project, which is assumed here (Q-8): a reel in the project is recorded as Fail (question) for PM
+Step 15: the overlay photo is where it was, and nothing else on the timeline changed
+Step 18: the template page opens again
+Step 19: system Back leaves the template page to the editor, and the main-track photo is still selected and unchanged, and the timeline has the same two photos, none added, replaced or removed
+Step 20: record whether a new project appeared (the Launcher entry opens none, assumed here, Q-8)
+Step 21: My Artwork's 「Cinematic Reel Creator」 block shows the reel",Fail,question,"System Back on Analyzing & Generating returns to the preview with 「Generate ◆ 48」 active while the reel goes on, and system Back on the result page returns to the task list: neither exit is drawn (Q-10), recorded for PM. Entry Editor › main-track photo selected › Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button, TC-092). Step 1: pill 2170. Steps 2–5: generation photo › Generate 48, no dialog. Step 6 (17:08:31, Analyzing & Generating… up 3 s after Generate): system Back → preview (photo kept, Generate active), no dialog, not the editor. Step 7: View later not reachable. Step 8: task list 「Micro Cinema 05」 Processing…, 14 minutes left; step 9 skipped. Step 10: done 17:14:41 (logcat), 「View」. Step 11: pill 2122 = 2170 − 48, one charge. Step 12: result page with cover, Add Text, Edit Music pass. Step 13: system Back → task list (question). Step 14: task list ‹ → preview › ‹ → template page › ‹ → the editor, the main-track photo still selected (Photo Toolbar shown) pass. Step 15: the reel is not in the project (Q-8 assumption holds): dog photo on the main track, baseball photo on the overlay track, 00:05, nothing else changed pass; step 16 skipped (still selected). Steps 17–18: Photo Toolbar 「Cinematic Reel Creator」 (Effects does not hold it, TC-092) opens the template page pass. Step 19: system Back → editor, main-track photo still selected and unchanged, same two photos pass. Step 20: ⌂ → Launcher; no new project pass. Step 21: My Artwork 「Cinematic Reel Creator」 block shows the reels (3 tiles and 「+2」) pass.",screenshots/TC-095-06a-analyzing.png screenshots/TC-095-06b-after-back.png screenshots/TC-095-08-tasks.png screenshots/TC-095-12-result.png screenshots/TC-095-13-back.png screenshots/TC-095-14-editor.png screenshots/TC-095-19-editor.png screenshots/TC-095-20-projects.png screenshots/TC-095-21-artwork.png,2026-11-26T09:16:34.155Z
+TC-096,E1,E1-a,,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. Tap 「Effects」 on the PIP Photo Toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence as Fail (question) for PM (Q-9) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: record whether the page brings in the selected overlay photo (shown on a card or a preview, 「Import a Photo」 replaced or skipped)
+Step 2: the Launcher entry brings nothing in, which is assumed here (Q-9): anything brought in is recorded as Fail (question) for PM",Fail,question,"Cinematic Reel Creator is not under the PIP Photo Toolbar's 「Effects」 (the toolbar sheet's place, 7/E): with the overlay photo selected, Effects opens Auto Mosaic (Pro), Filter, Effects, Effect Overlay, Body Effects only; 「Cinematic Reel Creator」 is a first-layer PIP Photo Toolbar button, 2nd after Split (Split, Cinematic Reel Creator, Duration, Transform, Effects, Motion, Adjust …). Recorded for PM (Q-9). Step 2 through that button: template page directly, no tutorial; Horror Movie card with chip and 「Import a photo」; header ‹, pill 2122, 「?」, history; first three cards Horror Movie, Micro Cinema, Fast Cut as from the Launcher; the selected overlay photo is not brought in pass. The rest of the Section ran through the first-layer button.",screenshots/TC-096-0-pip-selected.png screenshots/TC-096-1-effects.png screenshots/TC-096-1b-toolbar.png screenshots/TC-096-2-landing.png,2026-11-26T09:17:54.884Z
+TC-097,E1,E1-a,,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Press system Back
+13. Tap 「View photo tips」 on the same card again
+14. Tap 「Got it」
+15. Swipe the template cards to the 「One-Take Shot」 card
+16. Tap 「View photo tips」 on that card
+17. Tap 「Got it」
+18. Swipe the template cards to the 「Time Lapse」 card
+19. Tap 「View photo tips」 on that card
+20. Tap 「Got it」
+21. Swipe the template cards to the 「Handheld Camera」 card
+22. Tap 「View photo tips」 on that card
+23. Tap 「Got it」
+24. Swipe the template cards to the 「Fast Cut」 card
+25. Tap 「View photo tips」 on that card
+26. Tap 「Got it」
+27. Tap 「?」 in the template page header
+28. Close the tutorial with its X
+29. Tap the history icon in the header
+30. Press system Back","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, back on the 「Micro Cinema」 card
+Step 14: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 16: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 17: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 19: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 20: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 22: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 23: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 25: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 26: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 27: the Cinematic Reel Creator tutorial opens (record its title)
+Step 28: the template page is shown again
+Step 29: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 30: the template page is shown again
+Steps 1–30: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",Pass,,"Entry Editor › overlay photo selected › PIP Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button; not under Effects, TC-096 / Q-9). Steps 2–3: Horror Movie sheet (sentence names it, 2 + 3 items, pictures), Got it back to the card. Step 5: Micro Cinema sheet. Steps 6–7: Avoid row to 「Extreme Close-up」 and back, Recommendation row still. Step 8 (Q-3): a tap on the dim closes the sheet, card unchanged; steps 9–10 skipped. Steps 11–14: reopen, system Back closes, reopen, Got it closes. Steps 15–26: One-Take Shot, Time Lapse, Handheld Camera, Fast Cut sheets with their names, 2 + 3 items, pictures; Got it back to each card. Step 27: 「What is Cinematic Reel Creator?」; step 28 X → template page. Step 29: task list (Micro Cinema 05 … 01, all View). Step 30: system Back → template page. No error, crash or wrong name.",screenshots/TC-097-02-horror.png screenshots/TC-097-06-avoid-left.png screenshots/TC-097-08-dimtap.png screenshots/TC-097-27-tutorial.png screenshots/TC-097-29-tasks.png,2026-11-26T09:20:05.646Z
+TC-098,E1,E1-a,,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap 「?」 in the Add Media header
+6. Press system Back
+7. Tap each Add Media source tab once, ending on 「Recents」
+8. Tap ‹ in the Add Media header
+9. Tap 「Import a Photo」
+10. Press system Back
+11. Tap 「Import a Photo」
+12. Tap the generation photo
+13. Tap ‹ on the preview","Step 2: record whether Add Media opens or the selected overlay photo is taken without it
+Step 2: the Launcher entry opens Add Media, which is assumed here (Q-9): a photo taken from the editor is recorded as Fail (question) for PM
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 6: the sheet closes, Add Media is shown again
+Step 7: each tab shows its photos or its own sign-in or empty state, with no error
+Step 8: the template page is shown again on the 「Micro Cinema」 card
+Step 10: Add Media closes to the template page
+Step 12: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 12: the photo on the preview is the one picked (record if it is the selected overlay photo instead), whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 12: the price is the one the Launcher entry shows for Micro Cinema (TC-081)
+Step 13: record where it leads (Add Media or the template page), with no photo kept that was not picked",Pass,,"Entry Editor › overlay photo selected › PIP Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button, TC-096). Step 2: Add Media opens (Photo, 00PDRa_Testing_Material); the selected baseball overlay photo is not taken without it (Q-9 assumption holds). Step 3: 「?」 opens the Micro Cinema sheet over Add Media. Step 4: Got it → Add Media, nothing picked. Steps 5–6: reopen, system Back → Add Media. Step 7: Photo, gettyimages | iStock (search, stock photos), sort sheet, album list All and back; no error (no 「Recents」 tab on Android). Step 8: ‹ → template page on Micro Cinema. Steps 9–10: Import a photo › system Back → template page. Steps 11–12: the generation photo (not the overlay photo) on the preview, upright, 「Generate ◆ 48」 = Launcher price. Step 13: ‹ → template page.",screenshots/TC-098-02-addmedia.png screenshots/TC-098-03-tips.png screenshots/TC-098-07a-getty.png screenshots/TC-098-12-preview.png screenshots/TC-098-13-back.png,2026-11-26T09:21:52.853Z
+TC-099,E1,E1-a,,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, press system Back
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Press system Back on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. If the overlay photo is no longer selected, tap it
+17. Tap 「Effects」 on the PIP Photo Toolbar
+18. Tap 「Cinematic Reel Creator」
+19. Press system Back
+20. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+21. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 14: no spec draws this entry's way back (Q-9): the editor is assumed
+Step 15: record where the reel is: replacing the overlay photo on its overlay track, added as a new clip, or not in the project
+Step 15: the Launcher entry adds nothing to any project, which is assumed here (Q-9): a reel in the project is recorded as Fail (question) for PM
+Step 15: the main-track photo is where it was, and nothing else on the timeline changed
+Step 18: the template page opens again
+Step 19: system Back leaves the template page to the editor, and the overlay photo is still selected and unchanged on its overlay track, and the timeline has the same two photos, none added, replaced or removed
+Step 20: record whether a new project appeared (the Launcher entry opens none, assumed here, Q-9)
+Step 21: My Artwork's 「Cinematic Reel Creator」 block shows the reel",Fail,question,"System Back on Analyzing & Generating returns to the preview with 「Generate ◆ 48」 active while the reel goes on, and system Back on the result page returns to the task list: neither exit is drawn (Q-10), recorded for PM. Entry Editor › overlay photo selected › PIP Photo Toolbar › 「Cinematic Reel Creator」 (first-layer button, TC-096). Step 1: pill 2122. Steps 2–5: generation photo › Generate 48, no dialog. Step 6 (17:22:04, Analyzing & Generating… up 3 s after Generate): system Back → preview (photo kept, Generate active), no dialog, not the editor. Step 7: View later not reachable. Step 8: task list 「Micro Cinema 06」 Processing…, 14 minutes left; step 9 skipped. Step 10: done 17:28:03 (logcat), 「View」. Step 11: pill 2074 = 2122 − 48, one charge. Step 12: result page with cover, Add Text, Edit Music pass. Step 13: system Back → task list (question). Step 14: task list ‹ → preview › ‹ → template page › ‹ → the editor, the overlay photo still selected (PIP Photo Toolbar with Motion shown) pass. Step 15: the reel is not in the project (Q-9 assumption holds): baseball photo still on its overlay track, dog photo on the main track, 00:05, nothing else changed pass; step 16 skipped. Steps 17–18: PIP Photo Toolbar 「Cinematic Reel Creator」 (not under Effects, TC-096) opens the template page pass. Step 19: system Back → editor, overlay photo still selected and unchanged, same two photos pass. Step 20: ⌂ → Launcher; no new project (newest still 「Project 11-26(3)」) pass. Step 21: My Artwork 「Cinematic Reel Creator」 block shows the reels (3 tiles and 「+3」) pass.",screenshots/TC-099-06a-analyzing.png screenshots/TC-099-06b-after-back.png screenshots/TC-099-08-tasks.png screenshots/TC-099-12-result.png screenshots/TC-099-13-back.png screenshots/TC-099-14-editor.png screenshots/TC-099-19-editor.png screenshots/TC-099-20-projects.png screenshots/TC-099-21-artwork.png,2026-11-26T09:29:59.649Z

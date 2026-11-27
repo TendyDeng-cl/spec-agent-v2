@@ -1,0 +1,91 @@
+
+1 of 11 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+1 candidate(s) were declined (NAB / Won't Fix / Not Reproducible). Resolve each before filing.
+
+[AIGC-Watermark-E1-01] PDR-A 16.9.0 - [AIAgent][UX] Editor toolbar: Video Edit by Chat, Cinematic Reel Creator not under Effects; no AI Remove
+      feature='Editor toolbar'  terms=['Editor toolbar']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-02] PDR-A 16.9.0 - [AIAgent][UX] Editor toolbar: Video Edit by Chat, Cinematic Reel Creator ignore the selected clip
+      feature='Editor toolbar'  terms=['Editor toolbar']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-03] PDR-A 16.9.0 - [AIAgent] Video Edit by Chat: Source of 8.3 s shown as 00:09 and priced as 9 seconds
+      feature='Video Edit by Chat'  terms=['Video Edit by Chat']  searched 74 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-04] PDR-A 16.9.0 - [AIAgent][UX] Talking Avatar: Audio toolbar entry lacks the By Text / By Voice switch
+      feature='Talking Avatar'  terms=['Talking Avatar']  searched 178 candidate(s)
+    ! 29%  closed    DRA252501-0238  PDR-A 14.8.0 - Talking Avatar : "Voice Change" and "Voice Style" will stack if the user 
+              shares label "by text", label "by voice", label "voice"
+    ! 14%  REJECTED  DRA252502-0013  PDR-A 14.9.0 - Talking Avatar: The title of "By Voice" is incorrect
+              shares label "by voice"
+              ⚠ Propose Wont Fix — RD/PM already declined this. Filing again re-raises that decision: read its status log, and only refile with new grounds (e.g. a newer spec) cited against DRA252502-0013.
+    ! 14%  closed    DRA252502-0012  PDR-A 14.9.0 - [UI]Talking Avatar: "By Voice" icon is not grayed out when not selected
+              shares label "by voice"
+
+[AIGC-Watermark-E1-05] PDR-A 16.9.0 - [AIAgent][UX] Editor (Text to Image): Leaving it clears the photo selection it was opened from
+      feature='Editor (Text to Image)'  terms=['Editor (Text to Image)']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-06] PDR-A 16.9.0 - [AIAgent] AI Cartoon / AI Sketch: Results are applied in a new project and never listed in My Artwork
+      feature='AI Cartoon / AI Sketch'  terms=['AI Cartoon / AI Sketch', 'Cartoon / AI Sketch']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-07] PDR-A 16.9.0 - [AIAgent][UX] AI Cartoon / AI Sketch: Back at the photo step lands in an empty editor, not AI Magic
+      feature='AI Cartoon / AI Sketch'  terms=['AI Cartoon / AI Sketch', 'Cartoon / AI Sketch']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-08] PDR-A 16.9.0 - [AIAgent][UX] Text to Speech: Leaving without a voice keeps the new title on the timeline
+      feature='Text to Speech'  terms=['Text to Speech']  searched 162 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-09] PDR-A 16.9.0 - [AIAgent][UX] Editor (AI Voice Changer): Closing it from the Audio menu leaves the main clip selected
+      feature='Editor (AI Voice Changer)'  terms=['Editor (AI Voice Changer)']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-10] PDR-A 16.9.0 - [AIAgent][UX] Menu (My Artwork): Back returns to Home with the Menu closed, not to the Menu
+      feature='Menu (My Artwork)'  terms=['Menu (My Artwork)']  searched 1 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-11] PDR-A 16.9.0 - [AIAgent][UI] My Artwork (Pro tab): Headings and tiles touch the screen edges with no side margin
+      feature='My Artwork (Pro tab)'  terms=['My Artwork (Pro tab)']  searched 0 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 1 ticket(s) of 404 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0203  Assigned     RD   2611161  PDR-A 16.9.0 - [AIFound][UI] Template V2V: Task list titled “Video Edit by Chat” and tasks lack the template name
+== Cinematic Reel
+DRA262611P0321    NewCreated      3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty pi
+DRA262611P0320    NewCreated      3    PC-Doc     2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öne
+DRA262611P0319    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino
+DRA262611P0318    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelses
+DRA262611P0317    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their
+DRA262611P0316    Cancelled       3    PM         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Template descriptions end with a full st
+DRA262611P0290    Assigned        2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay 
+DRA262611P0289    RDResolved      2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?
+DRA262610-0066    Close           2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UI] Cinematic Reel Creator: Horror Movie es-BR uses es description
+DRA262610-0065    Close           2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UI] Cinematic Reel Creator: Horror Movie English description differs
+DRA262610P0179    QA Propose Won  2    PC-Art     2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] Cinematic Reel Creator (Horror Movies): The last frame sometimes tur
+DRA262610P0166    Close           3    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] Cinematic Reel Creator: Credit balance shows "--" after the app 
+== AI Cartoon
+DRA262611P0226    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Editor (AI Style Transfer): AI Cartoon and AI Sketch results of a po
+DRA262611P0224    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Timeline: Preview shows no AI label for TTS, AI Anime, AI Cartoon or
+== AI Sketch
+DRA262611P0226    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Editor (AI Style Transfer): AI Cartoon and AI Sketch results of a po
+DRA262611P0224    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Timeline: Preview shows no AI label for TTS, AI Anime, AI Cartoon or
+== Style Transfer
+DRA262611P0226    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Editor (AI Style Transfer): AI Cartoon and AI Sketch results of a po
+== Text to Image
+DRA262611P0218    TRCreated       3    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: Image saved with the switch On is signed by Google, n
+DRA262611P0217    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: Image shared with the switch Off has no AI label; sav
+DRA262611P0216    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: A second save of a result writes no new file; the swi
+DRA262611P0215    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: 「Add to Timeline」 puts the labelled saved image o
+DRA262611P0056    Close           2    PM         2611061    SHERRY_LEE      PDR-A 16.8.0 - [UI] Text to Image: Generate image button shows 0 credits for GPT-Image-2.6 Fl
+DRA262610-0036    Postpone        2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Credit details list its charges as Text to Image 
+== Voice Changer
+== My Artwork
+DRA262611P0219    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] My Artwork: Full-screen player of a video result shows the 「AI
+== toolbar
+DRA262611P0284    NeedCodeReview  3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][THA] AI Video Enhance: Panel title, fps chips and clip toolbar label
+== AI Remove
+== Object Removal

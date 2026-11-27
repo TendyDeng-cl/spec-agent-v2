@@ -1,0 +1,9 @@
+"","ImageToVideo","","","","","","","","","","","","","","","","","","","","","",""
+"Model","Prefix","","Unit","Vendor","Attr1 
+(mode)","Attr2 
+(sound generator)","Attr3
+(resolution)","Attr4
+(resolution)","","","","","","","","","","","","","","",""
+"Kling O3","genvideo","1","sec","kling","o3pro","enable","1080p","1080p","5","genvideo_1_sec_kling_o3pro_enable_1080p_1080p","","","","","","","","","","","","",""
+"Happy Horse 1.0","genvideo","1","sec","alibaba","happyhorse1.0","enable","1080p","1080p","8","genvideo_1_sec_alibaba_happyhorse1.0_enable_1080p_1080p","","","","","","","","","","","","",""
+"","genvideo","1","sec","alibaba","template","happyhorse1.0","enable","720p","5","genvideo_1_sec_alibaba_template_happyhorse1.0_enable_720p","","","","","","","","","","","","",""

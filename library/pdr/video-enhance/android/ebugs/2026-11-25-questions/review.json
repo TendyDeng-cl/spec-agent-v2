@@ -1,0 +1,12 @@
+{
+ "tr": "TR261123-0070",
+ "build": "2611231",
+ "trNote": "TR261123-0070, build 16.9.0.2611231, where R3 ran and where the R3 batch (P0292 – P0294) was filed. The question was recorded on that build — confirm.",
+ "lede": "One card: Open question Q-21 (the playhead's range and play start), flagged to-file after R3 and drafted from TC-215's records on 2611231, to PM for a decision. Q-14 (GenAI consent dialog before the first upload) is not drafted: R3 holds no observation or image of the first upload; the device check it needs is in the drafts under 「Not drafted: needs a device check」. No device work was done for this batch. Deduped against the whole Android pool on 2026-11-25: no same-OS match.",
+ "why": {
+  "ISS-VEA-57": "PM question Q-21 (UX, PM): the Design draws a playhead (line, time bubble, ◀▶ knob) with no rule for how far it may be dragged or whether play starts from it. R3 recorded that inside the selection it scrubs the Preview time and changes neither the selection nor the price (TC-215)."
+ },
+ "related": {
+  "ISS-VEA-57": "Not recorded in R3, so stated as the decision and not as a result: dragging the knob past a trim handle, and play from a moved playhead (optional check in the drafts). Not this entry: the Preview frame lag in the same recording (DRA262611P0113 / DRA262611P0208) and the missing Preview time at rest (DRA262611P0074)."
+ }
+}

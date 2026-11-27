@@ -1,0 +1,10 @@
+"guid","name","contentVer","description","preview_image","template_previewUrl","sample_photo","Vendor","Model","Mode","Sound","Start Frame","End Frame","Reference Frame","aspect_ratio_onUI","aspect ratio_toserver","","Pattern","Prefix","","Unit","Vendor","Attr1 
+(prompt source)","Attr2 
+(mode)","Attr3 
+(sound generator)","Attr4
+(resolution)","","","","",""
+"Example_001_Kling_Micro_Cinema","Micro Cinema","TBD","design provide","TBD","TBD","TBD","Kling","kling-v3-omni","o3pro","native","TBD","TBD","TBD","9:16, 16:9, 1:1","9:16, 16:9, 1:1","8","genvideo_1_sec_kling_o3pro_enable_1080p_1080p","genvideo","1","sec","kling","template","o3pro","enable","1080p","","","","",""
+"Example_002_Kling_One_Take_Shot","One-Take Shot","TBD","design provide","TBD","TBD","TBD","Kling","kling-v3-omni","o3pro","native","TBD","TBD","TBD","9:16, 16:9, 1:1","9:16, 16:9, 1:1","8","genvideo_1_sec_kling_o3pro_enable_1080p_1080p","genvideo","1","sec","kling","template","o3pro","enable","1080p","","","","",""
+"Example_003_Kling_Time_Lapse","Time Lapse","TBD","design provide","TBD","TBD","TBD","Kling","kling-v3-omni","o3pro","native","TBD","TBD","TBD","9:16, 16:9, 1:1","9:16, 16:9, 1:1","8","genvideo_1_sec_kling_o3pro_enable_1080p_1080p","genvideo","1","sec","kling","template","o3pro","enable","1080p","","","","",""
+"Example_004_Kling_Handheld_Camera","Handheld Camera","TBD","design provide","TBD","TBD","TBD","Kling","kling-v3-omni","o3pro","native","TBD","TBD","TBD","9:16, 16:9, 1:1","9:16, 16:9, 1:1","8","genvideo_1_sec_kling_o3pro_enable_1080p_1080p","genvideo","1","sec","kling","template","o3pro","enable","1080p","","","","",""
+"Example_005_Happyhorse_Blurred_Drift","Blurred Drift","TBD","design provide","TBD","TBD","TBD","TBD","TBD","TBD","native","TBD","TBD","TBD","9:16, 16:9, 1:1","9:16, 16:9, 1:1","8","genvideo_1_sec_alibaba_happyhorse1.0_enable_1080p_1080p","genvideo","1","sec","alibaba","template","happyhorse1.0","enable","1080p","","","","",""

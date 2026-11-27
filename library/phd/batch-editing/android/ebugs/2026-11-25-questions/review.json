@@ -1,0 +1,6 @@
+{
+ "run": false,
+ "build": "90201900",
+ "trNote": "No TR is needed: nothing in this batch is to be filed.",
+ "lede": "No cards. The two Open questions flagged to-file (the resize limits and the Undo after Apply to all) are already with PM on open Android tickets filed 2026-11-17 on TR261113-0038 (build 202611132003); dedupe.txt names them per question. The R2 batch's ISS-BEA-14 is the same ticket's text and stays unfiled."
+}

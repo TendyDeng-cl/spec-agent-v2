@@ -1,0 +1,11 @@
+{
+ "lede": "Two open questions filed to PM for a decision: Q-18 (templates and PM's 「day 1 只有 US & JP」 note, UX) and Q-5 (「Every frame is done. Ready to create your video?」, text). Build 16.9.0.2611231 on Samsung SM-A5360, Stage server, Free account. Two other findings repeat open same-OS tickets (DRA262610P0174, DRA262610P0379) and are left off. The TR for 2611231 is not known: confirm it before filing.",
+ "why": {
+  "ISS-AMDA-71": "PM decision (Q-18): an account billed in NT$ sees all 20 templates on Stage; no source says what the US & JP day 1 note limits.",
+  "ISS-AMDA-72": "PM decision (Q-5): the string given to two keys never shows after a storyboard, a preview video or the rest of the video."
+ },
+ "related": {
+  "ISS-AMDA-71": "TC-580; earlier Taiwan-store observations TC-542, TC-006 (A7, 16.8.0).",
+  "ISS-AMDA-72": "TC-581, TC-582; the full-video card's 60 s length is DRA262610P0159 (PM, Close)."
+ }
+}

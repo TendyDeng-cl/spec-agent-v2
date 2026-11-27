@@ -1,0 +1,11 @@
+{
+ "lede": "Both cards are open questions filed to PM for a decision (Q-3, Q-4), Type UX, BugBelong PM (AGENTS.md 2026-11-11). Build 16.9.0.2611231 on Samsung SM-A5360; the TR is not known for this build: confirm it before filing.",
+ "why": {
+  "ISS-CRA-03": "PM decision, Type UX (Q-3): the sheet closes on a tap on the dim and on a swipe down; the Design draws only 「Got it」.",
+  "ISS-CRA-04": "PM decision, Type UX (Q-4): offline, pictures not loaded before stay empty boxes with no message; no spec says what to show without the CMS."
+ },
+ "related": {
+  "ISS-CRA-03": "TC-077. System Back closing the sheet was settled in R1 (TC-020).",
+  "ISS-CRA-04": "TC-079 (sheet loaded, then offline) and TC-078 (app started offline). O-1 (credit pill 「--」) is not part of it."
+ }
+}

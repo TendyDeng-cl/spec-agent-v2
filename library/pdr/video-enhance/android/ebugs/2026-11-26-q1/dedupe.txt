@@ -1,0 +1,16 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# Batch 2026-11-26-q1: question round Q1 on 2611231, Q-28 (ISS-VEA-58, TC-350) and Q-14 (ISS-VEA-59, TC-351).
+# Pool: ecl_query.py dedupe, 214 candidates (「AI Video Enhance」 and 「Video Enhance」, PowerDirector Mobile for Android),
+# 65 open on 16.9.0, each read against both entries (dedupe-query.txt); plus pool text searches 「consent」 (6: face-swap
+# safeguards on other features, a Feedback page section, a Google Drive log line), 「GenAI」 (0), 「disclosure」 (0),
+# 「ByteDance」 (0), 「third party」 (1, unrelated). Status read 2026-11-26. No existing ticket was commented on.
+
+# No same-OS ticket covers either question, so no line here pairs a Q-id with a ticket code.
+
+# ISS-VEA-58 (Q-28, play at the end of the selection): no duplicate. Related, not the same:
+#   DRA262611P0230 (TRCreated, RD, fixed in 16.9.0.2611251: play does nothing with the playhead at the selection's end) is a defect
+#   at one position; on 2611231 a play from the end already jumps to the selection start (R3 O-2, TC-350 step 7). It states no rule
+#   for what play does on reaching the right handle. A build after 2611251 may change the step 7 restart: recheck it there.
+#   DRA262611P0113 / DRA262611P0208 (Preview lag while dragging, Q-27) and DRA262611P0074 (no Preview time at rest) are other points.
+# ISS-VEA-59 (Q-14, GenAI consent / disclosure before the first upload): no Android ticket on a GenAI consent or disclosure dialog.
+#   DRA262611P0291 (Nothing is shown for up to 5.9 s after 「Enhance」) is a wait, not a consent.

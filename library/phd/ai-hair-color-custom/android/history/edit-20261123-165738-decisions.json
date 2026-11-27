@@ -1,0 +1,22 @@
+{
+  "saved_at": "2026-11-23T08:58:04.520Z",
+  "version": 5,
+  "decisions": [
+    {
+      "id": "TC-057",
+      "field": "Expected Result",
+      "decision": "modified",
+      "before": "A one-time dialog says My AI Artwork keeps only the 100% version\nAfter 「OK」 the Intensity bar can be used",
+      "after": "On the first Custom result a one-time tip on the Artwork button says 「All your results are saved here at full intensity.」\nThe Intensity bar can be used\nThe tip does not show again on later results"
+    },
+    {
+      "id": "TC-057",
+      "field": "Notes",
+      "decision": "modified",
+      "before": "10/E dialog, behaviour inherited (D1-15). PM-only: no Design frame yet (Design 616:9324, read 2026-11-17, does not draw it) Recheck PHA262026P0118 (filed from run 2026-11-13-r1, TR261111-0042).",
+      "after": "10/E dialog, behaviour inherited (D1-15). PM-only: no Design frame yet (Design 616:9324, read 2026-11-17, does not draw it) Recheck PHA262026P0118 (filed from run 2026-11-13-r1, TR261111-0042). Ruling REQ-013 (2026-11-23, PHA262026P0118 OK on TR261123-0041) 「有提示泡泡就好」: the one-time tip replaces the dialog (R-059)."
+    }
+  ],
+  "summary": "TR261123-0041 ruling: TC-057 one-time tip instead of the 100% dialog (REQ-013)",
+  "notes": []
+}

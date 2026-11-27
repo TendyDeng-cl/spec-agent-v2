@@ -1,0 +1,25 @@
+{
+  "draft": "20261123-115449",
+  "current": ["R1"],
+  "needs": {"TC-017": ["app-language"], "TC-018": ["app-language"]},
+  "unavailable": {},
+  "phases": [
+    {
+      "id": "R1",
+      "name": "Full run of approved v1 (android)",
+      "round": true,
+      "note": "No generation: never pick a photo or press Generate. Find cards by name (CMS order differs by region).",
+      "segments": [
+        {"id": "R1-a", "name": "Template page: chip on every template, the sheet, Got it, Back, scrolling, pictures, data source",
+         "note": "One visit to the template page; walk the cards in their on-screen order. TC-019 needs logcat from app start.",
+         "cases": ["TC-001","TC-002","TC-003","TC-004","TC-005","TC-006","TC-007","TC-008","TC-020","TC-009","TC-019"]},
+        {"id": "R1-b", "name": "Add Media 「?」 per template, Got it and Back there",
+         "note": "Open Add Media with 「Import a Photo」 per card; never pick a photo. Q-1: a missing 「?」 is filed to PM unless the Jira states it plainly.",
+         "cases": ["TC-010","TC-011","TC-012","TC-013","TC-014","TC-015","TC-016","TC-021"]},
+        {"id": "R1-c", "name": "Language: 繁體中文 and 日本語",
+         "note": "Restore English (locale reset) after the segment and read it back.",
+         "cases": ["TC-017","TC-018"]}
+      ]
+    }
+  ]
+}

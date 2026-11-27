@@ -1,0 +1,29 @@
+# ISS-XNS-06 Open Launcher across the 72-hour mark, then relaunch
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-A5560 / Android 15, logcat of the app captured by the casebook run
+# Times are PHONE time: the run moved the phone clock into the sale period. Campaign, Launcher icon, credit purchase and
+# server-query lines only; repeated lines kept once; tokens, purchase tokens and IDs dropped.
+
+## TC-033 Xmas, R1-c (2026-12-24 23:59:40–23:59:59)
+(no campaign, icon or purchase line logged in this window)
+
+## TC-033 Xmas, R1-c (continued) (2026-12-25 00:00:00–00:00:33)
+2026-12-25 00:00:30.761 rg2     : addEvent 2026_Black_Friday_Sale_Campaign
+2026-12-25 00:00:30.761 rg2     : addEvent 2026_Xmas_Sale_Campaign
+2026-12-25 00:00:30.762 rg2     : addEvent 2027_New_Year_Sale_Campaign
+2026-12-25 00:00:30.762 rg2     : addEvent 2026_Credit_Xmas_Campaign
+2026-12-25 00:00:30.762 rg2     : addEvent 2027_Credit_New_Year_Campaign
+2026-12-25 00:00:32.157 CreditSystem: totalRemain=0
+2026-12-25 00:00:32.473 ThemeUtils: View class com.airbnb.lottie.LottieAnimationView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+2026-12-25 00:00:32.498 hy5     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+2026-12-25 00:00:32.520 th9     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+
+## TC-035 NY, R1-d (2027-01-03 00:00:00–00:00:40)
+2027-01-03 00:00:29.074 rg2     : addEvent 2026_Black_Friday_Sale_Campaign
+2027-01-03 00:00:29.074 rg2     : addEvent 2026_Xmas_Sale_Campaign
+2027-01-03 00:00:29.075 rg2     : addEvent 2027_New_Year_Sale_Campaign
+2027-01-03 00:00:29.075 rg2     : addEvent 2026_Credit_Xmas_Campaign
+2027-01-03 00:00:29.076 rg2     : addEvent 2027_Credit_New_Year_Campaign
+2027-01-03 00:00:30.833 ThemeUtils: View class com.airbnb.lottie.LottieAnimationView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+2027-01-03 00:00:30.901 hy5     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+2027-01-03 00:00:30.916 th9     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+2027-01-03 00:00:31.841 CreditSystem: totalRemain=0

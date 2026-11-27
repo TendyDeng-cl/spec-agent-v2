@@ -1,0 +1,303 @@
+{
+  "spec_folder": "specs/2026-11-17",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "d-aigc-settings@671,2626",
+      "board": "d-aigc-settings",
+      "x": 671,
+      "y": 2626,
+      "low": false,
+      "text": "AI label 大小佔 img 短邊的 12% (包含 padding)",
+      "trace": "R-013"
+    },
+    {
+      "id": "d-aigc-settings@1394,2626",
+      "board": "d-aigc-settings",
+      "x": 1394,
+      "y": 2626,
+      "low": false,
+      "text": "下載 500*500，已含 padding 的版本",
+      "trace": "R-014"
+    },
+    {
+      "id": "pm-export@287,2159",
+      "board": "pm-export",
+      "x": 287,
+      "y": 2159,
+      "low": false,
+      "text": "Export Flow",
+      "trace": "label: board title"
+    },
+    {
+      "id": "pm-export@922,2552",
+      "board": "pm-export",
+      "x": 922,
+      "y": 2552,
+      "low": false,
+      "text": "AIGC Watermark / Your exported file will include an AIGC watermark. / To remove the watermark, go to / Menu > Settings. / Don’t show again / Cancel",
+      "trace": "R-043"
+    },
+    {
+      "id": "pm-export@1082,2722",
+      "board": "pm-export",
+      "x": 1082,
+      "y": 2722,
+      "low": false,
+      "text": "Export",
+      "trace": "R-044"
+    },
+    {
+      "id": "pm-music@287,3524",
+      "board": "pm-music",
+      "x": 287,
+      "y": 3524,
+      "low": false,
+      "text": "Music Generator Case / If Remove AIGC Watermark toggle off / [phone] AI Music Generator / [phone] Describe your idea / [phone] Describe the music, Instrumentation, mood, BPM, structure, and lyrics direction / [phone] 0/5000 / [phone] Genre     Ｍood   Theme / [phone] Acoustic",
+      "trace": "R-027, R-031"
+    },
+    {
+      "id": "pm-music@832,3769",
+      "board": "pm-music",
+      "x": 832,
+      "y": 3769,
+      "low": false,
+      "text": "[phone] AI Music Generator / [phone] Describe your idea / [phone] Describe the music, Instrumentation, mood, BPM, structure, and lyrics direction / [phone] 0/5000 / [phone] Genre     Ｍood   Theme / [phone] Acoustic / [phone] Hip Hop / [phone] Latin / [phone] House / [phone] Techno & Trance / [phone] Import Reference Photo (Optional) / [phone] Vocal / [phone] Estimated song length / [phone] Number of song / [phone] Generate for / [phone] X credits per song",
+      "trace": "R-027"
+    },
+    {
+      "id": "pm-music@1342,3769",
+      "board": "pm-music",
+      "x": 1342,
+      "y": 3769,
+      "low": false,
+      "text": "[phone] AI Music Generator / [phone] Describe your idea / [phone] A short instrumental acoustic guitar piece, warm and relaxing. / [phone] 0/5000 / [phone] Genre     Ｍood   Theme / [phone] Acoustic / [phone] Hip Hop / [phone] Latin / [phone] House / [phone] Techno & Trance / [phone] Import Reference Photo (Optional) / [phone] Add up to 10 reference photos / [phone] 1 / [phone] Vocal / [phone] Estimated song length / [phone] Number of song / [phone] Generate for / [phone] X credits per song",
+      "trace": "R-029"
+    },
+    {
+      "id": "pm-music@570,3772",
+      "board": "pm-music",
+      "x": 570,
+      "y": 3772,
+      "low": false,
+      "text": "[phone] 182",
+      "trace": "ui: AI Music Generator credit pill (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1080,3772",
+      "board": "pm-music",
+      "x": 1080,
+      "y": 3772,
+      "low": false,
+      "text": "[phone] 182",
+      "trace": "ui: AI Music Generator credit pill (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1590,3772",
+      "board": "pm-music",
+      "x": 1590,
+      "y": 3772,
+      "low": false,
+      "text": "[phone] 182",
+      "trace": "ui: AI Music Generator credit pill (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@603,3985",
+      "board": "pm-music",
+      "x": 603,
+      "y": 3985,
+      "low": false,
+      "text": "[phone] Clear / [phone] Funk / [phone] Pop / [phone] Ambient / [phone] Drill / [phone] R&B",
+      "trace": "ui: AI Music Generator genre chips (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1113,3985",
+      "board": "pm-music",
+      "x": 1113,
+      "y": 3985,
+      "low": false,
+      "text": "[phone] Clear / [phone] Beats / [phone] Funk / [phone] Pop / [phone] Ambient / [phone] R&B",
+      "trace": "ui: AI Music Generator genre chips (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1623,3985",
+      "board": "pm-music",
+      "x": 1623,
+      "y": 3985,
+      "low": false,
+      "text": "[phone] Clear / [phone] Beats / [phone] Funk / [phone] Pop / [phone] Ambient / [phone] R&B",
+      "trace": "ui: AI Music Generator genre chips (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@408,4075",
+      "board": "pm-music",
+      "x": 408,
+      "y": 4075,
+      "low": false,
+      "text": "[phone] Hip Hop / [phone] Beats / [phone] Latin / [phone] House / [phone] Tropical House / [phone] Techno & Trance / [phone] Jersey Club / [phone] Import Reference Photo (Optional) / [phone] Add up to 10 reference photos / [phone] Vocal / [phone] On / [phone] Off / [phone] Estimated song length / [phone] Number of song / [phone] Generate for / [phone] X credits per song",
+      "trace": "ui: AI Music Generator form (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@973,4109",
+      "board": "pm-music",
+      "x": 973,
+      "y": 4109,
+      "low": false,
+      "text": "[phone] Tropical House / [phone] AIGC Watermark / [phone] Your generated music will include an AIGC watermark. / [phone] Jersey Club / [phone] Drill / [phone] To remove the watermark, go to / [phone] Menu > Settings. / [phone] Don’t show again / [phone] Add up to 10 reference photos / [phone] Cancel / [phone] Generate / [phone] On / [phone] Off",
+      "trace": "R-027"
+    },
+    {
+      "id": "pm-music@1483,4109",
+      "board": "pm-music",
+      "x": 1483,
+      "y": 4109,
+      "low": false,
+      "text": "[phone] Tropical House / [phone] 10% / [phone] Jersey Club / [phone] Drill / [phone] Generating...10% / [phone] Visit My AI Music to see the progress of your generation. In the meantime, you may also check other features or generate more music. / [phone] 2 / [phone] Go to My AI Music / [phone] On / [phone] Off",
+      "trace": "R-029"
+    },
+    {
+      "id": "pm-music@587,4432",
+      "board": "pm-music",
+      "x": 587,
+      "y": 4432,
+      "low": false,
+      "text": "[phone] 00:01:30 / [phone] 2/5 / [phone] 6",
+      "trace": "ui: AI Music Generator length and count sliders (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1097,4432",
+      "board": "pm-music",
+      "x": 1097,
+      "y": 4432,
+      "low": false,
+      "text": "[phone] 00:01:30 / [phone] 2/5 / [phone] 6",
+      "trace": "ui: AI Music Generator length and count sliders (Music Generator feature)"
+    },
+    {
+      "id": "pm-music@1610,4479",
+      "board": "pm-music",
+      "x": 1610,
+      "y": 4479,
+      "low": false,
+      "text": "[phone] 00:01:30 / [phone] 2/5 / [phone] 6",
+      "trace": "ui: AI Music Generator length and count sliders (Music Generator feature)"
+    },
+    {
+      "id": "pm-rules@-1624,-56",
+      "board": "pm-rules",
+      "x": -1624,
+      "y": -56,
+      "low": false,
+      "text": "Image: 左上角壓上 AIGC Watermark / 圖檔: link / Video: 左上角前兩秒壓上 AIGC Watermark / 圖檔: link / Audio: 在開頭加上罐頭音效 “This audio was generated by AI.”，需要多國",
+      "trace": "R-012, R-014, R-015, R-055"
+    },
+    {
+      "id": "pm-rules@-1216,329",
+      "board": "pm-rules",
+      "x": -1216,
+      "y": 329,
+      "low": false,
+      "text": "Video 類: / 縮圖: 不帶 watermark / View: 不帶 watermark / Full Editor: 進到 timeline 不需要看到 watermark / Save, Share: 會根據 Preference 設定來決定會不會有 watermark (僅加前兩秒) / Image 類: / 縮圖: 不帶 watermark / View: 不帶 watermark / Full Editor: 進到 timeline 不需要看到 watermark / 純 Audio 類: / Preview: 會聽到 “This audio was generated by AI” / Download: 會聽到 “This audio was generated by AI” / Add to timeline: 不會聽到 “This audio was generated by AI” / Export, Share : 會根據 Preference 設定來決定，Project 0~2 秒有沒有 icon 的 watermark / 當 Timeline 有 Text-2-Speech, Voice Changer、AI Anime、AI Cartoon、AI Sketch的 AI Content 時 / Timeline: 會根據 Preference 設定來決定會不會有 watermark / Export, Share : 會根據 Preference 設定來決定有沒有 icon 的 watermark / 已下載過的 AI Content，不會因為 Preference 改變設定而動態更新",
+      "trace": "R-018, R-019, R-020, R-021, R-024, R-025, R-055, R-035, R-037, R-038, R-039, R-048"
+    },
+    {
+      "id": "pm-rules@-392,456",
+      "board": "pm-rules",
+      "x": -392,
+      "y": 456,
+      "low": false,
+      "text": "非 AI 素材",
+      "trace": "R-040"
+    },
+    {
+      "id": "pm-rules@-259,456",
+      "board": "pm-rules",
+      "x": -259,
+      "y": 456,
+      "low": false,
+      "text": "AI 素材",
+      "trace": "R-040"
+    },
+    {
+      "id": "pm-settings@287,-89",
+      "board": "pm-settings",
+      "x": 287,
+      "y": -89,
+      "low": false,
+      "text": "Entry / Essential User / [phone] Menu / [phone] PowerDirector Pro+ / [phone] Try 7 Days for free / [phone] 100 GB / [phone] Video / [phone] Cloud Storage / [phone] Enhance / [phone] Tutorials & Tips / [phone] My Artwork / [phone] Produced Videos / [phone] Demo Videos / [phone] Notification / [phone] Settings / [phone] Remove Watermark / [phone] AI / [phone] Remove AIGC Watermark / [phone] Preferences / [phone] User Sign in / Paid User / [phone] Menu / [phone] Tutorials & Tips / [phone] My Artwork / [phone] Produced Videos / [phone] Demo Videos / [phone] Notification / [phone] Settings / [phone] Remove AIGC Watermark / [phone] Preferences / [phone] YenHan Chang / [phone] 00028492.45165s556gfh66253255ew4189... / [phone] Information / [phone] Send Feedback / [phone] About / [phone] Youtube / [phone] Instagram",
+      "trace": "R-001, R-002, R-003"
+    },
+    {
+      "id": "pm-settings@908,76",
+      "board": "pm-settings",
+      "x": 908,
+      "y": 76,
+      "low": false,
+      "text": "[phone] Menu / [phone] PowerDirector Pro+ / [phone] Try 7 Days for free / [phone] 100 GB / [phone] Video / [phone] Cloud Storage / [phone] Enhance / [phone] Tutorials & Tips / [phone] My Artwork / [phone] Produced Videos / [phone] Demo Videos / [phone] Notification / [phone] Settings / [phone] AIGC Watermark / [phone] Remove Watermark / [phone] Depending on applicable laws and regulations, you / [phone] Remove AIGC Watermark / [phone] may need to label or watermark AI-generated / [phone] content before sharing it publicly. This feature is / [phone] provided to help you meet those requirements. / [phone] Preferences / [phone] Got it / [phone] User Sign in",
+      "trace": "R-004, R-007"
+    },
+    {
+      "id": "pm-settings@531,149",
+      "board": "pm-settings",
+      "x": 531,
+      "y": 149,
+      "low": false,
+      "text": "[phone] Get free trial / [phone] Advanced / [phone] Auto / [phone] Cutout / [phone] Captions",
+      "trace": "ui: Menu Pro+ banner (subscription feature)"
+    },
+    {
+      "id": "pm-settings@1100,149",
+      "board": "pm-settings",
+      "x": 1100,
+      "y": 149,
+      "low": false,
+      "text": "[phone] Get free trial / [phone] Advanced / [phone] Auto / [phone] Cutout / [phone] Captions",
+      "trace": "ui: Menu Pro+ banner (subscription feature)"
+    },
+    {
+      "id": "pm-rules@-1624,-20",
+      "board": "pm-rules",
+      "x": -1624,
+      "y": -20,
+      "low": false,
+      "text": "[link https://cyberlinkcorp-my.sharepoint.com/:p:/g/personal/dept_onedrive_cyberlink_com/IQBk8qX-6KvKSI05NQc11feFAYqvWyQBvY2gpZZDWO1wkhQ] SharePoint presentation; no access from the casebook session. May hold placement, margin, opacity or per-feature rules the Figma lacks (Q-14).",
+      "trace": "Q-14",
+      "link": "1:1184"
+    },
+    {
+      "id": "pm-rules@-1624,28",
+      "board": "pm-rules",
+      "x": -1624,
+      "y": 28,
+      "low": false,
+      "text": "[link https://www.figma.com/design/1PjSpRMOyD4UGU1a5KQQDc/PDR-Main-Page?node-id=20538-218619] AI label 大小佔 img 短邊的 12% (包含 padding): a landscape example photo with the label at its top-left corner.",
+      "trace": "R-013",
+      "link": "1:1184"
+    },
+    {
+      "id": "pm-rules@-1624,88",
+      "board": "pm-rules",
+      "x": -1624,
+      "y": 88,
+      "low": false,
+      "text": "[link https://www.figma.com/design/1PjSpRMOyD4UGU1a5KQQDc/PDR-Main-Page?node-id=20538-218619] The AI label: dark rounded square with a white 「AI」 in a bracket frame and a sparkle at the top right, the same artwork as the Design board's 500×500 asset.",
+      "trace": "R-014",
+      "link": "1:1184"
+    },
+    {
+      "id": "pm-rules@-1624,100",
+      "board": "pm-rules",
+      "x": -1624,
+      "y": 100,
+      "low": false,
+      "text": "[link https://cyberlinkcorp-my.sharepoint.com/:u:/g/personal/dept_onedrive_cyberlink_com/IQCFm-MHMAFNRpD9ANZxONTOAQmmE8PnhT_e2T7R8qxExsU] SharePoint audio file of the canned clip; no access from the casebook session. Its voice and the languages it comes in are unknown (Q-5).",
+      "trace": "R-055",
+      "link": "1:1184"
+    }
+  ]
+}

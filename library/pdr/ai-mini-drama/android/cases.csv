@@ -24,7 +24,16 @@ TC-002,Entry and landing,App on Home (Launcher),"1. Read the Home hero banner
 If no launch shows the AI Mini Drama banner, Blocked (CMS) with the banners seen",P2,"R-002, R-002 (board-notes l.91: Launcher banner: ""AI Mini Drama with Seedance 2.0 >"".)","Banner rotation is CMS-driven; Blocked if it never appears; Android ticket DRA262610P0124 (NewCreated, AIAgent, UX): on fresh data the Launcher banner stays on 「Turn one photo to cinematic reel」 and never rotates to AI Mini Drama (only the tile shows it)"
 TC-003,Entry and landing,AI Mini Drama landing open,Look at the landing page,"Shows 「Hi, I'm your」「AI Drama Assistant」, 「Describe your idea and watch it come to life as a short drama.」, 「Create Your Drama」, 「Start from a template」 with 「More」 and a template grid
 Header has back, credit pill and History
-Each template thumbnail is the template's poster still",P1,"R-003, R-289","Regression DRI261893-0051 (Assigned, untagged): The ""Hi, I'm your"" text has a shadow on it — also recheck this ticket here. Q-18: are templates US and JP only on day 1?; Android ticket DRA262610P0064 (NeedMoreInfo, UI, Light): in Light mode the landing text shows a shadow, against the UI guideline"
+Each template thumbnail is the template's poster still",P1,"R-003, R-289","Regression DRI261893-0051 (Assigned, untagged): The ""Hi, I'm your"" text has a shadow on it — also recheck this ticket here. Q-18 (are templates US and JP only on day 1?): TC-580 records the store region and the template counts; Android ticket DRA262610P0064 (NeedMoreInfo, UI, Light): in Light mode the landing text shows a shadow, against the UI guideline"
+TC-580,Entry and landing,"1. Signed in with the test account
+2. The server the build points at noted (Developer, Stage or Production)
+3. AI Mini Drama landing open","1. Open Google Play › profile icon › Settings › General › Account and device preferences and note the country under 「Country and profiles」
+2. In PowerDirector tap the credit pill on the landing and note the currency of the prices on My Credits (credit packs, else the page behind 「Subscribe Now」)
+3. Go back to the landing and count the templates under 「Start from a template」
+4. Tap 「More」 and count the categories and the templates in each","Steps 1–2: the store region and the price currency are recorded in the result
+Step 3: the landing shows a template grid, and its template count is recorded
+Step 4, on a US or JP store: 5 categories with 20 templates in all
+Step 4, on any other store: the categories and the template count are recorded, and the row is recorded as Fail (question) for PM with these figures, not as a pass (Q-18)",P3,"R-289, R-006; REQ-111","Q-18 (REQ-111): the PM main flow note 「day 1 只有 US & JP」 stands beside the template grid and no source says what it limits. Known so far: the SM-A5360's Play store is Taiwan (prices in NT$, TC-542) and the Stage server showed all 20 templates in 5 categories (A7), so Stage does not limit them, and Production was not checked. The answer needs both sides, a US or JP store and another one: the run does not change the account's store (signing in to another store account is the user's), so the result says which side it saw and what is still missing. Nothing is bought."
 TC-004,Entry and landing,"1. Landing open
 2. 6 or more templates",Check the template row header,「More」 is shown next to 「Start from a template」,P3,R-004,Fewer-than-6 branch needs a server config
 TC-005,Entry and landing,Landing open,Compare the credit pill with Mine → credits,The pill shows the current credit balance,P2,R-005,"Regression DRI261894-0001 (RDResolved, AIAgent): Template preview show stale credit balance after a credit deduction — also recheck this ticket here"
@@ -536,6 +545,14 @@ The player shows X, ⏸, a scrubber and the time (e.g. 「00:40/01:30」)
 ⏸ pauses and ▶ resumes the slideshow
 Dragging the scrubber jumps to that point and the time follows
 System back closes the player like X",P1,"R-064, R-348",
+TC-581,Storyboard Preview,"1. Storyboard just finished in the chat (as in TC-060)
+2. Nothing tapped since it finished","1. Tap ↓ to go to the bottom of the chat
+2. Read every assistant message from the Storyboard Result card down to the 「Choose your video settings」 card
+3. Play the Storyboard Preview to the end and close the player
+4. Tap ↓ again and read the messages below the Storyboard Preview card","Step 2: every assistant message between the two cards is recorded word for word, with a screenshot
+Step 2: whether 「Every frame is done. Ready to create your video?」 is among them is recorded, with the card it stands above
+Step 4: any message added after the preview played is recorded the same way
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-5)",P3,"R-424, R-064; REQ-111","Q-5 (REQ-111): the PM string list gives 「Every frame is done. Ready to create your video?」 for two keys, storyboard.all_videos.q and ladder.beat_video.q, and no run has seen it: the chat went from 「Here's your storyboard」 to the video settings card. This row reads the storyboard side and TC-582 the video side. No video is generated and no credits are spent beyond the storyboard the row follows."
 TC-076,Storyboard Preview,Drama created with 「No captions」,Play the Storyboard Preview,Preview has captions anyway,P3,R-065,"Android ticket DRA262610P0245 (ProposeNAB, AIFound): asks for no captions in the Storyboard Preview with 「No captions」; Design spec differs: the Storyboard Preview always has captions (R-065, PM 10/8); spec wins"
 TC-443,Storyboard Preview,"1. Drama with Video language Chinese and captions on (and one with Korean)
 2. Storyboard finished",Play the Storyboard Preview and watch where the captions break,"Captions break at word or punctuation boundaries, never inside a word (e.g. 洗禮, 影子 stay whole)
@@ -634,6 +651,13 @@ TC-484,Video,"1. Drama A generating its video
 3. Wait until A finishes","The 「Good news! Your ""{Drama title}"" is ready.」 toast appears only when a drama finishes and names A
 Opening B never shows it for B",P2,"R-074, R-141","DRA262610P0233 (NeedMoreInfo, AIFound, UI)"
 TC-086,Video,Preview video finished,Read the chat,"「Here's your drama.」 with the video card, then 「Looking good! Ready for the full video?」 with 「Create the full episode (90 sec)」 and price",P1,R-075,"iOS ticket DRI261894P0016 (NewCreated, AIFound), a lead on Android: paid preview is shown as the finished drama, full episode sold afterwards — also recheck this ticket here; iOS ticket DRI261894P0035 (RDResolved, AIFound), a lead on Android: Video Generate makes no video and the chat jumps to the full-episode offer — also recheck this ticket here; iOS ticket DRI261894P0051 (NewCreated, AIFound), a lead on Android: Settings card offers 75/90 s full video but later offer says 60 sec — also recheck this ticket here; iOS ticket DRI261896P0020 (NeedMoreInfo, AIFound), a lead on Android: Final drama video generation always fails with ""1 clip couldn't be generated"" — also recheck this ticket here; Android ticket DRA262610-0043 (NewCreated, AIFound, UX): 「Create the full episode (30 sec)」 after a 30-sec preview produced a 60-second video; the button should state the full episode's length; Android ticket DRA262610P0159 (Assigned, AI Agent): after a 30 sec preview the offer reads 「Create the full episode (60sec)」 instead of (90 sec); the length is 15 s × scenes (R-251, TC-345), so compare it with the scene count"
+TC-582,Video,"1. A drama whose Preview • 30 sec video has finished and whose full episode is not made yet (TC-086's drama, or one from History)
+2. No new video is generated for this row","1. Open the drama and tap ↓ to go to the bottom of the chat
+2. Read every assistant message from the Storyboard Preview card down to the end of the chat
+3. Read the question above the 「Create the full episode (90 sec)」 card","Step 2: every assistant message from the Storyboard Preview card to the end of the chat is recorded word for word, with screenshots
+Step 3: the question above the full-episode card is recorded (R-075 gives 「Looking good! Ready for the full video?」)
+Steps 2–3: whether 「Every frame is done. Ready to create your video?」 shows anywhere is recorded, with the card it stands above
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-5)",P3,R-075; REQ-111,"Q-5 (REQ-111): the video side of TC-581 (key ladder.beat_video.q). When the run generates a Preview video with the user's go-ahead (TC-405), also read the chat while it generates and add what it shows. With no finished Preview video and no go-ahead the row is Blocked (test-data): a video generation needs the user's go-ahead (REQ-073)."
 TC-493,Video,"1. Outline with roles
 2. A Character Library look picked for each role (e.g. a young man, an elderly man)","1. Create the storyboard
 2. Tap Generate Video (Fast, Preview)

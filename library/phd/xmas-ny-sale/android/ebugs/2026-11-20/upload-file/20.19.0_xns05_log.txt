@@ -1,0 +1,26 @@
+# ISS-XNS-05 Launches during the NY Sale (campaign list, Lottie theme error, launcher campaign query)
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-A5560 / Android 15, logcat of the app captured by the casebook run
+# Times are PHONE time: the run moved the phone clock into the sale period. Campaign, Launcher icon, credit purchase and
+# server-query lines only; repeated lines kept once; tokens, purchase tokens and IDs dropped.
+
+## TC-004 relaunch at 12/28 00:01, R1-c (2026-12-28 00:01:00–00:01:04)
+2026-12-28 00:01:01.290 rg2     : addEvent 2026_Black_Friday_Sale_Campaign
+2026-12-28 00:01:01.291 rg2     : addEvent 2026_Xmas_Sale_Campaign
+2026-12-28 00:01:01.291 rg2     : addEvent 2027_New_Year_Sale_Campaign
+2026-12-28 00:01:01.291 rg2     : addEvent 2026_Credit_Xmas_Campaign
+2026-12-28 00:01:01.291 rg2     : addEvent 2027_Credit_New_Year_Campaign
+2026-12-28 00:01:02.925 CreditSystem: totalRemain=0
+2026-12-28 00:01:03.026 ThemeUtils: View class com.airbnb.lottie.LottieAnimationView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+2026-12-28 00:01:03.233 th9     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+2026-12-28 00:01:03.254 hy5     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+
+## TC-031 launch at 12/30 10:00, R1-d (2026-12-30 10:00:00–10:00:06)
+2026-12-30 10:00:01.661 rg2     : addEvent 2026_Black_Friday_Sale_Campaign
+2026-12-30 10:00:01.662 rg2     : addEvent 2026_Xmas_Sale_Campaign
+2026-12-30 10:00:01.663 rg2     : addEvent 2027_New_Year_Sale_Campaign
+2026-12-30 10:00:01.663 rg2     : addEvent 2026_Credit_Xmas_Campaign
+2026-12-30 10:00:01.664 rg2     : addEvent 2027_Credit_New_Year_Campaign
+2026-12-30 10:00:03.398 CreditSystem: totalRemain=0
+2026-12-30 10:00:03.486 ThemeUtils: View class com.airbnb.lottie.LottieAnimationView is an AppCompat widget that can only be used with a Theme.AppCompat theme (or descendant).
+2026-12-30 10:00:03.547 th9     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed
+2026-12-30 10:00:03.598 hy5     : queryContent Exception: javax.net.ssl.SSLHandshakeException: Chain validation failed

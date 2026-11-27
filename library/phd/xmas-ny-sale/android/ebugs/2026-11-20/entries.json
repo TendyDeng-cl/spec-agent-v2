@@ -1,0 +1,47 @@
+{
+ "ISS-XNS-01": {
+  "cases": [
+   "TC-070"
+  ],
+  "why": "PM: Xmas splash icon is the Santa-hat logo, not the mockup's reindeer"
+ },
+ "ISS-XNS-02": {
+  "cases": [
+   "TC-014"
+  ],
+  "why": "PM: text under the trial CTA — Design 「Auto-renewal for …/year」 vs PM policy text"
+ },
+ "ISS-XNS-03": {
+  "cases": [
+   "TC-015"
+  ],
+  "why": "IAP page CTA for a user without free trial reads 「Continue」, not 「Subscribe for …/year」"
+ },
+ "ISS-XNS-04": {
+  "cases": [
+   "TC-060"
+  ],
+  "why": "Free-user sale credit pack: 500 credits NT$2090 is 11% off the regular NT$2350, not 20%"
+ },
+ "ISS-XNS-05": {
+  "cases": [
+   "TC-031",
+   "TC-004",
+   "TC-038"
+  ],
+  "why": "NY Sale: Launcher IAP icon stays the regular orange crown, no champagne glasses"
+ },
+ "ISS-XNS-06": {
+  "cases": [
+   "TC-033",
+   "TC-035"
+  ],
+  "why": "Countdown bubble does not appear at 72:00:00 on the open Launcher, only after a relaunch"
+ },
+ "ISS-XNS-07": {
+  "cases": [
+   "TC-073"
+  ],
+  "why": "PM: paid user's Mine 「My Credits」 card has no Christmas decoration"
+ }
+}

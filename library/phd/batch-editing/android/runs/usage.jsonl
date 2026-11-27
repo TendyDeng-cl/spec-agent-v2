@@ -1,3 +1,11 @@
 {"at":"2026-11-11T10:01:52.126Z","fiveHourPct":72,"fiveHourResetsAt":"2026-11-11T10:40:00.796Z","weeklyPct":29,"weeklyResetsAt":"2026-11-17T06:00:00.796Z","proMultiplier":6.25,"note":"R2 start (before R2-a)"}
 {"at":"2026-11-11T10:11:27.613Z","fiveHourPct":76,"fiveHourResetsAt":"2026-11-11T10:40:00.933Z","weeklyPct":30,"weeklyResetsAt":"2026-11-17T06:00:00.933Z","proMultiplier":6.25,"note":"R2-a end / R2-b start"}
 {"at":"2026-11-11T10:28:20.284Z","fiveHourPct":81,"fiveHourResetsAt":"2026-11-11T10:40:00.917Z","weeklyPct":30,"weeklyResetsAt":"2026-11-17T06:00:00.917Z","proMultiplier":6.25,"note":"R2 end (after R2-b wrap-up)"}
+{"at":"2026-11-19T03:02:03.967Z","fiveHourPct":null,"fiveHourResetsAt":null,"weeklyPct":null,"weeklyResetsAt":null,"proMultiplier":1.25,"note":"seat set on the Settings page"}
+{"at":"2026-11-20T06:25:50.551Z","fiveHourPct":15,"fiveHourResetsAt":"2026-11-20T10:09:59.000Z","weeklyPct":38,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4 start"}
+{"at":"2026-11-20T06:47:30.477Z","fiveHourPct":26,"fiveHourResetsAt":"2026-11-20T10:09:59.000Z","weeklyPct":40,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-a end / R4-b start"}
+{"at":"2026-11-20T07:07:14.091Z","fiveHourPct":42,"fiveHourResetsAt":"2026-11-20T10:10:00.000Z","weeklyPct":43,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-b end / R4-c start"}
+{"at":"2026-11-20T07:20:18.782Z","fiveHourPct":51,"fiveHourResetsAt":"2026-11-20T10:10:00.000Z","weeklyPct":44,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-c end / R4-d start"}
+{"at":"2026-11-20T07:40:30.472Z","fiveHourPct":66,"fiveHourResetsAt":"2026-11-20T10:10:00.000Z","weeklyPct":47,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-d end / R4-e start"}
+{"at":"2026-11-20T08:09:26.769Z","fiveHourPct":82,"fiveHourResetsAt":"2026-11-20T10:10:00.000Z","weeklyPct":50,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-e end / R4-f start"}
+{"at":"2026-11-20T08:26:23.219Z","fiveHourPct":94,"fiveHourResetsAt":"2026-11-20T10:10:00.000Z","weeklyPct":51,"weeklyResetsAt":"2026-11-25T12:00:00.000Z","proMultiplier":1.25,"note":"R4-f end; waiting for the 5-hour reset before R4-g"}

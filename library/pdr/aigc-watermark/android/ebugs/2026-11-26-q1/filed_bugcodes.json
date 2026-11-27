@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0070",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611231",
+    "filed_on": "2026-11-26"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0322",
+      "short": "PDR-A 16.9.0 - [AIAgent] Export: Projects with AI content export with a C2PA manifest marking the whole video as AI",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:36:46",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "4/4",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap the Menu icon on the Launcher\n3. Tap 「Settings」\n4. Turn 「Remove AIGC Watermark」 Off\n5. Tap Back\n6. Tap 「New Project」\n7. Add a non-AI video clip\n8. Add AI Text to Speech content to the project\n9. Tap 「Export」\n10. Tap 「Export」 in the 「AIGC Watermark」 dialog\n11. Tap 「Produce」\n12. Copy the produced file to a computer\n13. Read the file with c2patool\n14. Tap the Menu icon on the Launcher\n15. Tap 「Settings」\n16. Turn 「Remove AIGC Watermark」 On\n17. Tap Back\n18. Open the same project from 「Project」\n19. Tap 「Export」\n20. Tap 「Produce」\n21. Copy the second file to the computer\n22. Read the second file with c2patool\n\nResult:\nBoth files carry a CyberLink C2PA manifest marking the whole video as AI (no ingredient), also with the switch On.\n摘要：兩個輸出檔都帶 CyberLink C2PA 資訊，整支標為 AI 合成；開關開啟也一樣。\n{16.9.0_awa19_c2patool_readings.jpg} {16.9.0_awa19_tts_on_saved.jpg}\n\nExpect Result:\nPM to decide whether an editor export with AI content carries a C2PA manifest, and what it states.\n摘要：請 PM 決定含 AI 內容的專案輸出是否帶 C2PA 資訊及其內容。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android\nBasis: In-product — the PM pm-rules board and Jira PDRIOS-722 set the visible watermark of an export but not its C2PA metadata. To decide: manifest or none; the whole video as compositeWithTrainedAlgorithmicMedia or the AI assets as ingredients; that it stays with the switch On (Jira: the switch controls only the visible watermark); how the timeline tools' own assets are checked as 「signed」 when they are never saved as files.\nRelated: manifest read: one c2pa.created action, digitalSourceType compositeWithTrainedAlgorithmicMedia, no ingredient, signer CyberLink; the switch On export differs only in its IDs and hash. An AI Anime project and an Image to Video result opened with 「Full Editor」 (switch On) export the same way.\nRelated: open question Q-13; saved AI results carry the same CyberLink manifest by ruling (DRA262611P0220, DRA262611P0221); a photo + AI Music song project exports with no manifest (DRA262611P0223).\nSpec Link: Remove AIGC Watermark PM spec, pm-rules board (Timeline with Text-2-Speech, Voice Changer, AI Anime, AI Cartoon, AI Sketch AI content) -\nhttps://www.figma.com/design/IgV9rMxI8bmutyVmQX1kUm/Remove-AIGC-Watermark?node-id=0-1\nSpec Link: Jira PDRIOS-722 (the switch controls only the visible watermark; meta data) -\nhttps://cyberlinkcorp.atlassian.net/browse/PDRIOS-722\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_awa19_c2patool_readings.jpg",
+        "16.9.0_awa19_tts_on_saved.jpg"
+      ],
+      "key": "AIGC-Watermark-Q1-01",
+      "iss": "ISS-AWA-19",
+      "feature": "AIGC-Watermark-Q1",
+      "problem_type": "Functional"
+    }
+  ],
+  "dispositions": {}
+}

@@ -1,0 +1,15 @@
+
+1 of 1 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Batch-Editing-Questions-01] PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: One Undo after an edit and 「All」 keeps the current photo's own edit
+      feature='Batch_Editing'  terms=['Batch_Editing']  searched 11 candidate(s)
+    !100%  OPEN      PHA262026P0121  PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: One Undo after an edit and 「All」 keeps the 
+              shares phrase "all keeps", phrase "current photo", phrase "one undo", phrase "own edit"
+      38%  closed    PHA262026P0120  PHD-A 20.19.0 - [AIAgent] Batch_Editing: 「All」 stays enabled on a photo with no change o
+
+== Open in the pool on 20.19.0: 5 ticket(s) of 11 searched. Judge every entry against each one; the ranking above misses rewordings.
+      PHA262026P0061  Assigned     RD   202611061839  PHD-A 20.19.0 - [AIAgent][UI] Batch_Editing: 21st-photo toast reads 「You can only select 20 photos.」, not the spec copy
+      PHA262026P0121  NewCreated   PM   202611132003  PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: One Undo after an edit and 「All」 keeps the current photo's own edit
+      PHA262026P0122  NewCreated   PM   202611132003  PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: Crop custom size accepts 237 x 237, below Section 3's 238 px minimum
+      PHA262026P0123  NewCreated   PM   202611132003  PHD-A 20.19.0 - [AIAgent][UI] Batch_Editing: Custom resolution out-of-range toast names only the width
+      PHA262026P0124  NewCreated   PM   202611132003  PHD-A 20.19.0 - [AIAgent][UX] Batch_Editing: Free user Batch Save page has no native ad card, unlike single save

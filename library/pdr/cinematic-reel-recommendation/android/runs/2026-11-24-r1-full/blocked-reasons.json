@@ -1,0 +1,5 @@
+{
+  "TC-019": { "label": "observability: app does not log CMS data", "note": "No recommend_samples / template data in logcat; app files not readable over adb (needs: cms-log)." },
+  "TC-016": { "group": "upstream", "note": "Upstream TC-011 (Q-1): no 「?」 in Add Media, so the sheet cannot be opened there." },
+  "TC-021": { "group": "upstream", "note": "Upstream TC-011 (Q-1): no 「?」 in Add Media, so system Back on the sheet cannot be tested there." }
+}

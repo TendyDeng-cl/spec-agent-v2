@@ -1,0 +1,209 @@
+{
+ "spec_folder": "specs/2026-11-23",
+ "skip": [],
+ "skip_reason": "",
+ "grouping": {
+  "x_tolerance": 120,
+  "y_gap": 140
+ },
+ "blocks": [
+  {
+   "id": "d-model-info@3258,172",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 172,
+   "low": false,
+   "text": "卡片元件規範請看 Design Guideline · Cards / • 卡片各狀態（default / processing / unselect / select / error / nsfw）與尺寸、使用規則，請看 Guideline。 / • Card/Artwork：processing / error 用 bg 切換無底圖（text to video）/ 有底圖（image to video）。 / • Card/RecentTask：showModel 只有 I2V / T2V 開啟，其他功能關閉。 / • 另用到 Card/RecentMedia、thumbnail。 / 開啟 Guideline · Cards ↗",
+   "trace": "R-016, R-030, R-010, R-011, R-021"
+  },
+  {
+   "id": "d-model-info@681,276",
+   "board": "d-model-info",
+   "x": 681,
+   "y": 276,
+   "low": false,
+   "text": "• 只有 I2V、T2V 的 Recent task 卡片顯示 model / • 其他功能（如 Cinematic Reel Creator）沒有 model，整行不顯示，卡片高度維持 120 / • 顯示使用者生成時選的 model 名稱，過長以 … 截斷 / • done / downloading / unselect / select / error / nsfw 規則相同（見右下狀態表「+ model」欄） / • 元件：Card/RecentTask 開 showModel，名稱改 model 的 label",
+   "trace": "R-010, R-011, R-021, R-016, R-012, R-014, R-030, R-015"
+  },
+  {
+   "id": "d-model-info@2249,276",
+   "board": "d-model-info",
+   "x": 2249,
+   "y": 276,
+   "low": false,
+   "text": "• 只有 I2V、T2V 的 Recent task 卡片顯示 model / • 其他功能（如 Cinematic Reel Creator）沒有 model，整行不顯示，卡片高度維持 120 / • 顯示使用者生成時選的 model 名稱，過長以 … 截斷 / • done / downloading / unselect / select / error / nsfw 規則相同（見右下狀態表「+ model」欄） / • 元件：Card/RecentTask 開 showModel，名稱改 model 的 label",
+   "trace": "R-010, R-011, R-021, R-016, R-012, R-014, R-030, R-015"
+  },
+  {
+   "id": "d-model-info@114,282",
+   "board": "d-model-info",
+   "x": 114,
+   "y": 282,
+   "low": false,
+   "text": "有 model",
+   "trace": "R-010"
+  },
+  {
+   "id": "d-model-info@1682,282",
+   "board": "d-model-info",
+   "x": 1682,
+   "y": 282,
+   "low": false,
+   "text": "有 model",
+   "trace": "R-010"
+  },
+  {
+   "id": "d-model-info@114,434",
+   "board": "d-model-info",
+   "x": 114,
+   "y": 434,
+   "low": false,
+   "text": "無 model",
+   "trace": "R-016, R-020, R-021"
+  },
+  {
+   "id": "d-model-info@1682,434",
+   "board": "d-model-info",
+   "x": 1682,
+   "y": 434,
+   "low": false,
+   "text": "無 model",
+   "trace": "R-016, R-020, R-021"
+  },
+  {
+   "id": "d-recent-edit@78,88",
+   "board": "d-recent-edit",
+   "x": 78,
+   "y": 88,
+   "low": false,
+   "text": "Video · 編輯模式",
+   "trace": "label: board title"
+  },
+  {
+   "id": "d-recent-edit@574,112",
+   "board": "d-recent-edit",
+   "x": 574,
+   "y": 112,
+   "low": false,
+   "text": "點擊 Select 進入編輯狀態",
+   "trace": "R-030"
+  },
+  {
+   "id": "d-recent-video@286,112",
+   "board": "d-recent-video",
+   "x": 286,
+   "y": 112,
+   "low": false,
+   "text": "My Artwork → Recent（該功能 history）→ Result Page",
+   "trace": "R-001, R-002"
+  },
+  {
+   "id": "d-recent-video@1045,295",
+   "board": "d-recent-video",
+   "x": 1045,
+   "y": 295,
+   "low": false,
+   "text": "點擊 view  進入該 Feature Result Page",
+   "trace": "R-002"
+  },
+  {
+   "id": "d-recent-video@570,323",
+   "board": "d-recent-video",
+   "x": 570,
+   "y": 323,
+   "low": false,
+   "text": "點擊卡片進入該功能的 history",
+   "trace": "R-001"
+  },
+  {
+   "id": "d-model-info@3258,462",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 462,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] Card/RecentTask: showModel 只有使用者自己選 model 時打開(例 I2V Custom),範本生成不開。(component set description; row note 「AI 生成紀錄 · 使用者自己選 model 時才顯示 model」)",
+   "trace": "R-020, R-010, R-011",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,522",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 522,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] State table column 「tag」 (the 「+ model」 column): the done card with the model tag 「GPT-Image-2.5 Sunburst」 under the name, 「View」 at the right.",
+   "trace": "R-010, R-015",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,582",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 582,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] unselect: empty checkbox at the top right, 「View」 (多選中未選).",
+   "trace": "R-030",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,642",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 642,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] select: ticked checkbox, 「View」 (多選中已選).",
+   "trace": "R-030",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,702",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 702,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] downloading: 「processing...」 over the thumbnail, 「9 minutes left ...」 and a progress bar, no button (生成中).",
+   "trace": "R-030",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,762",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 762,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] error: 「Error」 with a caution icon over the thumbnail, button 「Retry」 (失敗).",
+   "trace": "R-030",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,822",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 822,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] nsfw: visibility-off icon over the thumbnail, button 「View Details」 (內容不適當).",
+   "trace": "R-030",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,882",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 882,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] 清單卡:寬 = 螢幕寬 − margin(mobile 16 / tablet 40),高度固定; every Card/RecentTask variant is 120 high; date 填「日期 · 長度」, name 填名稱.",
+   "trace": "R-016",
+   "link": "1804:17"
+  },
+  {
+   "id": "d-model-info@3258,942",
+   "board": "d-model-info",
+   "x": 3258,
+   "y": 942,
+   "low": false,
+   "text": "[link https://www.figma.com/design/qSdtJ1wbHddNm6ebWvF4ia/?node-id=142-4496] tag_card style=fill, size=S: 灰色屬性標籤・實心・S 高 20,放縮圖、清單。文字改 label。",
+   "trace": "R-015",
+   "link": "1804:17"
+  }
+ ]
+}

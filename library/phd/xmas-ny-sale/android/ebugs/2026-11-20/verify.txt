@@ -1,0 +1,2 @@
+verify_ebug_drafts.py (run from a scratch copy whose index lookup stops at the drive root; the skill's copy hangs on Windows in _find_idx()), ALLOW_AGENT_UX=1:
+7 entries, 23 attachments, 13 Spec Link lines, max Short Description 137. Every check passes except the exploration-suite sheet-index checks (22 lines: 'unknown sheet' / 'never names'), which do not apply to casebook Spec Links (ebug-draft-generator overlay). Warning: mixed Device lines (entry 7 ran on a paid account).

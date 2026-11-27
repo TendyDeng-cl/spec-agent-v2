@@ -1,0 +1,40 @@
+[
+  {
+    "bug": "PHA262026P0120",
+    "verdict": "FIXED",
+    "observed": "Batch of 4 photos (Edit > Batch). Adjustments: Exposure on photo 1 to 1.46 enables All; switching to photo 2 (Exposure 0, no change of its own) shows All disabled; back on photo 1 it is enabled again; photo 2's own change (0.77) enables it; tapping All copies 0.77 to every photo and All is then disabled on all 4 photos. Crop & Rotate: Square on one photo enables All; switching to a photo still on Original shows All disabled; back on the squared photo it is enabled; tapping All squares every photo (800 x 800 labels) and All is disabled on each photo afterwards.",
+    "summary": "All now follows the shown photo's own unapplied change in Adjustments and Crop & Rotate: disabled on a photo with no change, enabled once it has its own, disabled again after All is applied.",
+    "shots": ["b_p0120_adj_photo1_changed.png", "b_p0120_adj_photo2_all_disabled.png", "b_p0120_adj_photo2_own_change_enabled.png", "b_p0120_adj_after_all.png", "b_p0120_crop_photo4_square_enabled.png", "b_p0120_crop_photo1_all_disabled.png", "b_p0120_crop_after_all.png"],
+    "sideEffects": "None seen (places checked: All button disabled/enabled look in Adjustments and Crop & Rotate top bars, slider values per photo after switching, Square applied to all with correct size labels, Apply ✓ back to the Batch room).",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0125",
+    "verdict": "FIXED",
+    "observed": "Album Casebook: seascape 2730 x 1535 picked first, teacup 800 x 800 second, Next, Crop & Rotate: the room opens on the seascape with the crop box filling the photo and the label 「2560 x 1439」, no crash. Switching 800 x 800 <-> 2730 x 1535 in the room works; leaving and reopening Crop & Rotate on the 800 x 800 photo and then tapping the 2730 x 1535 thumbnail works. A second batch with escalator 1706 x 2559 first (+ teacup, 101 1576 x 1970): the room opens on 1706 x 2559 with that label, every thumbnail switches, Square + All + ✓ apply fine. The crash buffer has no PhotoDirector crash during this segment (only segment A's Swipe Collage crashes).",
+    "summary": "Crop & Rotate now opens on the 2730 x 1535 and 1706 x 2559 photos, first or by thumbnail, showing the photo and its size label without crashing.",
+    "shots": ["b_p0125_picked.png", "b_p0125_crop_2730_opened.png", "b_p0125_crop_back_to_2730.png", "b_p0125_crop_open_on_800_tap_2730.png", "b_p0125_crop_1706_opened.png", "b_p0125_after_square_all_apply.png"],
+    "sideEffects": "None seen (places checked: crop box fills the photo edge to edge on 2730 x 1535, 1706 x 2559, 1576 x 1970 and 800 x 800, size labels, Square on 1706 x 2559 applied to all and the Batch room thumbnails after ✓).",
+    "other": "The 2730 x 1535 photo's size label reads 「2560 x 1439」 (the photo scaled to a 2560 px long side), while 1706 x 2559 and smaller photos show their own size. Not judged here; only worth a look if the spec wants the original size."
+  },
+  {
+    "bug": "PHA262026P0127",
+    "verdict": "FIXED",
+    "observed": "AI Hair Color > Pexels hat portrait > Custom > Ombre > Base Color colour wheel > hue slider to blue, cursor to the square's top right > Done: a new blue circle is added right after the wheel with the selection ring; the recommended colours moved one place right (pink pushed past the edge). The blue was then used for a generation and the result has blue hair.",
+    "summary": "A colour picked with Done is now added as a new ringed circle right after the colour wheel and the other colours move one place right.",
+    "shots": ["b_p0127_ombre_before.png", "b_p0127_palette_blue.png", "b_p0127_after_done.png", "b_p0118_first_result_bubble.png"],
+    "sideEffects": "None seen (places checked: the Base Color row after Done, ring and spacing, the Highlight row unchanged, Generate enabled once a highlight was picked, the result uses the picked blue).",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0118",
+    "verdict": "NOT_FIXED",
+    "observed": "First AI Hair Color result on this install (installed 2026-11-20 16:54, no Hair Color run on it before; the Intro Demo still showed): Custom > Ombre > base blue (picked) + highlight pink > Generate (6 credits). The panel collapsed on its own, the result showed with the Intensity bar at 100 and a one-time bubble on the Artwork key 「All your results are saved here at full intensity.」 (new on this build). No dialog appeared: not with the bubble, not after tapping the bubble away, not after dragging Intensity to 52, not after reopening the Custom panel and closing it (Intensity bar shown again), and not on a second generation (Retry, the bubble did not show again). Logs have no dialog entry.",
+    "expected": "When the first result appears (Custom: after the panel is closed and the Intensity bar shows), a one-time dialog says My AI Artwork keeps only the 100% version, with 「Don't show again」.",
+    "observedZh": "第一次結果只出現 Artwork 鍵上的一次性提示泡泡「All your results are saved here at full intensity.」，關閉面板、拖 Intensity、再生成一次都沒有出現對話框。",
+    "expectedZh": "第一次結果出現時（Custom：收起面板、出現 Intensity 條後）應跳一次性對話框，說明 My AI Artwork 只保存 100% 版本，並有 Don't show again。",
+    "shots": ["b_p0118_generating.png", "b_p0118_first_result_bubble.png", "b_p0118_after_intensity_drag.png", "b_p0118_retry_done.png", "b_p0118_panel_closed.png"],
+    "sideEffects": "The new bubble is legible (dark text on a light peach bubble, pointing at the Artwork key), shows once, and goes away on a tap; Intensity resets to 100 on the new generation.",
+    "other": "The repo spec (26 10E rules, read 2026-11-17) lists both this bubble (D1-11/D1-15) and a separate intensity_notice_dialog (D1-15). If the PM comment RD cites (AI-Hair node 3287-93, comment 2001586155) replaced the dialog with the bubble, this would count as fixed: check that comment before filing the QR. The Custom panel still collapses by itself on Generate (P0149 behaviour), so RD's 'panel first, then close' order was tried by reopening and closing the panel by hand."
+  }
+]

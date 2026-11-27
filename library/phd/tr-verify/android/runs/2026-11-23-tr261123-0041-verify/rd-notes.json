@@ -1,0 +1,184 @@
+{
+ "PHA262026P0078": [
+  {
+   "RootCause": "Not Implemented",
+   "Solution": "Implemented",
+   "Function": "only affect swipe collage room.\nVerify using the latest build.",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0079": [
+  {
+   "RootCause": "Not Implemented",
+   "Solution": "Implemented",
+   "Function": "only affect swipe collage room.\nverify using the latest build.",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0081": [
+  {
+   "RootCause": "Verify using the latest build.",
+   "Solution": "Verify using the latest build.",
+   "Function": "only affect swipe collage room.",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0086": [
+  {
+   "RootCause": "ui modify",
+   "Solution": "ui modify, remove credit button",
+   "Function": "only affect swipe collage room",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/d484ee8e"
+  }
+ ],
+ "PHA262026P0088": [
+  {
+   "RootCause": "需要點畫布 水滴提示就會跑上去",
+   "Solution": "需要點畫布 水滴提示就會跑上去",
+   "Function": "需要點畫布 水滴提示就會跑上去",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0090": [
+  {
+   "RootCause": "ui modify",
+   "Solution": "ui modify",
+   "Function": "only affect swipe collage room",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/714b62076d2573e6f793776c25849eab712a32fc\n714b62076d2573e6f793776c25849eab712a32fc"
+  }
+ ],
+ "PHA262026P0091": [
+  {
+   "RootCause": "ui modify",
+   "Solution": "ui modify",
+   "Function": "only affect swipe collage room.",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/714b62076d2573e6f793776c25849eab712a32fc\n714b62076d2573e6f793776c25849eab712a32fc"
+  }
+ ],
+ "PHA262026P0093": [
+  {
+   "RootCause": "Verify using the latest build.",
+   "Solution": "Verify using the latest build.",
+   "Function": "only affect swipe collage room.",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0095": [
+  {
+   "RootCause": "Verify using the latest build.",
+   "Solution": "Verify using the latest build.",
+   "Function": "only affect swipe collage room",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0096": [
+  {
+   "RootCause": "ui modify",
+   "Solution": "ui modify",
+   "Function": "Verify using the latest build.\nonly affect swipe collage room.",
+   "Changeset": ""
+  }
+ ],
+ "PHA262026P0107": [
+  {
+   "RootCause": "Each chip and suggestion fills a full-width row of its FlexboxLayout, and the click listener was on that row while the visible bubble only wraps its text.",
+   "Solution": "ChipsViewHolder / SuggestionsViewHolder: the click listener is on the bubble instead of the row.\nitem_chat_chip.xml / item_chat_suggestion.xml: the bubble's rippleColor is transparent. A clickable MaterialCardView otherwise draws Material's default press ripple, which these bubbles never had.\nTests: ChatChipTapAreaUITest taps beside and on the bubble of a chip and of a suggestion. ChipsViewHolderUITest's click test now clicks the bubble instead of the row.",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2187"
+  }
+ ],
+ "PHA262026P0118": [
+  {
+   "RootCause": "It sync the PM's comment. In Custom case, show the panel first -> close -> intensity\nhttps://www.figma.com/design/vhIp15PMJcwOcWJ6E9Q4JE/AI-Hair?node-id=3287-93&t=xEAtfSa3vukqvKqd-0#2001586155",
+   "Solution": "It sync the PM's comment. In Custom case, show the panel first -> close -> intensity",
+   "Function": "N/A",
+   "Changeset": "N/A"
+  },
+  {
+   "RootCause": "It's not implement yet.",
+   "Solution": "Implement it",
+   "Function": "N/A",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/ad9d55256ffcef437a93f45df92f0624eaeb8907"
+  }
+ ],
+ "PHA262026P0120": [
+  {
+   "RootCause": "BatchRoomHistory.canApplyToAll read one edit history shared by all batch photos and ignored which photo each edit was made on. After an edit on photo 1, 「All」 stayed enabled on photo 2 even though photo 2 had no change of its own. Tapping it there would copy photo 2’s unedited settings to every other photo.",
+   "Solution": "「All」 now depends only on the shown photo. It is enabled once that photo has its own change, and disabled again after the photo applies All or is given All by another photo, until the photo is edited again. This works the same way in Adjust and Crop, and the button updates on every photo switch. Tests were updated for the new rule.",
+   "Function": "N/A",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2169/changes/dae40e07e3c1d1ae7c573068780c1444875b73f5"
+  }
+ ],
+ "PHA262026P0125": [
+  {
+   "RootCause": "A batch photo opens in Crop & Rotate with the Original ratio and a crop box that fills the whole photo. CropTransformBuilder.withExactRatio keeps the box inside the photo with coerceIn(imageLeft, imageLeft + imageWidth - width). When the box fills the photo, the maximum should equal the minimum, but double rounding can make the maximum slightly smaller (e.g. 310.83187499999997 < 310.831875). coerceIn then throws IllegalArgumentException and the app crashes. Whether this happens depends on the photo size and the screen size.",
+   "Solution": "Clamp the box’s offset from the photo’s edge to [0, room], where room = imageWidth - width is never allowed below 0. The range can no longer be empty, and a box that fills the photo sits at the photo’s edge. The box size is unchanged. Unit tests using the values from the crash log were added.",
+   "Function": "N/A",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2169/changes/6d85a26abe82de83fb4ffbb166a32abd7d5270b0"
+  }
+ ],
+ "PHA262026P0126": [
+  {
+   "RootCause": "already solved on latest build",
+   "Solution": "already solved on latest build",
+   "Function": "low",
+   "Changeset": "already solved on latest build"
+  }
+ ],
+ "PHA262026P0127": [
+  {
+   "RootCause": "already solved in latest build",
+   "Solution": "already solved in latest build",
+   "Function": "N/A",
+   "Changeset": "already solved in latest build"
+  }
+ ],
+ "PHA262026P0130": [
+  {
+   "RootCause": "Crashlytics (20.19.0): IllegalStateException \"Cannot call this method while RecyclerView is computing a layout or scrolling\" from ReelCreatorPickerTray.onThumbnailLoaded. The tray loads a thumbnail by launching on the view's lifecycleScope (Dispatchers.Main.immediate), so the coroutine starts inside onBindViewHolder. When the IO load finishes before the coroutine suspends (a missing file, a Glide memory-cache hit), withContext returns at once and notifyDataSetChanged() runs inside that layout pass.",
+   "Solution": "onThumbnailLoaded posts notifyDataSetChanged() to the tray's RecyclerView while it is computing a layout, and calls it at once otherwise. The banner thumbnails are still set at once.",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2180"
+  }
+ ],
+ "PHA262026P0132": [
+  {
+   "RootCause": "PM Spec update.",
+   "Solution": "PM Comment:\n\"圖片數量不符合 template CMS 定義的話 Next btn 會是 disable; 不設紅字\"\n\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7340-961#2003317045",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2156"
+  }
+ ],
+ "PHA262026P0133": [
+  {
+   "RootCause": "The app's Image table can hold several image ids for one photo file: FileID is not unique, and the get-or-insert lookups (ImageDao.getImageIdByFileId, Item.imageId) check and insert without a lock. The picker grid's first bind reads item.imageId on the main thread (Reel Creator badge) and on IO (thumbnail) at the same time, so both can insert, and the cell keeps whichever id was written last. The Reel Creator selection compared image ids. A photo remembered on Next (or carried back from the confirm page) under one id did not match its grid cell's other id after the picker reopened: Import left it unticked, and tapping it selected the same photo a second time.",
+   "Solution": "ReelCreatorPickerSelection takes a fileIdOf resolver (ImageDao.getFileId in the picker) and compares photos by file id in isSelected, orderOf, isInvalid, select, deselect, markInvalid, importIds and restore. It keeps the image id each photo first came in with, so Next returns the same kind of ids as before. An id whose file is unknown stays a photo of its own and is looked up again. deselect returns the id it removed.\nLibraryPickerActivity: a tap that unpicks a photo cancels the content check of the id the selection held, which may be the photo's other image id. A tap whose file read ends after the same photo came in under another id (Import or restore) no longer adds it.\nThe duplicate rows themselves (the ImageDao race) are not changed here.",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2184"
+  }
+ ],
+ "PHA262026P0134": [
+  {
+   "RootCause": "Spec update.",
+   "Solution": "PM comment: \n\"output = 9:16 不用寫\"\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-931#2001408603\n\n\"11/10 更新, 提示灰字拿掉\n原本有寫 \"Long press to reorder & tap x to remove\"\"\nhttps://www.figma.com/design/m0AHKf3UhHVYlf8kcXPoU0/CineStory?node-id=7336-931#2001124941\n",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2156"
+  }
+ ],
+ "PHA262026P0135": [
+  {
+   "RootCause": "Not handle well.",
+   "Solution": "While the photo count is outside the template’s min–max, the “n/max” part of “Your photos (n/max)” is drawn in the design-system error colour (light #BA1A1A / dark #DE3730); “Your photos (” and “)” keep the title colour. Back in range the whole title returns to normal. Generate stays disabled with the “Please upload at least N photos” toast, as before.",
+   "Function": "n/a",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2181"
+  }
+ ],
+ "PHA262026P0147": [
+  {
+   "RootCause": "After the app restarted, the saved imageId no longer found the original photo, and re-editing started from the original instead of the adjusted photo.",
+   "Solution": " Store originalUri on slot photos and load originals from it, re-resolving imageId on draft load. When saving a draft, use the adjusted image as the photo's base.",
+   "Function": "only affect swipe collage room.",
+   "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/d77c385e6b8f72270c683f10f1aa6378bb6b9c50\nd77c385e6b8f72270c683f10f1aa6378bb6b9c50"
+  }
+ ]
+}

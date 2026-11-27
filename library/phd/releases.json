@@ -1,0 +1,383 @@
+{
+ "_note": "The GM date of each app version, per platform, from the Kanban roadmap (user, 2026-11-26): the date on the release's own row of the sheet. The Dashboard shows it beside the version. A snapshot (the sheet needs a Google sign-in): update it when the roadmap moves a date or adds a version. Each release also lists its roadmap items (priority, category, title as on the sheet; user, 2026-11-27): the Dashboard shows the next version's items that no feature table covers yet.",
+ "source": "Kanban App Compiled Roadmap (Google Sheets 17ohWkcbvz9qhg-ZoYImtGWFcAxti4myKib4ePd1b74Q)",
+ "tab": "PhDM Roadmap",
+ "read": "2026-11-27",
+ "releases": [
+  {
+   "platform": "android",
+   "version": "20.18.0",
+   "gm": "2026-10-29",
+   "items": [
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Adjustment: supports subject detection"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "Adjustment: AI Exposure (GPT Image 2.5 Flare)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Background: Upgrade model (GPT Image 2.5 Flare)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "GAI Removal: Upgrade to Flux 2 Klein"
+    },
+    {
+     "priority": "1",
+     "category": "UX",
+     "title": "AI Removal: Feature room UI Refinement"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Glow Up: Upgrade to Flux 2 Klein & feature room re-layout"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "Image to Video: supports start/end frame in Custom"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Enhance: Support 4 Different Scenarios & layout redefined"
+    },
+    {
+     "priority": "1",
+     "category": "UX",
+     "title": "AI Enhance: Feature room UI Refinement"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Hair Color (GPT Image 2.5 Flare)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "Character Motion Swap: supports SCAIL-2 & support model list (CMS config)"
+    },
+    {
+     "priority": "1",
+     "category": "MX",
+     "title": "Black Friday Sale"
+    },
+    {
+     "priority": "1",
+     "category": "UX",
+     "title": "AIGC Metadata"
+    },
+    {
+     "priority": "1",
+     "category": "UX",
+     "title": "AI Edit Agent: support image tag"
+    },
+    {
+     "priority": "2",
+     "category": "GAI",
+     "title": "AI Creative Studio: support customized age, user name"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Image to Video: add info icon (why BGM setting cannot be changed)"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Camera UI refinement for 1:1, 3:4, 9:16"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.18.1",
+   "gm": "2026-11-11",
+   "items": [
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Enhance: Standard default locate in Portrait"
+    },
+    {
+     "priority": "1",
+     "category": "MX",
+     "title": "Yearly & Monthly SKU & UI text adjustment  (300 credits -> 100 credits)"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.19.0",
+   "gm": "2026-11-25",
+   "items": [
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Batch editing: AI enhance, crop & rotate, adjustments"
+    },
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Year End Recap: Swipe Collage"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "Year End Recap: Creative Reel (Opus 5.5)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Transition (Seedance 2.5)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Hair Color: support custom (GPT Image 2.5)"
+    },
+    {
+     "priority": "1",
+     "category": "MX",
+     "title": "Xmas & NY Sale"
+    },
+    {
+     "priority": "1",
+     "category": "UX",
+     "title": "Launcher Design Refinement"
+    },
+    {
+     "priority": "2",
+     "category": "GAI",
+     "title": "New mechanism for one-time free trial"
+    },
+    {
+     "priority": "2",
+     "category": "GAI",
+     "title": "AI Enhance: switch default mode to non GAI version"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "CMS Config Opening Intro Video & Feature Banner"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Image to video: support to reuse model settings in My artwork"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Add reset / undo / redo buttons for Cutout"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "My Artwork: Add report button in all GAI results (for google review)"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "My Artwork: add category list"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "GenAI dialog string refinement"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "AI Replace: Ref. Image UX Flow Refinement"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "All Feature room：remove top bar feature naming"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "App Verification: Add dialog for users with no UUID detected"
+    },
+    {
+     "priority": "2",
+     "category": "RD",
+     "title": "Log events: AP send data to Uma for Mixpanel sunset project"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.19.5",
+   "gm": "2026-12-09",
+   "items": [
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Edit Agent: switch I2I model to GPT Image 2.5 sunburst medium"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Enhance: all scenarios migrate to GPT Image 2.5 sunburst (medium quality)"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "My Artwork: Handle AI Removal result errors"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "AI Hairstyle: add category"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.19.7",
+   "gm": "2026-12-23",
+   "items": [
+    {
+     "priority": "1",
+     "category": "RD",
+     "title": "Log events: sunset Mixpanel and move data to Uma"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Launcher: support different ratio in trending banner (tbd)"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.20.0",
+   "gm": "2027-01-13",
+   "items": [
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Batch editing: add text, filter, backgound, sticker"
+    },
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Swipe Collage: support Custom & Cutout when adding image (TBD)"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Edit Agent (Edit by Chat) Phase 3: guide users to native feature room"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Creative Studio: support inpiration"
+    },
+    {
+     "priority": "1",
+     "category": "UI",
+     "title": "Foldable Phone Support: Phase 1 (Google Play Requirement)"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Batch editing UX Refinement"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Swipe Collage: support Adjustment & Filter in canvas"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Image to Video: sample photo support localization"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "VIP UI differ in Launcher"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "AI Replace: text prompt mode quality"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "AI Agent: video generate cost and duration dialog refinement"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Filter: add favorite UI UX optimzation"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.21.0",
+   "gm": "2027-03-03",
+   "items": [
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Edit Agent (Edit by Chat) Phase 4: support TTI"
+    },
+    {
+     "priority": "1",
+     "category": "GAI",
+     "title": "AI Removal: support text & passerby segmentation"
+    },
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Swipe Collage: support video input (TBD)"
+    },
+    {
+     "priority": "1",
+     "category": "Photo",
+     "title": "Collage: support video input (TBD)"
+    },
+    {
+     "priority": "1",
+     "category": "UI",
+     "title": "Foldable Phone Support: Phase 2 (Google Play Requirement)"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Sticker: UIUX optimization"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Edit room: adjust the animation for entering feature, phase 1"
+    },
+    {
+     "priority": "2",
+     "category": "UX",
+     "title": "Refine \"Network error\" dialog popup timing (AI Hair volume, AI glow up)"
+    }
+   ]
+  },
+  {
+   "platform": "android",
+   "version": "20.22.0",
+   "gm": "2027-04-07",
+   "items_note": "The sheet lists the long-range backlog under this version; not copied."
+  }
+ ]
+}

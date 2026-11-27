@@ -1,0 +1,39 @@
+{
+ "tr": "TR261123-0041",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/23",
+ "version": "20.19.0",
+ "build": "202611231214",
+ "buildDay": "1123",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611231214 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R7)",
+ "testResult": "PHD-A - Bug verification [OK=1, Fail=0]",
+ "env": {
+  "device": "Google Pixel 8a / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611231214 (versionCode 90201902, SR PHA261029-01), installed by the tester 2026/11/23 14:24",
+  "scope": "every eBug on this TR's verify list (PHD-A rule)"
+ },
+ "observations": [],
+ "rows": [
+  {
+   "bug": "PHA262026P0086",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Credit button reads 「--」 and opens nothing",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0086_enhance_page.png",
+    "screenshots/a_p0086_advanced_no_credit_button.png"
+   ],
+   "result": "OK",
+   "summary": "The AI Enhance page no longer shows the credit button; the tester accepts the changed UI."
+  }
+ ]
+}

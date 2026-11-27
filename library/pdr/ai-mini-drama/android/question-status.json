@@ -1,0 +1,124 @@
+{
+  "Q-1": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "The app spells the template with its apostrophe: 「Six Things You Didn't Know」 on the More page and on the detail page (TC-010 Pass, TC-267 Pass), so the Design label without it is the typo. The rows already expect the apostrophe."
+  },
+  "Q-2": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "On the idea input the app does what the older Design frame draws: text is cut at 1,000 characters and a system toast 「You've reached the maximum length」 shows, with no counter and no 「You've reached the 1,000-character limit.」 (TC-015, TC-016, TC-017 Fail defect). The same-OS ticket asking for the PM §13.11 warning, DRA262610P0127, was Cancelled by RD and not refiled (A4 and A7 dedupe.txt), so TC-015, TC-016 and TC-017 still expect §13.11 and change at the next draft unless the user refiles it. The character description is Q-12."
+  },
+  "Q-3": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "The app has no Confirm step: 「Generate video」 on the video settings card charges at once (TC-115 and TC-501: 14700 → 14580 straight from the card), as the rows already expect (Design first). The 「You'll have {n} left」 line the rows also expect is missing; that is the existing ticket DRA262610P0354 (TC-115 Fail defect), not this question."
+  },
+  "Q-4": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "The build ships the ⓘ dialog for a 4xx failure: a scene image failed with error_code 4000 shows 「Couldn't create image ⓘ」 / 「Your credits have been refunded. The service is busy — try again later.」 with Edit, and ⓘ opens 「Couldn't generate this image」 with the terms-of-service text and 「Got it」 (TC-067 Pass, TC-489 Pass), so the 10/6 plan of one copy with no dialog is not what v1 does. The 5xx card with no ⓘ was not seen (TC-068 Blocked, no fault switch on Android 16.8)."
+  },
+  "Q-5": {
+    "state": "filed",
+    "by": "Q1 (2026-11-26-q1-questions, 16.9.0.2611231)",
+    "at": "2026-11-26",
+    "drafted": "ISS-AMDA-72 (ebugs/2026-11-26-q1, [AIAgent][UI], BugBelong PM; filed DRA262611P0324 on TR261123-0070, 2026-11-26)",
+    "codes": [
+      "DRA262611P0324"
+    ],
+    "note": "「Every frame is done. Ready to create your video?」 shows nowhere on 2611231 (Stage): after a new storyboard nothing stands between the Storyboard Result and 「Choose your video settings」, before or after the Storyboard Preview plays (TC-581 Fail question); after the Preview video the chat asks 「Looking good! Ready for the full video?」 above 「Create the rest of the video (60 sec)」 (TC-582 Fail question), and after the rest of the video 「Ready for the next episode?」. The exported session has the string nowhere; the APK holds only the key beat.all_videos_done.text (text comes from the server). PM decides whether storyboard.all_videos.q and ladder.beat_video.q are still used and where. Rows to change at the next draft: TC-581 / TC-582 Expected Result (record → the ruling); TC-086 / R-075 card title now reads 「Create the rest of the video (60 sec)」 (60 s = DRA262610P0159, PM, Close)."
+  },
+  "Q-6": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the manual outline editor is not in the 10/16, 10/19 or 10/21 PM spec, so there is nothing left to decide and no row depends on it."
+  },
+  "Q-7": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the storyboard text/image-version editor and thumbnail refresh are not in the current PM spec; no row depends on it."
+  },
+  "Q-8": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: separate From Text / From Photo routes are not in the current PM spec; no row depends on it."
+  },
+  "Q-9": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the aspect-ratio choice is not in the current PM spec; no row depends on it."
+  },
+  "Q-10": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: timeline reorder is not in the current PM spec; no row depends on it."
+  },
+  "Q-11": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md, PM 10/16–10/21)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the inspiration replace dialog is not in the current PM spec; no row depends on it."
+  },
+  "Q-12": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user, REQ-028): the newer Design frame wins for the character description. The app follows it in the field: 1,050 characters kept, red 「1050/1000」, 「You've reached the 1,000-character limit.」, Generate grey, and usable again under 1,000 (TC-354 Pass). The expanded editor still cuts the text to 1,000 and writes it back (TC-051 Fail defect, existing ticket DRA262610P0335)."
+  },
+  "Q-13": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "Answered by the PM main flow and confirmed on the device: a 6-scene storyboard's video settings card reads 「Preview - 30 sec」 / 「Full Video - 90 sec」 = 15 s × 6 (TC-345 Pass)."
+  },
+  "Q-14": {
+    "state": "determined",
+    "by": "ruling 2026-10-22 (REQ-028)",
+    "at": "2026-11-25",
+    "note": "Closed 2026-10-22 (REQ-028): only the PM E4 frame exists, so a failed Storyboard Preview offers 「Create video anyways」. The device has not shown it yet: TC-355 is Blocked (no fault switch on Android 16.8; the Wi-Fi-drop storyboard gave the 「Storyboard preview unavailable…」 card of TC-077 instead)."
+  },
+  "Q-15": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): the PM 10/16 three models are tested, and the app has them: Best / Standard / Fast = Seedance 2.5 / 2.0 / 2.0 Mini (TC-079, TC-347). The default left TBD is Standard on this build (「Seedance 2.0 · Balanced quality for everyday stories」, TC-079). Best quotes the Standard price (◆120 / ◆360) instead of 6 credits per second: TC-080 Fail defect, existing ticket DRA262610P0274."
+  },
+  "Q-16": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): the PM 10/16 charged character change is tested, and the app has it: 「Ready to update your characters?」 with an 「Update characters」 card at ◆4, charged once on Generate (15023 → 15019), then a new Story Outline & Characters Result card. The copy differs from the PM (no 「• 1 character」, no 「Here's your updated cast.」, a storyboard-updated message before Generate): TC-045 and TC-349 Fail defect."
+  },
+  "Q-17": {
+    "state": "determined",
+    "by": "A7 (2026-10-29-a7-full, 16.8.0)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): the PM 10/20 §13.2 ③ rule applies. On the device the earlier storyboard card is left as it was, but no new storyboard card is added after a scene image update: the chat goes straight to 「Choose your video settings」 (TC-073 Fail defect, existing ticket DRA262610P0134)."
+  },
+  "Q-18": {
+    "state": "filed",
+    "by": "Q1 (2026-11-26-q1-questions, 16.9.0.2611231)",
+    "at": "2026-11-26",
+    "drafted": "ISS-AMDA-71 (ebugs/2026-11-26-q1, [AIAgent][UX], BugBelong PM; filed DRA262611P0323 on TR261123-0070, 2026-11-26)",
+    "codes": [
+      "DRA262611P0323"
+    ],
+    "note": "On the SM-A5360 (Stage, account cltqauiap2@gmail.com, Free) Google Play's Country and profiles names no current country and offers only 「Switch to the Taiwan Play Store」, while every price is NT$ (packs NT$330 – NT$6990): a non-US/JP billing region. The landing shows 6 templates and More all 20 in 5 categories (5 / 5 / 4 / 4 / 2) (TC-580 Fail question). So Stage applies no US / JP limit; Production and a confirmed US or JP store were not checked (the run does not change the Play account). PM decides what 「day 1 只有 US & JP」 limits. Row to change at the next draft: TC-580's Expected Result (record → the ruling)."
+  },
+  "Q-19": {
+    "state": "not-reached",
+    "by": "Q1 (2026-11-26-q1-questions, 16.9.0.2611231)",
+    "at": "2026-11-26",
+    "note": "Still no 「More ideas +」 chip on 16.9.0.2611231: the Q1 template chat (After Closing) showed only the input box and mic above the keyboard area at every stage read (TC-581, TC-582 page sources), so there is nothing to tap (TC-019 Fail defect on 16.8.0; the missing chip is DRA262610P0380, filed from A4). TC-019 was not in phase Q1. What a tap shows can only be recorded once the chip exists."
+  }
+}

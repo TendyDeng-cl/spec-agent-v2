@@ -75,3 +75,25 @@ The "Accepted English-identical" column counts the strings the script flagged as
 | TD-A24 | FAR | Panel (generate button) | Try & Enhance | امتحان کنید & بهبود | Mixes an imperative verb with a bare noun around "&". | امتحان و بهبود |
 | TD-A25 | HEB | Don't show again checkbox | Don't show again | אל להציג שוב | Ungrammatical: אל needs a future-tense verb, and an infinitive takes לא. | לא להציג שוב |
 | TD-A26 | HEB | Across the feature | Try It Now / Tap … / Drag to choose… / Shorten your selection… | נסה עכשיו / הקש… / גררו… / קצרו… | The way the user is addressed switches between masculine singular (נסה, הקש, בחר, שפר) and plural/neutral (גררו, קצרו, הקישו, התאימו), even within one feature. "Try & Enhance" also mixes forms (נסה & לשפר). | Use the plural/neutral form throughout: נסו עכשיו, הקישו על שפרו, נסו ושפרו |
+
+## Top-up 2026-11-26: 3 strings the first read missed
+
+The first read dropped every string holding a line break (fixed in `scripts/mui-strings.ts` on 2026-11-25). Re-read from the 2611201 APK into `mui-topup/` (68 strings, 65 + these 3): `video_enhance` (two-line label), `video_enhance_v2_refunded_content` (refund message), `video_enhancer_original_source_hint_dialog_content` (dialog when the clip has effects). None of the three was seen on the phone walks, so the fails are APK-only (held like `video_enhance_hint`).
+
+### Fails
+
+| Language | Key | English | App shows | What is wrong |
+|---|---|---|---|---|
+| JPN | video_enhance_v2_refunded_content | Credits have been refunded.⏎The server may be busy. … | クレジットを返却しました。サーバーが混み合っている…（no line break） | The line break after the first sentence is missing (every other language keeps it), so the refund message runs as one block. |
+| ARA | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … سيطبق Video Enhance على الفيديو المصدر الأصلي فقط … | 「Video Enhance」 left in English. Elsewhere the feature is translated (تحسين الفيديو بالذكاء الاصطناعي). |
+| HEB | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance יחול רק על סרטון המקור … | 「Video Enhance」 left in English. Elsewhere the feature is translated (שיפור וידאו ב-AI). |
+
+### Translation doubts
+
+| ID | Language | Screen | English | App shows | Why it seems off | Better wording |
+|---|---|---|---|---|---|---|
+| TD-A27 | ARA | Two-line label (video_enhance) | Video⏎Enhance | فيديو⏎تحسين | Keeps the English word order, so it reads "video / enhancement" backwards; Arabic puts the noun first. | تحسين⏎الفيديو |
+| TD-A28 | VIT | Two-line label (video_enhance) | Video⏎Enhance | Video⏎Cải thiện | English word order ("Video Improve"); Vietnamese puts the verb first. Also a third word for Enhance (TD-A17). | Nâng cao⏎video |
+| TD-A29 | VIT | Effects hint dialog | … Video Enhance will only apply … | … Nâng Cao Video chỉ áp dụng … | Title case in the middle of a sentence, and 「Nâng cao」 here vs 「Cải thiện」 on the label. | … Tính năng nâng cao video chỉ áp dụng … |
+| TD-A30 | KOR | Effects hint dialog | … Video Enhance will only apply … | … 비디오 향상기는 … | 「비디오 향상기」 (video enhancer) where the label and feature say 동영상 향상 (same split as TD-A9). | … 동영상 향상은 … |
+| TD-A31 | THA | Effects hint dialog | … Video Enhance will only apply … | … ตัวปรับคุณภาพวิดีโอจะถูกนำไปใช้ … | A different name from the label 「เครื่องมือปรับปรุงวิดีโอ」. | Use the label's name in both places |

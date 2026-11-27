@@ -1,0 +1,264 @@
+################ PHA262026P0078
+==============================================================================
+PHA262026P0078  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Text and text bubble content cannot be typed or edited
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:32
+  TR         TR261111-0042
+  Reproduce  4/4   previous build: Unknown
+
+################ PHA262026P0079
+==============================================================================
+PHA262026P0079  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame tool bar has no Flip H, Flip V or Shadow, and the floating icons no Lock
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:34
+  TR         TR261111-0042
+  Reproduce  3/3   previous build: Unknown
+
+################ PHA262026P0081
+==============================================================================
+PHA262026P0081  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Image tool bar labels are not the spec's Flip H / Flip V / Adjust / Enhance
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:40
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0086
+==============================================================================
+PHA262026P0086  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Credit button reads 「--」 and opens nothing
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:53
+  TR         TR261111-0042
+  Reproduce  2/2   previous build: Unknown
+
+################ PHA262026P0088
+==============================================================================
+PHA262026P0088  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Background eyedropper pin cannot be moved, so no photo colour can be picked
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:03:59
+  TR         TR261111-0042
+  Reproduce  4/4   previous build: Unknown
+
+################ PHA262026P0090
+==============================================================================
+PHA262026P0090  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Sticker panel lacks the store, Favorites, AI Sticker, More tile and ✕ / ✓
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:06
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0091
+==============================================================================
+PHA262026P0091  —  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Text Bubble panel has no 「∅」 none item first and no ✕ / ✓ bar
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:09
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0093
+==============================================================================
+PHA262026P0093  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Ratio change resizes the canvas from its centre and squashes the frames
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:15
+  TR         TR261111-0042
+  Reproduce  3/3   previous build: Unknown
+
+################ PHA262026P0095
+==============================================================================
+PHA262026P0095  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages has no ✓ or ✕; leaving keeps every page change without 「Discard changes?」
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:21
+  TR         TR261111-0042
+  Reproduce  3/3   previous build: Unknown
+
+################ PHA262026P0096
+==============================================================================
+PHA262026P0096  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages keeps ↶ and ↷ on screen and they undo page changes there
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-12T21:04:23
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0107
+==============================================================================
+PHA262026P0107  —  PHD-A 20.19.0 - AI_Edit_Agent: The [Suggestion] button is still triggered after tapping the blank space to the right of the [Suggestion] button
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611061839   fixed in 20.19.0.v202611231214
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T09:47:55
+  TR         TR261111-0042
+  Reproduce  3/3   previous build: Unknown
+
+################ PHA262026P0118
+==============================================================================
+PHA262026P0118  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: First Custom result shows no one-time My AI Artwork 100% dialog
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611181947
+  Severity   3   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-13T15:03:20
+  TR         TR261111-0042
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0120
+==============================================================================
+PHA262026P0120  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: 「All」 stays enabled on a photo with no change of its own after switching photos
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611132003   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-17T10:14:41
+  TR         TR261113-0038
+  Reproduce  2/2   previous build: Unknown
+
+################ PHA262026P0125
+==============================================================================
+PHA262026P0125  —  PHD-A 20.19.0 - [AIAgent] Batch_Editing: App crashes when Crop & Rotate shows a 2730 x 1535 or 1706 x 2559 photo
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611132003   fixed in 20.19.0.v202611231214
+  Severity   1   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-11-17T10:15:35
+  TR         TR261113-0038
+  Reproduce  4/4   previous build: Unknown
+
+################ PHA262026P0126
+==============================================================================
+PHA262026P0126  —  PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share without Prompts & Settings
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611132003   fixed in 20.19.0.v202611231214
+  Severity   2   Priority 2   BugBelong RD
+  Creator    IAN_SWEN   2026-11-17T17:09:28
+  TR         TR261113-0038
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0127
+==============================================================================
+PHA262026P0127  —  PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom palette: colour picked with Done is not added to the row as a new circle
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611111946   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-18T12:04:15
+  TR         TR261113-0038
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0130
+==============================================================================
+PHA262026P0130  —  PHD-A 20.19.0 - Reel_Creator: The APP crashes after tapping the [Import] button
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611132003   fixed in 20.19.0.v202611231214
+  Severity   1   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-11-18T17:50:02
+  TR         TR261113-0038
+  Reproduce  3/3   previous build: Unknown
+
+################ PHA262026P0132
+==============================================================================
+PHA262026P0132  —  PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker: imported count out of range shows no red tray text
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T14:55:18
+  TR         TR261118-0070
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0133
+==============================================================================
+PHA262026P0133  —  PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker Import: imported photos unticked; tapping one adds it twice
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611231214
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T14:55:22
+  TR         TR261118-0070
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0134
+==============================================================================
+PHA262026P0134  —  PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: no 「9:16」 ratio and no reorder hint
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T14:55:26
+  TR         TR261118-0070
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0135
+==============================================================================
+PHA262026P0135  —  PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: count below min (14/40) is not red
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611231214
+  Severity   3   Priority 3   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T14:55:29
+  TR         TR261118-0070
+  Reproduce  1/1   previous build: Unknown
+
+################ PHA262026P0147
+==============================================================================
+PHA262026P0147  —  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: App crashes on every open after it was closed with a canvas being edited
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611231214
+  Severity   1   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T16:36:52
+  TR         TR261118-0070
+  Reproduce  3/3   previous build: Unknown
+

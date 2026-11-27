@@ -1,0 +1,6 @@
+# Dedupe — Free trial / AI Video Try-On (Android, S23, 90201902 = 20.19.0.v202611231214), 2026-11-23, read-only
+# ecl_query.py dedupe (2 phrasings) --product "PhotoDirector Mobile for Android": 0 candidates.
+# ecl_query.py bugs --product "PhotoDirector Mobile for Android" --text: "Video_Try" (3), "Try_On" (20), "Free_Trial" (13),
+#   "free trial" (12), "trim" (4), "Free Video" (0), "2 seconds" (0), "Trim your video" (0), "Video Try-On" (0).
+# Result: no same-OS duplicate. Nearest: PHA262029-0005 (Close) AI_Video_Try_On/Character_Motion_Swap duration shows 4s
+#   instead of 3s — a duration label, not the free-video length; PHA262026-0356 (NewCreated) format-not-supported dialog.

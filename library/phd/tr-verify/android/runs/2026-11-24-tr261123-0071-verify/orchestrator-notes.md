@@ -1,0 +1,4 @@
+- 2026-11-24: user: P0106 shows 「Continue editing?」 → OK (foreground adb force stop noted as an observation).
+- 2026-11-24: user checked P0106 by hand: swiping the app away from Recents with the edit open, then re-entering Swipe Collage, shows 「Continue editing?」.
+- 2026-11-24: user: P0104 counts as OK (crown fixed; NEW absent taken as no CMS item marked new).
+- 2026-11-24: QR261124-0033 filed (OK=6, Fail=0), read back OK.

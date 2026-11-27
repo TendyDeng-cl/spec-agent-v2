@@ -1,0 +1,60 @@
+[
+  {
+    "bug": "PHA262026P0107",
+    "verdict": "FIXED",
+    "observed": "AI Edit Agent (Free trial, new chat): the 4 starter chips (Import a photo. I'll suggest edits! / Remove unwanted objects / Remove the reflection / Hair Toss & Glance) are now bubbles sized to their text (CardView bubble ends at x=708/589/501/449 px). 8 taps in the blank space far right (x=950) and just beside each bubble (bubble edge +20 px) triggered nothing: input stayed 'Tell AI Edit Agent your requirements'. After an edit (Blur the background) the 3 AI suggestion bubbles (Try a garden setting / Add a cinematic tone / Enhance blouse detail): 7 taps far right, at the screen edge and just beside each bubble triggered nothing (no fill, no send, credits unchanged). A long press on the blank row also did nothing. Tapping the bubble itself still works: 'Remove unwanted objects' filled its full prompt in the input, 'Add a cinematic tone' filled 'Give this portrait a refined, dramatic black-and-white film look...', a long press on 'Remove the reflection' filled its prompt.",
+    "summary": "Taps beside a chip or suggestion bubble, far right or right next to it, no longer trigger it, and tapping the bubble itself still fills its prompt, for both the starter chips and the AI suggestions.",
+    "shots": [
+      "d_P0107_picker.png",
+      "d_P0107_after_blank_taps.png",
+      "d_P0107_chip_tap.png",
+      "d_P0107_edit_result.png",
+      "d_P0107_after_sugg_blank.png",
+      "d_P0107_sugg_tap.png",
+      "recordings/d_P0107_press.mp4"
+    ],
+    "sideEffects": "None seen (places checked: starter chip column, AI suggestion bubbles after a result). Bubbles keep their shape, colour (orange first chip, dark others) and spacing; the press recording shows no ripple or press shade on the row or the bubble, as RD intends (transparent ripple, these bubbles never had one). One step past: the filled prompt shows in the composer with its clear (x) and send buttons.",
+    "other": "Spent 6 credits: an edit (Blur the background) was the only way to show the AI suggestion bubbles (1883 -> 1877)."
+  },
+  {
+    "bug": "PHA262026P0126",
+    "verdict": "FIXED",
+    "observed": "New Custom generation on this build: Image to Video > Custom, landscape photo '4 seascape_16x9_2730x1535' (HairColor album), prompt 'A calm camera pan across a colorful geometric landscape.', Kling 3.0, 5 s, Standard, Generate Background Sound Off, Generate 30 (1913 -> 1883). Completed after about 10 min. My AI Artwork > tabs swiped to Recent > Video > the new 00:05 Kling 3.0 tile: Save & Share shows the 'Prompts & Settings' heading with Kling 3.0 (model icon), chips '5s', 'std', 'Sound off', the prompt text and Reuse. Opening the same video from the Image to Video category shows the identical card.",
+    "summary": "The new Custom video opened from My AI Artwork > Recent > Video shows 'Prompts & Settings' with Kling 3.0, 5s, std and Sound off next to the prompt, the same as from the Image to Video category.",
+    "shots": [
+      "d_P0126_settings.png",
+      "d_P0126_after_generate.png",
+      "d_P0126_artwork_done.png",
+      "d_P0126_i2v_cat_top.png",
+      "d_P0126_recent_video.png",
+      "d_P0126_recent_saveshare.png",
+      "d_P0126_recent_saveshare_scrolled.png",
+      "d_P0126_reuse.png"
+    ],
+    "sideEffects": "None seen (places checked: Save & Share from Recent > Video and from Image to Video category, scrolled to the share row, ad and 'You might also like'). The card is legible, chips not clipped, Reuse aligned with the model name. One step past: Reuse opens Custom with Kling 3.0, the prompt (56/2500) and Generate 30.",
+    "other": "Reuse from Save & Share leaves the photo slot empty (model and prompt are filled); not judged here, see the i2v-reuse table for whether the source photo should come back."
+  },
+  {
+    "bug": "PHA262026P0130",
+    "recheck": true,
+    "verdict": "FIXED",
+    "observed": "Recheck after a SUCCESSFUL generation: Cinematic Reel Creator > Micro Cinema (Cinematic Styles, 1 photo), HairColor portrait, Generate 48 (1877 -> 1829); the job finished (My AI Artwork > Reel Creator tile 'Micro Cinema' 00:08, expires 2027/11/23, thumbnail shown). Back to the feature: a 1-photo template shows no Import prompt, so 4 photos were picked on Selfie Shake > Next > back to set the last pick. Import 1: Walking Shift (6) > Use Template > prompt 'Use the 4 photos you picked last time? +1 Import' > tap a photo > Import: the 4 photos come in ticked 1-4 in grid and tray, no crash. Import 2: Travel Recap (3) > tap a photo > Import: same 4 photos ticked 1-4, no crash. App pid 13338 unchanged throughout; logcat -b crash has nothing after 15:40 (only the 14:47 / 14:48 Swipe Collage entries).",
+    "summary": "After a successful Reel Creator generation, Import on the 'Use the 4 photos you picked last time?' prompt worked on Walking Shift and Travel Recap with no crash and nothing new in the crash buffer.",
+    "shots": [
+      "d_P0130_template.png",
+      "d_P0130_confirm.png",
+      "d_P0130_generating.png",
+      "d_P0130_generated.png",
+      "d_P0130_selfie_confirm.png",
+      "d_P0130_prompt1.png",
+      "d_P0130_before_import1.png",
+      "d_P0130_import1.png",
+      "d_P0130_before_import2.png",
+      "d_P0130_import2.png",
+      "d_P0130_import3.png",
+      "logs/crash-D.txt"
+    ],
+    "sideEffects": "None seen (places checked: picker grid and tray after Import on two templates). Thumbnails load in the tray with their x buttons, no blank or duplicate cells.",
+    "other": "As in segment C: the photo tapped just before Import is dropped (Import replaces the selection with the last pick), and Travel Recap (max 3) accepts 4 imported photos with Next disabled. 1-photo Cinematic Styles templates show no Import prompt."
+  }
+]

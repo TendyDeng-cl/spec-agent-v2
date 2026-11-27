@@ -1,0 +1,7 @@
+# Cinematic Reel Recommendation Android, entry round E1 (Q-8, Q-9, Q-10): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-26
+# Pool read with `ecl_query.py bugs --text … --product "PowerDirector Mobile for Android" --limit 300`: 「Cinematic Reel」 83, 「CineStory」 3 tickets.
+# ISS-CRA-05 (Q-8, Q-9, toolbar place): DRA262608-0041 (closed, 16.6.0, 「Add Cinematic Reel Creator entry to the Photo/Photo PiP toolbar」) added the entry without naming a place; related, not a duplicate (the question is where). DRA262607-0095 (AI Magic toolbar, closed): other entry.
+# ISS-CRA-06 (Q-10, system Back while generating and on the result page): no ticket about Back on Analyzing & Generating or the result page. DRA262607-0072 (「Retry」 after 「View later」, closed) and DRA262607-0075 (download UI on first open, closed): other findings.
+# No same-OS ticket covers either question. Nothing commented on.
+# Filed 2026-11-27 (TR261125-0064): ISS-CRA-05 (Q-8, Q-9) = ISS-AWA-20 = DRA262611P0341 (AIGC Watermark E1, same OS: Cinematic Reel Creator on the Photo / PIP Photo toolbars' first layer, not under Effects); not filed again. ISS-CRA-06 filed as DRA262611P0359.
+- DRA262611P0341 (ISS-AWA-20) cancelled on eCL by the user 2026-11-27: 「AI Remove (4/E IOS)」 is iOS only (REQ-020).

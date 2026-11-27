@@ -56,10 +56,13 @@ User Sign in › Sign In (Email/Password, Sign Up, Forgot Password, Google / Fac
 fields and errors are cleared on re-entry.
 
 ## KP-036 Setting the appearance
-- kind: howto · platform: ios · use: run · tags: appearance, dark-mode, settings
-- source: exploration KB mine-page.md (deep dive 2026-09-01, 16.8.0 build 188407, TestFlight, Developer Server, VIP)
+- kind: howto · platform: both · use: analysis, run · tags: appearance, dark-mode, light-mode, settings
+- source: exploration KB mine-page.md (deep dive 2026-09-01, 16.8.0 build 188407, TestFlight, Developer Server, VIP); Android: christmas-new-year-sale R2 (DRA262611P0331, 2026-11-27, observed)
 
-Home ☰ › Preferences › Appearance: 「Light mode」 / 「Dark mode」 / 「Device Settings」 (default Device Settings).
+Home ☰ › Preferences › Appearance: 「Light mode」 / 「Dark mode」 / 「Device Settings」 (default Device Settings). The
+app's setting overrides the phone's dark / light switch (on Android too), so a row that needs an appearance sets it
+here in its Precondition. Design files often draw a themed screen (sale IAP page, banners) in both appearances with
+different art per appearance; each one is its own row (`analysis.md` pass 10, *Every drawn appearance is a variant*).
 
 ## KP-037 VIP or Pro+
 - kind: question · platform: both · use: analysis, ebug · tags: mine, tier, naming
@@ -83,3 +86,11 @@ Mine › User Sign in › Google opens Chrome (not the Android account chooser):
 (「Continue as <name>」 / 「Skip」). 「Continue as …」 signs Chrome into the phone's account and goes on without a
 password (Stage lands on mauth-stage.cyberlink.com 「You Are All Set!」); 「Skip」 leads to an empty Google 「Email or
 phone」 page, which needs the user. Any other account needs its password typed by the user.
+
+## KP-127 Two My Artwork pages on Android
+- kind: fact · platform: android · use: analysis, run, ebug · tags: my-artwork, navigation, layout
+- source: Recent Task Model Info Android run 2026-11-26-r1-full O-9 (inbox I-026); AIGC Watermark Android run 2026-11-26-e1-entries O-17 · verified: 16.9.0 build 2611251 (2026-11-27)
+
+☰ › My Artwork switches to the AI Magic tab's My Artwork (46 px side gutter), like iOS (KP-032). Pro / Mine › 「My
+Artwork」 opens a separate page whose titles and tiles start at x = 0 with no side margin and its ‹ / title row at
+y = 0. Not in a spec; compare with the Design's My Artwork board before filing.

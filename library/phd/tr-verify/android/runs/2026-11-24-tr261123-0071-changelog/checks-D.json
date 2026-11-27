@@ -1,0 +1,34 @@
+[
+  {
+    "item": "D7 「Settings applied」 toast when Reuse restores Custom settings",
+    "verdict": "Can't check",
+    "observed": "No Custom video exists on this not-signed-in phone: My AI Artwork › Recent › Video and the Image to Video category both show 「Nothing yet.」, and the room's history button opens the same empty tab. 「Reuse」 could not be reached; no generation was started (needs the user's go-ahead).",
+    "observedZh": "未登入的手機上沒有 Custom 影片（我的 AI 作品 › 最近 › 影片、Image to Video 分類都是「Nothing yet.」），無法按 Reuse，toast 未驗證。",
+    "shots": ["d_recent_video.png", "d_i2v_tab.png", "d8_room_history.png"],
+    "other": "Needs one Kling 3.0 generation (30 of 68 credits) with the user's go-ahead, or the signed-in QA account that holds the R1 / P0126 videos."
+  },
+  {
+    "item": "D8 Reuse follows the standard introduction flow; leaving the room returns to Save & Share",
+    "verdict": "Can't check",
+    "observed": "Reuse not reachable (no Custom video). Normal entries for reference: AI Videos › Image to Video and Home › Image to Video both show the 「Image To Video」 intro sheet (Try now / Don’t show again), then 「Steps」 (Continue), then the Custom tab (Kling 3.0, empty prompt 0/2500). ‹ in the room returns to AI Videos.",
+    "observedZh": "沒有影片可 Reuse；一般入口（AI Videos、首頁捷徑）都先出現介紹頁與 Steps 頁，房間內 ‹ 回到 AI Videos。Reuse 路徑與返回 Save & Share 未驗證。",
+    "shots": ["d9_normal_room.png", "d8_normal_room_after_intro.png", "d8_normal_room.png", "d9_home_room.png", "d8_normal_back.png"],
+    "other": "The intro sheet shows a dimmed frame with a spinner for about 4 s before its demo plays."
+  },
+  {
+    "item": "D9 Portrait orientation: no brief landscape flash on entering Image to Video",
+    "verdict": "Partly",
+    "observed": "Both normal entries recorded (d9-normal-entry.mp4, 344 frames at ~58 fps; d9-home-entry.mp4, 223 frames) and every frame checked on contact sheets: the page cross-fades into the dimmed intro in portrait and no frame is landscape or rotated. The Reuse entry (where R1 saw 1–2 rotated frames) could not be recorded.",
+    "observedZh": "一般入口兩段錄影逐格檢查，全程直向、沒有橫向閃爍；R1 出現橫向閃爍的 Reuse 入口無法進入，未驗證。",
+    "shots": ["recordings/f/d9-normal-sheet.png", "recordings/f/d9-normal-zoom.png", "recordings/f/d9-home-sheet.png", "recordings/d9-normal-entry.mp4", "recordings/d9-home-entry.mp4"],
+    "other": ""
+  },
+  {
+    "item": "D10 Model-specific ImageToVideo_Reuse_Click analytics",
+    "verdict": "Can't check",
+    "observed": "No Reuse tap possible; no 「Reuse」 line in the 15:10–15:14 logcat. Entry events seen: AIVideo_Feature_Tap {feature: image_to_video}, Launcher_Shortcut_Tap {shortcut: image_to_video}, Artwork_Category_Select {category: Image to Video, source: sheet}.",
+    "observedZh": "無法按 Reuse，logcat 沒有 Reuse 事件；只看到進入 Image to Video 的一般事件。",
+    "shots": ["logs/D-20261124-151409/logcat-live.txt"],
+    "other": "R1 TC-037 logged Artwork_Reuse_Click without model; the fix is unverified."
+  }
+]

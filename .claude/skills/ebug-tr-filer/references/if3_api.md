@@ -143,7 +143,10 @@ wrong one.
 | 10 | Code Review | `PUT /api/TSRPublic/ebug/{BugCode}/action/codeReview` | 204 |
 | 11 | Build Resolve | `PUT /api/TSRPublic/ebug/{BugCode}/action/buildResolve` | 204 |
 
-⚠ **Those four are the only actions that exist.** RD tested `reject`, `reopen`, `backToProposer`,
+The public API docs (2026-11-27) also list Propose Postpone, Module Release, Create TR and Attach / Detach eBug on
+a TR; not used or verified here.
+
+⚠ **Those four are the only actions that exist** (RD, 2026-09-09; see the docs page for the newer ones above). RD tested `reject`, `reopen`, `backToProposer`,
 `returnToCreator`, `propose`, `cancel`, `close`, `nab`, `postpone`, `wontFix`, `verify`,
 `notReproducible` — **all 404.** Anything that sends a ticket backwards, sideways or to a close is
 web-only. There is no Create TR endpoint at all.
@@ -241,6 +244,34 @@ Upload success = body `status` "success" **and** `data[0].formDataUpdated` true.
 ⚠ **`POST /IF3/api/Attachment/{JobID}` is wrong for filing.** It stores the file but never adds it to
 `UploadFiles`, so the page shows nothing (DRI261896P0043 and ~40 P-series bugs, found 2026-10-20). Bugs that went
 through it need their files re-uploaded through the code endpoint to show.
+
+## Comments (public API docs #api-17 / #api-18, read 2026-11-27)
+
+Source: https://ecl.cyberlink.com/IF3/ebug/BPM/Start/Request/PublicAPIDocumentation#api-17. Client:
+`ecl_query.py comments` (read; also in `bug` and in `dedupe` for ended candidates) and `ecl_if3.py comment` (add).
+
+**Read — `POST /IF3/tsr/api/public/Query/TSR.EbugComments`.** Same conditions as `TSR.EbugSearch`; normally
+`{"field":"BugCode","term":{"querys":[…]}}` for a batch, `sortBy: CreateTime` = comment time. One row per comment:
+`BugCode`, `JCID` (comment ID), `Comment`, `Creator` (commenter's eCL login), `CreateTime`, `LastModifyTime`,
+`IsValid`, `JobID` / `FlowAID`.
+
+⚠ **Deleted comments come back** with `IsValid: false`; filter them yourself. An `IsValid` / `Creator` /
+`CreateTime` **condition applies to the eBug, not the comment**: comment text, commenter and time cannot be
+queried, only filtered client-side.
+⚠ **`total` and paging count comments, not bugs**: one bug's comments can span pages.
+⚠ **IF3 bugs only.** Old ASP comments are in other tables and are simply missing (no error); read an old
+ticket's status log (`ecl_query.py bug <code> --log`) instead.
+
+**Add — `POST /IF3/ebug/api/Comment/Code/{BugCode}`**, body `{"Content": "…"}` (trimmed; blank refused). Note
+the path: `/IF3/ebug/api/…`, not `/api/TSRPublic/…`, and the BugCode, not the JobID. Same as commenting on the
+page: the token's account is the commenter, the comment mail goes out, the status does not change. **Always
+HTTP 200**: read the body. `{"status":"success"}` returns no comment ID (read it back). Failures: `No found user`
+= bad token (not 401) · `Comment info is not correct.` = empty content · a database message = no such bug or an
+old ASP bug · **`Send Event fail.…` = the comment was saved, only the mail failed: never resend** (it would post
+twice), read back first. One comment per call; edits and deletes are web-only.
+
+⚠ **Casebook: blocked.** The standing *No comments on existing eBugs* rule (overlay rule 6) holds, so
+`ecl_if3.py comment` refuses unless `ALLOW_ECL_COMMENT=1`, which only the user lifting that rule allows.
 
 ## Handling the credentials
 

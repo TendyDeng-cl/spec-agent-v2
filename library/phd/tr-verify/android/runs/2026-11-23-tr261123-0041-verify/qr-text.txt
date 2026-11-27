@@ -1,0 +1,145 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.v202611231214 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R7)
+
+=== Test Result
+PHD-A - Bug verification [OK=18, Fail=3]
+
+=== Testing Date
+2026/11/23
+
+=== Test Result Details
+PHD-A - Bug verification [OK=18, Fail=3]
+
+=== PHA262026P0078  [OK]
+Verified OK with 202611231214 build.
+Text and Text Bubble now open a text field with the keyboard, and the typed words replace the text on the canvas.
+Risk test: n/a
+
+=== PHA262026P0079  [Fail]
+Verified Fail with 202611231214 build.
+
+Result:
+The frame tool bar now has Flip H, Flip V and Lock, and the floating Lock works, but there is still no Shadow.
+摘要：框工具列已有 Flip H、Flip V 與鎖，浮動鎖也可用，但仍沒有 Shadow。
+
+Expected Result:
+Frame focus should also offer Shadow, with Opacity, Flip H, Flip V, Duplicate, Lock and Delete.
+摘要：框工具列應包含 Shadow。
+
+Risk test: n/a
+
+=== PHA262026P0081  [OK]
+Verified OK with 202611231214 build.
+The image tool bar shows Horizontal Flip, Vertical Flip, Adjustments and AI Enhance, accepted by the tester as the intended labels.
+Risk test: n/a
+
+=== PHA262026P0088  [OK]
+Verified OK with 202611231214 build.
+The eyedropper pin now moves to the touched point and follows a drag, and it picks the photo's colour under its tip.
+Risk test: n/a
+
+=== PHA262026P0090  [OK]
+Verified OK with 202611231214 build.
+The Sticker panel now has Favorites and ✕ / ✓; the store button, AI Sticker tab and More tile are no longer part of this panel.
+Risk test: n/a
+
+=== PHA262026P0091  [OK]
+Verified OK with 202611231214 build.
+The Text Bubble panel now has the ✕ / ✓ bar; the 「∅」 (none) item is no longer part of this panel.
+Risk test: n/a
+
+=== PHA262026P0093  [OK]
+Verified OK with 202611231214 build.
+Changing the ratio no longer squashes the frames.
+Risk test: n/a
+
+=== PHA262026P0095  [Fail]
+Verified Fail with 202611231214 build.
+
+Result:
+Pages now has ✕ / ✓ and ✓ applies the changes, but ✕ and system Back drop the changes at once with no 「Discard changes?」.
+摘要：Pages 已有 ✕ / ✓ 且 ✓ 可套用，但 ✕ 與返回鍵直接放棄變更，不詢問。
+
+Expected Result:
+When there are changes, ✕ should ask 「Discard changes?」 first.
+摘要：有變更時，✕ 應先詢問「Discard changes?」。
+
+Risk test: n/a
+
+=== PHA262026P0096  [OK]
+Verified OK with 202611231214 build.
+Pages no longer shows ↶ / ↷; its bottom bar holds only ✕ and ✓.
+Risk test: n/a
+
+=== PHA262026P0107  [OK]
+Verified OK with 202611231214 build.
+Taps beside a chip or suggestion bubble, far right or right next to it, no longer trigger it, and tapping the bubble itself still fills its prompt, for both the starter chips and the AI suggestions.
+Risk test: n/a
+
+=== PHA262026P0118  [OK]
+Verified OK with 202611231214 build.
+The first Custom result now shows a one-time tip on the Artwork button saying all results are saved there at full intensity.
+Risk test: n/a
+
+=== PHA262026P0120  [OK]
+Verified OK with 202611231214 build.
+All now follows the shown photo's own unapplied change in Adjustments and Crop & Rotate: disabled on a photo with no change, enabled once it has its own, disabled again after All is applied.
+Risk test: n/a
+
+=== PHA262026P0125  [OK]
+Verified OK with 202611231214 build.
+Crop & Rotate now opens on the 2730 x 1535 and 1706 x 2559 photos, first or by thumbnail, showing the photo and its size label without crashing.
+Risk test: n/a
+
+=== PHA262026P0126  [OK]
+Verified OK with 202611231214 build.
+The new Custom video opened from My AI Artwork > Recent > Video shows 'Prompts & Settings' with Kling 3.0, 5s, std and Sound off next to the prompt, the same as from the Image to Video category.
+Risk test: n/a
+
+=== PHA262026P0127  [OK]
+Verified OK with 202611231214 build.
+A colour picked with Done is now added as a new ringed circle right after the colour wheel and the other colours move one place right.
+Risk test: n/a
+
+=== PHA262026P0130  [OK]
+Verified OK with 202611231214 build.
+After a successful Reel Creator generation, Import on the 'Use the 4 photos you picked last time?' prompt worked on Walking Shift and Travel Recap with no crash and nothing new in the crash buffer.
+Risk test: n/a
+
+=== PHA262026P0132  [OK]
+Verified OK with 202611231214 build.
+With an out-of-range count after Import, Next stays disabled and no red text shows, as the updated PM spec asks.
+Risk test: n/a
+
+=== PHA262026P0133  [OK]
+Verified OK with 202611231214 build.
+After Import every imported photo is ticked with its number, also after two of the picked photos were deleted, and tapping one unpicks it instead of adding it twice.
+Risk test: n/a
+
+=== PHA262026P0134  [OK]
+Verified OK with 202611231214 build.
+The confirm page now shows no 9:16 label and no reorder hint, as the updated PM spec asks.
+Risk test: n/a
+
+=== PHA262026P0135  [OK]
+Verified OK with 202611231214 build.
+Below the template's count the 'n/max' part turns red and Generate stays disabled; back in range the title returns to white and Generate is enabled.
+Risk test: n/a
+
+=== PHA262026P0147  [Fail]
+Verified Fail with 202611231214 build.
+
+Result:
+After Removal, Try First, ✕ and a force stop, Swipe Collage still crashes at once on every open (ClassCastException in SwipeCollageDraftUseCase).
+摘要：強制關閉後再進入 Swipe Collage 仍每次立即閃退。
+
+Expected Result:
+No crash: 「Continue editing?」 restores the project, or Swipe Collage opens normally.
+摘要：不應閃退，應出現「Continue editing?」還原專案或正常進入。
+
+Risk test: n/a
+
+=== Held, left unchanged on the form: PHA262026P0086

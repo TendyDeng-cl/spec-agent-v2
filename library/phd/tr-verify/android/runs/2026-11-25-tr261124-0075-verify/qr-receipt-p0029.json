@@ -1,0 +1,15 @@
+{
+  "qr": "QR261125-0040",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261125-0040",
+  "tr": "TR261124-0075",
+  "template": "Standard Report (QRTemplateID=14830)",
+  "createdAt": "2026-11-25 (Asia/Taipei)",
+  "tester": "WILLY_WU",
+  "testResult": "PHD-A - Bug verification [OK=1, Fail=0]",
+  "testingDate": "2026-11-25",
+  "counts": {"OK": 1, "Fail": 0, "leftNotYetVerified": 0},
+  "rows": [{"bug": "PHA262026P0029", "state": "OK"}],
+  "readBack": "all fields, state and Reason match qr-text-p0029.txt",
+  "attachments": "none (textOnly)",
+  "trAfter": "all 13 bugs Close / verified"
+}

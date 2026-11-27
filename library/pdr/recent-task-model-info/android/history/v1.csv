@@ -1,0 +1,211 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes
+TC-001,My Artwork entry,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Tap the 「Image to Video」 card row","Step 1: My Artwork lists a card row per feature, including 「Image to Video」 and 「Text to Video」
+Step 2: the Image to Video Recent page opens, titled 「Image to Video」, with one Recent task card per task (newest first)",P1,"R-001, R-060",
+TC-002,My Artwork entry,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Tap the 「Text to Video」 card row","The Text to Video Recent page opens, titled 「Text to Video」, with one Recent task card per task",P1,R-001,
+TC-003,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Kling 4.0」 last (KP-083)
+3. Tap Generate
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","Step 5: the new task's card is in the processing state: 「processing...」 over the thumbnail, the time left and a progress bar, no button
+Step 5: under the task name the card shows a grey filled tag reading 「Kling 4.0」",P1,"R-010, R-030","Keep this task: TC-004, TC-005 and the state rows use it."
+TC-004,Image to Video — model tag,The Image to Video task of TC-003 has finished,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The task's card shows, top to bottom beside the thumbnail: the date and length (「YYYY/MM/DD · m:ss」), the task name, then one grey filled tag reading 「Kling 4.0」
+The tag is one line, 20 pt high, and does not touch the 「View」 button at the bottom right
+The card is as tall as a card without a tag (120 pt)",P1,"R-010, R-012, R-015, R-016, R-030",
+TC-005,Image to Video — model tag,The Image to Video Recent page shows the finished task of TC-003,"1. Tap 「View」 on that card
+2. Tap ‹","Step 1: the Image to Video result page of that task opens (its video plays)
+Step 2: back on the Image to Video Recent page, the card still shows 「Kling 4.0」",P1,"R-002, R-061",
+TC-006,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Veo 3.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Veo 3.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-007,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Vidu Q2」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Vidu Q2」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-008,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Kling O3」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Kling O3」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-009,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Pixverse V6」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Pixverse V6」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-010,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Wan 2.7」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Wan 2.7」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-011,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Gemini Omni Flash 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Gemini Omni Flash 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-012,Image to Video — model tag,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Happy Horse 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Happy Horse 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-013,Image to Video — model tag,"1. Signed in with the Pro test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Seedance 2.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Seedance 2.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-014,Image to Video — model tag,"1. Signed in with the Pro test account (fixtures.md)
+2. A photo in the gallery","1. Open AI Magic › 「Image to Video」 (not a template)
+2. Add the photo and pick the model 「Seedance 2.5」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","The new task's card shows the tag 「Seedance 2.5」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-015,Image to Video — model tag,"The Image to Video Recent page holds tasks made with two or more different models (TC-003, TC-006 …)","1. Open AI Magic › 「Image to Video」 and pick a model none of those tasks used, without generating
+2. Go back
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Image to Video」","Each card still shows the model its own task was generated with
+No card shows the model picked in step 1",P2,R-013,
+TC-016,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Kling 4.0」 last
+3. Tap Generate
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","Step 5: the new task's card shows 「processing...」, the time left and a progress bar, no button
+Step 5: under the task name the card shows a grey filled tag reading 「Kling 4.0」",P1,"R-011, R-030",Close the keyboard (Done or tap outside) before picking the model.
+TC-017,Text to Video — model tag,The Text to Video task of TC-016 has finished,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Text to Video」","The card shows the date and length, the task name, then one grey filled tag reading 「Kling 4.0」
+The tag is one line and does not touch 「View」
+The card is as tall as a card without a tag (120 pt)",P1,"R-011, R-012, R-015, R-016, R-030",
+TC-018,Text to Video — model tag,The Text to Video Recent page shows the finished task of TC-016,"1. Tap 「View」 on that card
+2. Tap ‹","Step 1: the Text to Video result page of that task opens
+Step 2: back on the Text to Video Recent page, the card still shows 「Kling 4.0」",P1,R-002,
+TC-019,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Wan 3.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Wan 3.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-020,Text to Video — model tag,Signed in with the Pro test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Seedance 2.5」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Seedance 2.5」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-021,Text to Video — model tag,Signed in with the Pro test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Seedance 2.0」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Seedance 2.0」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Pro-only model (KP-082). Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-022,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Gemini Omni Flash」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Gemini Omni Flash」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-023,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Happy Horse 1.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Happy Horse 1.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-024,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Wan 2.7」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Wan 2.7」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-025,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Veo 3.1」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Veo 3.1」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-026,Text to Video — model tag,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「Text to Video」 (not a template)
+2. Type a short prompt and pick the model 「Kling O3」 last
+3. Tap Generate and wait until it finishes
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Text to Video」","The new task's card shows the tag 「Kling O3」 under its name, written as the model picker names it (cut with 「…」 only if it does not fit)",P2,R-012,Model name from the Android picker (KP-082): use the picker's exact name if the build differs.
+TC-027,Long model names,"The Image to Video Recent page holds a task made with 「Gemini Omni Flash 1.1」 (TC-011), the longest model name","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」
+3. Look at that task's card","The tag shows the whole name on one line, or, when it does not fit, the start of the name ending in 「…」
+The tag never wraps to a second line and does not overlap 「View」",P2,R-014,Q-4: the spec gives no maximum tag width; the row assumes the tag may use the width under the name up to the card's right padding.
+TC-028,Long model names,As TC-027,"1. Set the phone's font size (and display size) to the largest
+2. Open AI Magic › 「My Artwork」
+3. Tap 「Image to Video」
+4. Look at the 「Gemini Omni Flash 1.1」 card
+5. Set the font and display size back","Step 4: the tag is cut with 「…」 on one line and does not overlap 「View」 or leave the card
+Step 4: the card keeps the height of the cards around it",P3,"R-014, R-016",Phone setting changed and restored by the run (AGENTS.md › Phone settings for fixtures).
+TC-029,Cards without a model,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Start an Image to Video template (Launcher 「What's Trending」 or the Template tab) with the photo
+2. Generate and wait until it finishes
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Image to Video」","The template task's card shows the date and length and the name, and no model tag
+No empty line or gap is left where the tag would be
+The card is as tall as a card with a tag (120 pt)",P1,"R-020, R-016","Q-3: if the template lets the user pick a model, record whether the card shows it."
+TC-030,Cards without a model,Signed in with the test account (fixtures.md),"1. Start a Text to Video template (Launcher or the Template tab)
+2. Generate and wait until it finishes
+3. Open AI Magic › 「My Artwork」
+4. Tap 「Text to Video」","The template task's card shows no model tag and no empty line
+The card is as tall as a card with a tag (120 pt)",P2,"R-020, R-016","Q-3 as TC-029. If the build offers no Text to Video template, record Blocked as test-data."
+TC-031,Cards without a model,The account has at least one finished Cinematic Reel Creator task,"1. Open AI Magic › 「My Artwork」
+2. Tap 「Cinematic Reel Creator」","No card on the Cinematic Reel Creator Recent page shows a model tag
+No card leaves an empty line for one
+Every card is 120 pt tall",P1,"R-021, R-016",Use an existing task; a new Cinematic Reel costs 70 credits (KP-091).
+TC-032,Cards without a model,Signed in with the test account (fixtures.md),"1. Open AI Magic › 「My Artwork」
+2. Open the Recent page of every other feature My Artwork lists (not Image to Video, Text to Video, Text to Image or Cinematic Reel Creator)",No card on those pages shows a model tag or an empty line for one,P2,R-021,"Record which features My Artwork lists; if none besides the four, record that and pass on TC-031."
+TC-033,Cards without a model,"The account has at least one finished Text to Image task (default model 「GPT-Image-2.6 Sunburst」, KP-082)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Text to Image」",The Text to Image Recent page shows no model tag on its items (Design 1006 names only I2V and T2V),P2,R-022,"Q-1: the Jira title also names TTI. If the build shows a model here, record it: a PM decision, not a Fail."
+TC-034,Card states,"1. Signed in with the test account (fixtures.md)
+2. A photo in the gallery","1. Start an Image to Video template with the photo and tap Generate
+2. Open AI Magic › 「My Artwork」
+3. Tap 「Image to Video」 while it is processing","The processing card (「processing...」, time left, progress bar) shows no model tag
+It is as tall as the other cards",P2,"R-030, R-020","Can be the generation of TC-029, looked at while it runs."
+TC-035,Card states,The Image to Video Recent page holds tagged cards (TC-003) and a template card (TC-029),"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」
+3. Tap 「Manage」","Step 3: every card shows an empty checkbox at its top right
+Step 3: tagged cards keep their model tag and template cards still show none
+Step 3: the page shows 「Select All」 and 「Cancel」 and a 「Delete」 bar
+Step 3: every card keeps its height",P2,R-030,Design: 「點擊 Select 進入編輯狀態」; the board draws 「Manage」 as the entry. Never tap 「Delete」.
+TC-036,Card states,"As TC-035, in edit mode",Tap the checkbox of a card with a model tag,"Its checkbox is ticked
+Its model tag still shows, unchanged
+The other cards stay unticked",P2,R-030,
+TC-037,Card states,"As TC-035, in edit mode","1. Tap 「Select All」
+2. Tap 「Deselect All」
+3. Tap 「Cancel」","Step 1: every checkbox is ticked and the button reads 「Deselect All」
+Steps 1–2: every tagged card keeps its tag and template cards show none
+Step 2: every checkbox is empty
+Step 3: the page leaves edit mode and every card shows 「View」 again with the same tags",P2,R-030,Never tap 「Delete」.
+TC-038,Card states,An Image to Video task made with a chosen model has failed (needs a failure fixture),"1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The failed card shows 「Error」 with the caution icon over the thumbnail and 「Retry」
+It still shows the model tag of the chosen model
+It is 120 pt tall",P2,R-030,Parked: no fault switch on Android (KP-003); run when a task fails by itself. KP-081: the Image to Video page itself reads 「An Error Has Occurred」.
+TC-039,Card states,An Image to Video or Text to Video task made with a chosen model was flagged as inappropriate (needs an NSFW fixture),"1. Open AI Magic › 「My Artwork」
+2. Open that feature's Recent page","The card shows the visibility-off icon over the thumbnail and 「View Details」
+It still shows the model tag
+It is 120 pt tall",P3,R-030,Parked: needs an input the server flags.
+TC-040,Persistence,The Image to Video Recent page shows tagged cards (TC-003 …),"1. Tap ‹ to go back to My Artwork
+2. Tap 「Image to Video」 again
+3. Close the app completely and open it again
+4. Open AI Magic › 「My Artwork」
+5. Tap 「Image to Video」","Step 1: My Artwork shows again
+Steps 2 and 5: every card shows the same model tag as before",P2,R-040,
+TC-041,Persistence,The account has Image to Video or Text to Video tasks generated with a chosen model before this build was installed,"1. Open AI Magic › 「My Artwork」
+2. Open the Image to Video and Text to Video Recent pages
+3. Look at the older cards","Each older card shows either its model tag or no tag line at all
+No card shows an empty tag
+Every card is 120 pt tall",P3,R-041,Q-2: the spec does not say whether older tasks get the tag; record which.
+TC-042,Appearance,"1. The app shows the dark appearance (phone in dark theme)
+2. Tagged cards exist (TC-003 …)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The model tag is a grey filled tag with readable text on the dark card, as on the Dark board",P3,R-050,Phone setting changed and restored by the run.
+TC-043,Appearance,"1. The app shows the light appearance (phone in light theme)
+2. Tagged cards exist (TC-003 …)","1. Open AI Magic › 「My Artwork」
+2. Tap 「Image to Video」","The model tag is a grey filled tag with readable text on the light card, as on the Light board",P3,R-050,Phone setting changed and restored by the run.
+TC-044,System Back,The Image to Video Recent page is open,Press system Back,My Artwork shows again,P3,R-070,
+TC-045,System Back,The Image to Video Recent page is in edit mode with one card ticked,Press system Back,"Edit mode closes as with 「Cancel」
+No task is deleted and every card keeps its tag",P3,R-070,Q-5: the spec draws only 「Cancel」; the row assumes Back acts like it.
+TC-046,System Back,The result page of a tagged task is open (TC-005 step 1),Press system Back,The Image to Video Recent page shows again with the card's tag unchanged,P3,R-070,

@@ -1,0 +1,323 @@
+=== PHA242024-1271
+==============================================================================
+PHA242024-1271  —  PHD-A 19.8.0 - AISketch-realistic: The selected style in female is not unselected after selecting a style in male
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 19.8
+  Version    19.8.0 / build 202410241220   fixed in 20.19.0.v202611241937
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2024-10-25T16:32:42
+  TR         TR241024-018
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter AI Sketch
+3. Select a style in female
+4. Select a style in male
+5. Check the selected style in female
+
+Result:
+The selected style in female is not unselected after selecting a style in male
+
+Expect Result:
+The style selected in other gender should be unselected
+
+Note:
+Device = Samsung S23 (13.0)
+
+--- RD resolution -----------------------------------------------------------
+  by LEO_CHEN  2025-09-04T14:07:26
+  Root cause: not handle it
+  Solution:   this feature is in ai art
+
+--- Attachments -------------------------------------------------------------
+  ai sketch realistic other gender select.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1361252
+
+=== PHA262026-0031
+==============================================================================
+PHA262026-0031  —  PHD-A 20.9.2 - AI_Background: The [Generate] button is not lighted up after generating an image
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.9
+  Version    20.9.0 / build 202601161204   fixed in 20.19.0.v202611241937
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-01-16T14:16:34
+  TR         TR260116-015
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Open a photo
+3. Enter AI Background
+4. Tap the [Custom] button
+5. Generate an image
+6. Check the [Generate] button
+
+Result:
+The [Generate] button is not lighted up after generating an image
+
+Expect Result:
+Should be lighted up
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by LEO_CHEN  2026-01-19T09:30:57
+  Root cause: lost to update it
+  Solution:   update it
+  Changeset:  https://github.com/CyberLink-Team/photodirector-android-app/pull/933/commits/32292a809067a34632d4c7ae947426dd0d13423c
+
+--- Attachments -------------------------------------------------------------
+  ai background generate button.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1448197
+
+=== PHA262026-0051
+==============================================================================
+PHA262026-0051  —  PHD-A 20.10.0 - [Samsung S23]Sign in: The page shows nothing after entering User Sign in
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.10.0 / build 202601261402   fixed in 20.19.0.v202611241407
+  Severity   2   Priority 1   BugBelong RD
+  Creator    WILLY_WU   2026-01-27T09:20:10
+  TR         TR260126-014
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter User Sign in page
+3. Check the page
+
+Result:
+The page shows nothing after entering User Sign in
+
+Expect Result:
+Should show the page
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- RD resolution -----------------------------------------------------------
+  by JANE_LAI  2026-11-23T14:23:17
+  Root cause: Old issue
+  Solution:   Issue is gone in current build
+  Changeset:  -
+
+--- Attachments -------------------------------------------------------------
+  sign in nothing 1.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1450014
+  sign in nothing 2.jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1450015
+
+=== PHA262026-0243
+==============================================================================
+PHA262026-0243  —  PHD-A 20.13.0 - Image_to_Video: The sample image is not showing right after changing language and selecting style
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.13.0 / build 202604151902   fixed in 20.19.0.v202611241407
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-04-17T11:53:57
+  TR         TR260415-034
+  Reproduce  3/3   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Change system language
+3. Enter AI Videos page
+4. Select an Image to Video style
+5. Check the sample image
+
+Result:
+The sample image is not showing right after changing language and selecting style
+
+Expect Result:
+Should show the right sample image
+
+Note:
+Device = Samsung S23 (15.0)
+
+--- Attachments -------------------------------------------------------------
+  image to video change language sample image.mp4  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1464904
+
+=== PHA262026-0289
+==============================================================================
+PHA262026-0289  —  PHD-A 20.13.0 - [ATFound]ID_Photo: The preview is showing all black after tapping the [X] button in Makeup
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.13.0 / build 202605271843   fixed in 20.19.0.v202611241407
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-06-01T17:11:34
+  TR         TR260527-078
+  Reproduce  1/1   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter ID Photo
+3. Import a photo
+4. Tap the [Next] button
+5. Tap the [V] button
+6. Enter Beautify
+7. Enter Makeup
+8. Tap the [X] button
+9. Check the preview
+
+Result:
+The preview is showing all black after tapping the [X] button in Makeup
+
+Expect Result:
+Should show the correct preview
+
+Note:
+Device = Samsung S23 (15.0)
+Only happen once, cannot reproduce
+
+--- Attachments -------------------------------------------------------------
+  id photo black preview.png  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1473518
+
+=== PHA262026-0360
+==============================================================================
+PHA262026-0360  —  PHD-A 20.15.1 - Image_to_video: Generated video from "Feeling Good" template has no sound but sound setting = ON
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.15.1 / build 202608071942   fixed in 20.19.0.v202611241937
+  Severity   2   Priority 2   BugBelong RD
+  Creator    ALBERT_CHANG   2026-08-10T11:25:02
+  TR         TR260807-075
+  Reproduce  2/2   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter image to video
+3. Select "Feeling Good" template
+4. Check setting, sound = ON
+5. Import photo and generate
+6. Check generated video
+
+
+Result:
+Generated video from "Feeling Good" template has no sound but sound setting = ON
+
+Expect Result:
+Have sound
+
+Note:
+Device = Pixel 3 XL / Android 12
+
+=== PHA262026-0407
+==============================================================================
+PHA262026-0407  —  PHD-A 20.16.5 - [UX][Light_mode]Image_to_video: Icon of "Happy Horse" model is not obvious
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.16
+  Version    20.16.5 / build 202609111944
+  Severity   3   Priority 2   BugBelong RD
+  Creator    ALBERT_CHANG   2026-09-15T14:04:18
+  TR         TR260914-008
+  Reproduce  2/2   previous build: Unknown
+
+--- Description -------------------------------------------------------------
+Repro Steps:
+1. Install and Launch APP
+2. Enter image to video
+3. Select custom style
+4. Open 3rd party model list
+5. Check UI
+
+Result:
+Icon of "Happy Horse" model is not obvious
+
+Expect Result:
+More obvious
+
+Note:
+Device = Galaxy 24 / 16
+
+--- RD resolution -----------------------------------------------------------
+  by LAURA_KUAN  2026-09-18T11:30:10
+  Root cause: Missing handling.
+  Solution:   Add "thumbnail_for_light_modeUrl" to show the light icon in light mode.
+  Changeset:  https://github.com/CyberLink-Team/photodirector-android-app/commit/f8bcb92bf06ef3e3955d761e0cdae3c0b737933d
+
+--- Attachments -------------------------------------------------------------
+  U-2026-09-15(2).jpg  https://ecl.cyberlink.com/dc/support/DownloadeBugFile.ashx?d=1497789
+
+=== PHA262026P0025
+==============================================================================
+PHA262026P0025  —  PHD-A 20.18.0 - [UX]AI_Background: There is no [Artwork] button in AI Background
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610201919   fixed in 20.19.0.v202611241937
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-10-22T16:57:38
+  TR         TR261020-0064
+  Reproduce  3/3   previous build: Unknown
+
+=== PHA262026P0029
+==============================================================================
+PHA262026P0029  —  PHD-A 20.18.0 - [UX]Edit: AI haircolor hint bubble is truncated after auto-scrolling to Hair category
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610222025   fixed in 20.19.0.v202611241937
+  Severity   3   Priority 3   BugBelong RD
+  Creator    ALBERT_CHANG   2026-10-27T11:33:12
+  TR         TR261022-0084
+  Reproduce  2/2   previous build: Unknown
+
+=== PHA262026P0045
+==============================================================================
+PHA262026P0045  —  PHD-A 20.18.0 - [UX]AI_edit_agent: UI always focus on photo tab of AI edit agent category even the latest generated result is video after tapping [artwork] button of AI edit agent
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610282019   fixed in 20.19.0.v202611241937
+  Severity   3   Priority 2   BugBelong RD
+  Creator    ALBERT_CHANG   2026-10-29T10:42:09
+  TR         TR261028-0068
+  Reproduce  2/2   previous build: Unknown
+
+=== PHA262026P0056
+==============================================================================
+PHA262026P0056  —  PHD-A 20.18.0 - [CS003208922]AI_Edit_Agent: The cost credits are not the same in rules page and the pop-up dialog
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.18
+  Version    20.18.0 / build 202610222025   fixed in 20.19.0.v202611241937
+  Severity   2   Priority 2   BugBelong RD
+  Creator    WILLY_WU   2026-11-10T10:51:28
+  TR         TR261109-0040
+  Reproduce  3/3   previous build: Unknown
+
+=== PHA262026P0142
+==============================================================================
+PHA262026P0142  —  PHD-A 20.19.0 - [AIAgent] Image_to_Video: Reuse opens Custom without the Image to Video explanation sheet shown elsewhere
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611241937
+  Severity   4   Priority 4   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T15:49:31
+  TR         TR261118-0070
+  Reproduce  2/2   previous build: Unknown
+
+=== PHA262026P0145
+==============================================================================
+PHA262026P0145  —  PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Reuse: Custom room flashes rotated (landscape) before settling portrait
+==============================================================================
+  Status     TRCreated
+  Product    PhotoDirector Mobile for Android  ·  PHD_Android_Generic 20.19
+  Version    20.19.0 / build 202611181947   fixed in 20.19.0.v202611241937
+  Severity   4   Priority 4   BugBelong RD
+  Creator    WILLY_WU   2026-11-19T15:49:41
+  TR         TR261118-0070
+  Reproduce  3/3   previous build: Unknown
+

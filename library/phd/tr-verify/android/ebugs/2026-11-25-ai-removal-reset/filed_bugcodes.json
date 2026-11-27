@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261124-0075",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611241937",
+    "filed_on": "2026-11-25"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0170",
+      "short": "PHD-A 20.19.0 - [UX] AI_Removal: The [Smart Select] tab is squeezed into two lines by the [Reset] button for paid users",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-25T17:15:49",
+      "build": "202611241937",
+      "tr": "TR261124-0075",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "files": [
+        "20.19.0_rmv01_smart_select_two_lines.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+DRI261898P0020    Assigned        3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Offline send shows No connection available instead of You're offline toast
+DRI261898P0019    ProposeNAB      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Try again on a failed video shows a settings card with no model choice
+DRI261898P0018    Assigned        3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Asking Iris to change the story title after the characters stage is declined
+DRI261898P0017    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Tap outside the History info bubble opens the drama under the tap
+DRI261898P0016    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Returning from History or Choose Character does not show the newest message
+DRI261898P0015    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Failed storyboard lacks the Storyboard couldn't be created line
+DRI261898P0014    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Chat turns fail with token_request fired outside a turn worker thread
+DRI261898P0013    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Storyboard Preview keeps the old preview after the storyboard is cut or changed
+DRI261898P0012    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard image update shows a generic skeleton, not on the changed scene
+DRI261898P0011    NewCreated      2    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed storyboard and scene image generations keep credits with no refund
+DRI261898P0010    Assigned        2    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Reopening a drama from History drops messages and the character card
+DRI261898P0009    RDResolved      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Create my character cuts a 1,050-character description to 1,000
+DRI261898P0008    Propose Postpo  3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Update characters card does not show how many characters it updates
+DRI261898P0007    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Typed character name instead of a chip skips the Update characters card
+DRI261898P0006    NewCreated      3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Character change in chat offers one chip and skips the update messages
+DRI261898P0005    Assigned        3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Chat shows an unsent Generate with AI message and claims an uncreated storyboard
+DRI261898P0004    Assigned        2    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Confirming the cast charges character portraits with no offer card, then fails
+DRI261898P0003    Assigned        3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Partial character failure shows the single-character error dialog
+DRI261898P0002    Assigned        2    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Iris replies show internal locale codes like ja_JP and en_US
+DRI261898P0001    Assigned        3    RD         189872     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Credit pill opens My Credits mid-generation with no leave dialog
+DRI261897P0043    Assigned        3    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Extra "Advancing" loading card appears after the video finishes
+DRI261897P0042    Assigned        2    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene 4 subtitles stay on screen after the voice ends and lag the next line
+DRI261897P0039    Assigned        2    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene 6 image always fails with "Couldn't create image" although the text is compliant
+DRI261897P0038    RDResolved      3    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: captions fail to be added and Try again does not recover (Seedance 2.0 Mini, 90 sec)
+DRI261897P0032    BuildResolved   2    PM         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Update characters card shows raw CMS keys instead of its title and option
+DRI261897P0031    RDResolved      2    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Edit before first storyboard charges 7 credits for Regenerate to match, nothing shown
+DRI261897P0030    RDResolved      2    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Template cast change keeps old outline beats and still shows the removed character
+DRI261897P0029    TRCreated       2    RD         189774     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Picking a library portrait ends in Something went wrong and the look is not synced
+DRI261897P0025    NewCreated      3    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template sample videos show garbled sign text
+DRI261897P0024    BuildResolved   2    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Proposal Across Every Lifetime cover reads Proposal Across Lifetimes
+DRI261897P0023    QA Propose Won  2    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template detail player cuts off the cover title on 7 templates
+DRI261897P0022    Assigned        3    PC-Doc     189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template list link reads その他 instead of もっと見る in Japanese
+DRI261897P0021    TRCreated       3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Character filter sheet is titled 濾鏡 instead of 篩選 in Traditional Chinese
+DRI261897P0020    Assigned        3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Feature strings stay English in Traditional Chinese and Japanese
+DRI261897P0019    TRCreated       3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Create my character description text runs under the expand icon
+DRI261897P0018    NewCreated      2    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Character filter with no matches shows a blank grid with no empty state
+DRI261897P0017    Assigned        3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: X on Finish your characters keeps the generated looks instead of discarding them
+DRI261897P0016    Propose Wont F  2    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed character and video generations keep their charged credits with no refund
+DRI261897P0013    NewCreated      3    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Leaving during outline generation discards the drama instead of keeping it
+DRI261897P0012    NewCreated      3    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed scene image card copy differs from the Design error frame
+DRI261897P0011    TRCreated       3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Create storyboard card loses its price after the chat-limit dialog
+DRI261897P0010    NewCreated      3    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: No video settings card after a successful storyboard preview Retry
+DRI261897P0009    TRCreated       3    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: No Find your video here in History bubble after leaving the first video
+DRI261897P0008    Assigned        2    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character and storyboard generation block the screen for over a minute
+DRI261897P0007    NewCreated      2    PM         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Storyboard and video Stop cancel silently with no credit message
+DRI261897P0006    Assigned        1    RD         189729     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Video generation always fails after ~6 min as the storage upload times out
+DRI261896P0061    TRCreated       3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Keyboard cannot be dismissed in a new empty chat
+DRI261896P0060    Fail            3    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Video settings card says quick draft instead of quick drafts
+DRI261896P0059    NAB             3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: More ideas + chip is missing above the input once the chat has content
+DRI261896P0058    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Finish your characters sheet clips the bottom of character names
+DRI261896P0057    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Renamed drama stays in place in History and keeps its old time
+DRI261896P0056    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Chat scroll position jumps to an earlier card after closing Choose Character
+DRI261896P0055    Assigned        3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video settings card does not show You'll have N left under Generate
+DRI261896P0054    NewCreated      3    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Cast change after a storyboard shows the wrong assistant prompt
+DRI261896P0053    NewCreated      3    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Policy-violating idea gets a free-form refusal instead of the spec message
+DRI261896P0052    ProposeNAB      2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed clip shows 1 clip couldn't be generated with no Fix scenes path
+DRI261896P0051    Assigned        2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Try again on a failed video asks which beat to modify instead of retrying
+DRI261896P0050    Assigned        3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video in progress gives no Back toast and no processing label in History
+DRI261896P0049    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Credit pill on template and More pages shows an outdated balance
+DRI261896P0048    Assigned        2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: No Stop and lose your credits? dialog on Back during storyboard generation
+DRI261896P0047    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Template chat skips the Leave this chat? dialog on Back during outline
+DRI261896P0046    ProposeNAB      2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character, scene image and chat update prices differ from the spec
+DRI261896P0045    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Updating a storyboard image from chat fails silently and the scene never changes
+DRI261896P0044    Cancelled       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Drama jumps from characters straight to video without storyboard or settings
+DRI261896P0043    Cancelled       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed chat turn ends silently with no error message or Try again
+DRI261896P0042    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed character generation shows no error, no ! mark and no refund notice
+DRI261896P0041    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Public-figure reference photo is not blocked and a lookalike is generated
+DRI261896P0039    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Character added by chat after the storyboard gets a slot that cannot be tapped
+DRI261896P0038    Propose Wont F  2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: A message sent before the format is chosen skips the language and captions step
+DRI261896P0037    TRCreated       3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Character looks closed with X instead of saved are still added to Mine
+DRI261896P0036    Propose Wont F  2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: A minor's age in a character description always fails as "try again later" yet costs 1 credit
+DRI261896P0035    ProposeNAB      3    RD         189681     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Home shows only one row of templates when iOS Larger Text is on
+DRI261896P0034    BuildResolved   2    PM         189681     JAMIE_YEH       PDR-I 16.9.0 - [UI] AI Mini Drama (The Art of Falling): Default actors are assigned to characters with the wrong gender
+DRI261896P0033    NAB             2    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Scene detail has no credit entry
+DRI261896P0032    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Saved storyboard chat does not reopen at the bottom
+DRI261896P0031    NewCreated      2    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: AI Suggestion leaves required character attributes empty
+DRI261896P0030    Close           2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Rename OK stays enabled for empty or whitespace-only names
+DRI261896P0029    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Full Edit return loses the previous chat position
+DRI261896P0028    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Replay on an ended scene restarts the first scene
+DRI261896P0027    NAB             2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Scene playback continues into the next scene at the scene boundary
+DRI261896P0026    Close           3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Outside tap does not dismiss the History hint
+DRI261896P0025    Propose Wont F  2    RD         189681     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: The Ring He Worked For keeps cat heads after human characters are chosen
+DRI261896P0024    Assigned        2    RD         189681     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Story Outline & Characters Result block appears twice after characters are chosen
+DRI261896P0023    Close           2    PM         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][Jpn] AI Mini Drama (ビールの御曹司 (The Beer Heir), 君のための指輪 (The Ring He Worked For)): The Beer Heir and The Ring He Worked For load no preset characters in Japanese
+DRI261896P0022    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Japanese template names are truncated with "…" in the template list
+DRI261896P0021    Cancelled       2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Story Outline & Characters Result block appears twice after characters are chosen
+DRI261896P0020    NotReproducibl  1    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Final drama video generation always fails with "1 clip couldn't be generated"
+DRI261896P0019    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Revising a template's pre-assigned character fails with "Server is busy"
+DRI261896P0018    Assigned        3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene descriptions keep the dog white despite its golden look and the request
+DRI261896P0017    NAB             2    PM         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Create my character requires a human ethnicity for an animal character
+DRI261896P0016    NewCreated      2    PCDoc      189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Template chat reads "1 characters isn't set yetThey need a look…"
+DRI261896P0015    ProposeNAB      2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Full Edit blocks Free export because the drama's own captions count as premium
+DRI261896P0014    TRCreated       3    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Preview reads "videos are being generated" during a storyboard regeneration
+DRI261896P0013    TRCreated       2    RD         189631     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Regenerated storyboard is written above the revision request, not after it
+DRI261896P0012    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Storyboard scene text cannot be selected or copied
+DRI261896P0011    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Video settings Buy Credits button style and balance line differ from spec
+DRI261896P0010    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Create my character still shows 0 credits after buying credits
+DRI261896P0009    Close           2    RD         189631     JAMIE_YEH       PDR-I 16.9.0 - [UX] AI Mini Drama (Story outline): Character carousel lacks a visual hint for horizontal scrolling
+DRI261896P0008    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: New Chat "Leave anyway" returns to the previous page instead of clearing the chat
+DRI261896P0007    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: "New Chat" button is enabled when the chat and prompt input are empty
+DRI261896P0006    Wont Fix        2    PM         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Loading placeholder animation is barely visible in Light mode
+DRI261896P0005    Close           2    RD         189631     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Finish your characters sheet thumbnails lack the white background
+DRI261895P0036    Close           1    RD         189596     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Create my character always fails with "Couldn't create image"
+DRI261895P0035    TRCreated       1    RD         189596     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Scene and Location image generation always fails
+DRI261895P0034    ProposeNAB      2    RD         189520     BALLY_HSU       PDR-I 16.9.0 - [UX] AI Mini Drama: Revised story outline is not shown again after characters are selected
+DRI261895P0033    Close           2    RD         189566     BALLY_HSU       PDR-I 16.9.0 - [AIFound]AI Mini Drama: While waiting for AI response, "Sever is busy. Please try again later." error message appears.
+DRI261895P0032    Close           2    RD         189566     BALLY_HSU       PDR-I 16.9.0 - [AIFound] [UX] AI Mini Drama: Generate button is disabled without clear reason when character attributes are missing.
+DRI261895P0031    Assigned        2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video production blocks useful actions beyond ten seconds
+DRI261895P0030    Assigned        2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Revision blocks useful actions beyond ten seconds
+DRI261895P0029    Assigned        2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Outline generation blocks useful actions beyond ten seconds
+DRI261895P0028    TRCreated       2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Play and Download remain enabled during replacement generation
+DRI261895P0027    NAB             3    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Successful video saves show outdated Saved to Photos copy
+DRI261895P0026    NAB             3    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Scene detail omits the Location thumbnail and label
+DRI261895P0025    NAB             3    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard revision offer is mislabeled Create storyboard
+DRI261895P0024    QA Propose Won  2    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Character generation has no usable Stop action or cancellation warning
+DRI261895P0023    Propose Wont F  3    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Surprise me replaces the composer instead of appending its suggestion
+DRI261895P0022    RDResolved      2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: First-video generation omits the required notification preprompt
+DRI261894P0052    NotReproducibl  2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Full-episode price jumps from 240 to 376 credits for the same drama
+DRI261894P0051    Assigned        4    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Settings card offers 75/90 s full video but later offer says 60 sec
+DRI261894P0050    Assigned        3    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Assistant gives no reply to questions or unsupported requests
+DRI261894P0049    NeedMoreInfo    3    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Leave guard shows only on History icon, not Back, and says the job will stop
+DRI261894P0048    Close           2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Requests to change scene count or visual style are silently not applied
+DRI261894P0047    Close           2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Adding or removing characters by chat does not update the story outline
+DRI261894P0046    Close           2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Language change by chat leaves outline and scene titles in the old language
+DRI261895P0007    Assigned        2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: after a chat scene revision, the video renders only the revised scene
+DRI261895P0006    NAB             3    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Download on the result page saves only one 15-s clip, not the drama
+DRI261895P0005    Propose Wont F  3    PM         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: "Add New" adds an invented character who appears in no scene
+DRI261895P0004    Assigned        3    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: a pet that drives the story is never offered as a character
+DRI261895P0003    Assigned        2    RD         189520     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: "The Beer Heir" in Japanese only shows "Server is busy"; no outline or portraits
+DRI261895P0002    Close           2    RD         189520     BALLY_HSU       PDR-I 16.9.0 -  AI Mini Drama (microphone): Using speech-to-text in the chat box does not display any text.
+DRI261894P0044    QA Propose Won  3    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Enlarge button on character cards is only 18x19 pt
+DRI261894P0043    TRCreated       3    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Back from an empty chat still asks "Leave this chat?"
+DRI261894P0042    Close           3    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: VoiceOver reads image IDs or nothing for Back, History, X and checkmark
+DRI261894P0041    Close           3    PM         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: offer card button reads "Create chraracters" (typo)
+DRI261894P0040    Close           3    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Choose Character opens empty with no loader; filter lacks Gender
+DRI261894P0039    Close           3    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: closing Create my character discards all input without confirmation
+DRI261894P0037    ProposeNAB      2    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: only 5 characters kept; extra ones are dropped but stay in the story
+DRI261894P0036    Assigned        2    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: after a failed step the chat is left with no next step, card or retry
+DRI261894P0035    Close           2    RD         189482     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Video Generate makes no video and the chat jumps to the full-episode offer
+DRI261894P0034    Close           2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - AI Mini Drama: The expanded text editor's border is drawn as a bright white line, not matching the dark theme
+DRI261894P0032    Close           2    RD         189482     VIVIAN_HUANG    PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene edit trash wipes the script without confirm and allows regenerating empty
+DRI261894P0031    TRCreated       2    RD         189482     VIVIAN_HUANG    PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Failed scene image says "service is busy" but its ⓘ blames terms of service
+DRI261894P0030    Close           2    PM         189482     VIVIAN_HUANG    PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Character prompt reads "1 characters aren't set yet"
+DRI261894P0029    Close           2    RD         189482     BALLY_HSU       PDR-I 16.9.0 - AI Mini Drama: If a storyboard is regenerated, the subsequent Seedance options only display the model and missing duration settings.
+DRI261894P0028    Cancelled       2    RD         189485     BALLY_HSU       PDR-I 16.9.0 - AI Mini Drama: If a storyboard is regenerated, the subsequent Seedance options only display the model and missing duration settings.
+DRI261894P0025    Close           2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: raw internal error strings are shown to users as toasts
+DRI261894P0024    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: says the characters look great after leaving with characters unset
+DRI261894P0023    Propose Wont F  2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: failed character image shows a raw error toast and still costs 1 credit
+DRI261894P0022    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Daily Free Chat Limit Reached dialog has no close button
+DRI261894P0021    QA Propose Pos  3    PM         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: credit details list drama charges as Text to Image / Text to Speech
+DRI261894P0020    Close           2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: backgrounding during video generation kills the job; chat shows dead options
+DRI261894P0019    TRCreated       3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: video settings offer different length options per drama
+DRI261894P0018    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: confirming characters adds a new Mine copy of every assigned character
+DRI261894P0017    Close           2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: video can be generated while storyboard scenes have no image
+DRI261894P0016    NAB             2    PM         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: paid preview is shown as the finished drama, full episode sold afterwards
+DRI261894P0015    Propose Wont F  3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: generation shows only generic or video-language status text
+DRI261894P0014    Close           2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: after a chat edit, storyboard makes 1 of 6 scenes and is never shown
+DRI261894P0013    NotReproducibl  3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: asks to regenerate a storyboard that doesn't exist yet, price changes
+DRI261894P0012    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Finish sheet still says characters aren't set after generating them
+DRI261894P0011    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: Save to library saves the character to Photos and shows "Saved to Photos"
+DRI261894P0010    Propose Wont F  2    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: create form offers ethnicities the filter can't find; Other vs Others
+DRI261894P0009    Close           3    RD         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Create my character heading reads "what <name> look like" (should be looks)
+DRI261894P0008    Close           3    PM         189463     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: The Fake Engagement template uses cover art titled Billionaire Romance
+DRI261894P0007    QA Propose Pos  2    PM         189463     VIVIAN_HUANG    PDR-I 16.9.0 - [UX] AI Mini Drama: When generating character images or videos, the credit details show "TTS", "TTI", or "AI Video Generator", which may confuse users
+DRI261894P0006    Close           2    RD         189463     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: Fails to generate all of them in a single request when asking the AI to generate multiple characters
+DRI261894P0005    QA Propose Won  2    RD         189463     BALLY_HSU       PDR-I 16.9.0 - AI Mini Drama:  Generating 3-view character images always produces the same hairstyle and outfit.
+DRI261894P0004    Close           2    RD         189463     BALLY_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: After generating the 3-view images, tapping [x] to leave still selects the image.
+DRI261894P0003    Close           2    RD         189463     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: After exceeding the free chat limit, still display the generating animation after closing the exceeding dialog
+DRI261894P0002    Close           2    RD         189463     BALLY_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: When selecting custom media, the preview image quality is low.
+DRI261894P0001    Close           2    RD         189463     BALLY_HSU       PDR-I 16.9.0 - AI Mini Drama: Some storyboards fail to generate, and tapping to enter shows no refresh option.
+DRI261893-0165    Close           3    RD         189399     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character photo stays stale after refresh until the task is reopened
+DRI261893-0163    QANeedRework    2    RD         189399     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Successful storyboard image routes expose no version editor
+DRI261893-0162    Close           2    RD         189399     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: English captions fail to generate and Retry leaves the error
+DRI261894-0001    Close           2    RD         189463     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template preview show stale credit balance after a credit deduction
+DRI261893-0161    Close           2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama (storyboard): Does not display the "regenerate" or "edit" button on the failed thumbnail
+DRI261893-0160    Close           2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama (Choose Character): The style card splashes when switching styles quickly
+DRI261893-0159    Close           2    RD         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: History info tooltip points away from ⓘ
+DRI261893-0158    Close           2    PM         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template title "Six Things You Didnt Know" is missing its apostrophe
+DRI261893-0157    Close           2    PM         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: All template category headers show the same office-building icon
+DRI261893-0156    Propose Wont F  3    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The same mask looks completely different across the four video segments, including variations between full-face and half-face masks
+DRI261893-0152    Close           2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The third video segment, starting at 30 seconds, uses the video and audio from the second segment but displays the subtitles for the third segment
+DRI261893-0151    Close           2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The voiceover and subtitles are out of sync in the second video segment, starting at 15 seconds
+DRI261893-0150    Propose Wont F  2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - [UX] AI Mini Drama: The elderly character is given a young-sounding voice
+DRI261893-0149    QA Propose Won  2    RD         189399     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: "破綻" is incorrectly pronounced as "爬燦" at approximately 7 seconds in the video
+DRI261893-0146    Close           2    RD         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard script clips left edge of first glyph on first and last lines
+DRI261893-0145    BugNeedReview   2    RD         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard script clips left edge of first glyph on first and last lines
+DRI261893-0142    Close           2    RD         189399     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent] AI Mini Drama: English storyboard dialogue uses Chinese quotes 「」 instead of English quotes
+DRI261893-0136    Close           2    PM         189309     ANGOL_HUANG     PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed to apply a specific infant template as a character
+DRI261893-0135    Close           2    RD         189309     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The AI repeatedly asks the same confirmation question without proceeding to regenerate the character images
+DRI261893-0134    Close           2    RD         189309     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: Can not replay the generated video; it does not display a play button
+DRI261893-0133    Close           2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Exhausted chat quota is checked only after template setup
+DRI261893-0132    Close           3    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Pro daily-limit dialog has no upgrade action
+DRI261893-0131    Close           2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Daily chat limit discards the rejected draft in every tier
+DRI261893-0130    NAB             2    PM         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Character and storyboard generation skip the credit confirmation card
+DRI261893-0129    Propose Wont F  2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Animated character generation blocks useful actions beyond ten seconds
+DRI261893-0128    QA Propose Won  3    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Outline and revision Stop give no explanatory feedback
+DRI261893-0127    Close           2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Paid storyboard Stop omits cancellation and credit consequences
+DRI261893-0126    Close           2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Backgrounded character request loses its visible outcome
+DRI261893-0125    Close           3    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Save toast differs from the specified Photos wording
+DRI261893-0124    NAB             3    PM         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Surprise me changes its suggestion within one landing session
+DRI261893-0123    NAB             3    PM         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Storyboard scene description has no edit or save action
+DRI261893-0122    Close           2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Recent task timestamp stays unchanged after revision
+DRI261893-0121    NAB             2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Completed outline exposes no manual text editor
+DRI261893-0120    QA Propose Won  2    RD         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Inspiration selection overwrites an edited draft without confirmation
+DRI261893-0119    NAB             2    PM         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Generated character has no Rename route
+DRI261893-0118    NAB             3    PM         189309     ETHAN_HSU       PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Format setup has no aspect-ratio selection
+DRI261893-0069    Close           2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama (Recent task): After selecting the task, the text in the task shifts
+DRI261893-0068    Close           1    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The "Daily Free Chat Limit Reached" dialog appears even though this is the first time using the feature that day
+DRI261893-0065    Close           2    RD         189315     SHERRY_LEE      PDR-I 16.9.0 - AI Mini Drama: App displays an empty thumbnail when the video generation fails
+DRI261893-0064    NeedMoreInfo    2    RD         189315     SHERRY_LEE      PDR-I 16.9.0 - AI Mini Drama (Error Status): When some clips fail to generate, the successful clips aren't shown either in the result page
+DRI261893-0060    Close           3    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama (Choose Character page): The checkbox color is gray on the filter panel
+DRI261893-0059    Close           2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama (Choose Character page): The filter icon disappears when filters are applied
+DRI261893-0058    Close           2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama: The + button for adding a new character is a bit blurry
+DRI261893-0057    NAB             2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama: Does not display "More ideas +" button after generating the storyboard
+DRI261893-0056    Close           2    RD         189315     BALLY_HSU       PDR-I 16.9.0 - [UI] AI Mini Drama, Recent Task : The hint bubble is not aligned with the [i] icon
+DRI261893-0055    Close           2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - AI Mini Drama: The AI chat messages disappear when storyboard outline generation starts
+DRI261893-0054    Close           2    RD         189315     BALLY_HSU       PDR-I 16.9.0 - [UI][MX] AI Mini Drama : Tapping the top Credit pill icon leads directly to the Credit Purchase page.
+DRI261893-0053    Close           3    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama (format-checking dialog): Display the "Continue" button instead of "Generate"
+DRI261893-0052    Close           3    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama (format-checking dialog): The horizontal divider between the caption options and the "Continue" button is missing
+DRI261893-0051    Close           2    RD         189315     VIVIAN_HUANG    PDR-I 16.9.0 - [UI] AI Mini Drama: The "Hi, I'm your" text has a shadow on it
+DRI261893-0050    Close           2    RD         189315     BALLY_HSU       PDR-I 16.9.0 - [PM][UX] AI Mini Drama: Text above the conversation cannot be selected or copied.
+DRI261893-0018    Close           2    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: leaving mid-generation has no "Stop generating?" and loses the outline
+DRI261893-0017    Close           2    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: "Delete Drama?" names neither the drama nor that it's permanent
+DRI261893-0016    Close           3    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: History Rename keeps OK enabled for an empty name and silently ignores it
+DRI261893-0015    TRCreated       3    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: just opening a task moves it to the top of History and changes its size
+DRI261893-0014    Close           2    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: same-day tasks are all named "AI Drama MMDD" and can't be told apart
+DRI261893-0013    TRCreated       3    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: History tooltip won't close on outside tap and covers first card's date
+DRI261893-0012    Close           2    RD         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound] AI Mini Drama: task left before its outline arrives is saved empty and reopens blank
+DRI261893-0011    QANeedRework    2    PM         189315     ETHAN_HSU       PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: format card button reads "Continue" instead of the specified "Generate"
+
+229 bug(s)

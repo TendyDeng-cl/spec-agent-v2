@@ -1,0 +1,32 @@
+{
+  "feature": "pdr/aigc-watermark",
+  "platform": "android",
+  "title": "AIGC Watermark",
+  "draft": "20261127-114427",
+  "created_at": "2026-11-27T03:44:27.672Z",
+  "based_on_version": 6,
+  "spec_folder": "specs/2026-11-17",
+  "spec_files": [
+    {
+      "name": "AIGC Watermark - PM Figma 0-1.md",
+      "sha256": "418e339614821fc302674773d1477cf6f285cd13e4bffbb6d70fdabdb06d2131",
+      "bytes": 6483
+    },
+    {
+      "name": "[C2PA] GAI effects.xlsx",
+      "sha256": "51f89fec7e4e6d5d2efd9f7e0c89351a57e567ab6d985aecdf0c3c80fdee32ea",
+      "bytes": 16440
+    },
+    {
+      "name": "AIGC Watermark - Design Figma 3815-9037.md",
+      "sha256": "6186a83ddd2f4686a2dc4bb94b850d0b620d8f80a6f8aae628124f71da442ffe",
+      "bytes": 1626
+    },
+    {
+      "name": "PDRIOS-722 Jira description.md",
+      "sha256": "8fcb680dfe2df6115cb96e8458be471f18b0164022b76a11c16511d306322a11",
+      "bytes": 1298
+    }
+  ],
+  "spec_set_sha256": "bd9387c6c31d0a15926029ff2078edca6879602699881f932abd012c38f20baf"
+}

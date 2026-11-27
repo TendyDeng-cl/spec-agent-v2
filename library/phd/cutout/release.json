@@ -1,0 +1,12 @@
+{
+  "_note": "Where the Kanban roadmap puts this feature, per platform (user, 2026-11-26): the app version and the roadmap items it covers (titles as on the sheet). The Dashboard lists the feature under that version.",
+  "source": "Kanban App Compiled Roadmap (Google Sheets 17ohWkcbvz9qhg-ZoYImtGWFcAxti4myKib4ePd1b74Q)",
+  "tab": "PhDM Roadmap",
+  "read": "2026-11-26",
+  "android": {
+    "version": "20.19.0",
+    "items": [
+      "Add reset / undo / redo buttons for Cutout"
+    ]
+  }
+}

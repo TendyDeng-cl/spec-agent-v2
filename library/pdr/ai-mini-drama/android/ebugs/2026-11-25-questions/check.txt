@@ -1,0 +1,1 @@
+0 bug(s) to check — no entry drafted (Q-5 and Q-18 not drafted: each needs a device check). check_ebug_format.py and ebug-review.ts not run: the drafts file holds no entry, so there is no bodies.json and no review page.

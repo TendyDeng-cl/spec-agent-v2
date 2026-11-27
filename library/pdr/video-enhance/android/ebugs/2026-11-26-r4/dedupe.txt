@@ -1,0 +1,46 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# Batch 2026-11-26-r4: round R4 on 16.9.0.2611251 (TR pending). Pool: ecl_query.py dedupe, 218 candidates (「Video Enhance」,
+# PowerDirector Mobile for Android), 64 open on 16.9.0, each read against ISS-VEA-60 / 61 / 62 (dedupe-query.txt); ranked hits
+# P0093 (limit bubble covers the Preview time), P0232 (dialog never shown, fixed on 2611251), P0081, P0288 (time bubble over the
+# label): other points, no duplicate. Status read 2026-11-27. No existing ticket was commented on.
+
+DRA262611P0071	Launcher / AI Magic name 「Video Enhance」 (NewCreated, PM)	TC-002
+DRA262611P0086	Demo page description is AI Reframe's text, Q-1 (NeedCodeReview)	TC-011
+DRA262611P0233	No import overlay / 「Cancel」 (PM)	TC-315
+DRA262611P0234	Sort keys differ from iOS (PM)	TC-316
+DRA262611P0235	Empty Recent task 「No Generated Videos」 (PM)	TC-317
+DRA262611P0101	8K converted to Full HD (TC-022 steps 1–3)	TC-022
+DRA262611P0089	Under-1 s and MKV sources not greyed, Q-13	TC-022, TC-269
+DRA262611P0326	No GenAI consent before the first upload, Q-14 (NewCreated, PM): still so on 2611251	TC-351
+Q-14	DRA262611P0326
+DRA262611P0117	Source total 「02:30」 while Selected Length reads 「02:31」 (NeedCodeReview)	TC-259
+DRA262611P0092	Full-screen preview: no close, restarts at 00:00	TC-037, TC-355, TC-361, TC-368
+DRA262611P0076	Exact-second files billed one extra second; on 2611251 the padded length also shows in 「Selected Length」 (00:02 / 00:31; P0075 fix rounds up)	TC-270, TC-269, TC-260, TC-353, TC-358, TC-365, TC-267
+DRA262611P0113	Preview frame lags a dragged trim handle, Q-27	TC-042, TC-214, TC-044, TC-216, TC-272, TC-355, TC-361, TC-368
+DRA262611P0208	Preview lags the ◀▶ knob, Q-27 (TC-371 – TC-374: frame stays on 00:00 for the whole knob drag)	TC-215, TC-371, TC-372, TC-373, TC-374
+Q-27	DRA262611P0113
+DRA262611P0091	Dragging the selection moves the range against the finger	TC-043
+DRA262611P0090	Strip not re-laid to 2:30 in Professional, Q-24 (status Fail: fix rejected 2026-11-26)	TC-045, TC-264
+Q-24	DRA262611P0090
+DRA262611P0115	1 fps source: no fps chip selected	TC-052
+DRA262611P0077	Offline Enhance shows nothing	TC-100
+DRA262611P0078	Ring 0% then stalls	TC-110
+DRA262611P0236	Slow upload: 1 MB 65 s, ring at 100% while S3 uploads (O-8); 92.5 MB not done in 52 min (its Note: failed after 26 min on 2611091)	TC-112, O-8, O-11, O-15, O-23
+DRA262611P0079	Home during upload: task goes on and is charged, Q-18 (NeedCodeReview; on 2611251 the task completes)	TC-115
+Q-18	DRA262611P0079
+DRA262611P0095	Notification copy is the banner's, Q-16	TC-133
+Q-16	DRA262611P0095
+DRA262611P0081	‹ / Back from Recent task go to the Launcher: fixed on the panel's icon path (TC-140, TC-208 pass), still on the Recent task that opens by itself after Enhance (TRCreated, fixed in 2611251: for its verify)	TC-141, O-9, O-20, O-29
+DRA262611P0084	Tasks far over 1.5–2.5× their length (R-204)	TC-265, TC-266, TC-267, TC-219 – TC-238
+DRA262611P0116	Credit Details names the debit 「Video Enhancer」	TC-223 – TC-254
+DRA262611P0099	Timeline clip over 8:00 opens capped at 08:00, Q-10	TC-161
+Q-10	DRA262611P0099
+DRA262611P0100	Timeline / clip-toolbar result not pasted back; Add to Timeline makes a new project, Q-11 / Q-30	TC-162, TC-165, TC-362, TC-369
+Q-11	DRA262611P0100
+Q-30	DRA262611P0100
+DRA262611P0094	Leave during upload: charged, refund ~3 h later; the upload goes on after Leave (O-16, O-29: the next task waits for it)	O-16, O-29
+DRA262611P0098	Auto-save at Done removed on 2611251 (fixed; Save Result writes one copy per tap, O-21)	O-21
+
+# Closed / cancelled PM tickets cited as rulings: DRA262611P0088 (Close) TC-013; DRA262611P0096 (Cancelled) TC-152, TC-223 – TC-254,
+# TC-356, TC-362, TC-369; DRA262611P0097 (Close, Q-8) TC-144, TC-355, TC-361, TC-368; DRA262611P0325 (Cancelled 2026-11-26 16:27, Q-28,
+# no note) TC-350; DRA242410-0142 (Close, Q-9) TC-021, TC-201.

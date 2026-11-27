@@ -1,0 +1,44 @@
+
+0 of 4 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Swipe-Collage-Changelog-01] PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages ✓ returns the Canvas to page 3, not the selected new page 4
+      feature='Swipe_Collage'  terms=['Swipe_Collage']  searched 43 candidate(s)
+      no likely duplicate
+
+[Swipe-Collage-Changelog-02] PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Cross-page frame hangs past the last page after a page move or page removal
+      feature='Swipe_Collage'  terms=['Swipe_Collage']  searched 43 candidate(s)
+      no likely duplicate
+
+[Swipe-Collage-Changelog-03] PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: At 10 pages the strip's move and ••• buttons shrink to about 12 dp
+      feature='Swipe_Collage'  terms=['Swipe_Collage']  searched 43 candidate(s)
+      no likely duplicate
+
+[Swipe-Collage-Changelog-04] PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Frame selection box far exceeds the frame; its menu covers nearby text
+      feature='Swipe_Collage'  terms=['Swipe_Collage']  searched 43 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 20.19.0: 24 ticket(s) of 43 searched. Judge every entry against each one; the ranking above misses rewordings.
+      PHA262026P0072  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Template opens with more empty frames than its photo count
+      PHA262026P0073  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Selected photos are not marked in the photo picker grid
+      PHA262026P0074  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Photo picker limit counts only the current page's frames and has no 20 cap
+      PHA262026P0075  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Canvas has a top bar and no ✕ / ✓ row, unlike the Design
+      PHA262026P0076  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Discard」 goes to the Template Page, not the Template Preview
+      PHA262026P0077  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: System Back does not close the 「Discard changes?」 dialog
+      PHA262026P0079  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame tool bar has no Flip H, Flip V or Shadow, and the floating icons no Lock
+      PHA262026P0080  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: A tap in image focus clears the selection instead of returning to frame focus
+      PHA262026P0082  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: No 「Long press & drag to swap」 hint while dragging a photo to swap
+      PHA262026P0083  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Frame panel thumbnails carry no photo count
+      PHA262026P0087  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Canvas sheets have only a round ✕, no ✓ or collapse ⌄ as the Design draws
+      PHA262026P0092  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Ratio sheet offers 7 fixed ratios, no Custom, Original, 2:3 or 3:2
+      PHA262026P0094  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages has no 「Page n / N」 or − / + stepper and selects no page on entry
+      PHA262026P0095  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages has no ✓ or ✕; leaving keeps every page change without 「Discard changes?」
+      PHA262026P0097  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages move button selects on a tap; dragging shows no enlarged page or hint
+      PHA262026P0100  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Save & Share saves on opening, with no Save, counter or single-image save
+      PHA262026P0101  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Exports are always 1080 x 1920 whatever the Image Quality setting
+      PHA262026P0102  NewCreated   PM   202611111946  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Save & Share row has no Twitter (X) or Line target
+      PHA262026P0103  TRCreated    RD   202611111946  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Free user tapping a PRO template card gets the IAP page instead of the preview
+      PHA262026P0148  NewCreated   PM   202611181947  PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Text colour cancelled with Back is still added as a recent swatch
+      PHA262026P0160  TRCreated    RD   202611231214  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame 「+」 needs two taps; the first selects the layer over it
+      PHA262026P0161  Assigned     RD   202611231214  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Year-end Recap 3-photo template text falls off the page and is cut on save
+      PHA262026P0162  TRCreated    RD   202611231214  PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Removal room shows the photo without its Adjustments
+      PHA262026P0163  Assigned     RD   202611231214  PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: A tap outside the page selects a template sticker

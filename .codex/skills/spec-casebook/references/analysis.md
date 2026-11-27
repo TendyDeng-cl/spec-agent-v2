@@ -10,6 +10,15 @@ requirements (cite the board as usual). A cell the spec defines becomes a requir
 spec is silent on becomes an Open question, never an invented case, except the user's QA rules (Stop notice, leave
 and return, waits), which apply to every job.
 
+**Every Open question gets an observing row (user, 2026-11-25).** A question is not left to chance: when it is
+written (in an analysis, from a ruling, or at a phase wrap-up), a row is written with it that takes the app to the
+point in question and records what it does. Where the rows can rest on an assumption, the row asserts the assumption;
+where nothing can be assumed (「stop, jump back or loop?」), the row's Expected Result says what to record and that any
+outcome is recorded as a Fail (question) for the owner, not a pass. The question names the row's TC id, so the next
+run reaches it and its wrap-up can determine or file it (`ebugs.md` step 1). A question no row can observe (a spec
+file nobody has read) ends `No row: <why>`. `check.ts` warns on an Open question that names no active row. Video
+Enhance's Q-14 said 「No row asserts it」 and stayed open through three runs for that reason.
+
 1. **Flow arrows.** One requirement per arrow in `arrows.json` (`[DS: flow arrow <node> <Figma URL>]`). Each needs
    a row: its own, or an existing row that walks the edge, named on the requirement as `Walked by: TC-…`
    (`check.ts` accepts that as coverage). A forward edge does not cover its return edge. A row that stops at a
@@ -122,6 +131,25 @@ and return, waits), which apply to every job.
    does not cover them (TC-218 stood for three tiers). Fill `### Variants`: one line per requirement × variant with
    its rows. `check.ts` fails a requirement naming two or more tiers, or "each tier / model / language", that lacks a
    line per variant.
+   **Every drawn appearance is a variant (2026-11-27, christmas-new-year-sale DRA262611P0331).** When the Design
+   draws a screen in more than one appearance (dark / light, landscape, a short device), each appearance is a variant
+   of that screen's requirement, whether or not the PM text names it, and its row says what changes per appearance
+   (the background or art of each themed element, read from the frame: 「pale cream card」, not 「seasonal
+   background」). A row with an appearance sets it in its Precondition, with the app's own Appearance setting
+   (Android ☰ › Preferences › Appearance overrides the system switch). (v2 split dark / light only for the Launcher
+   banner, whose PM line said 「dark / light」; the IAP page, drawn as IAP_year dark and light, kept one row whose
+   「seasonal background」 passed a navy dark-mode card seen in light mode in R2.)
+   **Every copy of a screen is read (user, 2026-11-27).** The miss above began in the reading: the board drew two
+   frames both named 「IAP_year」 side by side and the analysis read one. Wherever a board holds two or more screens
+   with the same name, fill `### Repeated screens` in `requirements.md`: `| Board | Screen | What differs | Rows |`,
+   one line per repeated name, `What differs` read from the frames themselves (「dark: navy card, gold title · light:
+   pale cream card, dark title」) and `Rows` the rows that check each copy, or `same: <why>` (one screen drawn again
+   at a later flow step, a pressed state already covered) or `older: <newer copy>`; a board whose repeats are all flow
+   steps may take one line with Screen `*` and `same:`. `check.ts` fails a repeated name of `inventory.json` with no
+   line, and a row-trace naming no active row.
+   **Expected Results name the look (user, 2026-11-27).** Where a row checks a themed or appearance-dependent element,
+   its Expected Result states what the Design draws for that appearance (colours, art, which card or banner), never
+   only a category (「seasonal background」, 「themed style」, 「festive banner」): a category passes any wrong art.
    **A setting's values are variants too (2026-11-04, Video Enhance).** Every value the user can choose for a
    setting that changes what the feature makes (Mode, style, fps, resolution, quality, length, voice) gets a row that
    *uses* it: chosen, carried through the action it changes (generate, export, save) and checked in the result (the
@@ -188,6 +216,49 @@ and return, waits), which apply to every job.
      「00:00」 bubble) was traced as the trim handle, so no row scrubbed the playhead.
    - Check every `how: label` or `how: arrow` auto trace against the same rule: an auto trace that names a row
      pressing the control's twin or look-alike is replaced by a row that presses this one.
+12. **Every entry point, every control once (user, 2026-11-26).** A feature reached from more than one place gets
+   its full flow from the primary entry, and from every other entry a UI pass that presses each control once. Never
+   assume two entries lead to the same screen or behave the same way.
+   - **Find every entry.** For editor-toolbar places, run `node scripts/entry-points.ts <product> fetch`, then
+     `node scripts/entry-points.ts <product> "<tool name>"`. The fetch reads the newest dated tab of the product team's
+     toolbar sheet (`product.json` › `entry_points`, KP-107). Also list every other entry the spec, Figma, the knowledge
+     (`knowledge.ts … --grep entry`) or a build shows: Launcher big and small shortcuts, the AI Magic tab, Mine ›
+     demos, banners, notifications and push, deep links, another tool's 「You might also like」, the tool's own task
+     list or history. The sheet's brackets limit an entry to a platform or release (「Android沒有」, 「4/E IOS」).
+     **Read the sheet for the table's own platform (user, 2026-11-27):** run the lookup with `--platform ios|android`.
+     A place marked for the other platform only (「(4/E IOS)」, 「(iOS)」, 「Android沒有」, 「only Android」) gets no row,
+     no Open question and no eBug on this platform, and a note split 「(iOS) … (Android) …」 counts only its own
+     platform's part: some behaviours are iOS- or Android-specific. Shown 2026-11-27: the Android AIGC Watermark
+     table wrote 12 rows for 「AI Remove (4/E IOS)」 (TC-214 – 225), and DRA262611P0341 reported it missing on Android.
+     The same tool under two selection toolbars counts as two entries: Video and PIP Video act on the main track and an
+     overlay, and Photo and PIP Photo do the same.
+   - **`### Entry points` in `requirements.md`.** Write one line per entry: its path
+     (`Editor › select a main-track video › Enhance › Video Enhance`), where it comes from (sheet tab, board, KP),
+     its platforms, and the Section that holds its rows. Mark the entry the spec draws as `primary`.
+   - **Primary entry: the full table.** The rows the other passes write run from the primary entry, as before.
+   - **Every other entry: a UI pass (user, 2026-11-26; replaces 「full flow per entry」 of the same day).** Each
+     entry gets its own Section (`Entry › <path>`) with a few rows, each step on its own line, that together:
+     - reach the feature through that entry and check the landing screen and what it brings in (the selected clip,
+       the photo under the playhead, nothing, an Add Media pick)
+     - check every value the screen reads from that input against the input's own (fps, resolution, length, aspect,
+       the selection): an imported timeline clip is where these go wrong (Video Enhance read the wrong fps from a
+       timeline clip)
+     - press every control and choose every option once (each chip value, toggle, slider, tab, sheet, ⓘ, link),
+       with no combinations and no scenario variants, and check that each one responds as the spec says, with no
+       error, crash, freeze, empty state or wrong value
+     - press the main action once (Generate, Enhance, Apply, Export) and check where its result lands from this
+       entry (it replaces the clip on its own track, opens a new project, or is saved to the album)
+     - press each exit and, on Android, system Back once, and check where each one leads
+     Use the control inventory (pass 11, `control-trace.json`) or the primary rows' controls as the checklist and name
+     it in the row's Notes. Combinations, limits, failures, tiers, MUI and one-way states stay with the primary entry.
+   - **When the spec is silent (user, 2026-11-26).** Where the spec draws one entry and says nothing of another, the
+     other entry's rows assert the primary entry's behaviour, with no Open question. A difference a run finds is filed
+     or raised at the phase wrap-up (`ebugs.md` step 1). Open a question in the draft only for a real unknown that the
+     primary behaviour cannot answer: what an entry brings in that the primary does not (a selected or trimmed clip,
+     an overlay), where its result lands, an entry only one source places (the sheet but no board), or a behaviour
+     the user reported. One question per such unknown, never one per entry asking 「the same as the primary?」 (the
+     first drafts of 2026-11-26 had 42 of them). An entry the build does not show gets a row that records its absence;
+     the absence becomes a PM question at the wrap-up and the entry is never dropped.
 
 ## Standing inputs (user, 2026-10-21)
 

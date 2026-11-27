@@ -1,0 +1,16 @@
+
+1 of 1 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Cinematic-Reel-Recommendation-Q1-02] PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty picture boxes with no message
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 80 candidate(s)
+    ! 22%  closed    DRA262607-0159  PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): Show "(empty string)" in "Launcher_cust
+              shares phrase "show empty"
+
+== Open in the pool on 16.9.0: 7 ticket(s) of 80 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0289  RDResolved   RD   2611201  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+      DRA262611P0290  NewCreated   PM   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+      DRA262611P0316  BugNeedRevie PC-Doc 2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Template descriptions end with a full stop the CMS sheet lacks (9 languages)
+      DRA262611P0317  BugNeedRevie RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their bars in Arabic, Persian and Hebrew
+      DRA262611P0318  BugNeedRevie RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelsesfornemmelse」 breaks mid-word
+      DRA262611P0319  BugNeedRevie PC-Doc 2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino captions with English headings and button
+      DRA262611P0320  BugNeedRevie PC-Doc 2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öneri」 with a small first letter

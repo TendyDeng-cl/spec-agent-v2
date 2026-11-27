@@ -1,4 +1,4 @@
-# Formatting check for every HTML page (user, 2026-11-19)
+# Formatting and design check for every HTML page (user, 2026-11-19 / 11-25)
 
 Every HTML page or artifact the agent makes or changes (comparisons, reports, review pages, eBug review pages, the
 pages server's templates) gets this check before it is handed over. Look at it rendered, not only at the source.
@@ -27,5 +27,34 @@ had uneven widths, and the better-side key sat next to one side's name so it rea
   possible winner moves to a note), and the order of sides is the same everywhere.
 - **Readable at both widths and themes:** no clipped or overlapping text, contrast holds in dark and light, tables
   scroll inside their box on a phone rather than squeezing to one word per line.
+
+## UI design rules (user, 2026-11-25)
+
+A page that passes the formatting check can still be badly designed. The first Dashboard toolbar did: underline tabs,
+a boxed switch, two rows of pill chips with small-caps labels, then a menu and a search box pushed to the right of a
+line of their own, and versions of two products mixed in one row of chips. Anything with controls (the pages
+server's templates, review pages, any page with tabs, filters or buttons) is held to these general rules when it is
+made or changed, and judged from the screenshot as a designer would, not only as "nothing overlaps":
+
+- **One control style per kind of choice.** Choosing one of a few views is tabs; a secondary either/or beside them is
+  one small switch; filters and sort are all the same control (menus, or all chips, never a mix) at the same height,
+  radius and font. No more than two navigation styles on a page.
+- **A toolbar is one line that reads left to right** in the order people decide (what, which, how sorted, search).
+  No control is stranded alone on a line or pushed to the far edge away from the ones it belongs with; when the line
+  must wrap (a phone), the controls stack at full width with their labels in one column.
+- **Hierarchy is visible.** Primary navigation is the strongest, secondary quieter, filters quieter still; one accent
+  for what is selected. Labels are sentence case next to their control; small caps only for table headers.
+- **Options belong to their parent.** A filter never mixes values of different parents in one flat list (versions of
+  two products): scope the list to the parent chosen, or group it under each parent's name.
+- **Every number says what it is** from its column header or label, one meaning per column; a count beside an option
+  is written as a count (`16.9.0 (3)`), not left as a bare number.
+- **Quiet by default.** Repeated actions and badges that say the same on every row are shown once (a header, a tab) or
+  on hover; an empty value is a dash, not a sentence.
+- **Consistent spacing and alignment.** Controls and blocks sit on one left edge with even gaps (multiples of 4 px),
+  numbers right-aligned or tabular, the same radius and border everywhere.
+- **Clickable looks clickable, and only that.** Links and buttons in the accent colour with a visible focus ring and
+  a target at least 32 px high; plain facts never in the accent colour.
+- **States are designed too:** empty (says why and what to do), nothing matches a filter, loading, and the narrow
+  layout.
 
 Fix what fails and look again; mention in the hand-over which widths, languages and themes were checked.

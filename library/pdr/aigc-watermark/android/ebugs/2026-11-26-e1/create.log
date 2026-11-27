@@ -1,0 +1,67 @@
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0340 on 2026-11-27
+Format check: PDR-A 16.9.0
+
+1 bug(s) checked — 0 error(s), 0 warning(s)
+Format OK — clear to file.
+
+[AIGC-Watermark-E1-01] created DRA262611P0341
+  DRA262611P0341  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+created 1 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0341  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0341  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0341 on 2026-11-27
+Format check: PDR-A 16.9.0
+⚠ WARN  AIGC-Watermark-E1-06  Severity 4 is very rare in this pool (1 of 175 in the Sept 2026 export)
+
+11 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.
+
+[AIGC-Watermark-E1-01] already filed as DRA262611P0341 — skipping
+[AIGC-Watermark-E1-02] created DRA262611P0342
+  DRA262611P0342  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+[AIGC-Watermark-E1-03] created DRA262611P0343
+[AIGC-Watermark-E1-04] created DRA262611P0344
+[AIGC-Watermark-E1-05] created DRA262611P0345
+[AIGC-Watermark-E1-06] created DRA262611P0346
+[AIGC-Watermark-E1-07] created DRA262611P0347
+[AIGC-Watermark-E1-08] created DRA262611P0348
+[AIGC-Watermark-E1-09] created DRA262611P0349
+[AIGC-Watermark-E1-10] created DRA262611P0350
+[AIGC-Watermark-E1-11] created DRA262611P0351
+
+created 10 · skipped 1 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0342  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0343  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0344  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0345  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0346  sev 4  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0347  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0348  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0349  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0350  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0351  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0342  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0343  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0344  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0345  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0346  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0347  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0348  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0349  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0350  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0351  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

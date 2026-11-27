@@ -2,9 +2,9 @@
   "feature": "pdr/cinematic-reel-recommendation",
   "platform": "ios",
   "title": "Cinematic Reel Creator — Photo Tips (Recommendation page)",
-  "version": 1,
-  "approved_at": "2026-11-23T06:02:00.027Z",
-  "draft": "20261123-114922",
+  "version": 4,
+  "approved_at": "2026-11-26T07:49:39.866Z",
+  "draft": "20261126-111221",
   "spec_folder": "specs/2026-11-23",
   "spec_files": [
     {
@@ -24,7 +24,7 @@
     }
   ],
   "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39",
-  "cases": 19,
+  "cases": 68,
   "history": [
     {
       "version": 1,
@@ -32,6 +32,33 @@
       "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39",
       "draft": "20261123-114922",
       "cases": 19,
+      "csv": "history/v1.csv",
+      "requirements": "history/v1-requirements.md"
+    },
+    {
+      "version": 2,
+      "approved_at": "2026-11-25T07:01:59.082Z",
+      "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39",
+      "draft": "20261125-160000",
+      "cases": 45,
+      "csv": "history/v2.csv",
+      "requirements": "history/v2-requirements.md"
+    },
+    {
+      "version": 3,
+      "approved_at": "2026-11-26T00:49:07.269Z",
+      "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39",
+      "draft": "20261125-190000",
+      "cases": 48,
+      "csv": "history/v3.csv",
+      "requirements": "history/v3-requirements.md"
+    },
+    {
+      "version": 4,
+      "approved_at": "2026-11-26T07:49:39.866Z",
+      "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39",
+      "draft": "20261126-111221",
+      "cases": 68,
       "csv": "cases.csv",
       "requirements": "requirements.md"
     }

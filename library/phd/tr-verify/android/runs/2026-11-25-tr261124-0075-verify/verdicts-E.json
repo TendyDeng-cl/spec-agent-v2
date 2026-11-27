@@ -1,0 +1,25 @@
+[
+  {
+    "bug": "PHA262026P0029",
+    "verdict": "HOLD",
+    "summary": "On four freshly cleared installs, at the phone's own display size and enlarged to 560 and 680 dpi, switching to the Portrait tab never auto-scrolls the list and never shows the AI Hair Color hint bubble, so the fix cannot be seen.",
+    "screenshots": [
+      "e_48_clear2_portrait_burst_2.png",
+      "e_49_clear2_portrait_settled.png",
+      "e_94_clear4_d560_portrait.png",
+      "e_59_clear3_portrait_settled.png",
+      "recordings/p0029-fresh2-entry-portrait.mp4"
+    ],
+    "note": "Tried 3 photos and 3 entries (Edit, Dye Your Style banner, New Content Try Now). RD's own note says it cannot be verified in this app version. Needs RD to say what arms the hint, or a user decision. Display restored to override 450."
+  },
+  {
+    "bug": "PHA262026-0243",
+    "verdict": "FIXED",
+    "summary": "Addendum: on a cleared install the I2V template list downloaded fresh, and after the system language change it was downloaded again (372 template rows re-inserted); ten styles tapped quickly before and after each showed its own sample at once.",
+    "screenshots": [
+      "e_70_i2v_fresh_sheet.png",
+      "e_85_i2v_zh_sheet.png"
+    ],
+    "note": "Confirms segment D's verdict; this time the re-download path that segment D could not hit was hit. System language restored to the original list."
+  }
+]

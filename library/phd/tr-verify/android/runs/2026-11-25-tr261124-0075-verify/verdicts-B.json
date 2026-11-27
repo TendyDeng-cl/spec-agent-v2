@@ -1,0 +1,47 @@
+[
+  {
+    "bug": "PHA262026-0031",
+    "verdict": "FIXED",
+    "summary": "After a Custom generate in AI Background the button is lit and enabled again (it reads Retry); with a new prompt or another style it reads Generate, lit, and a second generate works.",
+    "screenshots": [
+      "b_05_0031_before_generate.png",
+      "b_06_0031_during.png",
+      "b_07_0031_after.png",
+      "b_09_0031_prompt_changed.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0045",
+    "verdict": "FIXED",
+    "summary": "In AI Edit Agent, [Artwork] opens My AI Artwork on the Video tab after a video result and on the Photo tab after an image result or in a room with no result, on Free and as subscriber.",
+    "screenshots": [
+      "b_29_p0045_artwork_video.png",
+      "b_34_p0045_artwork_photo.png",
+      "b_21_p0045_artwork_noresult.png"
+    ],
+    "note": "Tapping [Artwork] while a result is still processing was not tried."
+  },
+  {
+    "bug": "PHA262026-0360",
+    "verdict": "FIXED",
+    "summary": "The Feeling Good video made with Generate Background Sound On has a stereo AAC sound track that is clearly audible (mean volume -14.9 dB).",
+    "screenshots": [
+      "b_51_0360_sound_on_saved.png",
+      "b_55_0360_result.png"
+    ],
+    "note": "Sound is Off by default for this template; set On as the bug's steps say. ffprobe: aac 48 kHz 2 ch; volumedetect mean -14.9 dB, max 0.0 dB."
+  },
+  {
+    "bug": "PHA262026P0056",
+    "verdict": "FIXED",
+    "addendum": true,
+    "summary": "The rules page says each image generation costs 6 credits and each image generation charged 6 credits, on Free and as subscriber; video stays 4 credits per second on both.",
+    "screenshots": [
+      "b_30_p0056_info.png",
+      "b_33_p0045_image_done.png",
+      "b_71_sub_p0056_info.png",
+      "b_73_sub_p0045_video_dialog.png"
+    ],
+    "note": "image check from segment B. Image requests show no cost dialog; the charge was read from the credit balance and the server credit history (genimage_1_img_google_gemini3pro, -6)."
+  }
+]

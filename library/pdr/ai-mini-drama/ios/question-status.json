@@ -1,0 +1,236 @@
+{
+  "Q-1": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The app names the template 「Six Things You Didn't Know」 with the apostrophe, on the card, on More and on the detail page, matching the cover (TC-010 Pass, TC-267 Pass); the P4 batch already answered it that way. Design's 「Didnt」 label is the typo."
+  },
+  "Q-2": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The app follows PM §13.11: text over the limit is cut to 1,000, the counter turns red 「1000/1000」 and 「You've reached the 1,000-character limit.」 shows under it; no 「You've reached the maximum length」 toast is recorded (TC-015, TC-016, TC-312, TC-313 Pass)."
+  },
+  "Q-4": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The build ships the 4xx copy and the ⓘ dialog: a failed scene image shows 「Couldn't create image ⓘ」/「Your credits have been refunded. Try editing the description for a different result.」 with Edit, and ⓘ opens 「Couldn't generate this image」 with the terms-of-service text and 「Got it」 (TC-067). It shows that copy for an injected service failure too, which existing ticket DRI261897P0012 carries; the 5xx card could not be produced (TC-068 Blocked)."
+  },
+  "Q-5": {
+    "state": "to-file",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Neither string was seen in any run (no result, observation or draft quotes 「Every frame is done. Ready to create your video?」) and no row checks it; no ticket carries it. Whether the shared English is intended is PM's call; missing is a capture of both places where the string shows (the video gate failed in P9) to attach to the eBug."
+  },
+  "Q-6": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the manual outline editor is not in the current PM spec, so nothing is left to decide."
+  },
+  "Q-7": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the storyboard text/image-version editor and thumbnail refresh are not in the current PM spec."
+  },
+  "Q-8": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: separate From Text / From Photo routes are not in the current PM spec."
+  },
+  "Q-9": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the aspect-ratio choice is not in the current PM spec; the format card asks only for video language and captions (TC-020 Pass)."
+  },
+  "Q-10": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: timeline reorder is not in the current PM spec."
+  },
+  "Q-11": {
+    "state": "determined",
+    "by": "ruling 2026-10-21 (requirements.md; no run evidence needed)",
+    "at": "2026-11-25",
+    "note": "Withdrawn 2026-10-21: the inspiration replace dialog is not in the current PM spec."
+  },
+  "Q-12": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user, REQ-028): the Design 「Exceed word limit」 frame wins for the character description. The build still cuts the text at 1,000 and keeps Generate enabled (TC-051 Fail), filed as DRI261898P0009; TC-354 passed only on the delete-back part."
+  },
+  "Q-13": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Full Video length is 15 s × scenes: a 6-scene storyboard offers 「Preview - 30 sec」 / 「Full Video - 90 sec」 (TC-345 Pass), and after a cut to 3 scenes the card reads 「Full Video - 45 sec」 (TC-188)."
+  },
+  "Q-14": {
+    "state": "determined",
+    "by": "ruling 2026-10-22 (REQ-028); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Closed 2026-10-22 (REQ-028): only the PM E4 frame exists, a failed Storyboard Preview offers 「Create video anyways」. The app's behaviour is not yet seen: TC-355 Blocked (test-data, no storyboard with a failed preview could be made)."
+  },
+  "Q-15": {
+    "state": "determined",
+    "by": "ruling 2026-10-22 (REQ-026); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): test the PM 10/16 three models. On this build the control reads 「Best」 / 「Seedance 2.0」 / 「Seedance 2.0 Mini」 with Seedance 2.0 (the Standard model) selected by default (TC-079, TC-347 Fail, held to ask RD/CMS about the CMS keys); Best was priced like Standard (TC-080 Fail). The default model has no spec statement yet beyond what the app shows."
+  },
+  "Q-16": {
+    "state": "determined",
+    "by": "ruling 2026-10-22 (REQ-026); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): test the PM 10/16 charged character change in chat. The build has the 「Update characters」 card and charges it (◆4), but never shows 「Working on it...」 or 「Here's your updated cast.」 (TC-349 Fail, filed from P9 as DRI261898P0006); TC-045 and TC-046 were Blocked by server failures."
+  },
+  "Q-17": {
+    "state": "determined",
+    "by": "ruling 2026-10-22 (REQ-026); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Decided 2026-10-22 (user): PM 10/20 §13.2 ③ applies, new results come as a new message and earlier cards are not updated (R-039, R-062 changed). On the device the character update did arrive as a new 「Story Outline & Characters Result」 block (TC-349), but the row for the earlier card was Blocked (TC-046)."
+  },
+  "Q-18": {
+    "state": "to-file",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Known: the QA account on the Developer Server got the template grid and all 20 templates in every run (TC-003, TC-010 Pass). Missing: no record names the phone's App Store region, and no run opened the landing from a store other than US or JP, so the records cannot say whether templates are limited; no ticket asks PM."
+  },
+  "Q-19": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The chip never showed above the composer in any run (TC-019 Fail on 10/16, 10/19 and 10/22; existing ticket DRI261896P0059 about the missing chip was ruled NAB and not refiled). 「More ideas +」 did appear beside option chips after a question (TC-348, TC-391) but was never tapped, so what a tap shows is not recorded."
+  },
+  "Q-20": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The only run of these rows is on 16.9.0 (189872), tested before the 10/22 two-phase frame became rows: there the pill dropped in steps during the generation (TC-377) and after 「Leave anyway」 the chat stopped at the offer and Generate charged again (TC-063). TC-403, TC-404, TC-406, TC-409 and TC-410 were never run, and RD's confirmation is not recorded."
+  },
+  "Q-21": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-415 was never run, and no video finished in P9 (video gate failed three times), so the result page and Export Full Video were not reached."
+  },
+  "Q-22": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Partly answered 2026-11-05 (outline may pause, REQ-094). For the rest the only records are from 16.9.0 (189872), before the 10/22 rule: the character update shows 「Stop and lose your credits?」 after its first seconds (TC-351) and the scene-image regeneration shows it on X (TC-378 Pass). The phase ① title of a storyboard update and a video regeneration were not reached (TC-073 ended with no result; no video on this build)."
+  },
+  "Q-23": {
+    "state": "determined",
+    "by": "ruling 2026-11-05 (REQ-094); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Answered 2026-11-05 (PM 11/4 §13.2 ②, REQ-094): Generate on an action card sends the card's Answer as a pinned user message (R-279 changed); the video settings card is Q-34. On 16.9.0 (189872) no user bubble was added (TC-377, passed under the old rule), so the modified TC-377 needs a run on a build with the 11/4 rule."
+  },
+  "Q-24": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-096 Blocked: no video ever started or finished on this build (video gate failed 05:00–05:32, three attempts), so the result page with a regenerating scene and its toast were not reached."
+  },
+  "Q-25": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-226 Blocked (test-data): the row needs a low balance and the shared test account holds about 20,000 credits with no balance override, so a Free user's not-enough card was never shown."
+  },
+  "Q-26": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The app follows the Design: the Pro+ limit dialog 「Today's AI Chats Are Used Up」 has the button 「Continue Tomorrow」, both from the Pink switch and on a real send at the used-up allowance (TC-118 Pass, TC-219 Pass)."
+  },
+  "Q-27": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-092 Blocked: no video ever started generating or finished on this build, so a failed Retry and its copy were not reached."
+  },
+  "Q-28": {
+    "state": "to-file",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "No row carries it and no record says whether a ⋯ sits on a regenerated scene image: TC-141 regenerated one (Pass) without describing the image's controls, and TC-397 was never run. Missing: one look at the scene detail after a regeneration (⋯ present or not, and its menu), then the question goes to PM."
+  },
+  "Q-29": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-418 was never run (the PM intro became a row on 2026-10-29, after the run). On 16.9.0 (189872), right after a fresh install, the Home shortcut opened the landing page with no intro recorded (TC-001 Pass), but no row looked for the intro or 「Don't show again」."
+  },
+  "Q-30": {
+    "state": "determined",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The app follows the Design: the Storyboard Preview card has the ▶ thumbnail, title, length and 「See your story as pictures with a voice telling it. The real video comes next.」 with no 「Create video」 button (TC-075 Pass), and 「Choose your video settings」 follows the storyboard by itself (TC-113, TC-165). R-458's button does not exist on this build; TC-079 taps it only when shown, so no row changes."
+  },
+  "Q-31": {
+    "state": "to-file",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Known from the runs: no aspect-ratio question (TC-020 Pass), a template chat asks the format question, not 「Continue to create the script?」 (TC-235 Pass), the scene editor is a plain text editor with a counter and Done (TC-070), and the 「Consume credits?」 card is Q-3. Not recorded: whether the composer has an add-image button, and whether Characters Result has an edit icon or the cast card a 「Customize my characters (optional)」 line. Missing: that one look, then MX/PM confirms the mockups are illustrations only; no ticket asks."
+  },
+  "Q-32": {
+    "state": "determined",
+    "by": "ruling 2026-11-06 (REQ-103); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Answered 2026-10-29 (user, REQ-059) and superseded 2026-11-06 (user, REQ-103): prices come from the ECL Credit System 「Publish Feature List」 forms, not the sheet (R-040, R-050, R-069). The 16.9.0 (189872) run still showed the older app prices (character ◆4, images booked at −3: TC-060, TC-347; price mismatch on existing ticket DRI261896P0046)."
+  },
+  "Q-33": {
+    "state": "determined",
+    "by": "ruling 2026-11-06 (REQ-103); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Answered 2026-11-06 (user, REQ-103): Seedance 2.5 costs 6 credits per second (Credit System form 22937582357). On 16.9.0 (189872) Best was still priced like Standard, ◆120 / ◆360 (TC-080 Fail, held for the 2.5 action id)."
+  },
+  "Q-34": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-406 was never run. The only video Generate taps are on 16.9.0 (189872), before the 11/4 rule: the card went straight to 「Thinking...」 and the skeleton, with no user message noted (TC-081); no build with the 11/4 behaviour has been run on iOS."
+  },
+  "Q-35": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-091 Blocked (no video ever started on this build) and TC-436, TC-437, TC-438 never run; RD's answer on telling 4xxx from 5xxx is not recorded."
+  },
+  "Q-36": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "The run predates the two 11/5 frames. TC-006 and TC-328 passed on categories, icons and covers (「each a horizontal row of covers with names」), but no Actual records how many covers a row shows, so which layout ships is not known."
+  },
+  "Q-37": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-456 and TC-457 were never run: the §13.26 celebrity block (PM 11/5) is newer than the last iOS run."
+  },
+  "Q-38": {
+    "state": "determined",
+    "by": "ruling 2026-11-06 (REQ-103); P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "Answered 2026-11-06 (RD, relayed by the user; REQ-103): the 4 credits are for generating the reference audio, so Full Video 90 sec = 90 × the rate + 4 and Preview carries no such charge (R-069, TC-080 changed). Not yet seen on iOS: 16.9.0 (189872) quoted Full exactly at 90 × the rate (◆360 / ◆180, TC-080)."
+  },
+  "Q-39": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-422, TC-424, TC-425 and TC-427 were never run (the Credit System forms came after the last iOS run), so no iOS log line with an action id is recorded."
+  },
+  "Q-40": {
+    "state": "not-reached",
+    "by": "P9 (2026-10-22-p9-full, 16.9.0 build 189872)",
+    "at": "2026-11-25",
+    "note": "TC-421 was never run. Known from P9: Credit Details books the storyboard as Text to Image rows plus one 「Text to Speech −1」 (TC-060), so the preview narration is charged 1 credit as Text to Speech, but its action id was not recorded."
+  }
+}

@@ -1,0 +1,30 @@
+
+0 of 7 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Xmas-NY-Sale-R1-01] PHD-A 20.19.0 - [AIAgent][UI] Xmas_NY_Sale: Xmas splash icon is a Santa-hat logo, mockup draws a reindeer — PM to confirm
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-02] PHD-A 20.19.0 - [AIAgent][UI] Xmas_NY_Sale: IAP page: PM policy text under trial CTA, Design has 「Auto-renewal for …/year」 — PM to decide
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-03] PHD-A 20.19.0 - [AIAgent][UI] Xmas_NY_Sale: IAP page: non-trial user CTA reads 「Continue (NT$650/year)」, not 「Subscribe for …/year」
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-04] PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Credit IAP page: free-user 500-credit sale pack NT$2090 is 11% off regular NT$2350, not 20%
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-05] PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Launcher: NY Sale IAP icon stays regular orange crown, no champagne-glasses animation
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-06] PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Launcher: sale countdown bubble not shown at 72:00:00 on the open Launcher, only after relaunch
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate
+
+[Xmas-NY-Sale-R1-07] PHD-A 20.19.0 - [AIAgent][UX] Xmas_NY_Sale: Mine: paid user My Credits card has no Xmas decoration, free user has — PM to decide
+      feature='Xmas_NY_Sale'  searched 0 candidate(s)
+      no likely duplicate

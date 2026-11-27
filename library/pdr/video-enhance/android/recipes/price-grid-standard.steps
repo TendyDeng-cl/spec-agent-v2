@@ -10,6 +10,10 @@
 # 1060 pushes it to the cap. Finger 211 leaves 「00:29」 (29.x s): no pixel, or sub-pixel to 0.01 px, gives exactly 30.000 s.
 # The panel scroll (540 1750 → 1250) brings the Resolution chips above the CTA bar; never tap a chip under the CTA.
 # The cap bubble 「Up to 8 minutes in Standard mode」 swallows the next touch and hides the panel from `els`: wait 3 s.
+# Recalibrated 2026-11-26 on 2611251 (R4-d2): the 12:30 source draws the strip 66 px lower (O-6), handles at y 1224;
+# 「Selected Length」 now rounds up (P0075 fix), so finger 210 = 「00:30」 (bills 30), 313 = 「01:30」 (bills 90);
+# 212 / 315 now read 「00:31」 / 「01:31」. Never drag from x 980 unless the handle is at the cap: beside a short
+# selection that drag scrolls the strip and moves the whole selection.
 case $1
 fingerdrag 540 1750 540 1250 10
 id $2
@@ -20,19 +24,19 @@ els tv_charge
 shot $1-chips
 fingerdrag 540 1250 540 1750 10
 wait 1
-fingerdrag 980 1158 212 1158 20
+fingerdrag 980 1224 210 1224 20
 els tv_
 shot $1-30s
-fingerdrag 212 1158 315 1158 20
+fingerdrag 210 1224 313 1224 20
 els tv_
 shot $1-90s
-fingerdrag 315 1158 1060 1158 15
+fingerdrag 313 1224 1060 1224 15
 shot $1-cap
 wait 3
 els tv_
-fingerdrag 980 1158 212 1158 20
+fingerdrag 980 1224 210 1224 20
 els tv_
 els chip_
 shot $1-back30
-fingerdrag 212 1158 1060 1158 15
+fingerdrag 210 1224 1060 1224 15
 wait 3

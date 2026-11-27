@@ -29,3 +29,6 @@ first segment; a new row that needs something new adds it here in the same draft
   saved file: `c2patool <file>` prints the manifest and its signer, or says none is found.
 - Saved files come off the phone through Image Capture (or Photos import) at full resolution, never a screenshot;
   keep them in the run folder's `files/` (local only, never committed).
+- Draft 20261125-190000: keep the files TC-064, TC-065 and TC-070 exported in `files/`: TC-154 reads their Content
+  Credentials. TC-082 and TC-155 need an Image to Video result that was never saved with the switch Off (a new
+  generation, or a result saved only with the switch On).

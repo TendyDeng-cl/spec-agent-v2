@@ -1,0 +1,13 @@
+{
+ "qr": "QR261123-0073",
+ "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261123-0073",
+ "tr": "TR261123-0041",
+ "template": "Standard Report (QRTemplateID=14830)",
+ "created": "2026-11-23",
+ "testResult": "PHD-A - Bug verification [OK=1, Fail=0]",
+ "ok": ["PHA262026P0086"],
+ "fail": [],
+ "filesOnBugs": "none (text only)",
+ "readBack": "Short Description, Test Result, Testing Date, Details and the P0086 State and Reason match qr2-text.txt; the form listed only P0086 (all other verify-list bugs were already reported in QR261123-0070).",
+ "mismatch": null
+}

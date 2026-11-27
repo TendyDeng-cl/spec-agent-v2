@@ -1,0 +1,110 @@
+2026-11-26T02:54:03.608Z status 
+2026-11-26T02:54:05.867Z restart 
+2026-11-26T02:54:12.394Z build 
+2026-11-26T02:54:12.710Z logcat start
+2026-11-26T02:54:16.089Z case TC-157
+2026-11-26T02:54:32.222Z run-log set TC-157 Fail
+2026-11-26T02:54:39.269Z case TC-158
+2026-11-26T02:54:39.394Z shot start
+2026-11-26T02:54:51.116Z tap 89 200
+2026-11-26T02:54:53.406Z lbl Settings
+2026-11-26T02:54:56.037Z scrollto Remove AIGC Watermark
+2026-11-26T02:54:56.726Z els switch
+2026-11-26T02:54:57.326Z shot switch-start
+2026-11-26T02:55:01.216Z back 
+2026-11-26T02:55:02.888Z back 
+2026-11-26T02:55:05.369Z lbl Image to Video
+2026-11-26T02:55:10.474Z shot itv-open
+2026-11-26T02:55:11.706Z texts 
+2026-11-26T02:55:14.965Z lbl Try It Now
+2026-11-26T02:55:19.371Z shot itv-page
+2026-11-26T02:55:20.012Z texts 
+2026-11-26T02:55:25.963Z tap 203 970
+2026-11-26T02:55:28.235Z tapif Continue
+2026-11-26T02:55:30.704Z shot picker
+2026-11-26T02:55:37.016Z tap 198 740
+2026-11-26T02:55:40.299Z shot after-pick
+2026-11-26T02:55:41.029Z texts 
+2026-11-26T02:55:43.946Z setval etPrompt The sunflower sways gently in the breeze by the window
+2026-11-26T02:55:45.439Z hidekb 
+2026-11-26T02:55:47.207Z shot before-generate
+2026-11-26T02:55:47.975Z texts 
+2026-11-26T02:55:53.004Z lbl Generate
+2026-11-26T02:55:59.673Z shot after-generate
+2026-11-26T02:56:00.405Z texts 
+2026-11-26T02:56:15.997Z texts 
+2026-11-26T02:56:16.218Z shot tasklist
+2026-11-26T02:56:20.447Z waitfor View|Failed|failed|Retry --timeout 1200
+2026-11-26T02:59:44.840Z texts 
+2026-11-26T02:59:46.798Z texts 
+2026-11-26T02:59:47.021Z lbl View
+2026-11-26T02:59:52.778Z shot itv-result
+2026-11-26T02:59:53.515Z texts 
+2026-11-26T02:59:56.046Z tap 916 730
+2026-11-26T03:00:00.338Z shot itv-result
+2026-11-26T03:00:01.750Z texts 
+2026-11-26T03:00:09.782Z lbl Full Editor
+2026-11-26T03:00:18.216Z shot TC-158-project
+2026-11-26T03:00:19.486Z texts 
+2026-11-26T03:00:30.523Z record start 30
+2026-11-26T03:00:31.463Z tap 540 1457
+2026-11-26T03:00:31.689Z record stop TC-158-play
+2026-11-26T03:00:44.645Z texts 
+2026-11-26T03:00:44.859Z record start 30
+2026-11-26T03:00:45.692Z tap 540 1457
+2026-11-26T03:00:53.010Z record stop TC-158-play
+2026-11-26T03:01:08.880Z lbl Export
+2026-11-26T03:01:12.338Z shot TC-158-export
+2026-11-26T03:01:12.962Z texts 
+2026-11-26T03:01:15.939Z lbl Produce
+2026-11-26T03:01:16.357Z waitfor Saved to Gallery|Failed|failed|Upgrade|Subscribe --timeout 180
+2026-11-26T03:04:18.796Z shot TC-158-produced
+2026-11-26T03:04:19.624Z texts 
+2026-11-26T03:04:24.319Z lbl Not now
+2026-11-26T03:04:26.715Z shot TC-158-saved
+2026-11-26T03:04:27.719Z texts 
+2026-11-26T03:04:56.696Z run-log set TC-158 Pass
+2026-11-26T03:05:00.953Z lbl Done
+2026-11-26T03:05:04.615Z texts 
+2026-11-26T03:05:07.435Z lbl [AID]TimeLine_Home
+2026-11-26T03:05:12.031Z texts 
+2026-11-26T03:05:12.392Z shot after-home
+2026-11-26T03:05:15.970Z lbl Close
+2026-11-26T03:05:19.433Z tap 89 200
+2026-11-26T03:05:21.720Z lbl Settings
+2026-11-26T03:05:24.495Z scrollto Remove AIGC Watermark
+2026-11-26T03:05:25.083Z els switch
+2026-11-26T03:05:25.711Z shot switch-end
+2026-11-26T03:05:26.487Z back 
+2026-11-26T03:05:28.152Z back 
+2026-11-26T03:05:30.600Z texts 
+2026-11-26T03:05:34.805Z wifi status
+2026-11-26T03:05:35.137Z pull-logs Q1-a
+2026-11-26T03:05:37.404Z pull-logs Q1-a
+2026-11-26T03:05:39.678Z pull-logs Q1-a
+2026-11-26T03:08:42.943Z lbl Mine
+2026-11-26T03:08:47.615Z texts 
+2026-11-26T03:08:48.100Z shot mine-tier
+2026-11-26T03:08:48.786Z lbl Home
+2026-11-26T02:54:40.420Z file screenshots/start.png
+2026-11-26T02:54:57.954Z file screenshots/switch-start.png
+2026-11-26T02:55:11.523Z file screenshots/itv-open.png
+2026-11-26T02:55:19.860Z file screenshots/itv-page.png
+2026-11-26T02:55:32.055Z file screenshots/picker.png
+2026-11-26T02:55:40.878Z file screenshots/after-pick.png
+2026-11-26T02:55:47.821Z file screenshots/before-generate.png
+2026-11-26T02:56:00.253Z file screenshots/after-generate.png
+2026-11-26T02:56:16.747Z file screenshots/tasklist.png
+2026-11-26T03:00:01.555Z file screenshots/itv-result.png
+2026-11-26T03:00:19.299Z file screenshots/TC-158-project.png
+2026-11-26T03:01:12.806Z file screenshots/TC-158-export.png
+2026-11-26T03:04:18.556Z file screenshots/waitfor-timeout-20261126-110417.png
+2026-11-26T03:04:19.452Z file screenshots/TC-158-produced.png
+2026-11-26T03:04:27.580Z file screenshots/TC-158-saved.png
+2026-11-26T03:05:13.316Z file screenshots/after-home.png
+2026-11-26T03:05:26.335Z file screenshots/switch-end.png
+2026-11-26T03:05:40.463Z file logs/.live
+2026-11-26T03:05:45.686Z file logs/Q1-a-20261126-110539
+2026-11-26T03:08:48.640Z file screenshots/mine-tier.png
+2026-11-26T03:09:46.446Z logcat stop
+2026-11-26T03:09:46.576Z texts 

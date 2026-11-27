@@ -1,0 +1,12 @@
+
+0 of 2 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Cinematic-Reel-Recommendation-R1-01] PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 73 candidate(s)
+      no likely duplicate
+
+[Cinematic-Reel-Recommendation-R1-02] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 73 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 0 ticket(s) of 73 searched. Judge every entry against each one; the ranking above misses rewordings.

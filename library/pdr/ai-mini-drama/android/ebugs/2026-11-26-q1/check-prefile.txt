@@ -1,0 +1,4 @@
+⚠ WARN  AI-Mini-Drama-Q1-01  Repro Steps do not start with '1. Launch the APP'
+
+2 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.

@@ -1,0 +1,8 @@
+# PDR-A 16.9.0.2611231, SM-A5360, Stage. First 「Enhance」 after pm clear (12:13:13), tapped 12:18:53. No consent or disclosure step between the tap and the upload.
+2026-11-26 12:18:56.517 17742 18749 D AIVideoAnime:  create session response code->200
+2026-11-26 12:18:58.159 17742 17785 E Upload to S3: start
+2026-11-26 12:19:14.429 17742 18749 D AIVideoAnime:  upload response code->200
+2026-11-26 12:19:14.429 17742 18202 E Upload to S3: finish
+2026-11-26 12:19:14.782 17742 18749 D AIVideoAnime:  apply effect response code->200
+2026-11-26 12:20:10.599 17742 18749 D AIVideoAnime:  query status response code->200
+2026-11-26 12:20:10.624 17742 17742 D AIFeatureRepository: applyEffect status: Done null

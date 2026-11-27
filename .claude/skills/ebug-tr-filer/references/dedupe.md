@@ -46,7 +46,8 @@ calibration and batch look-ups**; keep the MCP for one-off questions mid-convers
 
 ```bash
 ./ecl_query.py bugs --text "AI Music Generator" --product "PowerDirector Mobile for iOS" --open-only
-./ecl_query.py bug  DRI261883-0063 --log      # body, RD root cause, changeset, attachments
+./ecl_query.py bug  DRI261883-0063 --log      # body, RD root cause, changeset, attachments, comments
+./ecl_query.py comments DRA262611P0337        # why it was cancelled (IF3 bugs only)
 ./ecl_query.py tr   TR260915-0007             # the TR, its own bugs, and what is attached for verify
 ./ecl_query.py dedupe upload/bodies.json --product "PowerDirector Mobile for iOS"
 ./ecl_query.py calibrate --product "PowerDirector Mobile for iOS" --since 2026-08-01
@@ -84,6 +85,30 @@ Candidates RD/PM already declined — NAB, ProposeNAB, Won't Fix and its Propose
 Not Reproducible — print as **REJECTED** with a warning. Filing the same thing again
 re-raises that decision. Read its status log; refile only with new grounds (a newer spec
 board, a different repro) and cite the rejected bug in the Note. Otherwise drop the entry.
+
+### Ended tickets: read why (user, 2026-11-27)
+
+A candidate that is **cancelled, declined (NAB, Won't Fix, Not Reproducible, their Propose steps) or closed** is
+judged by *why* it ended, not by its status word. `dedupe` reads the comments of every ended IF3 candidate it shows
+in one batched `TSR.EbugComments` call and prints, under the candidate, a reason hint, what that reason means for
+the finding (▸), the last three comments, and every bug code a comment names (→, with its status). `--no-comments`
+skips it; `ecl_query.py comments <codes…>` reads them on their own, and `bug` shows them too. Old ASP tickets have
+no comment API: read `bug <code> --log`.
+
+The hint is a regex on the comments; read the comments and decide:
+
+| Why it ended (from the comments) | The finding |
+|---|---|
+| Filed wrongly (wrong pool / template / TR / OS), refiled | No ruling. Judge against the refiled ticket (→); none → as if no match |
+| Duplicate of another ticket | Judge against that ticket (→) |
+| A ruling: by design, spec, PM decision | Dropped (`dedupe.txt` with the reason), unless today's spec or a newer PM / Design item contradicts it: then a card citing the ticket and the newer source |
+| Fixed (app, server, CMS data), or Not reproducible | A card only if it reproduces on this build, naming the ticket as related ("closed and back", overlay rule 7) |
+| No comment, or a bare 「Cancel」 / 「NAB」 | Read the status log (`bug <code> --log`); still unclear → a card naming the ticket, 「reason not recorded」, for the reviewer to decide |
+
+Put the reason on the card's related line (`review.json` › `related`) or on the finding's `dedupe.txt` line, with
+the comment's author and date, so the reviewer can check it. Example: DRA262611P0337 「wrong pool」 (cancelled, refiled
+as P0340) is a match through P0340, not a ruling; VDE261031P0006 was cancelled because the server refunds the credits
+after 2–3 hours, so the same symptom is a card only if credits stay charged past that.
 
 **Two things about the query DSL, both verified live on 2026-09-16:**
 

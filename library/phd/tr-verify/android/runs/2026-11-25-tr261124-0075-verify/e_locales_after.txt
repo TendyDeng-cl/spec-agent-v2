@@ -1,0 +1,1 @@
+en-US,zh-Hant-TW,ja-JP,ko-KR,pt-BR,vi-VN,id-ID,fa-IR,it-IT,de-DE,ru-RU,fr-FR,zh-Hans-CN,es-ES,th-TH,es-MX,hi-IN,nl-NL

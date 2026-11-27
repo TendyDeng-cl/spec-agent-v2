@@ -1,0 +1,115 @@
+{
+ "tr": "TR261123-0071",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/24",
+ "version": "20.19.0",
+ "build": "202611232103",
+ "buildDay": "1123",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611232103 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R8)",
+ "testResult": "PHD-A - Bug verification [OK=6, Fail=0]",
+ "env": {
+  "device": "Google Pixel 8a / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611232103 (versionCode 90201902, SR PHA261029-01); installed APK MD5 matches the TR's Cyberlink.MD5",
+  "scope": "every eBug on this TR's verify list (PHD-A rule)"
+ },
+ "observations": [
+  "Swipe Collage Template Page: the current page's dot on a card is white with no outline, so it disappears on a light template (「20 photos · 6 pages」).",
+  "Swipe Collage Template Preview: opening it from a card swiped to page 2 starts at page 1; pages take about 10 s to load.",
+  "Swipe Collage restored canvas: undo is greyed and ✕ leaves with no 「Discard changes?」.",
+  "AI Hair Color Custom: with Solid the Highlight Color row stays shown greyed instead of hidden; the collapsed Custom cell keeps its wand icon instead of the chosen colour; top corner radius about 13–15 dp against the PM's 20 pt.",
+  "Swipe Collage draft: a force stop sent by adb while the canvas is still in front keeps no draft, so no 「Continue editing?」 then (Edit Room still asks in that case); once the app has gone to the background first, as when it is closed from Recents or Settings, the dialog appears."
+ ],
+ "rows": [
+  {
+   "bug": "PHA262026P0071",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Template card thumbnails and the Template Preview stay blank, with no page dots",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_p0071_cards.png",
+    "screenshots/a_p0071_card_swiped.png",
+    "screenshots/a_p0071_preview.png",
+    "screenshots/a_p0071_preview_swiped.png"
+   ],
+   "result": "OK",
+   "summary": "Template cards now show the template's first page with page dots, and the Template Preview shows its pages and dots."
+  },
+  {
+   "bug": "PHA262026P0104",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Background textures and Add Layer frames carry no PRO crown or NEW tag",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0104_texture_start.png",
+    "screenshots/a_p0104_texture_s2.png",
+    "screenshots/a_p0104_frames_start.png",
+    "screenshots/a_p0104_texture_end.png"
+   ],
+   "result": "OK",
+   "summary": "PRO textures and frames now carry a crown; no item shows a NEW tag, as none appears to be marked new in the CMS."
+  },
+  {
+   "bug": "PHA262026P0105",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Free user gets no IAP page at the 3rd export or any later one",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_p0105_export2.png",
+    "screenshots/a_p0105_export3.png",
+    "screenshots/a_p0105_after_iap_close.png"
+   ],
+   "result": "OK",
+   "summary": "A Free user now gets the PhotoDirector Premium page at the 3rd and 6th export."
+  },
+  {
+   "bug": "PHA262026P0106",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: No 「Continue editing?」 after the app is killed during editing; edits are lost",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_p0106_edited_before_kill.png",
+    "screenshots/a_p0106_v2_restored.png"
+   ],
+   "result": "OK",
+   "summary": "After the app is closed with a Swipe Collage edit open, 「Continue editing?」 appears on entering Swipe Collage and Continue restores the edit."
+  },
+  {
+   "bug": "PHA262026P0111",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] AI_Hair_Color: Custom panel shows ︽ not ⌄, keeps the ✕ ↩ ↪ ✓ row, square corners",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_p0111_panel.png",
+    "screenshots/b_p0111_corners_zoom.png",
+    "screenshots/b_p0111_after_drag.png",
+    "screenshots/b_p0111_panel_set.png",
+    "screenshots/b_p0111_collapsed_set.png"
+   ],
+   "result": "OK",
+   "summary": "The Custom panel now has a grab handle and rounded top corners, with no ✕ ↩ ↪ ✓ row under it, as the Design draws."
+  },
+  {
+   "bug": "PHA262026P0147",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: App crashes on every open after it was closed with a canvas being edited",
+   "creator": "WILLY_WU",
+   "severity": "1",
+   "images": [
+    "screenshots/a_p0147_object_removal.png",
+    "screenshots/a_p0147_open1_shot.png",
+    "screenshots/a_p0147_v2_dialog.png",
+    "screenshots/a_p0147_v2_restored.png"
+   ],
+   "result": "OK",
+   "summary": "Swipe Collage now opens normally after a force stop with a canvas being edited, and a saved draft restores without a crash."
+  }
+ ]
+}

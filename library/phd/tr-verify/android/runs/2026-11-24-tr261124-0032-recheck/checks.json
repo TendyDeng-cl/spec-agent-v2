@@ -1,0 +1,29 @@
+{
+  "tr": "TR261124-0032",
+  "build": {"versionName": "20.19.0", "versionCode": 90201902, "label": "20.19.0.v202611241407 (R9)",
+    "installedMd5": "E8BB420B0E870619F4D7D6A67E04C455", "nasMd5": "E8BB420B0E870619F4D7D6A67E04C455", "match": true,
+    "nasFolder": "CL_Deluxe.20.19.0.v202611241407_PHA261029-01_R9"},
+  "device": {"model": "SM-S9110", "serial": "RFCW2198L7B", "android": "16", "size": "1080x2340", "density": 450, "physicalDensity": 480},
+  "server": "Test Server",
+  "tier": {"found": "Free", "end": "Free", "changed": false, "credits": 0},
+  "checks": [
+    {"bug": "PHA262026P0164", "issue": "ISS-SWC-52", "verdict": "still_reproduces",
+     "evidence": "After Pages + (Page 4 / 4 selected) and ✓, Canvas shows page 3 (Goodbye 2026)",
+     "screenshots": ["11_scc52_pages_plus.png", "12_scc52_after_apply.png"]},
+    {"bug": "PHA262026P0165", "issue": "ISS-SWC-53", "verdict": "still_reproduces",
+     "evidence": "Reorder page 1 to end: player frame hangs translucent past the strip; − to 1 page: second frame hangs past the page over the 「+」",
+     "screenshots": ["21_scc53_reorder.png", "26_scc53_one_page_orig_order.png", "23_scc53_one_page.png"]},
+    {"bug": "PHA262026P0166", "issue": "ISS-SWC-54", "verdict": "still_reproduces",
+     "evidence": "10 pages: move / ••• circles 30 px ≈ 10.7 dp (4 pages: 100 px ≈ 36 dp)",
+     "measure": {"tenPagesPx": 30, "tenPagesDp": 10.7, "fourPagesPx": 100, "fourPagesDp": 35.6},
+     "screenshots": ["31_scc54_ten_pages.png", "30_scc54_four_pages.png"]},
+    {"bug": "PHA262026P0167", "issue": "ISS-SWC-55", "verdict": "changed",
+     "evidence": "Selection box still ≈125 px (≈44 dp) past the frame; floating pill menu no longer shown, but rotate/move handles drawn over the Goodbye 2026 text",
+     "screenshots": ["43_scc55_frame_selected.png", "44_scc55_frame_selected_settled.png"]}
+  ],
+  "observations": [
+    {"bug": "PHA262026P0094", "note": "Opening Pages shows no 「Page n / N」; it appears only after a stepper tap", "screenshots": ["10_pages_open.png", "11_scc52_pages_plus.png"]}
+  ],
+  "crash": {"liveFatal": 0, "bufferFatal": "one from 2026-11-23 16:42 (before this build's install), not this run"},
+  "endState": "Launcher, Free, no draft saved"
+}

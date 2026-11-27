@@ -1,0 +1,27 @@
+{
+  "feature": "pdr/recent-task-model-info",
+  "platform": "ios",
+  "title": "Recent Task Model Info",
+  "draft": "20261126-111211",
+  "created_at": "2026-11-26T03:12:11.668Z",
+  "based_on_version": 2,
+  "spec_folder": "specs/2026-11-23",
+  "spec_files": [
+    {
+      "name": "Design Guideline Cards - Card-RecentTask.md",
+      "sha256": "34bb6bed8600cd7872d325f1dd7697da3848b0902dcd4977043f8fedd7f80617",
+      "bytes": 2120
+    },
+    {
+      "name": "Recent Task Model Info - Design Figma 1794-3210.md",
+      "sha256": "4db021e0405abe73df0796c68c167e6e2bc8172de879af93990d87775b9fe1db",
+      "bytes": 2811
+    },
+    {
+      "name": "PDRA Jira - Add model information in recent task.md",
+      "sha256": "929c25874ce572d22c03c89e2785c337566b451e576cbf64b5ecc79ff12bdea1",
+      "bytes": 270
+    }
+  ],
+  "spec_set_sha256": "e6b0aa63305ee29e15b1d5dc73f06ead25089576876f7e6129d97c13c3de042f"
+}

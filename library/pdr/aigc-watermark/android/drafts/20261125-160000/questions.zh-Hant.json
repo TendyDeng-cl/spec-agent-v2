@@ -1,0 +1,19 @@
+{
+  "Q-1": "全新安裝後「Remove AIGC Watermark」預設是開還是關？重開 App 後會保留嗎？兩份 mockup 都畫成 On，但兩個對話框都寫結果「will include an AIGC watermark」。假設：全新安裝預設 Off（結果會帶浮水印），重開 App 後維持原值。",
+  "Q-2": "這個開關是否所有方案都能用？免費（Essential）使用者的 mockup 把它畫成 On，旁邊是付費的「Remove Watermark」。假設：所有方案都可免費開關，不會跳付費牆。",
+  "Q-3": "12% 規則寫的是圖片（「img 短邊」）。假設：影片的 AI 標記同樣是畫面短邊的 12%，位置在左上角，除了素材本身的 padding 外沒有額外邊距。",
+  "Q-4": "PM 只在影片類列出 Save / Share；圖片類只列縮圖、View、Full Editor。假設：圖片的儲存與分享同樣依開關決定（Global Rule 與 Jira 的「consistently across export/share/save」）。",
+  "Q-6": "開關是否決定 AI Music Generator 會不會跳出對話框？語音提示本身已由 REQ-009 定案（所有歌曲都不加），對話框的部分移到 Q-20。",
+  "Q-7": "匯出對話框什麼時候會出現？PM 畫在「Export」之後，沒寫條件，也沒畫 Cancel 的箭頭。假設：只有開關 Off 且專案含 AI 內容時才出現；沒有 AI 內容的專案匯出時不跳對話框也沒有標記；「Cancel」留在編輯器。",
+  "Q-8": "匯出和音樂兩個對話框的「Don’t show again」是同一個嗎？假設：各自獨立。",
+  "Q-9": "PM 的範例把 AI 標記畫在第一段「非 AI 素材」上。假設：不論 AI 片段在哪裡，標記都放在專案的前兩秒。",
+  "Q-10": "TTS、Voice Changer、AI Anime、AI Cartoon、AI Sketch 寫「Timeline: 會根據 Preference 設定來決定會不會有 watermark」，但 My Artwork 的結果在時間軸上不顯示。假設：開關 Off 時，編輯器預覽會在專案前兩秒顯示標記。",
+  "Q-11": "範圍內哪些項目是 My Artwork 的結果、哪些是編輯器工具？假設：影片 = Video Edit by Chat、Image to Video、Cinematic Reel Creator、Character Motion Swap、Video Object Removal、AI Storytelling、Text to Video、AI Anime Video、Talking Avatar；圖片 = AI Art、Text to Image；時間軸工具 = AI Text to Speech、Voice Changer、AI Anime、AI Cartoon、AI Sketch；Music Generator = 純音訊。該平台版本沒有的功能，對應的列為 n/a。",
+  "Q-12": "每個 PDR 功能與模型各呼叫表上的哪個效果？自 REQ-007／REQ-008 起，每條路徑的簽章方都是 CyberLink，答案已不影響任何案例；Notes 仍保留表上的對應列供參考。QA 用 c2patool 讀取 manifest。",
+  "Q-13": "含已簽章 AI 內容的專案匯出後，檔案要不要帶 C2PA？時間軸工具產生的素材能不能以檔案讀取？規格沒寫；沒有列判定匯出專案的中繼資料，時間軸工具的列先暫停。",
+  "Q-14": "PM 的「AIGC Watermark Spec.pptx」在 SharePoint，這裡打不開；裡面可能有 Figma 沒寫的邊距、透明度或各功能規則。",
+  "Q-16": "短於兩秒的影片結果：假設標記整段都在（沒有列判定）。",
+  "Q-17": "Jira 是 iOS（PDRIOS-722）。Android 是否同一版、規則相同？Android 表格先假設相同。",
+  "Q-19": "My Artwork 的影片用「Full Editor」開啟後匯出：PM 只說時間軸上不顯示浮水印。假設：匯出時和其他 AI 內容一樣依開關決定。",
+  "Q-20": "開關為 Off 時，AI Music Generator 仍會跳出「AIGC Watermark」對話框，寫著「Your generated music will include an AIGC watermark…」（PM pm-music），但 REQ-009 已取消音訊浮水印，歌曲只有放進專案匯出時才會有可見標籤（R-035）。這個對話框還要保留嗎？文字要承諾什麼？假設：依 PM 畫的保留（R-027–R-031 不變）；DRA262611P0229（沒有對話框）仍未結案。"
+}

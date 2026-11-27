@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-20",
+  "pm_checked_at": "2026-11-20",
+  "how": "Figma-only spec set (user, 2026-11-20). PM page 14724:43579 「11E Christmas Sale」 (file PhD-MX-IAP-Page) listed with get_metadata (figma-pm, qa1): one section 「spec」 (14724:43580) holding one long note (read as region pm-note) and eight phone frames with captions under or above them; read whole in one inventory call (group p-xmas). Design page 9627:6 「261117_xmas_NY_sale」 (file IAP) listed with get_metadata (figma-design, qa-dm): six visible phone frames (three interstitials, two IAP pages, one launcher), a section 「cut」 with the interstitial art in English and Japanese and the IAP thumbnails, a link 「JSON下載路徑」 and one Figma annotation on the launcher NY animation; hidden frames (old paywall drafts, font options) skipped; read in one inventory call (group d-xmas). No arrows on either page.",
+  "files": {
+    "pm": {
+      "fileKey": "taJPs6ntbB61LQG0wJ0PiZ",
+      "page": "14724:43579",
+      "url": "https://www.figma.com/design/taJPs6ntbB61LQG0wJ0PiZ/PhD-MX-IAP-Page?node-id=14724-43579",
+      "account": "qa1@cyberlink.com (Dev seat, PM Workspace)"
+    },
+    "design": {
+      "fileKey": "2ogGJ14xElxFo4V8QjteOM",
+      "page": "9627:6",
+      "url": "https://www.figma.com/design/2ogGJ14xElxFo4V8QjteOM/IAP?node-id=9627-6",
+      "account": "qa-dm@cyberlink.com (Dev seat, CyberLink DC)"
+    }
+  },
+  "frames": [
+    {
+      "label": "261117_xmas_NY_sale",
+      "node": "9627:6",
+      "in_pdf": false,
+      "read": "d-interstitial-xmas-a, d-interstitial-xmas-b, d-interstitial-ny, d-iap-xmas, d-iap-ny, d-launcher-ny, d-assets"
+    }
+  ]
+}

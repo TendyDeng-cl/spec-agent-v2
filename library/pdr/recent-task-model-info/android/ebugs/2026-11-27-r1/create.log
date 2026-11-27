@@ -1,0 +1,38 @@
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0351 on 2026-11-27
+Format check: PDR-A 16.9.0
+⚠ WARN  Recent-Task-Model-Info-R1-01  Repro Steps do not start with '1. Launch the APP'
+
+7 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.
+
+[Recent-Task-Model-Info-R1-01] created DRA262611P0352
+  DRA262611P0352  sev 2  RD  BugNeedReview  build 2611251  by ETHAN_HSU
+[Recent-Task-Model-Info-R1-02] created DRA262611P0353
+[Recent-Task-Model-Info-R1-03] created DRA262611P0354
+[Recent-Task-Model-Info-R1-04] created DRA262611P0355
+[Recent-Task-Model-Info-R1-05] created DRA262611P0356
+[Recent-Task-Model-Info-R1-07] created DRA262611P0357
+[Recent-Task-Model-Info-R1-08] created DRA262611P0358
+
+created 7 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0352  sev 2  RD  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0353  sev 3  RD  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0354  sev 3  RD  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0355  sev 2  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0356  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0357  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+  DRA262611P0358  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0352  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0353  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0354  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0355  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0356  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0357  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0358  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

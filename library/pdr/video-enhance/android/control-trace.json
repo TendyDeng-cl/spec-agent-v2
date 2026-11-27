@@ -571,7 +571,7 @@
         "K-4c42ec"
       ],
       "app": [],
-      "press": "TC-110",
+      "press": "TC-110, TC-351",
       "how": "trace",
       "carried_from": "20261103-174203"
     },
@@ -1465,7 +1465,7 @@
         "K-e94ee6"
       ],
       "app": [],
-      "press": "TC-215",
+      "press": "TC-215, TC-348, TC-349, TC-350",
       "how": "trace",
       "carried_from": "20261103-174203"
     },
@@ -1897,7 +1897,7 @@
         "K-a14d77"
       ],
       "app": [],
-      "press": "TC-037, TC-150",
+      "press": "TC-037, TC-150, TC-349, TC-350",
       "how": "trace",
       "carried_from": "20261103-174203"
     },
@@ -2569,7 +2569,7 @@
         "M-9f9dff"
       ],
       "app": [],
-      "press": "TC-080, TC-110",
+      "press": "TC-080, TC-110, TC-351",
       "how": "trace",
       "carried_from": "20261103-174203"
     },

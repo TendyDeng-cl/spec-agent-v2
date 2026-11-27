@@ -1,0 +1,20 @@
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0358 on 2026-11-27
+Format check: PDR-A 16.9.0
+⚠ WARN  Cinematic-Reel-Recommendation-E1-02  Short Description is 121 chars (budget 120)
+
+1 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.
+
+[Cinematic-Reel-Recommendation-E1-02] created DRA262611P0359
+  DRA262611P0359  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+created 1 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0359  sev 3  PM  BugNeedReview  build 2611251  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0359  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

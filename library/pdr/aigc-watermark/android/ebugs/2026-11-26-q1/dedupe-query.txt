@@ -1,0 +1,81 @@
+### ecl_query.py bugs --text "C2PA" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-26)
+DRA262611P0221    NAB             2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Image to Video: Veo, Gemini, BytePlus saves carry CyberLink's C2PA manifest, not the provider's
+DRA262611P0220    NAB             2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Image to Video: Kling, Vidu, Pixverse, Wan 2.7 saves carry a C2PA manifest; the sheet says none
+DRA262611P0218    TRCreated       3    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: Image saved with the switch On is signed by Google, not CyberLink (C2PA)
+
+3 bug(s)
+
+### ecl_query.py bugs --text "Content Credentials" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-26)
+
+0 bug(s)
+
+### ecl_query.py bugs --text "AIGC" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-26)
+DRA262611P0229    NewCreated      2    PM         2611171    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Music Generator: Generate starts with no 「AIGC Watermark」 dialog when the switch is Off
+DRA262611P0227    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] Settings (AIGC Watermark): 「Remove AIGC Watermark」 is On by default on a fresh install
+DRA262611P0225    Assigned        3    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent]Export: AIGC dialog opens after 「Produce」, not on 「Export」; Cancel returns to Produce
+DRA262611P0223    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Export: Project with an AI Music Generator song exports with no AIGC dialog or AI label
+DRA262611P0214    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Settings (AIGC Watermark): Info sheet shows an X close button the Design does not draw
+DRA262610P0301    NAB             2    RD         2610223    SAM_CHANG       PDR-A 16.7.5 - [Black Friday] AIGC: The "Not Enough Credits" dialog background does not match the SPEC
+
+6 bug(s)
+
+### ecl_query.py bugs --text "manifest" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-26)
+DRA262611P0221    NAB             2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Image to Video: Veo, Gemini, BytePlus saves carry CyberLink's C2PA manifest, not the provider's
+DRA262611P0220    NAB             2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Image to Video: Kling, Vidu, Pixverse, Wan 2.7 saves carry a C2PA manifest; the sheet says none
+
+2 bug(s)
+
+### ecl_query.py bugs --text "Watermark" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-26)
+DRA262611P0229    NewCreated      2    PM         2611171    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Music Generator: Generate starts with no 「AIGC Watermark」 dialog when the switch is Off
+DRA262611P0227    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] Settings (AIGC Watermark): 「Remove AIGC Watermark」 is On by default on a fresh install
+DRA262611P0214    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Settings (AIGC Watermark): Info sheet shows an X close button the Design does not draw
+DRA262611P0006    Close           2    RD         2611021    BALLY_HSU       PDR-A 16.8.0 - [AIAgent] AI Mini Drama: Export Full Video adds the Free watermark to a drama paid for with credits
+DRA262610P0216    Cancelled       2    RD         2610171    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound] AI Mini Drama: Dramas created with "No captions" export without the Free watermark
+DRA262603-0138    Close           2    RD         2603181    SAM_CHANG       PDR-A 16.1.5 - [Google everywhere][Landscape/Portrait] Timeline: Watermark box tap area incorrect
+DRA252512-0030    QA Propose Won  2    RD         2512032    ANGOL_HUANG     PDR-A 15.9.1 - AI Art: The wrong year watermark shows on the style "Bright Cabin" generated result
+DRA252508-0297    Close           2    RD         2508291    SHIRLEY_FANG    PDR-A 15.7.0 - [DEU/RUS] IAP: "No Watermark..." string not left-aligned in DEU/RUS IAP page
+DRA252508-0143    Close           2    RD         2508191    SHIRLEY_FANG    PDR-A 15.2.1 - [Chromebook] Menu: "Remove watermark" option shown unexpectedly in menu
+DRA252508-0107    Won't Fix       2    RD         2508111    SHIRLEY_FANG    PDR-A 15.7.0 - Watermark: Watermark not matching default size after reimport
+DRA252503-0245    Close           2    RD         2503202    BALLY_HSU       PDR-A 15.0.0 - [UX] Timeline : When the main track clip is selected, the "Watermark" cannot be clicked.
+DRA252503-0217    Close           2    RD         2503141    BALLY_HSU       PDR-A 15.0.0 - Talking Avatar : When entering the Crop page in a custom image, a watermark is displayed.
+DRA252503-0022    Close           2    RD         2503041    JOANNEJA_WANG   PDR-A 15.0.0 - AI Video Enhancer: The front icon overlaps with the watermark, making it difficult to remove the watermark
+DRA252503-0003    Close           2    RD         2503041    BALLY_HSU       PDR-A 15.0.0 - AI Video Enhancer (Subscribers): The watermark will only be displayed if user use the "stabilizer" (do not apply upscaler, and frame interpolation)
+DRA252502-0171    Close           2    RD         2502210    JACKSON_CHEN    _CS: PDRA The user still got watermark after using AI video enhancer CS002939332
+DRA252502-0078    Close           2    RD         2502130    HAUSEN_LIN      PDR-A 14.9.0 - Mixpanel: There is no "Monetize_Subscription_Success" >> "watermark"
+DRA252502-0036    Close           2    RD         2502090    HAUSEN_LIN      PDR-A 14.9.0 - [UI]Watermark: The background is incorrect after selected
+DRA242410-0147    Close           2    RD         2410150    BALLY_HSU       PDR-A 14.5.0 - AI Video Enhancer : The "Compare" button and the "Watermark" will overlap when the source video is 1:1
+DRA242410-0145    Close           2    RD         2410150    BALLY_HSU       PDR-A 14.5.0 - AI Video Enhancer : When the "Stabilizer" is applied along with "Upscaler" or "Frame Interpolation" the generated video will contain a watermark.
+DRA242408-0101    Close           3    RD         2408061    AMBER_MAI       PDR-A 14.3.0 - Produce: The position of Pro tag on Remove Watermark and 4K output doesn't sync to guideline
+DRA242407-0008    Close           2    RD         2407020    JETHRO_WANG     PDR-A 14.2.0 - Shortcut(Text to Image): Still have watermark on downloaded image
+DRA242405-0011    Close           2    RD         2405030    BALLY_HSU       PDR-A 14.0.0 - Gamification(Auto-caption) : Show watermark in shortcut function
+DRA241225-0115    Close           2    RD         1225230    HAUSEN_LIN      PDR-A 13.2.0 - Shortcut(AI Sketch): There is the watermark in the crop room
+DRA241225-0106    NewCreated      2    PM         1225230    JACK_HSIEH      PDR-A 13.1.2 - Text to Image: The watermarks on downloaded photos are still there, but the watermarks on shared photos have disappeared.
+DRA231223-0169    Propose Won't   2    RD         1223091    BALLY_HSU       PDR-A 12.7.0 - Shortcut(AI Anime/AI Scene): When the original image contains watermark text, AI anime or Scene will create new text.
+DRA231223-0154    Close           2    RD         1223082    HAUSEN_LIN      PDR-A 12.7.0 - Flurry(AI Scene): There is no log "inAppPurchase_done -> from_shortcut_exported page_watermark"
+DRA231223-0145    Close           2    RD         1223082    HAUSEN_LIN      PDR-A 12.7.0 - [UX]Shortcut(Text to Image): Tap the text of Remove watermark doesn't pop up IAP
+DRA231223-0134    Close           2    RD         1223080    HAUSEN_LIN      PDR-A 12.7.0 - [SS Tab A]Shortcut(Text to Image): Remove watermark overlaps the generated image in the large image mode
+DRA231223-0122    Close           2    RD         1223080    HAUSEN_LIN      PDR-A 12.7.0 - Shortcut(AI Anime/AI Scene): The watermark size of produced image is small
+DRA231222-0247    Close           2    RD         1222300    JETHRO_WANG     PDR-A 12.7.0 - Shortcut(Text to Image): The "Remove watermark" string in history large image mode can be tap and will have response while tapping
+DRA231222-0240    Close           2    RD         1222300    HAUSEN_LIN      PDR-A 12.7.0 - Shortcut(AI Anime): There is no "Remove Watermark" button in the produced page
+DRA231222-0239    Close           2    RD         1222300    HAUSEN_LIN      PDR-A 12.7.0 - Shortcut(AI Scene): There is no "Remove Watermark" button in the produced page
+DRA231222-0139    Close           2    RD         1222260    HAUSEN_LIN      PDR-A 12.7.0 - Shortcut(Text to Image): There is no watermark on the generated images
+DRA231222-0124    Close           2    RD         1222260    HAUSEN_LIN      PDR-A 12.7.0 - Shortcut(Text to Image): Doesn't pop up IAP after toggled "Remove watermark"
+DRA231221-0055    Close           2    RD         1221060    HAUSEN_LIN      PDR-A 12.5.0 - Flurry: There is no InAppPurchase_done -> fromWhat -> from_shortcut_produce_watermark
+DRA231221-0053    Close           2    RD         1221060    BALLY_HSU       PDR-A 12.5.0 - Shortcut(Body effect, Video effect, Crop&Rotate, Speed) : The output video does not have a watermark
+DRA231220-0077    Close           2    RD         1220160    HAUSEN_LIN      PDR-A 12.5.0 - Shortcut: IAP does't pop up after toggling "Export without watermark"
+DRA231219-0057    NewCreated      2    PM         1219101    HAUSEN_LIN      PDR-A 12.4.0 - [UX]Watermark: The watermark is not properly designed
+DRA231219-0054    Close           2    PC-Doc     1219100    HAUSEN_LIN      PDR-A 12.3.1 - [MUI]Produce: "Expoty without watermark" is not localized
+DRA231219-0047    Close           2    RD         1219100    HAUSEN_LIN      PDR-A 12.3.1 - Shortcut(Anime Art): There is no "Expoty without watermark" in the produce page
+DRA231216-0053    Close           2    RD         1216140    HAUSEN_LIN      PDR-A 12.1.0 - Independent Entry: Doesn't show the watermark in premium templates
+DRA231216-0035    Close           2    RD         1216140    HAUSEN_LIN      PDR-A 12.1.0 - Independent Entry: Shows double watermarks after user produce the video and back to the edit room
+DRA221207-0023    Close           2    RD         120750     HAUSEN_LIN      PDR-A 11.0.0 - IAP(X'mas/New Year): Shows "No Watermark. Unlimited assets." at the first time entering IAP page
+DRA221179-0017    Assigned        2    RD         117964     ALLENCW_CHEN    PDR-A 10.4.0 - [Unsync]Editor(Preview Window): Preview window shows black background and watermark when no media clip in timeline. It is unsync with PDR-I
+DRA221091-0003    Assigned        2    RD         109172     NICKLOUS_CHEN1  PDR-A 9.10.0 - [Unsync] Gamification: Keep countdown with 30 mins length if claiming watermark removal reward then upgrade
+DRA219615-0007    NewCreated      2    PM         96156      JACK_CHANG      PDR-A 9.0.1 - [UX] Project: Watermark is not fashion
+DRA208656-0010    Propose Won't   2    RD         86567      LOUISE_SUNG     PDR-A 7.2.0 - Stock (shutterctock): AP doesn't show shutterstock's watermark on content while previewing expired premium stock video/photo.
+DRA208118-0008    Propose Postpo  2    RD         81188      JACK_CHANG      PDR-A 6.9.1 - IAP: Tap shopping cart icon in "Tutorials page" / "Remove watermark" / "Add more than 4th track" / "Setting page (from project)" / "Locked 4K/1080p option" will always let IAP page in Landscape mode
+DRA207807-0020    Close           2    RD         78073      MIKE_LU         PDR-A 6.7.0 - Edit: PDR-A cannot display completed watermark on preview window if user set up system display size as "Largest"
+DRA207734-0001    Close           2    RD         77344      BALLY_HSU       PDR-A 6.7.0 - Timeline (Hide): Watermark truncation after hide timeline bar
+
+50 bug(s)
+

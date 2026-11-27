@@ -79,7 +79,8 @@ Writing rules (the table must be usable by a tester who has not read the spec):
   Result with two or more checks puts each check on its own line, unnumbered (its numbers would read as the
   Action's steps); a check tied to a step starts with it (`Step 3: the CTA reads 「Enhance ◆ 2」`), and every line
   of that step repeats the prefix (`Steps 1–2: the chat does not move` newline `Steps 1–2: a ↓ button appears`).
-  Exception: an Expected Result already numbered one outcome per Action step keeps its numbers. `;` inside
+  Exception: an Expected Result already numbered one outcome per Action step keeps its numbers, and an MUI row's
+  Expected Result is always numbered (user, 2026-11-25, `mui.md` §2). `;` inside
   (), 「」 and quotes is text, not a separator. A `›` path (`Background › 「Solid」 open`, `Launcher › Pink › ☰ › [0]
   IAP › status`) names one place and stays on one line, in every column. `check.ts` warns on a top-level `;` or two sentences on one line.
 - Section = the spec's own feature area, in user-journey order (entry → main flow → edge cases → errors →

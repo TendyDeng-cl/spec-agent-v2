@@ -1,0 +1,163 @@
+# AI Mini Drama iOS, open questions flagged to-file (Q-5, Q-18, Q-28, Q-31): dedupe, iOS pool only (per OS, user 2026-10-28), 2026-11-25
+# Pool: `ecl_query.py bugs --text "Mini Drama" --product "PowerDirector Mobile for iOS" --limit 2000` = 229 tickets
+# (dedupe-query.txt); `ecl_query.py dedupe upload/bodies.json` searched the same 229 for the two drafted entries
+# (its output follows below). Every Short Description of the pool, open and closed, was read against all four questions.
+# Judged:
+#   ISS-AMD-74 (the ⋯ menu on a regenerated scene image): the ranked candidates DRI261897P0012, DRI261898P0011,
+#     DRI261896P0046 and DRI261894P0031 are about the failed card's copy, refunds and prices, not a ⋯ menu.
+#     DRI261893-0163 [QANeedRework] 「Successful storyboard image routes expose no version editor」 was read in full
+#     (`ecl_query.py bug`): it asks for the PM F69/F73 image-version editor on a successful scene, a feature withdrawn
+#     on 2026-10-21, not the ⋯ of PM Error Handling 2621:30383. Related, not the same question: new entry.
+#   ISS-AMD-75 (MX mockups' older chat): DRI261893-0161 [Close] is the failed thumbnail's regenerate / edit button,
+#     another control. DRI261893-0118 [NAB] 「Format setup has no aspect-ratio selection」 settled one item of the
+#     question (no aspect ratio, as the Design); it does not ask whether the MX mockups are illustrations. New entry,
+#     the NAB ticket cited in its QA note.
+#   The string of the first not-drafted question (「Every frame is done. Ready to create your video?」) and the
+#     US / JP store limit of the second: no Short Description in the pool mentions either.
+# Nothing commented on, reopened or changed (rule 6). Nothing filed.
+
+No same-OS ticket covers Q-5: it stays to-file (not drafted, needs a device check; see the drafts file).
+No same-OS ticket covers Q-18: it stays to-file (not drafted, needs a device check; see the drafts file).
+No same-OS ticket covers Q-28: drafted as ISS-AMD-74.
+No same-OS ticket covers Q-31: drafted as ISS-AMD-75.
+
+== ecl_query.py dedupe upload/bodies.json --product "PowerDirector Mobile for iOS" (2026-11-25) ==
+
+2 of 2 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+1 candidate(s) were declined (NAB / Won't Fix / Not Reproducible). Resolve each before filing.
+
+[AI-Mini-Drama-Questions-01] PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Regenerated scene image has no ⋯ menu that the PM Error Handling frame draws
+      feature='AI Mini Drama'  terms=['AI Mini Drama', 'Mini Drama']  searched 229 candidate(s)
+    ! 50%  OPEN      DRI261897P0012  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed scene image card copy differs from th
+              shares phrase "scene image"
+    ! 25%  OPEN      DRI261898P0011  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed storyboard and scene image generations ke
+              shares phrase "scene image"
+    ! 25%  REJECTED  DRI261896P0046  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character, scene image and chat update prices di
+              shares phrase "scene image"
+              ⚠ ProposeNAB — RD/PM already declined this. Filing again re-raises that decision: read its status log, and only refile with new grounds (e.g. a newer spec) cited against DRI261896P0046.
+    ! 25%  OPEN      DRI261894P0031  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Failed scene image says "service is busy" bu
+              shares phrase "scene image"
+
+[AI-Mini-Drama-Questions-02] PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: MX mockups draw an older chat UI (add-image button, edit icon) the app lacks
+      feature='AI Mini Drama'  terms=['AI Mini Drama', 'Mini Drama']  searched 229 candidate(s)
+    ! 18%  closed    DRI261893-0161  PDR-I 16.9.0 - AI Mini Drama (storyboard): Does not display the "regenerate" or "edit" b
+              shares label "edit"
+
+== Open in the pool on 16.9.0: 117 ticket(s) of 229 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRI261893-0011  QANeedRework PM   189315  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: format card button reads "Continue" instead of the specified "Generate"
+      DRI261893-0013  TRCreated    RD   189315  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: History tooltip won't close on outside tap and covers first card's date
+      DRI261893-0015  TRCreated    RD   189315  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: just opening a task moves it to the top of History and changes its size
+      DRI261893-0064  NeedMoreInfo RD   189315  PDR-I 16.9.0 - AI Mini Drama (Error Status): When some clips fail to generate, the successful clips aren't shown either in the result page
+      DRI261893-0120  QA Propose W RD   189309  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Inspiration selection overwrites an edited draft without confirmation
+      DRI261893-0128  QA Propose W RD   189309  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Outline and revision Stop give no explanatory feedback
+      DRI261893-0129  Propose Wont RD   189309  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Animated character generation blocks useful actions beyond ten seconds
+      DRI261893-0145  BugNeedRevie RD   189399  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard script clips left edge of first glyph on first and last lines
+      DRI261893-0149  QA Propose W RD   189399  PDR-I 16.9.0 - AI Mini Drama: "破綻" is incorrectly pronounced as "爬燦" at approximately 7 seconds in the video
+      DRI261893-0150  Propose Wont RD   189399  PDR-I 16.9.0 - [UX] AI Mini Drama: The elderly character is given a young-sounding voice
+      DRI261893-0156  Propose Wont RD   189399  PDR-I 16.9.0 - AI Mini Drama: The same mask looks completely different across the four video segments, including variations between full-face and half-face masks
+      DRI261893-0163  QANeedRework RD   189399  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Successful storyboard image routes expose no version editor
+      DRI261894P0005  QA Propose W RD   189463  PDR-I 16.9.0 - AI Mini Drama:  Generating 3-view character images always produces the same hairstyle and outfit.
+      DRI261894P0007  QA Propose P PM   189463  PDR-I 16.9.0 - [UX] AI Mini Drama: When generating character images or videos, the credit details show "TTS", "TTI", or "AI Video Generator", which may confuse users
+      DRI261894P0010  Propose Wont RD   189463  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: create form offers ethnicities the filter can't find; Other vs Others
+      DRI261894P0015  Propose Wont RD   189463  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: generation shows only generic or video-language status text
+      DRI261894P0019  TRCreated    RD   189463  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: video settings offer different length options per drama
+      DRI261894P0021  QA Propose P PM   189463  PDR-I 16.9.0 - [AIFound] AI Mini Drama: credit details list drama charges as Text to Image / Text to Speech
+      DRI261894P0023  Propose Wont RD   189463  PDR-I 16.9.0 - [AIFound] AI Mini Drama: failed character image shows a raw error toast and still costs 1 credit
+      DRI261894P0031  TRCreated    RD   189482  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Failed scene image says "service is busy" but its ⓘ blames terms of service
+      DRI261894P0036  Assigned     RD   189482  PDR-I 16.9.0 - [AIFound] AI Mini Drama: after a failed step the chat is left with no next step, card or retry
+      DRI261894P0037  ProposeNAB   RD   189482  PDR-I 16.9.0 - [AIFound] AI Mini Drama: only 5 characters kept; extra ones are dropped but stay in the story
+      DRI261894P0043  TRCreated    RD   189482  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Back from an empty chat still asks "Leave this chat?"
+      DRI261894P0044  QA Propose W RD   189482  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Enlarge button on character cards is only 18x19 pt
+      DRI261894P0049  NeedMoreInfo RD   189482  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Leave guard shows only on History icon, not Back, and says the job will stop
+      DRI261894P0050  Assigned     RD   189482  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Assistant gives no reply to questions or unsupported requests
+      DRI261894P0051  Assigned     RD   189482  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Settings card offers 75/90 s full video but later offer says 60 sec
+      DRI261895P0003  Assigned     RD   189520  PDR-I 16.9.0 - [AIFound] AI Mini Drama: "The Beer Heir" in Japanese only shows "Server is busy"; no outline or portraits
+      DRI261895P0004  Assigned     RD   189520  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: a pet that drives the story is never offered as a character
+      DRI261895P0005  Propose Wont PM   189520  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: "Add New" adds an invented character who appears in no scene
+      DRI261895P0007  Assigned     RD   189520  PDR-I 16.9.0 - [AIFound] AI Mini Drama: after a chat scene revision, the video renders only the revised scene
+      DRI261895P0022  RDResolved   RD   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: First-video generation omits the required notification preprompt
+      DRI261895P0023  Propose Wont PM   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Surprise me replaces the composer instead of appending its suggestion
+      DRI261895P0024  QA Propose W PM   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Character generation has no usable Stop action or cancellation warning
+      DRI261895P0028  TRCreated    RD   189520  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Play and Download remain enabled during replacement generation
+      DRI261895P0029  Assigned     RD   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Outline generation blocks useful actions beyond ten seconds
+      DRI261895P0030  Assigned     RD   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Revision blocks useful actions beyond ten seconds
+      DRI261895P0031  Assigned     RD   189520  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video production blocks useful actions beyond ten seconds
+      DRI261895P0034  ProposeNAB   RD   189520  PDR-I 16.9.0 - [UX] AI Mini Drama: Revised story outline is not shown again after characters are selected
+      DRI261895P0035  TRCreated    RD   189596  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Scene and Location image generation always fails
+      DRI261896P0013  TRCreated    RD   189631  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Regenerated storyboard is written above the revision request, not after it
+      DRI261896P0014  TRCreated    RD   189631  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Preview reads "videos are being generated" during a storyboard regeneration
+      DRI261896P0015  ProposeNAB   RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Full Edit blocks Free export because the drama's own captions count as premium
+      DRI261896P0016  NewCreated   PCDoc 189631  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Template chat reads "1 characters isn't set yetThey need a look…"
+      DRI261896P0018  Assigned     RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene descriptions keep the dog white despite its golden look and the request
+      DRI261896P0019  TRCreated    RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Revising a template's pre-assigned character fails with "Server is busy"
+      DRI261896P0024  Assigned     RD   189681  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Story Outline & Characters Result block appears twice after characters are chosen
+      DRI261896P0025  Propose Wont RD   189681  PDR-I 16.9.0 - [AIFound] AI Mini Drama: The Ring He Worked For keeps cat heads after human characters are chosen
+      DRI261896P0028  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Replay on an ended scene restarts the first scene
+      DRI261896P0029  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Full Edit return loses the previous chat position
+      DRI261896P0031  NewCreated   PM   189631  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: AI Suggestion leaves required character attributes empty
+      DRI261896P0034  BuildResolve PM   189681  PDR-I 16.9.0 - [UI] AI Mini Drama (The Art of Falling): Default actors are assigned to characters with the wrong gender
+      DRI261896P0035  ProposeNAB   RD   189681  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Home shows only one row of templates when iOS Larger Text is on
+      DRI261896P0036  Propose Wont RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: A minor's age in a character description always fails as "try again later" yet costs 1 credit
+      DRI261896P0037  TRCreated    RD   189631  PDR-I 16.9.0 - [AIFound][UX] AI Mini Drama: Character looks closed with X instead of saved are still added to Mine
+      DRI261896P0038  Propose Wont RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: A message sent before the format is chosen skips the language and captions step
+      DRI261896P0039  TRCreated    RD   189631  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Character added by chat after the storyboard gets a slot that cannot be tapped
+      DRI261896P0041  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Public-figure reference photo is not blocked and a lookalike is generated
+      DRI261896P0042  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed character generation shows no error, no ! mark and no refund notice
+      DRI261896P0045  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Updating a storyboard image from chat fails silently and the scene never changes
+      DRI261896P0046  ProposeNAB   RD   189631  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character, scene image and chat update prices differ from the spec
+      DRI261896P0048  Assigned     RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: No Stop and lose your credits? dialog on Back during storyboard generation
+      DRI261896P0050  Assigned     RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video in progress gives no Back toast and no processing label in History
+      DRI261896P0051  Assigned     RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Try again on a failed video asks which beat to modify instead of retrying
+      DRI261896P0052  ProposeNAB   RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed clip shows 1 clip couldn't be generated with no Fix scenes path
+      DRI261896P0053  NewCreated   PM   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Policy-violating idea gets a free-form refusal instead of the spec message
+      DRI261896P0054  NewCreated   PM   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Cast change after a storyboard shows the wrong assistant prompt
+      DRI261896P0055  Assigned     RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Video settings card does not show You'll have N left under Generate
+      DRI261896P0058  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Finish your characters sheet clips the bottom of character names
+      DRI261896P0060  Fail         PM   189631  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Video settings card says quick draft instead of quick drafts
+      DRI261896P0061  TRCreated    RD   189631  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Keyboard cannot be dismissed in a new empty chat
+      DRI261897P0006  Assigned     RD   189729  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Video generation always fails after ~6 min as the storage upload times out
+      DRI261897P0007  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Storyboard and video Stop cancel silently with no credit message
+      DRI261897P0008  Assigned     RD   189729  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Character and storyboard generation block the screen for over a minute
+      DRI261897P0009  TRCreated    RD   189729  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: No Find your video here in History bubble after leaving the first video
+      DRI261897P0010  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: No video settings card after a successful storyboard preview Retry
+      DRI261897P0011  TRCreated    RD   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Create storyboard card loses its price after the chat-limit dialog
+      DRI261897P0012  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Failed scene image card copy differs from the Design error frame
+      DRI261897P0013  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Leaving during outline generation discards the drama instead of keeping it
+      DRI261897P0016  Propose Wont RD   189729  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed character and video generations keep their charged credits with no refund
+      DRI261897P0017  Assigned     RD   189729  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: X on Finish your characters keeps the generated looks instead of discarding them
+      DRI261897P0018  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UX] AI Mini Drama: Character filter with no matches shows a blank grid with no empty state
+      DRI261897P0019  TRCreated    RD   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Create my character description text runs under the expand icon
+      DRI261897P0020  Assigned     RD   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Feature strings stay English in Traditional Chinese and Japanese
+      DRI261897P0021  TRCreated    RD   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Character filter sheet is titled 濾鏡 instead of 篩選 in Traditional Chinese
+      DRI261897P0022  Assigned     PC-Doc 189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template list link reads その他 instead of もっと見る in Japanese
+      DRI261897P0023  QA Propose W RD   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template detail player cuts off the cover title on 7 templates
+      DRI261897P0024  BuildResolve PM   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Proposal Across Every Lifetime cover reads Proposal Across Lifetimes
+      DRI261897P0025  NewCreated   PM   189729  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Template sample videos show garbled sign text
+      DRI261897P0029  TRCreated    RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Picking a library portrait ends in Something went wrong and the look is not synced
+      DRI261897P0030  RDResolved   RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Template cast change keeps old outline beats and still shows the removed character
+      DRI261897P0031  RDResolved   RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Edit before first storyboard charges 7 credits for Regenerate to match, nothing shown
+      DRI261897P0032  BuildResolve PM   189774  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Update characters card shows raw CMS keys instead of its title and option
+      DRI261897P0038  RDResolved   RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: captions fail to be added and Try again does not recover (Seedance 2.0 Mini, 90 sec)
+      DRI261897P0039  Assigned     RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene 6 image always fails with "Couldn't create image" although the text is compliant
+      DRI261897P0042  Assigned     RD   189774  PDR-I 16.9.0 - [AIFound] AI Mini Drama: Scene 4 subtitles stay on screen after the voice ends and lag the next line
+      DRI261897P0043  Assigned     RD   189774  PDR-I 16.9.0 - [AIFound][UI] AI Mini Drama: Extra "Advancing" loading card appears after the video finishes
+      DRI261898P0001  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Credit pill opens My Credits mid-generation with no leave dialog
+      DRI261898P0002  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Iris replies show internal locale codes like ja_JP and en_US
+      DRI261898P0003  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Partial character failure shows the single-character error dialog
+      DRI261898P0004  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Confirming the cast charges character portraits with no offer card, then fails
+      DRI261898P0005  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Chat shows an unsent Generate with AI message and claims an uncreated storyboard
+      DRI261898P0006  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Character change in chat offers one chip and skips the update messages
+      DRI261898P0007  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Typed character name instead of a chip skips the Update characters card
+      DRI261898P0008  Propose Post RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Update characters card does not show how many characters it updates
+      DRI261898P0009  RDResolved   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Create my character cuts a 1,050-character description to 1,000
+      DRI261898P0010  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Reopening a drama from History drops messages and the character card
+      DRI261898P0011  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Failed storyboard and scene image generations keep credits with no refund
+      DRI261898P0012  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Storyboard image update shows a generic skeleton, not on the changed scene
+      DRI261898P0013  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Storyboard Preview keeps the old preview after the storyboard is cut or changed
+      DRI261898P0014  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Chat turns fail with token_request fired outside a turn worker thread
+      DRI261898P0015  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Failed storyboard lacks the Storyboard couldn't be created line
+      DRI261898P0016  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Returning from History or Choose Character does not show the newest message
+      DRI261898P0017  NewCreated   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Tap outside the History info bubble opens the drama under the tap
+      DRI261898P0018  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Asking Iris to change the story title after the characters stage is declined
+      DRI261898P0019  ProposeNAB   RD   189872  PDR-I 16.9.0 - [AIAgent] AI Mini Drama: Try again on a failed video shows a settings card with no model choice
+      DRI261898P0020  Assigned     RD   189872  PDR-I 16.9.0 - [AIAgent][UI] AI Mini Drama: Offline send shows No connection available instead of You're offline toast

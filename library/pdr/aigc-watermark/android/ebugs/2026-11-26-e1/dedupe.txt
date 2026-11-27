@@ -1,0 +1,19 @@
+# AIGC Watermark Android, entry round E1 (2611251): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-26
+# `ecl_query.py dedupe upload/bodies.json` plus `bugs --text` on Cinematic Reel, AI Cartoon, AI Sketch, Style Transfer,
+# Text to Image, Voice Changer, My Artwork, toolbar, AI Remove, Object Removal (dedupe-query.txt). Statuses as listed 2026-11-26 23:2x.
+
+Left off the drafts (same-OS ticket):
+Q-10 DRA262611P0224
+- TC-295, TC-301, TC-307, TC-313, TC-319, TC-325, TC-331, TC-337: no AI label in the editor preview for TTS / Voice Changer / AI Cartoon / AI Sketch content = DRA262611P0224 (NewCreated, PM).
+Q-13 DRA262611P0322
+- The same rows' export manifest (one CyberLink manifest, compositeWithTrainedAlgorithmicMedia, no ingredient) = DRA262611P0322 (PM).
+Q-20 DRA262611P0229
+- TC-343, TC-351, TC-359 (TC-344/345, 352/353, 360/361 Blocked upstream): music Generate shows no AIGC dialog with the switch Off = DRA262611P0229.
+
+Left off, unfiled draft: TC-343, TC-351, TC-359 step 5 (songs carry no C2PA manifest) = R2 ISS-AWA-17 (ebugs/2026-11-23-r2), awaiting filing.
+
+Drafted (no duplicate):
+- ISS-AWA-20 (Q-22 toolbar places): no ticket on Effects placement or AI Remove on Android.
+- ISS-AWA-21 – ISS-AWA-29: no ticket on these entry paths (Cinematic Reel 16.9.0 tickets are photo tips / MUI / Add Media; Text to Image tickets are save / share / manifest; Talking Avatar matches are 14.x closed or rejected tickets on By Voice labels, unrelated).
+- ISS-AWA-30: no My Artwork layout ticket (DRA262611P0219 is the full-screen badge).
+Not commented on any ticket (rule 6).

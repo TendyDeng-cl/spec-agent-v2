@@ -1,0 +1,93 @@
+{
+  "feature": "pdr/cinematic-reel-recommendation",
+  "folder": "2026-11-25",
+  "received_at": "2026-11-25T03:56:19.041Z",
+  "spec_set_sha256": "310323e824f8797bff89df6cb9e18dda23dc7bbd876ba9973767560acaa29507",
+  "files": [
+    {
+      "name": "TR261019-014 and TR260923-022.md",
+      "sha256": "100ecc4cb2acb35e681aaf8fabf8796386693b1830bcb3e2f5b25080bede0bdd",
+      "bytes": 2140
+    },
+    {
+      "name": "I2V Recommendation - Template.csv",
+      "sha256": "1755e2f82d47d8904fdc59428a9331849cab6564d13885fcca54ddd8f3bdfe21",
+      "bytes": 5599
+    },
+    {
+      "name": "Cinestory CMS - action id.csv",
+      "sha256": "1eac61a74622e948a6ae830ab64fadb53d12e9ae11d3cffd566abb0acbbc7b2f",
+      "bytes": 784
+    },
+    {
+      "name": "Cinestory CMS - Template Description Localization.csv",
+      "sha256": "32eac83fef98b875e28dc7bf017d7235979005c711569ea598561f7f594e1126",
+      "bytes": 37845
+    },
+    {
+      "name": "I2V Recommendation - FAQ.csv",
+      "sha256": "3a73b48865ef84ed0b1bdb3ba3a8dad8df0141c5fe2be9b006a14d91ee33c549",
+      "bytes": 4347
+    },
+    {
+      "name": "Cinestory CMS - Template Name Localization.csv",
+      "sha256": "47562d7afa2f40262470b612ab5429a444c9dd315a48dcf72401ff6f1376c617",
+      "bytes": 3693
+    },
+    {
+      "name": "I2V Recommendation - Recommendation_Page (CMS).csv",
+      "sha256": "7801fb71a7cc87b6043ba91222d687c098aef94a8e507843330b0af8804329ad",
+      "bytes": 11634
+    },
+    {
+      "name": "Cinestory CMS - Order.csv",
+      "sha256": "78e8532d3ebc37db095fa0c686e50c5460fbcdc78224ea338f043e52947a16bc",
+      "bytes": 2715
+    },
+    {
+      "name": "Cinestory CMS - CMS Data.csv",
+      "sha256": "9c3a49843dcd166667e3f257d9dc0bf6740ec22df6257963189afdbeff6445ca",
+      "bytes": 3384
+    },
+    {
+      "name": "I2V Recommendation - Recommend-Avoid_Final.csv",
+      "sha256": "a73ab867c6e6f4bd15d4e055bb62d7e3317ec461e8bcedc332e1b2dce6f1f2f8",
+      "bytes": 25817
+    },
+    {
+      "name": "Cinestory CMS - Thumbnail Size.csv",
+      "sha256": "aa2fb2a703ebb84b67b5471a405cd50013edc035f9ad5b718bfd89bde730b8f3",
+      "bytes": 731
+    },
+    {
+      "name": "I2V Recommendation - Localization.csv",
+      "sha256": "b86a82a5d6a4f42114d3614fe05da3ddb6e5c1f1f3e26b93e9a9743cc5a29285",
+      "bytes": 53485
+    },
+    {
+      "name": "Cinestory CMS - Recommendation.csv",
+      "sha256": "d034e6b2b5fa75c2fa2c7ea2c5672b628f75d808c01396ac2f49f198c61464a0",
+      "bytes": 3082
+    },
+    {
+      "name": "I2V Recommendation - Temp_QA.csv",
+      "sha256": "d26cac8d19e584ecfa399f1d4f42f6f47897b5df3089e82a8f03f7c72543a309",
+      "bytes": 12792
+    },
+    {
+      "name": "I2V Recommendation - samples.csv",
+      "sha256": "e1125ed1974fa36dfc043f15f8aafb5297455d1e5e5b3b8bc02a0a7ca0b4ca48",
+      "bytes": 4346
+    },
+    {
+      "name": "Cinestory CMS - Template Style id (TBD).csv",
+      "sha256": "ec58348c61b08e8bb7c0b0f3bac702bd3dafe070ffa7aa3eb0949dfa5d12ac4e",
+      "bytes": 1955
+    },
+    {
+      "name": "Cinestory CMS - CMS columns.csv",
+      "sha256": "fceb98dd9627a906e58e3b737b247add3cd6a9f19289a6464fdefb383eb059c1",
+      "bytes": 4199
+    }
+  ]
+}

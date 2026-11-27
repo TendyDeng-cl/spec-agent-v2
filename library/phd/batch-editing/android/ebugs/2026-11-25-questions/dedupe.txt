@@ -1,0 +1,24 @@
+Dedupe — Batch Editing Android, open questions flagged to-file, PhotoDirector 20.19.0 (90201900), from runs 2026-11-09-r1
+and 2026-11-11-r2. Read-only; Android pool only (product "PhotoDirector Mobile for Android"; dedupe per OS, user
+2026-10-28). 2026-11-25.
+
+1. ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" --limit 600, run on the one
+   entry first drafted (the Undo question, the R2 batch's ISS-BEA-14 wording)
+   → 1 of 1 entries has a possible duplicate, 100 % (same Short Description, open, BugBelong PM); feature
+   'Batch_Editing': 11 candidates searched; raw output in dedupe-raw.txt.
+2. Whole pool: ecl_query.py bugs --text "Batch_Editing" --product "PhotoDirector Mobile for Android" → 11 bugs, the
+   same 11 the dedupe searched (P0057–P0061, P0120–P0125). Every open ticket on 20.19.0 was read against both
+   questions (ecl_query.py bug <code> --json: header fields only, the API returns no description body, so the match
+   is by Short Description, product, owner and status).
+3. The matching tickets were all created 2026-11-17 by WILLY_WU on TR261113-0038, build 202611132003, status
+   NewCreated, severity 3, BugBelong PM. No batch in this repo filed them (no filed_bugcodes for them under ebugs/).
+
+Same-OS matches left off the drafts (no entry, no card):
+Q-9 (TC-062, TC-076; ISS-BEA-14 of ebugs/2026-11-11-r2)	PHA262026P0121	[AIAgent][UX] Batch_Editing: One Undo after an edit and 「All」 keeps the current photo's own edit
+Q-6 (TC-057, TC-058, TC-049)	PHA262026P0122 PHA262026P0123	[AIAgent][UX] Crop custom size accepts 237 x 237, below Section 3's 238 px minimum · [AIAgent][UI] Custom resolution out-of-range toast names only the width
+
+Not confirmed: whether the two resize tickets also name the 2560 px maximum against Section 3's 2730 (bodies not readable).
+Other open tickets in the pool on 20.19.0, not about either question: the 21st-photo toast copy (RD) and the Free
+user's Batch Save page without a native ad card (PM).
+Nothing was commented on, reopened or changed. Every entry of this batch: none (0 drafted).
+verify_ebug_drafts.py not used, as in R1 and R2; check_ebug_format.py is the gate (check.txt).

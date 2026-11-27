@@ -1,0 +1,78 @@
+case TC-291
+finger-dragged 10 steps
+clicked id chip_fps_60
+clicked id chip_resolution_1080p
+waited 1
+TextView | chip_mode_standard | Standard |  | 68,1064,460,99 | selected
+TextView | chip_mode_professional | Professional |  | 551,1064,461,99
+TextView | chip_style_natural | Natural |  | 68,1366,460,99
+TextView | chip_style_sharp | Sharp |  | 551,1366,461,99 | selected
+TextView | chip_fps_30 | 30fps |  | 68,1601,299,99
+TextView | chip_fps_60 | 60fps |  | 390,1601,299,99 | selected
+TextView | chip_fps_120 | 120fps |  | 712,1601,300,99
+TextView | chip_resolution_720p | 720p |  | 68,1836,299,99
+TextView | chip_resolution_1080p | 1080p |  | 390,1836,299,99 | selected
+TextView | chip_resolution_4k | 4K |  | 712,1836,300,99
+TextView | tv_charge_per_second | Charge 2 credits per second |  | 125,2125,830,46
+library/pdr/video-enhance/android/runs/2026-11-26-r4-full/screenshots/TC-291-chips.png
+finger-dragged 10 steps
+waited 1
+finger-dragged 20 steps
+TextView | tv_title | AI Video Enhance |  | 147,122,400,68
+TextView | tv_credit | 29850 |  | 789,129,110,53
+TextView | tv_source_info | 30fps · 1080p |  | 833,703,219,60
+TextView | tv_preview_time | 00:29/12:30 |  | 45,828,201,51
+TextView | tv_selected_length_title | Selected Length |  | 68,1010,305,57
+TextView | tv_selected_length | 00:30 |  | 915,1012,97,53
+TextView | tv_mode_title | Mode |  | 68,1427,108,57
+TextView | tv_style_title | Enhancement style |  | 68,1729,358,57
+TextView | tv_enhance_cost | 60 |  | 644,2007,54,65
+TextView | tv_charge_per_second | Charge 2 credits per second |  | 125,2125,830,46
+library/pdr/video-enhance/android/runs/2026-11-26-r4-full/screenshots/TC-291-30s.png
+finger-dragged 20 steps
+TextView | tv_title | AI Video Enhance |  | 147,122,400,68
+TextView | tv_credit | 29850 |  | 789,129,110,53
+TextView | tv_source_info | 30fps · 1080p |  | 833,703,219,60
+TextView | tv_preview_time | 01:29/12:30 |  | 45,828,201,51
+TextView | tv_selected_length_title | Selected Length |  | 68,1010,305,57
+TextView | tv_selected_length | 01:30 |  | 915,1012,97,53
+TextView | tv_mode_title | Mode |  | 68,1427,108,57
+TextView | tv_style_title | Enhancement style |  | 68,1729,358,57
+TextView | tv_enhance_cost | 180 |  | 631,2007,81,65
+TextView | tv_charge_per_second | Charge 2 credits per second |  | 125,2125,830,46
+library/pdr/video-enhance/android/runs/2026-11-26-r4-full/screenshots/TC-291-90s.png
+finger-dragged 15 steps
+library/pdr/video-enhance/android/runs/2026-11-26-r4-full/screenshots/TC-291-cap.png
+waited 3
+TextView | tv_title | AI Video Enhance |  | 147,122,400,68
+TextView | tv_credit | 29850 |  | 789,129,110,53
+TextView | tv_source_info | 30fps · 1080p |  | 833,703,219,60
+TextView | tv_preview_time | 08:00/12:30 |  | 45,828,201,51
+TextView | tv_selected_length_title | Selected Length |  | 68,1010,305,57
+TextView | tv_selected_length | 08:00 |  | 915,1012,97,53
+TextView | tv_mode_title | Mode |  | 68,1427,108,57
+TextView | tv_style_title | Enhancement style |  | 68,1729,358,57
+TextView | tv_enhance_cost | 960 |  | 631,2007,81,65
+TextView | tv_charge_per_second | Charge 2 credits per second |  | 125,2125,830,46
+finger-dragged 20 steps
+TextView | tv_title | AI Video Enhance |  | 147,122,400,68
+TextView | tv_credit | 29850 |  | 789,129,110,53
+TextView | tv_source_info | 30fps · 1080p |  | 833,703,219,60
+TextView | tv_preview_time | 00:29/12:30 |  | 45,828,201,51
+TextView | tv_selected_length_title | Selected Length |  | 68,1010,305,57
+TextView | tv_selected_length | 00:30 |  | 915,1012,97,53
+TextView | tv_mode_title | Mode |  | 68,1427,108,57
+TextView | tv_style_title | Enhancement style |  | 68,1729,358,57
+TextView | tv_enhance_cost | 60 |  | 644,2007,54,65
+TextView | tv_charge_per_second | Charge 2 credits per second |  | 125,2125,830,46
+TextView | chip_mode_standard | Standard |  | 68,1541,460,99 | selected
+TextView | chip_mode_professional | Professional |  | 551,1541,461,99
+TextView | chip_style_natural | Natural |  | 68,1843,460,99
+TextView | chip_style_sharp | Sharp |  | 551,1843,461,99 | selected
+TextView | chip_fps_30 | 30fps |  | 68,2078,299,99
+TextView | chip_fps_60 | 60fps |  | 390,2078,299,99 | selected
+TextView | chip_fps_120 | 120fps |  | 712,2078,300,99
+library/pdr/video-enhance/android/runs/2026-11-26-r4-full/screenshots/TC-291-back30.png
+finger-dragged 15 steps
+waited 3
+✓ 26 steps (library/pdr/video-enhance/android/recipes/price-grid-standard.steps)

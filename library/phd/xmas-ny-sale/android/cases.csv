@@ -1,0 +1,408 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes
+TC-001,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/10 23:55 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app
+2. Look at the Launcher IAP icon
+3. Tap the Launcher IAP icon and look at the IAP page","Step 1: no sale interstitial appears
+Step 2: the regular IAP icon, no Santa hat and no countdown bubble
+Step 3: the Monthly plan shows its regular price with nothing struck through, the regular first banner thumbnail and the regular CTA colour (not gold)",P1,"R-001, R-002",The day before the Xmas Sale.
+TC-002,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/11 00:01 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app
+2. Close the interstitial with ×
+3. Look at the Launcher IAP icon","Step 1: the Xmas sale interstitial appears
+Step 3: the IAP icon is the gold crown with a Santa hat",P1,"R-001, R-030, R-040",First minute of the Xmas Sale.
+TC-003,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/27 23:50 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app
+2. Close the interstitial with ×
+3. Look at the Launcher IAP icon
+4. Tap it and look at the Monthly plan","Step 1: an Xmas interstitial picture (A or B) appears
+Step 3: the Santa-hat crown icon
+Step 4: the Monthly plan shows the struck-through regular price and the sale price",P2,R-001,Last minutes of the Xmas Sale.
+TC-004,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/28 00:01 local time (automatic date and time off, Q-1)
+5. The day before was run in the Xmas Sale (TC-003)","1. Force-stop and launch the app
+2. Close the interstitial with ×
+3. Look at the Launcher IAP icon
+4. Tap it and look at the IAP page","Step 1: the NY interstitial (「Happy new year」) appears, not an Xmas picture
+Step 3: the champagne-glasses icon, no Santa hat
+Step 4: the first banner thumbnail is the gold NY 「Sale」 picture and the Monthly plan still shows the sale price",P1,"R-001, R-005, R-031, R-043",Xmas → NY change at midnight.
+TC-006,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2027/01/05 23:50 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app
+2. Close the interstitial with ×
+3. Tap the Launcher IAP icon and look at the Monthly plan","Step 1: the NY interstitial appears
+Step 3: the Monthly plan still shows the struck-through regular price and the sale price",P2,R-001,Last minutes of the NY Sale.
+TC-005,Sale period,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2027/01/06 00:01 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app
+2. Look at the Launcher IAP icon
+3. Tap it and look at the IAP page
+4. Go back, open Mine and tap 「Buy Now」 on the 「My Credits」 card","Step 1: no sale interstitial appears
+Step 2: the regular IAP icon, no champagne glasses and no countdown bubble
+Step 3: regular Monthly price with nothing struck through, regular first thumbnail and CTA colour
+Step 4: no festive banner and no discount pack
+Step 4: only the regular packs and offers",P1,"R-001, R-002, R-060",The day after the NY Sale.
+TC-010,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. On the Launcher (interstitial closed)",Tap the Launcher IAP icon (Santa-hat crown),"The IAP page 「PhotoDirector Premium」 opens
+The first banner thumbnail is the red Xmas 「Sale」 picture, followed by 「Object Removal」 and 「Body Reshape」
+The CTA button is gold (as in the Black Friday sale)
+Gold sparkle decorations are drawn around the plan rows",P1,"R-004, R-013, R-014, R-015, R-036",
+TC-011,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+5. On the Launcher (interstitial closed)",Tap the Launcher IAP icon (champagne glasses),"The IAP page opens
+The first banner thumbnail is the gold NY 「Sale」 picture, followed by 「Object Removal」 and 「Body Reshape」
+The CTA button is gold
+Gold sparkle decorations are drawn around the plan rows",P1,"R-004, R-013, R-014, R-015, R-036",
+TC-012,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open from the Launcher IAP icon",Look at the Yearly and Monthly plan rows,"Monthly: the regular monthly price struck through above the sale price (mockup 「$6.99/month」 → 「$5.99/month」)
+The sale price is 15% below the regular monthly price (rounded to the store price point)
+Yearly: the regular yearly price (mockup 「$29.99/year」) with its 「SAVE …%」 tag
+Write down the 「SAVE …%」 percentage shown (Q-7)",P1,"R-010, R-011, R-012","Design draws the plan rows with sample values (「$125/month」, 「$690/month」, 「SAVE 75%」); the PM mockup values are the closer sample. Prices are checked against checkout in TC-018 / TC-019."
+TC-013,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open from the Launcher IAP icon",Choose Yearly and look above and on the CTA,"「Recieve 30 credits during free trial」 shows above the CTA
+The gold CTA reads 「Start 7-Day Free Trial」",P2,R-016,
+TC-014,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open, Yearly chosen",Look at the text under the CTA,"The Design line 「Auto-renewal  for {yearly price}/year」 with the real yearly price (Q-4)
+Below it 「Terms of Service」, 「Privacy Policy」, 「Restore Purchase」
+No literal 「{price}」 anywhere",P2,"R-017, R-018, R-021","Q-4: the PM page puts 「7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends.」 here; check on device and record which one shows before filing anything."
+TC-015,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has already used the PhotoDirector free trial (non-trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open from the Launcher IAP icon",Choose Yearly and look at the CTA and the text under it,"The CTA reads 「Subscribe for {yearly price}/year」 with the real price
+Under it: 「{yearly price}/year, charged today. Renews yearly until canceled. Manage or cancel in Google Play > Subscriptions.」
+No literal 「{price}」",P2,"R-019, R-021",PM-only: no Design frame draws the non-trial state yet (Design 2026-11-17).
+TC-016,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has already used the PhotoDirector free trial (non-trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open from the Launcher IAP icon",Choose Monthly and look at the CTA and the text under it,"Under the CTA: 「{sale monthly price}/month, charged today. Renews monthly until canceled. Manage or cancel in Google Play > Subscriptions.」 with the sale price (not the struck-through one)
+No literal 「{price}」",P2,"R-020, R-021",PM-only: no Design frame draws the Monthly state yet.
+TC-018,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has already used the PhotoDirector free trial (non-trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open, Monthly chosen
+6. adb logcat running","1. Tap the CTA
+2. Read the product and price on the Google Play checkout sheet
+3. Close the sheet without buying","Step 1: the Google Play checkout sheet opens for a monthly subscription
+Step 2: its price equals the sale price on the IAP page
+Step 2: the log names SKU 「monthly_subscription_2026_xmas_newyear」
+Step 3: back on the IAP page with nothing bought",P1,"R-010, R-022",
+TC-019,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open, Yearly chosen","1. Tap 「Start 7-Day Free Trial」
+2. Read the checkout sheet
+3. Close the sheet without buying","Step 2: the checkout sheet is the regular yearly subscription at the yearly price shown on the page, with a 1-week free trial
+Step 3: back on the IAP page",P2,R-022,
+TC-020,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. IAP page open from the Launcher IAP icon","1. Tap × at the top left of the IAP page
+2. Tap the Santa-hat icon again
+3. Press Android system Back","Step 1: the IAP page closes and the Launcher shows as before, with the Santa-hat icon
+Step 3: the same as step 1",P3,R-036,
+TC-021,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+5. On the Launcher (interstitial closed)","1. Open Mine
+2. Tap 「Upgrade Now」 on the 「Upgrade to Pro+」 card","The IAP page opens with the sale: NY first thumbnail, gold CTA, Monthly sale price with the regular price struck through",P2,"R-004, R-010, R-013, R-014",
+TC-022,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. On the Launcher (interstitial closed)","1. Open a Premium-locked feature or item (a Premium template or tool marked with the crown)
+2. Tap the item so the IAP page opens","The IAP page opens with the sale: Xmas first thumbnail, gold CTA, Monthly sale price with the regular price struck through",P2,"R-004, R-010, R-013, R-014",
+TC-023,IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has already used the PhotoDirector free trial (non-trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Google Play license-tester account with 「Test card, always approves」 (no charge; needs the user's go-ahead)
+6. IAP page open, Monthly chosen","1. Tap the CTA
+2. Buy with the test card
+3. Return to the app and open Mine","Step 2: the purchase completes at the sale monthly price
+Step 3: Mine shows the paid (VIP) state (KP-015)
+Step 3: the Launcher IAP icon is no longer the free-user sale icon",P1,"R-023, R-033",Parked: needs purchase (license tester and go-ahead). Cancel the test subscription afterwards in Google Play › Subscriptions.
+TC-030,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)",Look at the top right of the Launcher,"Beside the gear, the IAP icon is the gold crown wearing a Santa hat
+No countdown bubble (more than 72 hours left)",P1,"R-030, R-034",
+TC-031,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)",Look at the top right of the Launcher,"The IAP icon is two champagne glasses with sparkles
+No countdown bubble (more than 72 hours left)",P1,"R-031, R-034",
+TC-032,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)
+5. Screen recording running",Watch the IAP icon for 10 seconds,"The glasses clink and the sparkles move in a loop of about 2.4 s
+The loop restarts without a jump and keeps playing for the whole 10 s",P3,R-032,"Evidence: screen recording. Design annotation: 42 × 46, 60 fps, 144 frames, `ny_ani_cheers.json`, `lottie_loop` / `lottie_autoPlay` true."
+TC-033,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/24 23:58:00 local time (automatic date and time off, Q-1)","1. Launch the app and close the interstitial
+2. Watch the Launcher IAP icon until the clock passes 2026/12/25 00:00:00","Before 00:00:00: no countdown bubble on the icon
+From 2026/12/25 00:00:00 (72 hours before the Xmas Sale ends): a countdown bubble shows 「72:00:00」 or just under it",P1,R-034,PM-only: no Design frame draws the bubble (Q-3). Xmas Sale end taken as 2026/12/27 24:00 local time.
+TC-034,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/26 09:00 local time (automatic date and time off, Q-1)","1. Launch the app and close the interstitial
+2. Watch the countdown bubble for 5 seconds
+3. Force-stop, launch again and look at the bubble","Step 2: the bubble shows the time left to 2026/12/27 24:00 (about 38:59:xx) and counts down each second
+Step 3: after the relaunch it shows the same remaining time, not a restarted 72:00:00",P2,R-034,PM-only (Q-3).
+TC-035,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2027/01/02 23:58:00 local time (automatic date and time off, Q-1)","1. Launch the app and close the interstitial
+2. Watch the NY icon until the clock passes 2027/01/03 00:00:00","Before 00:00:00: champagne-glasses icon with no bubble
+From 2027/01/03 00:00:00 (72 hours before the NY Sale ends): a countdown bubble starting at 「72:00:00」 and counting down",P1,R-034,PM-only (Q-3).
+TC-038,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/27 23:59:30 local time (automatic date and time off, Q-1)
+4. On the Launcher with the countdown bubble showing",Watch the IAP icon until the clock passes 2026/12/28 00:00:10,"The bubble counts down to 00:00:00
+Then the icon changes to the champagne glasses (NY) with no bubble
+At no moment does the bubble show a negative time",P2,"R-034, R-005",PM-only; what happens at 00:00:00 is Q-3 (assumption shown).
+TC-036,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Phone date and time set to 2026/12/26 09:00 local time (automatic date and time off, Q-1)","1. Launch the app
+2. Look at the top right of the Launcher","Step 1: no sale interstitial
+Step 2: the regular paid-user IAP icon, no Santa hat and no countdown bubble (although under 72 hours are left)",P1,"R-033, R-035, R-041",
+TC-037,Launcher IAP icon,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Phone date and time set to 2027/01/04 09:00 local time (automatic date and time off, Q-1)","1. Launch the app
+2. Look at the top right of the Launcher","Step 1: no sale interstitial
+Step 2: the regular paid-user IAP icon, no champagne glasses and no countdown bubble",P1,"R-033, R-035, R-041",
+TC-040,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/16 09:00 local time (automatic date and time off, Q-1)
+5. The app not yet launched on 2026/12/16",Force-stop and launch the app,The sale interstitial appears over the Launcher (an Xmas picture),P1,R-040,
+TC-041,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/16 09:10 local time (automatic date and time off, Q-1)
+5. TC-040 done: the interstitial already shown today and closed",Force-stop and launch the app again,"No sale interstitial this time (Q-2)
+The Launcher opens directly",P2,R-040,"Q-2: once a day assumed; if it shows on every launch, record and ask PM."
+TC-042,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. TC-041 done
+5. Phone date and time set to 2026/12/17 09:00 local time (automatic date and time off, Q-1)",Force-stop and launch the app,The sale interstitial appears again on the first launch of the new day,P2,R-040,
+TC-043,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. App language English
+5. Phone date and time set to 2026/12/18 09:00 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app, note the picture and close it with ×
+2. Set the date one day later, force-stop and launch, note the picture and close it
+3. Set the date one more day later, force-stop and launch, note the picture","The pictures take turns: A, B, A (or B, A, B), never the same twice in a row
+Picture A: red-gold room with gifts and a tree
+Picture B: green background with the snow globe
+Both read 「Merry Christmas」",P1,"R-042, R-044, R-045",
+TC-044,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. App language English
+5. Phone date and time set to 2026/12/29 09:00 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app, note the picture and close it
+2. Set the date one day later, force-stop and launch, note the picture","Both times the same single NY picture: cream and gold with balloons and gifts
+The headline reads 「Happy new year」",P1,"R-043, R-044, R-045",
+TC-045,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. The sale monthly and regular yearly checkout prices known from TC-018 / TC-019",Look at the text under the headline,"「SAVE」, then the big number with 「%」 equal to [(sale monthly × 12) − yearly] ÷ (sale monthly × 12) rounded down (with $5.99 and $29.99: 「58」, Q-6)
+「vs. paying {sale monthly price}/month × 12」 with the sale monthly price
+The yearly price 「{price}/year」 equal to the regular yearly price",P1,"R-046, R-047",Design shows 「57」 and the PM note 「70%」 as samples; the formula decides.
+TC-046,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown",Look at the CTA and the text under it,"The CTA reads 「Get 7-Day Free Trial」
+Under it: 「7 days free, then {yearly price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends.」 with the real yearly price
+No literal 「{price}」",P2,"R-048, R-050, R-021",Q-5: the PM note and mockup say 「Start 7-Day Free Trial」; Design (2026-11-17) is followed. Check on device before filing.
+TC-047,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has already used the PhotoDirector free trial (non-trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown",Look at the CTA and the text under it,"The CTA reads 「Subscribe for {yearly price}/year」 with the regular yearly price
+Under it: 「{yearly price}/year, charged today. Renews yearly until canceled. Manage or cancel in Google Play > Subscriptions.」
+No literal 「{price}」",P2,"R-049, R-051, R-021",PM-only: no Design frame draws the non-trial interstitial yet.
+TC-048,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown","1. Tap the CTA
+2. Read the checkout sheet
+3. Press Android system Back to close the sheet without buying","Step 1: the Google Play checkout sheet opens
+Step 2: the regular yearly subscription at the yearly price shown on the interstitial, with a 1-week free trial
+Step 3: the interstitial is shown again (Q-11)",P1,R-052,
+TC-049,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. App language Japanese
+5. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)",Force-stop and launch the app on a day the interstitial has not been shown yet,"The Xmas interstitial uses the Japanese art: the headline reads 「メリー クリスマス」
+The rest of the page (percentage, prices, CTA, footer) is in Japanese or English as the app shows it today, with no cut-off text",P2,"R-045, R-044",Q-10: languages other than Japanese get the English art.
+TC-050,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. App language Japanese
+5. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)",Force-stop and launch the app on a day the interstitial has not been shown yet,The NY interstitial uses the Japanese art: the headline reads 「あけまして おめでとう」,P2,R-045,
+TC-051,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown",Tap × at the top left,The interstitial closes and the Launcher shows as before with the Santa-hat icon,P1,R-053,
+TC-052,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown",Press Android system Back,"The interstitial closes like ×
+The app does not exit and the Launcher shows",P2,R-053,
+TC-053,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Google account that has never used the PhotoDirector free trial (trial user)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Sale interstitial shown","1. Tap 「Terms of Service」, read the page, go back
+2. Tap 「Privacy Policy」, read the page, go back
+3. Tap 「Restore purchase」","Steps 1–2: each link opens its page and Back returns to the interstitial
+Step 3: the restore runs and ends with a message (nothing to restore for a free account)",P3,R-054,
+TC-054,Interstitial,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Phone date and time set to 2026/12/16 09:00 local time (automatic date and time off, Q-1)
+4. The app not yet launched on 2026/12/16","1. Force-stop and launch the app
+2. Set the date to 2026/12/30 09:00, force-stop and launch again",Neither launch shows a sale interstitial,P1,R-041,
+TC-058,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)","1. Open Mine
+2. Tap 「Buy Now」 on the 「My Credits」 card","The Credit IAP page opens
+Its top shows the Xmas festive banner picture (it may read 「SALE」) behind 「My credit」 and the balance",P2,"R-060, R-061, R-072",
+TC-059,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)","1. Open Mine
+2. Tap 「Buy Now」 on the 「My Credits」 card","The top of the Credit IAP page shows the NY festive banner picture, not the Xmas one",P2,"R-060, R-061",
+TC-060,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. Credit IAP page open
+5. adb logcat running","1. Look at the offer card under 「Get more free bonus credits!」
+2. Tap the offer card
+3. Tap the purchase button at the bottom (「Get … credits for …!」) and read the checkout sheet
+4. Close the sheet without buying","Step 1: the discount pack of 500 credits, styled like the first-purchase pack, with the 「SANTA BONUS OFFER」 tag (name 「santa bonus pack」)
+Step 1: a Christmas decoration at the card's top right
+Step 2: the purchase button names 500 credits and the card price
+Step 3: the checkout price equals the card price, 20% below the regular 500-credit pack
+Step 3: the log names SKU 「phd_500_credit_freeuser_summer_sale」
+Step 4: back on the Credit IAP page",P1,"R-062, R-065, R-066",Q-9: the mockup price 「$49.99」 is a sample; the SKU price decides.
+TC-061,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+4. Credit IAP page open",Look at the offer card under 「Get more free bonus credits!」,"The discount pack of 500 credits at the same price as in the Xmas Sale
+Its tag and name are the NY ones (「year-end sale」), not 「SANTA BONUS OFFER」
+No Christmas decoration on the card",P1,"R-062, R-065, R-066",
+TC-062,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Account eligible for Credit Auto Pass (fixtures.md)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Credit IAP page open",Look at the offer card under 「Get more free bonus credits!」,The Credit Auto Pass offer shows instead of the discount pack (Q-8),P2,R-064,Q-8: the PM note and the mockup caption disagree on which eligibility decides.
+TC-063,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Account eligible for neither Credit Auto Pass nor the first-purchase offer (fixtures.md)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Credit IAP page open
+6. adb logcat running","1. Look at the offer card
+2. Tap it
+3. Tap the purchase button at the bottom and read the checkout sheet
+4. Close the sheet without buying","Step 1: the discount pack of 1000 credits with the sale tag and the Christmas decoration
+Step 3: the checkout price equals the card price, 20% below the regular 1000-credit pack
+Step 3: the log names SKU 「phd_1000_credit_paiduser_summer_sale」
+Step 4: back on the Credit IAP page",P1,"R-063, R-064, R-066",Q-9.
+TC-064,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Account that can still make the first credit purchase and is not eligible for Auto Pass (fixtures.md)
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Credit IAP page open",Look at the offer card,"The first-purchase offer shows (「SPECIAL OFFER」, 500 +500), not the discount pack (Q-8)",P2,R-064,
+TC-065,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. Credit IAP page opened from Mine 「Buy Now」","1. Tap ‹ at the top left of the Credit IAP page
+2. Tap 「Buy Now」 again
+3. Press Android system Back","Step 1: the Credit IAP page closes and Mine shows again
+Step 3: the same as step 1",P3,R-060,
+TC-068,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. Credit IAP page open
+5. The regular pack prices before the sale noted (TC-001 day)",Look at the six regular packs,The 50 / 100 / 200 / 500 / 1000 / 2000 credit packs show the same prices as before the sale,P2,R-068,
+TC-069,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)
+4. An AI feature open that shows the blue credit button",Tap the blue credit button,The Credit IAP page opens with the NY banner and the 500-credit discount pack,P2,"R-060, R-061, R-062",KP-020: the blue credit button opens Buy Credit.
+TC-066,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. Google Play license-tester account with 「Test card, always approves」 (needs the user's go-ahead)
+5. Credit IAP page open
+6. Credit balance noted","1. Tap the 500-credit discount pack
+2. Buy with the test card
+3. Look at 「My credit」 and open 「Detail」","Step 2: the purchase completes at the pack price
+Step 3: the balance grows by 500 and Detail lists the purchase",P1,R-067,Parked: needs purchase (license tester and go-ahead).
+TC-067,Credit IAP page,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Account eligible for neither Auto Pass nor the first purchase
+4. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+5. Google Play license-tester account with 「Test card, always approves」 (needs the user's go-ahead)
+6. Credit IAP page open
+7. Credit balance noted","1. Tap the 1000-credit discount pack
+2. Buy with the test card
+3. Look at 「My credit」 and open 「Detail」","Step 2: the purchase completes at the pack price
+Step 3: the balance grows by 1000 and Detail lists the purchase",P1,R-067,Parked: needs purchase (license tester and go-ahead).
+TC-070,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)",Force-stop and launch the app and look at the splash page,The splash page shows the Christmas app icon (the logo with a reindeer in a Santa hat) above 「PhotoDirector」,P2,R-070,Evidence: screen recording of the launch (the splash is short).
+TC-071,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)",Force-stop and launch the app and look at the splash page,The splash page shows the Christmas app icon as for a free user (Q-13),P3,R-070,Evidence: screen recording of the launch.
+TC-072,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. On the Launcher (interstitial closed)",Open Mine and look at the 「My Credits」 card,"The card carries the Christmas decoration (snowman, pine branches, gifts)
+「My Credits」, the balance and 「Buy Now」 are all readable and not covered by the decoration",P2,"R-071, R-072",
+TC-073,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Paid user (「Set to subscriber」 on, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)",Open Mine and look at the 「My Credits」 card,The card carries the Christmas decoration as for a free user (Q-13),P3,R-071,
+TC-074,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/30 10:00 local time (automatic date and time off, Q-1)","1. Force-stop and launch the app and look at the splash page
+2. Close the interstitial, open Mine and look at the 「My Credits」 card","Step 1: the regular app icon on the splash page
+Step 2: no Christmas decoration on the card",P2,"R-070, R-071, R-005",
+TC-075,Splash page and Mine,"1. Android phone, PhotoDirector (build under test), Test server on (fixtures.md)
+2. Free user (「Set to subscriber」 off, KP-131)
+3. Phone date and time set to 2026/12/15 10:00 local time (automatic date and time off, Q-1)
+4. Mine open",Tap 「Buy Now」 on the decorated 「My Credits」 card,The Credit IAP page opens with the Xmas banner and the discount pack,P2,"R-072, R-060",

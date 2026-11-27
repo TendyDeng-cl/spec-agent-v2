@@ -1,0 +1,97 @@
+# Language rows, photo tips sheets (TC-017, TC-018, TC-026 … one per language): opens each card's photo tips sheet in
+# card order, reads it, swipes the second (Avoid) row left to its third item, closes it with the bottom button.
+# Starts: Cinematic Reel Creator template page on card 6 (where lang-cards.steps ends; the pager loops, so five drags
+# back from any other card do not reach card 1; lang-check.ts moves to card 6 first), no sheet open.
+# Ends: template page on card 6, no sheet open. Picks no photo, uses no credits.
+# Args: $1 = case ID. Per card: `shot …-openN` and `els` (sheet open, row not swiped), `els tip` and `shot …-sheetN`
+# (after the swipe), then `els tv_title` and `shot …-closedN` (closed).
+# Coordinates (Sony XQ-BT52, 1080 × 2520, 16.9.0 2611201): chip at 315,306 on the centred card; Avoid row at y 1870.
+case $1
+drag 250 1000 800 1000
+drag 250 1000 800 1000
+drag 250 1000 800 1000
+drag 250 1000 800 1000
+drag 250 1000 800 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open1
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet1
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed1
+drag 800 1000 250 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open2
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet2
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed2
+drag 800 1000 250 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open3
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet3
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed3
+drag 800 1000 250 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open4
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet4
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed4
+drag 800 1000 250 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open5
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet5
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed5
+drag 800 1000 250 1000
+wait 1
+tap 315 306
+wait 1
+shot $1-open6
+els
+fingerdrag 900 1870 200 1870
+wait 1
+els tip
+shot $1-sheet6
+id btn_cine_story_photo_tips_got_it
+wait 1
+els tv_title
+shot $1-closed6

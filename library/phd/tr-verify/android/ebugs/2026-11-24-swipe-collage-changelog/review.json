@@ -1,0 +1,5 @@
+{ "run": false, "tr": "TR261123-0071", "build": "202611232103",
+  "trNote": "Findings verified on TR261123-0071's own build (20.19.0.v202611232103, R8) on the Pixel 8a. The filing defaults name TR261123-0041 (last batch, older build): file on TR261123-0071.",
+  "lede": "Four findings from the TR261123-0071 Swipe Collage change-log check (2026-11-24). A fifth (no 「Page n / N」 when Pages opens) is the open ticket PHA262026P0094 and is left off.",
+  "related": { "ISS-SWC-54": "Related closed ticket: PHA262026P0098 (Pages controls overlapped from 5 pages; fixed by shrinking them)",
+               "ISS-SWC-55": "Related open tickets (tap areas, not duplicates): PHA262026P0160, PHA262026P0163" } }

@@ -1,0 +1,17 @@
+⚠ WARN  Xmas-NY-Sale-R1-01  Short Description is 121 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-01  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-02  Short Description is 137 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-02  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-03  Short Description is 131 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-03  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-04  Short Description is 131 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-04  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-05  Short Description is 125 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-05  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-06  Short Description is 135 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-06  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Xmas-NY-Sale-R1-07  Short Description is 128 chars (budget 120)
+⚠ WARN  Xmas-NY-Sale-R1-07  Repro Steps do not start with '1. Launch the APP'
+
+7 bug(s) checked — 0 error(s), 14 warning(s)
+Format OK — clear to file.

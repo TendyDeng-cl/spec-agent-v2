@@ -1,0 +1,408 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/10 23:55 當地時間（關閉自動日期與時間，Q-1）","1. 強制停止後重新開啟 App
+2. 查看 Launcher 的 IAP 圖示
+3. 點 Launcher 的 IAP 圖示，查看 IAP 頁","步驟 1：不會出現特賣插頁
+步驟 2：IAP 圖示為一般圖示，沒有聖誕帽，也沒有倒數氣泡
+步驟 3：Monthly 方案顯示一般價格且沒有刪除線，第一張橫幅縮圖為一般圖片，CTA 顏色為一般顏色（不是金色）",P1,"R-001, R-002",Xmas Sale 的前一天。,新增,
+TC-002,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/11 00:01 當地時間（關閉自動日期與時間，Q-1）","1. 強制停止後重新開啟 App
+2. 點 × 關閉插頁
+3. 查看 Launcher 的 IAP 圖示","步驟 1：出現 Xmas 特賣插頁
+步驟 3：IAP 圖示為戴著聖誕帽的金色皇冠",P1,"R-001, R-030, R-040",Xmas Sale 開始後的第一分鐘。,新增,
+TC-003,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/27 23:50 當地時間（關閉自動日期與時間，Q-1）","1. 強制停止後重新開啟 App
+2. 點 × 關閉插頁
+3. 查看 Launcher 的 IAP 圖示
+4. 點開 IAP 頁，查看 Monthly 方案","步驟 1：出現 Xmas 插頁圖片（A 或 B）
+步驟 3：戴聖誕帽的皇冠圖示
+步驟 4：Monthly 方案顯示加刪除線的原價與特賣價",P2,R-001,Xmas Sale 結束前的最後幾分鐘。,新增,
+TC-004,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/28 00:01 當地時間（關閉自動日期與時間，Q-1）
+5. 前一天已在 Xmas Sale 期間執行過（TC-003）","1. 強制停止後重新開啟 App
+2. 點 × 關閉插頁
+3. 查看 Launcher 的 IAP 圖示
+4. 點開 IAP 頁查看","步驟 1：出現 NY 插頁（「Happy new year」），不是 Xmas 圖片
+步驟 3：圖示為香檳杯，沒有聖誕帽
+步驟 4：第一張橫幅縮圖是金色的 NY「Sale」圖片，Monthly 方案仍顯示特賣價",P1,"R-001, R-005, R-031, R-043",午夜時由 Xmas 切換為 NY。,新增,
+TC-006,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2027/01/05 23:50 當地時間（關閉自動日期與時間，Q-1）","1. 強制停止後重新開啟 App
+2. 點 × 關閉插頁
+3. 點 Launcher 的 IAP 圖示，查看 Monthly 方案","步驟 1：出現 NY 插頁
+步驟 3：Monthly 方案仍顯示加刪除線的原價與特賣價",P2,R-001,NY Sale 結束前的最後幾分鐘。,新增,
+TC-005,特賣期間,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2027/01/06 00:01 當地時間（關閉自動日期與時間，Q-1）","1. 強制停止後重新開啟 App
+2. 查看 Launcher 的 IAP 圖示
+3. 點開 IAP 頁查看
+4. 返回，進入 Mine，點「My Credits」卡片上的「Buy Now」","步驟 1：不會出現特賣插頁
+步驟 2：IAP 圖示為一般圖示，沒有香檳杯，也沒有倒數氣泡
+步驟 3：Monthly 為一般價格且沒有刪除線，第一張縮圖與 CTA 顏色都是一般樣式
+步驟 4：沒有節慶橫幅，也沒有折扣組合
+步驟 4：只有一般的組合與優惠",P1,"R-001, R-002, R-060",NY Sale 結束後的隔天。,新增,
+TC-010,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 停在 Launcher（插頁已關閉）",點 Launcher 的 IAP 圖示（戴聖誕帽的皇冠）,"開啟 IAP 頁「PhotoDirector Premium」
+第一張橫幅縮圖是紅色的 Xmas「Sale」圖片，後面依序是「Object Removal」與「Body Reshape」
+CTA 按鈕為金色（與 Black Friday 特賣相同）
+方案列周圍有金色閃光裝飾",P1,"R-004, R-013, R-014, R-015, R-036",,新增,
+TC-011,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/30 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 停在 Launcher（插頁已關閉）",點 Launcher 的 IAP 圖示（香檳杯）,"開啟 IAP 頁
+第一張橫幅縮圖是金色的 NY「Sale」圖片，後面依序是「Object Removal」與「Body Reshape」
+CTA 按鈕為金色
+方案列周圍有金色閃光裝飾",P1,"R-004, R-013, R-014, R-015, R-036",,新增,
+TC-012,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已從 Launcher 的 IAP 圖示開啟 IAP 頁",查看 Yearly 與 Monthly 方案列,"Monthly：一般月費加刪除線顯示在特賣價上方（mockup「$6.99/month」→「$5.99/month」）
+特賣價比一般月費低 15%（四捨五入到商店價格級距）
+Yearly：顯示一般年費（mockup「$29.99/year」）與「SAVE …%」標籤
+記下畫面上顯示的「SAVE …%」百分比（Q-7）",P1,"R-010, R-011, R-012",Design 的方案列用的是範例數值（「$125/month」、「$690/month」、「SAVE 75%」），PM mockup 的數值比較接近實際，以它為參考。價格是否正確在 TC-018 / TC-019 對照結帳畫面確認。,新增,
+TC-013,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已從 Launcher 的 IAP 圖示開啟 IAP 頁",選 Yearly，查看 CTA 上方與 CTA 按鈕,"CTA 上方顯示「Recieve 30 credits during free trial」
+金色 CTA 顯示「Start 7-Day Free Trial」",P2,R-016,,新增,
+TC-014,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已開啟 IAP 頁，並選了 Yearly",查看 CTA 下方的文字,"顯示 Design 的文字「Auto-renewal  for {yearly price}/year」，其中為實際的年費（Q-4）
+下方有「Terms of Service」、「Privacy Policy」、「Restore Purchase」
+畫面上任何地方都不會出現原樣的「{price}」",P2,"R-017, R-018, R-021","Q-4：PM 頁在這裡放的是「7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends.」，請在手機上確認實際顯示的是哪一種並記錄下來，再決定是否提 bug。",新增,
+TC-015,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 已使用過 PhotoDirector 免費試用的 Google 帳號（不可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已從 Launcher 的 IAP 圖示開啟 IAP 頁",選 Yearly，查看 CTA 與其下方的文字,"CTA 顯示「Subscribe for {yearly price}/year」，其中為實際價格
+下方顯示「{yearly price}/year, charged today. Renews yearly until canceled. Manage or cancel in Google Play > Subscriptions.」
+不會出現原樣的「{price}」",P2,"R-019, R-021",僅 PM 有寫：Design 目前還沒有畫出不可試用用戶的狀態（Design 2026-11-17）。,新增,
+TC-016,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 已使用過 PhotoDirector 免費試用的 Google 帳號（不可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已從 Launcher 的 IAP 圖示開啟 IAP 頁",選 Monthly，查看 CTA 與其下方的文字,"CTA 下方顯示「{sale monthly price}/month, charged today. Renews monthly until canceled. Manage or cancel in Google Play > Subscriptions.」，其中為特賣價（不是加刪除線的原價）
+不會出現原樣的「{price}」",P2,"R-020, R-021",僅 PM 有寫：Design 目前還沒有畫出 Monthly 的狀態。,新增,
+TC-018,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 已使用過 PhotoDirector 免費試用的 Google 帳號（不可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已開啟 IAP 頁，並選了 Monthly
+6. 已執行 adb logcat","1. 點 CTA
+2. 查看 Google Play 結帳畫面上的商品與價格
+3. 不購買，直接關閉結帳畫面","步驟 1：開啟 Google Play 結帳畫面，內容為月訂閱
+步驟 2：結帳畫面的價格與 IAP 頁上的特賣價相同
+步驟 2：log 中出現 SKU「monthly_subscription_2026_xmas_newyear」
+步驟 3：回到 IAP 頁，沒有購買任何東西",P1,"R-010, R-022",,新增,
+TC-019,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已開啟 IAP 頁，並選了 Yearly","1. 點「Start 7-Day Free Trial」
+2. 查看結帳畫面
+3. 不購買，直接關閉結帳畫面","步驟 2：結帳畫面為一般的年訂閱，價格與頁面上顯示的年費相同，並附 1 週免費試用
+步驟 3：回到 IAP 頁",P2,R-022,,新增,
+TC-020,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 已從 Launcher 的 IAP 圖示開啟 IAP 頁","1. 點 IAP 頁左上角的 ×
+2. 再次點聖誕帽圖示
+3. 按 Android 系統的返回鍵","步驟 1：IAP 頁關閉，Launcher 與之前一樣，仍顯示聖誕帽圖示
+步驟 3：結果與步驟 1 相同",P3,R-036,,新增,
+TC-021,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/30 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 停在 Launcher（插頁已關閉）","1. 進入 Mine
+2. 點「Upgrade to Pro+」卡片上的「Upgrade Now」",開啟的 IAP 頁帶有特賣內容：第一張縮圖為 NY 圖片，CTA 為金色，Monthly 顯示特賣價且原價加刪除線,P2,"R-004, R-010, R-013, R-014",,新增,
+TC-022,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 停在 Launcher（插頁已關閉）","1. 找一個 Premium 鎖定的功能或項目（標有皇冠的 Premium 範本或工具）
+2. 點該項目，開啟 IAP 頁",開啟的 IAP 頁帶有特賣內容：第一張縮圖為 Xmas 圖片，CTA 為金色，Monthly 顯示特賣價且原價加刪除線,P2,"R-004, R-010, R-013, R-014",,新增,
+TC-023,IAP 頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 已使用過 PhotoDirector 免費試用的 Google 帳號（不可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+5. 使用有「Test card, always approves」的 Google Play 授權測試帳號（不會扣款，需先取得使用者同意）
+6. 已開啟 IAP 頁，並選了 Monthly","1. 點 CTA
+2. 用測試卡購買
+3. 回到 App，進入 Mine","步驟 2：以特賣月費完成購買
+步驟 3：Mine 顯示付費（VIP）狀態（KP-015）
+步驟 3：Launcher 的 IAP 圖示不再是免費用戶的特賣圖示",P1,"R-023, R-033",暫緩：需要實際購買（授權測試帳號與使用者同意）。事後要到 Google Play › Subscriptions 取消這個測試訂閱。,新增,
+TC-030,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 當地時間（關閉自動日期與時間，Q-1）
+4. 停在 Launcher（插頁已關閉）",查看 Launcher 的右上角,"齒輪旁的 IAP 圖示是戴著聖誕帽的金色皇冠
+沒有倒數氣泡（剩餘時間超過 72 小時）",P1,"R-030, R-034",,新增,
+TC-031,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 當地時間（關閉自動日期與時間，Q-1）
+4. 停在 Launcher（插頁已關閉）",查看 Launcher 的右上角,"IAP 圖示是兩個帶有閃光的香檳杯
+沒有倒數氣泡（剩餘時間超過 72 小時）",P1,"R-031, R-034",,新增,
+TC-032,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 當地時間（關閉自動日期與時間，Q-1）
+4. 停在 Launcher（插頁已關閉）
+5. 已開始螢幕錄影",觀察 IAP 圖示 10 秒,"兩個杯子碰杯、閃光移動，約 2.4 秒為一個循環
+循環重新開始時不會跳一下，並且整整 10 秒都持續播放",P3,R-032,佐證：螢幕錄影。Design 標註：42 × 46、60 fps、144 frames、`ny_ani_cheers.json`，`lottie_loop` / `lottie_autoPlay` 為 true。,新增,
+TC-033,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/24 23:58:00 當地時間（關閉自動日期與時間，Q-1）","1. 開啟 App 並關閉插頁
+2. 持續觀察 Launcher 的 IAP 圖示，直到時鐘走過 2026/12/25 00:00:00","00:00:00 之前：圖示上沒有倒數氣泡
+從 2026/12/25 00:00:00 起（Xmas Sale 結束前 72 小時）：出現倒數氣泡，顯示「72:00:00」或稍少一點",P1,R-034,僅 PM 有寫：Design 沒有畫出這個氣泡（Q-3）。Xmas Sale 的結束時間以 2026/12/27 24:00 當地時間計。,新增,
+TC-034,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/26 09:00 當地時間（關閉自動日期與時間，Q-1）","1. 開啟 App 並關閉插頁
+2. 觀察倒數氣泡 5 秒
+3. 強制停止後再開啟 App，查看氣泡","步驟 2：氣泡顯示距離 2026/12/27 24:00 的剩餘時間（約 38:59:xx），並且每秒倒數
+步驟 3：重新開啟後顯示的是同樣的剩餘時間，不會重新從 72:00:00 開始",P2,R-034,僅 PM 有寫（Q-3）。,新增,
+TC-035,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2027/01/02 23:58:00 當地時間（關閉自動日期與時間，Q-1）","1. 開啟 App 並關閉插頁
+2. 觀察 NY 圖示，直到時鐘走過 2027/01/03 00:00:00","00:00:00 之前：香檳杯圖示，沒有氣泡
+從 2027/01/03 00:00:00 起（NY Sale 結束前 72 小時）：出現倒數氣泡，從「72:00:00」開始倒數",P1,R-034,僅 PM 有寫（Q-3）。,新增,
+TC-038,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/27 23:59:30 當地時間（關閉自動日期與時間，Q-1）
+4. 停在 Launcher，倒數氣泡顯示中",觀察 IAP 圖示，直到時鐘走過 2026/12/28 00:00:10,"氣泡倒數到 00:00:00
+接著圖示換成香檳杯（NY），沒有氣泡
+氣泡任何時候都不會顯示負的時間",P2,"R-034, R-005",僅 PM 有寫；00:00:00 時會發生什麼事屬於 Q-3（畫面上顯示的是假設）。,新增,
+TC-036,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 手機日期與時間設為 2026/12/26 09:00 當地時間（關閉自動日期與時間，Q-1）","1. 開啟 App
+2. 查看 Launcher 的右上角","步驟 1：不會出現特賣插頁
+步驟 2：IAP 圖示為付費用戶的一般圖示，沒有聖誕帽，也沒有倒數氣泡（雖然剩餘時間已不到 72 小時）",P1,"R-033, R-035, R-041",,新增,
+TC-037,Launcher IAP 圖示,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 手機日期與時間設為 2027/01/04 09:00 當地時間（關閉自動日期與時間，Q-1）","1. 開啟 App
+2. 查看 Launcher 的右上角","步驟 1：不會出現特賣插頁
+步驟 2：IAP 圖示為付費用戶的一般圖示，沒有香檳杯，也沒有倒數氣泡",P1,"R-033, R-035, R-041",,新增,
+TC-040,插頁,"1. Android 手機、PhotoDirector（測試版本）、已開啟 Test server（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/16 09:00 當地時間（關閉自動日期與時間，Q-1）
+5. 2026/12/16 這天還沒有開啟過 App",強制停止後重新開啟 App,Launcher 上方出現特賣插頁（Xmas 圖片）,P1,R-040,,新增,
+TC-041,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/16 09:10 本地時間（自動日期與時間關閉，Q-1）
+5. 已完成 TC-040：今天已顯示過插頁並已關閉",強制停止 app 後再次開啟,"這次不會出現促銷插頁（Q-2）
+直接進入 Launcher",P2,R-040,Q-2：暫以一天一次為準；若每次開啟都出現，請記錄並詢問 PM。,新增,
+TC-042,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 已完成 TC-041
+5. 手機日期與時間設為 2026/12/17 09:00 本地時間（自動日期與時間關閉，Q-1）",強制停止 app 後開啟,新的一天第一次開啟時，促銷插頁會再次出現,P2,R-040,,新增,
+TC-043,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. App 語言為英文
+5. 手機日期與時間設為 2026/12/18 09:00 本地時間（自動日期與時間關閉，Q-1）","1. 強制停止並開啟 app，記下圖片後點 × 關閉
+2. 把日期往後調一天，強制停止並開啟，記下圖片後關閉
+3. 再把日期往後調一天，強制停止並開啟，記下圖片","圖片輪流出現：A、B、A（或 B、A、B），不會連續兩次相同
+圖片 A：紅金色房間，有禮物和聖誕樹
+圖片 B：綠色背景，有雪花球
+兩張都寫著「Merry Christmas」",P1,"R-042, R-044, R-045",,新增,
+TC-044,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. App 語言為英文
+5. 手機日期與時間設為 2026/12/29 09:00 本地時間（自動日期與時間關閉，Q-1）","1. 強制停止並開啟 app，記下圖片後關閉
+2. 把日期往後調一天，強制停止並開啟，記下圖片","兩次都是同一張 NY 圖片：奶油色加金色，有氣球和禮物
+標題寫著「Happy new year」",P1,"R-043, R-044, R-045",,新增,
+TC-045,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已從 TC-018 / TC-019 得知促銷月費與一般年費的結帳價格",查看標題下方的文字,"「SAVE」，接著是大字數字加「%」，數值等於 [(促銷月費 × 12) − 年費] ÷ (促銷月費 × 12) 無條件捨去（以 $5.99 和 $29.99 計算為「58」，Q-6）
+「vs. paying {sale monthly price}/month × 12」，其中帶入促銷月費
+年費「{price}/year」，等於一般年費",P1,"R-046, R-047",Design 以「57」、PM 備註以「70%」作為範例；以公式計算結果為準。,新增,
+TC-046,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁",查看 CTA 按鈕及其下方的文字,"CTA 寫著「Get 7-Day Free Trial」
+下方為「7 days free, then {yearly price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends.」，且帶入實際年費
+不會出現字面的「{price}」",P2,"R-048, R-050, R-021",Q-5：PM 備註和 mockup 寫的是「Start 7-Day Free Trial」；以 Design（2026-11-17）為準。提報前請先在裝置上確認。,新增,
+TC-047,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 已使用過 PhotoDirector 免費試用的 Google 帳號（不可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁",查看 CTA 按鈕及其下方的文字,"CTA 寫著「Subscribe for {yearly price}/year」，帶入一般年費
+下方為「{yearly price}/year, charged today. Renews yearly until canceled. Manage or cancel in Google Play > Subscriptions.」
+不會出現字面的「{price}」",P2,"R-049, R-051, R-021",僅 PM 提供：Design 還沒有畫出不可試用用戶的插頁。,新增,
+TC-048,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁","1. 點 CTA
+2. 查看結帳畫面
+3. 按 Android 系統的返回鍵關閉結帳畫面，不購買","步驟 1：開啟 Google Play 結帳畫面
+步驟 2：內容為一般年訂閱，價格與插頁上顯示的年費相同，並附 1 週免費試用
+步驟 3：回到插頁畫面（Q-11）",P1,R-052,,新增,
+TC-049,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. App 語言為日文
+5. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）",在插頁尚未顯示過的一天，強制停止並開啟 app,"Xmas 插頁使用日文圖片：標題寫著「メリー クリスマス」
+頁面其餘部分（百分比、價格、CTA、頁尾）維持 app 目前的日文或英文顯示，文字沒有被截掉",P2,"R-045, R-044",Q-10：日文以外的語言使用英文圖片。,新增,
+TC-050,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. App 語言為日文
+5. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）",在插頁尚未顯示過的一天，強制停止並開啟 app,NY 插頁使用日文圖片：標題寫著「あけまして おめでとう」,P2,R-045,,新增,
+TC-051,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁",點左上角的 ×,插頁關閉，Launcher 和之前一樣顯示，IAP 圖示戴著聖誕帽,P1,R-053,,新增,
+TC-052,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁",按 Android 系統的返回鍵,"插頁關閉，效果和點 × 一樣
+App 不會退出，畫面停在 Launcher",P2,R-053,,新增,
+TC-053,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 從未使用過 PhotoDirector 免費試用的 Google 帳號（可試用用戶）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已顯示促銷插頁","1. 點「Terms of Service」，閱讀頁面後返回
+2. 點「Privacy Policy」，閱讀頁面後返回
+3. 點「Restore purchase」","步驟 1–2：各連結都會開啟對應頁面，按返回會回到插頁
+步驟 3：執行還原並以一則訊息結束（免費帳號沒有可還原的項目）",P3,R-054,,新增,
+TC-054,插頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 手機日期與時間設為 2026/12/16 09:00 本地時間（自動日期與時間關閉，Q-1）
+4. 2026/12/16 這天尚未開啟過 app","1. 強制停止並開啟 app
+2. 把日期改成 2026/12/30 09:00，強制停止後再次開啟",兩次開啟都不會出現促銷插頁,P1,R-041,,新增,
+TC-058,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 在 Launcher（插頁已關閉）","1. 開啟 Mine
+2. 點「My Credits」卡片上的「Buy Now」","開啟 Credit IAP 頁
+頁面頂端在「My credit」和餘額後方顯示 Xmas 節慶橫幅圖片（可能寫著「SALE」）",P2,"R-060, R-061, R-072",,新增,
+TC-059,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 在 Launcher（插頁已關閉）","1. 開啟 Mine
+2. 點「My Credits」卡片上的「Buy Now」",Credit IAP 頁頂端顯示 NY 節慶橫幅圖片，不是 Xmas 的,P2,"R-060, R-061",,新增,
+TC-060,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 已開啟 Credit IAP 頁
+5. adb logcat 執行中","1. 查看「Get more free bonus credits!」下方的優惠卡片
+2. 點優惠卡片
+3. 點底部的購買按鈕（「Get … credits for …!」），查看結帳畫面
+4. 關閉結帳畫面，不購買","步驟 1：500 credits 的折扣組合，樣式與首購組合相同，帶有「SANTA BONUS OFFER」標籤（名稱「santa bonus pack」）
+步驟 1：卡片右上角有聖誕裝飾
+步驟 2：購買按鈕寫出 500 credits 及卡片上的價格
+步驟 3：結帳價格與卡片價格相同，比一般 500 credits 組合便宜 20%
+步驟 3：log 中出現 SKU 「phd_500_credit_freeuser_summer_sale」
+步驟 4：回到 Credit IAP 頁",P1,"R-062, R-065, R-066",Q-9：mockup 上的價格「$49.99」只是範例，以 SKU 價格為準。,新增,
+TC-061,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 已開啟 Credit IAP 頁",查看「Get more free bonus credits!」下方的優惠卡片,"500 credits 的折扣組合，價格與 Xmas Sale 時相同
+標籤和名稱是 NY 版本（「year-end sale」），不是「SANTA BONUS OFFER」
+卡片上沒有聖誕裝飾",P1,"R-062, R-065, R-066",,新增,
+TC-062,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 符合 Credit Auto Pass 資格的帳號（fixtures.md）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已開啟 Credit IAP 頁",查看「Get more free bonus credits!」下方的優惠卡片,顯示 Credit Auto Pass 優惠，而不是折扣組合（Q-8）,P2,R-064,Q-8：PM 備註和 mockup 說明對「以哪個資格為準」的說法不一致。,新增,
+TC-063,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 既不符合 Credit Auto Pass、也不符合首購優惠資格的帳號（fixtures.md）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已開啟 Credit IAP 頁
+6. adb logcat 執行中","1. 查看優惠卡片
+2. 點卡片
+3. 點底部的購買按鈕，查看結帳畫面
+4. 關閉結帳畫面，不購買","步驟 1：1000 credits 的折扣組合，帶有促銷標籤和聖誕裝飾
+步驟 3：結帳價格與卡片價格相同，比一般 1000 credits 組合便宜 20%
+步驟 3：log 中出現 SKU 「phd_1000_credit_paiduser_summer_sale」
+步驟 4：回到 Credit IAP 頁",P1,"R-063, R-064, R-066",Q-9。,新增,
+TC-064,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 還能進行首次 credit 購買、且不符合 Auto Pass 資格的帳號（fixtures.md）
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 已開啟 Credit IAP 頁",查看優惠卡片,顯示首購優惠（「SPECIAL OFFER」，500 +500），而不是折扣組合（Q-8）,P2,R-064,,新增,
+TC-065,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 從 Mine 的「Buy Now」開啟 Credit IAP 頁","1. 點 Credit IAP 頁左上角的 ‹
+2. 再點一次「Buy Now」
+3. 按 Android 系統的返回鍵","步驟 1：Credit IAP 頁關閉，回到 Mine
+步驟 3：結果與步驟 1 相同",P3,R-060,,新增,
+TC-068,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 已開啟 Credit IAP 頁
+5. 已記下促銷前的一般組合價格（TC-001 當天）",查看六個一般組合,50 / 100 / 200 / 500 / 1000 / 2000 credits 組合的價格與促銷前相同,P2,R-068,,新增,
+TC-069,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 已開啟顯示藍色 credit 按鈕的 AI 功能",點藍色 credit 按鈕,開啟 Credit IAP 頁，顯示 NY 橫幅和 500 credits 折扣組合,P2,"R-060, R-061, R-062",KP-020：藍色 credit 按鈕會開啟 Buy Credit。,新增,
+TC-066,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 使用「Test card, always approves」的 Google Play 授權測試帳號（需先取得使用者同意）
+5. 已開啟 Credit IAP 頁
+6. 已記下 credit 餘額","1. 點 500 credits 折扣組合
+2. 用測試卡購買
+3. 查看「My credit」並開啟「Detail」","步驟 2：以組合價格完成購買
+步驟 3：餘額增加 500，Detail 中列出這筆購買",P1,R-067,暫緩：需要實際購買（授權測試帳號及使用者同意）。,新增,
+TC-067,Credit IAP 頁,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 既不符合 Auto Pass、也不符合首購資格的帳號
+4. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+5. 使用「Test card, always approves」的 Google Play 授權測試帳號（需先取得使用者同意）
+6. 已開啟 Credit IAP 頁
+7. 已記下 credit 餘額","1. 點 1000 credits 折扣組合
+2. 用測試卡購買
+3. 查看「My credit」並開啟「Detail」","步驟 2：以組合價格完成購買
+步驟 3：餘額增加 1000，Detail 中列出這筆購買",P1,R-067,暫緩：需要實際購買（授權測試帳號及使用者同意）。,新增,
+TC-070,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）",強制停止並開啟 app，查看啟動頁,啟動頁在「PhotoDirector」上方顯示聖誕版 app 圖示（Logo 上有一隻戴聖誕帽的馴鹿）,P2,R-070,佐證：錄下開啟過程的螢幕錄影（啟動頁停留時間很短）。,新增,
+TC-071,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）",強制停止並開啟 app，查看啟動頁,啟動頁顯示聖誕版 app 圖示，和免費用戶相同（Q-13）,P3,R-070,佐證：錄下開啟過程的螢幕錄影。,新增,
+TC-072,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 在 Launcher（插頁已關閉）",開啟 Mine，查看「My Credits」卡片,"卡片上有聖誕裝飾（雪人、松枝、禮物）
+「My Credits」、餘額和「Buy Now」都清楚可讀，沒有被裝飾蓋住",P2,"R-071, R-072",,新增,
+TC-073,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 付費用戶（「Set to subscriber」開啟，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）",開啟 Mine，查看「My Credits」卡片,卡片上有聖誕裝飾，和免費用戶相同（Q-13）,P3,R-071,,新增,
+TC-074,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/30 10:00 本地時間（自動日期與時間關閉，Q-1）","1. 強制停止並開啟 app，查看啟動頁
+2. 關閉插頁，開啟 Mine，查看「My Credits」卡片","步驟 1：啟動頁顯示一般的 app 圖示
+步驟 2：卡片上沒有聖誕裝飾",P2,"R-070, R-071, R-005",,新增,
+TC-075,啟動頁與 Mine,"1. Android 手機、PhotoDirector（待測版本）、Test server 開啟（fixtures.md）
+2. 免費用戶（「Set to subscriber」關閉，KP-131）
+3. 手機日期與時間設為 2026/12/15 10:00 本地時間（自動日期與時間關閉，Q-1）
+4. 已開啟 Mine",點有聖誕裝飾的「My Credits」卡片上的「Buy Now」,開啟 Credit IAP 頁，顯示 Xmas 橫幅和折扣組合,P2,"R-072, R-060",,新增,

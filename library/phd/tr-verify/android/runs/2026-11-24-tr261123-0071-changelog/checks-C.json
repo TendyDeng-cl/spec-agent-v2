@@ -1,0 +1,98 @@
+[
+  {
+    "item": "C1 Page count controls, long-press page reordering, discard confirmation",
+    "verdict": "Works",
+    "observed": "Pages: stepper + / − add and remove the last page (「Page 4 / 4」); + disabled at 10 pages, − at 1. Holding a page's move button lifts the page (tilted, translucent, orange button) and dragging reorders it. ✕ or system Back after a change asks 「Discard changes?」 (Keep / Discard); Keep stays, Discard restores the old pages; ✕ with no change leaves directly; ✓ applies (4 pages, undo enabled).",
+    "observedZh": "頁數 +/− 可用（上限 10、下限 1），長按移動鈕可拖曳排序；有變更時按 ✕ 或返回會問 Discard changes?，✓ 可套用。",
+    "shots": [
+      "c1_pages.png",
+      "c1_pages_add.png",
+      "c1_reorder_mid.png",
+      "c1_reorder_after.png",
+      "c1_pages_x.png",
+      "c1_discarded3.png",
+      "c1_back_after_add.png",
+      "c1_x_nochange.png",
+      "c1_apply_4pages.png",
+      "c1_pages_10.png",
+      "c1_pages_1.png"
+    ],
+    "other": "「Page n / N」 is missing when Pages opens (shows only after +/−, R-104). After ✓ the Canvas shows page 3 instead of the selected new page 4 (R-115). A cross-page frame moved with its page hangs past the strip end. At 10 pages the move / ••• buttons are ~30 px."
+  },
+  {
+    "item": "C2 Viewport ~1.2 pages; rotation and position snapping",
+    "verdict": "Works",
+    "observed": "A page is 828 px of the 1080 px screen: the view shows the current page and about a quarter of the next (1.3 page widths). Dragging a sticker shows pink guides at the page's vertical and horizontal centre and locks its centre there. Rotating with the handle snaps to right angles: the angle held at 90° while the finger went from 87° to 93° (about ±3°); no snap at 45°; no guide or angle readout while rotating.",
+    "observedZh": "畫面約顯示 1.3 頁（下一頁露出約 1/4）；拖曳時對齊頁面水平／垂直中線並出現粉紅參考線；旋轉在 0°/90° 附近 ±3° 吸附，45° 不吸附。",
+    "shots": [
+      "c_canvas0.png",
+      "c2_canvas.png",
+      "c2_move_c2_mid1.png",
+      "c2_move_c2_mid2.png",
+      "rot/c2_rot_087.png",
+      "rot/c2_rot_090.png",
+      "rot/c2_rot_093.png",
+      "rot/c2_rot_045.png"
+    ],
+    "other": "Spec silent on snapping (PM evaluation). No guides for page edges or other elements were seen."
+  },
+  {
+    "item": "C3 Shadow controls for stickers and frames",
+    "verdict": "Works",
+    "observed": "Sticker and frame tool bars both have 「Shadow」; it opens one 0–100 % slider above the tool bar; raising it draws a soft dark drop shadow to the lower right of the sticker / frame on the canvas. No direction, blur or colour controls.",
+    "observedZh": "貼圖與框的工具列都有 Shadow，單一 0–100% 滑桿，畫布上出現右下柔和陰影；無方向、模糊、顏色設定。",
+    "shots": [
+      "c2_sticker_sel.png",
+      "c3_sticker_shadow.png",
+      "c3_sticker_shadow_compare.png",
+      "c3_frame_sel.png",
+      "c3_frame_shadow_compare.png"
+    ],
+    "other": "Frame Shadow was missing on TR261123-0041 (P0079); now present (R-043/R-047). The template cup sticker shows 「Shadow」 in orange before it is tapped."
+  },
+  {
+    "item": "C4 Element selection, placement, multi-page photo selection",
+    "verdict": "Works",
+    "observed": "First tap selects the frame, second the image / opens the picker. From the page-3 frame's 「+」 the picker reads 「Select 1 to 4 photos to continue. (0/4)」 for the 4 empty frames on 3 pages; after picking 4 and Next, the tapped frame gets the 1st photo and the other frames on pages 1–3 get photos 2–4 left to right. A new sticker is placed selected in the visible part of the current page.",
+    "observedZh": "點選框／圖片正常；跨頁 4 個空框可一次選 4 張，點選的框放第 1 張，其餘依序由左到右填入；新貼圖放在目前可見頁面內。",
+    "shots": [
+      "c4_tap_plus1.png",
+      "c4_picker.png",
+      "c4_picker_4.png",
+      "c4_filled.png",
+      "c4_pages_overview.png",
+      "c4_sticker_placed.png"
+    ],
+    "other": "A frame's selection box is much larger than the drawn frame and its floating menu covers nearby text."
+  },
+  {
+    "item": "C5 Adjust and Filter kept in Removal, not applied twice",
+    "verdict": "Works",
+    "observed": "Saturation −100 and Filter HDR 05 applied. The Object Removal room (Try First) shows the photo grey with HDR 05 once, same as the filter preview. After a free-try Remove and ✕ › Discard, and again after Remove › ✓ (IAP, closed) › ✕ › Discard, the canvas photo is pixel-identical to before Removal; Adjustments still reads Saturation −100. No credits used.",
+    "observedZh": "調整與濾鏡進入 Removal 時保留且只套一次；離開後畫布影像與進入前完全相同，Saturation 仍為 −100。",
+    "shots": [
+      "c5_adjust_sat.png",
+      "c5_canvas_adj_filter.png",
+      "c5_removal_room.png",
+      "c5_removal_removed.png",
+      "c5_compare_before_after_removal.png",
+      "c5_removal2_check.png",
+      "c5_canvas_after_removal2.png",
+      "c5_adjust_reopen.png"
+    ],
+    "other": "Free only: applying the Removal result (Premium ✓) was not checked."
+  },
+  {
+    "item": "C6 Template page crash in the TR languages",
+    "verdict": "Works",
+    "observed": "zh-TW, zh-CN, ja-JP, ko-KR, de-DE, es-ES, fr-FR, it-IT, ru-RU, pt-BR: Collage › Swipe Collage banner › Template Page, scrolled to the end, opened a preview: no crash, process alive, crash buffer empty, all localized. Locale reset to system (en-US), English confirmed.",
+    "observedZh": "10 種語言進入範本頁、捲動並開啟預覽皆未當機，已還原英文。",
+    "shots": [
+      "c6_zh_TW_sheet.png",
+      "c6_sheet_1.png",
+      "c6_sheet_2.png",
+      "c_end_launcher2.png"
+    ],
+    "other": "Italian uses two names (banner 「Collage Swipe」, title 「Collage Multipli」); Russian 「20 фото · Страниц: 6」 vs 「1 страница」; category tabs stay English; the first English launch afterwards showed a Portuguese Launcher headline once."
+  }
+]

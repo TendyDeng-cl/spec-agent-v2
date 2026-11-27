@@ -1,0 +1,43 @@
+{
+ "ISS-XNS-01": {
+  "t": "PM：Xmas 啟動頁圖示是戴聖誕帽的 logo，不是 mockup 上的麋鹿",
+  "w": "PM spec 只寫「Xmas Sale 期間 splash page 換 icon（同去年）」，mockup 畫的是戴聖誕帽、拿拐杖糖的麋鹿；App 顯示的是戴紅色聖誕帽的 PhotoDirector logo。要用哪張圖由 PM 決定。",
+  "s": "看到：手機時間設在 2026/12/15 10:00，啟動頁是戴聖誕帽的 PhotoDirector logo，沒有麋鹿；付費用戶也一樣（TC-071 圖示有換，Pass）。\n預期：請 PM 確認 Xmas 啟動頁要用 mockup 的麋鹿圖，還是 App 現在的聖誕帽 logo。\n備註：spec 只說「同去年」，沒說一定要麋鹿，所以開給 PM 而不是 RD。Design 沒有畫啟動頁。證據是螢幕錄影，沒有相關 log。"
+ },
+ "ISS-XNS-02": {
+  "t": "PM：可試用用戶 CTA 下方的文字，Design 和 PM 寫的不一樣（Q-4）",
+  "w": "Design（頁面日期 2026-11-17）在「Start 7-Day Free Trial」下方畫「Auto-renewal  for $29.99/year」；PM spec（沒有日期）則放 Google Play 政策要求的文字。App 顯示的是 PM 的政策文字。",
+  "s": "看到：CTA 下方是「7 days free, then NT$650/year. Auto-renews yearly …」（價格已正確帶入）。Xmas IAP 頁（TC-014，12/15）和 NY IAP 頁（12/30）都一樣。\n預期：請 PM 決定 CTA 下方要用 Design 那一行，還是 PM 的政策文字。\n備註：依團隊「Design 優先」的規則應該是 Design 贏，但 PM 文字是 Google Play 政策要求，而且 PM 頁沒有日期、看不出哪邊比較新，所以照「未決問題開給 PM」的規則（2026-11-11）。不可試用和 Monthly 的文字只有 PM 寫，App 都相符（TC-015、TC-016）。"
+ },
+ "ISS-XNS-03": {
+  "t": "不可試用的用戶，IAP 頁 CTA 顯示「Continue」，不是「Subscribe for …/year」",
+  "w": "PM spec 寫明：不能試用的用戶，CTA 文字是「Subscribe for <price>/year」。App 的金色按鈕卻顯示「Continue」，價格放在下一行。",
+  "s": "看到：用 Play Billing Lab 設成不可試用（Taiwan、不勾 Free trial），重開 PhotoDirector，時間 12/15 10:00。金色 CTA 是「Continue」／「(NT$650/year)」；按鈕下方的文字和 PM 的不可試用文字相符（Pass）。選 Monthly 時是「Continue」／「(NT$169/month)」（TC-016，spec 沒寫 Monthly 的 CTA 文字）。\n預期：不可試用的用戶看到「Subscribe for NT$650/year」。\n備註：spec 有寫明文字、App 顯示不同，所以歸 RD（文字規則 2026-11-11）。插頁上同一句 CTA（R-049）因為 O-3 沒看到（TC-047 Blocked）。沒有相關 log。"
+ },
+ "ISS-XNS-04": {
+  "t": "Free 用戶特價點數包：500 點 NT$2090，只比原價 NT$2350 便宜 11%，不是 20%",
+  "w": "PM spec 寫「Free user 500／Paid user 1000 pack 20% off」。Credit IAP 頁的特價包是 NT$2090，同一頁原價 500 點是 NT$2350，只便宜 11.1%；打八折應該是 NT$1880。",
+  "s": "看到：Free 用戶、12/15 10:00，Credit IAP 頁「Santa's bonus pack」500 點「NT$2090」，同頁原價 500 點「NT$2350」（特價前也是這個價，O-1）。Google Play 結帳畫面「500 Credits (Special Offer)」「NT$2,090.00」，log 裡的 SKU 也對（phd_500_credit_freeuser_summer_sale），所以是這個 SKU 在商店的定價不對。\n預期：特價 500 點包比原價便宜 20%（原價 NT$2350 → NT$1880）。\n備註：SKU id 沿用夏季特賣（Q-9），價格可能也還是夏季的。NY Sale（TC-061「Year End Sale」）和測試購買（TC-066）都是 NT$2090。付費用戶的 1000 點包沒測到（帳號有 Auto Pass 資格，TC-063）。嚴重度 S2：顯示和實際扣款的特價都錯。"
+ },
+ "ISS-XNS-05": {
+  "t": "NY Sale：Launcher 的 IAP 圖示一直是一般的橘色皇冠，沒有換成香檳杯",
+  "w": "PM spec 寫 Free 用戶在特價期間 Launcher IAP 圖示要換圖；Design 的 Launcher NY 畫面是會動的兩個香檳杯（NY_ani，Lottie @raw/ny_ani_cheers，自動循環播放）。App 在 NY Sale 期間顯示一般的橘色皇冠。",
+  "s": "看到：Free 用戶。在開著的 Launcher 上，時間從 2026/12/27 23:59:59 走到 12/28 00:00:01，Xmas 倒數 bubble 停在「00:00:00」（不會變負數，Pass），聖誕帽皇冠換成一般的橘色皇冠，不是香檳杯（TC-038）。強制停止後重開（12/28 00:01，TC-004）、12/29、12/30（TC-031）、2027/01/02～01/05（TC-035、TC-006）都一樣；NY 倒數 bubble 出現在一般皇冠下方。TC-032（動畫循環）因此 Blocked。12/11～12/27 的 Xmas 聖誕帽皇冠是正常的（TC-030 Pass）。\n預期：NY Sale 期間 Free 用戶的 IAP 圖示是會動的兩個香檳杯（NY_ani）。\n⚠ 請審核者注意：時間改過之後，Launcher 活動資料的查詢每次開啟都因 TLS「Chain validation failed」失敗（O-3、KP-144）。如果 NY 圖示是看伺服器活動資料決定、而不是寫在 build 裡，這可能只是改時間造成的假象，要 RD 的伺服器端特價開關才能確認。想先確認的話可以先保留不開。log 裡每次都有「LottieAnimationView is an AppCompat widget …」，但真實日期和 Xmas 期間也都有，看不出是原因。"
+ },
+ "ISS-XNS-06": {
+  "t": "倒數 bubble 在開著的 Launcher 上到 72:00:00 不會出現，要重開 App 才出現",
+  "w": "PM spec 寫「從倒數 72:00:00 起設倒數計時 bubble（兩個 sale 都要）」。停在 Launcher 上跨過 72 小時門檻時，bubble 沒出現；重開 App 之後才有。",
+  "s": "看到：Xmas：時間設 2026/12/24 23:58:00，開 App 停在 Launcher，23:59:51、00:00:02、00:00:14 都沒有 bubble；00:00:30 強制停止再重開，出現「71:59:21」（TC-033）。NY：2027/01/02 23:58:40 起每約 4 秒讀一次畫面到 00:00:22，沒有 bubble；00:00:35 重開後出現「71:59:23」（TC-035）。\n預期：距特價結束 72:00:00 起出現倒數 bubble，Launcher 已經開著也要出現。\n備註：bubble 出現後每秒倒數、重開後時間接續（TC-034 Pass），歸零停在 00:00:00（TC-038 Pass）。看起來 Launcher 只在建立時檢查 72 小時門檻。這段時間沒有任何 log 記到門檻，附的 log 片段就是證明。Design 沒畫 bubble（Q-3 只問外觀）。"
+ },
+ "ISS-XNS-07": {
+  "t": "PM：付費用戶 Mine 頁的「My Credits」卡片沒有聖誕裝飾（Q-13）",
+  "w": "PM spec 寫「Xmas Sale 期間 splash page 換 icon，Mine tab credit card 加裝飾（同去年）」，沒有指定用戶類型。Free 用戶的卡片有裝飾，付費用戶沒有。付費用戶要不要裝飾由 PM 決定。",
+  "s": "看到：付費（「Set to subscriber」開，Mine 顯示「Hello VIP!」），12/15 10:00，「My Credits」卡片是一般樣式，沒有雪人、松樹或禮物；同時間 Free 用戶有（TC-072 Pass）。付費用戶的啟動頁有聖誕圖示（TC-071），Credit IAP 的方案卡片也有聖誕裝飾（TC-062），所以同一個付費用戶在不同畫面看到的聖誕樣式不一致。\n預期：請 PM 決定付費用戶的 My Credits 卡片是否也要有聖誕裝飾。\n備註：spec 沒寫，是使用體驗的決定，開成 [AIAgent][UX]、BugBelong PM（規則 2026-11-11／2026-11-13）。沒有相關 log。"
+ },
+ "OBS": {
+  "O-1": ["特價前（2026/12/10）Credit IAP 頁的參考畫面：一般點數包和 banner。", "TC-068／TC-060 的對照，不是問題。"],
+  "O-2": ["手機的 Google Play 帳號是授權測試人員（測試卡）。", "測試環境的事實；購買的 case 用它來買（REQ-004）。"],
+  "O-3": ["改了手機時間之後 HTTPS 會失敗（「Chain validation failed」、OCSP 過期），伺服器提供的特價內容拿不到。", "這是改時間方法的副作用（Q-1、KP-144），依 REQ-004 不開單。24 個 Blocked（無法觀察）的 case 需要 RD 的伺服器端特價開關才能重測。"],
+  "O-4": ["已用測試卡購買（500 點包、特價 Monthly），訂閱已取消；目前餘額 800。", "測試環境狀態；TC-023／TC-066 Pass。"]
+ }
+}

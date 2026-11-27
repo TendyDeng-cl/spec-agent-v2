@@ -102,3 +102,31 @@ Two ESM strings are word-for-word copies of the Spain text inside `es-rMX` (`ima
 ## Note outside the translations
 
 `demo_shortcut_sub_title_video_enhancer` is about AI reframing (「AI reframe your video for any aspect ratio, then fine-tune the crop in real time」) in the English itself, and every language translates it faithfully. If it shows on the Video Enhance demo page it is a source-text problem for RD/PM, not a translation fail.
+
+## Top-up 2026-11-26: 3 strings the first read missed
+
+The first read dropped every string holding a line break (fixed in `scripts/mui-strings.ts` on 2026-11-25). Re-read from the 2611201 APK into `mui-topup/` (68 strings, 65 + these 3): `video_enhance` (two-line label), `video_enhance_v2_refunded_content` (refund message), `video_enhancer_original_source_hint_dialog_content` (dialog when the clip has effects). None of the three was seen on the phone walks, so the fails are APK-only (held like `video_enhance_hint`).
+
+### Fails
+
+| Language | Key | English | App shows | What is wrong |
+|---|---|---|---|---|
+| ESM | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance solo se aplicará al video fuente original … | 「Video Enhance」 left in English (Launcher: 「Mejora de video con IA」). |
+| PLK | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance zostanie zastosowane tylko do oryginalnego pliku wideo … | 「Video Enhance」 left in English (Launcher: 「Ulepszanie Wideo AI」). |
+| SVE | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance kommer endast att tillämpas på ursprungsvideon … | 「Video Enhance」 left in English (Launcher: 「Videoförbättring」). |
+| NOR | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance vil bare gjelde for den opprinnelige videokilden … | 「Video Enhance」 left in English (Launcher: 「Forbedre video med AI」). |
+| UKR | video_enhancer_original_source_hint_dialog_content | The selected video has other effects. Video Enhance will only apply to the original source video, without any applied effects. / Do you want to continue? | … Video Enhance буде застосовано лише до вихідного відео … | 「Video Enhance」 left in English (Launcher: 「AI-покращення відео」). |
+
+### Translation doubts
+
+| ID | Language | Screen | English | App shows | Why it seems off | Better wording |
+|---|---|---|---|---|---|---|
+| TD-E42 | PLK | Two-line label (video_enhance) | Video⏎Enhance | Wideo⏎Ulepszenie | English word order; Polish says 「Ulepszanie wideo」 (as the Launcher does). | Ulepszanie⏎wideo |
+| TD-E43 | SVE | Two-line label (video_enhance) | Video⏎Enhance | Video⏎förbättra | A bare infinitive ("to improve") and two words; the Launcher says 「Videoförbättring」. | Video-⏎förbättring |
+| TD-E44 | NOR | Two-line label (video_enhance) | Video⏎Enhance | Video⏎forbedre | A bare infinitive; a noun fits a label. | Video-⏎forbedring |
+| TD-E45 | TRK | Two-line label (video_enhance) | Video⏎Enhance | Video⏎İyileştir | Imperative verb; the hint dialog says 「Video İyileştirme」. | Video⏎İyileştirme |
+| TD-E46 | DAN | Two-line label and effects hint dialog | Video⏎Enhance; … Video Enhance will only apply … | Video⏎forbedring; … effekter. videoforbedring vil … | The label splits a Danish compound (Launcher: 「Videoforbedring」); in the hint the sentence starts with a lower-case 「videoforbedring」. | Video-⏎forbedring; … Videoforbedring vil … |
+| TD-E47 | UKR | Two-line label (video_enhance) | Video⏎Enhance | Покращення⏎Відео | 「Відео」 capitalised mid-phrase (English title case copied). | Покращення⏎відео |
+| TD-E48 | FRA | Effects hint dialog | The selected video has other effects. Video Enhance will only apply … | La vidéo sélectionnée a d'autres effets appliqués. Améliorateur vidéo sera appliqué … | 「Améliorateur vidéo」 (no article) where the label says 「Amélioration vidéo」; 「a d'autres effets appliqués」 is a calque. | La vidéo sélectionnée contient d'autres effets. L'amélioration vidéo s'appliquera uniquement à la vidéo source d'origine, sans ces effets. |
+| TD-E49 | ESP, ESM | Effects hint dialog vs refund message | Do you want to continue? / Please try again later | ¿Desea continuar? / Inténtalo (ESP), Vuelve a intentarlo (ESM) | Formal 「usted」 in the hint, informal 「tú」 in the refund message of the same feature. | ¿Quieres continuar? |
+| TD-E50 | ITA | Refund message | … or use a different video. | … o usa un video diverso, grazie. | Adds 「grazie」, which the English does not have and Italian UI text does not use. | … Riprova più tardi o usa un altro video. |

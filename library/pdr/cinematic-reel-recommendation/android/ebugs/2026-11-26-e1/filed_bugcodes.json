@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261125-0064",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611251",
+    "filed_on": "2026-11-27"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0359",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Back while generating returns to the preview; the task keeps running",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-27T10:45:56",
+      "build": "2611251",
+      "tr": "TR261125-0064",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "6/6",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「Cinematic Reel Creator」 on the Launcher\n3. Swipe the template cards to the 「Micro Cinema」 card\n4. Tap 「Import a photo」\n5. Tap a photo\n6. Tap 「Generate」\n7. Press system Back while 「Analyzing & Generating…」 shows\n8. Tap the history icon\n9. Wait until the new task shows 「View」\n10. Tap 「View」\n11. Press system Back\n\nResult:\nBack returns to the preview with Generate active and no message; the task runs on, charged.\n摘要：生成中按返回鍵回到預覽頁、無提示，任務仍在背景進行並扣點。\n{16.9.0_cra06_analyzing_before_back.jpg} {16.9.0_cra06_preview_after_back.jpg} {16.9.0_cra06_task_still_processing.jpg} {16.9.0_cra06_result_back_to_task_list.jpg}\n{16.9.0_cra06_back_task_continues_log.txt}\n\nExpect Result:\nPM to decide what Back does while generating and on the result page; no spec draws it.\n摘要：請 PM 決定生成中與結果頁按返回鍵的行為；規格未畫。\n\nNote:\nDevice: Sony XQ-BT52 (Xperia 10 III) / Android 12\nRelated: open question Q-10 (leaving during and after a generation); Back on the result page (step 11) returns to the task list; the Design draws only 「View later」 and 「Create another one」 on Analyzing & Generating; the same from the AI Magic tab, the editor's Global Toolbar AI Magic and the Photo and PIP Photo toolbar buttons; Back during the upload spinner (before Analyzing & Generating shows) also stays on the preview.\nSpec Link: Cinematic Reel Creator Design spec (CineStory), Analyzing & Generating 「View later」 to recent tasks arrow -\nhttps://www.figma.com/design/w2cTi3WTU9vGDE3laY1H1t/Cinematic-Reel-Creator--CineStory-?node-id=111-17798\nSpec Link: Cinematic Reel Creator Design spec (CineStory), recent task 「View」 to result page arrow -\nhttps://www.figma.com/design/w2cTi3WTU9vGDE3laY1H1t/Cinematic-Reel-Creator--CineStory-?node-id=111-23476\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_cra06_analyzing_before_back.jpg",
+        "16.9.0_cra06_preview_after_back.jpg",
+        "16.9.0_cra06_task_still_processing.jpg",
+        "16.9.0_cra06_result_back_to_task_list.jpg",
+        "16.9.0_cra06_back_task_continues_log.txt"
+      ],
+      "key": "Cinematic-Reel-Recommendation-E1-02",
+      "iss": "ISS-CRA-06",
+      "feature": "Cinematic-Reel-Recommendation-E1",
+      "problem_type": "UX"
+    }
+  ],
+  "dispositions": {
+    "ISS-CRA-05": "已知單，不重複開：DRA262611P0341 (ISS-AWA-20, AIGC Watermark E1, same OS)"
+  }
+}

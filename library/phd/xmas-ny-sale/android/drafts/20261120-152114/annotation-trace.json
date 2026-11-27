@@ -1,0 +1,533 @@
+{
+  "spec_folder": "specs/2026-11-20",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "d-assets@2999,101",
+      "board": "d-assets",
+      "x": 2999,
+      "y": 101,
+      "low": false,
+      "text": "[phone] Merry / [phone] Christmas",
+      "trace": "R-042, R-043, R-045"
+    },
+    {
+      "id": "d-assets@3413,101",
+      "board": "d-assets",
+      "x": 3413,
+      "y": 101,
+      "low": false,
+      "text": "[phone] Merry / [phone] Christmas",
+      "trace": "R-042, R-043, R-045"
+    },
+    {
+      "id": "d-assets@3827,101",
+      "board": "d-assets",
+      "x": 3827,
+      "y": 101,
+      "low": false,
+      "text": "[phone] Happy / [phone] new year",
+      "trace": "R-042, R-043, R-045"
+    },
+    {
+      "id": "d-assets@2999,1015",
+      "board": "d-assets",
+      "x": 2999,
+      "y": 1015,
+      "low": false,
+      "text": "[phone] メリー / [phone] クリスマス",
+      "trace": "R-045"
+    },
+    {
+      "id": "d-assets@3413,1015",
+      "board": "d-assets",
+      "x": 3413,
+      "y": 1015,
+      "low": false,
+      "text": "[phone] メリー / [phone] クリスマス",
+      "trace": "R-045"
+    },
+    {
+      "id": "d-assets@3827,1015",
+      "board": "d-assets",
+      "x": 3827,
+      "y": 1015,
+      "low": false,
+      "text": "[phone] あけまして / [phone] おめでとう",
+      "trace": "R-045"
+    },
+    {
+      "id": "d-iap-ny@1593,48",
+      "board": "d-iap-ny",
+      "x": 1593,
+      "y": 48,
+      "low": false,
+      "text": "[phone] PhotoDirector Premium",
+      "trace": "ui: page title 「PhotoDirector Premium」, unchanged by the sale"
+    },
+    {
+      "id": "d-iap-ny@1516,208",
+      "board": "d-iap-ny",
+      "x": 1516,
+      "y": 208,
+      "low": false,
+      "text": "[phone] Object Removal / [phone] 3600 free credits per year for AI tools / [phone] Get full access to all premium features / [phone] 1000+ premium styles and templates / [phone] Buy credits at 50% off pricing / [phone] Much more VIP benefits / [phone] Yearly / [phone] Monthly / [phone] Recieve 30 credits during free trial / [phone] Start 7-Day Free Trial / [phone] Auto-renewal  for $29.99/year / [phone] Terms of Service",
+      "trace": "R-014"
+    },
+    {
+      "id": "d-iap-ny@1797,208",
+      "board": "d-iap-ny",
+      "x": 1797,
+      "y": 208,
+      "low": false,
+      "text": "[phone] Body Reshape",
+      "trace": "R-014"
+    },
+    {
+      "id": "d-iap-ny@1789,434",
+      "board": "d-iap-ny",
+      "x": 1789,
+      "y": 434,
+      "low": false,
+      "text": "[phone] SAVE 75% / [phone] $125/month / [phone] $690/month",
+      "trace": "R-012"
+    },
+    {
+      "id": "d-iap-ny@1669,768",
+      "board": "d-iap-ny",
+      "x": 1669,
+      "y": 768,
+      "low": false,
+      "text": "[phone] Privacy Policy / [phone] Restore Purchase",
+      "trace": "R-017"
+    },
+    {
+      "id": "d-iap-xmas@1190,48",
+      "board": "d-iap-xmas",
+      "x": 1190,
+      "y": 48,
+      "low": false,
+      "text": "[phone] PhotoDirector Premium",
+      "trace": "ui: page title 「PhotoDirector Premium」, unchanged by the sale"
+    },
+    {
+      "id": "d-iap-xmas@1113,208",
+      "board": "d-iap-xmas",
+      "x": 1113,
+      "y": 208,
+      "low": false,
+      "text": "[phone] Object Removal / [phone] 3600 free credits per year for AI tools / [phone] Get full access to all premium features / [phone] 1000+ premium styles and templates / [phone] Buy credits at 50% off pricing / [phone] Much more VIP benefits / [phone] Yearly / [phone] Monthly / [phone] Recieve 30 credits during free trial / [phone] Start 7-Day Free Trial / [phone] Auto-renewal  for $29.99/year / [phone] Terms of Service",
+      "trace": "R-014"
+    },
+    {
+      "id": "d-iap-xmas@1394,208",
+      "board": "d-iap-xmas",
+      "x": 1394,
+      "y": 208,
+      "low": false,
+      "text": "[phone] Body Reshape",
+      "trace": "R-014"
+    },
+    {
+      "id": "d-iap-xmas@1386,434",
+      "board": "d-iap-xmas",
+      "x": 1386,
+      "y": 434,
+      "low": false,
+      "text": "[phone] SAVE 75% / [phone] $125/month / [phone] $9999999 / [phone] $690/month",
+      "trace": "R-012"
+    },
+    {
+      "id": "d-iap-xmas@1266,768",
+      "board": "d-iap-xmas",
+      "x": 1266,
+      "y": 768,
+      "low": false,
+      "text": "[phone] Privacy Policy / [phone] Restore Purchase",
+      "trace": "R-017"
+    },
+    {
+      "id": "d-interstitial-ny@670,23",
+      "board": "d-interstitial-ny",
+      "x": 670,
+      "y": 23,
+      "low": false,
+      "text": "[phone] 9:41 / [phone] Happy / [phone] new year / [phone] SAVE / [phone] 57",
+      "trace": "R-045, R-046"
+    },
+    {
+      "id": "d-interstitial-ny@887,337",
+      "board": "d-interstitial-ny",
+      "x": 887,
+      "y": 337,
+      "low": false,
+      "text": "[phone] %",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-ny@732,452",
+      "board": "d-interstitial-ny",
+      "x": 732,
+      "y": 452,
+      "low": false,
+      "text": "[phone] vs. paying $5.99/month × 12 / [phone] $29.99",
+      "trace": "R-046, R-047"
+    },
+    {
+      "id": "d-interstitial-ny@869,503",
+      "board": "d-interstitial-ny",
+      "x": 869,
+      "y": 503,
+      "low": false,
+      "text": "[phone] /year",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-ny@750,672",
+      "board": "d-interstitial-ny",
+      "x": 750,
+      "y": 672,
+      "low": false,
+      "text": "[phone] Get 7-Day Free Trial / [phone] 7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends. / [phone] Terms of Service / [phone] | / [phone] Privacy Policy",
+      "trace": "R-048, R-050"
+    },
+    {
+      "id": "d-interstitial-ny@873,776",
+      "board": "d-interstitial-ny",
+      "x": 873,
+      "y": 776,
+      "low": false,
+      "text": "[phone] | / [phone] Restore purchase",
+      "trace": "R-054"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-498,23",
+      "board": "d-interstitial-xmas-a",
+      "x": -498,
+      "y": 23,
+      "low": false,
+      "text": "[phone] 9:41 / [phone] Merry / [phone] Christmas / [phone] SAVE / [phone] 57",
+      "trace": "R-045, R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-281,337",
+      "board": "d-interstitial-xmas-a",
+      "x": -281,
+      "y": 337,
+      "low": false,
+      "text": "[phone] %",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-436,452",
+      "board": "d-interstitial-xmas-a",
+      "x": -436,
+      "y": 452,
+      "low": false,
+      "text": "[phone] vs. paying $5.99/month × 12 / [phone] $29.99",
+      "trace": "R-046, R-047"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-299,503",
+      "board": "d-interstitial-xmas-a",
+      "x": -299,
+      "y": 503,
+      "low": false,
+      "text": "[phone] /year",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-418,672",
+      "board": "d-interstitial-xmas-a",
+      "x": -418,
+      "y": 672,
+      "low": false,
+      "text": "[phone] Get 7-Day Free Trial / [phone] 7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends. / [phone] Terms of Service / [phone] | / [phone] Privacy Policy",
+      "trace": "R-048, R-050"
+    },
+    {
+      "id": "d-interstitial-xmas-a@-295,776",
+      "board": "d-interstitial-xmas-a",
+      "x": -295,
+      "y": 776,
+      "low": false,
+      "text": "[phone] | / [phone] Restore purchase",
+      "trace": "R-054"
+    },
+    {
+      "id": "d-interstitial-xmas-b@-84,23",
+      "board": "d-interstitial-xmas-b",
+      "x": -84,
+      "y": 23,
+      "low": false,
+      "text": "[phone] 9:41 / [phone] Merry / [phone] Christmas / [phone] SAVE / [phone] 57",
+      "trace": "R-045, R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-b@133,337",
+      "board": "d-interstitial-xmas-b",
+      "x": 133,
+      "y": 337,
+      "low": false,
+      "text": "[phone] %",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-b@-22,452",
+      "board": "d-interstitial-xmas-b",
+      "x": -22,
+      "y": 452,
+      "low": false,
+      "text": "[phone] vs. paying $5.99/month × 12 / [phone] $29.99",
+      "trace": "R-046, R-047"
+    },
+    {
+      "id": "d-interstitial-xmas-b@115,503",
+      "board": "d-interstitial-xmas-b",
+      "x": 115,
+      "y": 503,
+      "low": false,
+      "text": "[phone] /year",
+      "trace": "R-046"
+    },
+    {
+      "id": "d-interstitial-xmas-b@-4,672",
+      "board": "d-interstitial-xmas-b",
+      "x": -4,
+      "y": 672,
+      "low": false,
+      "text": "[phone] Get 7-Day Free Trial / [phone] 7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends. / [phone] Terms of Service / [phone] | / [phone] Privacy Policy",
+      "trace": "R-048, R-050"
+    },
+    {
+      "id": "d-interstitial-xmas-b@119,776",
+      "board": "d-interstitial-xmas-b",
+      "x": 119,
+      "y": 776,
+      "low": false,
+      "text": "[phone] | / [phone] Restore purchase",
+      "trace": "R-054"
+    },
+    {
+      "id": "d-launcher-ny@-1309,66",
+      "board": "d-launcher-ny",
+      "x": -1309,
+      "y": 66,
+      "low": false,
+      "text": "[annotation on NY_ani 9754:160] 規格：42 × 46，60fps，一輪 144 幀（2.4 秒），首尾銜接，可以無限循環。 / [annotation] 圖層：左右酒杯和 6 個星星／光芒各一層，名稱是 glass_left、glass_right、spark_1 到 spark_6。只用了一般的向量形狀和變形動畫，沒有圖片、遮罩或特效，所以主流的 Lottie 播放器都支援。 / [annotation] Android 用法：在 LottieAnimationView 裡加上 app:lottie_rawRes=\"@raw/ny_ani_cheers\"、app:lottie_loop=\"true\"、app:lottie_autoPlay=\"true\"。檔案要放在 res/raw/，檔名改成 ny_ani_cheers.json，因為 Android 的資源名稱只能用小寫。",
+      "trace": "R-031, R-032"
+    },
+    {
+      "id": "pm-credit-free@-1756,-930",
+      "board": "pm-credit-free",
+      "x": -1756,
+      "y": -930,
+      "low": false,
+      "text": "[phone] 圖片, Xmas *1, NY *1",
+      "trace": "R-061"
+    },
+    {
+      "id": "pm-credit-free@-1816,-195",
+      "board": "pm-credit-free",
+      "x": -1816,
+      "y": -195,
+      "low": false,
+      "text": "[caption] 一律顯示折扣 pack",
+      "trace": "R-062"
+    },
+    {
+      "id": "pm-credit-paid@-2157,-931",
+      "board": "pm-credit-paid",
+      "x": -2157,
+      "y": -931,
+      "low": false,
+      "text": "[phone] 圖片, Xmas *1, NY *1",
+      "trace": "R-061"
+    },
+    {
+      "id": "pm-credit-paid@-2214,-215",
+      "board": "pm-credit-paid",
+      "x": -2214,
+      "y": -215,
+      "low": false,
+      "text": "[caption] 有首購資格 → 首購 / [caption] 沒首購資格 → 折扣 pack",
+      "trace": "R-064"
+    },
+    {
+      "id": "pm-iap@-2665,-201",
+      "board": "pm-iap",
+      "x": -2665,
+      "y": -201,
+      "low": false,
+      "text": "[caption] 火車頭加圖片, Xmas *1, NY *1 / [caption] BF 的金色 UI",
+      "trace": "R-013, R-014"
+    },
+    {
+      "id": "pm-interstitial-ref@-812,-972",
+      "board": "pm-interstitial-ref",
+      "x": -812,
+      "y": -972,
+      "low": false,
+      "text": "[phone] PowerDirector Pro+",
+      "trace": "older: reference frame from an earlier PowerDirector sale (「PowerDirector Pro+」); kept beside the Interstitial to show the CTA opens the Google Play checkout (R-052)"
+    },
+    {
+      "id": "pm-interstitial-ref@-871,-454",
+      "board": "pm-interstitial-ref",
+      "x": -871,
+      "y": -454,
+      "low": false,
+      "text": "[phone] $29.99 / [phone] Save 70% vs. paying $8.49/month × 12",
+      "trace": "older: sample values of the earlier PowerDirector sale (「Save 70% vs. paying $8.49/month × 12」); this sale's numbers are R-046, R-047"
+    },
+    {
+      "id": "pm-interstitial-ref@-640,-434",
+      "board": "pm-interstitial-ref",
+      "x": -640,
+      "y": -434,
+      "low": false,
+      "text": "[phone] / year",
+      "trace": "older: same reference frame (R-052)"
+    },
+    {
+      "id": "pm-interstitial@-1346,-194",
+      "board": "pm-interstitial",
+      "x": -1346,
+      "y": -194,
+      "low": false,
+      "text": "[caption] 圖片, Xmas *2, NY *1",
+      "trace": "R-042, R-043"
+    },
+    {
+      "id": "pm-launcher@-2665,294",
+      "board": "pm-launcher",
+      "x": -2665,
+      "y": 294,
+      "low": false,
+      "text": "[caption] Launcher - IAP icon / [phone] 9:41",
+      "trace": "R-030"
+    },
+    {
+      "id": "pm-launcher@-2645,522",
+      "board": "pm-launcher",
+      "x": -2645,
+      "y": 522,
+      "low": false,
+      "text": "[phone] Autumn Templates / [phone] Edit / [phone] AI Edit Agent / [phone] Image / [phone] to Video / [phone] HOT / [phone] AI Removal / [phone] AI Enhance / [phone] Spooky Styles 👻",
+      "trace": "ui: Launcher content in the mockup (sample templates and feature names), unchanged by the sale"
+    },
+    {
+      "id": "pm-launcher@-2402,599",
+      "board": "pm-launcher",
+      "x": -2402,
+      "y": 599,
+      "low": false,
+      "text": "[phone] Camera / [phone] AI Video Try-On / [phone] Character / [phone] Motion Swap / [phone] HOT / [phone] AI Try-On / [phone] Quick / [phone] Actions / [phone] View all",
+      "trace": "ui: Launcher content in the mockup (sample templates and feature names), unchanged by the sale"
+    },
+    {
+      "id": "pm-launcher@-2639,1103",
+      "board": "pm-launcher",
+      "x": -2639,
+      "y": 1103,
+      "low": false,
+      "text": "[phone] Home / [phone] Discover",
+      "trace": "ui: Launcher content in the mockup (sample templates and feature names), unchanged by the sale"
+    },
+    {
+      "id": "pm-launcher@-2505,1103",
+      "board": "pm-launcher",
+      "x": -2505,
+      "y": 1103,
+      "low": false,
+      "text": "[phone] AI Videos / [phone] AI Photos",
+      "trace": "ui: Launcher content in the mockup (sample templates and feature names), unchanged by the sale"
+    },
+    {
+      "id": "pm-launcher@-2348,1103",
+      "board": "pm-launcher",
+      "x": -2348,
+      "y": 1103,
+      "low": false,
+      "text": "[phone] MIne",
+      "trace": "ui: Launcher content in the mockup (sample templates and feature names), unchanged by the sale"
+    },
+    {
+      "id": "pm-mine@-1791,340",
+      "board": "pm-mine",
+      "x": -1791,
+      "y": 340,
+      "low": false,
+      "text": "[caption] Mine tab / [phone] 9:41 / [caption] (Xmas only) / [phone] My Credits / [phone] 100",
+      "trace": "R-071, R-072"
+    },
+    {
+      "id": "pm-mine@-1517,604",
+      "board": "pm-mine",
+      "x": -1517,
+      "y": 604,
+      "low": false,
+      "text": "[phone] Buy Now",
+      "trace": "R-072"
+    },
+    {
+      "id": "pm-mine@-1726,791",
+      "board": "pm-mine",
+      "x": -1726,
+      "y": 791,
+      "low": false,
+      "text": "[phone] Unlock all AI tools / [phone] Enjoy 50% off credit pricing / [phone] 300 bonus credits per month after free trial / [phone] Upgrade Now",
+      "trace": "ui: 「Upgrade to Pro+」 card, unchanged by the sale; its 「Upgrade Now」 is an IAP entry (R-004)"
+    },
+    {
+      "id": "pm-mine@-1750,1102",
+      "board": "pm-mine",
+      "x": -1750,
+      "y": 1102,
+      "low": false,
+      "text": "[phone] Home / [phone] AI Videos",
+      "trace": "ui: Mine bottom tabs, unchanged"
+    },
+    {
+      "id": "pm-mine@-1588,1102",
+      "board": "pm-mine",
+      "x": -1588,
+      "y": 1102,
+      "low": false,
+      "text": "[phone] AI Photos / [phone] MIne",
+      "trace": "ui: Mine bottom tabs, unchanged"
+    },
+    {
+      "id": "pm-note@-391,-1026",
+      "board": "pm-note",
+      "x": -391,
+      "y": -1026,
+      "low": false,
+      "text": "國家: Global / 入口: 全入口 / 期間: 2026/12/11-12/27 Xmas Sale,  2026/12/28-2027/01/05 NY Sale (local time) / 此次 sale 期間的 IAP page CTA btn 改金色 (同 BF) / free user sale 期間 Launcher IAP icon 改圖, 從倒數 72:00:00 起設倒數計時 bubble (兩個 sale 都要) / free user sale 期間 daily launch 都會跳 Interstitial / 價格吃 sku,  大字 70% 由 AP 計算 [(折扣後的月訂閱*12 價格) − 年訂閱原價] ÷ (折扣後的月訂閱*12 價格) / Intersitital 圖上 CMS, CTA btn 喚起結帳 panel, 年訂閱原價 / 有 trial 資格用戶 CTA 字串: Start 7-Day Free Trial / 無 trial 資格用戶 CTA 字串:\tSubscribe for {price}/year / CTA 下方字串如下, 確保用符合 Policy / 有 trial 資格用戶 CTA 字串: 7 days free, then {price}/year. Auto-renews yearly until canceled. To avoid being charged, cancel in Google Play > Subscriptions at least 24 hours before the trial ends. / 無 trial 資格用戶 CTA 字串 / 年訂閱 \t{price}/year, charged today. Renews yearly until canceled. Manage or cancel in Google Play > Subscriptions. / 月訂閱 \t{price}/month, charged today. Renews monthly until canceled. Manage or cancel in Google Play > Subscriptions. / Xmas Sale 期間 / splash page 換 icon, Mine tab credit card 加裝飾 (同去年) / interstitial 兩張輪流跳 (上次觸發顯示 A, 下一次觸發就是顯示 B); NY 時只有一張 / 國家/入口/期間與 subscription 相同 / 折扣 pack 名稱 santa bonus pack/ year-end sale (同去年), tag 跟 pack 樣式都跟首購一樣即可 / 有節慶 banner (可以寫到 SALE 字樣) 兩張, Xmas & NY 各一 / Xmas sale 期間長條 pack 有裝飾 / 折扣 Pack 邏輯 / Paid user 有 auto pass 資格 → auto pass; 沒 auto pass 資格 → 折扣 pack / Free user 一律顯示折扣 pack (500 點門檻較首購 1000 點低)",
+      "trace": "R-001, R-003, R-004, R-013, R-030, R-031, R-033, R-034, R-035, R-040, R-041, R-042, R-043, R-044, R-047, R-048, R-049, R-050, R-051, R-052, R-016, R-018, R-019, R-020, R-060, R-061, R-062, R-063, R-064, R-065, R-066, R-070, R-071"
+    },
+    {
+      "id": "pm-splash@-2228,339",
+      "board": "pm-splash",
+      "x": -2228,
+      "y": 339,
+      "low": false,
+      "text": "[caption] Splash page / [phone] 9:41 / [caption] (Xmas only)",
+      "trace": "R-070"
+    },
+    {
+      "id": "pm-splash@-2180,738",
+      "board": "pm-splash",
+      "x": -2180,
+      "y": 738,
+      "low": false,
+      "text": "[phone] PhotoDirector",
+      "trace": "R-070"
+    }
+  ]
+}

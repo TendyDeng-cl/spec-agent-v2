@@ -561,9 +561,20 @@ Only what is open runs: the server holds no table, a page's process starts on it
 after 10 idle minutes (`--idle <minutes>`; a hidden tab does not keep it alive). One server is enough: a second start prints the address of
 the running one and exits. Old temp files and thumbnails unused for 30 days are cleared at start and daily.
 
-The navigation page shows each table's latest run with its pass / fail / blocked counts and what waits on someone (open
-questions, answers to apply, new-case notes). 「Recent」 lists what this browser opened last, and a table's name opens on the
-tab you left it on. Design cards use small copies; comparisons, crops and Coverage boards are always the full image,
+The navigation page is the Dashboard (user, 2026-11-25). You choose the product first, then its platform (user,
+2026-11-26: PowerDirector, PhotoDirector, Promeo, MyEdit Web · PC, Mac, Android, iOS; one with no table yet is dimmed,
+and platforms are never one list). Two tabs then split that platform's tables: 「Agentic runs」 (tested by the agent,
+waiting for their conversion to AT) and 「Regression (AT)」 (converted to automated tests). A menu filters by app version
+(16.9.0; never the build or the TR), and the list is grouped by version, newest first, then 「Not tested yet」. Each feature is one line with a column per
+figure: cases, the last run's date, pass, fail and blocked of the latest run, eBugs still open of those filed, open
+questions, the MUI phase, the design check and AT; every figure opens the exact place behind it (Questions opens the
+question panel of Cases), and a total line closes each group. MUI rows, MUI runs and MUI eBugs are left out of cases,
+results and eBugs: they show in the MUI column only, and [UI] eBugs under Design. 「Refresh eBugs」 on a version group
+reads the eBugs' current status from eCL (from any computer on the page; a few seconds per group, one read at a time). Every feature
+is listed under the version the Kanban roadmap puts it in (`release.json` in the feature folder); a run on another version says so
+under its date, and each version's header says how many of its cases have been run, of the cases created. A question a filed eBug already
+carries shows as filed, not open. On this computer 「Mark as AT」 on a line moves the table into Regression (or `node scripts/regression.ts <feature>
+<ios|android|both>`; the mark is `regression.json` in the feature folder). A feature's name opens on the tab you left it on. Design cards use small copies; comparisons, crops and Coverage boards are always the full image,
 loaded in the background behind a small copy, with the neighbours fetched ahead. A pair of crops on the Design tab opens
 large on a click.
 
@@ -774,6 +785,7 @@ All scripts run from the repository root with `node scripts/<name>.ts`. In the u
 | `design-page.ts <feature> <platform> [--serve [port] [--lan]]` | The Design tab: every Design screen's status, Figma and app side by side with the differences |
 | `review.ts <feature> <platform> [--draft <id>] [--lan]` | Serves the review page and saves the approved table (Save from this computer only) |
 | `export.ts <feature> <platform>` | Rebuilds `cases.xlsx` / `cases.html` from `cases.csv` |
+| `regression.ts [<feature> <ios\|android\|both> [--since <date>] [--note <text>] [--off]]` | Marks a table as in the regression suite (converted to AT) for the Dashboard's 「Regression (AT)」 group, or lists every table's state |
 | `zh-copy.ts <feature> <platform> [--draft <id>] status \| export \| merge \| adopt` | Keeps the Chinese reading copy current: exports only new and changed rows as batches to translate (`zh-work/`, local), merges and checks the translations; style in `spec-casebook/references/zh-copy.md` |
 | `device.ts <run dir> <command>` | Appium client for the QA iPhone: screenshots, taps (each logged to `taps.jsonl`), `case`, `scrollto`, `waitfor`, `pink`, recipes, logs, ledger, `design` captures |
 | `device-android.ts <run dir> <command>` | The same for the QA Android phone (UiAutomator2, pixel coordinates), plus `back`, `wifi`, `build`, `logcat`, `pull-logs` |

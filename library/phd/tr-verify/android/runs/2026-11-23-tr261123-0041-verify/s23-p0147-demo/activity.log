@@ -1,0 +1,11 @@
+2026-11-23T08:41:49.164Z start RFCW2198L7B
+2026-11-23T08:41:55.919Z logcat start
+2026-11-23T08:41:56.381Z launch 
+2026-11-23T08:42:03.133Z texts s01_launch
+2026-11-23T08:42:08.917Z lbl Swipe Collage
+2026-11-23T08:42:12.315Z texts s02_swipe_collage
+2026-11-23T08:42:30.823Z launch 
+2026-11-23T08:42:37.888Z record start 40
+2026-11-23T08:42:40.714Z lbl Swipe Collage
+2026-11-23T08:42:46.068Z shot s03_after_tap
+2026-11-23T08:42:47.552Z record stop s23_p0147_open_crash

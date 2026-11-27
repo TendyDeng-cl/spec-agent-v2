@@ -1,0 +1,57 @@
+[
+  {
+    "bug": "PHA262026P0071",
+    "verdict": "FIXED",
+    "observed": "After loading, every template card on the Swipe Collage Template Page shows the template's first page; multi-page cards (「20 photos · 6 pages」) show page dots and swipe to the next page. Tapping the card opens the Template Preview with the first page, six page dots and 「Use Template」; swiping left shows page 2 and moves the dot.",
+    "expected": "Each card shows the template's first page with page dots, and the preview shows its pages.",
+    "observedZh": "卡片顯示範本第一頁與頁點，可左滑換頁；預覽顯示各頁與頁點並可滑動。",
+    "expectedZh": "卡片顯示範本第一頁與頁點，預覽顯示各頁內容。",
+    "shots": ["a_p0071_cards.png", "a_p0071_card_swiped.png", "a_p0071_preview.png", "a_p0071_preview_swiped.png"],
+    "sideEffects": "Thumbnails and preview pages are sharp and unclipped. On a card the current page's dot is drawn white with no outline, so on a light template (the white-grid 「20 photos · 6 pages」 card) it disappears: only five of six dots are visible and the gap shows where the current one is. The preview's dots sit on the dark page and read well.",
+    "other": "Opening the preview from a card swiped to page 2 starts at page 1. The preview showed a loading spinner for about 10 seconds before the pages appeared."
+  },
+  {
+    "bug": "PHA262026P0104",
+    "verdict": "HOLD",
+    "observed": "On Free, Background > Texture now shows a gold crown on the PRO textures (many tiles from the 5th on), and Add Layer > Frame shows the crown on PRO frames. No texture or frame shows a 「NEW」 tag anywhere in either list (scrolled to the end); the page holds no tag element besides the crown. The CMS lists the app received carry no tag data the log shows, so whether any texture or frame is marked new in the CMS could not be told.",
+    "expected": "PRO textures and frames carry a crown and new ones a 「NEW」 tag (CMS).",
+    "observedZh": "PRO 材質與框已有皇冠；全部看完沒有任何 NEW 標記，無法確認 CMS 是否有標為新的內容。",
+    "expectedZh": "付費內容要有皇冠、新內容有 NEW。",
+    "shots": ["a_p0104_texture_start.png", "a_p0104_texture_s2.png", "a_p0104_frames_start.png", "a_p0104_texture_end.png"],
+    "sideEffects": "The crowns sit at the top right of each tile, clear of the edges and legible on light and dark tiles; frame crowns do not cover the download arrows.",
+    "other": "Premium was not checked: the crowns already show on Free. The PRO half is fixed; the NEW half needs the CMS owner to say whether any texture or frame is tagged new (if one is, the NEW half is not fixed)."
+  },
+  {
+    "bug": "PHA262026P0105",
+    "verdict": "FIXED",
+    "observed": "On Free, on the 「3 photos · 1 page」 template, ✓ (export) opened 「Save & Share」 the 1st and 2nd time; the 3rd export opened the 「PhotoDirector Premium」 page (Yearly / Monthly, Continue). Its ✕ returned to 「Save & Share」. Exports 4 and 5 opened 「Save & Share」 and the 6th opened 「PhotoDirector Premium」 again. Nothing was bought.",
+    "expected": "A Free user gets the 「PhotoDirector Premium」 IAP page every 3 saves.",
+    "observedZh": "Free 第 3 次與第 6 次匯出都出現 PhotoDirector Premium 頁。",
+    "expectedZh": "Free 每存 3 次應跳一次 IAP。",
+    "shots": ["a_p0105_export2.png", "a_p0105_export3.png", "a_p0105_after_iap_close.png"],
+    "sideEffects": "The IAP page is complete and legible (title, feature cards, plan prices, Continue, terms); closing it lands on 「Save & Share」, from where 「‹」 returns to the canvas with the template unchanged.",
+    "other": "The canvas has no download icon at the top right on this build: export is the ✓ at the bottom right (as on R7)."
+  },
+  {
+    "bug": "PHA262026P0106",
+    "verdict": "NOT_FIXED",
+    "observed": "Following the bug's steps (blue background on the 「3 photos · 1 page」 template, ✕ opens 「Discard changes?」, force stop from there), and also with the edited canvas left in front and force-stopped, no 「Do you want to continue editing?」 appears at launch, in Collage or on the Swipe Collage page; the edit is lost. Only when the app is first sent to the background (Home) and then force-stopped does the dialog appear, on entering Swipe Collage, and Continue restores the blue canvas. For comparison, Edit Room after the same foreground force stop shows the dialog at launch.",
+    "expected": "A 「Continue editing?」 dialog appears next time, and continuing restores the project.",
+    "observedZh": "在編輯畫面直接強制停止仍不會詢問、編輯遺失；只有先回桌面再停止才會在進入 Swipe Collage 時詢問並可還原。",
+    "expectedZh": "下次開啟應詢問並可還原專案。",
+    "shots": ["a_p0106_edited_before_kill.png", "a_p0106_v3_after_x.png", "a_p0106_v3_template_page.png", "a_p0106_v2_template_page.png"],
+    "sideEffects": "Where it shows, the dialog reads 「Do you want to continue editing?」 / 「You have an unsaved image from a previous edit.」 with Cancel / Continue, legible and centred; Continue restored the edit (a_p0106_v2_restored.png).",
+    "other": "Edit Room's dialog after the same foreground force stop: a_er_relaunch.png. The Swipe Collage dialog shows on entering Swipe Collage, not at launch or in Collage (Q-16 assumption). On a restored canvas the undo button is greyed and ✕ leaves straight to the template list with no 「Discard changes?」 prompt."
+  },
+  {
+    "bug": "PHA262026P0147",
+    "verdict": "FIXED",
+    "observed": "On 「4 photos · 3 pages」 (Year-end Recap), one photo in a page-1 frame, Removal > Continue > Try First > ✕ in the Object Removal room, force stop, relaunch, Collage > 「Try Swipe Collage!」: Swipe Collage opens normally, also on the 2nd, 3rd and a 4th open from the Launcher tile. With the same steps and the app sent to the background before the force stop (so the draft is saved), entering Swipe Collage shows 「Do you want to continue editing?」 and Continue restores the canvas with the photo. No crash and no fatal exception in the log.",
+    "expected": "No crash: 「Continue editing?」 appears and restores the project, or Swipe Collage opens normally.",
+    "observedZh": "重開進入 Swipe Collage 不再閃退；草稿有存時會詢問並可還原含照片的畫面。",
+    "expectedZh": "不應閃退，應出現「Continue editing?」還原專案或正常進入。",
+    "shots": ["a_p0147_object_removal.png", "a_p0147_open1_shot.png", "a_p0147_v2_dialog.png", "a_p0147_v2_restored.png"],
+    "sideEffects": "The restored canvas shows the photo in the page-1 frame with its stickers in place and nothing clipped.",
+    "other": "With the force stop from the foreground no draft is kept, so no dialog appears (see P0106). Removal from a collage photo now shows two sheets first (「Remove with faster selection tool」 with Continue, then 「Smart Wire Removal」 with Try First)."
+  }
+]

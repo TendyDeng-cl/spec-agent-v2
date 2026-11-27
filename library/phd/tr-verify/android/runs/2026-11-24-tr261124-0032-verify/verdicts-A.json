@@ -1,0 +1,144 @@
+[
+  {
+    "bug": "PHA262026P0103",
+    "verdict": "FIXED",
+    "summary": "On Free, a crowned card now opens the Template Preview, Use Template opens the Canvas and the IAP page appears only at export, but the preview shows no PRO icon.",
+    "observed": "The Template Preview of the crowned Year-end Recap 「10 photos · 1 page」 template shows no PRO icon.",
+    "expected": "The Template Preview of a PRO template shows a PRO icon at the top right.",
+    "observedZh": "皇冠範本（Year-end Recap「10 photos · 1 page」）的範本預覽沒有 PRO 圖示。",
+    "expectedZh": "PRO 範本的預覽右上角應顯示 PRO 圖示。",
+    "screenshots": [
+      "02_template_page.png",
+      "10_p0103_crowned_card_tap.png",
+      "11_p0103_canvas.png",
+      "18_p0103_export_tap.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve (IAP only at export); missing PRO icon on the preview not part of the verdict."
+  },
+  {
+    "bug": "PHA262026P0072",
+    "verdict": "FIXED",
+    "summary": "The 「2 photos · 1 page」 template opens with 2 empty frames and the 「4 photos · 1 page」 template with 4.",
+    "screenshots": [
+      "51_p0072_two_photo_canvas.png",
+      "53_p0072_picker.png",
+      "54_p0072_four_photo_canvas.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0160",
+    "verdict": "FIXED",
+    "summary": "One tap on a frame's 「+」 still selects a layer, and the photo picker opens only on the second tap, on both the 3-photo and the 10-photo template.",
+    "observed": "One tap on a frame's 「+」 selects the frame or the locked page layer, and the photo picker opens only on a second tap (3-photo and 10-photo templates).",
+    "expected": "One tap on a frame's 「+」 opens the photo picker.",
+    "observedZh": "點一下相框「+」只會選取相框或鎖定的整頁圖層，要點第二下才開選圖器（3 張與 10 張範本皆同）。",
+    "expectedZh": "點一下相框「+」即開啟選圖器。",
+    "screenshots": [
+      "12_p0160_10photo_one_tap.png",
+      "14_p0160_10photo_clean_tap.png",
+      "15_p0160_10photo_second_tap.png",
+      "61_p0160_3photo_one_tap.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve note (rd-resolve.json); original observation kept in result file."
+  },
+  {
+    "bug": "PHA262026P0073",
+    "verdict": "FIXED",
+    "summary": "Picked photos are bordered and numbered 1, 2, … in the picker grid.",
+    "screenshots": [
+      "16_p0073_two_picked.png",
+      "73_p0074_seven_picked.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0074",
+    "verdict": "FIXED",
+    "summary": "The picker limit now counts empty frames on all pages (all 7 can be picked on the 7-photo · 3-page template), but it is not capped at 20: with 22 empty frames 22 photos can be picked.",
+    "screenshots": [
+      "72_p0074_picker.png",
+      "73_p0074_seven_picked.png",
+      "83_p0074_duplicated.png",
+      "84_p0074_22frames_picker.png",
+      "86_p0074_over20.png"
+    ],
+    "ruling": "User 2026-11-25: normal per RD resolve (limit = total empty frames left on all pages; no 20 cap). 22-frame picker kept as evidence."
+  },
+  {
+    "bug": "PHA262026P0079",
+    "verdict": "FIXED",
+    "summary": "Frame focus shows Replace, Duplicate, Opacity, Shadow, Horizontal Flip, Vertical Flip, Forward, Backward, Lock and Delete, and the floating icons include Lock.",
+    "screenshots": [
+      "21_p0079_polaroid_tap1.png",
+      "22_p0079_bar_end.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0080",
+    "verdict": "FIXED",
+    "summary": "A third tap on the same frame returns from image focus to frame focus and keeps the selection.",
+    "screenshots": [
+      "23_p0080_tap2.png",
+      "24_p0080_tap3.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0082",
+    "verdict": "FIXED",
+    "summary": "Long-press and drag still swaps the photos without showing 「Long press & drag to swap」 while dragging.",
+    "observed": "While a photo is long-pressed and dragged onto another frame, only the toast 「Image Selected」 shows; no 「Long press & drag to swap」 text appears.",
+    "expected": "「Long press & drag to swap」 is shown while a photo is dragged.",
+    "observedZh": "長按拖曳照片到另一框時只出現「Image Selected」提示，沒有「Long press & drag to swap」文字。",
+    "expectedZh": "拖曳照片時應顯示「Long press & drag to swap」。",
+    "screenshots": [
+      "25_p0082_mid_drag.png",
+      "26_p0082_after_drop.png",
+      "76_p0082_mid_drag_7photo.png",
+      "77_p0082_after_drop_7photo.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve note (rd-resolve.json); original observation kept in result file."
+  },
+  {
+    "bug": "PHA262026P0083",
+    "verdict": "FIXED",
+    "summary": "Frame thumbnails in Add Layer › Frame and in the Replace frame sheet still show no photo count.",
+    "observed": "The Frame thumbnails in Add Layer › Frame and in the Replace sheet show no 「1 photo」 / 「3 photos」 text.",
+    "expected": "Each Frame panel thumbnail states its photo count (「1 photo」, 「3 photos」).",
+    "observedZh": "Add Layer › Frame 與 Replace 面板的相框縮圖都沒有標示照片數。",
+    "expectedZh": "每個相框縮圖要標示照片數（「1 photo」、「3 photos」）。",
+    "screenshots": [
+      "28_p0083_frame_sheet.png",
+      "29_p0083_frame_sheet_scrolled.png",
+      "30_p0083_replace_frame_sheet.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve note (rd-resolve.json); original observation kept in result file."
+  },
+  {
+    "bug": "PHA262026P0162",
+    "verdict": "FIXED",
+    "summary": "After Exposure 4.0 is applied, the Removal room opens on the brightened photo as it looks on the Canvas.",
+    "screenshots": [
+      "32_p0162_exposure4.png",
+      "33_p0162_canvas_after_apply.png",
+      "36_p0162_removal_room.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0076",
+    "verdict": "FIXED",
+    "summary": "‹ then Discard returns to the Template Preview of the same template.",
+    "screenshots": [
+      "40_p0076_discard_dialog.png",
+      "42_p0076_after_discard.png",
+      "78_p0076_discard_7photo.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0077",
+    "verdict": "FIXED",
+    "summary": "System Back closes the 「Discard changes?」 dialog and keeps the edits, as Keep does.",
+    "screenshots": [
+      "40_p0076_discard_dialog.png",
+      "41_p0077_after_back.png"
+    ]
+  }
+]

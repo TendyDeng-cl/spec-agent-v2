@@ -1,0 +1,10 @@
+{
+ "tr": "TR261118-0070",
+ "build": "202611181947",
+ "trNote": "Verified on the TR261118-0070 build (R5, SR PHA261029-01); the previous batch was filed on TR261113-0038.",
+ "why": {
+  "ISS-BEA-21": "Q-18 open: Design draws AI Exposure, PM DR-06 says none; the build follows PM.",
+  "ISS-BEA-22": "New v9 row TC-174: Auto + All re-runs Auto per photo instead of copying values.",
+  "ISS-BEA-23": "Design Launcher board (2026-11-18) draws a Batch Edit shortcut the build lacks (Q-15)."
+ }
+}

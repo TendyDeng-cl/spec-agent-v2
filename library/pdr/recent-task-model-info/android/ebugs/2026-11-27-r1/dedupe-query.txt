@@ -1,0 +1,69 @@
+
+3 of 9 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Recent-Task-Model-Info-R1-01] PDR-A 16.9.0 - [AIAgent][UI] Recent task: Image to Video Recent page and model tag stay dark in light mode
+      feature='Recent task'  terms=['Recent task']  searched 158 candidate(s)
+    ! 40%  closed    DRA262601-0008  PDR-A 16.0.0 - [Landscape] Image to Video: Landscape mode not kept when viewing Image to
+              shares phrase "video recent"
+    ! 40%  closed    DRA252508-0185  PDR-A 15.7.0 - [UX] Image to Video: Video titles in Recent Task page show repeated "Imag
+              shares label "image to video"
+    ! 30%  closed    DRA262601-0076  PDR-A 16.0.0 - [Google Everywhere] Image to Video: Layout not matching design when viewi
+              shares phrase "video recent"
+      40%  closed    DRA252503-0185  PDR-A 15.0.0 - [UX] Image to video : After pressing "Regenerate" to return to the Image 
+
+[Recent-Task-Model-Info-R1-02] PDR-A 16.9.0 - [AIAgent] Recent task: Closing a Text to Image item from My Artwork skips the Text to Image list
+      feature='Recent task'  terms=['Recent task']  searched 158 candidate(s)
+      no likely duplicate
+
+[Recent-Task-Model-Info-R1-03] PDR-A 16.9.0 - [AIAgent] Text to Video: ‹ on Recent tasks after Generate skips the Text to Video page
+      feature='Text to Video'  terms=['Text to Video']  searched 113 candidate(s)
+    ! 29%  closed    DRA262609P0075  PDR-A 16.7.0 - [MUI]Opening Intro(Text to Video): Localiztion of "Text to Video" is not 
+              shares label "text to video"
+    ! 29%  closed    DRA262606-0266  PDR-A 16.5.0 - [MUI] Timeline (AI Magic): "Text to Video" is not localized
+              shares label "text to video"
+    ! 29%  closed    DRA262606-0034  PDR-A 16.5.0 - Timeline (AI Magic): "Text to Video" and "Video Edit by Chat" are visuall
+              shares label "text to video"
+    ! 29%  OPEN      DRA262605-0120  PDR-A 16.4.0 - Mixpanel: No mixpanel log for "Text to Video" in "Shortcut_Produce_Tap" a
+              shares label "text to video"
+    ! 29%  closed    DRA262605-0118  PDR-A 16.4.0 - Text to Video: NSFW message shows up when first entering "Text to Video" 
+              shares label "text to video"
+    ! 29%  closed    DRA262605-0107  PDR-A 16.4.0 - Timeline (AI Magic): Incorrect order for "Text to Video" in AI Magic
+              shares label "text to video"
+    ! 29%  closed    DRA262605-0065  PDR-A 16.4.0 - Timeline(My Artwork): There is no "Text to Video" in My Artwork
+              shares label "text to video"
+    ! 29%  closed    DRA252507-0040  PDR-A 15.5.0 - [EDF][UX]Launcher: AP doesn't support "Text to Video"
+              shares label "text to video"
+      43%  closed    DRA262606-0041  PDR-A 16.5.0 - [UX] Template (Text to Video): Keyboard open allows page to scroll in Tex
+
+[Recent-Task-Model-Info-R1-04] PDR-A 16.9.0 - [AIAgent][UX] Recent task: System Back in edit mode leaves the page, not just edit mode — PM to decide
+      feature='Recent task'  terms=['Recent task']  searched 158 candidate(s)
+    ! 25%  OPEN      DRA262611P0081  PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Recent task has no ‹ and system Back exit
+              shares phrase "system back"
+    ! 25%  closed    DRA252503-0185  PDR-A 15.0.0 - [UX] Image to video : After pressing "Regenerate" to return to the Image 
+              shares label "back"
+
+[Recent-Task-Model-Info-R1-05] PDR-A 16.9.0 - [AIAgent][UX] Recent task: Tapping the model tag opens the result page — PM to decide
+      feature='Recent task'  terms=['Recent task']  searched 158 candidate(s)
+      no likely duplicate
+
+[Recent-Task-Model-Info-R1-06] PDR-A 16.9.0 - [AIAgent][UX] Text to Image (Photo Tools): Back to the editor clears the photo selection — PM to decide
+      feature='Text to Image (Photo Tools)'  terms=['Text to Image (Photo Tools)']  searched 0 candidate(s)
+      no likely duplicate
+
+[Recent-Task-Model-Info-R1-07] PDR-A 16.9.0 - [AIAgent][UI] PIP Photo Tools: Entry reads 「Text to Image」, sheet says 「AI Text to Image」 — PM to decide
+      feature='PIP Photo Tools'  terms=['PIP Photo Tools']  searched 0 candidate(s)
+      no likely duplicate
+
+[Recent-Task-Model-Info-R1-08] PDR-A 16.9.0 - [AIAgent][UX] Recent task: From a completion banner it has no ‹ and leaves to the Launcher — PM to decide
+      feature='Recent task'  terms=['Recent task']  searched 158 candidate(s)
+      no likely duplicate
+
+[Recent-Task-Model-Info-R1-09] PDR-A 16.9.0 - [AIAgent][UX] Home Menu: My Artwork opened from ☰ has no way back to the Menu — PM to decide
+      feature='Home Menu'  terms=['Home Menu']  searched 1 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 4 ticket(s) of 271 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0081  TRCreated    RD   2611091  PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Recent task has no ‹ and system Back exits to the Launcher, not the panel
+      DRA262611P0082  TRCreated    RD   2611091  PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Recent task notice reads 「1 year」 and 「Select」, not 「1 Year」 and 「Manage」
+      DRA262611P0235  NewCreated   PM   2611181  PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Empty Recent task reads 「No Generated Videos」, not 「No results found」
+      DRA262611P0245  RDResolved   RD   2611171  PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: 「View」 on a completed Recent task card is Regular, not Medium

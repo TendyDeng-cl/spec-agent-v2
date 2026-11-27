@@ -3778,3 +3778,6 @@
 2026-11-19T00:56:24.855Z logcat status
 2026-11-19T00:56:32.135Z pull-logs R1-close
 2026-11-19T00:56:34.260Z logcat stop
+2026-11-19T00:51:56.303Z file logs/R1-j-precheck-20261119-085154
+2026-11-19T00:51:57.454Z file screenshots/R1-j-phone-found.png
+2026-11-19T00:56:33.894Z file logs/R1-close-20261119-085632

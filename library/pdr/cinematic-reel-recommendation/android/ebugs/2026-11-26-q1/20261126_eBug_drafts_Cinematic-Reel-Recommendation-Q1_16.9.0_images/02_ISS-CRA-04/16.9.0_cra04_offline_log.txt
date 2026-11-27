@@ -1,0 +1,16 @@
+# PDR-A 16.9.0 (2611231), SM-A5360, logcat of PowerDirector, Wi-Fi off windows of TC-079 (10:44:40-10:45:30) and TC-078 (10:46:05-10:47:40)
+# Every network call fails; no line is logged for the photo tips pictures that stay blank (no load error, no retry).
+2026-11-26 10:45:12.486 28817 30457 E ExoPlayerImplInternal: Playback error
+2026-11-26 10:45:12.486 28817 30457 E ExoPlayerImplInternal:   h17: Source error
+2026-11-26 10:45:12.486 28817 30457 E ExoPlayerImplInternal:   Caused by: java.io.IOException: Unexpected response code for CONNECT: 502
+2026-11-26 10:46:11.327 31238 31273 D CreditSystemManager: getFeatureList, Exception: java.lang.IllegalStateException: getCreditSystemFeatureListBySID, Exception: java.io.IOException: Unexpected response code for CONNECT: 502
+2026-11-26 10:46:12.118 31238 31238 D CreditSystemManager: checkFeatureCredit, Exception: java.lang.IllegalStateException: getCreditSystemFeatureListByFeature, Exception: java.io.IOException: Unexpected response code for CONNECT: 502
+2026-11-26 10:46:28.321 31238 31815 E ExoPlayerImplInternal: Playback error
+2026-11-26 10:46:28.321 31238 31815 E ExoPlayerImplInternal:   h17: Source error
+2026-11-26 10:46:28.321 31238 31815 E ExoPlayerImplInternal:   Caused by: java.io.IOException: Unexpected response code for CONNECT: 502
+2026-11-26 10:46:49.161 31238 31924 E ExoPlayerImplInternal: Playback error
+2026-11-26 10:46:49.161 31238 31924 E ExoPlayerImplInternal:   h17: Source error
+2026-11-26 10:46:49.161 31238 31924 E ExoPlayerImplInternal:   Caused by: java.io.IOException: Unexpected response code for CONNECT: 502
+2026-11-26 10:46:53.289 31238 32001 E ExoPlayerImplInternal: Playback error
+2026-11-26 10:46:53.289 31238 32001 E ExoPlayerImplInternal:   h17: Source error
+2026-11-26 10:46:53.289 31238 32001 E ExoPlayerImplInternal:   Caused by: java.io.IOException: Unexpected response code for CONNECT: 502

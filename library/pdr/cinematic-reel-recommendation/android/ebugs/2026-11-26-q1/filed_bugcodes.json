@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0070",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611231",
+    "filed_on": "2026-11-26"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0321",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty picture boxes with no message",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:36:27",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「Cinematic Reel Creator」 on the Launcher\n3. Turn Wi-Fi off (no mobile data)\n4. Swipe the template cards to the 「Time Lapse」 card\n5. Tap 「View photo tips」 on that card\n\nResult:\nThe sheet shows its sentence and captions, but the pictures not loaded before stay empty boxes; no message or retry.\n摘要：離線時，未載入過的拍照建議圖片只顯示空白框，沒有任何提示或重試。\n{16.9.0_cra04_time_lapse_offline.jpg} {16.9.0_cra04_horror_movie_cold_offline.jpg} {16.9.0_cra04_time_lapse_back_online.jpg}\n{16.9.0_cra04_offline_log.txt}\n\nExpect Result:\nPM to decide what a sheet shows when its pictures cannot load, and when a template has no recommend_samples in the CMS.\n摘要：請 PM 決定圖片無法載入時，以及範本在 CMS 沒有 recommend_samples 時，面板應顯示什麼。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android\nRelated: open question Q-4 (Missing data); started offline, Horror Movie's 「People in Frame」 and 「Layered Depth」 also stay empty; back online every picture loads.\nSpec Link: Jira PDRA-661 description (recommendations from the CMS, 「from CMS」) -\nhttps://cyberlinkcorp.atlassian.net/browse/PDRA-661\nSpec Link: Cinematic Reel Creator Design spec (CineStory), 0820 add photo tips board (sheet with every picture) -\nhttps://www.figma.com/design/w2cTi3WTU9vGDE3laY1H1t/Cinematic-Reel-Creator--CineStory-?node-id=1106-5162\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_cra04_time_lapse_offline.jpg",
+        "16.9.0_cra04_horror_movie_cold_offline.jpg",
+        "16.9.0_cra04_time_lapse_back_online.jpg",
+        "16.9.0_cra04_offline_log.txt"
+      ],
+      "key": "Cinematic-Reel-Recommendation-Q1-02",
+      "iss": "ISS-CRA-04",
+      "feature": "Cinematic-Reel-Recommendation-Q1",
+      "problem_type": "UX"
+    }
+  ],
+  "dispositions": {
+    "ISS-CRA-03": "不開單（使用者裁示 2026-11-26：That is intended behavior；ruling recorded）"
+  }
+}

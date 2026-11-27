@@ -1,0 +1,107 @@
+{
+  "qr": "QR261125-0009",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261125-0009",
+  "tr": "TR261124-0032",
+  "template": "Standard Report (QRTemplateID=14830)",
+  "createdAt": "2026-11-25 (Asia/Taipei)",
+  "tester": "WILLY_WU",
+  "testResult": "PHD-A - Bug verification [OK=21, Fail=0]",
+  "testingDate": "2026-11-24",
+  "counts": {
+    "OK": 21,
+    "Fail": 0,
+    "leftNotYetVerified": 0
+  },
+  "rows": [
+    {
+      "bug": "PHA262026P0070",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0072",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0073",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0074",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0076",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0077",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0079",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0080",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0082",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0083",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0094",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0095",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0097",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0103",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0138",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0141",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0143",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0144",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0152",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0160",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0162",
+      "state": "OK"
+    }
+  ],
+  "readBack": "all 21 States and Reasons match qr-text.txt; Short Description, Test Result, Details, Testing Date match; Product Version / Build Day / Build No. / OS / OS Language empty as PHD-A",
+  "uploads": "none (textOnly)",
+  "notes": [
+    "P0138 verified on the build installed 2026-11-25 08:56 (taken as R11 202611241937); its Reason names that build.",
+    "Form fill: a first pass put every row on row 0 (fixed before Create by overwriting all 21 rows; read back clean)."
+  ]
+}

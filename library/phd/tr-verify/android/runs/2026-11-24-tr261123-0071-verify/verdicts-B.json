@@ -1,0 +1,13 @@
+[
+  {
+    "bug": "PHA262026P0111",
+    "verdict": "FIXED",
+    "observed": "On Free, AI Photos › AI Hair Color › Try now › Continue › the curly-haired sample portrait › Custom: the Custom panel opens as a bottom sheet with a grab handle at the top centre, no 「Custom」 title, no ︽ and no ⌄ key, and top corners rounded on both sides. No ✕ ↩ ↪ ✓ row under the panel: the panel (Style, Base Color, Highlight Color, Generate) runs down to the navigation bar and the page holds no close, undo, redo or apply element. Dragging the handle down collapses the panel: the template row, Generate and the room's ✕ ↩ ↪ ✓ row come back; with Solid and a base colour chosen, the collapsed row shows Custom selected.",
+    "expected": "No ✕ / ✓ or undo / redo row under the panel, rounded top corners, and a way to collapse it: the PM's ⌄ key or, as the Design draws (Design first, Q-17), only a grab handle.",
+    "observedZh": "Custom 面板上方為拖曳把手（無︽、無⌄、無標題），上緣兩角為圓角，面板下方已無 ✕ ↩ ↪ ✓ 列；往下拖把手可收合並套用，回到樣板列且 Custom 被選取。",
+    "expectedZh": "面板下方不應有 ✕ ✓ ↩ ↪ 列、上緣圓角，並可收合（PM 的 ⌄ 或 Design 的拖曳把手，以 Design 為準）。",
+    "shots": ["b_p0111_panel.png", "b_p0111_corners_zoom.png", "b_p0111_after_drag.png", "b_p0111_panel_set.png", "b_p0111_collapsed_set.png"],
+    "sideEffects": "Panel text (Style, Base Color, Highlight Color, style names, Generate ⬤ 6) is legible on the dark sheet; the style row and colour rows scroll sideways with the last item cut at the edge as a scroll hint; nothing else clipped. Collapsing by dragging the handle works with and without settings; the photo above the panel stays visible behind a scrim. The ✕ ↩ ↪ ✓ row now shows only with the panel collapsed (the room's own row).",
+    "other": "Corner radius measured about 35–40 px (≈13–15 dp at 420 dpi), less than the PM's 20 pt; the Design frame 894:1474 draws a flat-looking top edge, so not held against the fix. With Solid chosen the 「Highlight Color」 row stays shown greyed (R-027 / REQ-009 says hide it). After collapsing, the Custom cell keeps its wand icon and does not show the chosen colour (R-044, PM mockup open question Q-2). No generation, credits unchanged at 68."
+  }
+]

@@ -1,0 +1,20 @@
+# AI Mini Drama Android, question round Q1 (Q-18, Q-5) and its observations: dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-26
+# Pool read with `ecl_query.py bugs --text "Mini Drama" --product "PowerDirector Mobile for Android" --limit 2000`
+# (dedupe-query.txt): 488 tickets, open and closed, every Short Description read against each entry and observation.
+# ISS-AMDA-71 (Q-18, templates and the US & JP day 1 note): no ticket is about the store region or a country limit.
+#   Closest, other causes: DRA262610P0138 (NotReproducible, no templates in English) and DRA262610P0036 (Close,
+#   templates missing in German/French): app language, not store region. The (US, …) / (JP, …) template tickets
+#   DRA262610P0200 – P0204 are about preset characters on those stores, not a limit. New entry.
+# ISS-AMDA-72 (Q-5, 「Every frame is done. Ready to create your video?」): no ticket quotes the string or is about the
+#   two keys. DRA262610P0159 (PM, Close) is the full-episode card's 60 s length, quoted only as related. New entry.
+# O-1 「Created the 6-scene storyboard for After Closing.」 before Create storyboard:
+DRA262610P0174	Assigned, same OS: 「Assistant says the storyboard is created before Create storyboard is tapped」; left off the drafts (open, same OS)
+# O-4 「is ready」 banner over the drama's chat while its video card still shimmers (11:44:44):
+DRA262610P0379	NeedCodeReview, same OS: 「"is ready" banner appears while that drama's video is still generating」; left off the drafts (open, same OS)
+# TC-582 card 「Create the rest of the video (60 sec)」 (60 s, not R-075's 90 s):
+DRA262610P0159	Close (PM), same OS: 「"Create the full episode" shows 60 sec instead of 90 sec」; PM's closed ruling, not a returned bug; cited in ISS-AMDA-72
+# `ecl_query.py dedupe upload/bodies.json` (488 searched): ISS-AMDA-71 no candidate; ISS-AMDA-72 ranked DRA262610P0178
+#   (Close, 「Remove the redundant "Ready to create your characters?" header」, a characters card header, read: unrelated),
+#   P0103, P0058, DRA262610-0035, P0267 (shared words only: unrelated). The 4 open 16.9.0 tickets (P0070, P0237, P0238,
+#   P0314) read against both entries: unrelated.
+# Nothing commented on (rule 6). Nothing filed.

@@ -1,0 +1,35 @@
+[
+  {
+    "item": "E7 「Settings applied」 toast when Reuse restores Custom settings",
+    "verdict": "Works",
+    "observed": "On both entries (My AI Artwork › Image to Video category and Recent › Video), Reuse → intro → Try now → Steps → Continue opens the Custom page and 「Settings applied」 shows at once, gone within ~1.5 s. Restored: Kling 3.0, Duration 5, Standard, Background Sound Off, Start/End Off, prompt 「A person smiles and waves」 25/2500; photo empty, no inspiration selected. All settings of this video equal the room defaults, so only the prompt proves restoration.",
+    "observedZh": "兩個入口（我的 AI 作品 › Image to Video 分類、最近 › 影片）按 Reuse，經介紹頁與 Steps 後進入 Custom 頁，立刻出現「Settings applied」，約 1.5 秒內消失。還原了 Kling 3.0、5 秒、Standard、背景音效 Off、提示詞；照片未帶回、未選靈感。此影片設定皆為預設值，只有提示詞能證明有還原。",
+    "shots": ["e7_toast_category.png", "e7_toast_recent.png", "e7_cat_room.png", "e7_recent_room.png", "e7_cat_room_settings.png", "../recordings/f/e7-cont-shots.png", "../recordings/f/e7-recent-shots.png"],
+    "other": "Non-default model/duration/quality/sound restore not covered by this single generation."
+  },
+  {
+    "item": "E8 Reuse follows the standard introduction flow; leaving the room returns to Save & Share",
+    "verdict": "Works",
+    "observed": "Reuse shows the 「Image To Video」 intro sheet (Try now / Don’t show again), then 「Steps」 (Continue), then Custom, on both entries. ‹ and system Back in the reused room return to Save & Share from both entries; system Back on the intro sheet also returns to Save & Share. The room has no ✕.",
+    "observedZh": "兩個入口按 Reuse 都先出現介紹頁與 Steps 頁再進 Custom；在重用的房間按 ‹ 或系統返回都回到 Save & Share，介紹頁上按系統返回也回到 Save & Share。房間沒有 ✕。",
+    "shots": ["e7_cat_after.png", "e8_cat_steps.png", "e8_cat_back.png", "e8_cat_sysback.png", "e8_cat_intro_back.png", "e8_cat_reuse2_intro.png", "e8_recent_intro.png", "e8_recent_steps.png", "e8_recent_back.png", "e8_recent_sysback.png"],
+    "other": "R1 ISS-IR-02 (intro skipped) and ISS-IR-03 (back to My AI Artwork) no longer reproduce."
+  },
+  {
+    "item": "E9 Portrait orientation applied earlier: no brief landscape flash on entering (Reuse)",
+    "verdict": "Works",
+    "observed": "Recorded the Reuse tap from both entries (373 + 286 frames) and Continue into Custom (260 frames); every frame portrait, no rotated or landscape frame. Save & Share cross-fades into the dimmed intro with a spinner.",
+    "observedZh": "錄下兩個入口的 Reuse（373、286 格）與 Continue 進入 Custom（260 格），逐格檢查皆為直向，沒有橫向或旋轉畫面。",
+    "shots": ["../recordings/e9-reuse-category.mp4", "../recordings/e9-reuse-recent.mp4", "../recordings/e7-reuse-category-continue.mp4", "../recordings/f/e9-category-sheet.png", "../recordings/f/e9-recent-sheet.png", "../recordings/f/e9-category-zoom-5-34.png", "../recordings/f/e7-continue-sheet.png"],
+    "other": "R1 O-2 / ISS-IR-09 (1–2 rotated frames) no longer seen."
+  },
+  {
+    "item": "E10 Model-specific ImageToVideo_Reuse_Click analytics",
+    "verdict": "Works",
+    "observed": "5 Reuse taps → 5 events: `[PHD-A][Mixpanel]: ImageToVideo_Reuse_Click:{\"subscription_plan\":\"free\",\"model\":\"Model_Kling-3.0\"}` (also [Analytics] and [UMA]). No Artwork_Reuse_Click.",
+    "observedZh": "按 5 次 Reuse，記錄 5 筆 ImageToVideo_Reuse_Click，帶 model=Model_Kling-3.0；不再出現 Artwork_Reuse_Click。",
+    "shots": [],
+    "log": "logs/E-20261124-163354/logcat-live.txt",
+    "other": "Value format Model_Kling-3.0 matches ImageToVideo_Result_Generate."
+  }
+]

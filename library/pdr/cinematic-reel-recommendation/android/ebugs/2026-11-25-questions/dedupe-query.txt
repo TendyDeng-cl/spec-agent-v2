@@ -1,0 +1,94 @@
+### ecl_query.py bugs --text "Cinematic Reel" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-25)
+DRA262611P0290    NewCreated      2    PM         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+DRA262611P0289    NeedCodeReview  2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+DRA262610-0066    Close           2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UI] Cinematic Reel Creator: Horror Movie es-BR uses es description
+DRA262610-0065    Close           2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][UI] Cinematic Reel Creator: Horror Movie English description differs from sheet
+DRA262610P0179    QA Propose Won  2    PC-Art     2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] Cinematic Reel Creator (Horror Movies): The last frame sometimes turns black
+DRA262610P0166    Close           3    RD         2610142    SHERRY_LEE      PDR-A 16.8.0 - [AIFound][UI] Cinematic Reel Creator: Credit balance shows "--" after the app is restarted
+DRA262609P0076    Close           2    RD         2609231    ALLENCW_CHEN    PDR-A 16.7.0 - Opening Intro: Enter incorrect  feature room after tapping CTA button with opening intro "Text to Video/ Cinematic Reel Creator/ Video Edit by Chat"
+DRA262608-0158    Close           2    RD         2608252    SAM_CHANG       PDR-A 16.6.0 - [MUI] Launcher (Banner): ">" is missing from "Turn one photo to cinematic reel >"
+DRA262608-0140    Close           2    RD         2608241    SAM_CHANG       PDR-A 16.6.0 - Image to Video/Cinematic Reel Creator/Character Motion Swap: Animated image keeps playing after import
+DRA262608-0138    Close           2    RD         2608241    SAM_CHANG       PDR-A 16.6.0 - [Free user] Cinematic Reel Creator/AI Storytelling (Media Picker): Getty Images and iStock content can be used without restriction after tapping Try it First
+DRA262608-0061    Close           2    RD         2608132    SAM_CHANG       PDR-A 16.6.0 - [UI] Cinematic Reel Creator: Sample image is cut off on the generate page
+DRA262608-0049    Close           2    RD         2608121    ALLENCW_CHEN    PDR-A 16.6.0 - [SideEffect] Cinematic Reel Creator(Recent Task): Redundant UI elements are displayed when there are no projects in Recent Tasks
+DRA262608-0048    BugNeedReview   2    RD         2608091    ALLENCW_CHEN    PDR-A 16.6.0 - [SideEffect] Cinematic Reel Creator(Recent Task): Redundant UI elements are displayed when there are no projects in Recent Tasks
+DRA262608-0041    Close           2    RD         2608101    SAM_CHANG       PDR-A 16.6.0 - Timeline: Add Cinematic Reel Creator entry to the Photo/Photo PiP toolbar
+DRA262608-0025    NAB             3    PM         2608091    SAM_CHANG       PDR-A 16.6.0 - Opening Intro (Cinematic Reel Creator): The phone camera UI at the bottom of the demo video is not fully displayed in the first few frames
+DRA262607-0210    Close           2    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [MUI] Cinematic Reel Story(Tutorial): Description MUI is not updated
+DRA262607-0190    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN] Cinematic Reel Creator (Time Lapse): Template description is truncated
+DRA262607-0189    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/ITA/RUS/THA] Cinematic Reel Creator (One-Take Shot): Template description is truncated
+DRA262607-0188    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/FRA/THA] Cinematic Reel Creator (Handheld Camera): Template description is truncated
+DRA262607-0187    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/FRA/PTB/RUS/THA/HIN/HEB] Cinematic Reel Creator (Fast Cut): Template description is truncated
+DRA262607-0186    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/ESP/RUS/THA/HIN/ESM/CHS] Cinematic Reel Creator (Micro Cinema): Template description is truncated
+DRA262607-0185    Close           2    RD         2607272    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(Tutorial): Description doesn't follow UI guideline
+DRA262607-0184    NewCreated      2    PM         2607242    ALLENCW_CHEN    PDR-A 16.5.5 - [JPN] Cinematic Reel Creator(Template): Description is truncated
+DRA262607-0182    Close           3    RD         2607242    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(Tutorial): The tutorial incorrectly displays the topic "How to use Character Motion Swap" after changing the app language
+DRA262607-0180    BugNeedReview   2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Opening intro: Enter Video Edit by Chat after Tap CTA on Cinematic Reel Creator's opening intro
+DRA262607-0179    BugNeedReview   1    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - [MUI] Opening intro: The opening intro for Cinematic Reel Creator is only displayed when the language is set to ENG
+DRA262607-0178    Close           2    RD         2607242    SAM_CHANG       PDR-A 16.5.5 - [MUI] Open Intro (Cinematic Reel Creator): Cinematic Reel Creator shows AI Story description
+DRA262607-0177    Close           2    RD         2607241    SHIRLEY_FANG    PDR-A 16.5.5 - Cinematic Reel Creator: Tapping outside the sign-in dialog returns to the template page
+DRA262607-0176    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: When generation fails, the error message mentions editing the prompt, but users actually cannot edit the prompt.
+DRA262607-0173    Close           2    RD         2607231    SAM_CHANG       PDR-A 16.5.5 - Timeline (AI Magic): Display credit icon on Cinematic Reel Creator
+DRA262607-0171    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): NO log "Credit_Generate_Success" after generating video from Cinematic Reel Creator
+DRA262607-0169    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): from shows "motion_swap" after entering credit room from Cinematic Reel Creator
+DRA262607-0168    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): from shows "my_credits_page_motion_swap" after subscribing AP in Cinematic Reel Creator credit room
+DRA262607-0167    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): from shows "shortcut_motion_swap" and credit_not_enough_dialog shows "motion_swap" in "Monetize_Subscription_Success" when subscribing AP from credit is not enough dialog
+DRA262607-0166    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): From shows "motion_swap" in "Monetize_Credit_Appear/Monetize_Credit_Success"
+DRA262607-0164    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): NO log "CinematicReelCreator_ResultPage_Click" after tapping "Save/ Full Edit/ Add Text/ Edit Music/ Add Sticker" button in result page
+DRA262607-0162    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): NO log "Shortcut_Produce_Save" and "Shortcut_Produce_Tap" after generating video from shortcut "Cinematic Reel Creator"
+DRA262607-0161    NewCreated      2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - AI Magic: There is no entry for Cinematic Reel Creator
+DRA262607-0159    Close           2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Mixpanel(Cinematic Reel Creator): Show "(empty string)" in "Launcher_custom_shortcut -> shortcut_feature_type" after tapping "Cinematic Reel Creator"
+DRA262607-0156    Close           3    RD         2607221    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: The order of the SNS buttons in the "Share To" list does not match PDR-I
+DRA262607-0155    Close           2    RD         2607221    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: The "More", Shorts, IG Reels, and FB Reels buttons are missing from the "Share To" list
+DRA262607-0150    Close           2    RD         2607221    SAM_CHANG       PDR-A 16.5.5 - Cinematic Reel Creator: Always fails to generate with specific image (8192x5464.jpg)
+DRA262607-0146    Wont Fix        3    RD         2607221    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(handheld camera): Generation failed
+DRA262607-0131    Close           2    RD         2607201    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Generating a video using an image with a custom resolution (1290x491) fails
+DRA262607-0122    Close           2    PC-Doc     2607201    SAM_CHANG       PDR-A 16.5.5 - [PLK] Launcher (Shortcut): "Cinematic Reel Creator" is truncated in PLK
+DRA262607-0117    Close           2    PM         2607201    SAM_CHANG       PDR-A 16.5.5 - Launcher (AI-Powered Creation): Cinematic Reel Creator shows incorrect video size
+DRA262607-0113    Close           3    RD         2607201    ALLENCW_CHEN    PDR-A 16.5.5 - [HEB/ARA/FAR] Cinematic Reel Creator: Template UI is mirrored
+DRA262607-0110    Close           2    RD         2607201    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Tutorial video is not updated
+DRA262607-0106    Close           2    PM         2607171    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: One-Take Shot's demo video and souce photo are not updated
+DRA262607-0105    Close           2    RD         2607171    ALLENCW_CHEN    PDR-A 16.5.5 - [MUI] Cinematic Reel Creator: Tutorial page is not localized
+DRA262607-0097    NAB             2    RD         2607171    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator: Quick action buttons size are too small. It doesn't follow UI guideline
+DRA262607-0096    Close           2    RD         2607171    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator: "T" icon's style doesn't follow UI guideline
+DRA262607-0095    Close           2    RD         2607171    ALLENCW_CHEN    PDR-A 16.5.5 - Timeline(AI Magic): NO "Cinematic Reel Creator" in the AI Magic toolbar
+DRA262607-0088    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - Timeline(Settings): No "Cinematic Reel Creator" in timeline My Art page
+DRA262607-0084    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Tutorial doesn't close after clicking on the blank
+DRA262607-0081    Wont Fix        3    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UX] Cinematic Reel Creator: Video is not selected after tapping "Full Edit" button
+DRA262607-0080    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - My Artwork: Cinematic Reel Creator's project doesn't show in My Artwork
+DRA262607-0079    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(Result): Video thumbnail is always 9:16
+DRA262607-0078    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator: Demo video is not set gradient at the bottom. It doesn't follow UI guideline
+DRA262607-0077    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: No reaction after tapping replace button
+DRA262607-0076    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator(Recent Task): "View/ View Details/ Retry" button's shape doesn't follow UI guidleine
+DRA262607-0075    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UX] Cinematic Reel Creator: An improper download UI is shown when opening the generated result for the first time
+DRA262607-0073    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator: Style of Share to doesn't follow UI guideline
+DRA262607-0072    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Show "Retry" button after tapping "View later"
+DRA262607-0069    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator(Analyzing & Generating): An unprocessed task shows a progress ring, which does not follow the UI guideline
+DRA262607-0067    Close           2    RD         2607151    SAM_CHANG       PDR-A 16.5.5 - [UX] Cinematic Reel Creator: More Credits Needed dialog is shown instead of Sign in dialog
+DRA262607-0066    Close           2    PM         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [Portrait] Launcher(Shortcut): No entry for "Cinematic Reel Creator"
+DRA262607-0062    Close           2    RD         2607151    ALLENCW_CHEN    PDR-A 16.5.5 - [UX] Cinematic Reel Creator: Some demo videos show black screen when scrolled into view
+DRA262607-0060    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - [UX] Cinematic Reel Creator: The demo video still takes time to load upon re-entering the Cinematic Reel Creato
+DRA262607-0058    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: No audio in the result video
+DRA262607-0057    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Demo video's audio still play in analyzing page
+DRA262607-0056    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(Recent Task): Show "Tasks are stored on the cloud for 1 Year. Please download any you want to keep in local storage." and Select button when recent task is empty. It doesn't follow UI guideline
+DRA262607-0054    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - [UI] Cinematic Reel Creator(Recent Task): Showing incorrect message and missing "Create now" button when recent task is empty
+DRA262607-0052    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator(Tutorial): No reaction afte tapping "?" button
+DRA262607-0051    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - [Landscape][UX] Cinematic Reel Creator: No OSD shows "Portrait mode only" when entering
+DRA262607-0050    BugNeedReview   2    RD         2607071    ALLENCW_CHEN    PDR-A 16.5.0 - [Landscape][UX] Cinematic Reel Creator: No OSD shows "Portrait mode only" when entering
+DRA262607-0048    Close           2    RD         2607141    ALLENCW_CHEN    PDR-A 16.5.5 - Cinematic Reel Creator: Tutorial doesn't show when first time entering Cinematic Reel Creator. It doesn't follow spec
+
+77 bug(s)
+
+### ecl_query.py bugs --text "photo tips" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-25)
+DRA262611P0290    NewCreated      2    PM         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+DRA262611P0289    NeedCodeReview  2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+
+2 bug(s)
+
+### ecl_query.py bugs --text "CineStory" --product "PowerDirector Mobile for Android" --limit 300 (2026-11-25)
+DRA262609P0084    Close           2    PM         2609243    JAMIE_YEH       PDR-A 16.7.0 - Launcher: Tapping the Cinestory Animate banner opens AI Music Generator
+DRA262609P0081    Close           2    PM         2609232    SAM_CHANG       PDRA 16.7.0: Launcher (Top Banner): Built-in top banner image shows Cinestory instead of TTV
+DRA262609P0064    NeedCodeReview  2    RD         2609211    SAM_CHANG       PDR-A 16.7.0: [FAR] Launcher (Top Banner): "Cinestory" text is displayed with RTL
+
+3 bug(s)
+

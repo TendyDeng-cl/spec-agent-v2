@@ -1,0 +1,40 @@
+# Note: the 'ERROR: not found' lines below are a first attempt whose file list was passed as one argument (shell quoting); nothing was sent. The uploads after them are the real ones; files.log confirms every file on its page.
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm01_i2v_recent_light.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm01_myartwork_light.jpg
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm02_tti_preview.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm02_after_close.jpg
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm03_t2v_recent.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm03_after_back.jpg
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm04_edit_ticked.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm04_after_back.jpg
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm05_recent_tag.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm05_after_tag_tap.jpg
+  16.9.0_rtm07_pip_tools.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0357: 1 file(s) on the page
+
+ERROR: not found: recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm08_recent_from_banner.jpg recent-task-model-info/android/ebugs/2026-11-27-r1/upload/16.9.0_rtm08_after_home_icon.jpg
+  16.9.0_rtm01_i2v_recent_light.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm01_myartwork_light.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0352: 2 file(s) on the page
+  16.9.0_rtm02_tti_preview.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm02_after_close.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0353: 2 file(s) on the page
+  16.9.0_rtm03_t2v_recent.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm03_after_back.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0354: 2 file(s) on the page
+  16.9.0_rtm04_edit_ticked.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm04_after_back.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0355: 2 file(s) on the page
+  16.9.0_rtm05_recent_tag.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm05_after_tag_tap.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0356: 2 file(s) on the page
+  16.9.0_rtm08_recent_from_banner.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_rtm08_after_home_icon.jpg  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0358: 2 file(s) on the page

@@ -1,0 +1,51 @@
+{
+  "Q-1": {
+    "state": "determined",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Text to Image shows no model tag anywhere: its Recent page items (from My Artwork, the tool's history, the editor Photo / PIP Photo Tools entries) carry no model text in the page source (TC-033, TC-090, TC-109, TC-111 Pass on this point). The Design's assumption holds; no row changes."
+  },
+  "Q-2": {
+    "state": "determined",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Tasks made before the server stored the model (Image to Video Custom 1–2, Text to Video Custom 1, 11/24–11/26) show no tag line at all, no empty tag, card 120 dp; tasks of 11/26 made on 2611201 already show theirs (TC-041 Pass, O-2). The assumption holds."
+  },
+  "Q-3": {
+    "state": "determined",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Image to Video templates (Ghost Step, Breakthrough; no model picker on them) show no tag (TC-029, TC-146 Pass). The build has no Text to Video template (TC-030, TC-144 Blocked), so that half cannot arise on this build."
+  },
+  "Q-4": {
+    "state": "not-reached",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "No model name is long enough to need the 「…」 cut on the Sony even at font scale 1.3 and display size 540 dpi: 「Gemini Omni Flash 1.1」 fits on one line clear of 「View」 (TC-027, TC-028 Pass, O-6). The maximum width stays open until a longer name or a narrower phone (or a larger font on another device) shows the cut."
+  },
+  "Q-5": {
+    "state": "filed",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "System Back in edit mode leaves the whole Recent page (nothing deleted) instead of closing edit mode like 「Cancel」 (TC-045 and 12 entry rows Fail question). Drafted to PM as ISS-RTM-04 (ebugs/2026-11-27-r1), filed DRA262611P0355 on TR261125-0064 (2026-11-27).",
+    "codes": [
+      "DRA262611P0355"
+    ]
+  },
+  "Q-9": {
+    "state": "determined",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Editor › Global › AI Magic › Image to Video / Text to Video / Text to Image open the same tools with the same Recent tasks (every task of the account) and tags; a task generated there gets its model's tag (Custom 19 Vidu Q2, Custom 13 Wan 2.7); the result page offers no 「Add to Timeline」 and the project stays unchanged; each ‹ goes back one step to the editor (TC-093 – TC-106), except Text to Video's ‹ after Generate, which skips the tool page (TC-101, a defect drafted as ISS-RTM-03, also from Home)."
+  },
+  "Q-10": {
+    "state": "filed",
+    "by": "R1 (2026-11-26-r1-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Both entries are in the build and open the same Text to Image tool and Recent tasks with no tag (TC-107, TC-108, TC-111, TC-112). Leaving the tool returns to the editor with the photo unchanged and no longer selected (TC-109, TC-110, TC-113, TC-114), drafted to PM as ISS-RTM-06, a same-OS duplicate of AIGC Watermark ISS-AWA-24, filed as DRA262611P0345; the PIP entry is named 「Text to Image」, not the sheet's 「AI Text to Image」 (TC-111), drafted to PM as ISS-RTM-07 (ebugs/2026-11-27-r1), filed DRA262611P0357 on TR261125-0064 (2026-11-27).",
+    "codes": [
+      "DRA262611P0345",
+      "DRA262611P0357"
+    ]
+  }
+}

@@ -1,0 +1,1614 @@
+﻿﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-001,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Horror Movie template, follow this advice:」 with 「Horror Movie」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「People in Frame」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Horror Movie. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-002,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the template page header (‹, credit pill, ?, history) stays visible behind the dim
+Step 2: the sheet reads 「For best results with the Micro Cinema template, follow this advice:」 with 「Micro Cinema」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P1,"R-001, R-002, R-003, R-006, R-007, R-008, R-012, R-011, R-015","CMS › Recommendation row Micro_Cinema. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD). Design 0820 add photo tips draws this template.",unchanged,
+TC-003,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the One-Take Shot template, follow this advice:」 with 「One-Take Shot」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row One_Take_Shot. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-004,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Time Lapse template, follow this advice:」 with 「Time Lapse」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Visible Sky」 and 「Cityscape or Landscape」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Time_Lapse. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-005,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Handheld Camera template, follow this advice:」 with 「Handheld Camera」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Layered Depth」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Handheld_Camera. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-006,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Fast Cut template, follow this advice:」 with 「Fast Cut」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Sense of Motion」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Fast_Cut. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-007,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The 「Micro Cinema」 card in view","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the same card again","Step 2: the sheet closes and the dim is gone
+Step 2: the template page shows the 「Micro Cinema」 card, as before step 1
+Step 3: the same Micro Cinema tips sheet opens again",P1,"R-010, R-003",Only 「Got it」 is drawn as a way to close (Q-3).,unchanged,
+TC-008,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The Micro Cinema photo tips sheet open (its 「View photo tips」 chip)","1. Swipe the 「Avoid」 row left
+2. Swipe it back right","Before step 1: the third Avoid item runs past the right edge of the sheet
+Step 1: 「Extreme Close-up」 comes fully into view with its ⊗ badge and caption
+Step 1: the 「Recommendation」 row does not move
+Step 2: 「Flat Composition」 is back at the left edge",P2,R-009,Design draws the third Avoid item cut off at the right edge; whether the row scrolls is not written (Q-5).,unchanged,
+TC-020,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The Micro Cinema photo tips sheet open (its chip)",Press system Back,"The sheet closes and the template page shows the 「Micro Cinema」 card
+The app does not leave Cinematic Reel Creator",P2,R-016,System back on every sheet (team rule 2026-10-28). Design draws only 「Got it」 (Q-3): assumed to act like it.,unchanged,
+TC-009,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Tap 「View photo tips」 on the 「Handheld Camera」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Fast Cut」 card","Step 1: 「Rich Visual Details」 shows the general Rich Visual Details picture
+Step 3: 「Rich Visual Details」 shows a different picture, the one made for Fast Cut",P3,R-013,CMS picture list: 「Rich Visual Details (畫面細節豐富) for Fast Cut」 is its own picture. Compare the two screenshots.,unchanged,
+TC-022,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English (Android Settings › Apps › PowerDirector › Language; run: launch --lang en-US)
+3. Cinematic Reel Creator open on its template page","1. Tap 「View photo tips」 on the 「Horror Movie」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Micro Cinema」 card
+4. Tap 「Got it」
+5. Tap 「View photo tips」 on the 「Fast Cut」 card
+6. Tap 「Got it」
+7. Tap 「View photo tips」 on the 「One-Take Shot」 card
+8. Tap 「Got it」
+9. Tap 「View photo tips」 on the 「Time Lapse」 card
+10. Tap 「Got it」
+11. Tap 「View photo tips」 on the 「Handheld Camera」 card
+12. Tap 「Got it」","Steps 1, 3, 5, 7, 9, 11: each item's picture is the EN picture beside the same item in Cinestory CMS › Recommendation › 「Pic Link」 (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Steps 1, 3, 5, 7, 9, 11: an item that appears on several templates shows the same picture on each, except Fast Cut's 「Rich Visual Details」 (its own 「for Fast Cut」 picture)
+Steps 1, 3, 5, 7, 9, 11: no picture is blank, broken, stretched or a placeholder",P2,"R-034, R-013",TR261019-014 「Thumbnail」 link = Cinestory CMS gid 1744053327 (Recommendation). 14 items (#54–67): compare by eye with the saved sheet image.,unchanged,
+TC-010,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Horror Movie template, follow this advice:」
+Step 3: 「Recommendation」 lists 「People in Frame」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-011,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Micro Cinema template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P1,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-012,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the One-Take Shot template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-013,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Time Lapse template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Visible Sky」 and 「Cityscape or Landscape」
+Step 3: 「Avoid」 lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-014,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Handheld Camera template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Layered Depth」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-015,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Fast Cut template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Sense of Motion」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-016,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Add Media opened from the 「Micro Cinema」 card (「Import a Photo」), no photo picked","1. Tap 「?」 in the Add Media header
+2. Tap 「Got it」","Step 2: the sheet closes and Add Media is shown again
+Step 2: Add Media keeps its tab (Recents) and no photo is picked",P2,"R-004, R-010",PM-only: no Design frame yet (Q-1).,unchanged,
+TC-021,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Add Media opened from the 「Micro Cinema」 card, its photo tips sheet open (「?」)",Press system Back,"The sheet closes and Add Media is shown again
+No photo is picked",P2,"R-016, R-004",System back on every sheet (team rule 2026-10-28). PM-only entry (Q-1).,unchanged,
+TC-023,Language,"1. PowerDirector signed in on the test account
+2. App language English (Android Settings › Apps › PowerDirector › Language; run: launch --lang en-US)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horror Movie」 with the description 「Eerie lights and a scary atmosphere. One photo becomes a horror movie moment.」
+Step 2: card 2 reads 「Micro Cinema」 with the description 「Dreamy close-ups turn a single image into a poetic cinematic video.」
+Step 2: card 3 reads 「Fast Cut」 with the description 「Bold fast cuts and stylish pacing. Turn one photo into a modern, high-impact cinematic short.」
+Step 2: card 4 reads 「One-Take Shot」 with the description 「A seamless slow camera reveal. One photo becomes a smooth cinematic camera move.」
+Step 2: card 5 reads 「Time Lapse」 with the description 「Time-lapse motion captures the passage of time. Watch still moments come alive.」
+Step 2: card 6 reads 「Handheld Camera」 with the description 「Handheld camera motion with focus shifts. One photo becomes a heartfelt cinematic moment.」
+Step 2: the cards come in this order: 「Horror Movie」, 「Micro Cinema」, 「Fast Cut」, 「One-Take Shot」, 「Time Lapse」, 「Handheld Camera」
+Step 2: every name and description is whole, not cut off and not garbled",P2,"R-029, R-030, R-031","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column en; › Template Description Localization rows 2–7 column en. If the app's language list has no English, record Blocked (test-data) and name the list. Restore English after the language block.",unchanged,
+TC-024,Language,"1. PowerDirector signed in on the test account
+2. App language 繁體中文 (台灣) (Android Settings › Apps › PowerDirector › Language; run: launch --lang zh-Hant-TW)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「恐怖電影」 with the description 「詭異燈光與陰森氛圍，一張照片化身恐怖電影場景。」
+Step 2: card 2 reads 「微電影畫境」 with the description 「夢幻特寫勾勒動人氛圍，讓一張照片化身詩意電影短片。」
+Step 2: card 3 reads 「快速剪輯」 with the description 「俐落快剪搭配時尚節奏，讓照片變身吸睛電影短片。」
+Step 2: card 4 reads 「一鏡到底」 with the description 「流暢的慢速鏡頭推進，讓照片化為電影感運鏡畫面。」
+Step 2: card 5 reads 「手持相機」 with the description 「手持鏡頭與景深變化，讓照片呈現真摯動人的電影時刻。」
+Step 2: card 6 reads 「縮時影片」 with the description 「縮時動態刻畫時間流轉，讓靜止畫面展現生命力。」
+Step 2: the cards come in this order: 「恐怖電影」, 「微電影畫境」, 「快速剪輯」, 「一鏡到底」, 「手持相機」, 「縮時影片」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P2,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」 (by app language, user 2026-11-25); › Template Name Localization column cht; › Template Description Localization rows 2–7 column cht. If the app's language list has no 繁體中文 (台灣), record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in CHT, checked on this walk instead of a second walk per language"
+TC-017,Language,"1. PowerDirector signed in on the test account
+2. App language 繁體中文 (台灣) (Android Settings › Apps › PowerDirector › Language; run: launch --lang zh-Hant-TW)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「恐怖電影」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「微電影畫境」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「快速剪輯」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「一鏡到底」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持相機」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「縮時影片」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「恐怖電影」
+Step 1: under the first heading: 「畫面含有人物」, 「具前中後景層次」
+Step 1: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「微電影畫境」
+Step 3: under the first heading: 「中距離取景」, 「畫面視覺豐富」
+Step 3: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「快速剪輯」
+Step 5: under the first heading: 「畫面具動態感」, 「畫面視覺豐富」
+Step 5: under the second heading: 「靜態單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「一鏡到底」
+Step 7: under the first heading: 「中距離取景」, 「具前中後景層次」
+Step 7: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持相機」
+Step 9: under the first heading: 「具前中後景層次」, 「畫面視覺豐富」
+Step 9: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「縮時影片」
+Step 11: under the first heading: 「有可見天空」, 「城市或風景」
+Step 11: under the second heading: 「人像為主體」, 「室內近景」, 「過度近景」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P2,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column CHT (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the 繁體中文 (台灣) cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in CHT, checked on this walk instead of a second walk per language"
+TC-025,Language,"1. PowerDirector signed in on the test account
+2. App language 简体中文 (Android Settings › Apps › PowerDirector › Language; run: launch --lang zh-Hans-CN)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「恐怖电影」 with the description 「诡异灯光与恐怖氛围，一张照片化为恐怖电影场景。」
+Step 2: card 2 reads 「微影院」 with the description 「梦幻特写勾勒动人氛围，让一张照片化身诗意电影短片。」
+Step 2: card 3 reads 「快速剪辑」 with the description 「俐落快剪搭配时尚节奏，让照片变身吸睛电影短片。」
+Step 2: card 4 reads 「一镜到底」 with the description 「流畅的慢速镜头推进，让照片化为电影感运镜画面」
+Step 2: card 5 reads 「手持相机」 with the description 「手持镜头与景深变化，让照片呈现真挚动人的电影时刻。」
+Step 2: card 6 reads 「延时摄影」 with the description 「缩时动态刻画时间流转，让静止画面展现生命力。」
+Step 2: the cards come in this order: 「恐怖电影」, 「微影院」, 「快速剪辑」, 「一镜到底」, 「手持相机」, 「延时摄影」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」 (by app language, user 2026-11-25); › Template Name Localization column chs; › Template Description Localization rows 2–7 column chs. If the app's language list has no 简体中文, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in CHS, checked on this walk instead of a second walk per language"
+TC-026,Language,"1. PowerDirector signed in on the test account
+2. App language 简体中文 (Android Settings › Apps › PowerDirector › Language; run: launch --lang zh-Hans-CN)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「恐怖电影」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「微影院」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「快速剪辑」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「一镜到底」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持相机」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「延时摄影」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「恐怖电影」
+Step 1: under the first heading: 「画面含有人物」, 「具前中后景层次」
+Step 1: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「微影院」
+Step 3: under the first heading: 「中距离取景」, 「画面视觉丰富」
+Step 3: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「快速剪辑」
+Step 5: under the first heading: 「画面具动态感」, 「画面视觉丰富」
+Step 5: under the second heading: 「静态单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「一镜到底」
+Step 7: under the first heading: 「中距离取景」, 「具前中后景层次」
+Step 7: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持相机」
+Step 9: under the first heading: 「具前中后景层次」, 「画面视觉丰富」
+Step 9: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「延时摄影」
+Step 11: under the first heading: 「有可见天空」, 「城市或风景」
+Step 11: under the second heading: 「人像为主体」, 「室内近景」, 「过度近景」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column CHS (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the 简体中文 cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in CHS, checked on this walk instead of a second walk per language"
+TC-027,Language,"1. PowerDirector signed in on the test account
+2. App language 日本語 (Android Settings › Apps › PowerDirector › Language; run: launch --lang ja-JP)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「ホラー映画」 with the description 「不気味な光と恐ろしい雰囲気。1枚の写真がホラー映画のワンシーンに。」
+Step 2: card 2 reads 「マイクロシネマ」 with the description 「夢のようなクローズアップで画像を幻想的な映像に。」
+Step 2: card 3 reads 「ファストカット」 with the description 「大胆なカットと軽快なテンポで画像を印象的な映画風ショート動画に。」
+Step 2: card 4 reads 「ワンテイク」 with the description 「なめらかなカメラワークで画像を映画のような映像に。」
+Step 2: card 5 reads 「手持ちカメラ」 with the description 「手持ちカメラ風の動きで画像を心に響く映画のワンシーンに。」
+Step 2: card 6 reads 「タイムラプス」 with the description 「タイムラプスで時の流れを表現。静止画が動き出します。」
+Step 2: the cards come in this order: 「ホラー映画」, 「マイクロシネマ」, 「ファストカット」, 「ワンテイク」, 「手持ちカメラ」, 「タイムラプス」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P2,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」 (by app language, user 2026-11-25); › Template Name Localization column ja; › Template Description Localization rows 2–7 column ja. If the app's language list has no 日本語, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in JPN, checked on this walk instead of a second walk per language"
+TC-018,Language,"1. PowerDirector signed in on the test account
+2. App language 日本語 (Android Settings › Apps › PowerDirector › Language; run: launch --lang ja-JP)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「ホラー映画」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「マイクロシネマ」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「ファストカット」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「ワンテイク」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持ちカメラ」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「タイムラプス」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「ホラー映画」
+Step 1: under the first heading: 「フレーム内に人物」, 「奥行きのある構図」
+Step 1: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「マイクロシネマ」
+Step 3: under the first heading: 「中距離の構図」, 「細部が多い」
+Step 3: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「ファストカット」
+Step 5: under the first heading: 「躍動感」, 「細部が多い」
+Step 5: under the second heading: 「静的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「ワンテイク」
+Step 7: under the first heading: 「中距離の構図」, 「奥行きのある構図」
+Step 7: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持ちカメラ」
+Step 9: under the first heading: 「奥行きのある構図」, 「細部が多い」
+Step 9: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「タイムラプス」
+Step 11: under the first heading: 「空が見える」, 「街並みまたは風景」
+Step 11: under the second heading: 「人物がメイン」, 「室内でのクローズアップ」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P2,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column JPN (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the 日本語 cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in JPN, checked on this walk instead of a second walk per language"
+TC-028,Language,"1. PowerDirector signed in on the test account
+2. App language Español (España) (Android Settings › Apps › PowerDirector › Language; run: launch --lang es-ES)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Película de terror」 with the description 「Luces tétricas y ambiente inquietante. Una foto se vuelve terror.」
+Step 2: card 2 reads 「Microcine」 with the description 「Primeros planos oníricos: una imagen se vuelve un video cinematográfico.」
+Step 2: card 3 reads 「Recorte rápido」 with the description 「Cortes rápidos y ritmo elegante. Transforma tu foto en un corto impactante.」
+Step 2: card 4 reads 「Toma única」 with the description 「Revelado lento y fluido: una foto pasa a movimiento cinematográfico.」
+Step 2: card 5 reads 「Time lapse」 with the description 「El time-lapse muestra el paso del tiempo. Observa instantes cobrar vida.」
+Step 2: card 6 reads 「Cámara en mano」 with the description 「Cámara en mano con cambios de foco; una foto se vuelve cine emotivo」
+Step 2: the cards come in this order: 「Película de terror」, 「Microcine」, 「Recorte rápido」, 「Toma única」, 「Time lapse」, 「Cámara en mano」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column es; › Template Description Localization rows 2–7 column es. If the app's language list has no Español (España), record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in ESP, checked on this walk instead of a second walk per language"
+TC-029,Language,"1. PowerDirector signed in on the test account
+2. App language Español (España) (Android Settings › Apps › PowerDirector › Language; run: launch --lang es-ES)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Película de terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcine」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Recorte rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Toma única」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Cámara en mano」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Película de terror」
+Step 1: under the first heading: 「Personas en el encuadre」, 「Profundidad en capas」
+Step 1: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcine」
+Step 3: under the first heading: 「Encuadre a media distancia」, 「Detalles visuales ricos」
+Step 3: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Recorte rápido」
+Step 5: under the first heading: 「Sensación de movimiento」, 「Detalles visuales ricos」
+Step 5: under the second heading: 「Composición estática」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Toma única」
+Step 7: under the first heading: 「Encuadre a media distancia」, 「Profundidad en capas」
+Step 7: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time lapse」
+Step 9: under the first heading: 「Cielo visible」, 「Paisaje urbano o paisaje natural」
+Step 9: under the second heading: 「Retrato como sujeto」, 「Primer plano interior」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Cámara en mano」
+Step 11: under the first heading: 「Profundidad en capas」, 「Detalles visuales ricos」
+Step 11: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column ESP (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Español (España) cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in ESP, checked on this walk instead of a second walk per language"
+TC-030,Language,"1. PowerDirector signed in on the test account
+2. App language 한국어 (Android Settings › Apps › PowerDirector › Language; run: launch --lang ko-KR)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「공포 영화」 with the description 「섬뜩한 불빛과 오싹한 분위기. 사진 한 장이 공포 영화의 한 장면으로.」
+Step 2: card 2 reads 「마이크로 시네마」 with the description 「몽환적 클로즈업으로 이미지를 시적인 영화로」
+Step 2: card 3 reads 「빠름 컷」 with the description 「대담한 컷, 세련된 템포—사진을 강렬한 시네마틱 쇼츠로」
+Step 2: card 4 reads 「원테이크 촬영」 with the description 「사진이 부드럽게 펼쳐지는 느린 시네마틱 카메라 연출」
+Step 2: card 5 reads 「휴대용 카메라」 with the description 「핸드헬드 흔들림과 초점 전환으로 사진이 감성적인 시네마틱 순간이 됩니다.」
+Step 2: card 6 reads 「타임랩스」 with the description 「타임랩스가 시간의 흐름을 담습니다. 정지된 순간이 살아납니다.」
+Step 2: the cards come in this order: 「공포 영화」, 「마이크로 시네마」, 「빠름 컷」, 「원테이크 촬영」, 「휴대용 카메라」, 「타임랩스」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」 (by app language, user 2026-11-25); › Template Name Localization column ko; › Template Description Localization rows 2–7 column ko. If the app's language list has no 한국어, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in KOR, checked on this walk instead of a second walk per language"
+TC-031,Language,"1. PowerDirector signed in on the test account
+2. App language 한국어 (Android Settings › Apps › PowerDirector › Language; run: launch --lang ko-KR)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「공포 영화」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「마이크로 시네마」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「빠름 컷」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「원테이크 촬영」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「휴대용 카메라」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「타임랩스」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「공포 영화」
+Step 1: under the first heading: 「프레임 안에 사람」, 「레이어별 깊이」
+Step 1: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「마이크로 시네마」
+Step 3: under the first heading: 「중간 거리 구도」, 「풍부한 시각적 세부사항」
+Step 3: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「빠름 컷」
+Step 5: under the first heading: 「모션 감지」, 「풍부한 시각적 세부사항」
+Step 5: under the second heading: 「정적 구도」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「원테이크 촬영」
+Step 7: under the first heading: 「중간 거리 구도」, 「레이어별 깊이」
+Step 7: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「휴대용 카메라」
+Step 9: under the first heading: 「레이어별 깊이」, 「풍부한 시각적 세부사항」
+Step 9: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「타임랩스」
+Step 11: under the first heading: 「선명한 하늘」, 「도시 또는 풍경」
+Step 11: under the second heading: 「인물이 주제인 경우」, 「실내 클로즈업」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column KOR (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the 한국어 cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in KOR, checked on this walk instead of a second walk per language"
+TC-032,Language,"1. PowerDirector signed in on the test account
+2. App language Deutsch (Android Settings › Apps › PowerDirector › Language; run: launch --lang de-DE)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horrorfilm」 with the description 「Unheimliche Lichter, gruselige Stimmung. Foto wird Horror.」
+Step 2: card 2 reads 「Mikro-Kino」 with the description 「Träumerische Nahaufnahmen verwandeln ein Bild in ein poetisches Filmvideo」
+Step 2: card 3 reads 「Fast Cut」 with the description 「Markante, schnelle Schnitt und stylisches Pacing. Ein Foto wird zum modernen Kurzfilm.」
+Step 2: card 4 reads 「One-Take-Aufnahme」 with the description 「Nahtloser langsamer Schwenk: Ein Foto wird zur kinoreifen Kamerafahrt.」
+Step 2: card 5 reads 「Zeitraffer」 with the description 「Zeitraffer zeigt den Zeitverlauf. Statische Momente werden lebendig.」
+Step 2: card 6 reads 「Handheld-Kamera」 with the description 「Handkamera mit Fokuswechseln verwandelt ein Foto in einen filmischen Moment」
+Step 2: the cards come in this order: 「Horrorfilm」, 「Mikro-Kino」, 「Fast Cut」, 「One-Take-Aufnahme」, 「Zeitraffer」, 「Handheld-Kamera」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column de; › Template Description Localization rows 2–7 column de. If the app's language list has no Deutsch, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in DEU, checked on this walk instead of a second walk per language"
+TC-033,Language,"1. PowerDirector signed in on the test account
+2. App language Deutsch (Android Settings › Apps › PowerDirector › Language; run: launch --lang de-DE)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Horrorfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro-Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Fast Cut」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「One-Take-Aufnahme」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Zeitraffer」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Handheld-Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Horrorfilm」
+Step 1: under the first heading: 「Personen im Bild」, 「Räumliche Tiefe」
+Step 1: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro-Kino」
+Step 3: under the first heading: 「Motiv mit mittlerem Abstand」, 「Viele visuelle Details」
+Step 3: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Fast Cut」
+Step 5: under the first heading: 「Bewegungsintensität」, 「Viele visuelle Details」
+Step 5: under the second heading: 「Statische Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「One-Take-Aufnahme」
+Step 7: under the first heading: 「Motiv mit mittlerem Abstand」, 「Räumliche Tiefe」
+Step 7: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Zeitraffer」
+Step 9: under the first heading: 「Sichtbarer Himmel」, 「Stadtbild oder Landschaft」
+Step 9: under the second heading: 「Porträt als Motiv」, 「Nahaufnahme (innen)」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Handheld-Kamera」
+Step 11: under the first heading: 「Räumliche Tiefe」, 「Viele visuelle Details」
+Step 11: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column DEU (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Deutsch cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in DEU, checked on this walk instead of a second walk per language"
+TC-034,Language,"1. PowerDirector signed in on the test account
+2. App language Français (Android Settings › Apps › PowerDirector › Language; run: launch --lang fr-FR)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film d'horreur」 with the description 「Lueurs inquiétantes, ambiance effrayante. Une photo vire à l'horreur.」
+Step 2: card 2 reads 「Micro Cinéma」 with the description 「Des gros plans oniriques transforment une photo en vidéo poétique.」
+Step 2: card 3 reads 「Découpe Rapide」 with the description 「Montage rapide, rythme dynamique. Une photo devient un clip percutant.」
+Step 2: card 4 reads 「Prise Unique」 with the description 「Un lent mouvement de caméra, fluide. Une photo devient une scène de cinéma.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Un time-lapse capture le temps qui passe. Des instants figés prennent vie.」
+Step 2: card 6 reads 「Caméra portable」 with the description 「Une caméra vivante, à l'épaule, capture un instant chargé d'émotion.」
+Step 2: the cards come in this order: 「Film d'horreur」, 「Micro Cinéma」, 「Découpe Rapide」, 「Prise Unique」, 「Time-lapse」, 「Caméra portable」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column fr; › Template Description Localization rows 2–7 column fr. If the app's language list has no Français, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in FRA, checked on this walk instead of a second walk per language"
+TC-035,Language,"1. PowerDirector signed in on the test account
+2. App language Français (Android Settings › Apps › PowerDirector › Language; run: launch --lang fr-FR)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Film d'horreur」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Micro Cinéma」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Découpe Rapide」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Prise Unique」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Caméra portable」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film d'horreur」
+Step 1: under the first heading: 「Personnes dans le cadre」, 「Profondeur Multi-Plans」
+Step 1: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Micro Cinéma」
+Step 3: under the first heading: 「Cadrage à distance moyenne」, 「Détails visuels riches」
+Step 3: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Découpe Rapide」
+Step 5: under the first heading: 「Sens du mouvement」, 「Détails visuels riches」
+Step 5: under the second heading: 「Composition statique」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Prise Unique」
+Step 7: under the first heading: 「Cadrage à distance moyenne」, 「Profondeur Multi-Plans」
+Step 7: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Ciel visible」, 「Paysage urbain ou Paysage」
+Step 9: under the second heading: 「Portrait comme sujet」, 「Gros Plan Intérieur」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Caméra portable」
+Step 11: under the first heading: 「Profondeur Multi-Plans」, 「Détails visuels riches」
+Step 11: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column FRA (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Français cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in FRA, checked on this walk instead of a second walk per language"
+TC-036,Language,"1. PowerDirector signed in on the test account
+2. App language Italiano (Android Settings › Apps › PowerDirector › Language; run: launch --lang it-IT)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Horror」 with the description 「Luci inquietanti e atmosfera cupa. Una foto diventa horror.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Primi piani da sogno trasformano una singola foto in un video poetico.」
+Step 2: card 3 reads 「Taglio Veloce」 with the description 「Tagli decisi e rapidi, ritmo stiloso. Una foto diventa un corto d'impatto.」
+Step 2: card 4 reads 「Singola Ripresa」 with the description 「Inquadratura a scoprire: da una foto a un movimento di videocamera fluido.」
+Step 2: card 5 reads 「Temporizzata」 with the description 「Il time-lapse cattura il passare del tempo: gli scatti prendono vita.」
+Step 2: card 6 reads 「Videocamera Manuale」 with the description 「Videocamera manuale con cambi di messa a fuoco: uno scatto diventa cinema.」
+Step 2: the cards come in this order: 「Film Horror」, 「Microcinema」, 「Taglio Veloce」, 「Singola Ripresa」, 「Temporizzata」, 「Videocamera Manuale」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column it; › Template Description Localization rows 2–7 column it. If the app's language list has no Italiano, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in ITA, checked on this walk instead of a second walk per language"
+TC-037,Language,"1. PowerDirector signed in on the test account
+2. App language Italiano (Android Settings › Apps › PowerDirector › Language; run: launch --lang it-IT)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Film Horror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Taglio Veloce」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Singola Ripresa」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Temporizzata」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Videocamera Manuale」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Horror」
+Step 1: under the first heading: 「Persone nell'inquadratura」, 「Profondità Stratificata」
+Step 1: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Inquadratura a Distanza Media」, 「Ricchi Dettagli」
+Step 3: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Taglio Veloce」
+Step 5: under the first heading: 「Sensazione di Movimento」, 「Ricchi Dettagli」
+Step 5: under the second heading: 「Composizione Statica」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Singola Ripresa」
+Step 7: under the first heading: 「Inquadratura a Distanza Media」, 「Profondità Stratificata」
+Step 7: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Temporizzata」
+Step 9: under the first heading: 「Cielo Visibile」, 「Paesaggio Urbano o Non」
+Step 9: under the second heading: 「Ritratto come Soggetto」, 「Primo Piano in Interni」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Videocamera Manuale」
+Step 11: under the first heading: 「Profondità Stratificata」, 「Ricchi Dettagli」
+Step 11: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column ITA (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Italiano cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in ITA, checked on this walk instead of a second walk per language"
+TC-038,Language,"1. PowerDirector signed in on the test account
+2. App language Русский (Android Settings › Apps › PowerDirector › Language; run: launch --lang ru-RU)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Фильм ужасов」 with the description 「Жуткие огни и пугающая атмосфера. Фото превращается в сцену фильма ужасов.」
+Step 2: card 2 reads 「Микро-кино」 with the description 「Мечтательные крупные планы создают кинематографичный сюжет. Поэтическое видео — из одного кадра.」
+Step 2: card 3 reads 「Быстрая Нарезка」 with the description 「Смелые быстрые нарезки и стильный ритм. Превратите фото в современное кинематографичное мини-видео.」
+Step 2: card 4 reads 「Снимок за один дубль」 with the description 「Бесшовное замедленное появление камеры — одна фотография превращается в плавное кинодвижение.」
+Step 2: card 5 reads 「Таймлапс」 with the description 「Таймлапс запечатлевает ход времени. Смотрите, как оживают застывшие моменты.」
+Step 2: card 6 reads 「Ручная камера」 with the description 「Ручная камера со сменой фокуса. Одна фотография — трогательный кинематографичный кадр.」
+Step 2: the cards come in this order: 「Фильм ужасов」, 「Микро-кино」, 「Быстрая Нарезка」, 「Снимок за один дубль」, 「Таймлапс」, 「Ручная камера」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column ru; › Template Description Localization rows 2–7 column ru. If the app's language list has no Русский, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in RUS, checked on this walk instead of a second walk per language"
+TC-039,Language,"1. PowerDirector signed in on the test account
+2. App language Русский (Android Settings › Apps › PowerDirector › Language; run: launch --lang ru-RU)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Фильм ужасов」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Микро-кино」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Быстрая Нарезка」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Снимок за один дубль」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Таймлапс」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Ручная камера」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Фильм ужасов」
+Step 1: under the first heading: 「Люди в кадре」, 「Глубина по слоям」
+Step 1: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Микро-кино」
+Step 3: under the first heading: 「Кадр среднего плана」, 「Богатая визуальная детализация」
+Step 3: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Быстрая Нарезка」
+Step 5: under the first heading: 「Наличие движения」, 「Богатая визуальная детализация」
+Step 5: under the second heading: 「Статическая композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Снимок за один дубль」
+Step 7: under the first heading: 「Кадр среднего плана」, 「Глубина по слоям」
+Step 7: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Таймлапс」
+Step 9: under the first heading: 「Видимое небо」, 「Городской пейзаж или Ландшафт」
+Step 9: under the second heading: 「Портрет как объект」, 「Крупный план в помещении」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Ручная камера」
+Step 11: under the first heading: 「Глубина по слоям」, 「Богатая визуальная детализация」
+Step 11: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column RUS (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Русский cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in RUS, checked on this walk instead of a second walk per language"
+TC-040,Language,"1. PowerDirector signed in on the test account
+2. App language Português (Brasil) (Android Settings › Apps › PowerDirector › Language; run: launch --lang pt-BR)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Filme de Terror」 with the description 「Luzes sinistras e atmosfera assustadora. Uma foto vira uma cena de filme de terror.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Close-ups sonhadores constroem uma narrativa cinematográfica. Um vídeo poético surge de uma imagem.」
+Step 2: card 3 reads 「Recorte Rápido」 with the description 「Cortes rápidos e ousados. Ritmo elegante. Transforme uma foto em um curta cinematográfico impactante」
+Step 2: card 4 reads 「Foto Em Uma Única Tomada」 with the description 「Revelação lenta e contínua da câmera. Uma foto vira um movimento cinematográfico e suave.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Time-lapse captura a passagem do tempo. Veja momentos estáticos ganharem vida.」
+Step 2: card 6 reads 「Câmera Portátil」 with the description 「Movimento de câmera na mão com mudanças de foco. Uma foto vira um momento cinematográfico comovente.」
+Step 2: the cards come in this order: 「Filme de Terror」, 「Microcinema」, 「Recorte Rápido」, 「Foto Em Uma Única Tomada」, 「Time-lapse」, 「Câmera Portátil」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column pt; › Template Description Localization rows 2–7 column pt. If the app's language list has no Português (Brasil), record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in PTB, checked on this walk instead of a second walk per language"
+TC-041,Language,"1. PowerDirector signed in on the test account
+2. App language Português (Brasil) (Android Settings › Apps › PowerDirector › Language; run: launch --lang pt-BR)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Filme de Terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Recorte Rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Foto Em Uma Única Tomada」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Câmera Portátil」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Filme de Terror」
+Step 1: under the first heading: 「Pessoas no quadro」, 「Profundidade em Camadas」
+Step 1: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Enquadramento de Distância Média」, 「Detalhes Visuais Ricos」
+Step 3: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Recorte Rápido」
+Step 5: under the first heading: 「Presença de Movimento」, 「Detalhes Visuais Ricos」
+Step 5: under the second heading: 「Composição Estática」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Foto Em Uma Única Tomada」
+Step 7: under the first heading: 「Enquadramento de Distância Média」, 「Profundidade em Camadas」
+Step 7: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Céu Visível」, 「Paisagem Urbana ou Paisagem」
+Step 9: under the second heading: 「Retrato como Sujeito」, 「Plano Fechado Interno」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Câmera Portátil」
+Step 11: under the first heading: 「Profundidade em Camadas」, 「Detalhes Visuais Ricos」
+Step 11: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column PTB (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Português (Brasil) cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in PTB, checked on this walk instead of a second walk per language"
+TC-042,Language,"1. PowerDirector signed in on the test account
+2. App language Nederlands (Android Settings › Apps › PowerDirector › Language; run: launch --lang nl-NL)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horrorfilm」 with the description 「Spookachtige lichten en een enge sfeer. Eén foto wordt een horrorfilmmoment.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Dromerige close-ups vertellen een filmisch verhaal. Een poëtische video ontvouwt zich uit één foto.」
+Step 2: card 3 reads 「Snel Knip」 with the description 「Gedurfde snelle overgangen en stijlvol tempo. Zet één foto om in een moderne krachtige kortfilm.」
+Step 2: card 4 reads 「Opname In Eén Keer」 with the description 「Een naadloze, langzame camera-onthulling: een foto wordt een vloeiende filmische beweging.」
+Step 2: card 5 reads 「Tijdverloop」 with the description 「Time-lapse-opnamen vangen het verstrijken van tijd. Zie stilstaande momenten tot leven komen.」
+Step 2: card 6 reads 「Camera uit de hand」 with the description 「Handgehouden camerabeweging met focuswisselingen. Eén foto wordt een ontroerend filmisch moment.」
+Step 2: the cards come in this order: 「Horrorfilm」, 「Microcinema」, 「Snel Knip」, 「Opname In Eén Keer」, 「Tijdverloop」, 「Camera uit de hand」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column nl; › Template Description Localization rows 2–7 column nl. If the app's language list has no Nederlands, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in NLD, checked on this walk instead of a second walk per language"
+TC-043,Language,"1. PowerDirector signed in on the test account
+2. App language Nederlands (Android Settings › Apps › PowerDirector › Language; run: launch --lang nl-NL)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Horrorfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Snel Knip」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Opname In Eén Keer」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tijdverloop」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Camera uit de hand」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Horrorfilm」
+Step 1: under the first heading: 「Mensen in beeld」, 「Gelaagde diepte」
+Step 1: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Kadering op gemiddelde afstand」, 「Rijke visuele details」
+Step 3: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Snel Knip」
+Step 5: under the first heading: 「Bewegingsgevoel」, 「Rijke visuele details」
+Step 5: under the second heading: 「Statische compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Opname In Eén Keer」
+Step 7: under the first heading: 「Kadering op gemiddelde afstand」, 「Gelaagde diepte」
+Step 7: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tijdverloop」
+Step 9: under the first heading: 「Zichtbare hemel」, 「Stadsgezicht of Landschap」
+Step 9: under the second heading: 「Portret Als Onderwerp」, 「Binnenshuis close-up」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Camera uit de hand」
+Step 11: under the first heading: 「Gelaagde diepte」, 「Rijke visuele details」
+Step 11: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column NLD (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Nederlands cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in NLD, checked on this walk instead of a second walk per language"
+TC-044,Language,"1. PowerDirector signed in on the test account
+2. App language Bahasa Indonesia (Android Settings › Apps › PowerDirector › Language; run: launch --lang id-ID)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Horor」 with the description 「Cahaya menyeramkan dan suasana mencekam. Satu foto menjadi adegan film horor.」
+Step 2: card 2 reads 「Sinema Mikro」 with the description 「Close-up bernuansa khayalan membangun cerita sinematik. Video puitis mengalun dari satu gambar.」
+Step 2: card 3 reads 「Potongan Cepat」 with the description 「Potongan cepat berani dan ritme stylish. Ubah satu foto jadi short sinematik modern yang berdampak.」
+Step 2: card 4 reads 「Jepretan Sekali Ambil」 with the description 「Transisi kamera lambat yang mulus — satu foto jadi gerakan kamera sinematik.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Time-lapse merekam berjalannya waktu. Saksikan momen diam menjadi hidup.」
+Step 2: card 6 reads 「Kamera Genggam」 with the description 「Gerakan kamera genggam dengan pergeseran fokus. Satu foto menjadi momen sinematik penuh perasaan.」
+Step 2: the cards come in this order: 「Film Horor」, 「Sinema Mikro」, 「Potongan Cepat」, 「Jepretan Sekali Ambil」, 「Time-lapse」, 「Kamera Genggam」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column id; › Template Description Localization rows 2–7 column id. If the app's language list has no Bahasa Indonesia, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in IND, checked on this walk instead of a second walk per language"
+TC-045,Language,"1. PowerDirector signed in on the test account
+2. App language Bahasa Indonesia (Android Settings › Apps › PowerDirector › Language; run: launch --lang id-ID)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Film Horor」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Sinema Mikro」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Potongan Cepat」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Jepretan Sekali Ambil」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Genggam」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Horor」
+Step 1: under the first heading: 「Orang di dalam bingkai」, 「Kedalaman Berlapis」
+Step 1: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Sinema Mikro」
+Step 3: under the first heading: 「Pembingkaian Jarak Sedang」, 「Rincian Visual Kaya」
+Step 3: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Potongan Cepat」
+Step 5: under the first heading: 「Tingkat Gerakan」, 「Rincian Visual Kaya」
+Step 5: under the second heading: 「Komposisi Statis」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Jepretan Sekali Ambil」
+Step 7: under the first heading: 「Pembingkaian Jarak Sedang」, 「Kedalaman Berlapis」
+Step 7: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Langit Terlihat」, 「Pemandangan Kota atau Pemandangan」
+Step 9: under the second heading: 「Potret Sebagai Subjek」, 「Close-up Dalam Ruangan」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Genggam」
+Step 11: under the first heading: 「Kedalaman Berlapis」, 「Rincian Visual Kaya」
+Step 11: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column IDN (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Bahasa Indonesia cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in IND, checked on this walk instead of a second walk per language"
+TC-046,Language,"1. PowerDirector signed in on the test account
+2. App language ไทย (Android Settings › Apps › PowerDirector › Language; run: launch --lang th-TH)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「หนังสยองขวัญ」 with the description 「แสงชวนขนลุกและบรรยากาศน่ากลัว เปลี่ยนภาพเดียวให้เป็นฉากหนังสยองขวัญ」
+Step 2: card 2 reads 「ไมโครซีนีมา」 with the description 「ชวนฝันในช็อตใกล้ ๆ สร้างเรื่องราวภาพยนตร์ วิดีโอเชิงกวีคลี่ออกจากภาพเดียว」
+Step 2: card 3 reads 「ฟาสต์คัท」 with the description 「ตัดเร็วโดดเด่น จังหวะมีสไตล์. เปลี่ยนภาพเดียวให้เป็นหนังสั้นสไตล์ภาพยนตร์ทันสมัยและทรงพลัง」
+Step 2: card 4 reads 「การถ่ายครั้งเดียว」 with the description 「เผยกล้องสโลว์แบบไร้รอยต่อ — รูปเดียวกลายเป็นการเคลื่อนกล้องสไตล์ภาพยนตร์ที่ราบรื่น」
+Step 2: card 5 reads 「ไทม์แลปส์」 with the description 「การถ่ายแบบเร่งเวลาเก็บการผ่านของเวลา ให้ช่วงเวลานิ่งๆ มีชีวิตขึ้น」
+Step 2: card 6 reads 「กล้องแบบถือ」 with the description 「กล้องถือเคลื่อนไหวพร้อมการเปลี่ยนโฟกัส — ภาพเดียวกลายเป็นช็อตภาพยนตร์ที่กินใจ」
+Step 2: the cards come in this order: 「หนังสยองขวัญ」, 「ไมโครซีนีมา」, 「ฟาสต์คัท」, 「การถ่ายครั้งเดียว」, 「ไทม์แลปส์」, 「กล้องแบบถือ」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column th; › Template Description Localization rows 2–7 column th. If the app's language list has no ไทย, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in THA, checked on this walk instead of a second walk per language"
+TC-047,Language,"1. PowerDirector signed in on the test account
+2. App language ไทย (Android Settings › Apps › PowerDirector › Language; run: launch --lang th-TH)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「หนังสยองขวัญ」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「ไมโครซีนีมา」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「ฟาสต์คัท」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「การถ่ายครั้งเดียว」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「ไทม์แลปส์」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「กล้องแบบถือ」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「หนังสยองขวัญ」
+Step 1: under the first heading: 「มีคนอยู่ในเฟรม」, 「ความลึกเป็นชั้น」
+Step 1: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「ไมโครซีนีมา」
+Step 3: under the first heading: 「การจัดเฟรมระยะปานกลาง」, 「ภาพที่มีรายละเอียดมาก」
+Step 3: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「ฟาสต์คัท」
+Step 5: under the first heading: 「ความรู้สึกของการเคลื่อนไหว」, 「ภาพที่มีรายละเอียดมาก」
+Step 5: under the second heading: 「องค์ประกอบนิ่ง」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「การถ่ายครั้งเดียว」
+Step 7: under the first heading: 「การจัดเฟรมระยะปานกลาง」, 「ความลึกเป็นชั้น」
+Step 7: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「ไทม์แลปส์」
+Step 9: under the first heading: 「เห็นท้องฟ้า」, 「วิวเมืองหรือทิวทัศน์」
+Step 9: under the second heading: 「ภาพบุคคลเป็นหัวเรื่อง」, 「ระยะใกล้ภายในอาคาร」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「กล้องแบบถือ」
+Step 11: under the first heading: 「ความลึกเป็นชั้น」, 「ภาพที่มีรายละเอียดมาก」
+Step 11: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column THA (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the ไทย cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in THA, checked on this walk instead of a second walk per language"
+TC-048,Language,"1. PowerDirector signed in on the test account
+2. App language Bahasa Melayu (Android Settings › Apps › PowerDirector › Language; run: launch --lang ms-MY)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Filem Seram」 with the description 「Cahaya menyeramkan dan suasana menakutkan. Satu foto menjadi adegan filem seram.」
+Step 2: card 2 reads 「Sinema Mikro」 with the description 「Close-up penuh khayalan membina cerita visual sinematik. Video puitis terbit dari satu imej.」
+Step 2: card 3 reads 「Potongan Pantas」 with the description 「Potongan pantas berani dan rentak bergaya. Ubah satu foto jadi video sinematik moden yang berimpak.」
+Step 2: card 4 reads 「Syot Sekali Ambil」 with the description 「Pendedahan kamera perlahan lancar. Satu foto bertukar jadi gerakan kamera sinematik halus.」
+Step 2: card 5 reads 「Time Lapse」 with the description 「Gerakan time-lapse menangkap perjalanan masa. Saksikan momen pegun menjadi hidup.」
+Step 2: card 6 reads 「Kamera Genggam」 with the description 「Gerakan kamera genggam dengan peralihan fokus. Satu foto jadi momen sinematik yang menyentuh.」
+Step 2: the cards come in this order: 「Filem Seram」, 「Sinema Mikro」, 「Potongan Pantas」, 「Syot Sekali Ambil」, 「Time Lapse」, 「Kamera Genggam」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column ms; › Template Description Localization rows 2–7 column ms. If the app's language list has no Bahasa Melayu, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in MAY, checked on this walk instead of a second walk per language"
+TC-049,Language,"1. PowerDirector signed in on the test account
+2. App language Bahasa Melayu (Android Settings › Apps › PowerDirector › Language; run: launch --lang ms-MY)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Filem Seram」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Sinema Mikro」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Potongan Pantas」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Syot Sekali Ambil」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time Lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Genggam」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Filem Seram」
+Step 1: under the first heading: 「Orang dalam bingkai」, 「Kedalaman Berlapis」
+Step 1: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Sinema Mikro」
+Step 3: under the first heading: 「Pembingkaian Jarak Sederhana」, 「Butiran Visual Yang Kaya」
+Step 3: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Potongan Pantas」
+Step 5: under the first heading: 「Kesan Gerakan」, 「Butiran Visual Yang Kaya」
+Step 5: under the second heading: 「Komposisi Statis」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Syot Sekali Ambil」
+Step 7: under the first heading: 「Pembingkaian Jarak Sederhana」, 「Kedalaman Berlapis」
+Step 7: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time Lapse」
+Step 9: under the first heading: 「Langit Kelihatan」, 「Pemandangan Bandar atau Landskap」
+Step 9: under the second heading: 「Potret sebagai Subjek」, 「Close-up Dalaman」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Genggam」
+Step 11: under the first heading: 「Kedalaman Berlapis」, 「Butiran Visual Yang Kaya」
+Step 11: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column MAY (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Bahasa Melayu cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in MAY, checked on this walk instead of a second walk per language"
+TC-050,Language,"1. PowerDirector signed in on the test account
+2. App language हिन्दी (Android Settings › Apps › PowerDirector › Language; run: launch --lang hi-IN)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「हॉरर फ़िल्म」 with the description 「सिहराने वाली रोशनी और डरावना माहौल। एक फोटो हॉरर फिल्म के दृश्य में बदल जाता है」
+Step 2: card 2 reads 「माइक्रो सिनेमा」 with the description 「सपने जैसे क्लोज़-अप्स सिनेमैटिक दृश्य कहानी बनाते हैं — एक छवि से कवितात्मक वीडियो उभरता है।」
+Step 2: card 3 reads 「तेज़ कट」 with the description 「साहसिक तेज़ कट और स्टाइलिश पेसिंग। एक फोटो को आधुनिक, प्रभावशाली सिनेमाई शॉर्ट में बदलें।」
+Step 2: card 4 reads 「वन-टेक शॉट」 with the description 「एक निर्बाध स्लो कैमरा खुलता है — एक फोटो से एक सुचारु, सिनेमाई कैमरा मूव बनता है।」
+Step 2: card 5 reads 「टाइमलैप्स」 with the description 「टाइम-लैप्स समय के प्रवाह को कैद करता है। स्थिर पलों को जीवंत होते देखें।」
+Step 2: card 6 reads 「हैंडहेल्ड कैमरा」 with the description 「हाथ से कैमरे की हलचल और फोकस शिफ्ट — एक तस्वीर बनती है एक भावुक सिनेमाई पल।」
+Step 2: the cards come in this order: 「हॉरर फ़िल्म」, 「माइक्रो सिनेमा」, 「तेज़ कट」, 「वन-टेक शॉट」, 「टाइमलैप्स」, 「हैंडहेल्ड कैमरा」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column hi; › Template Description Localization rows 2–7 column hi. If the app's language list has no हिन्दी, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in HIN, checked on this walk instead of a second walk per language"
+TC-051,Language,"1. PowerDirector signed in on the test account
+2. App language हिन्दी (Android Settings › Apps › PowerDirector › Language; run: launch --lang hi-IN)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「हॉरर फ़िल्म」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「माइक्रो सिनेमा」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「तेज़ कट」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「वन-टेक शॉट」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「टाइमलैप्स」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「हैंडहेल्ड कैमरा」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「हॉरर फ़िल्म」
+Step 1: under the first heading: 「फ़्रेम में लोग」, 「परतों की गहराई」
+Step 1: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「माइक्रो सिनेमा」
+Step 3: under the first heading: 「मध्यम दूरी की फ़्रेमिंग」, 「समृद्ध दृश्य विवरण」
+Step 3: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「तेज़ कट」
+Step 5: under the first heading: 「मोशन की अनुभूति」, 「समृद्ध दृश्य विवरण」
+Step 5: under the second heading: 「स्थिर कॉम्पोज़िशन」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「वन-टेक शॉट」
+Step 7: under the first heading: 「मध्यम दूरी की फ़्रेमिंग」, 「परतों की गहराई」
+Step 7: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「टाइमलैप्स」
+Step 9: under the first heading: 「दिखने वाला आकाश」, 「सिटीस्केप या लैंडस्केप」
+Step 9: under the second heading: 「विषय के रूप में पोर्ट्रेट」, 「भीतरी निकट शॉट」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「हैंडहेल्ड कैमरा」
+Step 11: under the first heading: 「परतों की गहराई」, 「समृद्ध दृश्य विवरण」
+Step 11: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column HIN (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the हिन्दी cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in HIN, checked on this walk instead of a second walk per language"
+TC-052,Language,"1. PowerDirector signed in on the test account
+2. App language Español (Latinoamérica) (Android Settings › Apps › PowerDirector › Language; run: launch --lang es-419)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Película de terror」 with the description 「Luces inquietantes y una atmósfera aterradora. Una foto se convierte en una escena de terror.」
+Step 2: card 2 reads 「Micro Cine」 with the description 「Primeros planos oníricos que crean una historia visual cinematográfica desde una sola imagen」
+Step 2: card 3 reads 「Corte Rápido」 with the description 「Cortes audaces y ritmo con estilo: convierte una foto en un corto cinematográfico de alto impacto.」
+Step 2: card 4 reads 「Toma Única」 with the description 「Un paneo lento y fluido: una foto se transforma en un movimiento cinematográfico.」
+Step 2: card 5 reads 「Lapso De Tiempo」 with the description 「El Time-lapse captura el paso del tiempo. Mira cómo los instantes inmóviles cobran vida.」
+Step 2: card 6 reads 「Cámara de mano」 with the description 「Cámara en mano y cambios de enfoque. Una foto se vuelve un momento cinematográfico y emotivo.」
+Step 2: the cards come in this order: 「Película de terror」, 「Micro Cine」, 「Corte Rápido」, 「Toma Única」, 「Lapso De Tiempo」, 「Cámara de mano」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column esm; › Template Description Localization rows 2–7 column esm. If the app's language list has no Español (Latinoamérica), record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in ESM, checked on this walk instead of a second walk per language"
+TC-053,Language,"1. PowerDirector signed in on the test account
+2. App language Español (Latinoamérica) (Android Settings › Apps › PowerDirector › Language; run: launch --lang es-419)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Película de terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Micro Cine」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Corte Rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Toma Única」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Lapso De Tiempo」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Cámara de mano」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Película de terror」
+Step 1: under the first heading: 「Personas en el encuadre」, 「Profundidad En Capas」
+Step 1: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Micro Cine」
+Step 3: under the first heading: 「Encuadre a Media Distancia」, 「Detalles Visuales Ricos」
+Step 3: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Corte Rápido」
+Step 5: under the first heading: 「Sensación de Movimiento」, 「Detalles Visuales Ricos」
+Step 5: under the second heading: 「Composición Estática」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Toma Única」
+Step 7: under the first heading: 「Encuadre a Media Distancia」, 「Profundidad En Capas」
+Step 7: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Lapso De Tiempo」
+Step 9: under the first heading: 「Cielo Visible」, 「Paisaje urbano o Paisaje」
+Step 9: under the second heading: 「Retrato como Sujeto」, 「Primer Plano en Interiores」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Cámara de mano」
+Step 11: under the first heading: 「Profundidad En Capas」, 「Detalles Visuales Ricos」
+Step 11: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column ESM (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Español (Latinoamérica) cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in ESM, checked on this walk instead of a second walk per language"
+TC-054,Language,"1. PowerDirector signed in on the test account
+2. App language العربية (Android Settings › Apps › PowerDirector › Language; run: launch --lang ar)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「فيلم رعب」 with the description 「أنوار مخيفة وأجواء مرعبة. تتحول صورة واحدة إلى مشهد من فيلم رعب.」
+Step 2: card 2 reads 「سينما مصغرة」 with the description 「لقطات مقربة حالمة تبني قصة بصرية سينمائية. فيديو شاعري يتكشف من صورة واحدة.」
+Step 2: card 3 reads 「قطع سريع」 with the description 「قطع سريعة وجريئة وإيقاع أنيق. حوّل صورة واحدة إلى مقطع سينمائي حديث ومؤثر.」
+Step 2: card 4 reads 「لقطة بدون تقطيع」 with the description 「كشف كاميرا بطيئة وسلسة؛ تتحول صورة واحدة إلى حركة كاميرا سينمائية سلسة.」
+Step 2: card 5 reads 「تايم لابس」 with the description 「تصوير الفاصل الزمني يلتقط مرور الزمن. شاهد اللحظات الثابتة تنبض بالحياة.」
+Step 2: card 6 reads 「كاميرا محمولة باليد」 with the description 「حركة كاميرا يدوية مع تغيّر التركيز. صورة واحدة تتحول إلى لحظة سينمائية مؤثرة.」
+Step 2: the cards come in this order: 「فيلم رعب」, 「سينما مصغرة」, 「قطع سريع」, 「لقطة بدون تقطيع」, 「تايم لابس」, 「كاميرا محمولة باليد」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill
+Step 2: names and descriptions run right-to-left and nothing is clipped at the left edge",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column ar; › Template Description Localization rows 2–7 column ar. If the app's language list has no العربية, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in ARA, checked on this walk instead of a second walk per language"
+TC-055,Language,"1. PowerDirector signed in on the test account
+2. App language العربية (Android Settings › Apps › PowerDirector › Language; run: launch --lang ar)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「فيلم رعب」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「سينما مصغرة」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「قطع سريع」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「لقطة بدون تقطيع」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「تايم لابس」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「كاميرا محمولة باليد」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「فيلم رعب」
+Step 1: under the first heading: 「أشخاص في الإطار」, 「عمق متعدد الطبقات」
+Step 1: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「سينما مصغرة」
+Step 3: under the first heading: 「تأطير على مسافة متوسطة」, 「تفاصيل بصرية غنية」
+Step 3: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「قطع سريع」
+Step 5: under the first heading: 「إحساس الحركة」, 「تفاصيل بصرية غنية」
+Step 5: under the second heading: 「تكوين ثابت」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「لقطة بدون تقطيع」
+Step 7: under the first heading: 「تأطير على مسافة متوسطة」, 「عمق متعدد الطبقات」
+Step 7: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「تايم لابس」
+Step 9: under the first heading: 「سماء مرئية」, 「مشهد حضري أو منظر طبيعي」
+Step 9: under the second heading: 「البورتريه كموضوع」, 「لقطة مقربة داخلية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「كاميرا محمولة باليد」
+Step 11: under the first heading: 「عمق متعدد الطبقات」, 「تفاصيل بصرية غنية」
+Step 11: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview
+Every step: Arabic runs right-to-left: the sentence, headings and captions start at the right and nothing is clipped at the left edge",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column ARA (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the العربية cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in ARA, checked on this walk instead of a second walk per language"
+TC-056,Language,"1. PowerDirector signed in on the test account
+2. App language Tiếng Việt (Android Settings › Apps › PowerDirector › Language; run: launch --lang vi-VN)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Phim Kinh Dị」 with the description 「Ánh sáng rùng rợn và bầu không khí đáng sợ. Một bức ảnh hóa thành cảnh phim kinh dị.」
+Step 2: card 2 reads 「Rạp Chiếu Mini」 with the description 「Mơ mộng cận cảnh dựng nên câu chuyện hình ảnh điện ảnh. Video giàu chất thơ mở ra từ 1 ảnh duy nhất.」
+Step 2: card 3 reads 「Cắt Nhanh」 with the description 「Cắt nhanh táo bạo, nhịp điệu phong cách. Biến một ảnh thành đoạn phim điện ảnh hiện đại, ấn tượng.」
+Step 2: card 4 reads 「Cảnh Quay Một Lần」 with the description 「Hé lộ chậm, liền mạch của máy quay. Một tấm ảnh biến thành cảnh quay điện ảnh mượt mà.」
+Step 2: card 5 reads 「Tua Nhanh Thời Gian」 with the description 「Chuyển động time-lapse ghi lại dòng chảy của thời gian. Xem khoảnh khắc tĩnh sống dậy.」
+Step 2: card 6 reads 「Máy Ảnh Cầm Tay」 with the description 「Chuyển động máy cầm tay với thay đổi tiêu điểm. Một bức ảnh thành khoảnh khắc điện ảnh đầy cảm xúc.」
+Step 2: the cards come in this order: 「Phim Kinh Dị」, 「Rạp Chiếu Mini」, 「Cắt Nhanh」, 「Cảnh Quay Một Lần」, 「Tua Nhanh Thời Gian」, 「Máy Ảnh Cầm Tay」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column vi; › Template Description Localization rows 2–7 column vi. If the app's language list has no Tiếng Việt, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in VIT, checked on this walk instead of a second walk per language"
+TC-057,Language,"1. PowerDirector signed in on the test account
+2. App language Tiếng Việt (Android Settings › Apps › PowerDirector › Language; run: launch --lang vi-VN)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Phim Kinh Dị」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Rạp Chiếu Mini」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Cắt Nhanh」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Cảnh Quay Một Lần」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tua Nhanh Thời Gian」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Máy Ảnh Cầm Tay」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Phim Kinh Dị」
+Step 1: under the first heading: 「Có người trong khung hình」, 「Độ Sâu Phân Lớp」
+Step 1: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Rạp Chiếu Mini」
+Step 3: under the first heading: 「Đóng Khung Ở Khoảng Cách Trung Bình」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 3: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Cắt Nhanh」
+Step 5: under the first heading: 「Cảm Nhận Chuyển Động」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 5: under the second heading: 「Bố Cục Tĩnh」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Cảnh Quay Một Lần」
+Step 7: under the first heading: 「Đóng Khung Ở Khoảng Cách Trung Bình」, 「Độ Sâu Phân Lớp」
+Step 7: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tua Nhanh Thời Gian」
+Step 9: under the first heading: 「Có thể thấy bầu trời」, 「Cảnh Đô thị hoặc Ngang」
+Step 9: under the second heading: 「Chân dung làm chủ thể」, 「Cận Cảnh Trong Nhà」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Máy Ảnh Cầm Tay」
+Step 11: under the first heading: 「Độ Sâu Phân Lớp」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 11: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column VIT (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Tiếng Việt cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in VIT, checked on this walk instead of a second walk per language"
+TC-058,Language,"1. PowerDirector signed in on the test account
+2. App language Polski (Android Settings › Apps › PowerDirector › Language; run: launch --lang pl-PL)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Grozy」 with the description 「Upiorne światła i przerażająca atmosfera. Jedno zdjęcie staje się sceną horroru.」
+Step 2: card 2 reads 「Mikro Kino」 with the description 「Senne zbliżenia tworzą kinową opowieść wizualną. Poetyczne wideo powstaje z jednego zdjęcia.」
+Step 2: card 3 reads 「Szybkie Cięcie」 with the description 「Śmiałe, szybkie cięcia i stylowe tempo. Z jednego zdjęcia stwórz nowoczesny, efektowny krótki film.」
+Step 2: card 4 reads 「Jedno Ujęcie」 with the description 「Płynne, powolne odsłonięcie kamery. Jedno zdjęcie staje się kinowym, płynnym ruchem kamery.」
+Step 2: card 5 reads 「Film poklatkowy」 with the description 「Ruch poklatkowy ukazuje upływ czasu. Zobacz, jak nieruchome chwile ożywają.」
+Step 2: card 6 reads 「Kamera Ręczna」 with the description 「Ręczne ruchy kamery i zmiany ostrości — jedno zdjęcie staje się poruszającym, kinowym ujęciem.」
+Step 2: the cards come in this order: 「Film Grozy」, 「Mikro Kino」, 「Szybkie Cięcie」, 「Jedno Ujęcie」, 「Film poklatkowy」, 「Kamera Ręczna」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column pl; › Template Description Localization rows 2–7 column pl. If the app's language list has no Polski, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in PLK, checked on this walk instead of a second walk per language"
+TC-059,Language,"1. PowerDirector signed in on the test account
+2. App language Polski (Android Settings › Apps › PowerDirector › Language; run: launch --lang pl-PL)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Film Grozy」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Szybkie Cięcie」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Jedno Ujęcie」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Film poklatkowy」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Ręczna」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Grozy」
+Step 1: under the first heading: 「Osoby w kadrze」, 「Warstwowa Głębia」
+Step 1: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Kino」
+Step 3: under the first heading: 「Kadrowanie z Średniej Odległości」, 「Bogate Szczegóły Wizualne」
+Step 3: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Szybkie Cięcie」
+Step 5: under the first heading: 「Poczucie Ruchu」, 「Bogate Szczegóły Wizualne」
+Step 5: under the second heading: 「Statyczna Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Jedno Ujęcie」
+Step 7: under the first heading: 「Kadrowanie z Średniej Odległości」, 「Warstwowa Głębia」
+Step 7: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Film poklatkowy」
+Step 9: under the first heading: 「Widoczne Niebo」, 「Miejski krajobraz lub Pozioma」
+Step 9: under the second heading: 「Portret jako temat」, 「Zbliżenie W Pomieszczeniu」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Ręczna」
+Step 11: under the first heading: 「Warstwowa Głębia」, 「Bogate Szczegóły Wizualne」
+Step 11: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column PLK (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Polski cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in PLK, checked on this walk instead of a second walk per language"
+TC-060,Language,"1. PowerDirector signed in on the test account
+2. App language Türkçe (Android Settings › Apps › PowerDirector › Language; run: launch --lang tr-TR)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Korku Filmi」 with the description 「Ürpertici ışıklar ve korkutucu bir atmosfer. Bir fotoğraf bir korku filmi sahnesine dönüşüyor.」
+Step 2: card 2 reads 「Mikro Sinema」 with the description 「Rüyavari yakın planlar, sinematik bir görsel hikâye kurar; tek görüntüden şiirsel bir video doğar.」
+Step 2: card 3 reads 「Hızlı Kesme」 with the description 「Cesur kesimler ve şık tempoyla fotoğrafınızı modern, çarpıcı bir kısa sinematik videoya dönüştürün.」
+Step 2: card 4 reads 「Tek Plan Çekimi」 with the description 「Kesintisiz yavaş kamera gösterimi. Bir fotoğraf akıcı, sinematik bir kamera hareketine dönüşür.」
+Step 2: card 5 reads 「Hızlandırılmış Çekim」 with the description 「Time-lapse çekimi zamanın akışını yakalar. Durgun anların canlandığını izleyin.」
+Step 2: card 6 reads 「El Tipi Kamera」 with the description 「Elde çekim hareketleri ve odak kaymaları. Tek fotoğraf içten, sinematik bir ana dönüşür.」
+Step 2: the cards come in this order: 「Korku Filmi」, 「Mikro Sinema」, 「Hızlı Kesme」, 「Tek Plan Çekimi」, 「Hızlandırılmış Çekim」, 「El Tipi Kamera」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column tr; › Template Description Localization rows 2–7 column tr. If the app's language list has no Türkçe, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in TRK, checked on this walk instead of a second walk per language"
+TC-061,Language,"1. PowerDirector signed in on the test account
+2. App language Türkçe (Android Settings › Apps › PowerDirector › Language; run: launch --lang tr-TR)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Korku Filmi」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Sinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Hızlı Kesme」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Tek Plan Çekimi」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Hızlandırılmış Çekim」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「El Tipi Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Korku Filmi」
+Step 1: under the first heading: 「Karedeki kişiler」, 「Katmanlı Derinlik」
+Step 1: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Sinema」
+Step 3: under the first heading: 「Orta Mesafe Çerçeveleme」, 「Zengin Görsel Ayrıntılar」
+Step 3: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Hızlı Kesme」
+Step 5: under the first heading: 「Hareket Algısı」, 「Zengin Görsel Ayrıntılar」
+Step 5: under the second heading: 「Durağan Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Tek Plan Çekimi」
+Step 7: under the first heading: 「Orta Mesafe Çerçeveleme」, 「Katmanlı Derinlik」
+Step 7: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Hızlandırılmış Çekim」
+Step 9: under the first heading: 「Görünen Gökyüzü」, 「Şehir Manzarası veya Manzara」
+Step 9: under the second heading: 「Konu: Portre」, 「İç Mekan Yakın Plan」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「El Tipi Kamera」
+Step 11: under the first heading: 「Katmanlı Derinlik」, 「Zengin Görsel Ayrıntılar」
+Step 11: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column TRK (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Türkçe cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in TRK, checked on this walk instead of a second walk per language"
+TC-062,Language,"1. PowerDirector signed in on the test account
+2. App language Filipino (Android Settings › Apps › PowerDirector › Language; run: launch --lang fil-PH)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Pelikulang Nakakatakot」 with the description 「Nakakakilabot na ilaw at nakakatakot na paligid. Isang larawan ang nagiging eksena sa horror movie.」
+Step 2: card 2 reads 「Maliit Na Sinehan」 with the description 「Mga mabighaning close-up ang bumubuo ng sinematikong kuwento. Poetikong video mula sa isang imahe.」
+Step 2: card 3 reads 「Mabilisang Pagputol」 with the description 「Matapang mabilis na putol at estilong ritmo. Gawing isang larawan na moderno matinding maikling sine」
+Step 2: card 4 reads 「Isang Kuha」 with the description 「Makinis at mabagal na pagbubunyag ng kamera — isang larawan ang nagiging sinematikong paggalaw.」
+Step 2: card 5 reads 「Time-Lapse」 with the description 「Kinukuha ng time-lapse ang pagdaan ng oras. Panoorin kung paano nabubuhay ang mga sandali.」
+Step 2: card 6 reads 「Kamerang Hawak sa Kamay」 with the description 「Galaw ng Handheld camera na may focus shifts. Isang larawan, nagiging taos-pusong cinematic moment.」
+Step 2: the cards come in this order: 「Pelikulang Nakakatakot」, 「Maliit Na Sinehan」, 「Mabilisang Pagputol」, 「Isang Kuha」, 「Time-Lapse」, 「Kamerang Hawak sa Kamay」
+Step 2: every name and description is whole, not cut off and not garbled",P3,"R-029, R-030, R-031","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column fil; › Template Description Localization rows 2–7 column fil. If the app's language list has no Filipino, record Blocked (test-data) and name the list. Restore English after the language block.",unchanged,
+TC-063,Language,"1. PowerDirector signed in on the test account
+2. App language Filipino (Android Settings › Apps › PowerDirector › Language; run: launch --lang fil-PH)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Pelikulang Nakakatakot」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Maliit Na Sinehan」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Mabilisang Pagputol」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Isang Kuha」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-Lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamerang Hawak sa Kamay」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Pelikulang Nakakatakot」
+Step 1: under the first heading: 「Mga Tao sa Frame」, 「Patong-Patong na Lalim」
+Step 1: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Maliit Na Sinehan」
+Step 3: under the first heading: 「Pag-Frame sa Katamtamang Distansya」, 「Mga Mayamang Biswal na Detalye」
+Step 3: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Mabilisang Pagputol」
+Step 5: under the first heading: 「Pakiramdam ng Galaw」, 「Mga Mayamang Biswal na Detalye」
+Step 5: under the second heading: 「Komposisyon na Walang Galaw」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Isang Kuha」
+Step 7: under the first heading: 「Pag-Frame sa Katamtamang Distansya」, 「Patong-Patong na Lalim」
+Step 7: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-Lapse」
+Step 9: under the first heading: 「Nakikitang Langit」, 「Tanawing Lungsod o Kalikasan」
+Step 9: under the second heading: 「Potret Bilang Paksa」, 「Panloob na Malapitang Kuha」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamerang Hawak sa Kamay」
+Step 11: under the first heading: 「Patong-Patong na Lalim」, 「Mga Mayamang Biswal na Detalye」
+Step 11: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",P3,"R-015, R-032, R-012, R-034","I2V Recommendation › Localization column FPO (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Filipino cards row, same language.",unchanged,
+TC-064,Language,"1. PowerDirector signed in on the test account
+2. App language فارسی (Android Settings › Apps › PowerDirector › Language; run: launch --lang fa-IR)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「فیلم ترسناک」 with the description 「نورهای وهم‌آلود و فضایی ترسناک. یک عکس به صحنه‌ای از فیلم ترسناک تبدیل می‌شود.」
+Step 2: card 2 reads 「میکرو سینما」 with the description 「نماهای بستهٔ رویایی داستان تصویری سینمایی می‌سازند. از یک عکس، ویدئویی شاعرانه پدید می‌آید.」
+Step 2: card 3 reads 「برش سریع」 with the description 「برش‌های جسورانه و ریتمی شیک. از یک عکس، یک کوتاه سینمایی مدرن و تأثیرگذار بسازید.」
+Step 2: card 4 reads 「یک برداشت」 with the description 「نمایش آهسته و یکپارچهٔ دوربین: یک عکس به حرکت سینمایی و روان تبدیل می‌شود.」
+Step 2: card 5 reads 「تایم‌لپس」 with the description 「تایم‌لپس گذر زمان را ثبت می‌کند. ببینید لحظات ساکن جان می‌گیرند.」
+Step 2: card 6 reads 「دوربین دستی」 with the description 「حرکت دوربین دستی با جابجایی فوکوس؛ یک عکس تبدیل به لحظه‌ای سینمایی و پر احساس می‌شود.」
+Step 2: the cards come in this order: 「فیلم ترسناک」, 「میکرو سینما」, 「برش سریع」, 「یک برداشت」, 「تایم‌لپس」, 「دوربین دستی」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill
+Step 2: names and descriptions run right-to-left and nothing is clipped at the left edge",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column fa; › Template Description Localization rows 2–7 column fa. If the app's language list has no فارسی, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in FAR, checked on this walk instead of a second walk per language"
+TC-065,Language,"1. PowerDirector signed in on the test account
+2. App language فارسی (Android Settings › Apps › PowerDirector › Language; run: launch --lang fa-IR)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「فیلم ترسناک」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「میکرو سینما」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「برش سریع」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「یک برداشت」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「تایم‌لپس」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「دوربین دستی」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「فیلم ترسناک」
+Step 1: under the first heading: 「افراد در قاب」, 「عمق چندلایه」
+Step 1: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「میکرو سینما」
+Step 3: under the first heading: 「قاب‌بندی در فاصله متوسط」, 「جزئیات بصری غنی」
+Step 3: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「برش سریع」
+Step 5: under the first heading: 「حس حرکت」, 「جزئیات بصری غنی」
+Step 5: under the second heading: 「ترکیب‌بندی ایستا」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「یک برداشت」
+Step 7: under the first heading: 「قاب‌بندی در فاصله متوسط」, 「عمق چندلایه」
+Step 7: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「تایم‌لپس」
+Step 9: under the first heading: 「آسمان قابل مشاهده」, 「شهری یا منظره」
+Step 9: under the second heading: 「پرتره به‌عنوان سوژه」, 「نمای نزدیک داخلی」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「دوربین دستی」
+Step 11: under the first heading: 「عمق چندلایه」, 「جزئیات بصری غنی」
+Step 11: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview
+Every step: Persian runs right-to-left: the sentence, headings and captions start at the right and nothing is clipped at the left edge",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column FAR (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the فارسی cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in FAR, checked on this walk instead of a second walk per language"
+TC-066,Language,"1. PowerDirector signed in on the test account
+2. App language עברית (Android Settings › Apps › PowerDirector › Language; run: launch --lang he-IL)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「סרט אימה」 with the description 「אורות מאיימים ואווירה מפחידה. תמונה אחת הופכת לרגע מסרט אימה.」
+Step 2: card 2 reads 「מיקרו סינמה」 with the description 「תקריבים חלומיים בונים סיפור ויזואלי קולנועי. וידאו פיוטי נפתח מתמונה אחת.」
+Step 2: card 3 reads 「עריכה מהירה」 with the description 「חתכים נועזים ומהירים עם קצב מעודן. הפוך תמונה אחת לסרטון קולנועי מודרני ועוצמתי.」
+Step 2: card 4 reads 「שוט אחד」 with the description 「חשיפה איטית וחלקה של המצלמה. תמונה אחת הופכת לתנועת מצלמה קולנועית.」
+Step 2: card 5 reads 「טיימלפס」 with the description 「צילום טיימלפס לוכד את חלוף הזמן. צפה ברגעים קפואים שמתעוררים לחיים.」
+Step 2: card 6 reads 「מצלמה ניידת」 with the description 「תנועת מצלמה ידנית עם מעברי מיקוד. תמונה אחת הופכת לרגע קולנועי מלא רגש.」
+Step 2: the cards come in this order: 「סרט אימה」, 「מיקרו סינמה」, 「עריכה מהירה」, 「שוט אחד」, 「טיימלפס」, 「מצלמה ניידת」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill
+Step 2: names and descriptions run right-to-left and nothing is clipped at the left edge",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column he; › Template Description Localization rows 2–7 column he. If the app's language list has no עברית, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in HEB, checked on this walk instead of a second walk per language"
+TC-067,Language,"1. PowerDirector signed in on the test account
+2. App language עברית (Android Settings › Apps › PowerDirector › Language; run: launch --lang he-IL)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「סרט אימה」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「מיקרו סינמה」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「עריכה מהירה」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「שוט אחד」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「טיימלפס」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「מצלמה ניידת」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「סרט אימה」
+Step 1: under the first heading: 「אנשים במסגרת」, 「עומק רב-שכבתי」
+Step 1: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「מיקרו סינמה」
+Step 3: under the first heading: 「מסגור במרחק בינוני」, 「פרטים חזותיים עשירים」
+Step 3: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「עריכה מהירה」
+Step 5: under the first heading: 「תחושת תנועה」, 「פרטים חזותיים עשירים」
+Step 5: under the second heading: 「קומפוזיציה סטטית」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「שוט אחד」
+Step 7: under the first heading: 「מסגור במרחק בינוני」, 「עומק רב-שכבתי」
+Step 7: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「טיימלפס」
+Step 9: under the first heading: 「שמיים נראים」, 「נוף עירוני או נוף」
+Step 9: under the second heading: 「נושא: דיוקן」, 「תקריב פנימי」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「מצלמה ניידת」
+Step 11: under the first heading: 「עומק רב-שכבתי」, 「פרטים חזותיים עשירים」
+Step 11: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview
+Every step: Hebrew runs right-to-left: the sentence, headings and captions start at the right and nothing is clipped at the left edge",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column HEB (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the עברית cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in HEB, checked on this walk instead of a second walk per language"
+TC-068,Language,"1. PowerDirector signed in on the test account
+2. App language Svenska (Android Settings › Apps › PowerDirector › Language; run: launch --lang sv-SE)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Skräckfilm」 with the description 「Spöklika ljus och en skrämmande stämning. Ett foto blir en scen ur en skräckfilm.」
+Step 2: card 2 reads 「Minibiograf」 with the description 「Drömska närbilder skapar en filmisk berättelse. En poetisk video växer fram ur en enda bild.」
+Step 2: card 3 reads 「Snabb Klipp」 with the description 「Djärva snabba klipp och stilfullt tempo. Förvandla ett foto till en modern, filmisk kortvideo.」
+Step 2: card 4 reads 「En Tagning」 with the description 「En sömlös, långsam kamerapanorering. Ett foto förvandlas till en mjuk, filmisk kamerarörelse.」
+Step 2: card 5 reads 「Tidsförlopp」 with the description 「Time-lapse fångar tidens gång. Se stilla ögonblick vakna till liv.」
+Step 2: card 6 reads 「Handhållen Kamera」 with the description 「Handhållen kamerarörelse med fokusändringar. En bild blir ett känslosamt, filmiskt ögonblick.」
+Step 2: the cards come in this order: 「Skräckfilm」, 「Minibiograf」, 「Snabb Klipp」, 「En Tagning」, 「Tidsförlopp」, 「Handhållen Kamera」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column sv; › Template Description Localization rows 2–7 column sv. If the app's language list has no Svenska, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in SVE, checked on this walk instead of a second walk per language"
+TC-069,Language,"1. PowerDirector signed in on the test account
+2. App language Svenska (Android Settings › Apps › PowerDirector › Language; run: launch --lang sv-SE)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Skräckfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Minibiograf」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Snabb Klipp」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「En Tagning」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsförlopp」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Handhållen Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Skräckfilm」
+Step 1: under the first heading: 「Personer i bilden」, 「Skiktat Djup」
+Step 1: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Minibiograf」
+Step 3: under the first heading: 「Inramning på medelavstånd」, 「Rika visuella detaljer」
+Step 3: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Snabb Klipp」
+Step 5: under the first heading: 「Känsla av Rörelse」, 「Rika visuella detaljer」
+Step 5: under the second heading: 「Statisk komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「En Tagning」
+Step 7: under the first heading: 「Inramning på medelavstånd」, 「Skiktat Djup」
+Step 7: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsförlopp」
+Step 9: under the first heading: 「Synlig himmel」, 「Stadsbild eller landskap」
+Step 9: under the second heading: 「Porträtt som motiv」, 「Inomhus Närbild」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Handhållen Kamera」
+Step 11: under the first heading: 「Skiktat Djup」, 「Rika visuella detaljer」
+Step 11: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column SVE (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Svenska cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in SVE, checked on this walk instead of a second walk per language"
+TC-070,Language,"1. PowerDirector signed in on the test account
+2. App language Dansk (Android Settings › Apps › PowerDirector › Language; run: launch --lang da-DK)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Gyserfilm」 with the description 「Uhyggelige lys og en skræmmende stemning. Et foto bliver til en scene fra en gyserfilm.」
+Step 2: card 2 reads 「Mikrobiograf」 with the description 「Drømmende nærbilleder skaber en filmisk fortælling. En poetisk video udfolder sig fra ét billede.」
+Step 2: card 3 reads 「Hurtigt Klip」 with the description 「Dristige hurtige klip, stilfuld rytme. Forvandl et foto til et moderne, filmisk kort med slagkraft.」
+Step 2: card 4 reads 「Optagelse i ét tag」 with the description 「En sømløs, langsom kameraføring. Et foto bliver til en glidende, filmisk kamerabevægelse.」
+Step 2: card 5 reads 「Tidsforløb」 with the description 「Time-lapse-optagelse fanger tidens gang. Se stille øjeblikke få liv.」
+Step 2: card 6 reads 「Håndholdt Kamera」 with the description 「Håndholdt kamerabevægelse med fokusskift. Ét foto bliver et hjerteligt filmisk øjeblik.」
+Step 2: the cards come in this order: 「Gyserfilm」, 「Mikrobiograf」, 「Hurtigt Klip」, 「Optagelse i ét tag」, 「Tidsforløb」, 「Håndholdt Kamera」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column da; › Template Description Localization rows 2–7 column da. If the app's language list has no Dansk, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in DAN, checked on this walk instead of a second walk per language"
+TC-071,Language,"1. PowerDirector signed in on the test account
+2. App language Dansk (Android Settings › Apps › PowerDirector › Language; run: launch --lang da-DK)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Gyserfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikrobiograf」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Hurtigt Klip」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Optagelse i ét tag」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsforløb」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Håndholdt Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Gyserfilm」
+Step 1: under the first heading: 「Personer i billedet」, 「Lagdelt dybde」
+Step 1: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikrobiograf」
+Step 3: under the first heading: 「Indramning på mellemlang afstand」, 「Rige Visuelle Detaljer」
+Step 3: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Hurtigt Klip」
+Step 5: under the first heading: 「Bevægelsesfornemmelse」, 「Rige Visuelle Detaljer」
+Step 5: under the second heading: 「Statisk Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Optagelse i ét tag」
+Step 7: under the first heading: 「Indramning på mellemlang afstand」, 「Lagdelt dybde」
+Step 7: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsforløb」
+Step 9: under the first heading: 「Synlig himmel」, 「Bylandskab eller Landskab」
+Step 9: under the second heading: 「Portræt som motiv」, 「Indendørs Nærbillede」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Håndholdt Kamera」
+Step 11: under the first heading: 「Lagdelt dybde」, 「Rige Visuelle Detaljer」
+Step 11: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column DAN (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Dansk cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in DAN, checked on this walk instead of a second walk per language"
+TC-072,Language,"1. PowerDirector signed in on the test account
+2. App language Norsk bokmål (Android Settings › Apps › PowerDirector › Language; run: launch --lang nb-NO)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Skrekkfilm」 with the description 「Uhyggelige lys og en skummel stemning. Ett bilde blir til en scene fra en skrekkfilm.」
+Step 2: card 2 reads 「Mikro Kino」 with the description 「Drømmende nærbilder skaper en filmatisk historie. En poetisk video blomstrer fra ett bilde.」
+Step 2: card 3 reads 「Rask Klipp」 with the description 「Dristige, raske klipp og stilig rytme. Forvandle ett bilde til en moderne, slagkraftig kortfilm.」
+Step 2: card 4 reads 「Én-Tagning」 with the description 「En sømløs, sakte kameraavsløring. Et bilde blir til en jevn, filmatisk kamerabevegelse.」
+Step 2: card 5 reads 「Tidsforløp」 with the description 「Tidsforløp fanger tidens gang. Se stille øyeblikk få liv.」
+Step 2: card 6 reads 「Håndholdt kamera」 with the description 「Håndholdt kamerabevegelse med fokusendringer. Et bilde blir et gripende, filmatisk øyeblikk.」
+Step 2: the cards come in this order: 「Skrekkfilm」, 「Mikro Kino」, 「Rask Klipp」, 「Én-Tagning」, 「Tidsforløp」, 「Håndholdt kamera」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column nb; › Template Description Localization rows 2–7 column nb. If the app's language list has no Norsk bokmål, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in NOR, checked on this walk instead of a second walk per language"
+TC-073,Language,"1. PowerDirector signed in on the test account
+2. App language Norsk bokmål (Android Settings › Apps › PowerDirector › Language; run: launch --lang nb-NO)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Skrekkfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Rask Klipp」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Én-Tagning」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsforløp」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Håndholdt kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Skrekkfilm」
+Step 1: under the first heading: 「Personer i bildet」, 「Lagdelt dybde」
+Step 1: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Kino」
+Step 3: under the first heading: 「Innramming på middels avstand」, 「Rike Visuelle Detaljer」
+Step 3: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Rask Klipp」
+Step 5: under the first heading: 「Bevegelsesfølelse」, 「Rike Visuelle Detaljer」
+Step 5: under the second heading: 「Statisk Komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Én-Tagning」
+Step 7: under the first heading: 「Innramming på middels avstand」, 「Lagdelt dybde」
+Step 7: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsforløp」
+Step 9: under the first heading: 「Synlig Himmel」, 「Bybilde eller landskap」
+Step 9: under the second heading: 「Stående som motiv」, 「Innendørs Nærbilde」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Håndholdt kamera」
+Step 11: under the first heading: 「Lagdelt dybde」, 「Rike Visuelle Detaljer」
+Step 11: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column NOR (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Norsk bokmål cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in NOR, checked on this walk instead of a second walk per language"
+TC-074,Language,"1. PowerDirector signed in on the test account
+2. App language Українська (Android Settings › Apps › PowerDirector › Language; run: launch --lang uk-UA)
+3. Cinematic Reel Creator open on its template page","1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Фільм жахів」 with the description 「Моторошні вогні та зловісна атмосфера. Одне фото перетворюється на сцену фільму жахів.」
+Step 2: card 2 reads 「Мікро-кінотеатр」 with the description 「Мрійливі крупні плани творять кінематографічну історію. Поетичне відео народжується з одного кадру」
+Step 2: card 3 reads 「Швидкий Монтаж」 with the description 「Сміливі швидкі зрізи й стильний темп. Перетворіть одне фото на сучасне потужне коротке кіно.」
+Step 2: card 4 reads 「Зйомка одним дублем」 with the description 「Плавне повільне відкриття камери. Одне фото перетворюється на кінематографічний рух камери」
+Step 2: card 5 reads 「Таймлапс」 with the description 「Таймлапс захоплює плин часу. Дивіться, як нерухомі миті оживають.」
+Step 2: card 6 reads 「Ручна камера」 with the description 「Рух камери з рук із зсувами фокусу. Одне фото стає зворушливим кінематографічним моментом.」
+Step 2: the cards come in this order: 「Фільм жахів」, 「Мікро-кінотеатр」, 「Швидкий Монтаж」, 「Зйомка одним дублем」, 「Таймлапс」, 「Ручна камера」
+Step 2: every name and description is whole, not cut off and not garbled
+Step 2: the 「View photo tips」 chip on every card shows in full inside its pill",P3,"R-029, R-030, R-031, R-036","Cinestory CMS › Order 「PHDM/PDRM Global」 (by app language, user 2026-11-25); › Template Name Localization column uk; › Template Description Localization rows 2–7 column uk. If the app's language list has no Українська, record Blocked (test-data) and name the list. Restore English after the language block.",modified,"REQ-002: MUI truncation (R-036) of the chip on the cards in UKR, checked on this walk instead of a second walk per language"
+TC-075,Language,"1. PowerDirector signed in on the test account
+2. App language Українська (Android Settings › Apps › PowerDirector › Language; run: launch --lang uk-UA)
+3. Cinematic Reel Creator open on its template page","1. Tap the photo tips chip on the 「Фільм жахів」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Мікро-кінотеатр」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Швидкий Монтаж」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Зйомка одним дублем」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Таймлапс」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Ручна камера」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Фільм жахів」
+Step 1: under the first heading: 「Люди в кадрі」, 「Шарувата глибина」
+Step 1: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Мікро-кінотеатр」
+Step 3: under the first heading: 「Кадрування на середній відстані」, 「Висока візуальна деталізація」
+Step 3: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Швидкий Монтаж」
+Step 5: under the first heading: 「Відчуття руху」, 「Висока візуальна деталізація」
+Step 5: under the second heading: 「Статична композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Зйомка одним дублем」
+Step 7: under the first heading: 「Кадрування на середній відстані」, 「Шарувата глибина」
+Step 7: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Таймлапс」
+Step 9: under the first heading: 「Видиме Небо」, 「Міський або природний пейзаж」
+Step 9: under the second heading: 「Портрет як об'єкт」, 「Крупний план у приміщенні」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Ручна камера」
+Step 11: under the first heading: 「Шарувата глибина」, 「Висока візуальна деталізація」
+Step 11: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Every step: the chip just tapped and the sheet's first sentence show in full, in whatever language they appear (Q-2): no 「…」, nothing cut at an edge, no line hidden, the chip inside its pill over the preview",P3,"R-015, R-032, R-012, R-034, R-036","I2V Recommendation › Localization column UKR (CMS items #54–67); Fast Cut's 「Rich Visual Details」 is item #56 (…_fast_cut), caption per the user's ruling 2026-11-25. The chip's and the sentence's own words are Q-2 (filed DRA262611P0290): record their language, do not fail on it. Run right after the Українська cards row, same language.",modified,"REQ-002: MUI truncation (R-036) of the chip and the sheet sentence in UKR, checked on this walk instead of a second walk per language"
+TC-019,Data source,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Logcat recording from app start","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Time Lapse」 card
+4. Tap 「Got it」
+5. Pull the app log","Step 5: the log shows the template data from the CMS with recommend_samples for each template
+Step 5: the items each sheet showed match that template's recommend_samples",P3,R-014,Hidden clause (pass 9). Park (needs: cms-log) if the log shows no CMS template data.,unchanged,
+TC-076,MUI,"1. The APK of the build under test in `~/.casebook/android/apks/<build>/` (the one installed for the run)
+2. `mui.json` names the feature's string resources (`android_prefixes`: cine_story_view_photo_tips, cine_story_photo_tips_description)","1. Run `node scripts/mui-strings.ts pdr/cinematic-reel-recommendation --apk <build dir> --out <run dir>/mui`
+2. Read every string of `mui-strings.json` in each language against its English
+3. Find the resources of the sheet's headings and button (「Recommendation」, 「Avoid」, 「Got it」: shared resources, too short for the quote match) in the same dump and read them too","1. Each of the 26 languages (CHT, CHS, JPN, ESP, KOR, DEU, FRA, ITA, RUS, PTB, NLD, IND, THA, MAY, HIN, ESM, ARA, VIT, PLK, TRK, FAR, HEB, SVE, DAN, NOR, UKR) has its own text for the chip 「View photo tips」 and the sentence 「For best results with the %1$s template, follow this advice:」: none shows the English default (build 2611231 has no translation of either: the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again)
+2. The sentence keeps its placeholder %1$s exactly once in every language, where that language puts the template name
+3. The headings 「Recommendation」 and 「Avoid」 and the button 「Got it」 have their own text in every language
+4. Each translation says what the English says, in that language's script and regional wording (CHT traditional and Taiwan, CHS simplified, PTB Brazilian, ESM Mexican)
+5. The template names, descriptions and captions are CMS text, not in the APK: the Language rows (TC-017 – TC-075) check them per language against the sheets
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in mui-doubts.md, not a fail",P2,R-035; REQ-002; REQ-007,"MUI, all languages from the APK (no phone, no credits). Truncation is walked by the Language rows, one pair per language.",new,REQ-002: MUI translations of the app strings read from the build

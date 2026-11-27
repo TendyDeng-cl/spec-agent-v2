@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-20T07:31:43.303Z",
+  "feature": "phd/xmas-ny-sale",
+  "platform": "android",
+  "set": "specs/2026-11-20",
+  "warnings": [],
+  "skipped": [
+    "d-interstitial-xmas-a (no text read from d-interstitial-xmas-a.png)",
+    "d-interstitial-xmas-b (no text read from d-interstitial-xmas-b.png)",
+    "d-interstitial-ny (no text read from d-interstitial-ny.png)",
+    "d-iap-xmas (no text read from d-iap-xmas.png)",
+    "d-iap-ny (no text read from d-iap-ny.png)",
+    "d-launcher-ny (no text read from d-launcher-ny.png)",
+    "d-assets (no text read from d-assets.png)",
+    "pm-iap (no text read from pm-iap.png)",
+    "pm-credit-paid (no text read from pm-credit-paid.png)",
+    "pm-credit-free (no text read from pm-credit-free.png)",
+    "pm-interstitial (no text read from pm-interstitial.png)",
+    "pm-interstitial-ref (no text read from pm-interstitial-ref.png)",
+    "pm-launcher (no text read from pm-launcher.png)",
+    "pm-splash (no text read from pm-splash.png)",
+    "pm-mine (no text read from pm-mine.png)",
+    "pm-note (no text read from pm-note.png)"
+  ]
+}

@@ -21,7 +21,7 @@ fingerdrag 980 1158 100 1158 20
 wait 1
 els tv_
 shot $1-1s
-fingerdrag 186 1158 1060 1158 15
+fingerdrag 416 1158 1060 1158 15
 wait 2
 els tv_
 shot $1-full

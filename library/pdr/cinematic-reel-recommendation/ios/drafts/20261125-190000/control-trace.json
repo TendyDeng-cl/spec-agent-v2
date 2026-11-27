@@ -1,0 +1,1865 @@
+{
+ "spec_folder": "specs/2026-11-23",
+ "platform": "ios",
+ "inventory": "specs/2026-11-23/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-d82345",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Action Button_M",
+   "label": "Generate",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-9f8edc"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-ad30ec",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Action Button_M",
+   "label": "choice of 2: 「View later」 「Create another one」",
+   "set": true,
+   "instances": 4,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-dca118",
+    "K-966d4a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-0a35c5",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "AI Smart Tools",
+   "label": "choice of 3: 「Color Mix」 「Dancing Pet」 「Puppy」",
+   "set": true,
+   "instances": 5,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-b3028d",
+    "K-dd3112",
+    "K-3ca015",
+    "K-aa0041",
+    "K-e6335f"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-e21458",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn",
+   "label": "Select",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-e2d384"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-52f674",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_check",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-79f3e7"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-c52e3a",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_mani_text_icon_m",
+   "label": "Got it",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-c1f48e"
+   ],
+   "app": [],
+   "press": "TC-007, TC-016, TC-046, TC-047, TC-048",
+   "how": "manual"
+  },
+  {
+   "group": "K-ce967f",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_mani_text_icon_m",
+   "label": "Edit another one",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-c61bdd"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-5537f5",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_play",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-cdcebf"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-b03eb3",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_play",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-f7b0e2"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-39eca9",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "btn_video-capture",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Add Media"
+   ],
+   "controls": [
+    "K-59e723"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-3b182e",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Button/Cloud/Upload",
+   "label": "Create Now",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-f6dc90"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-13d1bf",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Button/Credit/Balance",
+   "label": "182",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-755bcb"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-12a236",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Button/Pill",
+   "label": "Import a Photo",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-4dd587"
+   ],
+   "app": [],
+   "press": "TC-010, TC-011, TC-012, TC-013, TC-014, TC-015",
+   "how": "manual"
+  },
+  {
+   "group": "K-612e41",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Button/Pill",
+   "label": "View",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-4b5d7a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-7fd573",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Button/ViewMore",
+   "label": "View more",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-06820a",
+    "K-fb81f9"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-60ad76",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Card_Analyzing",
+   "label": "choice of 3: 「Analyzing your photo」 「Planning video idea」 「Creating video」",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-7f2797",
+    "K-5eb9d1",
+    "K-49140e"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-a13020",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Card/Thumbnail",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-114e2f"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-7a7e0d",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Card/Thumbnail",
+   "label": "Processing...",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-70e1c7"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-4c27ec",
+   "kind": "toggle",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Checkbox",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-2c1d61"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-e84aaf",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "ic_history_n",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-3119d0"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-425329",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "ic_resize",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-ab63f0"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-c05e4f",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "ic_rotate",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-86a7a4"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-414919",
+   "kind": "input",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "input_contained_default",
+   "label": "Tap to Edit",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-491877"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "dismiss": "n/a: other feature, not pressed by this table",
+   "how": "manual"
+  },
+  {
+   "group": "K-c72032",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "launcher_add",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-809665"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-0f3949",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Launcher_icon",
+   "label": "Pro+",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-d698af"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-4faca5",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "launcher_paid",
+   "label": "Try Pro+ 7 days for free",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-949382"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-48aa43",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "manual/button",
+   "label": "View photo tips",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "M-c92386"
+   ],
+   "app": [],
+   "press": "TC-001, TC-002, TC-003, TC-004, TC-005, TC-006, TC-046, TC-047, TC-048",
+   "how": "manual"
+  },
+  {
+   "group": "C-5b8a52",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Nav/Bottom/Item",
+   "label": "choice of 2: 「Home」 「Project」",
+   "set": true,
+   "instances": 2,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-be22e5",
+    "K-cd50ea"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-d9ec37",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Nav/Header",
+   "label": "How to use AI Storytelling?",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-122801"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-74bcff",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Nav/Part/Icon",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-92178d"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-af418f",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ai music",
+   "label": "AI",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-5d6384"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-fbc51b",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ai remove",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-a35c96"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-956419",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ai_enhancement",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-52ef3f"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-8c7df2",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_auto_edit",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-4d2562"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-d6256d",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_check_circle",
+   "label": "choice of 2",
+   "set": true,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-0ad779",
+    "K-38250e"
+   ],
+   "app": [],
+   "press": "n/a: decorative ✓ / ⊗ badge on a photo tips picture, not tappable (checked in TC-001 – TC-006)",
+   "how": "manual"
+  },
+  {
+   "group": "K-22113c",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_chevron_down",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Add Media"
+   ],
+   "controls": [
+    "K-282365"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-c59fef",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_chevron_left",
+   "label": "",
+   "set": false,
+   "instances": 6,
+   "screens": [
+    "CineStory",
+    "Add Media"
+   ],
+   "controls": [
+    "K-21e4e5"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-599069",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_cinematic_reel_creator",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-ef2e80"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-1e4914",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_circle_xmark",
+   "label": "choice of 2",
+   "set": true,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-62e814",
+    "K-e6749e"
+   ],
+   "app": [],
+   "press": "n/a: decorative ✓ / ⊗ badge on a photo tips picture, not tappable (checked in TC-001 – TC-006)",
+   "how": "manual"
+  },
+  {
+   "group": "K-1db415",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_cloud",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-6480ae"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-9f7e15",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_download",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-e02cb6"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-627b14",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_duplicate",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-684a4b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-640831",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_edit_video",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-9fb0fc"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-555b34",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_heart_stroke",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-3e004b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-02ba32",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_history",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-e22842"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-c8db3a",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_home",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-28cf16"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-5d3aca",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ig",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-d44314"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-a665b7",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ig_reels",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-7245f5"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-f1b40b",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_image",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Add Media",
+    "CineStory"
+   ],
+   "controls": [
+    "K-ef90c2",
+    "K-6d6716"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-5956b4",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_image2video",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-b8be10"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-9c8b5a",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_info",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-30581b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-5124c9",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_menu",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-d4ea8c"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-b0525b",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_motion_swap",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-13913f"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-8575fa",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_music",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory",
+    "Music library"
+   ],
+   "controls": [
+    "K-7d1cf5",
+    "K-726b42"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-b64ecc",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_notification_unread",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-4cb6ec"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-658e89",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_ondemand_video",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-09c406"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-878b47",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_question",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-57fa33"
+   ],
+   "app": [],
+   "press": "n/a: other feature: template page ? opens the Cinematic Reel Creator tutorial, not the tips (Q-1), not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-b11bc0",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_quick_action",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-77d32c"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-1bf74b",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_rotate_left_right",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-2e4e6e"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-02e8ac",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_slider",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Add Media"
+   ],
+   "controls": [
+    "K-c72130"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-0b7795",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_sparkles",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-1a112c"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-306c40",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_speech_2_text",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-e9444a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-adc85b",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_storytelling",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-cb5497"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-2935bb",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_text",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-35d748"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-50a455",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_text2video",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-e3a016"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-0e8448",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_tiktok",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-588718"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-df714a",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_video enhancer",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-7c71bc"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-7d0ec8",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_video_edit_by_chat",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-9fb0d4"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-94c2bb",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_video_stabilizer",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Launcher_2026_v1"
+   ],
+   "controls": [
+    "K-dc82cb"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher, other features, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-cc5d9d",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_volume",
+   "label": "",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-d25ab2"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-4ec638",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_volume",
+   "label": "",
+   "set": false,
+   "instances": 4,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-b54a87",
+    "K-5b460a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-aca29a",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_xmark",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-8d52c3"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-b16b25",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_youtube_stroke",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-5b591a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-2387c9",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "round/ic_zoom_in",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-dd2bc0"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-3a7fa6",
+   "kind": "input",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Search_default",
+   "label": "Search by keywords",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-adfd88"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "dismiss": "n/a: other feature, not pressed by this table",
+   "how": "manual"
+  },
+  {
+   "group": "C-9bcdac",
+   "kind": "tab",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Secondary Tab",
+   "label": "choice of 4: 「Favorite」 「Trending」 「General」 「Colorful」",
+   "set": true,
+   "instances": 4,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-13eb6a",
+    "K-70ebe5",
+    "K-ae0c79",
+    "K-27898f"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-f31456",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "thumb_media",
+   "label": "choice of 15",
+   "set": true,
+   "instances": 15,
+   "screens": [
+    "Add Media"
+   ],
+   "controls": [
+    "K-4df34e",
+    "K-bd4433",
+    "K-7e0e25",
+    "K-52f356",
+    "K-b8442b",
+    "K-810e29",
+    "K-bffabd",
+    "K-2b3c91",
+    "K-6c074d",
+    "K-c3fac4",
+    "K-273c8b",
+    "K-700753",
+    "K-c6fac8",
+    "K-343c9f",
+    "K-75075b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Add Media room of Cinematic Reel Creator (photo pick, tabs); its 「?」 is checked in TC-010 – TC-016, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-d334fc",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Thumb_music_S",
+   "label": "choice of 6: 「Travel」 「Daily Life」 「Sports」 「Party」 …",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-f347e3",
+    "K-a28b86",
+    "K-aca155",
+    "K-e8790b",
+    "K-694b03",
+    "K-f9a5b3"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "C-8a055c",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Thumb_music_S",
+   "label": "choice of 6: 「Happy」 「Sad」 「Chill」 「Energetic」 …",
+   "set": true,
+   "instances": 6,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-3986c0",
+    "K-f188c7",
+    "K-1baec9",
+    "K-2dbc6d",
+    "K-d3b6b1",
+    "K-e18fcc"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-2e588d",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "thumbnail_card",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-22bd96"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-927590",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Thumbnail_title",
+   "label": "",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-65e142",
+    "K-b1ab8d",
+    "K-fbec75",
+    "K-61e13c",
+    "K-2519a6"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-7e3253",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Thumbnail_title",
+   "label": "Pro",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Title_template"
+   ],
+   "controls": [
+    "K-0450f1",
+    "K-5037a8",
+    "K-f5dc59"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-138a58",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Top_Navigation_menu",
+   "label": "CineStory",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-936827"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-0d7456",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Top_Navigation_menu",
+   "label": "Cinematic Reel Creator",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-958b3d"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-4e6839",
+   "kind": "button",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "Top_Navigation_menu",
+   "label": "Music",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Music library"
+   ],
+   "controls": [
+    "K-29b842"
+   ],
+   "app": [],
+   "press": "n/a: other feature: result page tools of Cinematic Reel Creator, not PDRA-661",
+   "how": "manual"
+  },
+  {
+   "group": "K-33346d",
+   "kind": "item",
+   "board": "CineStory 26.07_v2",
+   "boards": [
+    "CineStory 26.07_v2"
+   ],
+   "name": "video_sample",
+   "label": "How to use AI Storytelling?",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "CineStory"
+   ],
+   "controls": [
+    "K-df37f3"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Cinematic Reel Creator template page, generating, recent tasks or result page, not PDRA-661",
+   "how": "manual"
+  }
+ ]
+}

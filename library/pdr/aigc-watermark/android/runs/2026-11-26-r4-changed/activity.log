@@ -1,0 +1,417 @@
+2026-11-26T02:00:55.241Z restart HQ61563393
+2026-11-26T02:01:03.001Z status 
+2026-11-26T02:01:03.429Z build 
+2026-11-26T02:01:11.111Z logcat start
+2026-11-26T02:01:11.372Z texts start-launcher
+2026-11-26T02:01:15.395Z lbl Close
+2026-11-26T02:01:17.879Z shot start-launcher2
+2026-11-26T02:01:19.261Z texts 
+2026-11-26T02:01:24.843Z locale status
+2026-11-26T02:01:28.312Z launch 
+2026-11-26T02:01:37.461Z tapif Close
+2026-11-26T02:01:41.153Z texts 
+2026-11-26T02:01:46.304Z shot R4a-launcher
+2026-11-26T02:01:53.464Z lbl Mine
+2026-11-26T02:01:58.286Z texts R4a-mine
+2026-11-26T02:02:03.307Z lbl Home
+2026-11-26T02:02:06.295Z tap 55 65
+2026-11-26T02:02:08.608Z texts 
+2026-11-26T02:02:12.442Z scrollto Remove AIGC Watermark
+2026-11-26T02:02:13.440Z shot R4a-switch-start
+2026-11-26T02:02:57.885Z case TC-071
+2026-11-26T02:02:58.022Z lbl New Project
+2026-11-26T02:03:02.622Z texts np1
+2026-11-26T02:03:08.228Z back 
+2026-11-26T02:03:10.957Z lbl New Project
+2026-11-26T02:03:14.503Z texts np1
+2026-11-26T02:03:34.802Z tap 198 2016
+2026-11-26T02:03:37.124Z shot np2
+2026-11-26T02:03:42.307Z lbl Next
+2026-11-26T02:03:45.918Z texts np3
+2026-11-26T02:04:07.168Z lbl [AID]TimeLine_Home
+2026-11-26T02:04:11.146Z texts 
+2026-11-26T02:04:16.819Z lbl New Project
+2026-11-26T02:04:21.464Z tap 515 684
+2026-11-26T02:04:23.776Z lbl Next
+2026-11-26T02:04:27.224Z texts np4
+2026-11-26T02:04:31.431Z texts np4
+2026-11-26T02:04:35.777Z lbl [AID]ConfirmDialog_OK
+2026-11-26T02:04:44.996Z texts np5
+2026-11-26T02:04:50.136Z lbl [AID]TimeLineVideo_fps-60-1440p_DDB01A9B6.mp4
+2026-11-26T02:04:53.174Z texts np6
+2026-11-26T02:04:58.694Z scrollto Effects 540 2200 2400
+2026-11-26T02:05:07.553Z els 
+2026-11-26T02:05:11.811Z shot np7
+2026-11-26T02:05:17.517Z tap 684 1728
+2026-11-26T02:05:19.853Z fingerdrag 950 2400 150 2400 10
+2026-11-26T02:05:21.932Z els 
+2026-11-26T02:05:25.807Z tap 754 2400
+2026-11-26T02:05:28.091Z texts np8
+2026-11-26T02:05:32.760Z lbl AI Anime Video
+2026-11-26T02:05:37.231Z texts np9
+2026-11-26T02:05:41.569Z lbl Continue
+2026-11-26T02:05:46.113Z texts np10
+2026-11-26T02:05:50.991Z lbl Try It Now
+2026-11-26T02:05:56.844Z texts np11
+2026-11-26T02:06:04.227Z lbl Generate for
+2026-11-26T02:06:10.748Z texts np12
+2026-11-26T02:06:15.666Z lbl Next
+2026-11-26T02:06:21.140Z texts np13
+2026-11-26T02:06:24.730Z lbl Continue
+2026-11-26T02:06:35.180Z texts np14
+2026-11-26T02:06:38.941Z els Continue
+2026-11-26T02:06:41.836Z id continue_button
+2026-11-26T02:06:56.474Z texts np15
+2026-11-26T02:07:02.822Z waitfor View|An Error Has Occurred|Retry --timeout 1500 --every 30
+2026-11-26T02:17:37.186Z texts np16
+2026-11-26T02:17:52.884Z lbl View
+2026-11-26T02:17:58.358Z texts np17
+2026-11-26T02:18:02.556Z lbl Add to Timeline
+2026-11-26T02:18:09.102Z texts np18
+2026-11-26T02:18:12.746Z lbl [AID]ConfirmDialog_OK
+2026-11-26T02:18:21.179Z texts np19
+2026-11-26T02:18:23.485Z shot TC-071-project
+2026-11-26T02:18:27.889Z lbl Close
+2026-11-26T02:18:30.333Z texts 
+2026-11-26T02:18:31.281Z shot TC-071-project
+2026-11-26T02:18:37.811Z case TC-065
+2026-11-26T02:18:37.956Z lbl [AID]TimeLine_Home
+2026-11-26T02:18:41.888Z tapif Close
+2026-11-26T02:18:42.946Z lbl New Project
+2026-11-26T02:18:46.972Z tap 515 684
+2026-11-26T02:18:49.256Z lbl Next
+2026-11-26T02:18:53.764Z tapif [AID]ConfirmDialog_OK
+2026-11-26T02:19:00.712Z lbl Audio
+2026-11-26T02:19:04.442Z texts np20
+2026-11-26T02:19:08.884Z lbl Text to  Speech
+2026-11-26T02:19:13.379Z texts np21
+2026-11-26T02:19:14.392Z els 
+2026-11-26T02:19:17.366Z tap 447 1900
+2026-11-26T02:19:21.707Z texts np22
+2026-11-26T02:19:22.851Z els 
+2026-11-26T02:19:34.148Z setval editText Hello, this is a test of the AI voice.
+2026-11-26T02:19:36.079Z tap 980 1530
+2026-11-26T02:19:40.374Z texts np23
+2026-11-26T02:19:46.365Z lbl Sophie
+2026-11-26T02:19:48.985Z lbl Generate voice for
+2026-11-26T02:19:49.683Z waitfor [AID]TimeLine_Play|Export --timeout 120
+2026-11-26T02:20:00.160Z texts np24
+2026-11-26T02:20:07.853Z shot TC-065-project
+2026-11-26T02:20:08.654Z lbl Export
+2026-11-26T02:20:12.148Z texts TC-065-step1
+2026-11-26T02:20:13.070Z els 
+2026-11-26T02:20:16.265Z lbl [AID]ConfirmDialog_OK
+2026-11-26T02:20:19.745Z texts TC-065-step2
+2026-11-26T02:20:25.483Z lbl Produce
+2026-11-26T02:20:25.928Z waitfor Saved to Gallery|[AID]IAP_Back|Error|failed --timeout 600
+2026-11-26T02:30:28.081Z texts TC-065-step3
+2026-11-26T02:31:28.954Z lbl Not now
+2026-11-26T02:31:31.432Z texts 
+2026-11-26T02:32:04.434Z run-log set TC-065 Pass
+2026-11-26T02:32:09.868Z case TC-066
+2026-11-26T02:32:10.014Z lbl [AID]Produce_Back
+2026-11-26T02:32:13.495Z tapif [AID]IAP_Back
+2026-11-26T02:32:14.804Z lbl [AID]TimeLine_Home
+2026-11-26T02:32:18.867Z tapif Close
+2026-11-26T02:32:19.676Z tap 55 65
+2026-11-26T02:32:21.934Z scrollto Remove AIGC Watermark
+2026-11-26T02:32:25.970Z tap 976 1763
+2026-11-26T02:32:28.266Z texts 
+2026-11-26T02:32:29.060Z scrollto Remove AIGC Watermark
+2026-11-26T02:32:33.406Z shot TC-066-switch-on
+2026-11-26T02:32:34.288Z back 
+2026-11-26T02:32:37.030Z tap 648 2335
+2026-11-26T02:32:40.332Z texts 
+2026-11-26T02:32:44.772Z els 
+2026-11-26T02:32:48.922Z tap 757 2300
+2026-11-26T02:32:52.211Z texts 
+2026-11-26T02:32:57.108Z lbl Project 11-26(2)
+2026-11-26T02:33:02.550Z texts 
+2026-11-26T02:33:03.369Z els 
+2026-11-26T02:33:09.499Z lbl [AID]TimeLine_Play
+2026-11-26T02:33:12.439Z texts 
+2026-11-26T02:33:17.855Z shot hint
+2026-11-26T02:33:18.602Z els 
+2026-11-26T02:33:23.870Z id btn_close
+2026-11-26T02:33:25.302Z els 
+2026-11-26T02:33:41.869Z tap 540 1570
+2026-11-26T02:33:43.170Z fingerdrag 300 1800 1050 1800 5
+2026-11-26T02:33:43.860Z fingerdrag 300 1800 1050 1800 5
+2026-11-26T02:33:44.468Z fingerdrag 300 1800 1050 1800 5
+2026-11-26T02:33:46.056Z els 
+2026-11-26T02:34:06.188Z els 
+2026-11-26T02:34:07.265Z lbl Export
+2026-11-26T02:34:10.745Z texts TC-066-step2
+2026-11-26T02:34:17.070Z lbl Produce
+2026-11-26T02:34:17.499Z waitfor Saved to Gallery|[AID]IAP_Back|Not now|Error|failed|AIGC --timeout 170
+2026-11-26T02:34:18.010Z texts TC-066-step3
+2026-11-26T02:34:34.361Z lbl [AID]IAP_Back
+2026-11-26T02:35:36.314Z waitfor Saved to Gallery|Not now|AIGC --timeout 170
+2026-11-26T02:36:57.197Z texts 
+2026-11-26T02:37:13.772Z run-log set TC-066 Pass
+2026-11-26T02:37:18.016Z case TC-071
+2026-11-26T02:37:18.153Z lbl [AID]Produce_Back
+2026-11-26T02:37:21.626Z lbl [AID]TimeLine_Home
+2026-11-26T02:37:25.591Z tapif Close
+2026-11-26T02:37:26.297Z tap 107 2335
+2026-11-26T02:37:28.589Z tap 55 65
+2026-11-26T02:37:30.897Z scrollto Remove AIGC Watermark
+2026-11-26T02:37:34.742Z tap 976 1763
+2026-11-26T02:37:37.019Z scrollto Remove AIGC Watermark
+2026-11-26T02:37:37.868Z back 
+2026-11-26T02:37:40.543Z tap 757 2300
+2026-11-26T02:37:43.845Z lbl Project 11-26(1)
+2026-11-26T02:37:49.375Z texts 
+2026-11-26T02:37:52.957Z lbl Export
+2026-11-26T02:37:56.432Z texts TC-071-step1
+2026-11-26T02:37:57.447Z els 
+2026-11-26T02:37:57.724Z lbl [AID]ConfirmDialog_OK
+2026-11-26T02:38:01.184Z texts TC-071-step2
+2026-11-26T02:38:05.901Z lbl Produce
+2026-11-26T02:38:06.349Z waitfor Saved to Gallery|[AID]IAP_Back|Not now|Error|failed --timeout 170
+2026-11-26T02:38:18.266Z tapif [AID]IAP_Back
+2026-11-26T02:38:29.269Z waitfor Saved to Gallery|Not now --timeout 170
+2026-11-26T02:38:38.791Z tapif Not now
+2026-11-26T02:38:58.956Z run-log set TC-071 Pass
+2026-11-26T02:39:26.300Z case TC-157
+2026-11-26T02:39:26.434Z run-log set TC-157 Fail
+2026-11-26T02:39:31.983Z case TC-083
+2026-11-26T02:39:32.241Z lbl [AID]Produce_Back
+2026-11-26T02:39:35.646Z lbl [AID]TimeLine_Home
+2026-11-26T02:39:39.500Z tap 107 2335
+2026-11-26T02:39:41.796Z lbl Image to Video
+2026-11-26T02:39:46.816Z texts i2v1
+2026-11-26T02:39:51.212Z lbl Try It Now
+2026-11-26T02:39:55.684Z texts i2v2
+2026-11-26T02:39:57.007Z shot i2v2
+2026-11-26T02:40:06.794Z tap 210 905
+2026-11-26T02:40:10.241Z tapif Continue
+2026-11-26T02:40:13.173Z shot i2v3
+2026-11-26T02:40:31.629Z tap 198 1368
+2026-11-26T02:40:35.931Z texts i2v4
+2026-11-26T02:40:39.989Z els EditText
+2026-11-26T02:40:43.917Z setval etPrompt The woman smiles and slowly turns her head toward the camera
+2026-11-26T02:40:45.679Z hidekb 
+2026-11-26T02:40:46.875Z lbl Kling 4.0
+2026-11-26T02:40:50.289Z scrollto Vidu Q2
+2026-11-26T02:40:52.393Z lbl Vidu Q2
+2026-11-26T02:40:56.056Z texts i2v5
+2026-11-26T02:41:00.031Z lbl Generate
+2026-11-26T02:41:07.214Z texts i2v6
+2026-11-26T02:41:12.353Z waitfor 5 minutes left|minutes left|minute left|Processing --gone --timeout 900 --every 
+2026-11-26T02:42:13.256Z texts i2v7
+2026-11-26T02:42:52.395Z lbl View
+2026-11-26T02:42:57.865Z texts i2v8
+2026-11-26T02:43:03.498Z lbl Full Editor
+2026-11-26T02:43:11.978Z tapif [AID]ConfirmDialog_OK
+2026-11-26T02:43:15.785Z texts TC-083-project
+2026-11-26T02:43:17.559Z shot TC-083-project
+2026-11-26T02:43:23.230Z lbl Export
+2026-11-26T02:43:26.678Z texts TC-083-export
+2026-11-26T02:43:27.676Z els 
+2026-11-26T02:43:33.229Z lbl [AID]ConfirmDialog_OK
+2026-11-26T02:43:36.639Z texts 
+2026-11-26T02:43:37.005Z lbl Produce
+2026-11-26T02:43:37.414Z waitfor Saved to Gallery|[AID]IAP_Back|Not now|Error|failed --timeout 170
+2026-11-26T02:43:46.943Z tapif [AID]IAP_Back
+2026-11-26T02:43:57.874Z waitfor Saved to Gallery|Not now --timeout 170
+2026-11-26T02:44:05.249Z tapif Not now
+2026-11-26T02:44:25.830Z run-log set TC-083 Pass
+2026-11-26T02:44:30.194Z case TC-158
+2026-11-26T02:44:30.332Z lbl [AID]Produce_Back
+2026-11-26T02:44:33.877Z lbl [AID]TimeLine_Home
+2026-11-26T02:44:37.785Z texts 
+2026-11-26T02:44:41.275Z lbl Close
+2026-11-26T02:44:44.044Z texts 
+2026-11-26T02:44:45.406Z tap 107 2335
+2026-11-26T02:44:47.692Z tap 55 65
+2026-11-26T02:44:49.990Z scrollto Remove AIGC Watermark
+2026-11-26T02:44:54.115Z tap 976 1763
+2026-11-26T02:44:56.387Z scrollto Remove AIGC Watermark
+2026-11-26T02:44:57.243Z back 
+2026-11-26T02:44:59.944Z lbl Image to Video
+2026-11-26T02:45:04.758Z tapif Try It Now
+2026-11-26T02:45:08.234Z els 
+2026-11-26T02:45:12.069Z id ivHistory
+2026-11-26T02:45:15.470Z els View
+2026-11-26T02:45:19.048Z els 
+2026-11-26T02:45:22.707Z texts 
+2026-11-26T02:45:27.244Z lbl View
+2026-11-26T02:45:32.745Z shot TC-158-result
+2026-11-26T02:45:34.178Z lbl Full Editor
+2026-11-26T02:45:42.568Z tapif [AID]ConfirmDialog_OK
+2026-11-26T02:45:43.686Z texts TC-158-project
+2026-11-26T02:45:49.230Z lbl [AID]TimeLine_Play
+2026-11-26T02:45:52.311Z texts 
+2026-11-26T02:45:52.538Z tapif btn_close
+2026-11-26T02:45:52.880Z id btn_close
+2026-11-26T02:46:00.281Z els 
+2026-11-26T02:46:07.891Z fingerdrag 300 1800 1050 1800 5
+2026-11-26T02:46:08.584Z fingerdrag 300 1800 1050 1800 5
+2026-11-26T02:46:09.127Z els 
+2026-11-26T02:46:22.477Z lbl Export
+2026-11-26T02:46:25.972Z texts TC-158-step2
+2026-11-26T02:46:26.913Z lbl Produce
+2026-11-26T02:46:27.308Z waitfor Saved to Gallery|[AID]IAP_Back|Not now|AIGC|Error|failed --timeout 170
+2026-11-26T02:46:39.074Z tapif [AID]IAP_Back
+2026-11-26T02:46:50.239Z waitfor Saved to Gallery|Not now|AIGC --timeout 170
+2026-11-26T02:46:55.531Z tapif Not now
+2026-11-26T02:47:08.045Z run-log set TC-158 Pass
+2026-11-26T02:47:13.757Z case TC-128
+2026-11-26T02:47:13.895Z lbl [AID]Produce_Back
+2026-11-26T02:47:17.357Z lbl [AID]TimeLine_Home
+2026-11-26T02:47:21.231Z tapif Close
+2026-11-26T02:47:21.914Z tap 107 2335
+2026-11-26T02:47:24.195Z tap 55 65
+2026-11-26T02:47:26.485Z scrollto Remove AIGC Watermark
+2026-11-26T02:47:27.484Z tap 976 1763
+2026-11-26T02:47:29.766Z scrollto Remove AIGC Watermark
+2026-11-26T02:47:30.637Z back 
+2026-11-26T02:47:33.321Z lbl AI Magic
+2026-11-26T02:47:37.878Z scrollto AI Music Generator
+2026-11-26T02:47:42.007Z lbl AI Music Generator
+2026-11-26T02:47:46.536Z texts TC-128-page
+2026-11-26T02:47:51.184Z lbl Try It Now
+2026-11-26T02:47:56.603Z texts TC-128-gen
+2026-11-26T02:48:00.982Z els 
+2026-11-26T02:48:05.581Z lbl Country
+2026-11-26T02:48:06.902Z lbl Elegant
+2026-11-26T02:48:07.332Z lbl Cooking
+2026-11-26T02:48:09.334Z tap 60 1967
+2026-11-26T02:48:10.616Z els 
+2026-11-26T02:48:11.209Z texts 
+2026-11-26T02:48:14.701Z shot TC-128-before
+2026-11-26T02:48:15.435Z id btn_generate
+2026-11-26T02:48:18.071Z texts TC-128-after
+2026-11-26T02:48:23.628Z texts TC-128-after2
+2026-11-26T02:48:35.797Z run-log set TC-128 Blocked
+2026-11-26T02:48:40.753Z case -
+2026-11-26T02:48:40.890Z waitfor Generating --gone --timeout 300
+2026-11-26T02:48:41.104Z texts 
+2026-11-26T02:48:45.305Z shot x
+2026-11-26T02:48:45.997Z back 
+2026-11-26T02:48:48.571Z back 
+2026-11-26T02:48:51.049Z texts 
+2026-11-26T02:48:56.084Z lbl [AID]TimeLine_Home
+2026-11-26T02:48:59.939Z tapif Close
+2026-11-26T02:49:01.536Z tap 107 2335
+2026-11-26T02:49:03.797Z tap 55 65
+2026-11-26T02:49:06.072Z scrollto Remove AIGC Watermark
+2026-11-26T02:49:06.915Z shot R4a-switch-end
+2026-11-26T02:49:07.795Z back 
+2026-11-26T02:49:09.477Z lbl Mine
+2026-11-26T02:49:13.949Z texts R4a-mine-end
+2026-11-26T02:49:19.068Z lbl Home
+2026-11-26T02:49:19.769Z pull-logs R4-a
+2026-11-26T02:01:11.616Z file screenshots/start-launcher.txt
+2026-11-26T02:01:12.676Z file screenshots/start-launcher.png
+2026-11-26T02:01:19.079Z file screenshots/start-launcher2.png
+2026-11-26T02:01:47.576Z file screenshots/R4a-launcher.png
+2026-11-26T02:01:59.093Z file screenshots/R4a-mine.txt
+2026-11-26T02:01:59.662Z file screenshots/R4a-mine.png
+2026-11-26T02:02:14.119Z file screenshots/R4a-switch-start.png
+2026-11-26T02:03:17.946Z file screenshots/np1.txt
+2026-11-26T02:03:19.060Z file screenshots/np1.png
+2026-11-26T02:03:37.935Z file screenshots/np2.png
+2026-11-26T02:03:47.248Z file screenshots/np3.txt
+2026-11-26T02:03:48.405Z file screenshots/np3.png
+2026-11-26T02:04:31.564Z file screenshots/np4.txt
+2026-11-26T02:04:32.101Z file screenshots/np4.png
+2026-11-26T02:04:46.009Z file screenshots/np5.txt
+2026-11-26T02:04:46.583Z file screenshots/np5.png
+2026-11-26T02:04:54.905Z file screenshots/np6.txt
+2026-11-26T02:04:55.446Z file screenshots/np6.png
+2026-11-26T02:05:12.413Z file screenshots/np7.png
+2026-11-26T02:05:28.247Z file screenshots/np8.txt
+2026-11-26T02:05:28.815Z file screenshots/np8.png
+2026-11-26T02:05:37.499Z file screenshots/np9.txt
+2026-11-26T02:05:38.414Z file screenshots/np9.png
+2026-11-26T02:05:46.682Z file screenshots/np10.txt
+2026-11-26T02:05:47.769Z file screenshots/np10.png
+2026-11-26T02:05:57.194Z file screenshots/np11.txt
+2026-11-26T02:05:58.125Z file screenshots/np11.png
+2026-11-26T02:06:11.864Z file screenshots/np12.txt
+2026-11-26T02:06:12.381Z file screenshots/np12.png
+2026-11-26T02:06:21.275Z file screenshots/np13.txt
+2026-11-26T02:06:21.796Z file screenshots/np13.png
+2026-11-26T02:06:35.310Z file screenshots/np14.txt
+2026-11-26T02:06:35.836Z file screenshots/np14.png
+2026-11-26T02:06:56.649Z file screenshots/np15.txt
+2026-11-26T02:06:57.131Z file screenshots/np15.png
+2026-11-26T02:17:37.390Z file screenshots/np16.txt
+2026-11-26T02:17:37.919Z file screenshots/np16.png
+2026-11-26T02:17:58.679Z file screenshots/np17.txt
+2026-11-26T02:17:59.873Z file screenshots/np17.png
+2026-11-26T02:18:09.241Z file screenshots/np18.txt
+2026-11-26T02:18:09.785Z file screenshots/np18.png
+2026-11-26T02:18:22.590Z file screenshots/np19.txt
+2026-11-26T02:18:23.291Z file screenshots/np19.png
+2026-11-26T02:18:31.983Z file screenshots/TC-071-project.png
+2026-11-26T02:19:04.705Z file screenshots/np20.txt
+2026-11-26T02:19:05.302Z file screenshots/np20.png
+2026-11-26T02:19:13.672Z file screenshots/np21.txt
+2026-11-26T02:19:14.202Z file screenshots/np21.png
+2026-11-26T02:19:22.060Z file screenshots/np22.txt
+2026-11-26T02:19:22.660Z file screenshots/np22.png
+2026-11-26T02:19:42.043Z file screenshots/np23.txt
+2026-11-26T02:19:42.897Z file screenshots/np23.png
+2026-11-26T02:20:01.096Z file screenshots/np24.txt
+2026-11-26T02:20:01.578Z file screenshots/np24.png
+2026-11-26T02:20:08.492Z file screenshots/TC-065-project.png
+2026-11-26T02:20:12.281Z file screenshots/TC-065-step1.txt
+2026-11-26T02:20:12.874Z file screenshots/TC-065-step1.png
+2026-11-26T02:20:19.917Z file screenshots/TC-065-step2.txt
+2026-11-26T02:20:20.385Z file screenshots/TC-065-step2.png
+2026-11-26T02:30:27.900Z file screenshots/waitfor-timeout-20261126-103027.png
+2026-11-26T02:30:28.206Z file screenshots/TC-065-step3.txt
+2026-11-26T02:30:28.817Z file screenshots/TC-065-step3.png
+2026-11-26T02:32:34.129Z file screenshots/TC-066-switch-on.png
+2026-11-26T02:33:18.442Z file screenshots/hint.png
+2026-11-26T02:34:10.898Z file screenshots/TC-066-step2.txt
+2026-11-26T02:34:11.367Z file screenshots/TC-066-step2.png
+2026-11-26T02:34:28.803Z file screenshots/TC-066-step3.txt
+2026-11-26T02:34:29.744Z file screenshots/TC-066-step3.png
+2026-11-26T02:37:56.567Z file screenshots/TC-071-step1.txt
+2026-11-26T02:37:57.248Z file screenshots/TC-071-step1.png
+2026-11-26T02:38:01.419Z file screenshots/TC-071-step2.txt
+2026-11-26T02:38:01.917Z file screenshots/TC-071-step2.png
+2026-11-26T02:39:47.053Z file screenshots/i2v1.txt
+2026-11-26T02:39:48.314Z file screenshots/i2v1.png
+2026-11-26T02:39:56.154Z file screenshots/i2v2.txt
+2026-11-26T02:39:57.652Z file screenshots/i2v2.png
+2026-11-26T02:40:14.706Z file screenshots/i2v3.png
+2026-11-26T02:40:36.462Z file screenshots/i2v4.txt
+2026-11-26T02:40:37.088Z file screenshots/i2v4.png
+2026-11-26T02:40:56.519Z file screenshots/i2v5.txt
+2026-11-26T02:40:57.137Z file screenshots/i2v5.png
+2026-11-26T02:41:07.451Z file screenshots/i2v6.txt
+2026-11-26T02:41:08.041Z file screenshots/i2v6.png
+2026-11-26T02:42:13.458Z file screenshots/i2v7.txt
+2026-11-26T02:42:14.031Z file screenshots/i2v7.png
+2026-11-26T02:42:58.187Z file screenshots/i2v8.txt
+2026-11-26T02:42:59.043Z file screenshots/i2v8.png
+2026-11-26T02:43:16.606Z file screenshots/TC-083-project.txt
+2026-11-26T02:43:18.341Z file screenshots/TC-083-project.png
+2026-11-26T02:43:26.828Z file screenshots/TC-083-export.txt
+2026-11-26T02:43:27.494Z file screenshots/TC-083-export.png
+2026-11-26T02:45:33.995Z file screenshots/TC-158-result.png
+2026-11-26T02:45:44.614Z file screenshots/TC-158-project.txt
+2026-11-26T02:45:45.405Z file screenshots/TC-158-project.png
+2026-11-26T02:46:26.200Z file screenshots/TC-158-step2.txt
+2026-11-26T02:46:26.717Z file screenshots/TC-158-step2.png
+2026-11-26T02:47:46.739Z file screenshots/TC-128-page.txt
+2026-11-26T02:47:47.608Z file screenshots/TC-128-page.png
+2026-11-26T02:47:56.893Z file screenshots/TC-128-gen.txt
+2026-11-26T02:47:57.412Z file screenshots/TC-128-gen.png
+2026-11-26T02:48:15.269Z file screenshots/TC-128-before.png
+2026-11-26T02:48:18.149Z file screenshots/TC-128-after.txt
+2026-11-26T02:48:18.613Z file screenshots/TC-128-after.png
+2026-11-26T02:48:23.879Z file screenshots/TC-128-after2.txt
+2026-11-26T02:48:24.417Z file screenshots/TC-128-after2.png
+2026-11-26T02:48:45.835Z file screenshots/x.png
+2026-11-26T02:49:07.634Z file screenshots/R4a-switch-end.png
+2026-11-26T02:49:14.693Z file screenshots/R4a-mine-end.txt
+2026-11-26T02:49:15.286Z file screenshots/R4a-mine-end.png
+2026-11-26T02:49:20.411Z file logs/.live
+2026-11-26T02:49:25.199Z file logs/R4-a-20261126-104919
+2026-11-26T02:50:35.506Z logcat stop

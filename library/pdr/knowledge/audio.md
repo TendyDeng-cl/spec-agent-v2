@@ -56,3 +56,37 @@ On a stable Wi-Fi (0% loss) Jill, Kathleen and Margaret applied from a clip's �
 voice in the output. Apply writes VoiceChanger/Cache/2_<n>.m4a and 3_<n>.m4a; the panel's ✓ removes 2_ and keeps 3_.
 The earlier 「…m4a is missing」 Produce failure (KP-104) happened during a Wi-Fi loss (KP-105), with the voice's S3
 upload timing out while the UI said 「Applied」: recheck such a failure on a stable network before filing.
+
+## KP-130 Text to Speech entries add a title first
+- kind: fact · platform: android · use: analysis, run · tags: text-to-speech, entry-point, editor, credits
+- source: AIGC Watermark Android run 2026-11-26-e1-entries (inbox I-016, I-019) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+Global › Audio › Text to Speech, Global › Text › Text to Speech and Editor › AI Magic › Text to Speech first add a
+「Tap to Edit」 title at the playhead and open its text editor; ✓ opens 「Select Voice」 (Preset ◆2 per 1,000
+characters; Casual Voice is Pro, 「Generate Voice」 with no price). Leaving Select Voice keeps the title. With a title
+selected, Text toolbar › Text to Speech opens Select Voice at once with its text. The label reads 「Text to  Speech」.
+
+## KP-131 A second voice on the same title
+- kind: fact · platform: android · use: analysis, run · tags: text-to-speech, dialog, audio
+- source: AIGC Watermark Android run 2026-11-26-e1-entries (inbox I-019) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+When the title already has a voice, Generate asks 「Generate Another Voice? / 2 credits will be used for this
+generation.」 with a 「Replace the current voice instead of adding a new one」 tick (button Generate, or Replace when
+ticked). Replace moved the voice from audio track 1 to track 2.
+
+## KP-132 AI Voice Changer on a Pro account
+- kind: fact · platform: android · use: analysis, run · tags: voice-changer, tier, credits, entry-point
+- source: AIGC Watermark Android run 2026-11-26-e1-entries (inbox I-018) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+One panel from Global › Audio, Video / PIP Video › Audio Tools and Audio clip › Audio Tools: tabs Effect / Professional
+/ Mellow / Bright / Deep / Other, a Filter sheet (Type, Gender, Age, Reset, Save filter) and trash. No price shown;
+Professional voices applied with no charge. The voice replaces the clip's own audio (no new track). From Global › Audio
+with nothing selected it takes the main clip under the playhead and leaves it selected. Free: KP-088.
+
+## KP-133 AI Music Generator's 「Generating...」 popup is invisible to UiAutomator
+- kind: quirk · platform: android · use: run · tags: ai-music, tools, page-source
+- source: AIGC Watermark Android run 2026-11-26-e1-entries (inbox I-023) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+The popup is not in the page source (`waitfor` cannot see it; tap 「Go to My AI Music」 by position, about 540,1524 on
+the Sony) and can take ~10 s to appear after 「Generate for ◆ N」: never tap Generate twice. The page's credit pill
+updates only at the next open.

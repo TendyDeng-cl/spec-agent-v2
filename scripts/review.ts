@@ -21,8 +21,9 @@ import { renderPage } from './lib/render.ts';
 import { readZhCopy } from './lib/zh.ts';
 import { exportTable } from './lib/exporter.ts';
 import { writeFeatureIndex } from './lib/feature-index.ts';
-import { parseQuestions, readAnswers, readQuestionsZh, saveAnswers } from './lib/questions.ts';
+import { parseQuestions, readAnswers, readQuestionsZh, readSettled, saveAnswers } from './lib/questions.ts';
 import { isLocal } from './lib/local.ts';
+import { filedQuestions } from './lib/boards.ts';
 
 const [feature, platform] = process.argv.slice(2);
 assertIds(feature, platform);
@@ -85,7 +86,7 @@ const page = (local: boolean) => renderPage({
   based_on_version: manifest?.version ?? null, version: manifest?.version ?? null, approved_at: manifest?.approved_at ?? null,
   saved_from_draft: !!draftArg && manifest?.draft === draftId && sameAsApproved(),
   spec_files: spec.spec_files, rows, previous: draftArg ? previous : {}, requirements, update_plan: plan, update_plan_zh: planZh, requirements_zh: reqZh, zh,
-  questions: parseQuestions(requirements), answers: readAnswers(feature), questions_zh: qzh,
+  questions: parseQuestions(requirements), answers: readAnswers(feature), questions_zh: qzh, question_bugs: filedQuestions(feature, platform), question_settled: draftDir ? {} : readSettled(table),
 });
 
 type Note = { id: string; section: string; text: string; at?: string };

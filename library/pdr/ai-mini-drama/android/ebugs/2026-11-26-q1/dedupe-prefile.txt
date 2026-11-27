@@ -1,0 +1,24 @@
+
+1 of 2 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[AI-Mini-Drama-Q1-01] PDR-A 16.9.0 - [AIAgent][UX] AI Mini Drama: Templates show on a non-US/JP store; PM's US & JP day 1 limit is undefined
+      feature='AI Mini Drama'  terms=['AI Mini Drama', 'Mini Drama']  searched 488 candidate(s)
+      no likely duplicate
+
+[AI-Mini-Drama-Q1-02] PDR-A 16.9.0 - [AIAgent][UI] AI Mini Drama: 「Every frame is done. Ready to create your video?」 never shows in the chat
+      feature='AI Mini Drama'  terms=['AI Mini Drama', 'Mini Drama']  searched 488 candidate(s)
+    ! 30%  closed    DRA262610P0178  PDR-A 16.8.0 - [UI] AI Mini Drama (Custom topic): Remove the redundant "Ready to create 
+              shares phrase "create your"
+    ! 30%  closed    DRA262610P0103  PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Create Your Drama reopens the last drama ins
+              shares phrase "create your"
+    ! 20%  closed    DRA262610P0058  PDR-A 16.8.0 - [UI] AI Mini Drama: Prompt input field does not gain focus automatically 
+              shares phrase "create your"
+    ! 20%  closed    DRA262610-0035  PDR-A 16.8.0 - [AIFound][UI] AI Mini Drama: "Choose your video settings" heading is show
+              shares phrase "your video"
+      40%  closed    DRA262610P0267  PDR-A 16.8.0 - [AIFound] AI Mini Drama: "Your drama is ready" notification is sent while
+
+== Open in the pool on 16.9.0: 4 ticket(s) of 488 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0070  NewCreated   PM   2611091  PDR-A 16.9.0 - [AIFound][MUI] AI Mini Drama: Traditional Chinese template covers show Western faces and English titles
+      DRA262611P0237  Assigned     RD   2611171  PDR-A 16.9.0 - [AIFound] AI Mini Drama (職場戀情禁止中): Two Standard preview scenes fail with Seedance 4005
+      DRA262611P0238  Assigned     RD   2611171  PDR-A 16.9.0 - [AIFound] AI Mini Drama (職場戀情禁止中): Default-template storyboard preview fails with TextToSpeech 4000
+      DRA262611P0314  Assigned     RD   2611231  PDR-A 16.9.0 - [AIAgent] AI Mini Drama: Credit Details shows fewer credits than deducted

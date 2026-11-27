@@ -1,0 +1,1801 @@
+﻿﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-049,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. Launcher 停在 Home 分頁","1. 在 Launcher 點「Cinematic Reel Creator」
+2. 點 template 頁的 ‹","步驟 1：Launcher 上有「Cinematic Reel Creator」
+步驟 1：直接進到 Cinematic Reel Creator 的 template 頁，沒有出現教學
+步驟 1：顯示 template 卡片，每張都有「View photo tips」chip 和「Import a Photo」
+步驟 1：頁首有 ‹、顯示帳號點數餘額的點數標籤、「?」和歷史紀錄
+步驟 2：回到Launcher（Home 分頁）",P2,"R-030, R-001; REQ-010",入口 › Launcher，主要入口（pass 12）：檢查進入後的畫面和返回會到哪裡。規格沒有畫 template 頁的 ‹ 和系統返回鍵；離開再回來是團隊的 QA 規則。,新增,REQ-010（pass 12）：主要入口之前沒有案例檢查進入後的畫面和返回的去處
+TC-050,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 帳號點數足夠產生兩次 Micro Cinema
+6. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）","1. 看 template 頁上的點數標籤
+2. 滑動 template 卡片到「Micro Cinema」卡片
+3. 點「Import a Photo」
+4. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+5. 點預覽頁的「Generate」
+6. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+7. 等 Analyzing & Generating 跑完並轉到任務列表
+8. 看點數標籤","步驟 1：記下點數餘額
+步驟 3：開啟 Add Media
+步驟 5 之前：預覽頁顯示產生用相片
+步驟 5 之前：「Generate」上顯示所需點數（記下來）
+步驟 6：記下每個對話框的標題和內容（規格裡都沒有）
+步驟 7：Analyzing & Generating 跑完各個階段後，任務列表出現一筆進行中的「Micro Cinema <MMDD>」任務
+步驟 8：點數剛好少了「Generate」上的價格，只扣一次",P1,R-030; REQ-010,依使用者 2026-11-26 裁示（REQ-010），每個入口都要實際產生影片。流程依 Design 箭頭：Add Media 選相片 → 預覽頁「Generate」→ Analyzing & Generating → 任務列表；「AI Processing Notice」和「Generate」上的價格來自探索筆記，不是規格。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。任務讓它繼續跑：TC-052 會開啟這支影片。,新增,"REQ-010（pass 12，使用者 2026-11-26 裁示「Yes, generate per entry」）：從 Launcher › 「Cinematic Reel Creator」產生一支影片並扣點"
+TC-051,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 帳號點數足夠產生兩次 Micro Cinema
+6. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）
+7. 畫面上是「Micro Cinema」卡片","1. 點「Micro Cinema」卡片上的「Import a Photo」
+2. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+3. 點預覽頁的「Generate」
+4. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+5. 在顯示「Uploading」或 Analyzing & Generating 時，點左上角的 ‹（沒有的話要記下來）
+6. 如果 App 還停在那一頁，點「View later」
+7. 從 template 頁的歷史紀錄圖示開啟 Cinematic Reel Creator 任務列表（如果 App 已離開，就從這個 Section 的入口回到 template 頁）","步驟 5：記下發生什麼事：頁面關閉回到 template 頁、回到Launcher（Home 分頁）、跳出離開或取消的對話框（照抄內容），或沒有反應
+步驟 5：Design 在那一頁只畫了「View later」和「Create another one」（Q-10），所以任何結果都記為 Fail（question）交給 PM
+步驟 7：記下任務有沒有在列表裡（進行中、完成或失敗）
+步驟 7：點數標籤顯示這次產生只扣一次點，或產生被取消時已退點（記下是哪一種）
+步驟 1–7：App 不會閃退或卡住",P2,R-030; REQ-010,依使用者 2026-11-26 裁示（REQ-010），每個入口都要實際產生影片。Q-10：產生影片途中離開。iOS 沒有系統返回鍵，左上角的控制項就是離開的方式。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。,新增,"REQ-010（pass 12，使用者 2026-11-26 裁示「Yes, generate per entry」）：從 Launcher › 「Cinematic Reel Creator」產生影片途中離開"
+TC-052,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. TC-050 開始的 Micro Cinema 任務正在跑或已完成","1. 點 template 頁的歷史紀錄圖示
+2. 等 TC-050 開始的任務出現「View」
+3. 點「View」
+4. 點結果頁的 ‹
+5. 一直點 ‹，直到離開 Cinematic Reel Creator
+6. 開啟 Launcher 的「Project」分頁
+7. 開啟「AI Magic」分頁 › 「My Artwork」","步驟 3：開啟結果頁，有影片封面、「Add Text」和「Edit Music」
+步驟 4：記下會回到哪裡（任務列表或 template 頁）：規格沒有畫（Q-10），所以記為 Fail（question）交給 PM
+步驟 5：回到Launcher（Home 分頁）
+步驟 6：記下有沒有多出新專案
+步驟 7：My Artwork 的「Cinematic Reel Creator」區塊有這支影片",P1,R-030; REQ-010,依使用者 2026-11-26 裁示（REQ-010），每個入口都要實際產生影片。Design 箭頭：任務「View」→ 結果頁。KP-103：如果 My Artwork 的縮圖還顯示「Processing...」，先開一次任務列表。KP-079：影片不會自動存到相簿。,新增,"REQ-010（pass 12，使用者 2026-11-26 裁示「Yes, generate per entry」）：從 Launcher › 「Cinematic Reel Creator」完成的影片、存放位置和離開方式"
+TC-001,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Horror Movie template, follow this advice:」，其中「Horror Movie」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「People in Frame」、「Layered Depth」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Horror Movie 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-002,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：變暗的背景仍看得到 template 頁的頁首（‹、點數、?、歷史紀錄）
+步驟 2：面板顯示「For best results with the Micro Cinema template, follow this advice:」，其中「Micro Cinema」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Mid-Distance Framing」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P1,"R-001, R-002, R-003, R-006, R-007, R-008, R-012, R-011, R-015",對應 CMS › Recommendation 的 Micro_Cinema 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。Design 0820 add photo tips 畫的就是這個 template。,未變更,
+TC-003,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「One-Take Shot」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the One-Take Shot template, follow this advice:」，其中「One-Take Shot」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Mid-Distance Framing」、「Layered Depth」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 One_Take_Shot 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-004,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Time Lapse」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Time Lapse template, follow this advice:」，其中「Time Lapse」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Visible Sky」、「Cityscape or Landscape」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Portrait as Subject」、「Indoor Close-up」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Time_Lapse 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-005,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Handheld Camera」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Handheld Camera template, follow this advice:」，其中「Handheld Camera」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Layered Depth」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Handheld_Camera 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-006,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Fast Cut」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Fast Cut template, follow this advice:」，其中「Fast Cut」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Sense of Motion」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Static Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Fast_Cut 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-007,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 畫面上是「Micro Cinema」卡片","1. 點「Micro Cinema」卡片上的「View photo tips」
+2. 點「Got it」
+3. 再點一次同一張卡片上的「View photo tips」","步驟 2：面板關閉，背景不再變暗
+步驟 2：template 頁仍停在「Micro Cinema」卡片，和步驟 1 之前一樣
+步驟 3：再次打開同一個 Micro Cinema 拍照建議面板",P1,"R-010, R-003",Design 只畫了「Got it」這個關閉方式（Q-3）。,未變更,
+TC-046,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 畫面上是「Micro Cinema」卡片","1. 點「Micro Cinema」卡片上的「View photo tips」
+2. 點面板上方變暗的 template 頁（標題列以下的位置）
+3. 如果面板還開著，點「Got it」
+4. 再點一次同一張卡片上的「View photo tips」
+5. 從面板的第一句文字開始往下滑（不要從「Avoid」那一排開始）
+6. 如果面板還開著，點「Got it」","步驟 2：記下面板是關閉還是維持開啟
+步驟 2：變暗區域後面的東西都不會有反應：template 頁仍停在「Micro Cinema」卡片，沒有開啟其他畫面
+步驟 5：記下面板是關閉、跟著手指移動後彈回，還是完全不動
+步驟 3 和 6：面板關閉後變暗效果消失，template 頁顯示「Micro Cinema」卡片，和步驟 1 之前一樣
+步驟 2 和 5：Design 只畫了「Got it」，沒有提到這兩種手勢（Q-3），所以兩種結果都不算 Pass：把各自的行為記為 Fail（question）交給 PM",P3,R-010; REQ-009,Q-3：「Got it」由 TC-007 檢查。從 Add Media 開啟的面板要做同樣兩種手勢，得等 Q-1 有結果（那裡目前還沒有「?」）。,未變更,REQ-009：Q-3 — 之前沒有任何一列去點變暗區域或把面板往下滑（R-010）
+TC-008,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從「View photo tips」標籤打開 Micro Cinema 的拍照建議面板","1. 把「Avoid」那一列往左滑
+2. 再往右滑回來","步驟 1 之前：Avoid 的第三項超出面板右緣
+步驟 1：「Extreme Close-up」完整出現，含 ⊗ 標記與說明文字
+步驟 1：「Recommendation」那一列不會跟著動
+步驟 2：「Flat Composition」回到最左邊",P2,R-009,Design 把 Avoid 第三項畫成被右緣切掉，但沒寫這一列能不能滑動（Q-5）。,未變更,
+TC-009,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 點「Handheld Camera」卡片上的「View photo tips」
+2. 點「Got it」
+3. 點「Fast Cut」卡片上的「View photo tips」","步驟 1：「Rich Visual Details」顯示一般版的 Rich Visual Details 圖片
+步驟 3：「Rich Visual Details」換成另一張 Fast Cut 專用的圖片",P3,R-013,CMS 圖片清單中「Rich Visual Details (畫面細節豐富) for Fast Cut」是獨立的一張圖，請比對兩張截圖。,未變更,
+TC-010,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Horror Movie template, follow this advice:」
+步驟 3：「Recommendation」列出「People in Frame」、「Layered Depth」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-011,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Micro Cinema template, follow this advice:」
+步驟 3：「Recommendation」列出「Mid-Distance Framing」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P1,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-012,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「One-Take Shot」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the One-Take Shot template, follow this advice:」
+步驟 3：「Recommendation」列出「Mid-Distance Framing」、「Layered Depth」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-013,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Time Lapse」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Time Lapse template, follow this advice:」
+步驟 3：「Recommendation」列出「Visible Sky」、「Cityscape or Landscape」
+步驟 3：「Avoid」列出「Portrait as Subject」、「Indoor Close-up」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-014,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Handheld Camera」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Handheld Camera template, follow this advice:」
+步驟 3：「Recommendation」列出「Layered Depth」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-015,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Fast Cut」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Fast Cut template, follow this advice:」
+步驟 3：「Recommendation」列出「Sense of Motion」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Static Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-016,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從「Micro Cinema」卡片點「Import a Photo」進入 Add Media，尚未選照片","1. 點 Add Media 頁首的「?」
+2. 點「Got it」","步驟 2：面板關閉，回到 Add Media
+步驟 2：Add Media 仍在原分頁（Recents），沒有選到任何照片",P2,"R-004, R-010",PM-only：Design 尚未畫出（Q-1）。,未變更,
+TC-017,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言設為繁體中文（iOS 設定 › PowerDirector › 語言）
+3. Cinematic Reel Creator 停在 template 頁","1. 滑到 Micro Cinema 卡片
+2. 點卡片上的拍照建議標籤","步驟 2：面板第一句的 template 名稱顯示為「微電影畫境」
+步驟 2：那句話、兩個標題和每個說明文字都完整顯示，沒有被截斷或亂碼
+步驟 2：「Got it」按鈕以 App 語言顯示",P3,R-015,依 CMS Template Name Localization：微電影畫境。說明文字是否翻譯尚未確定（Q-2）：記錄顯示的語言即可，不判 Fail。做完這列把語言改回英文。,未變更,
+TC-018,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言設為日本語（iOS 設定 › PowerDirector › 語言）
+3. Cinematic Reel Creator 停在 template 頁","1. 滑到 Micro Cinema 卡片
+2. 點卡片上的拍照建議標籤","步驟 2：面板第一句的 template 名稱顯示為「マイクロシネマ」
+步驟 2：那句話、兩個標題和每個說明文字都完整顯示，沒有被截斷或亂碼
+步驟 2：「Got it」按鈕以 App 語言顯示",P3,R-015,依 CMS Template Name Localization：マイクロシネマ。說明文字是否翻譯尚未確定（Q-2）：記錄顯示的語言即可，不判 Fail。做完這列把語言改回英文。,未變更,
+TC-019,資料來源,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 進入功能前先清除 App log","1. 點「Micro Cinema」卡片上的「View photo tips」
+2. 點「Got it」
+3. 點「Time Lapse」卡片上的「View photo tips」
+4. 點「Got it」
+5. 拉取 App log","步驟 5：log 裡有從 CMS 取得的 template 資料，每個 template 都帶 recommend_samples
+步驟 5：每個面板顯示的項目和該 template 的 recommend_samples 一致",P3,R-014,隱藏條款（pass 9）。如果 log 看不到 CMS template 資料，這列先擱置（needs: cms-log）。,未變更,
+TC-047,資料來源,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. PowerDirector 已強制停止（沒有在執行）
+5. Wi-Fi 關閉，也沒有行動網路（手機接 USB，先確認 Appium 連線正常）","1. 啟動 PowerDirector
+2. 在 Launcher 點「Cinematic Reel Creator」
+3. 滑過所有 template 卡片
+4. 在第一張有 chip 的卡片上點「View photo tips」（如果沒有任何卡片顯示 chip，跳過步驟 4–5）
+5. 點「Got it」
+6. 把 Wi-Fi 重新打開
+7. 離開 Cinematic Reel Creator 再進來一次
+8. 點「Micro Cinema」卡片上的「View photo tips」","步驟 2：記下開啟的是什麼：有卡片的 template 頁、空白頁、載入中的狀態，還是離線訊息（照抄訊息文字）
+步驟 3：記下顯示了哪些卡片，以及每張卡片有沒有「View photo tips」chip
+步驟 4：記下面板顯示的內容：開頭的句子、標題和說明文字，以及圖片是載入了還是空白
+步驟 1–5：App 不會閃退或卡住，每個畫面都離得開
+步驟 8：恢復連線後，Micro Cinema 的面板在「Recommendation」下顯示「Mid-Distance Framing」和「Rich Visual Details」，在「Avoid」下顯示「Flat Composition」、「Visible Text or Logos」和「Extreme Close-up」，每項都有圖片
+步驟 2–4：沒有任何規格寫到連不上 CMS 時這個功能要顯示什麼（Q-4），所以任何結果都不算 Pass：記為 Fail（question）交給 PM",P2,"R-014, R-001, R-012; REQ-009",Q-4 的離線部分：在沒有網路的情況下重新啟動 App。之前連線時留在手機上的資料可能還會顯示：如果頁面看起來很完整，要註明。這是真的斷網；不管發生什麼事，步驟 6 都要把 Wi-Fi 打開。Q-4 的另一半（範本沒有 recommend_samples）QA 做不出來（CMS 在伺服器端）。,未變更,REQ-009：Q-4 — 之前沒有任何一列在離線時開啟這個功能（R-014、R-001）
+TC-048,資料來源,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 全新的 App 程序：PowerDirector 強制停止後，在 Wi-Fi 開啟的狀態下重新啟動
+5. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+6. 手機接 USB（已確認 Appium 連線正常）","1. 點「Micro Cinema」卡片上的「View photo tips」，等圖片出現
+2. 點「Got it」
+3. 關閉 Wi-Fi
+4. 再點一次「Micro Cinema」卡片上的「View photo tips」
+5. 點「Got it」
+6. 點「Time Lapse」卡片上的「View photo tips」（這次啟動後還沒開過）
+7. 點「Got it」
+8. 把 Wi-Fi 重新打開
+9. 點「Time Lapse」卡片上的「View photo tips」","步驟 4：記下面板有沒有開啟，以及句子、說明文字和圖片是否還在
+步驟 6：記下面板有沒有開啟，以及說明文字和圖片是正常顯示、空白，還是出現訊息（照抄訊息文字）
+步驟 3–7：記下卡片上的「View photo tips」chip 是否還在
+步驟 3–7：App 不會閃退或卡住，每個開啟的面板都能用「Got it」關閉
+步驟 9：恢復連線後，Time Lapse 的面板在「Recommendation」下顯示「Visible Sky」和「Cityscape or Landscape」，在「Avoid」下顯示「Portrait as Subject」、「Indoor Close-up」和「Extreme Close-up」，每項都有圖片
+步驟 4 和 6：沒有任何規格寫到連不上 CMS 時面板要顯示什麼（Q-4），所以任何結果都不算 Pass：記為 Fail（question）交給 PM",P2,"R-014, R-012; REQ-009",Q-4 的離線部分：先載入一個面板，之後才斷網。手機沒有行動網路。Time Lapse 的圖片如果在前面的列載入過，可能還會顯示：要註明。這是真的斷網；不管發生什麼事，步驟 8 都要把 Wi-Fi 打開。,未變更,REQ-009：Q-4 — 之前沒有任何一列在斷網後重開已載入的面板，或開啟一個新的面板（R-014）
+TC-053,入口 › AI Magic 分頁 › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. Launcher 停在 Home 分頁","1. 點下方的「AI Magic」分頁
+2. 在 AI Magic 清單中點「Cinematic Reel Creator」","步驟 1：AI Magic 清單裡有「Cinematic Reel Creator」（記下它的位置）
+步驟 1：如果沒有，記下找不到入口，留到階段收尾時當作 PM 問題提出，這個 Section 其餘的案例標為 Blocked
+步驟 2：直接進到 Cinematic Reel Creator 的 template 頁，沒有出現教學
+步驟 2：顯示 template 卡片，每張都有「View photo tips」chip 和「Import a Photo」
+步驟 2：頁首有 ‹、顯示帳號點數餘額的點數標籤、「?」和歷史紀錄
+步驟 2：卡片依該地區的 CMS 順序排列，和從 Launcher 進入時一樣（記下前三張的名稱）",P1,"R-031, R-001; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。入口：Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」，來源：KP-012、KP-013（AI Magic 分頁列出各個 AI 工具；Launcher 的 AI-Powered Creation「View more」也會開啟它），不在工具列表中。規格只畫了 Launcher 入口，所以這個 Section 以 Launcher 入口的行為為準。離開方式在 TC-056。",新增,REQ-010（pass 12，UI 檢查）：從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」檢查入口是否存在、進入後的畫面和帶進來的東西
+TC-054,入口 › AI Magic 分頁 › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. Launcher 停在 Home 分頁
+5. 已從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」
+3. 點「Got it」
+4. 滑動 template 卡片到「Micro Cinema」卡片
+5. 點該卡片上的「View photo tips」
+6. 把「Avoid」那一排往左滑
+7. 把「Avoid」那一排滑回右邊
+8. 點面板上方變暗的頁面
+9. 如果面板還開著，從第一句文字開始往下滑
+10. 如果面板還開著，點「Got it」
+11. 再點一次同一張卡片上的「View photo tips」
+12. 點「Got it」
+13. 滑動 template 卡片到「One-Take Shot」卡片
+14. 點該卡片上的「View photo tips」
+15. 點「Got it」
+16. 滑動 template 卡片到「Time Lapse」卡片
+17. 點該卡片上的「View photo tips」
+18. 點「Got it」
+19. 滑動 template 卡片到「Handheld Camera」卡片
+20. 點該卡片上的「View photo tips」
+21. 點「Got it」
+22. 滑動 template 卡片到「Fast Cut」卡片
+23. 點該卡片上的「View photo tips」
+24. 點「Got it」
+25. 點 template 頁頁首的「?」
+26. 點教學的 X 關閉
+27. 點頁首的歷史紀錄圖示
+28. 點任務列表左上角的控制項","步驟 2：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Horror Movie template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 3：面板關閉，變暗效果消失，畫面停在「Horror Movie」卡片
+步驟 5：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Micro Cinema template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 7：那一排會捲到「Extreme Close-up」再捲回來，「Recommendation」那一排不動
+步驟 8：記下面板會不會關閉（Q-3）
+步驟 8：變暗區域後面的東西都不會有反應
+步驟 9：記下往下滑會不會關閉面板（Q-3）
+步驟 11：Micro Cinema 的面板再次打開
+步驟 12：面板關閉，變暗效果消失，畫面停在「Micro Cinema」卡片
+步驟 14：拍照建議面板在變暗的頁面上打開，顯示「For best results with the One-Take Shot template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 15：面板關閉，變暗效果消失，畫面停在「One-Take Shot」卡片
+步驟 17：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Time Lapse template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 18：面板關閉，變暗效果消失，畫面停在「Time Lapse」卡片
+步驟 20：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Handheld Camera template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 21：面板關閉，變暗效果消失，畫面停在「Handheld Camera」卡片
+步驟 23：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Fast Cut template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 24：面板關閉，變暗效果消失，畫面停在「Fast Cut」卡片
+步驟 25：開啟 Cinematic Reel Creator 教學（記下標題）
+步驟 26：回到 template 頁
+步驟 27：開啟 Cinematic Reel Creator 任務列表（顯示任務，或「No videos yet. Choose a template to create!」）
+步驟 28：回到 template 頁
+步驟 1–28：每個控制項按一次都有反應，沒有錯誤訊息、閃退、卡住、空白圖片或錯誤的範本名稱",P2,"R-031, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-001 – TC-009、TC-046 的控制項（每張卡片的 chip、面板、Avoid 那一排的滑動、變暗區域和往下滑（Q-3）、「Got it」），加上頁首的「?」和歷史紀錄（control-trace.json）。Q-3 的結果這裡只記錄、不判 Fail：由 TC-046 處理。入口：Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」檢查template 頁和拍照建議的每個控制項各按一次
+TC-055,入口 › AI Magic 分頁 › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. Launcher 停在 Home 分頁
+5. 已從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+6. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」（如果沒有開啟 Add Media，需要 Add Media 的步驟都跳過）
+4. 點「Got it」
+5. 每個 Add Media 來源分頁各點一次，最後停在「Recents」
+6. 點 Add Media 頁首的 ‹
+7. 點「Import a Photo」
+8. 點產生用相片
+9. 點預覽頁的 ‹","步驟 2：開啟 Add Media
+步驟 3：Micro Cinema 的拍照建議面板在 Add Media 上打開（Q-1：沒有「?」是 DRA262611P0289，引用即可，不再重開）
+步驟 4：回到 Add Media，沒有選到任何相片
+步驟 5：每個分頁顯示自己的相片，或它的登入或空白狀態，沒有錯誤
+步驟 6：回到 template 頁，停在「Micro Cinema」卡片
+步驟 8：開啟預覽頁，顯示範本「Micro Cinema」和標有所需點數的「Generate」（記下點數）
+步驟 8：預覽頁上的相片就是選的那張，完整、方向和比例都和原圖一樣，沒有被旋轉、拉伸、裁成別張或空白
+步驟 8：價格和從 Launcher 進入時 Micro Cinema 的價格相同（TC-050）
+步驟 9：記下會回到哪裡（Add Media 或 template 頁），也沒有留下沒選的相片",P1,"R-031, R-004, R-005, R-010; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-010 – TC-016 的控制項（「Import a Photo」、Add Media 的「?」、「Got it」），加上 Add Media 的分頁、‹ 和選相片。輸入是相片：預覽頁必須照原樣顯示它。入口：Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」檢查Add Media 和頁面讀到的相片
+TC-056,入口 › AI Magic 分頁 › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. Launcher 停在 Home 分頁
+5. 已從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+6. 帳號點數足夠產生兩次 Micro Cinema
+7. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）
+8. 畫面上是「Micro Cinema」卡片","1. 看 template 頁上的點數標籤
+2. 點「Micro Cinema」卡片上的「Import a Photo」
+3. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+4. 點預覽頁的「Generate」
+5. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+6. 在顯示「Uploading」或 Analyzing & Generating 時，點左上角的 ‹（沒有的話要記下來）
+7. 如果 App 還停在那一頁，點「View later」
+8. 從 template 頁的歷史紀錄圖示開啟任務列表（如果 App 已離開，就從這個入口回到 template 頁）
+9. 如果任務被取消，從「Micro Cinema」卡片再產生一次，這次不要離開
+10. 等任務出現「View」
+11. 看點數標籤
+12. 點「View」
+13. 點結果頁的 ‹
+14. 一直點 ‹，直到離開 Cinematic Reel Creator
+15. 開啟 Launcher 的「Project」分頁
+16. 開啟「AI Magic」分頁 › 「My Artwork」","步驟 1：記下點數餘額
+步驟 5：記下每個對話框的標題和內容（規格裡都沒有）
+步驟 6：記下發生什麼事：頁面關閉回到 template 頁、回到AI Magic 分頁、跳出離開或取消的對話框（照抄內容），或沒有反應
+步驟 6：Design 在那一頁只畫了「View later」和「Create another one」（Q-10），所以任何結果都記為 Fail（question）交給 PM
+步驟 8：記下任務有沒有在列表裡（進行中、完成或失敗）
+步驟 11：點數剛好少了「Generate」上的價格，完成的影片只扣一次（被取消的任務已退點）
+步驟 12：開啟結果頁，有影片封面、「Add Text」和「Edit Music」
+步驟 13：記下會回到哪裡（任務列表或 template 頁）：規格沒有畫（Q-10），所以記為 Fail（question）交給 PM
+步驟 14：回到AI Magic 分頁
+步驟 15：沒有多出新專案，和從 Launcher 進入時一樣
+步驟 16：My Artwork 的「Cinematic Reel Creator」區塊有這支影片",P1,R-031; REQ-010,"入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。只產生一次（使用者 2026-11-26 裁示「Yes, generate per entry」），產生途中離開的檢查也併在這列（Q-10）；只有離開導致任務取消時才再產生一次。檢查清單：主要入口案例 TC-049、TC-050、TC-051、TC-052 的離開方式。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。KP-103：如果 My Artwork 的縮圖還顯示「Processing...」，先開一次任務列表。入口：Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 Launcher › 「AI Magic」分頁 › 「Cinematic Reel Creator」檢查產生一次、影片存放位置和每個離開方式
+TC-057,入口 › 編輯器 › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 時間軸上沒有選取任何素材（顯示 Global Toolbar）","1. 點編輯器工具列上的「AI Magic」
+2. 點「Cinematic Reel Creator」","步驟 1：選單裡有「Cinematic Reel Creator」（記下它的位置）
+步驟 1：如果沒有，記下找不到入口，留到階段收尾時當作 PM 問題提出，這個 Section 其餘的案例標為 Blocked
+步驟 2：直接進到 Cinematic Reel Creator 的 template 頁，沒有出現教學
+步驟 2：顯示 template 卡片，每張都有「View photo tips」chip 和「Import a Photo」
+步驟 2：頁首有 ‹、顯示帳號點數餘額的點數標籤、「?」和歷史紀錄
+步驟 2：卡片依該地區的 CMS 順序排列，和從 Launcher 進入時一樣（記下前三張的名稱）
+步驟 2：頁面沒有從專案帶任何東西進來，和從 Launcher 進入時一樣",P1,"R-032, R-001; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。入口：編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」，來源：工具列表「2026/11 Auto Reframe」分頁的 Global Toolbar › AI Magic（7/E），KP-107。規格只畫了 Launcher 入口，所以這個 Section 以 Launcher 入口的行為為準。離開方式在 TC-060。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」檢查入口是否存在、進入後的畫面和帶進來的東西
+TC-058,入口 › 編輯器 › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 時間軸上沒有選取任何素材（顯示 Global Toolbar）
+6. 已從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」
+3. 點「Got it」
+4. 滑動 template 卡片到「Micro Cinema」卡片
+5. 點該卡片上的「View photo tips」
+6. 把「Avoid」那一排往左滑
+7. 把「Avoid」那一排滑回右邊
+8. 點面板上方變暗的頁面
+9. 如果面板還開著，從第一句文字開始往下滑
+10. 如果面板還開著，點「Got it」
+11. 再點一次同一張卡片上的「View photo tips」
+12. 點「Got it」
+13. 滑動 template 卡片到「One-Take Shot」卡片
+14. 點該卡片上的「View photo tips」
+15. 點「Got it」
+16. 滑動 template 卡片到「Time Lapse」卡片
+17. 點該卡片上的「View photo tips」
+18. 點「Got it」
+19. 滑動 template 卡片到「Handheld Camera」卡片
+20. 點該卡片上的「View photo tips」
+21. 點「Got it」
+22. 滑動 template 卡片到「Fast Cut」卡片
+23. 點該卡片上的「View photo tips」
+24. 點「Got it」
+25. 點 template 頁頁首的「?」
+26. 點教學的 X 關閉
+27. 點頁首的歷史紀錄圖示
+28. 點任務列表左上角的控制項","步驟 2：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Horror Movie template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 3：面板關閉，變暗效果消失，畫面停在「Horror Movie」卡片
+步驟 5：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Micro Cinema template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 7：那一排會捲到「Extreme Close-up」再捲回來，「Recommendation」那一排不動
+步驟 8：記下面板會不會關閉（Q-3）
+步驟 8：變暗區域後面的東西都不會有反應
+步驟 9：記下往下滑會不會關閉面板（Q-3）
+步驟 11：Micro Cinema 的面板再次打開
+步驟 12：面板關閉，變暗效果消失，畫面停在「Micro Cinema」卡片
+步驟 14：拍照建議面板在變暗的頁面上打開，顯示「For best results with the One-Take Shot template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 15：面板關閉，變暗效果消失，畫面停在「One-Take Shot」卡片
+步驟 17：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Time Lapse template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 18：面板關閉，變暗效果消失，畫面停在「Time Lapse」卡片
+步驟 20：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Handheld Camera template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 21：面板關閉，變暗效果消失，畫面停在「Handheld Camera」卡片
+步驟 23：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Fast Cut template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 24：面板關閉，變暗效果消失，畫面停在「Fast Cut」卡片
+步驟 25：開啟 Cinematic Reel Creator 教學（記下標題）
+步驟 26：回到 template 頁
+步驟 27：開啟 Cinematic Reel Creator 任務列表（顯示任務，或「No videos yet. Choose a template to create!」）
+步驟 28：回到 template 頁
+步驟 1–28：每個控制項按一次都有反應，沒有錯誤訊息、閃退、卡住、空白圖片或錯誤的範本名稱",P2,"R-032, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-001 – TC-009、TC-046 的控制項（每張卡片的 chip、面板、Avoid 那一排的滑動、變暗區域和往下滑（Q-3）、「Got it」），加上頁首的「?」和歷史紀錄（control-trace.json）。Q-3 的結果這裡只記錄、不判 Fail：由 TC-046 處理。入口：編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」檢查template 頁和拍照建議的每個控制項各按一次
+TC-059,入口 › 編輯器 › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 時間軸上沒有選取任何素材（顯示 Global Toolbar）
+6. 已從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」（如果沒有開啟 Add Media，需要 Add Media 的步驟都跳過）
+4. 點「Got it」
+5. 每個 Add Media 來源分頁各點一次，最後停在「Recents」
+6. 點 Add Media 頁首的 ‹
+7. 點「Import a Photo」
+8. 點產生用相片
+9. 點預覽頁的 ‹","步驟 2：開啟 Add Media
+步驟 3：Micro Cinema 的拍照建議面板在 Add Media 上打開（Q-1：沒有「?」是 DRA262611P0289，引用即可，不再重開）
+步驟 4：回到 Add Media，沒有選到任何相片
+步驟 5：每個分頁顯示自己的相片，或它的登入或空白狀態，沒有錯誤
+步驟 6：回到 template 頁，停在「Micro Cinema」卡片
+步驟 8：開啟預覽頁，顯示範本「Micro Cinema」和標有所需點數的「Generate」（記下點數）
+步驟 8：預覽頁上的相片就是選的那張，完整、方向和比例都和原圖一樣，沒有被旋轉、拉伸、裁成別張或空白
+步驟 8：價格和從 Launcher 進入時 Micro Cinema 的價格相同（TC-050）
+步驟 9：記下會回到哪裡（Add Media 或 template 頁），也沒有留下沒選的相片",P1,"R-032, R-004, R-005, R-010; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-010 – TC-016 的控制項（「Import a Photo」、Add Media 的「?」、「Got it」），加上 Add Media 的分頁、‹ 和選相片。輸入是相片：預覽頁必須照原樣顯示它。入口：編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」檢查Add Media 和頁面讀到的相片
+TC-060,入口 › 編輯器 › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 時間軸上沒有選取任何素材（顯示 Global Toolbar）
+6. 已從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 帳號點數足夠產生兩次 Micro Cinema
+8. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）
+9. 畫面上是「Micro Cinema」卡片","1. 看 template 頁上的點數標籤
+2. 點「Micro Cinema」卡片上的「Import a Photo」
+3. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+4. 點預覽頁的「Generate」
+5. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+6. 在顯示「Uploading」或 Analyzing & Generating 時，點左上角的 ‹（沒有的話要記下來）
+7. 如果 App 還停在那一頁，點「View later」
+8. 從 template 頁的歷史紀錄圖示開啟任務列表（如果 App 已離開，就從這個入口回到 template 頁）
+9. 如果任務被取消，從「Micro Cinema」卡片再產生一次，這次不要離開
+10. 等任務出現「View」
+11. 看點數標籤
+12. 點「View」
+13. 點結果頁的 ‹
+14. 一直點 ‹，直到離開 Cinematic Reel Creator
+15. 看專案的時間軸
+16. 點編輯器的 ⌂，再開啟 Launcher 的「Project」分頁
+17. 開啟「AI Magic」分頁 › 「My Artwork」","步驟 1：記下點數餘額
+步驟 5：記下每個對話框的標題和內容（規格裡都沒有）
+步驟 6：記下發生什麼事：頁面關閉回到 template 頁、回到編輯器、跳出離開或取消的對話框（照抄內容），或沒有反應
+步驟 6：Design 在那一頁只畫了「View later」和「Create another one」（Q-10），所以任何結果都記為 Fail（question）交給 PM
+步驟 8：記下任務有沒有在列表裡（進行中、完成或失敗）
+步驟 11：點數剛好少了「Generate」上的價格，完成的影片只扣一次（被取消的任務已退點）
+步驟 12：開啟結果頁，有影片封面、「Add Text」和「Edit Music」
+步驟 13：記下會回到哪裡（任務列表或 template 頁）：規格沒有畫（Q-10），所以記為 Fail（question）交給 PM
+步驟 14：回到編輯器
+步驟 15：影片沒有加進專案，和從 Launcher 進入時一樣
+步驟 15：兩張相片都在原位，時間軸上其他東西都沒變
+步驟 16：沒有多出新專案，和從 Launcher 進入時一樣
+步驟 17：My Artwork 的「Cinematic Reel Creator」區塊有這支影片",P1,R-032; REQ-010,"入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。只產生一次（使用者 2026-11-26 裁示「Yes, generate per entry」），產生途中離開的檢查也併在這列（Q-10）；只有離開導致任務取消時才再產生一次。檢查清單：主要入口案例 TC-049、TC-050、TC-051、TC-052 的離開方式。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。KP-103：如果 My Artwork 的縮圖還顯示「Processing...」，先開一次任務列表。入口：編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器（未選取任何素材）› Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」檢查產生一次、影片存放位置和每個離開方式
+TC-061,入口 › 編輯器 › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取主軌上的相片（顯示 Photo Toolbar）","1. 點 Photo Toolbar 上的「Effects」
+2. 點「Cinematic Reel Creator」","步驟 1：選單裡有「Cinematic Reel Creator」（記下它的位置）
+步驟 1：如果沒有，把找不到入口記為 Fail（question）交給 PM（Q-8），這個 Section 其餘的案例標為 Blocked
+步驟 2：直接進到 Cinematic Reel Creator 的 template 頁，沒有出現教學
+步驟 2：顯示 template 卡片，每張都有「View photo tips」chip 和「Import a Photo」
+步驟 2：頁首有 ‹、顯示帳號點數餘額的點數標籤、「?」和歷史紀錄
+步驟 2：卡片依該地區的 CMS 順序排列，和從 Launcher 進入時一樣（記下前三張的名稱）
+步驟 2：記下頁面有沒有帶進選取的主軌相片（顯示在卡片或預覽上、「Import a Photo」被取代或跳過）
+步驟 2：從 Launcher 進入時不會帶任何東西進來，這裡也這樣假設（Q-8）：有帶東西進來就記為 Fail（question）交給 PM",P1,"R-033, R-001; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。入口：編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」，來源：工具列表「2026/11 Auto Reframe」分頁的 Photo Toolbar › Effects（7/E），KP-107。規格只畫了 Launcher 入口，所以這個 Section 以 Launcher 入口的行為為準（Q-8）。離開方式在 TC-064。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查入口是否存在、進入後的畫面和帶進來的東西
+TC-062,入口 › 編輯器 › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取主軌上的相片（顯示 Photo Toolbar）
+6. 已從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」
+3. 點「Got it」
+4. 滑動 template 卡片到「Micro Cinema」卡片
+5. 點該卡片上的「View photo tips」
+6. 把「Avoid」那一排往左滑
+7. 把「Avoid」那一排滑回右邊
+8. 點面板上方變暗的頁面
+9. 如果面板還開著，從第一句文字開始往下滑
+10. 如果面板還開著，點「Got it」
+11. 再點一次同一張卡片上的「View photo tips」
+12. 點「Got it」
+13. 滑動 template 卡片到「One-Take Shot」卡片
+14. 點該卡片上的「View photo tips」
+15. 點「Got it」
+16. 滑動 template 卡片到「Time Lapse」卡片
+17. 點該卡片上的「View photo tips」
+18. 點「Got it」
+19. 滑動 template 卡片到「Handheld Camera」卡片
+20. 點該卡片上的「View photo tips」
+21. 點「Got it」
+22. 滑動 template 卡片到「Fast Cut」卡片
+23. 點該卡片上的「View photo tips」
+24. 點「Got it」
+25. 點 template 頁頁首的「?」
+26. 點教學的 X 關閉
+27. 點頁首的歷史紀錄圖示
+28. 點任務列表左上角的控制項","步驟 2：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Horror Movie template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 3：面板關閉，變暗效果消失，畫面停在「Horror Movie」卡片
+步驟 5：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Micro Cinema template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 7：那一排會捲到「Extreme Close-up」再捲回來，「Recommendation」那一排不動
+步驟 8：記下面板會不會關閉（Q-3）
+步驟 8：變暗區域後面的東西都不會有反應
+步驟 9：記下往下滑會不會關閉面板（Q-3）
+步驟 11：Micro Cinema 的面板再次打開
+步驟 12：面板關閉，變暗效果消失，畫面停在「Micro Cinema」卡片
+步驟 14：拍照建議面板在變暗的頁面上打開，顯示「For best results with the One-Take Shot template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 15：面板關閉，變暗效果消失，畫面停在「One-Take Shot」卡片
+步驟 17：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Time Lapse template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 18：面板關閉，變暗效果消失，畫面停在「Time Lapse」卡片
+步驟 20：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Handheld Camera template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 21：面板關閉，變暗效果消失，畫面停在「Handheld Camera」卡片
+步驟 23：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Fast Cut template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 24：面板關閉，變暗效果消失，畫面停在「Fast Cut」卡片
+步驟 25：開啟 Cinematic Reel Creator 教學（記下標題）
+步驟 26：回到 template 頁
+步驟 27：開啟 Cinematic Reel Creator 任務列表（顯示任務，或「No videos yet. Choose a template to create!」）
+步驟 28：回到 template 頁
+步驟 1–28：每個控制項按一次都有反應，沒有錯誤訊息、閃退、卡住、空白圖片或錯誤的範本名稱",P2,"R-033, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-001 – TC-009、TC-046 的控制項（每張卡片的 chip、面板、Avoid 那一排的滑動、變暗區域和往下滑（Q-3）、「Got it」），加上頁首的「?」和歷史紀錄（control-trace.json）。Q-3 的結果這裡只記錄、不判 Fail：由 TC-046 處理。入口：編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-8）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查template 頁和拍照建議的每個控制項各按一次
+TC-063,入口 › 編輯器 › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取主軌上的相片（顯示 Photo Toolbar）
+6. 已從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」（如果沒有開啟 Add Media，需要 Add Media 的步驟都跳過）
+4. 點「Got it」
+5. 每個 Add Media 來源分頁各點一次，最後停在「Recents」
+6. 點 Add Media 頁首的 ‹
+7. 點「Import a Photo」
+8. 點產生用相片
+9. 點預覽頁的 ‹","步驟 2：記下是開啟 Add Media，還是直接取用選取的主軌相片
+步驟 2：從 Launcher 進入時會開啟 Add Media，這裡也這樣假設（Q-8）：直接取用編輯器的相片就記為 Fail（question）交給 PM
+步驟 3：Micro Cinema 的拍照建議面板在 Add Media 上打開（Q-1：沒有「?」是 DRA262611P0289，引用即可，不再重開）
+步驟 4：回到 Add Media，沒有選到任何相片
+步驟 5：每個分頁顯示自己的相片，或它的登入或空白狀態，沒有錯誤
+步驟 6：回到 template 頁，停在「Micro Cinema」卡片
+步驟 8：開啟預覽頁，顯示範本「Micro Cinema」和標有所需點數的「Generate」（記下點數）
+步驟 8：預覽頁上的相片就是選的那張（如果是選取的主軌相片要記下來），完整、方向和比例都和原圖一樣，沒有被旋轉、拉伸、裁成別張或空白
+步驟 8：價格和從 Launcher 進入時 Micro Cinema 的價格相同（TC-050）
+步驟 9：記下會回到哪裡（Add Media 或 template 頁），也沒有留下沒選的相片",P1,"R-033, R-004, R-005, R-010; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-010 – TC-016 的控制項（「Import a Photo」、Add Media 的「?」、「Got it」），加上 Add Media 的分頁、‹ 和選相片。輸入是相片：預覽頁必須照原樣顯示它。入口：編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-8）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查Add Media 和頁面讀到的相片
+TC-064,入口 › 編輯器 › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取主軌上的相片（顯示 Photo Toolbar）
+6. 已從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 帳號點數足夠產生兩次 Micro Cinema
+8. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）
+9. 畫面上是「Micro Cinema」卡片","1. 看 template 頁上的點數標籤
+2. 點「Micro Cinema」卡片上的「Import a Photo」
+3. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+4. 點預覽頁的「Generate」
+5. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+6. 在顯示「Uploading」或 Analyzing & Generating 時，點左上角的 ‹（沒有的話要記下來）
+7. 如果 App 還停在那一頁，點「View later」
+8. 從 template 頁的歷史紀錄圖示開啟任務列表（如果 App 已離開，就從這個入口回到 template 頁）
+9. 如果任務被取消，從「Micro Cinema」卡片再產生一次，這次不要離開
+10. 等任務出現「View」
+11. 看點數標籤
+12. 點「View」
+13. 點結果頁的 ‹
+14. 一直點 ‹，直到離開 Cinematic Reel Creator
+15. 看專案的時間軸
+16. 點編輯器的 ⌂，再開啟 Launcher 的「Project」分頁
+17. 開啟「AI Magic」分頁 › 「My Artwork」","步驟 1：記下點數餘額
+步驟 5：記下每個對話框的標題和內容（規格裡都沒有）
+步驟 6：記下發生什麼事：頁面關閉回到 template 頁、回到編輯器、跳出離開或取消的對話框（照抄內容），或沒有反應
+步驟 6：Design 在那一頁只畫了「View later」和「Create another one」（Q-10），所以任何結果都記為 Fail（question）交給 PM
+步驟 8：記下任務有沒有在列表裡（進行中、完成或失敗）
+步驟 11：點數剛好少了「Generate」上的價格，完成的影片只扣一次（被取消的任務已退點）
+步驟 12：開啟結果頁，有影片封面、「Add Text」和「Edit Music」
+步驟 13：記下會回到哪裡（任務列表或 template 頁）：規格沒有畫（Q-10），所以記為 Fail（question）交給 PM
+步驟 14：回到編輯器
+步驟 14：沒有規格畫出從這個入口返回會到哪裡（Q-8）：假設回到編輯器
+步驟 15：記下影片在哪裡：取代主軌相片、加成一個新片段，或不在專案裡
+步驟 15：從 Launcher 產生時不會把影片加進任何專案，這裡也這樣假設（Q-8）：影片出現在專案裡就記為 Fail（question）交給 PM
+步驟 15：子母畫面相片仍在原位，時間軸上其他東西都沒變
+步驟 16：記下有沒有多出新專案（從 Launcher 進入時不會產生新專案，這裡也這樣假設，Q-8）
+步驟 17：My Artwork 的「Cinematic Reel Creator」區塊有這支影片",P1,R-033; REQ-010,"入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。只產生一次（使用者 2026-11-26 裁示「Yes, generate per entry」），產生途中離開的檢查也併在這列（Q-10）；只有離開導致任務取消時才再產生一次。檢查清單：主要入口案例 TC-049、TC-050、TC-051、TC-052 的離開方式。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。KP-103：如果 My Artwork 的縮圖還顯示「Processing...」，先開一次任務列表。入口：編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-8）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取主軌相片 › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查產生一次、影片存放位置和每個離開方式
+TC-065,入口 › 編輯器 › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取子母畫面軌上的相片（顯示 PIP Photo Toolbar）","1. 點 PIP Photo Toolbar 上的「Effects」
+2. 點「Cinematic Reel Creator」","步驟 1：選單裡有「Cinematic Reel Creator」（記下它的位置）
+步驟 1：如果沒有，把找不到入口記為 Fail（question）交給 PM（Q-9），這個 Section 其餘的案例標為 Blocked
+步驟 2：直接進到 Cinematic Reel Creator 的 template 頁，沒有出現教學
+步驟 2：顯示 template 卡片，每張都有「View photo tips」chip 和「Import a Photo」
+步驟 2：頁首有 ‹、顯示帳號點數餘額的點數標籤、「?」和歷史紀錄
+步驟 2：卡片依該地區的 CMS 順序排列，和從 Launcher 進入時一樣（記下前三張的名稱）
+步驟 2：記下頁面有沒有帶進選取的子母畫面相片（顯示在卡片或預覽上、「Import a Photo」被取代或跳過）
+步驟 2：從 Launcher 進入時不會帶任何東西進來，這裡也這樣假設（Q-9）：有帶東西進來就記為 Fail（question）交給 PM",P1,"R-034, R-001; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。入口：編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」，來源：工具列表「2026/11 Auto Reframe」分頁的 PIP Photo Toolbar › Effects（7/E），KP-107。規格只畫了 Launcher 入口，所以這個 Section 以 Launcher 入口的行為為準（Q-9）。離開方式在 TC-068。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查入口是否存在、進入後的畫面和帶進來的東西
+TC-066,入口 › 編輯器 › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取子母畫面軌上的相片（顯示 PIP Photo Toolbar）
+6. 已從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」
+3. 點「Got it」
+4. 滑動 template 卡片到「Micro Cinema」卡片
+5. 點該卡片上的「View photo tips」
+6. 把「Avoid」那一排往左滑
+7. 把「Avoid」那一排滑回右邊
+8. 點面板上方變暗的頁面
+9. 如果面板還開著，從第一句文字開始往下滑
+10. 如果面板還開著，點「Got it」
+11. 再點一次同一張卡片上的「View photo tips」
+12. 點「Got it」
+13. 滑動 template 卡片到「One-Take Shot」卡片
+14. 點該卡片上的「View photo tips」
+15. 點「Got it」
+16. 滑動 template 卡片到「Time Lapse」卡片
+17. 點該卡片上的「View photo tips」
+18. 點「Got it」
+19. 滑動 template 卡片到「Handheld Camera」卡片
+20. 點該卡片上的「View photo tips」
+21. 點「Got it」
+22. 滑動 template 卡片到「Fast Cut」卡片
+23. 點該卡片上的「View photo tips」
+24. 點「Got it」
+25. 點 template 頁頁首的「?」
+26. 點教學的 X 關閉
+27. 點頁首的歷史紀錄圖示
+28. 點任務列表左上角的控制項","步驟 2：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Horror Movie template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 3：面板關閉，變暗效果消失，畫面停在「Horror Movie」卡片
+步驟 5：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Micro Cinema template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 7：那一排會捲到「Extreme Close-up」再捲回來，「Recommendation」那一排不動
+步驟 8：記下面板會不會關閉（Q-3）
+步驟 8：變暗區域後面的東西都不會有反應
+步驟 9：記下往下滑會不會關閉面板（Q-3）
+步驟 11：Micro Cinema 的面板再次打開
+步驟 12：面板關閉，變暗效果消失，畫面停在「Micro Cinema」卡片
+步驟 14：拍照建議面板在變暗的頁面上打開，顯示「For best results with the One-Take Shot template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 15：面板關閉，變暗效果消失，畫面停在「One-Take Shot」卡片
+步驟 17：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Time Lapse template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 18：面板關閉，變暗效果消失，畫面停在「Time Lapse」卡片
+步驟 20：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Handheld Camera template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 21：面板關閉，變暗效果消失，畫面停在「Handheld Camera」卡片
+步驟 23：拍照建議面板在變暗的頁面上打開，顯示「For best results with the Fast Cut template, follow this advice:」，「Recommendation」有兩項、「Avoid」有三項，每張圖片都有載入
+步驟 24：面板關閉，變暗效果消失，畫面停在「Fast Cut」卡片
+步驟 25：開啟 Cinematic Reel Creator 教學（記下標題）
+步驟 26：回到 template 頁
+步驟 27：開啟 Cinematic Reel Creator 任務列表（顯示任務，或「No videos yet. Choose a template to create!」）
+步驟 28：回到 template 頁
+步驟 1–28：每個控制項按一次都有反應，沒有錯誤訊息、閃退、卡住、空白圖片或錯誤的範本名稱",P2,"R-034, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-001 – TC-009、TC-046 的控制項（每張卡片的 chip、面板、Avoid 那一排的滑動、變暗區域和往下滑（Q-3）、「Got it」），加上頁首的「?」和歷史紀錄（control-trace.json）。Q-3 的結果這裡只記錄、不判 Fail：由 TC-046 處理。入口：編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-9）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查template 頁和拍照建議的每個控制項各按一次
+TC-067,入口 › 編輯器 › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取子母畫面軌上的相片（顯示 PIP Photo Toolbar）
+6. 已從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」（如果沒有開啟 Add Media，需要 Add Media 的步驟都跳過）
+4. 點「Got it」
+5. 每個 Add Media 來源分頁各點一次，最後停在「Recents」
+6. 點 Add Media 頁首的 ‹
+7. 點「Import a Photo」
+8. 點產生用相片
+9. 點預覽頁的 ‹","步驟 2：記下是開啟 Add Media，還是直接取用選取的子母畫面相片
+步驟 2：從 Launcher 進入時會開啟 Add Media，這裡也這樣假設（Q-9）：直接取用編輯器的相片就記為 Fail（question）交給 PM
+步驟 3：Micro Cinema 的拍照建議面板在 Add Media 上打開（Q-1：沒有「?」是 DRA262611P0289，引用即可，不再重開）
+步驟 4：回到 Add Media，沒有選到任何相片
+步驟 5：每個分頁顯示自己的相片，或它的登入或空白狀態，沒有錯誤
+步驟 6：回到 template 頁，停在「Micro Cinema」卡片
+步驟 8：開啟預覽頁，顯示範本「Micro Cinema」和標有所需點數的「Generate」（記下點數）
+步驟 8：預覽頁上的相片就是選的那張（如果是選取的子母畫面相片要記下來），完整、方向和比例都和原圖一樣，沒有被旋轉、拉伸、裁成別張或空白
+步驟 8：價格和從 Launcher 進入時 Micro Cinema 的價格相同（TC-050）
+步驟 9：記下會回到哪裡（Add Media 或 template 頁），也沒有留下沒選的相片",P1,"R-034, R-004, R-005, R-010; REQ-010","入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。檢查清單：主要入口案例 TC-010 – TC-016 的控制項（「Import a Photo」、Add Media 的「?」、「Got it」），加上 Add Media 的分頁、‹ 和選相片。輸入是相片：預覽頁必須照原樣顯示它。入口：編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-9）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查Add Media 和頁面讀到的相片
+TC-068,入口 › 編輯器 › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 編輯器已開啟一個專案，主軌和子母畫面軌上各有一張相片（fixtures.md）
+5. 已選取子母畫面軌上的相片（顯示 PIP Photo Toolbar）
+6. 已從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」進到 Cinematic Reel Creator 的 template 頁
+7. 帳號點數足夠產生兩次 Micro Cinema
+8. 相簿裡有一張不在專案中的相片，作為產生用相片（fixtures.md）
+9. 畫面上是「Micro Cinema」卡片","1. 看 template 頁上的點數標籤
+2. 點「Micro Cinema」卡片上的「Import a Photo」
+3. 在 Add Media 點產生用相片（沒有開啟 Add Media 就跳過）
+4. 點預覽頁的「Generate」
+5. 如果跳出說明或扣點確認，點「I Agree」或「OK」
+6. 在顯示「Uploading」或 Analyzing & Generating 時，點左上角的 ‹（沒有的話要記下來）
+7. 如果 App 還停在那一頁，點「View later」
+8. 從 template 頁的歷史紀錄圖示開啟任務列表（如果 App 已離開，就從這個入口回到 template 頁）
+9. 如果任務被取消，從「Micro Cinema」卡片再產生一次，這次不要離開
+10. 等任務出現「View」
+11. 看點數標籤
+12. 點「View」
+13. 點結果頁的 ‹
+14. 一直點 ‹，直到離開 Cinematic Reel Creator
+15. 看專案的時間軸
+16. 點編輯器的 ⌂，再開啟 Launcher 的「Project」分頁
+17. 開啟「AI Magic」分頁 › 「My Artwork」","步驟 1：記下點數餘額
+步驟 5：記下每個對話框的標題和內容（規格裡都沒有）
+步驟 6：記下發生什麼事：頁面關閉回到 template 頁、回到編輯器、跳出離開或取消的對話框（照抄內容），或沒有反應
+步驟 6：Design 在那一頁只畫了「View later」和「Create another one」（Q-10），所以任何結果都記為 Fail（question）交給 PM
+步驟 8：記下任務有沒有在列表裡（進行中、完成或失敗）
+步驟 11：點數剛好少了「Generate」上的價格，完成的影片只扣一次（被取消的任務已退點）
+步驟 12：開啟結果頁，有影片封面、「Add Text」和「Edit Music」
+步驟 13：記下會回到哪裡（任務列表或 template 頁）：規格沒有畫（Q-10），所以記為 Fail（question）交給 PM
+步驟 14：回到編輯器
+步驟 14：沒有規格畫出從這個入口返回會到哪裡（Q-9）：假設回到編輯器
+步驟 15：記下影片在哪裡：取代子母畫面軌上的相片、加成一個新片段，或不在專案裡
+步驟 15：從 Launcher 產生時不會把影片加進任何專案，這裡也這樣假設（Q-9）：影片出現在專案裡就記為 Fail（question）交給 PM
+步驟 15：主軌相片仍在原位，時間軸上其他東西都沒變
+步驟 16：記下有沒有多出新專案（從 Launcher 進入時不會產生新專案，這裡也這樣假設，Q-9）
+步驟 17：My Artwork 的「Cinematic Reel Creator」區塊有這支影片",P1,R-034; REQ-010,"入口 UI 檢查（analysis.md pass 12；使用者 2026-11-26：「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」）。只產生一次（使用者 2026-11-26 裁示「Yes, generate per entry」），產生途中離開的檢查也併在這列（Q-10）；只有離開導致任務取消時才再產生一次。檢查清單：主要入口案例 TC-049、TC-050、TC-051、TC-052 的離開方式。產生影片要好幾分鐘：App 要保持在前景，需要的點數就照用（AGENTS.md › Credits）。KP-103：如果 My Artwork 的縮圖還顯示「Processing...」，先開一次任務列表。入口：編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」（Q-9）。",新增,REQ-010（pass 12，UI 檢查）：從 編輯器 › 選取子母畫面軌相片 › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」檢查產生一次、影片存放位置和每個離開方式
+TC-020,MUI 多國語系,"1. App 語言設為繁體中文（`launch --lang zh-Hant-TW`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 cht 欄，每段說明等於 Template Description Localization 第 2–7 列的 cht 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 CHT 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以繁體中文顯示（繁體字、台灣用語），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI CHT（zh-Hant-TW）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-021,MUI 多國語系,"1. App 語言設為簡體中文（`launch --lang zh-Hans-CN`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 chs 欄，每段說明等於 Template Description Localization 第 2–7 列的 chs 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 CHS 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以簡體中文顯示（簡體字），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI CHS（zh-Hans-CN）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-022,MUI 多國語系,"1. App 語言設為日文（`launch --lang ja-JP`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 ja 欄，每段說明等於 Template Description Localization 第 2–7 列的 ja 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 JPN 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以日文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI JPN（ja-JP）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-023,MUI 多國語系,"1. App 語言設為西班牙文（`launch --lang es-ES`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 es 欄，每段說明等於 Template Description Localization 第 2–7 列的 es 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 ESP 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以西班牙文顯示（西班牙本地用語），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI ESP（es-ES）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-024,MUI 多國語系,"1. App 語言設為韓文（`launch --lang ko-KR`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 ko 欄，每段說明等於 Template Description Localization 第 2–7 列的 ko 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 KOR 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以韓文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI KOR（ko-KR）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-025,MUI 多國語系,"1. App 語言設為德文（`launch --lang de-DE`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 de 欄，每段說明等於 Template Description Localization 第 2–7 列的 de 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 DEU 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以德文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI DEU（de-DE）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-026,MUI 多國語系,"1. App 語言設為法文（`launch --lang fr-FR`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 fr 欄，每段說明等於 Template Description Localization 第 2–7 列的 fr 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 FRA 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以法文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI FRA（fr-FR）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-027,MUI 多國語系,"1. App 語言設為義大利文（`launch --lang it-IT`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 it 欄，每段說明等於 Template Description Localization 第 2–7 列的 it 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 ITA 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以義大利文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI ITA（it-IT）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-028,MUI 多國語系,"1. App 語言設為俄文（`launch --lang ru-RU`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 ru 欄，每段說明等於 Template Description Localization 第 2–7 列的 ru 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 RUS 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以俄文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI RUS（ru-RU）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-029,MUI 多國語系,"1. App 語言設為葡萄牙文（巴西）（`launch --lang pt-BR`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 pt 欄，每段說明等於 Template Description Localization 第 2–7 列的 pt 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 PTB 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以葡萄牙文（巴西）顯示（巴西葡萄牙文用語），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI PTB（pt-BR）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-030,MUI 多國語系,"1. App 語言設為荷蘭文（`launch --lang nl-NL`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 nl 欄，每段說明等於 Template Description Localization 第 2–7 列的 nl 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 NLD 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以荷蘭文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI NLD（nl-NL）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-031,MUI 多國語系,"1. App 語言設為印尼文（`launch --lang id-ID`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 id 欄，每段說明等於 Template Description Localization 第 2–7 列的 id 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 IDN 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以印尼文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI IND（id-ID）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-032,MUI 多國語系,"1. App 語言設為泰文（`launch --lang th-TH`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 th 欄，每段說明等於 Template Description Localization 第 2–7 列的 th 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 THA 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以泰文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI THA（th-TH）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-033,MUI 多國語系,"1. App 語言設為馬來文（`launch --lang ms-MY`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 ms 欄，每段說明等於 Template Description Localization 第 2–7 列的 ms 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 MAY 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以馬來文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI MAY（ms-MY）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-034,MUI 多國語系,"1. App 語言設為印地文（`launch --lang hi-IN`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 hi 欄，每段說明等於 Template Description Localization 第 2–7 列的 hi 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 HIN 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以印地文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI HIN（hi-IN）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-035,MUI 多國語系,"1. App 語言設為西班牙文（墨西哥）（`launch --lang es-MX`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 esm 欄，每段說明等於 Template Description Localization 第 2–7 列的 esm 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 ESM 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以西班牙文（墨西哥）顯示（墨西哥西班牙文用語），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI ESM（es-MX）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-036,MUI 多國語系,"1. App 語言設為阿拉伯文（`launch --lang ar-SA`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 ar 欄，每段說明等於 Template Description Localization 第 2–7 列的 ar 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 ARA 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以阿拉伯文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 阿拉伯文是由右到左：文字從右邊開始，沒有字串在左邊緣被切掉
+11. 卡片：六個名稱、六段說明、每張卡片上的標籤
+12. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+13. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI ARA（ar-SA）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-037,MUI 多國語系,"1. App 語言設為越南文（`launch --lang vi-VN`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 vi 欄，每段說明等於 Template Description Localization 第 2–7 列的 vi 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 VIT 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以越南文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI VIT（vi-VN）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-038,MUI 多國語系,"1. App 語言設為波蘭文（`launch --lang pl-PL`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 pl 欄，每段說明等於 Template Description Localization 第 2–7 列的 pl 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 PLK 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以波蘭文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI PLK（pl-PL）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-039,MUI 多國語系,"1. App 語言設為土耳其文（`launch --lang tr-TR`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 tr 欄，每段說明等於 Template Description Localization 第 2–7 列的 tr 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 TRK 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以土耳其文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI TRK（tr-TR）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-040,MUI 多國語系,"1. App 語言設為波斯文（`launch --lang fa-IR`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 fa 欄，每段說明等於 Template Description Localization 第 2–7 列的 fa 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 FAR 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以波斯文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 波斯文是由右到左：文字從右邊開始，沒有字串在左邊緣被切掉
+11. 卡片：六個名稱、六段說明、每張卡片上的標籤
+12. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+13. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI FAR（fa-IR）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-041,MUI 多國語系,"1. App 語言設為希伯來文（`launch --lang he-IL`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 he 欄，每段說明等於 Template Description Localization 第 2–7 列的 he 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 HEB 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以希伯來文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 希伯來文是由右到左：文字從右邊開始，沒有字串在左邊緣被切掉
+11. 卡片：六個名稱、六段說明、每張卡片上的標籤
+12. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+13. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI HEB（he-IL）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-042,MUI 多國語系,"1. App 語言設為瑞典文（`launch --lang sv-SE`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 sv 欄，每段說明等於 Template Description Localization 第 2–7 列的 sv 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 SVE 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以瑞典文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI SVE（sv-SE）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-043,MUI 多國語系,"1. App 語言設為丹麥文（`launch --lang da-DK`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 da 欄，每段說明等於 Template Description Localization 第 2–7 列的 da 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 DAN 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以丹麥文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI DAN（da-DK）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-044,MUI 多國語系,"1. App 語言設為挪威文（書面挪威語）（`launch --lang nb-NO`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 nb 欄，每段說明等於 Template Description Localization 第 2–7 列的 nb 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 NOR 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以挪威文（書面挪威語）顯示（書面挪威語），意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI NOR（nb-NO）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）
+TC-045,MUI 多國語系,"1. App 語言設為烏克蘭文（`launch --lang uk-UA`）
+2. 這列跑完後用一般的 `launch` 把語言改回來
+3. PowerDirector 已用測試帳號登入
+4. Cinematic Reel Creator 的教學之前已經關掉（會直接進到範本頁）
+5. 從 Launcher › Cinematic Reel Creator 進到範本頁","1. 讀第一張範本卡片（TC-001）
+2. 把卡片一張一張往左滑到最後一張，每張都讀
+3. 點第 1 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+4. 把面板的第二排往左滑到最後一項（TC-008）
+5. 點面板底部的按鈕（TC-007）
+6. 點第 2 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+7. 把面板的第二排往左滑到最後一項（TC-008）
+8. 點面板底部的按鈕（TC-007）
+9. 點第 3 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+10. 把面板的第二排往左滑到最後一項（TC-008）
+11. 點面板底部的按鈕（TC-007）
+12. 點第 4 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+13. 把面板的第二排往左滑到最後一項（TC-008）
+14. 點面板底部的按鈕（TC-007）
+15. 點第 5 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+16. 把面板的第二排往左滑到最後一項（TC-008）
+17. 點面板底部的按鈕（TC-007）
+18. 點第 6 張卡片上的 photo tips 標籤（TC-001 – TC-006）
+19. 把面板的第二排往左滑到最後一項（TC-008）
+20. 點面板底部的按鈕（TC-007）
+21. 滑回第一張卡片
+22. 點它的「Import a Photo」按鈕（TC-010）
+23. 點 Add Media 標題列的「?」（TC-010）
+24. 點面板底部的按鈕（TC-016）","1. 每張卡片的名稱等於 Cinestory CMS › Template Name Localization 的 uk 欄，每段說明等於 Template Description Localization 第 2–7 列的 uk 欄（specs/2026-11-25/extracted）
+2. 每個圖片說明等於 I2V Recommendation › Localization 該項目的 UKR 欄（#54–67；Fast Cut 的「Rich Visual Details」是 #56）
+3. 面板開頭那句裡的範本名稱和卡片上的一樣
+4. App 自己的字串（「View photo tips」、「For best results with the <template> template, follow this advice:」、「Recommendation」、「Avoid」、「Got it」）以烏克蘭文顯示，意思和英文相同；晶片和句子仍是英文的話就是 DRA262611P0290（Q-2）：引用它，不要重開
+5. 沒有字串顯示成 key、沒填入的佔位符（%@、%1$s）或其他語言
+6. App 自己的字串沒有翻譯表（REQ-002）：只是覺得怪的字串記為翻譯疑慮，寫進這次執行的 mui-doubts.md，不算 Fail
+7. 這趟走過的每個畫面，每個字串都完整顯示：沒有以「…」結尾、沒有在邊緣被切掉，也沒有少一行
+8. 標籤在預覽上方的膠囊框內完整顯示；句子太長會換行而不是被切掉；每個說明文字都放得進圖片下方
+9. 先看最長的字串：卡片上的說明、面板開頭那句、最長的圖片說明
+10. 卡片：六個名稱、六段說明、每張卡片上的標籤
+11. 六個面板各自的：開頭那句、「Recommendation」和底下兩個說明、「Avoid」和底下三個說明、底部按鈕
+12. Add Media 「?」打開的面板：第一張卡片範本的同一組字串",P2,R-028; R-029; REQ-002; REQ-007,MUI UKR（uk-UA）。每個畫面（每張卡片、每個面板）一次 `texts` 讀取加截圖；不產生任何東西。各語言的卡片順序和圖片由 Android 的 Language 各列檢查（REQ-006，iOS 尚未納入）。,未變更,REQ-002：每種語言一趟 MUI 檢查（翻譯和截斷）

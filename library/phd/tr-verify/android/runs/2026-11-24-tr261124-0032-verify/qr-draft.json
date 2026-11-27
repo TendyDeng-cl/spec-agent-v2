@@ -1,0 +1,310 @@
+{
+ "tr": "TR261124-0032",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/24",
+ "version": "20.19.0",
+ "build": "202611241407",
+ "buildDay": "1124",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611241407 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R9)",
+ "testResult": "PHD-A - Bug verification [OK=21, Fail=0]",
+ "env": {
+  "device": "Samsung Galaxy S23 (SM-S9110) / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611241407 (versionCode 90201902); installed APK MD5 matches the build NAS Cyberlink.MD5",
+  "scope": "every eBug on this TR's verify list (PHD-A rule)"
+ },
+ "observations": [
+  "Swipe Collage Pages: ‹ (bottom left) → 「Discard changes?」 → Discard leaves the whole editor for the Template Preview, dropping pages already applied with ✓; ✕ and Back only close Pages.",
+  "Swipe Collage: the Template Preview of a crowned template shows no PRO mark, so a Free user learns it is PRO only at export (P0103 passed per RD's resolve; not filed).",
+  "Reel Creator (2026-11-25, build 202611241937): while a job is still running on the server, My AI Artwork shows it as ⚠ 「Retry」; Retry only switches it to 「Almost Done」, and reopening shows ⚠ again until it finishes. Credits and result were right. Yesterday the Test Server refused every Creative Reel Generate with HTTP 400 and said 「Credits refunded.」 with nothing charged (refused requests keep that dialog by RD's design).",
+  "Google Play: the 「100 +100」 credit offer cannot be bought (「You already own this item」) and granted no credits on this install.",
+  "Image to Video: Kling 2.6 has AI sound greyed (「AI-generated sound isn't available for this model.」); tapping it shows template wording 「this template's settings are limited」."
+ ],
+ "rows": [
+  {
+   "bug": "PHA262026P0070",
+   "title": "PHD-A 20.19.0 - Mixpanel: There is no mixpanel log when saving photo or video in Recent",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/c_43_photo_pack.png",
+    "screenshots/c_44_photo_saved.png",
+    "screenshots/c_63_recent_video_done.png",
+    "screenshots/c_65_video_saving.png"
+   ],
+   "result": "OK",
+   "summary": "Saving a photo and a video in My AI Artwork Recent now logs the Mixpanel event Artwork_Result_Save."
+  },
+  {
+   "bug": "PHA262026P0072",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Template opens with more empty frames than its photo count",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/51_p0072_two_photo_canvas.png",
+    "screenshots/53_p0072_picker.png",
+    "screenshots/54_p0072_four_photo_canvas.png"
+   ],
+   "result": "OK",
+   "summary": "Templates now open with as many empty frames as the photo count on the card."
+  },
+  {
+   "bug": "PHA262026P0073",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Selected photos are not marked in the photo picker grid",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/16_p0073_two_picked.png",
+    "screenshots/73_p0074_seven_picked.png"
+   ],
+   "result": "OK",
+   "summary": "Selected photos are now marked with numbers in the photo picker grid."
+  },
+  {
+   "bug": "PHA262026P0074",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Photo picker limit counts only the current page's frames and has no 20 cap",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/72_p0074_picker.png",
+    "screenshots/73_p0074_seven_picked.png"
+   ],
+   "result": "OK",
+   "summary": "The picker limit now counts the empty frames on all pages (all 7 photos can be picked at once on the 7-photo · 3-page template), as RD's fix describes."
+  },
+  {
+   "bug": "PHA262026P0076",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: 「Discard」 goes to the Template Page, not the Template Preview",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/40_p0076_discard_dialog.png",
+    "screenshots/42_p0076_after_discard.png",
+    "screenshots/78_p0076_discard_7photo.png"
+   ],
+   "result": "OK",
+   "summary": "Discard now returns to the Template Preview of that template."
+  },
+  {
+   "bug": "PHA262026P0077",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: System Back does not close the 「Discard changes?」 dialog",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/40_p0076_discard_dialog.png",
+    "screenshots/41_p0077_after_back.png"
+   ],
+   "result": "OK",
+   "summary": "System Back now closes the 「Discard changes?」 dialog as Keep does."
+  },
+  {
+   "bug": "PHA262026P0079",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame tool bar has no Flip H, Flip V or Shadow, and the floating icons no Lock",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/21_p0079_polaroid_tap1.png",
+    "screenshots/22_p0079_bar_end.png"
+   ],
+   "result": "OK",
+   "summary": "Frame focus now offers Opacity, Shadow, Flip H, Flip V, Duplicate, Lock and Delete, and the floating icons include Lock."
+  },
+  {
+   "bug": "PHA262026P0080",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: A tap in image focus clears the selection instead of returning to frame focus",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/23_p0080_tap2.png",
+    "screenshots/24_p0080_tap3.png"
+   ],
+   "result": "OK",
+   "summary": "A tap in image focus now returns to frame focus."
+  },
+  {
+   "bug": "PHA262026P0082",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: No 「Long press & drag to swap」 hint while dragging a photo to swap",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/25_p0082_mid_drag.png",
+    "screenshots/26_p0082_after_drop.png",
+    "screenshots/76_p0082_mid_drag_7photo.png",
+    "screenshots/77_p0082_after_drop_7photo.png"
+   ],
+   "result": "OK",
+   "summary": "Long-press and drag swaps the photos; per RD's resolution no extra hint is shown, as in the original Collage."
+  },
+  {
+   "bug": "PHA262026P0083",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Frame panel thumbnails carry no photo count",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/28_p0083_frame_sheet.png",
+    "screenshots/29_p0083_frame_sheet_scrolled.png",
+    "screenshots/30_p0083_replace_frame_sheet.png"
+   ],
+   "result": "OK",
+   "summary": "Frame thumbnails in Add Layer › Frame and Replace frame show their slot layout, which per RD's resolution indicates the photo count."
+  },
+  {
+   "bug": "PHA262026P0094",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages has no 「Page n / N」 or − / + stepper and selects no page on entry",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_10_p0094_pages_from_p1.png",
+    "screenshots/b_12_p0094_tap_page2_frame.png",
+    "screenshots/b_13_p0094_canvas_on_page2.png",
+    "screenshots/b_14_p0094_pages_from_p2.png"
+   ],
+   "result": "OK",
+   "summary": "Pages now shows the − | + stepper above the bottom panel and 「Page N / total」 for the selected page, as RD's fix describes."
+  },
+  {
+   "bug": "PHA262026P0095",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages has no ✓ or ✕; leaving keeps every page change without 「Discard changes?」",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_20_p0095_added.png",
+    "screenshots/b_21_p0095_x_dialog.png",
+    "screenshots/b_22_p0095_after_keep.png",
+    "screenshots/b_26_p0095_discard_tap_coord.png"
+   ],
+   "result": "OK",
+   "summary": "Pages now has ✕ and ✓: ✓ applies the changes and ✕ asks 「Discard changes?」 first when there are changes."
+  },
+  {
+   "bug": "PHA262026P0097",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Pages move button selects on a tap; dragging shows no enlarged page or hint",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_40_p0097_pages_before.png",
+    "screenshots/b_41_p0097_after_plain_tap.png",
+    "screenshots/b_42_p0097_after_drop.png",
+    "recordings/p0097-pair.png"
+   ],
+   "result": "OK",
+   "summary": "A dragged page is now enlarged, tilted and translucent, and long-press-and-drag reorders pages, as RD's fix describes."
+  },
+  {
+   "bug": "PHA262026P0103",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Free user tapping a PRO template card gets the IAP page instead of the preview",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/02_template_page.png",
+    "screenshots/10_p0103_crowned_card_tap.png",
+    "screenshots/11_p0103_canvas.png",
+    "screenshots/18_p0103_export_tap.png"
+   ],
+   "result": "OK",
+   "summary": "Tapping a crowned PRO template no longer opens the IAP; the template can be previewed and used on the Canvas, and the IAP shows only at export, as RD's fix describes."
+  },
+  {
+   "bug": "PHA262026P0138",
+   "title": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Wi-Fi lost during upload: 70 charged, 「Credits refunded」 but no refund",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/f_25_try4_dialog.png",
+    "screenshots/f_27_try4_history.png",
+    "screenshots/f_35_try4_done.png",
+    "screenshots/f_51_detail_end.png"
+   ],
+   "result": "OK",
+   "summary": "With the connection lost while Apply Effect was sent, the confirm page now shows 「Network Error」 instead of 「Credits refunded」, Retry in My AI Artwork finishes the reel, and the job is charged only once.",
+   "reason": "Verified OK with 202611241937 build.\nWith the connection lost while Apply Effect was sent, the confirm page now shows 「Network Error」 instead of 「Credits refunded」, Retry in My AI Artwork finishes the reel, and the job is charged only once.\nRisk test: n/a"
+  },
+  {
+   "bug": "PHA262026P0141",
+   "title": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: No 「Settings applied」 toast when Reuse opens the Custom page",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_52_saveshare.png",
+    "screenshots/c_55_custom_after_reuse.png",
+    "screenshots/c_56_reuse_settings.png"
+   ],
+   "result": "OK",
+   "summary": "Reuse now shows the toast 「Settings applied」 when the Custom page opens."
+  },
+  {
+   "bug": "PHA262026P0143",
+   "title": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: ‹ / Back in the room opened by Reuse go to My AI Artwork, not Save & Share",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_59_p0143_room2.png",
+    "screenshots/c_57_p0143_chevron.png",
+    "screenshots/c_60_p0143_sysback.png"
+   ],
+   "result": "OK",
+   "summary": "‹ and system Back in the room opened by Reuse now return to the video's Save & Share page."
+  },
+  {
+   "bug": "PHA262026P0144",
+   "title": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Tracking: Reuse logs Artwork_Reuse_Click without model, not ImageToVideo_Reuse_Click",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_52_saveshare.png",
+    "screenshots/c_53_reuse_room.png"
+   ],
+   "result": "OK",
+   "summary": "Tapping Reuse now logs ImageToVideo_Reuse_Click with the video's model."
+  },
+  {
+   "bug": "PHA262026P0152",
+   "title": "PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Launcher: NY Sale IAP icon stays regular orange crown, no champagne-glasses animation",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/e_04_ny_launcher.png",
+    "screenshots/e_06_ny_icon_crop.png",
+    "screenshots/e_05_ny_icon_frames.png",
+    "screenshots/e_03_xmas_icon.png"
+   ],
+   "result": "OK",
+   "summary": "During the NY Sale the Free user's Launcher IAP icon is now the animated champagne glasses."
+  },
+  {
+   "bug": "PHA262026P0160",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame 「+」 needs two taps; the first selects the layer over it",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/12_p0160_10photo_one_tap.png",
+    "screenshots/14_p0160_10photo_clean_tap.png",
+    "screenshots/15_p0160_10photo_second_tap.png",
+    "screenshots/61_p0160_3photo_one_tap.png"
+   ],
+   "result": "OK",
+   "summary": "Tapping a frame cycles between the element and its slot, and the slot's 「+」 opens the photo picker, as RD's fix describes."
+  },
+  {
+   "bug": "PHA262026P0162",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Removal room shows the photo without its Adjustments",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/32_p0162_exposure4.png",
+    "screenshots/33_p0162_canvas_after_apply.png",
+    "screenshots/36_p0162_removal_room.png"
+   ],
+   "result": "OK",
+   "summary": "The Removal room now shows the photo with its Adjustments, as on the Canvas."
+  }
+ ]
+}

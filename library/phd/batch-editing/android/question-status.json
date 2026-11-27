@@ -1,0 +1,69 @@
+{
+  "Q-1": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "The app uses the Design copy: the bottom bar reads 「Select 1 to 20 photos to continue.」 「(0/20)」 with 「Next」 (not the PM 「Done」), 「Next」 disabled at 0 and enabled once a photo is selected (TC-005, TC-007, TC-010 Pass). The rows already expect this."
+  },
+  "Q-3": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "The Setting button opens the app's 「Settings」 page (General Settings, Image Quality Settings, Camera Settings …); system Back returns to Batch Edit Room with the batch unchanged (TC-025 Pass)."
+  },
+  "Q-4": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "Same as Edit Room: holding the compare button shows the original photo and releasing it brings the edit back (TC-026 Pass, photo 1 cropped Square)."
+  },
+  "Q-5": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "The app does both, each in its own case: a ratio chosen without 「All」 gives a box centred on that photo (TC-049: position holds, the row fails only on pixel sizes), and 「All」 places the other photos' boxes at the source's relative position as Section 3 concludes (TC-051, TC-052, TC-053, TC-055 Pass). The rows already follow Section 3."
+  },
+  "Q-6": {
+    "state": "filed",
+    "by": "dedupe 2026-11-25 (ebugs/2026-11-25-questions)",
+    "at": "2026-11-25",
+    "note": "Already with PM on the open Android tickets PHA262026P0122 (237 x 237 accepted, below Section 3's 238 px minimum) and PHA262026P0123 (the out-of-range toast names only the width). Matched by title: whether they also raise the 2560 px maximum against Section 3's 2730 is to be checked on the tickets.",
+    "codes": [
+      "PHA262026P0122",
+      "PHA262026P0123"
+    ]
+  },
+  "Q-9": {
+    "state": "filed",
+    "by": "dedupe 2026-11-25 (ebugs/2026-11-25-questions)",
+    "at": "2026-11-25",
+    "note": "Already with PM on the open Android ticket PHA262026P0121 (「One Undo after an edit and 「All」 keeps the current photo's own edit」, filed 2026-11-17 on TR261113-0038), the same finding as the R2 draft ISS-BEA-14.",
+    "codes": [
+      "PHA262026P0121"
+    ]
+  },
+  "Q-10": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "The typos are only in the mockups; the app spells the strings correctly: 「Maximize detail and clarity with advanced AI.」 (TC-019, TC-083 Pass), ratio 「Square」 (TC-037 tool list), 「Highlights」 (TC-070 Pass)."
+  },
+  "Q-12": {
+    "state": "not-reached",
+    "by": "R2 (2026-11-11-r2, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "A device run cannot show whether the exported Design frames are the current Design, and neither run checked it. The Design page was since read through Figma (spec set 2026-11-09-figma, REQ-009 / REQ-011), so this is to be closed from that read at the next draft, not from a run."
+  },
+  "Q-13": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "Deselecting by the tile or by the tray ✕ removes the photo and the numbers close up (photo 3 becomes 2, count 「(2/20)」; TC-009, TC-150 Pass); with none selected 「Next」 is dimmed and does nothing (TC-010 Pass); the tile's expand icon opens a full-size viewer without selecting, and ‹ returns to the picker (TC-151 Pass)."
+  },
+  "Q-14": {
+    "state": "determined",
+    "by": "R1 (2026-11-09-r1, 20.19.0)",
+    "at": "2026-11-25",
+    "note": "「‹」 on the Batch Save page returns to an editable Batch Edit Room with the edits kept (photos still rotated, Undo enabled), and Save again writes another full set of new files (20 more in DCIM/PhotoDirector) and shows 「Saved 20 photos」 again (TC-131 Pass; system Back does the same, TC-147 Pass)."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "draft": "20261125-115636",
+  "current": ["R2"],
+  "needs": {},
+  "unavailable": {},
+  "phases": [
+    {
+      "id": "R2",
+      "name": "Full run of approved v2 (android)",
+      "round": true,
+      "note": "No generation: never pick a photo or press Generate. Find cards by name (order differs by app language, R-029). Language rows: one switch per language (launch --lang <tag>), its cards row and then its tips row; locale reset and read English back at each segment end.",
+      "segments": [
+        {"id": "R2-a", "name": "Template page: chip on every template, the sheet, Got it, Back, scrolling, pictures, data source",
+         "note": "One visit to the template page. TC-022 compares each picture with specs/2026-11-25/extracted/recommendation-pic-links.png. TC-019 needs logcat from app start.",
+         "cases": ["TC-001","TC-002","TC-003","TC-004","TC-005","TC-006","TC-007","TC-008","TC-020","TC-009","TC-022","TC-019"]},
+        {"id": "R2-b", "name": "Add Media 「?」 per template, Got it and Back there",
+         "note": "Open Add Media with 「Import a Photo」 per card; never pick a photo. Q-1 is filed (DRA262611P0289): a still-missing 「?」 repeats that ticket.",
+         "cases": ["TC-010","TC-011","TC-012","TC-013","TC-014","TC-015","TC-016","TC-021"]},
+        {"id": "R2-c", "name": "Language 1: English, 繁體中文, 简体中文, 日本語, Español (España), 한국어, Deutsch",
+         "note": "Write the per-language recipe here (android/recipes/) so later segments reuse it.",
+         "cases": ["TC-023","TC-024","TC-017","TC-025","TC-026","TC-027","TC-018","TC-028","TC-029","TC-030","TC-031","TC-032","TC-033"]},
+        {"id": "R2-d", "name": "Language 2: Français, Italiano, Русский, Português (Brasil), Nederlands, Bahasa Indonesia, ไทย, Bahasa Melayu",
+         "cases": ["TC-034","TC-035","TC-036","TC-037","TC-038","TC-039","TC-040","TC-041","TC-042","TC-043","TC-044","TC-045","TC-046","TC-047","TC-048","TC-049"]},
+        {"id": "R2-e", "name": "Language 3: हिन्दी, Español (Latinoamérica), العربية, Tiếng Việt, Polski, Türkçe",
+         "note": "es-419 and ar need a region for the locale helper (it would turn es-419 into es-ES): pick the region the APK's resources carry and record it.",
+         "cases": ["TC-050","TC-051","TC-052","TC-053","TC-054","TC-055","TC-056","TC-057","TC-058","TC-059","TC-060","TC-061"]},
+        {"id": "R2-f", "name": "Language 4: Filipino, فارسی, עברית, Svenska, Dansk, Norsk bokmål, Українська",
+         "cases": ["TC-062","TC-063","TC-064","TC-065","TC-066","TC-067","TC-068","TC-069","TC-070","TC-071","TC-072","TC-073","TC-074","TC-075"]}
+      ]
+    }
+  ]
+}

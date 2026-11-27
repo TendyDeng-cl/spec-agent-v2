@@ -1,0 +1,14 @@
+{
+ "tr": "TR261123-0070",
+ "build": "2611231",
+ "trNote": "TR261123-0070, build 16.9.0.2611231, where R3 and this Q1 round ran and where the R3 batch (P0292 – P0294) was filed — confirm.",
+ "lede": "Two cards, both Open questions filed to PM for a decision ([AIAgent][UX], BugBelong PM), from the Q1 question round on 2611231: Q-28 (what play does at the end of the selection, TC-350) and Q-14 (GenAI consent or disclosure before the first upload after a reset, TC-351, for PM and Legal). Deduped against the whole Android pool on 2026-11-26: no same-OS match.",
+ "why": {
+  "ISS-VEA-58": "PM decision (Q-28): no source says what play does at the right trim handle. On 2611231 it stops there by itself and the next play starts from the selection start (TC-350).",
+  "ISS-VEA-59": "PM / Legal decision (Q-14): PM's Gaps board asks whether the existing GenAI consent dialog (ByteDance cloud) must show. After pm clear, the first Enhance went straight to the upload; no screen since the reset mentions AI cloud processing (TC-351)."
+ },
+ "related": {
+  "ISS-VEA-58": "DRA262611P0230 (play does nothing at the selection's end; fixed in 2611251) is a defect at one position, not this rule. Not this entry: Preview lag (P0113 / P0208), missing Preview time at rest (P0074).",
+  "ISS-VEA-59": "The account had run AI Video Enhance before the reset, so a consent kept with the account is not ruled out. DRA262611P0291 (no feedback for up to 5.9 s after Enhance) is a wait, not a consent."
+ }
+}

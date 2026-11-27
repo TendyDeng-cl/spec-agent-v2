@@ -1,0 +1,890 @@
+{
+ "spec_folder": "specs/2026-11-20",
+ "platform": "android",
+ "inventory": "specs/2026-11-20/extracted/inventory.json",
+ "entries": [
+  {
+   "group": "K-2c2769",
+   "kind": "button",
+   "board": "d-iap-xmas",
+   "boards": [
+    "d-iap-xmas",
+    "d-iap-ny"
+   ],
+   "name": "btn_primary_solid_np",
+   "label": "Start 7-Day Free Trial",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "xmas_IAP"
+   ],
+   "controls": [
+    "K-12c6da",
+    "K-e5215c"
+   ],
+   "app": [],
+   "press": "TC-019"
+  },
+  {
+   "group": "K-111b2c",
+   "kind": "button",
+   "board": "d-interstitial-xmas-a",
+   "boards": [
+    "d-interstitial-xmas-a",
+    "d-interstitial-xmas-b",
+    "d-interstitial-ny",
+    "d-iap-xmas",
+    "d-iap-ny"
+   ],
+   "name": "btn_close_outline",
+   "label": "",
+   "set": false,
+   "instances": 5,
+   "screens": [
+    "Christmas Paywall-1",
+    "Christmas Paywall-2",
+    "NY Paywall",
+    "xmas_IAP"
+   ],
+   "controls": [
+    "K-036d9f",
+    "K-93bfff",
+    "K-f4552c",
+    "K-900517",
+    "K-7e3b32"
+   ],
+   "app": [],
+   "press": "TC-051"
+  },
+  {
+   "group": "K-d557e8",
+   "kind": "button",
+   "board": "d-interstitial-xmas-a",
+   "boards": [
+    "d-interstitial-xmas-a",
+    "d-interstitial-xmas-b",
+    "d-interstitial-ny"
+   ],
+   "name": "btn_primary_solid_np",
+   "label": "Get 7-Day Free Trial",
+   "set": false,
+   "instances": 3,
+   "screens": [
+    "Christmas Paywall-1",
+    "Christmas Paywall-2",
+    "NY Paywall"
+   ],
+   "controls": [
+    "K-d45034",
+    "K-8ad666",
+    "K-035091"
+   ],
+   "app": [],
+   "press": "TC-048"
+  },
+  {
+   "group": "C-dd8bbc",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "btn",
+   "label": "choice of 5: 「AI Edit Agent」 「AI Creative Studio」 「Batch Edit」 「Beautify」 …",
+   "set": true,
+   "instances": 5,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-e651bf",
+    "K-0d515d",
+    "K-973a21",
+    "K-f782c7",
+    "K-5b9c99"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature buttons, unchanged by the sale"
+  },
+  {
+   "group": "K-7d7f20",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "btn_setting",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-763528"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher settings gear, unchanged by the sale"
+  },
+  {
+   "group": "K-695307",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_account_circle",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-cfb006"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-7375b9",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_ai_photo",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-6c0de7"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-8cbe71",
+   "kind": "item",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_ai_video",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-864290"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-c0ecd0",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_eraser",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-c73cf7"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-0999a6",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_home",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-17ddfa"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-6789f4",
+   "kind": "item",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "ic_image2video_28x28",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-685b21"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-b33a5a",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "round/ic_camera",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-8b562c"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher 「Camera」, unchanged"
+  },
+  {
+   "group": "K-a8cffb",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-21de06"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher banner chevron, unchanged"
+  },
+  {
+   "group": "K-bb1d7c",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "round/ic_cinematic_reel_creator",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-010e15"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-1ae29f",
+   "kind": "button",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "round/ic_circle_add",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-785217"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher 「Edit」, unchanged"
+  },
+  {
+   "group": "K-119a57",
+   "kind": "tab",
+   "board": "d-launcher-ny",
+   "boards": [
+    "d-launcher-ny"
+   ],
+   "name": "tab",
+   "label": "Discover",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher · Light · orange · rest"
+   ],
+   "controls": [
+    "K-8a0e30"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-bc6e27",
+   "kind": "button",
+   "board": "pm-credit-paid",
+   "boards": [
+    "pm-credit-paid",
+    "pm-credit-free"
+   ],
+   "name": "btn",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Credit_IAP_1"
+   ],
+   "controls": [
+    "K-2ed5e2",
+    "K-280aae"
+   ],
+   "app": [],
+   "press": "n/a: Credit IAP 「GO」 for free bonus credits, unchanged by the sale"
+  },
+  {
+   "group": "K-2bf64f",
+   "kind": "button",
+   "board": "pm-credit-paid",
+   "boards": [
+    "pm-credit-paid",
+    "pm-credit-free"
+   ],
+   "name": "btn_primary_solid_np",
+   "label": "Get 1000 credits for $49.99!",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Credit_IAP_1"
+   ],
+   "controls": [
+    "K-0ebb4d",
+    "K-de4ea4"
+   ],
+   "app": [],
+   "press": "TC-060"
+  },
+  {
+   "group": "K-f6d041",
+   "kind": "button",
+   "board": "pm-credit-paid",
+   "boards": [
+    "pm-credit-paid",
+    "pm-credit-free"
+   ],
+   "name": "ic_credit",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Credit_IAP_1"
+   ],
+   "controls": [
+    "K-8dfd47",
+    "K-4c5301"
+   ],
+   "app": [],
+   "press": "n/a: credit icon beside the balance, not a control of the sale"
+  },
+  {
+   "group": "K-cfb261",
+   "kind": "button",
+   "board": "pm-credit-paid",
+   "boards": [
+    "pm-credit-paid",
+    "pm-credit-free"
+   ],
+   "name": "top/ic_back_n",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Credit_IAP_1"
+   ],
+   "controls": [
+    "K-55a379",
+    "K-563b62"
+   ],
+   "app": [],
+   "press": "TC-065"
+  },
+  {
+   "group": "K-9a0656",
+   "kind": "button",
+   "board": "pm-iap",
+   "boards": [
+    "pm-iap"
+   ],
+   "name": "btn_close_outline",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Current"
+   ],
+   "controls": [
+    "K-57d127"
+   ],
+   "app": [],
+   "press": "TC-020"
+  },
+  {
+   "group": "K-7f358a",
+   "kind": "button",
+   "board": "pm-interstitial",
+   "boards": [
+    "pm-interstitial"
+   ],
+   "name": "btn_primary_solid_np",
+   "label": "Start 7-Day Free Trial",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "Interstitial"
+   ],
+   "controls": [
+    "K-4b7f11"
+   ],
+   "app": [],
+   "press": "TC-048"
+  },
+  {
+   "group": "K-19a6ba",
+   "kind": "button",
+   "board": "pm-interstitial",
+   "boards": [
+    "pm-interstitial",
+    "pm-interstitial-ref"
+   ],
+   "name": "round/ic_xmark",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "Interstitial"
+   ],
+   "controls": [
+    "K-616d6f",
+    "K-85136a"
+   ],
+   "app": [],
+   "press": "TC-051"
+  },
+  {
+   "group": "C-c6168f",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "btn",
+   "label": "choice of 3: 「AI Edit Agent」 「AI Removal」 「AI Enhance」",
+   "set": true,
+   "instances": 3,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-993395",
+    "K-02d1e8",
+    "K-f963e0"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature buttons, unchanged by the sale"
+  },
+  {
+   "group": "K-d0e545",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "btn_premium",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-431502"
+   ],
+   "app": [],
+   "press": "TC-010"
+  },
+  {
+   "group": "K-c4e04a",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "btn_setting",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-b7883a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher settings gear, unchanged"
+  },
+  {
+   "group": "K-feaa74",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "button",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-4b8fa9"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher banner button, unchanged"
+  },
+  {
+   "group": "K-ecea69",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "ic_account_circle",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-da912b"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-75a839",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher",
+    "pm-mine"
+   ],
+   "name": "ic_ai_photo",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "launcher",
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-73b9e1",
+    "K-2b0c9d"
+   ],
+   "app": [],
+   "press": "n/a: other feature: bottom tab, unchanged"
+  },
+  {
+   "group": "K-e5c223",
+   "kind": "item",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher",
+    "pm-mine"
+   ],
+   "name": "ic_ai_video",
+   "label": "",
+   "set": false,
+   "instances": 2,
+   "screens": [
+    "launcher",
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-0d02f8",
+    "K-da5d76"
+   ],
+   "app": [],
+   "press": "n/a: other feature: bottom tab, unchanged"
+  },
+  {
+   "group": "K-882c22",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "ic_home",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-f6b549"
+   ],
+   "app": [],
+   "press": "n/a: other feature: bottom tab, unchanged"
+  },
+  {
+   "group": "K-8a9702",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "round/ic_chevron_right",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-5e5d1a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher banner chevron, unchanged"
+  },
+  {
+   "group": "K-45fbc2",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "round/ic_image2video",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-fbc78a"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-f840b2",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "round/ic_magic_wand",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-1b93e4"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-02558b",
+   "kind": "button",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "round/ic_play",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-08ee8d"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher feature button, unchanged"
+  },
+  {
+   "group": "K-d1ec38",
+   "kind": "tab",
+   "board": "pm-launcher",
+   "boards": [
+    "pm-launcher"
+   ],
+   "name": "tab",
+   "label": "Discover",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "launcher"
+   ],
+   "controls": [
+    "K-7920ba"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Launcher bottom tab, unchanged"
+  },
+  {
+   "group": "K-2e7a8d",
+   "kind": "button",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "btn_credit_buy/n",
+   "label": "Buy Now",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-3d9c3a"
+   ],
+   "app": [],
+   "press": "TC-005, TC-058, TC-059, TC-065, TC-075",
+   "how": "label"
+  },
+  {
+   "group": "K-3c3fa0",
+   "kind": "button",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "ic_credit_L",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-f0a8dc"
+   ],
+   "app": [],
+   "press": "n/a: credit icon on the 「My Credits」 card, decorative"
+  },
+  {
+   "group": "K-d6ad95",
+   "kind": "button",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "ic_gift",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-b3c1e2"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Mine gift button, unchanged"
+  },
+  {
+   "group": "K-a4976d",
+   "kind": "button",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "ic_home_n",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-068f00"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Mine bottom tab, unchanged"
+  },
+  {
+   "group": "K-a65b0e",
+   "kind": "tab",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "tab",
+   "label": "MIne",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-3ebef9"
+   ],
+   "app": [],
+   "press": "TC-005, TC-021, TC-023, TC-058, TC-059, TC-072",
+   "how": "label"
+  },
+  {
+   "group": "K-030f3e",
+   "kind": "button",
+   "board": "pm-mine",
+   "boards": [
+    "pm-mine"
+   ],
+   "name": "top/ic_bell_unread_n",
+   "label": "",
+   "set": false,
+   "instances": 1,
+   "screens": [
+    "My_credit_card1"
+   ],
+   "controls": [
+    "K-7f0d37"
+   ],
+   "app": [],
+   "press": "n/a: other feature: Mine notifications bell, unchanged"
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+# AI Mini Drama Android, open questions flagged to-file (Q-5, Q-18): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-25
+# No entry was drafted (no image of the A7 observations is on this computer; the first question's string was never
+# seen), so `ecl_query.py dedupe` had no bodies.json to rank; the pool was read with
+# `ecl_query.py bugs --text "Mini Drama" --product "PowerDirector Mobile for Android" --limit 2000`
+# (dedupe-query.txt): 488 tickets, open and closed, every Short Description read against both questions.
+# First question (two string keys with the English 「Every frame is done. Ready to create your video?」): no Short
+#   Description quotes the string or is about a message between the storyboard and the video settings card sharing
+#   its text with another.
+# Second question (templates limited to US and JP stores on day 1): no Short Description is about the store region
+#   or a country limit. Closest, other causes: DRA262610P0138 [NotReproducible] 「No templates load in English and
+#   More opens a blank page」 and DRA262610P0036 [Close] 「Template section and More show with no templates in
+#   German/French」 (app language, not store region).
+# No same-OS ticket covers either question. Nothing commented on (rule 6). Nothing filed.
+
+No same-OS ticket covers Q-5: it stays to-file (not drafted, needs a device check; see the drafts file).
+No same-OS ticket covers Q-18: it stays to-file (not drafted, needs a device check; see the drafts file).

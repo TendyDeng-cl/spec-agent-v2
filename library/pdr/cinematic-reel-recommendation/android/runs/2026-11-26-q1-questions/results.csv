@@ -1,0 +1,64 @@
+﻿ID,Phase,Segment,Needs,Section,Action,Expected Result,Result,Disposition,Actual,Evidence,Recorded At
+TC-077,Q1,Q1-a,,Photo tips sheet,"1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap the dimmed template page above the sheet, below the header
+3. If the sheet is still open, tap 「Got it」
+4. Tap 「View photo tips」 on the same card again
+5. Swipe the sheet down, starting on its first sentence (not on the 「Avoid」 row)
+6. If the sheet is still open, tap 「Got it」","Step 2: record whether the sheet closes or stays open
+Step 2: nothing behind the dim reacts: the template page stays on the 「Micro Cinema」 card and no other screen opens
+Step 5: record whether the sheet closes, follows the finger and springs back, or does not move
+Steps 3 and 6: once the sheet is closed the dim is gone and the template page shows the 「Micro Cinema」 card, as before step 1
+Steps 2 and 5: the Design draws only 「Got it」 and says nothing of these two gestures (Q-3), so neither outcome is a Pass: record what each does as Fail (question) for PM",Fail,question,"The photo tips sheet closes on both gestures the Design does not draw (Q-3): a tap on the dimmed template page and a downward swipe both dismiss it, which PM must confirm or rule out.
+Step 1: 「View photo tips」 on the 「Micro Cinema」 card opened the sheet (「For best results with the Micro Cinema template, follow this advice:」, Recommendation 「Mid-Distance Framing」 / 「Rich Visual Details」, Avoid 「Flat Composition」 / 「Visible Text or Logos」 / 「Extreme Close-up」, 「Got it」). pass.
+Step 2: a tap on the dimmed template page above the sheet (540,500 px, below the header) closed the sheet; nothing behind the dim reacted: the page stayed on the 「Micro Cinema」 card, no other screen opened (the tap did not reach the card or its video). Question (Q-3): the sheet closes on an outside tap.
+Step 3: skipped, the sheet was already closed; the dim was gone and the page showed the 「Micro Cinema」 card as before step 1. pass.
+Step 4: 「View photo tips」 again opened the same sheet. pass.
+Step 5: a downward swipe starting on the first sentence: the sheet followed the finger down and was dismissed (recording frames: the sheet slides down step by step, then the page shows with no dim); it did not spring back. Question (Q-3): the sheet closes on a swipe down.
+Step 6: skipped, the sheet was already closed; the dim was gone and the 「Micro Cinema」 card showed as before. pass.
+No crash or freeze.",screenshots/tc077-01-micro.png screenshots/tc077-02-sheet.png screenshots/tc077-03-after-dimtap.png screenshots/tc077-04-sheet-again.png screenshots/tc077-05-after-swipe.png screenshots/tc077-swipe-tiles.png recordings/TC-077-swipe.mp4,2026-11-26T02:42:26.787Z
+TC-079,Q1,Q1-a,,Data source,"1. Tap 「View photo tips」 on the 「Micro Cinema」 card and wait for its pictures
+2. Tap 「Got it」
+3. Turn Wi-Fi off
+4. Tap 「View photo tips」 on the 「Micro Cinema」 card again
+5. Tap 「Got it」
+6. Tap 「View photo tips」 on the 「Time Lapse」 card (not opened since the launch)
+7. Tap 「Got it」
+8. Turn Wi-Fi back on
+9. Tap 「View photo tips」 on the 「Time Lapse」 card","Step 4: record whether the sheet opens and whether its sentence, captions and pictures still show
+Step 6: record whether the sheet opens and whether its captions and pictures show, stay blank or give a message (quote it)
+Steps 3–7: record whether the cards keep their 「View photo tips」 chips
+Steps 3–7: the app does not crash or freeze, and each sheet that opened closes with 「Got it」
+Step 9: back online the Time Lapse sheet shows 「Visible Sky」 and 「Cityscape or Landscape」 under 「Recommendation」 and 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」 under 「Avoid」, each with its picture
+Steps 4 and 6: no spec says what a sheet shows without the CMS (Q-4), so no outcome is a Pass: record it as Fail (question) for PM",Fail,question,"Offline, a photo tips sheet not loaded before opens with its sentence and captions but blank picture boxes and no message (Q-4: no spec says what a sheet shows without the network), so PM must decide whether blank pictures are acceptable.
+Step 1: online, 「View photo tips」 on 「Micro Cinema」 opened the sheet with all five pictures loaded. pass.
+Step 2: 「Got it」 closed it. pass.
+Step 3: Wi-Fi off (device-android.ts wifi off, phone on USB; adb: no active default network, ping fails).
+Step 4: the Micro Cinema sheet opened offline exactly as online: 「For best results with the Micro Cinema template, follow this advice:」, 「Mid-Distance Framing」, 「Rich Visual Details」, 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」, every picture shown (kept from step 1). Question (Q-4).
+Step 5: 「Got it」 closed it. pass.
+Step 6: the Time Lapse sheet (not opened since the launch) opened offline with its sentence 「For best results with the Time Lapse template, follow this advice:」 and every caption (「Visible Sky」, 「Cityscape or Landscape」, 「Portrait as Subject」, 「Indoor Close-up」, 「Extreme Close-up」), but the picture boxes of the first four were empty dark boxes with only the ✓ / ✕ badge; 「Extreme Close-up」 showed its picture (the same flower picture already loaded for Micro Cinema). No message, no retry, no loading indicator. Question (Q-4).
+Step 7: 「Got it」 closed it. pass.
+Steps 3–7: every card swiped (Micro Cinema, Fast Cut, One-Take Shot, Time Lapse) kept its 「View photo tips」 chip; no crash or freeze. pass.
+Step 8: Wi-Fi on, connected to the QA network, ping OK.
+Step 9: back online the Time Lapse sheet shows 「Visible Sky」 and 「Cityscape or Landscape」 under 「Recommendation」 and 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」 under 「Avoid」, each with its picture. pass.",screenshots/tc079-01-mc-online.png screenshots/tc079-03-mc-offline.png screenshots/tc079-04-timelapse-card-offline.png screenshots/tc079-05-tl-offline.png screenshots/tc079-06-closed-offline.png screenshots/tc079-07-tl-online.png,2026-11-26T02:45:58.584Z
+TC-078,Q1,Q1-a,,Data source,"1. Launch PowerDirector
+2. Tap 「Cinematic Reel Creator」 on the Launcher
+3. Swipe through the template cards
+4. Tap 「View photo tips」 on the first card that shows the chip (skip steps 4–5 when no card shows one)
+5. Tap 「Got it」
+6. Turn Wi-Fi back on
+7. Leave Cinematic Reel Creator and open it again
+8. Tap 「View photo tips」 on the 「Micro Cinema」 card","Step 2: record what opens: the template page with its cards, an empty page, a loading state or an offline message (quote it)
+Step 3: record which cards show and whether each has the 「View photo tips」 chip
+Step 4: record what the sheet shows: its sentence, headings and captions, and whether the pictures load or stay blank
+Steps 1–5: the app does not crash or freeze, and every screen can be left
+Step 8: back online the Micro Cinema sheet shows 「Mid-Distance Framing」 and 「Rich Visual Details」 under 「Recommendation」 and 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」 under 「Avoid」, each with its picture
+Steps 2–4: no spec says what the feature shows without the CMS (Q-4), so no outcome is a Pass: record it as Fail (question) for PM",Fail,question,"Started offline, Cinematic Reel Creator opens complete from data kept on the phone, but a photo tips sheet whose pictures were never loaded shows blank picture boxes with no message (Q-4: no spec says what the feature shows without the network), so PM must decide what it should show.
+Step 1: PowerDirector force-stopped, Wi-Fi off (adb: no active network, ping fails), launched: Launcher normal (Stage, yellow bar). pass.
+Step 2: 「Cinematic Reel Creator」 opened the template page directly with its cards, no loading state or offline message; the card shows a still picture (template_image) instead of its video; the credit pill reads 「--」. Data kept from earlier online visits may explain the complete page. Question (Q-4).
+Step 3: all six cards show with title, description, 「Import a photo」 and the 「View photo tips」 chip: 「Horror Movie」, 「Micro Cinema」, 「Fast Cut」, 「One-Take Shot」, 「Time Lapse」, 「Handheld Camera」. Question (Q-4).
+Step 4: 「View photo tips」 on 「Horror Movie」: sheet with 「For best results with the Horror Movie template, follow this advice:」, Recommendation 「People in Frame」 / 「Layered Depth」 with empty dark picture boxes (only the ✓ badge), Avoid 「Flat Composition」 / 「Visible Text or Logos」 / 「Extreme Close-up」 with their pictures (the same pictures Micro Cinema uses, loaded earlier). No message, retry or loading indicator. Question (Q-4).
+Step 5: 「Got it」 closed it; steps 1–5 no crash or freeze, every screen could be left. pass.
+Step 6: Wi-Fi on, connected, ping OK.
+Step 7: Back to the Launcher and 「Cinematic Reel Creator」 again: the page opened.
+Step 8: back online the Micro Cinema sheet shows 「Mid-Distance Framing」 and 「Rich Visual Details」 under 「Recommendation」 and 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」 under 「Avoid」, each with its picture. pass.
+Also seen: the credit pill stayed 「--」 after Wi-Fi returned, also after leaving and reopening the page and 20 s later (O-1).",screenshots/tc078-01-launch-offline.png screenshots/tc078-02-crc-offline.png screenshots/tc078-03-cards-tiles.png screenshots/tc078-04-hm-sheet-offline.png screenshots/tc078-05-mc-online.png screenshots/o1-credit-dashes-online.png,2026-11-26T02:49:08.134Z

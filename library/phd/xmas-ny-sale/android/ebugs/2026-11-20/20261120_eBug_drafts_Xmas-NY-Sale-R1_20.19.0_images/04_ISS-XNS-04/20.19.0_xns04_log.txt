@@ -1,0 +1,20 @@
+# ISS-XNS-04 Purchase of the 500-credit sale pack (SKU and price path)
+# PhotoDirector Android 20.19.0 (90201901), Samsung SM-A5560 / Android 15, logcat of the app captured by the casebook run
+# Times are PHONE time: the run moved the phone clock into the sale period. Campaign, Launcher icon, credit purchase and
+# server-query lines only; repeated lines kept once; tokens, purchase tokens and IDs dropped.
+
+## TC-060 checkout opened and closed without buying, R1-a (2026-12-15 10:07:00–10:07:30)
+2026-12-15 10:07:03.473 [PHD-A][Mixpanel]: Monetize_Credit_Buy:{"from":"mine_tab","sku":"phd_500_credit_freeuser_summer_sale"}
+2026-12-15 10:07:03.478 CreditShotPage: [purchase] Purchase credits: phd_500_credit_freeuser_summer_sale
+2026-12-15 10:07:26.634 CreditShotPage: [purchase] error credits: phd_500_credit_freeuser_summer_sale
+2026-12-15 10:07:26.636 [PHD-A][Mixpanel]: Monetize_Credit_Pay:{"from":"mine_tab","sku":"phd_500_credit_freeuser_summer_sale","status":"failed"}
+
+## TC-066 test-card purchase of the same pack, R1-d (2026-12-15 10:00:20–10:01:20)
+2026-12-15 10:00:26.012 [PHD-A][Mixpanel]: [setCurFrom] from = Launcher_IAPicon
+2026-12-15 10:00:26.077 [PHD-A][Mixpanel]: Monetize_Subscription_Appear:{"feature":"launcher","room":"launcher","from":"Launcher_IAPicon"}
+2026-12-15 10:00:27.056 [PHD-A][Mixpanel]: Monetize_Credit_Buy:{"from":"mine_tab","sku":"phd_500_credit_freeuser_summer_sale"}
+2026-12-15 10:00:27.062 CreditShotPage: [purchase] Purchase credits: phd_500_credit_freeuser_summer_sale
+2026-12-15 10:00:38.235 CreditSystem: totalRemain=0
+2026-12-15 10:01:17.842 CreditSystem: totalRemain=500
+2026-12-15 10:01:18.177 CreditShotPage: [purchase] success credits: phd_500_credit_freeuser_summer_sale
+2026-12-15 10:01:18.209 [PHD-A][Mixpanel]: Monetize_Credit_Pay:{"from":"mine_tab","sku":"phd_500_credit_freeuser_summer_sale","status":"succeed"}

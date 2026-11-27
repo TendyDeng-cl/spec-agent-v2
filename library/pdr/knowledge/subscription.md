@@ -94,7 +94,7 @@ A sandbox or TestFlight purchase asks for the Apple Account password: the user t
 
 ## KP-072 What a Pro purchase or sign-in changes on Android
 - kind: fact · platform: android · use: analysis, run · tags: subscription, tier, credits, sign-in
-- source: Video Enhance Android run 2026-11-18-r2-full O-3, O-23, O-33 · verified: 16.9.0 build 2611231 (2026-11-24)
+- source: Video Enhance Android run 2026-11-18-r2-full O-3, O-23, O-33; Video Enhance Android run 2026-11-26-r4-full O-9, O-19, O-25, O-27 · verified: 16.9.0 build 2611251 (2026-11-27)
 
 A Pro purchase adds 「Monthly Credit Bonus (for Pro Subscribers) +100」 (iOS: +50, KP-043), turns the Launcher's last
 tab into 「Pro」 with a VIP icon instead of 「Mine」, and the next Launcher shows a 「Use credits to enjoy AI features /
@@ -106,9 +106,10 @@ visible effect.
 
 ## KP-074 The Pro paywall opens by itself on a Free account
 - kind: quirk · platform: android · use: run · tags: paywall, tier, export
-- source: AIGC Watermark Android run 2026-11-17-r1-full O-2, O-21, O-23; AIGC Watermark Android run 2026-11-23-r3-full O-7, O-8 · verified: 16.9.0 build 2611231 (2026-11-25)
+- source: AIGC Watermark Android run 2026-11-17-r1-full O-2, O-21, O-23; AIGC Watermark Android run 2026-11-23-r3-full O-7, O-8; corrected by AIGC Watermark Android run 2026-11-26-r4-changed O-4; Video Enhance Android run 2026-11-26-r4-full O-25 · verified: 16.9.0 build 2611251 (2026-11-27)
 
-On a Free account the 「PowerDirector Pro」 paywall can open at a launch, and opens after every 「Produce」 (over
-「Saved to Gallery」). Close it with `[AID]IAP_Back`; the file is saved regardless. On 2611193 an export 「AIGC
+On a Free account the 「PowerDirector Pro」 paywall can open at a launch, and opens at 「Produce」 (2611201: right away,
+before 「Saved to Gallery」). Some exports show a 「Your video is awesome!」 rating dialog (「Not now」 / 「Rate now」) instead.
+Close the paywall with `[AID]IAP_Back`, the dialog with 「Not now」; the file is saved regardless. On 2611193 an export 「AIGC
 Watermark」 dialog comes before it, at the editor's 「Export」 (KF-005).
 

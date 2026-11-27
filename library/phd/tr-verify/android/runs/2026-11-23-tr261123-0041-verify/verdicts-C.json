@@ -1,0 +1,47 @@
+[
+  {
+    "bug": "PHA262026P0134",
+    "verdict": "SPEC_CHANGED_OK",
+    "observed": "The single-color-fastcut template no longer exists on this build (the Creative section is gone; the room has Cinematic Styles, 1 photo each, and Cool Transitions: Selfie Shake 4, Walking Shift 6, Outfit Recap 4, Snap & Sway 6, Travel Recap 3). Walking Shift with 6 photos > Next: the confirm page shows the cover, 'Walking Shift', '6 Photos', 'Your photos (6/6)', the photo grid with x buttons and 'Generate | 72'. No '9:16' anywhere and no reorder hint text.",
+    "summary": "The confirm page shows neither '9:16' nor the reorder hint, as the PM's CineStory 7336-931 comments now ask ('output = 9:16 不用寫'; '11/10 更新, 提示灰字拿掉').",
+    "shots": ["c_P0134_confirm.png"],
+    "sideEffects": "None seen: the header and photo grid sit where the removed texts were, with no gap or overlap.",
+    "other": "Stand-in template Walking Shift (6 photos) because single-color-fastcut is no longer listed."
+  },
+  {
+    "bug": "PHA262026P0135",
+    "verdict": "FIXED",
+    "observed": "cinematic-grade (15-40) no longer exists; every template has a fixed count (min = max). Walking Shift (6): 6 photos > Next > x on photo 1: the title reads 'Your photos (5/6)' with '5/6' in red (#DE3730, the dark-theme error colour RD names) while 'Your photos (' and ')' stay white; an Add Photo (+) tile takes the removed slot; Generate is greyed and tapping it shows the toast 'Please upload at least 6 photos'. Add Photo > picking a 6th photo > Next: 'Your photos (6/6)' is all white again and Generate is enabled. The above-max side cannot be reached on the confirm page (Add Photo only fills empty slots).",
+    "summary": "Below the template's count the 'n/max' part turns red and Generate stays disabled; back in range the title returns to white and Generate is enabled.",
+    "shots": ["c_P0135_below.png", "c_P0135_toast.png", "c_P0135_back_in_range.png"],
+    "sideEffects": "Red #DE3730 on the dark page background is clearly legible (about 4.3:1 contrast); only the count is red, the parentheses keep the title colour; no layout shift between the white and red states.",
+    "other": "Stand-in template Walking Shift (6) because cinematic-grade is gone; the max side was not checkable."
+  },
+  {
+    "bug": "PHA262026P0132",
+    "verdict": "SPEC_CHANGED_OK",
+    "observed": "Selfie Shake and cinematic-grade as in the bug are not both available (cinematic-grade gone), so Import was done between fixed-count templates. Above max: 6 photos picked on Walking Shift > Next > back x2 > Selfie Shake (4) > Use Template > 'Use the 6 photos you picked last time?' > Import: 6 photos in the tray, tray text 'Select 4 photos to continue.' in white, Next greyed; tapping Next shows the toast 'You can only select 4 photos.' and stays. Removing 2 (4/4) enables Next. Below min: 4 photos > Next > back x2 > Snap & Sway (6) > Import: 4 photos in the tray, white 'Select 6 photos to continue.', Next greyed; tapping it shows 'Upload at least 6 photos'. No red text in either case.",
+    "summary": "Out of the template's count after Import, Next is disabled and no red text is shown, as the PM comment now asks ('圖片數量不符合 template CMS 定義的話 Next btn 會是 disable; 不設紅字').",
+    "shots": ["c_P0132_import_above_max.png", "c_P0132_in_range.png", "c_P0132_import_below_min.png"],
+    "sideEffects": "None seen: Next enables at exactly the template's count and the tray text stays the same white wording in and out of range.",
+    "other": "The picker's toast reads 'Upload at least 6 photos' while the confirm page's reads 'Please upload at least 6 photos' (wording differs, information only)."
+  },
+  {
+    "bug": "PHA262026P0133",
+    "verdict": "FIXED",
+    "observed": "Stand-in template Snap & Sway (6), with 8 test photos pushed to a new album Casebook-CR133. Without deleting: 6 picked > Next > back x2 > Snap & Sway > Use Template > Import: all 6 ticked 1-6 in the grid in tray order; tapping ticked #3 unpicks it (tray 5, others renumbered). With deleting (bug steps): re-picked to 6 > Next (6/6) > back x2 > Home > deleted the first 2 picked photos (cr133-1, cr133-2) from storage and MediaStore > reopened PhotoDirector from Recents > Snap & Sway > Use Template > prompt 'Use the 4 photos you picked last time?' > Import: 4 photos in the tray, every one ticked in the grid with its number 1-4; tapping #2 unpicks it (tray 3, no duplicate); tapping it again re-adds it (tray 4).",
+    "summary": "After Import every imported photo is ticked with its number, also after two of the picked photos were deleted, and tapping one unpicks it instead of adding it twice.",
+    "shots": ["c_P0133_A_import.png", "c_P0133_A_tap_unpick.png", "c_P0133_B_import.png", "c_P0133_B_tap_unpick.png"],
+    "sideEffects": "None seen: numbers renumber correctly after an unpick, the prompt counts only the photos that still exist (4), and the tray order matches the grid numbers.",
+    "other": "single-color-fastcut is gone, so Snap & Sway (6) was used; the test photos were removed at the end."
+  },
+  {
+    "bug": "PHA262026P0130",
+    "verdict": "FIXED",
+    "observed": "Generated a Snap & Sway video (6 photos, Generate | 72): it ran to 'Almost Done' and ended in 'An Error Has Occurred - The credits have been refunded' (log: AITransition task status Error, errorCode 4000/4001 'general error'); the balance went back to 1913. Then back to the room and Import three ways: (1) Walking Shift, tapped 1 photo, Import - 6 ticked; (2) Selfie Shake (4), switched to the HairColor album, tapped 1 photo, Import - 6 in the tray; (3) Travel Recap (3), picked 2 photos, Import - 6 in the tray. No crash in any: the app process (pid 13338) stayed alive and the crash buffer gained nothing (still the 2 Swipe Collage crashes from 14:47/14:48, before this segment).",
+    "summary": "After a Reel Creator generation, selecting a photo and tapping Import on the prompt no longer crashes, tried on three templates with different selections.",
+    "shots": ["c_P0130_gen_error.png", "c_P0130_import1.png", "c_P0130_import2.png", "c_P0130_import3.png"],
+    "sideEffects": "Tray thumbnails all load after Import with no blank or stuck thumbnail; numbering in the grid matches the tray.",
+    "other": "The generation itself failed on the server (refunded), so the check ran after a failed generation rather than a finished video. Import replaces the photos picked before it (the 1-2 photos tapped first were dropped, the tray holds only the 6 imported); information only, whether Import should add to or replace the current pick is not stated in the bug. My AI Artwork keeps the failed item with a warning thumbnail."
+  }
+]

@@ -1,0 +1,14 @@
+- 2026-11-25: user: 「請在S23上驗證 TR261124-0075 的bug, 我已經裝好build了」. Installed APK holds `v202611241937` (R11).
+- 2026-11-25: segment A done (10:17): 0051, P0025, 0289, 1271, P0056 (video), 0407 FIXED; P0029 HOLD (one-time hint already shown; reshow needs pm clear — asked the user). 1 of 3 Free AI Edit Agent chats used; 1692 credits.
+- 2026-11-25: user: 「AI Edit Agent 一共只能聊 3 次的問題請去開啟demo dialog的subscriber設定, 這樣就可以用訂閱者身分繼續測試了」 → segment B turns 「Set to subscriber」 on for AI Edit Agent, off at segment end.
+- 2026-11-25: user: 「P0029可以清APP資料 只要記得開test server跟fake uuid就好」 → pm clear allowed for P0029 (after C/D); re-enable Test Server and Fake UUID afterwards.
+- 2026-11-25: segment B done (10:45): 0031, P0045, 0360 FIXED; P0056 image cost matches (6). Subscriber on 10:39–10:44, back to Free. Credits 1692 → 1602. Free Edit Agent chats used up.
+- 2026-11-25: segment C+D done (11:19): P0142, P0145, 0243 FIXED (0243: CMS said not modified, re-download path not hit; extra pass after pm clear in E). Reuse 「Don't show again」 ticked (cleared by E). 1602 credits.
+- 2026-11-25 11:40: user asked whether the S23 display size was changed. Segment E changed display density (override 560 then 680, physical 480) at 11:32–11:34 for P0029, not in its brief; told it to restore and record.
+- 2026-11-25: user: 「沒關係 那就放大來測吧」 → P0029 retested with enlarged display (fresh pm clear per try, Test server + Fake UUID on), density restored to override 450 after. Segments A–D ran before any density change (first change 11:32; restored 450 at 11:41).
+- 2026-11-25: segment E done (11:50): P0029 HOLD (no hint at 450/560/680, 4 clears); 0243 re-download path confirmed fixed. Fake UUID → new empty balance: credits now 0. Density 450 confirmed by orchestrator.
+- 2026-11-25: QR draft (OK=12) rendered: qr-review.html, qr-text.txt; served at http://127.0.0.1:8777/qr-review.html. Knowledge I-011..I-013 parked.
+- 2026-11-25: user: 「送出QR」.
+- 2026-11-25: QR261125-0017 created (OK=12, Fail=0), read back clean; P0029 left Not yet verified; qr-receipt.json.
+- 2026-11-25: segment F done (15:37): P0029 via the Effects hint (user: 「這支現在可以用Effect裡面的hint bubble來驗證」). Bubble whole at 450 and 680 (capped at screen width), arrow on Reel Creator; item is index 1 so the list stays at offset 0 (middle-scroll not exercisable). Verdict FIXED with caveat. 1 pm clear (15:32, at 680), density restored to 450; Test server, Fake UUID and ScreenShot on, subscriber off.
+- 2026-11-25: user: 「送出QR」 → QR261125-0040 created (P0029 OK), read back clean; TR all 13 verified/Close; qr-receipt-p0029.json.

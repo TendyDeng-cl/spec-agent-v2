@@ -1,0 +1,7 @@
+{
+ "run": true,
+ "tr": "TR261123-0015",
+ "build": "2611201",
+ "trNote": "TR261123-0015 — 16.9.0.2611201, the build this run tested (DRA262611P0286 was filed on it). No entry to file; only doubts you mark File would go on a TR, so confirm it then.",
+ "lede": "No entry drafted: TC-130's two findings are on DRA262611P0229 and DRA262611P0286, and all 26 truncation walks passed. Your call is the 14 translation doubts."
+}

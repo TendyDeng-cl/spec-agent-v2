@@ -1,0 +1,7 @@
+{
+  "Q-1": "Media room 的「?」：Jira 寫 Add Media 有一個「?」可以打開建議頁，但 Design 26.07_v2 的 Add Media 沒畫（round/ic_info 圖層是隱藏的），而 template 頁本身的「?」是教學。「?」放在哪、用什麼圖示、是否顯示「從哪個 template 進來」的那份建議？假設：Add Media 頁首有「?」，點了顯示該 template 的建議，點「Got it」回到 Add Media。R-004，TC-010 – TC-016、TC-021。",
+  "Q-2": "語言：試算表已提供 template 名稱（Cinestory CMS › Template Name Localization）和每個說明文字（I2V Recommendation › Localization，28 種語言）的翻譯，但沒有任何試算表提供「View photo tips」標籤或「For best results with the <template> template, follow this advice:」這句在其他語言的文字。這兩處要翻譯嗎？已開 DRA262611P0290（PM）。假設：名稱和說明文字依各語言檢查；標籤與那句話的文字只記錄、不判失敗。",
+  "Q-3": "關閉方式：Design 只畫了「Got it」。點變暗的背景或把面板往下滑會關閉嗎？系統返回鍵呢？假設：只驗「Got it」；系統返回鍵和「Got it」效果相同。R-010、R-016，TC-007、TC-020、TC-021。",
+  "Q-4": "沒有資料時：某個 template 在 CMS 沒有 recommend_samples，或連不到 CMS（離線）時會顯示什麼？假設：先不寫，等 PM 回覆前不加測項。R-001、R-012、R-014。",
+  "Q-5": "滑動：Design 把 Avoid 第三項畫成超出面板邊緣。Avoid 那一列可以左右滑嗎？如果某個 template 的 Recommendation 超過兩項，也能滑嗎？假設：Avoid 那一列可以左右滑。R-009，TC-008。"
+}

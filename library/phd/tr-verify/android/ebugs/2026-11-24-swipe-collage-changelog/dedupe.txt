@@ -1,0 +1,31 @@
+Dedupe — Swipe Collage, TR261123-0071 change-log check (PHD-A 20.19.0.v202611232103, R8, Pixel 8a / Android 16), 2026-11-24.
+Read-only; Android pool only (product "PhotoDirector Mobile for Android"; dedupe per OS, user 2026-10-28).
+
+1. ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" (raw: dedupe-raw.txt)
+   → 0 of 4 entries ranked as a likely duplicate; 43 Swipe_Collage candidates searched = the whole pool for the feature
+   (ecl_query.py bugs --text "Swipe_Collage": 43; "Swipe Collage", "Scrollable Collage", "Swipe-Collage": 0).
+   All 24 open tickets on 20.19.0 were read against every entry (titles; ecl_query.py bug/readback give no body for
+   these IF3 tickets).
+2. Text searches on 20.19.0: "Collage" (43, all Swipe_Collage), "page" (7 non-Swipe tickets, other features),
+   "selection box" (0), "cross-page" (0).
+3. Earlier batches: library/phd/swipe-collage/android/ebugs/2026-11-12-r1 (P0071–P0106),
+   library/phd/tr-verify/android/ebugs/2026-11-23-tr261123-0041 (P0159, cancelled).
+
+LEFT OFF (same-OS open match — no card on the review page):
+- Finding 2 (result-C Other observations 1): Pages opens without 「Page n / N」 above the − | + stepper; it shows only
+  after + / − (R-104; c1_pages, c4_pages_overview).
+  Match: PHA262026P0094 (TRCreated, RD, JANE_LAI 2026-11-24 14:45, fixed in 20.19.0.v202611241407 — a build after the
+  tested R8) "Pages has no 「Page n / N」 or − / + stepper and selects no page on entry". The stepper is now there; the
+  missing line on entry is the rest of the same ticket. Not commented (rule 6); check it on the v202611241407 build.
+
+NEW CARDS:
+- ISS-SWC-52 (Pages ✓ lands on page 3, not the selected page 4): no match. Related, not duplicate: PHA262026P0095
+  (TRCreated, Pages had no ✓ / ✕) — the ✓ now exists; this is where it lands.
+- ISS-SWC-53 (cross-page frame hangs past the last page after a move / removal): no match. P0097 (move button tap /
+  drag look) and P0161 (template text falls off the page) are different defects.
+- ISS-SWC-54 (move / ••• buttons ~12 dp at 10 pages): related CLOSED same-OS ticket PHA262026P0098 (Close 2026-11-19,
+  fixed in v202611181947) "Pages controls overlap from 5 pages; at 10 only the last ••• can be reached". The overlap is
+  gone (buttons now shrink to fit); the new problem is their size, so a new card naming P0098.
+- ISS-SWC-55 (frame selection box far larger than the frame, menu over text): no match. Related, not duplicate:
+  PHA262026P0160 (TRCreated, frame 「+」 needs two taps; first selects the layer over it) and PHA262026P0163 (Assigned,
+  a tap outside the page selects a template sticker) — tap areas, not the frame's box size or menu placement.

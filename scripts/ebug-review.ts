@@ -34,7 +34,7 @@ const opt = (n: string) => { const i = args.indexOf(n); return i >= 0 ? args[i +
 const dirArg = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--drafts');
 if (!dirArg) { console.error('Usage: node scripts/ebug-review.ts <batch dir> [--drafts <file.md>] [--no-check]'); process.exit(2); }
 const DIR = resolve(dirArg);
-const rel = relative(join(ROOT, 'library'), DIR).split(/[\\/]/); // Windows paths too
+const rel = relative(join(ROOT, 'library'), DIR).split(/[\\/]/);
 if (rel.length !== 5 || rel[3] !== 'ebugs') { console.error(`Not a batch folder (library/<product>/<feature>/<platform>/ebugs/<batch>): ${DIR}`); process.exit(2); }
 const [product, feature, platform, , batch] = rel;
 
@@ -45,7 +45,7 @@ const md = readFileSync(DRAFTS, 'utf8');
 const SKILLS = join(ROOT, '.claude', 'skills');
 
 // 1–2. bodies.json and the format gate
-const py = (script: string, a: string[]) => spawnSync(PYTHON, [script, ...a], { cwd: DIR, encoding: 'utf8' });
+const py = (script: string, a: string[]) => spawnSync(PYTHON, [script, ...a], { cwd: DIR, encoding: 'utf8', env: { ...process.env, PYTHONUTF8: '1' } });
 const b2 = py(join(SKILLS, 'ebug-draft-generator/scripts/drafts_to_bodies.py'), [DRAFTS, '--out', 'upload/bodies.json', '--stage', 'upload/',
   ...(existsSync(join(DIR, 'decisions.md')) ? ['--decisions', 'decisions.md'] : [])]);
 if (b2.status !== 0) { console.error(b2.stdout + b2.stderr); process.exit(1); }

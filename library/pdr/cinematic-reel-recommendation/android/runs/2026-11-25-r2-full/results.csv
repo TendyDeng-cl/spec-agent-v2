@@ -1,0 +1,1372 @@
+﻿ID,Phase,Segment,Needs,Section,Action,Expected Result,Result,Disposition,Actual,Evidence,Recorded At
+TC-001,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Horror Movie template, follow this advice:」 with 「Horror Movie」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「People in Frame」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"Horror Movie card (first card, centred) shows the chip 「View photo tips」 with a lightbulb icon at its top-left. Tap: bottom sheet opens over the dimmed template page; 「For best results with the Horror Movie template, follow this advice:」 with 「Horror Movie」 bold; 「Recommendation」 (blue bar): 「People in Frame」, 「Layered Depth」, each a picture with a ✓ badge bottom-right and caption under it; 「Avoid」 (pink bar): 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」 (third read after swiping the row left), each with a ⊗ badge and caption; full-width 「Got it」 at the bottom; 「Got it」 closed the sheet. Build 16.9.0 (2611201), Stage, credits 2424.",screenshots/TC-001-sheet.png screenshots/TC-001-avoid-swiped.png,2026-11-25T06:43:27.290Z
+TC-002,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the template page header (‹, credit pill, ?, history) stays visible behind the dim
+Step 2: the sheet reads 「For best results with the Micro Cinema template, follow this advice:」 with 「Micro Cinema」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"Micro Cinema card (2nd) shows the 「View photo tips」 chip with a lightbulb at its top-left. Tap: sheet opens from the bottom over the dimmed template page; header (‹, credit pill 2424, ?, history) stays visible behind the dim; 「For best results with the Micro Cinema template, follow this advice:」 with 「Micro Cinema」 bold; 「Recommendation」 (blue bar): 「Mid-Distance Framing」, 「Rich Visual Details」, each with ✓ badge and caption; 「Avoid」 (pink bar): 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」 (third after swiping left), each with ⊗ badge and caption; full-width 「Got it」.",screenshots/TC-002-sheet.png screenshots/TC-002-avoid-swiped.png,2026-11-25T06:44:38.529Z
+TC-003,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the One-Take Shot template, follow this advice:」 with 「One-Take Shot」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"One-Take Shot card (4th) shows the 「View photo tips」 chip with a lightbulb at its top-left. Tap: sheet opens from the bottom over the dimmed template page; 「For best results with the One-Take Shot template, follow this advice:」 with 「One-Take Shot」 bold; 「Recommendation」 (blue bar): 「Mid-Distance Framing」, 「Layered Depth」, each with ✓ badge and caption; 「Avoid」 (pink bar): 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」 (third after swiping left), each with ⊗ badge and caption; full-width 「Got it」.",screenshots/TC-003-sheet.png screenshots/TC-003-avoid-swiped.png,2026-11-25T06:45:00.247Z
+TC-004,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Time Lapse template, follow this advice:」 with 「Time Lapse」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Visible Sky」 and 「Cityscape or Landscape」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"Time Lapse card (5th) shows the 「View photo tips」 chip with a lightbulb at its top-left. Tap: sheet opens from the bottom over the dimmed template page; 「For best results with the Time Lapse template, follow this advice:」 with 「Time Lapse」 bold; 「Recommendation」 (blue bar): 「Visible Sky」, 「Cityscape or Landscape」, each with ✓ badge and caption; 「Avoid」 (pink bar): 「Portrait as Subject」, 「Indoor Close-up」, 「Extreme Close-up」 (third after swiping left), each with ⊗ badge and caption; full-width 「Got it」.",screenshots/TC-004-sheet.png screenshots/TC-004-avoid-swiped.png,2026-11-25T06:45:25.731Z
+TC-005,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Handheld Camera template, follow this advice:」 with 「Handheld Camera」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Layered Depth」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"Handheld Camera card (6th) shows the 「View photo tips」 chip with a lightbulb at its top-left. Tap: sheet opens from the bottom over the dimmed template page; 「For best results with the Handheld Camera template, follow this advice:」 with 「Handheld Camera」 bold; 「Recommendation」 (blue bar): 「Layered Depth」, 「Rich Visual Details」, each with ✓ badge and caption; 「Avoid」 (pink bar): 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」 (third after swiping left), each with ⊗ badge and caption; full-width 「Got it」.",screenshots/TC-005-sheet.png screenshots/TC-005-avoid-swiped.png,2026-11-25T06:45:46.553Z
+TC-006,R2,R2-a,,View photo tips chip,"1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Fast Cut template, follow this advice:」 with 「Fast Cut」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Sense of Motion」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",Pass,,"Fast Cut card (3rd) shows the 「View photo tips」 chip with a lightbulb at its top-left. Tap: sheet opens from the bottom over the dimmed template page; 「For best results with the Fast Cut template, follow this advice:」 with 「Fast Cut」 bold; 「Recommendation」 (blue bar): 「Sense of Motion」, 「Rich Visual Details」, each with ✓ badge and caption; 「Avoid」 (pink bar): 「Static Composition」, 「Visible Text or Logos」, 「Extreme Close-up」 (third after swiping left), each with ⊗ badge and caption; full-width 「Got it」.",screenshots/TC-006-sheet.png screenshots/TC-006-avoid-swiped.png,2026-11-25T06:46:12.324Z
+TC-007,R2,R2-a,,Photo tips sheet,"1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the same card again","Step 2: the sheet closes and the dim is gone
+Step 2: the template page shows the 「Micro Cinema」 card, as before step 1
+Step 3: the same Micro Cinema tips sheet opens again",Pass,,"Micro Cinema card: chip opened the sheet 「For best results with the Micro Cinema template, follow this advice:」; 「Got it」 closed it, the dim is gone and the template page shows the 「Micro Cinema」 card (2nd dot) as before; tapping 「View photo tips」 again opened the same sheet (「Mid-Distance Framing」, 「Rich Visual Details」 / 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」).",screenshots/TC-007-closed.png screenshots/TC-007-reopened.png,2026-11-25T06:46:29.818Z
+TC-008,R2,R2-a,,Photo tips sheet,"1. Swipe the 「Avoid」 row left
+2. Swipe it back right","Before step 1: the third Avoid item runs past the right edge of the sheet
+Step 1: 「Extreme Close-up」 comes fully into view with its ⊗ badge and caption
+Step 1: the 「Recommendation」 row does not move
+Step 2: 「Flat Composition」 is back at the left edge",Pass,,"Micro Cinema sheet. Before: the third Avoid item 「Extreme Close-up」 runs past the right edge (card x 933–1080 of 1080, no badge visible, caption cut). Swipe left: 「Extreme Close-up」 fully in view (x 613–1010) with its ⊗ badge and caption; the 「Recommendation」 row did not move (「Mid-Distance Framing」 still at x 69, 「Rich Visual Details」 at x 501). Swipe right: 「Flat Composition」 back at the left edge (x 69).",screenshots/TC-008-before.png screenshots/TC-008-left.png screenshots/TC-008-right.png,2026-11-25T06:46:44.279Z
+TC-020,R2,R2-a,,Photo tips sheet,Press system Back,"The sheet closes and the template page shows the 「Micro Cinema」 card
+The app does not leave Cinematic Reel Creator",Pass,,"Micro Cinema sheet open; system Back closed the sheet and the template page shows the 「Micro Cinema」 card (header: credit pill 2424, ?, history). The app stayed in Cinematic Reel Creator (resumed activity CineStoryActivity).",screenshots/TC-020-after-back.png,2026-11-25T06:46:59.186Z
+TC-009,R2,R2-a,,Photo tips sheet,"1. Tap 「View photo tips」 on the 「Handheld Camera」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Fast Cut」 card","Step 1: 「Rich Visual Details」 shows the general Rich Visual Details picture
+Step 3: 「Rich Visual Details」 shows a different picture, the one made for Fast Cut",Pass,,"Handheld Camera sheet: 「Rich Visual Details」 shows the general picture (open book, two coffee cups and a vase on a round table). 「Got it」, then Fast Cut sheet: 「Rich Visual Details」 shows a different picture (woman in a denim jacket feeding a strawberry to a golden retriever puppy at a seaside picnic), the 「for Fast Cut」 picture of the CMS picture list. The two crops differ.",screenshots/TC-009-handheld.png screenshots/TC-009-fastcut.png,2026-11-25T06:47:56.490Z
+TC-022,R2,R2-a,,Photo tips sheet,"1. Tap 「View photo tips」 on the 「Horror Movie」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Micro Cinema」 card
+4. Tap 「Got it」
+5. Tap 「View photo tips」 on the 「Fast Cut」 card
+6. Tap 「Got it」
+7. Tap 「View photo tips」 on the 「One-Take Shot」 card
+8. Tap 「Got it」
+9. Tap 「View photo tips」 on the 「Time Lapse」 card
+10. Tap 「Got it」
+11. Tap 「View photo tips」 on the 「Handheld Camera」 card
+12. Tap 「Got it」","Steps 1, 3, 5, 7, 9, 11: each item's picture is the EN picture beside the same item in Cinestory CMS › Recommendation › 「Pic Link」 (specs/2026-11-25/extracted/recommendation-pic-links.png)
+Steps 1, 3, 5, 7, 9, 11: an item that appears on several templates shows the same picture on each, except Fast Cut's 「Rich Visual Details」 (its own 「for Fast Cut」 picture)
+Steps 1, 3, 5, 7, 9, 11: no picture is blank, broken, stretched or a placeholder",Pass,,"System locale en-US (app English). All six sheets opened and closed with 「Got it」 in the row's order (Horror Movie, Micro Cinema, Fast Cut, One-Take Shot, Time Lapse, Handheld Camera). Each of the 30 pictures (14 items) compared by eye with the EN column of recommendation-pic-links.png: all match the EN picture (People in Frame: man in blue shirt in a dining room; Mid-Distance Framing: woman on a lakeside jetty; Layered Depth: woman at a street café table, red bus; Rich Visual Details: book and two coffees; Sense of Motion: woman in trench coat crossing; Visible Sky; Cityscape or Landscape; Flat Composition: white cup from above; Visible Text or Logos: 「HOT & COLD COFFEE」 sign without Japanese; Extreme Close-up: pink flower; Portrait as Subject: curly-haired man in white T-shirt; Indoor Close-up: mug on a table; Static Composition: chair). An item on several templates shows the same picture on each (pixel mean difference 0.00–0.01 between crops), except Fast Cut's 「Rich Visual Details」 (woman feeding a puppy: its own 「for Fast Cut」 picture). No picture blank, broken, stretched or a placeholder.",screenshots/TC-022-contact.png screenshots/TC-022-Horror-Movie.png screenshots/TC-022-Micro-Cinema.png screenshots/TC-022-Fast-Cut.png screenshots/TC-022-One-Take-Shot.png screenshots/TC-022-Time-Lapse.png screenshots/TC-022-Handheld-Camera.png,2026-11-25T06:49:35.356Z
+TC-019,R2,R2-a,,Data source,"1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Time Lapse」 card
+4. Tap 「Got it」
+5. Pull the app log","Step 5: the log shows the template data from the CMS with recommend_samples for each template
+Step 5: the items each sheet showed match that template's recommend_samples",Blocked,observability,"App relaunched at 14:49:40 with logcat recording (Pro paywall closed with its Close button), Cinematic Reel Creator opened 14:50:07; Micro Cinema sheet (「Mid-Distance Framing」, 「Rich Visual Details」 / 「Flat Composition」, 「Visible Text or Logos」, 「Extreme Close-up」) and Time Lapse sheet (「Visible Sky」, 「Cityscape or Landscape」 / 「Portrait as Subject」, 「Indoor Close-up」, 「Extreme Close-up」) opened and closed with 「Got it」; log pulled 14:50:35. Log cause: the logcat (live capture and ring buffer, logs/R2-a-20261125-145035) holds no CMS template data: 0 lines with recommend_samples, the only CineStory line is 「CineStoryActivity: GDPRHandler.checkGDPRPrivacyPolicy: None」, DownloadUriTask logs no URL or body. The items cannot be matched to recommend_samples from the log (needs: cms-log).",screenshots/TC-019-micro.png screenshots/TC-019-timelapse.png,2026-11-25T06:50:58.450Z
+TC-010,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Horror Movie template, follow this advice:」
+Step 3: 「Recommendation」 lists 「People in Frame」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「Horror Movie」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera): no 「?」 anywhere in the header or the page source, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. No photo picked, nothing generated.",screenshots/TC-010-addmedia-horror.png,2026-11-25T06:52:15.753Z
+TC-011,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Micro Cinema template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「Micro Cinema」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera); below it 「Photo」, the sort button, 「All」 and the photo grid. No 「?」 in the header, and the page source holds no tips, help or info element, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. System Back returned to the template page on the same card. No photo picked, nothing generated.",screenshots/TC-011-addmedia-micro.png,2026-11-25T06:53:01.134Z
+TC-012,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the One-Take Shot template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「One-Take Shot」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera); below it 「Photo」, the sort button, 「All」 and the photo grid. No 「?」 in the header, and the page source holds no tips, help or info element, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. System Back returned to the template page on the same card. No photo picked, nothing generated.",screenshots/TC-012-addmedia-onetake.png,2026-11-25T06:53:19.047Z
+TC-013,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Time Lapse template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Visible Sky」 and 「Cityscape or Landscape」
+Step 3: 「Avoid」 lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「Time Lapse」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera); below it 「Photo」, the sort button, 「All」 and the photo grid. No 「?」 in the header, and the page source holds no tips, help or info element, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. System Back returned to the template page on the same card. No photo picked, nothing generated.",screenshots/TC-013-addmedia-timelapse.png,2026-11-25T06:53:31.707Z
+TC-014,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Handheld Camera template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Layered Depth」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「Handheld Camera」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera); below it 「Photo」, the sort button, 「All」 and the photo grid. No 「?」 in the header, and the page source holds no tips, help or info element, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. System Back returned to the template page on the same card. No photo picked, nothing generated.",screenshots/TC-014-addmedia-handheld.png,2026-11-25T06:53:44.563Z
+TC-015,R2,R2-b,,Media room ?,"1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Fast Cut template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Sense of Motion」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",Fail,defect,"Step 1: 「Fast Cut」 card centred. Step 2: 「Import a photo」 opened 「Add Media」; its header shows only Back (top_toolbar_back), the title 「Add Media」 and the camera button (btn_camera); below it 「Photo」, the sort button, 「All」 and the photo grid. No 「?」 in the header, and the page source holds no tips, help or info element, so step 3 cannot be done and no photo tips sheet opens from Add Media. Repeats DRA262611P0289 (no 「?」 in Add Media, Q-1); not a new finding. System Back returned to the template page on the same card. No photo picked, nothing generated.",screenshots/TC-015-addmedia-fastcut.png,2026-11-25T06:54:01.788Z
+TC-016,R2,R2-b,,Media room ?,"1. Tap 「?」 in the Add Media header
+2. Tap 「Got it」","Step 2: the sheet closes and Add Media is shown again
+Step 2: Add Media keeps its tab (Recents) and no photo is picked",Blocked,defect,"Add Media opened from the 「Micro Cinema」 card (「Import a photo」): the header shows only Back, 「Add Media」 and the camera button, no 「?」, so the tips sheet cannot be opened from Add Media (step 1) and 「Got it」 cannot be tested there. Blocked by DRA262611P0289 (no 「?」 in Add Media, Q-1). Add Media shows 「Photo」 and the 「All」 album tab (no 「Recents」 tab on this phone); no photo picked.",screenshots/TC-016-addmedia-micro.png,2026-11-25T06:54:18.105Z
+TC-021,R2,R2-b,,Media room ?,Press system Back,"The sheet closes and Add Media is shown again
+No photo is picked",Blocked,defect,"Add Media opened from the 「Micro Cinema」 card has no 「?」 in its header (only Back, 「Add Media」, camera), so no photo tips sheet can be open there and system Back on the sheet cannot be tested. Blocked by DRA262611P0289 (no 「?」 in Add Media, Q-1). System Back on Add Media itself returned to the template page on the 「Micro Cinema」 card; no photo picked.",screenshots/TC-021-addmedia-micro.png,2026-11-25T06:54:23.009Z
+TC-023,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horror Movie」 with the description 「Eerie lights and a scary atmosphere. One photo becomes a horror movie moment.」
+Step 2: card 2 reads 「Micro Cinema」 with the description 「Dreamy close-ups turn a single image into a poetic cinematic video.」
+Step 2: card 3 reads 「Fast Cut」 with the description 「Bold fast cuts and stylish pacing. Turn one photo into a modern, high-impact cinematic short.」
+Step 2: card 4 reads 「One-Take Shot」 with the description 「A seamless slow camera reveal. One photo becomes a smooth cinematic camera move.」
+Step 2: card 5 reads 「Time Lapse」 with the description 「Time-lapse motion captures the passage of time. Watch still moments come alive.」
+Step 2: card 6 reads 「Handheld Camera」 with the description 「Handheld camera motion with focus shifts. One photo becomes a heartfelt cinematic moment.」
+Step 2: the cards come in this order: 「Horror Movie」, 「Micro Cinema」, 「Fast Cut」, 「One-Take Shot」, 「Time Lapse」, 「Handheld Camera」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang en-US (system locale en-US). Six cards read from the page source in order, each identical word for word to the row: Horror Movie, Micro Cinema, Fast Cut, One-Take Shot, Time Lapse, Handheld Camera, with their six descriptions (0 differences, screenshots/TC-023-read.json). Names and descriptions whole on screen (montage), none cut off or garbled. Chip 「View photo tips」, CTA 「Import a photo」.",screenshots/TC-023-montage.png screenshots/TC-023-card1.png screenshots/TC-023-read.json,2026-11-25T06:58:21.822Z
+TC-024,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「恐怖電影」 with the description 「詭異燈光與陰森氛圍，一張照片化身恐怖電影場景。」
+Step 2: card 2 reads 「微電影畫境」 with the description 「夢幻特寫勾勒動人氛圍，讓一張照片化身詩意電影短片。」
+Step 2: card 3 reads 「快速剪輯」 with the description 「俐落快剪搭配時尚節奏，讓照片變身吸睛電影短片。」
+Step 2: card 4 reads 「一鏡到底」 with the description 「流暢的慢速鏡頭推進，讓照片化為電影感運鏡畫面。」
+Step 2: card 5 reads 「手持相機」 with the description 「手持鏡頭與景深變化，讓照片呈現真摯動人的電影時刻。」
+Step 2: card 6 reads 「縮時影片」 with the description 「縮時動態刻畫時間流轉，讓靜止畫面展現生命力。」
+Step 2: the cards come in this order: 「恐怖電影」, 「微電影畫境」, 「快速剪輯」, 「一鏡到底」, 「手持相機」, 「縮時影片」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang zh-Hant-TW (Launcher 「首頁」, tile 「AI電影感運鏡」). Six cards read from the page source in the row's order, each name and description identical word for word to the row: 恐怖電影, 微電影畫境, 快速剪輯, 一鏡到底, 手持相機, 縮時影片 (0 differences, screenshots/TC-024-read.json). CTA 「匯入相片」; chip stays English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-024-montage.png screenshots/TC-024-card1.png screenshots/TC-024-read.json,2026-11-25T07:02:02.200Z
+TC-017,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「恐怖電影」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「微電影畫境」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「快速剪輯」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「一鏡到底」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持相機」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「縮時影片」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「恐怖電影」
+Step 1: under the first heading: 「畫面含有人物」, 「具前中後景層次」
+Step 1: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「微電影畫境」
+Step 3: under the first heading: 「中距離取景」, 「畫面視覺豐富」
+Step 3: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「快速剪輯」
+Step 5: under the first heading: 「畫面具動態感」, 「畫面視覺豐富」
+Step 5: under the second heading: 「靜態單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「一鏡到底」
+Step 7: under the first heading: 「中距離取景」, 「具前中後景層次」
+Step 7: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持相機」
+Step 9: under the first heading: 「具前中後景層次」, 「畫面視覺豐富」
+Step 9: under the second heading: 「平面單調構圖」, 「有明顯文字或 Logo」, 「過度近景」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「縮時影片」
+Step 11: under the first heading: 「有可見天空」, 「城市或風景」
+Step 11: under the second heading: 「人像為主體」, 「室內近景」, 「過度近景」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"繁體中文 (zh-Hant-TW). All six sheets opened from the chip and closed with 「瞭解」 back to the same card. Each sentence names its template (恐怖電影, 微電影畫境, 快速剪輯, 一鏡到底, 手持相機, 縮時影片); headings 「建議」 / 「避免使用」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-017-read.json); third Avoid item 「過度近景」 fully in view after swiping the row; captions on one line, none cut off. Pictures are the JP column's (JP People in Frame, Mid-Distance Framing, Layered Depth, Portrait as Subject, coffee sign with Japanese text; Fast Cut's own Rich Visual Details picture). Sentence frame stays English: 「For best results with the 恐怖電影 template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-017-montage.png screenshots/TC-017-sheet1.png screenshots/TC-017-read.json,2026-11-25T07:02:02.329Z
+TC-025,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「恐怖电影」 with the description 「诡异灯光与恐怖氛围，一张照片化为恐怖电影场景。」
+Step 2: card 2 reads 「微影院」 with the description 「梦幻特写勾勒动人氛围，让一张照片化身诗意电影短片。」
+Step 2: card 3 reads 「快速剪辑」 with the description 「俐落快剪搭配时尚节奏，让照片变身吸睛电影短片。」
+Step 2: card 4 reads 「一镜到底」 with the description 「流畅的慢速镜头推进，让照片化为电影感运镜画面」
+Step 2: card 5 reads 「手持相机」 with the description 「手持镜头与景深变化，让照片呈现真挚动人的电影时刻。」
+Step 2: card 6 reads 「延时摄影」 with the description 「缩时动态刻画时间流转，让静止画面展现生命力。」
+Step 2: the cards come in this order: 「恐怖电影」, 「微影院」, 「快速剪辑」, 「一镜到底」, 「手持相机」, 「延时摄影」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang zh-Hans-CN (Launcher 「首页」, tile 「AI电影感运镜」). Six cards in the row's order (恐怖电影, 微影院, 快速剪辑, 一镜到底, 手持相机, 延时摄影); all six names and five descriptions identical word for word. One difference, card 4 「一镜到底」 description: expected 「流畅的慢速镜头推进，让照片化为电影感运镜画面」 (Cinestory CMS sheet, column chs, no full stop), shown 「流畅的慢速镜头推进，让照片化为电影感运镜画面。」 (ends with 。 like the other five). Only the closing 。 differs: the sheet's own string looks incomplete (PM text question). CTA 「导入照片」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-025-montage.png screenshots/TC-025-card4.png screenshots/TC-025-read.json,2026-11-25T07:04:05.304Z
+TC-026,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「恐怖电影」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「微影院」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「快速剪辑」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「一镜到底」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持相机」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「延时摄影」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「恐怖电影」
+Step 1: under the first heading: 「画面含有人物」, 「具前中后景层次」
+Step 1: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「微影院」
+Step 3: under the first heading: 「中距离取景」, 「画面视觉丰富」
+Step 3: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「快速剪辑」
+Step 5: under the first heading: 「画面具动态感」, 「画面视觉丰富」
+Step 5: under the second heading: 「静态单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「一镜到底」
+Step 7: under the first heading: 「中距离取景」, 「具前中后景层次」
+Step 7: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持相机」
+Step 9: under the first heading: 「具前中后景层次」, 「画面视觉丰富」
+Step 9: under the second heading: 「平面单调构图」, 「有明显文字或 Logo」, 「过度近景」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「延时摄影」
+Step 11: under the first heading: 「有可见天空」, 「城市或风景」
+Step 11: under the second heading: 「人像为主体」, 「室内近景」, 「过度近景」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"简体中文 (zh-Hans-CN). All six sheets opened from the chip and closed with 「明白了」 back to the same card. Each sentence names its template (恐怖电影, 微影院, 快速剪辑, 一镜到底, 手持相机, 延时摄影); headings 「建议」 / 「避免使用」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-026-read.json); third Avoid item 「过度近景」 fully in view after the swipe; captions on one line, none cut off. Pictures are the JP column's (JP People in Frame, Mid-Distance Framing, Layered Depth, Portrait as Subject, Japanese coffee sign; Fast Cut's own Rich Visual Details picture). Sentence frame English: 「For best results with the 恐怖电影 template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-026-montage.png screenshots/TC-026-sheet1.png screenshots/TC-026-read.json,2026-11-25T07:04:05.433Z
+TC-027,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「ホラー映画」 with the description 「不気味な光と恐ろしい雰囲気。1枚の写真がホラー映画のワンシーンに。」
+Step 2: card 2 reads 「マイクロシネマ」 with the description 「夢のようなクローズアップで画像を幻想的な映像に。」
+Step 2: card 3 reads 「ファストカット」 with the description 「大胆なカットと軽快なテンポで画像を印象的な映画風ショート動画に。」
+Step 2: card 4 reads 「ワンテイク」 with the description 「なめらかなカメラワークで画像を映画のような映像に。」
+Step 2: card 5 reads 「手持ちカメラ」 with the description 「手持ちカメラ風の動きで画像を心に響く映画のワンシーンに。」
+Step 2: card 6 reads 「タイムラプス」 with the description 「タイムラプスで時の流れを表現。静止画が動き出します。」
+Step 2: the cards come in this order: 「ホラー映画」, 「マイクロシネマ」, 「ファストカット」, 「ワンテイク」, 「手持ちカメラ」, 「タイムラプス」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang ja-JP (Launcher 「ホーム」, tile 「AI シネマ動画」; no Google Play restart dialog this time). Six cards read from the page source in the row's order, each name and description identical word for word to the row: ホラー映画, マイクロシネマ, ファストカット, ワンテイク, 手持ちカメラ, タイムラプス (0 differences, screenshots/TC-027-read.json). CTA 「画像を読み込む」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-027-montage.png screenshots/TC-027-card1.png screenshots/TC-027-read.json,2026-11-25T07:06:02.125Z
+TC-018,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「ホラー映画」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「マイクロシネマ」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「ファストカット」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「ワンテイク」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「手持ちカメラ」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「タイムラプス」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「ホラー映画」
+Step 1: under the first heading: 「フレーム内に人物」, 「奥行きのある構図」
+Step 1: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「マイクロシネマ」
+Step 3: under the first heading: 「中距離の構図」, 「細部が多い」
+Step 3: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「ファストカット」
+Step 5: under the first heading: 「躍動感」, 「細部が多い」
+Step 5: under the second heading: 「静的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「ワンテイク」
+Step 7: under the first heading: 「中距離の構図」, 「奥行きのある構図」
+Step 7: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「手持ちカメラ」
+Step 9: under the first heading: 「奥行きのある構図」, 「細部が多い」
+Step 9: under the second heading: 「平面的な構図」, 「文字またはロゴが見える」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「タイムラプス」
+Step 11: under the first heading: 「空が見える」, 「街並みまたは風景」
+Step 11: under the second heading: 「人物がメイン」, 「室内でのクローズアップ」, 「超クローズアップ」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"日本語 (ja-JP). All six sheets opened from the chip and closed with 「OK」 back to the same card. Each sentence names its template (ホラー映画, マイクロシネマ, ファストカット, ワンテイク, 手持ちカメラ, タイムラプス); headings 「推奨」 / 「NG」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-018-read.json); third NG item 「超クローズアップ」 fully in view after the swipe; captions on one line, none cut off (longest 「室内でのクローズアップ」, 「文字またはロゴが見える」 whole). Pictures are the JP column's (JP People in Frame, Mid-Distance Framing, Layered Depth, Portrait as Subject, Japanese coffee sign; Fast Cut's own Rich Visual Details picture). Sentence frame English: 「For best results with the ホラー映画 template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-018-montage.png screenshots/TC-018-sheet1.png screenshots/TC-018-read.json,2026-11-25T07:06:02.254Z
+TC-028,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Película de terror」 with the description 「Luces tétricas y ambiente inquietante. Una foto se vuelve terror.」
+Step 2: card 2 reads 「Microcine」 with the description 「Primeros planos oníricos: una imagen se vuelve un video cinematográfico.」
+Step 2: card 3 reads 「Recorte rápido」 with the description 「Cortes rápidos y ritmo elegante. Transforma tu foto en un corto impactante.」
+Step 2: card 4 reads 「Toma única」 with the description 「Revelado lento y fluido: una foto pasa a movimiento cinematográfico.」
+Step 2: card 5 reads 「Time lapse」 with the description 「El time-lapse muestra el paso del tiempo. Observa instantes cobrar vida.」
+Step 2: card 6 reads 「Cámara en mano」 with the description 「Cámara en mano con cambios de foco; una foto se vuelve cine emotivo」
+Step 2: the cards come in this order: 「Película de terror」, 「Microcine」, 「Recorte rápido」, 「Toma única」, 「Time lapse」, 「Cámara en mano」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang es-ES (Launcher 「Inicio」, tile 「Creador de Reels」). Six cards in the row's order (Película de terror, Microcine, Recorte rápido, Toma única, Time lapse, Cámara en mano); all six names and five descriptions identical word for word; all whole on screen (two lines each). One difference, card 6 「Cámara en mano」 description: expected 「Cámara en mano con cambios de foco; una foto se vuelve cine emotivo」 (Cinestory CMS sheet, column es, no full stop), shown 「Cámara en mano con cambios de foco; una foto se vuelve cine emotivo.」 (ends with a full stop like the other five). Only the closing full stop differs: the sheet's own string looks incomplete (PM text question). CTA 「Importar una foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-028-montage.png screenshots/TC-028-card6.png screenshots/TC-028-read.json,2026-11-25T07:08:05.286Z
+TC-029,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「Película de terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcine」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Recorte rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Toma única」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Cámara en mano」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Película de terror」
+Step 1: under the first heading: 「Personas en el encuadre」, 「Profundidad en capas」
+Step 1: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcine」
+Step 3: under the first heading: 「Encuadre a media distancia」, 「Detalles visuales ricos」
+Step 3: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Recorte rápido」
+Step 5: under the first heading: 「Sensación de movimiento」, 「Detalles visuales ricos」
+Step 5: under the second heading: 「Composición estática」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Toma única」
+Step 7: under the first heading: 「Encuadre a media distancia」, 「Profundidad en capas」
+Step 7: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time lapse」
+Step 9: under the first heading: 「Cielo visible」, 「Paisaje urbano o paisaje natural」
+Step 9: under the second heading: 「Retrato como sujeto」, 「Primer plano interior」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Cámara en mano」
+Step 11: under the first heading: 「Profundidad en capas」, 「Detalles visuales ricos」
+Step 11: under the second heading: 「Composición plana」, 「Texto o logotipos visibles」, 「Primer plano extremo」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Español (es-ES). All six sheets opened from the chip and closed with 「Entendido」 back to the same card. Each sentence names its template in bold (Película de terror, Microcine, Recorte rápido, Toma única, Time lapse, Cámara en mano); headings 「Recomendación」 / 「Evitar」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-029-read.json); third Evitar item 「Primer plano extremo」 fully in view after the swipe; long captions wrap to two lines and are whole (「Encuadre a media distancia」, 「Sensación de movimiento」, 「Texto o logotipos visibles」, 「Paisaje urbano o paisaje natural」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture). Sentence frame English: 「For best results with the Película de terror template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-029-montage.png screenshots/TC-029-sheet1.png screenshots/TC-029-read.json,2026-11-25T07:08:05.416Z
+TC-030,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「공포 영화」 with the description 「섬뜩한 불빛과 오싹한 분위기. 사진 한 장이 공포 영화의 한 장면으로.」
+Step 2: card 2 reads 「마이크로 시네마」 with the description 「몽환적 클로즈업으로 이미지를 시적인 영화로」
+Step 2: card 3 reads 「빠름 컷」 with the description 「대담한 컷, 세련된 템포—사진을 강렬한 시네마틱 쇼츠로」
+Step 2: card 4 reads 「원테이크 촬영」 with the description 「사진이 부드럽게 펼쳐지는 느린 시네마틱 카메라 연출」
+Step 2: card 5 reads 「휴대용 카메라」 with the description 「핸드헬드 흔들림과 초점 전환으로 사진이 감성적인 시네마틱 순간이 됩니다.」
+Step 2: card 6 reads 「타임랩스」 with the description 「타임랩스가 시간의 흐름을 담습니다. 정지된 순간이 살아납니다.」
+Step 2: the cards come in this order: 「공포 영화」, 「마이크로 시네마」, 「빠름 컷」, 「원테이크 촬영」, 「휴대용 카메라」, 「타임랩스」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang ko-KR (Launcher 「홈」, tile 「시네마 릴 크리에이터」). Six cards in the row's order (공포 영화, 마이크로 시네마, 빠름 컷, 원테이크 촬영, 휴대용 카메라, 타임랩스); all six names and three descriptions identical word for word. Three differences, each only a closing full stop the app adds and the Cinestory CMS sheet (column ko) lacks: card 2 expected 「몽환적 클로즈업으로 이미지를 시적인 영화로」, shown 「몽환적 클로즈업으로 이미지를 시적인 영화로.」; card 3 expected 「대담한 컷, 세련된 템포—사진을 강렬한 시네마틱 쇼츠로」, shown 「대담한 컷, 세련된 템포—사진을 강렬한 시네마틱 쇼츠로.」; card 4 expected 「사진이 부드럽게 펼쳐지는 느린 시네마틱 카메라 연출」, shown 「사진이 부드럽게 펼쳐지는 느린 시네마틱 카메라 연출.」. The sheet's own strings look incomplete (PM text question). CTA 「사진 가져오기」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-030-montage.png screenshots/TC-030-card2.png screenshots/TC-030-read.json,2026-11-25T07:10:14.909Z
+TC-031,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「공포 영화」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「마이크로 시네마」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「빠름 컷」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「원테이크 촬영」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「휴대용 카메라」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「타임랩스」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「공포 영화」
+Step 1: under the first heading: 「프레임 안에 사람」, 「레이어별 깊이」
+Step 1: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「마이크로 시네마」
+Step 3: under the first heading: 「중간 거리 구도」, 「풍부한 시각적 세부사항」
+Step 3: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「빠름 컷」
+Step 5: under the first heading: 「모션 감지」, 「풍부한 시각적 세부사항」
+Step 5: under the second heading: 「정적 구도」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「원테이크 촬영」
+Step 7: under the first heading: 「중간 거리 구도」, 「레이어별 깊이」
+Step 7: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「휴대용 카메라」
+Step 9: under the first heading: 「레이어별 깊이」, 「풍부한 시각적 세부사항」
+Step 9: under the second heading: 「평면 구성」, 「보이는 텍스트 또는 로고」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「타임랩스」
+Step 11: under the first heading: 「선명한 하늘」, 「도시 또는 풍경」
+Step 11: under the second heading: 「인물이 주제인 경우」, 「실내 클로즈업」, 「초근접 촬영」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the JP picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"한국어 (ko-KR). All six sheets opened from the chip and closed with 「알았음」 back to the same card. Each sentence names its template (공포 영화, 마이크로 시네마, 빠름 컷, 원테이크 촬영, 휴대용 카메라, 타임랩스); headings 「권장 사항」 / 「피할 사항」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-031-read.json); third item 「초근접 촬영」 fully in view after the swipe; captions on one line, none cut off. Pictures are the JP column's (JP People in Frame, Mid-Distance Framing, Layered Depth, Portrait as Subject, Japanese coffee sign; Fast Cut's own Rich Visual Details picture). Sentence frame English: 「For best results with the 공포 영화 template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-031-montage.png screenshots/TC-031-sheet1.png screenshots/TC-031-read.json,2026-11-25T07:10:15.037Z
+TC-032,R2,R2-c,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horrorfilm」 with the description 「Unheimliche Lichter, gruselige Stimmung. Foto wird Horror.」
+Step 2: card 2 reads 「Mikro-Kino」 with the description 「Träumerische Nahaufnahmen verwandeln ein Bild in ein poetisches Filmvideo」
+Step 2: card 3 reads 「Fast Cut」 with the description 「Markante, schnelle Schnitt und stylisches Pacing. Ein Foto wird zum modernen Kurzfilm.」
+Step 2: card 4 reads 「One-Take-Aufnahme」 with the description 「Nahtloser langsamer Schwenk: Ein Foto wird zur kinoreifen Kamerafahrt.」
+Step 2: card 5 reads 「Zeitraffer」 with the description 「Zeitraffer zeigt den Zeitverlauf. Statische Momente werden lebendig.」
+Step 2: card 6 reads 「Handheld-Kamera」 with the description 「Handkamera mit Fokuswechseln verwandelt ein Foto in einen filmischen Moment」
+Step 2: the cards come in this order: 「Horrorfilm」, 「Mikro-Kino」, 「Fast Cut」, 「One-Take-Aufnahme」, 「Zeitraffer」, 「Handheld-Kamera」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang de-DE (Launcher 「Home」, tile 「Reel-Creator」). Six cards in the row's order (Horrorfilm, Mikro-Kino, Fast Cut, One-Take-Aufnahme, Zeitraffer, Handheld-Kamera); all six names and four descriptions identical word for word; all whole on screen (two or three lines). Two differences, each only a closing full stop the app adds and the Cinestory CMS sheet (column de) lacks: card 2 expected 「Träumerische Nahaufnahmen verwandeln ein Bild in ein poetisches Filmvideo」, shown 「Träumerische Nahaufnahmen verwandeln ein Bild in ein poetisches Filmvideo.」; card 6 expected 「Handkamera mit Fokuswechseln verwandelt ein Foto in einen filmischen Moment」, shown 「Handkamera mit Fokuswechseln verwandelt ein Foto in einen filmischen Moment.」. The sheet's own strings look incomplete (PM text question). CTA 「Foto importieren」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-032-montage.png screenshots/TC-032-card2.png screenshots/TC-032-read.json,2026-11-25T07:14:39.399Z
+TC-033,R2,R2-c,,Language,"1. Tap the photo tips chip on the 「Horrorfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro-Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Fast Cut」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「One-Take-Aufnahme」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Zeitraffer」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Handheld-Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Horrorfilm」
+Step 1: under the first heading: 「Personen im Bild」, 「Räumliche Tiefe」
+Step 1: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro-Kino」
+Step 3: under the first heading: 「Motiv mit mittlerem Abstand」, 「Viele visuelle Details」
+Step 3: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Fast Cut」
+Step 5: under the first heading: 「Bewegungsintensität」, 「Viele visuelle Details」
+Step 5: under the second heading: 「Statische Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「One-Take-Aufnahme」
+Step 7: under the first heading: 「Motiv mit mittlerem Abstand」, 「Räumliche Tiefe」
+Step 7: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Zeitraffer」
+Step 9: under the first heading: 「Sichtbarer Himmel」, 「Stadtbild oder Landschaft」
+Step 9: under the second heading: 「Porträt als Motiv」, 「Nahaufnahme (innen)」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Handheld-Kamera」
+Step 11: under the first heading: 「Räumliche Tiefe」, 「Viele visuelle Details」
+Step 11: under the second heading: 「Flache Komposition」, 「Sichtbarer Text oder sichtbare Logos」, 「Extreme Nahaufnahme」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Deutsch (de-DE). All six sheets opened from the chip and closed with 「OK」 back to the same card. Each sentence names its template in bold (Horrorfilm, Mikro-Kino, Fast Cut, One-Take-Aufnahme, Zeitraffer, Handheld-Kamera); headings 「Empfehlung」 / 「Vermeiden」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-033-read.json); third item 「Extreme Nahaufnahme」 fully in view after the swipe; long captions wrap to two lines and are whole (「Motiv mit mittlerem Abstand」, 「Sichtbarer Text oder sichtbare Logos」, 「Stadtbild oder Landschaft」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture). Sentence frame English: 「For best results with the Horrorfilm template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: the first walk was interrupted at card 4 by the phone's 「Xperia System-Update」 screen (a system notification under the chip tap; left with Back, UPDATE not tapped); the walk was run again from card 1 and this result is from the second walk.",screenshots/TC-033-montage.png screenshots/TC-033-sheet1.png screenshots/TC-033-read.json,2026-11-25T07:14:39.529Z
+TC-034,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film d'horreur」 with the description 「Lueurs inquiétantes, ambiance effrayante. Une photo vire à l'horreur.」
+Step 2: card 2 reads 「Micro Cinéma」 with the description 「Des gros plans oniriques transforment une photo en vidéo poétique.」
+Step 2: card 3 reads 「Découpe Rapide」 with the description 「Montage rapide, rythme dynamique. Une photo devient un clip percutant.」
+Step 2: card 4 reads 「Prise Unique」 with the description 「Un lent mouvement de caméra, fluide. Une photo devient une scène de cinéma.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Un time-lapse capture le temps qui passe. Des instants figés prennent vie.」
+Step 2: card 6 reads 「Caméra portable」 with the description 「Une caméra vivante, à l'épaule, capture un instant chargé d'émotion.」
+Step 2: the cards come in this order: 「Film d'horreur」, 「Micro Cinéma」, 「Découpe Rapide」, 「Prise Unique」, 「Time-lapse」, 「Caméra portable」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang fr-FR (Launcher 「Accueil」, tile 「Créateur de Reels」). Six cards in the row's order (Film d'horreur, Micro Cinéma, Découpe Rapide, Prise Unique, Time-lapse, Caméra portable); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-034-read.json); all whole on screen (two lines each), none cut off or garbled. CTA 「Importer une photo」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-034-montage.png screenshots/TC-034-read.json,2026-11-25T07:18:38.515Z
+TC-035,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Film d'horreur」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Micro Cinéma」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Découpe Rapide」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Prise Unique」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Caméra portable」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film d'horreur」
+Step 1: under the first heading: 「Personnes dans le cadre」, 「Profondeur Multi-Plans」
+Step 1: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Micro Cinéma」
+Step 3: under the first heading: 「Cadrage à distance moyenne」, 「Détails visuels riches」
+Step 3: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Découpe Rapide」
+Step 5: under the first heading: 「Sens du mouvement」, 「Détails visuels riches」
+Step 5: under the second heading: 「Composition statique」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Prise Unique」
+Step 7: under the first heading: 「Cadrage à distance moyenne」, 「Profondeur Multi-Plans」
+Step 7: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Ciel visible」, 「Paysage urbain ou Paysage」
+Step 9: under the second heading: 「Portrait comme sujet」, 「Gros Plan Intérieur」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Caméra portable」
+Step 11: under the first heading: 「Profondeur Multi-Plans」, 「Détails visuels riches」
+Step 11: under the second heading: 「Composition plate」, 「Texte ou logos visibles」, 「Gros plan extrême」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Français (fr-FR). All six sheets opened from the chip and closed with 「Compris」 back to the same card. Each sentence names its template in bold (Film d'horreur, Micro Cinéma, Découpe Rapide, Prise Unique, Time-lapse, Caméra portable); headings 「Recommandation」 / 「Éviter」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-035-read.json); third Éviter item 「Gros plan extrême」 fully in view after the swipe; long captions wrap to two lines and are whole (「Cadrage à distance moyenne」, 「Paysage urbain ou Paysage」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Film d'horreur template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-035-montage.png screenshots/TC-035-read.json,2026-11-25T07:18:38.644Z
+TC-036,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Horror」 with the description 「Luci inquietanti e atmosfera cupa. Una foto diventa horror.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Primi piani da sogno trasformano una singola foto in un video poetico.」
+Step 2: card 3 reads 「Taglio Veloce」 with the description 「Tagli decisi e rapidi, ritmo stiloso. Una foto diventa un corto d'impatto.」
+Step 2: card 4 reads 「Singola Ripresa」 with the description 「Inquadratura a scoprire: da una foto a un movimento di videocamera fluido.」
+Step 2: card 5 reads 「Temporizzata」 with the description 「Il time-lapse cattura il passare del tempo: gli scatti prendono vita.」
+Step 2: card 6 reads 「Videocamera Manuale」 with the description 「Videocamera manuale con cambi di messa a fuoco: uno scatto diventa cinema.」
+Step 2: the cards come in this order: 「Film Horror」, 「Microcinema」, 「Taglio Veloce」, 「Singola Ripresa」, 「Temporizzata」, 「Videocamera Manuale」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang it-IT (tool entered by the third Launcher tile). Six cards in the row's order (Film Horror, Microcinema, Taglio Veloce, Singola Ripresa, Temporizzata, Videocamera Manuale); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-036-read.json); all whole on screen (two lines each), none cut off or garbled. CTA 「Importa foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-036-montage.png screenshots/TC-036-read.json,2026-11-25T07:24:39.646Z
+TC-037,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Film Horror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Taglio Veloce」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Singola Ripresa」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Temporizzata」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Videocamera Manuale」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Horror」
+Step 1: under the first heading: 「Persone nell'inquadratura」, 「Profondità Stratificata」
+Step 1: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Inquadratura a Distanza Media」, 「Ricchi Dettagli」
+Step 3: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Taglio Veloce」
+Step 5: under the first heading: 「Sensazione di Movimento」, 「Ricchi Dettagli」
+Step 5: under the second heading: 「Composizione Statica」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Singola Ripresa」
+Step 7: under the first heading: 「Inquadratura a Distanza Media」, 「Profondità Stratificata」
+Step 7: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Temporizzata」
+Step 9: under the first heading: 「Cielo Visibile」, 「Paesaggio Urbano o Non」
+Step 9: under the second heading: 「Ritratto come Soggetto」, 「Primo Piano in Interni」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Videocamera Manuale」
+Step 11: under the first heading: 「Profondità Stratificata」, 「Ricchi Dettagli」
+Step 11: under the second heading: 「Composizione Piatta」, 「Testo o Loghi Visibili」, 「Primissimo Piano」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Italiano (it-IT). All six sheets opened from the chip and closed with 「Fatto」 back to the same card. Each sentence names its template in bold (Film Horror, Microcinema, Taglio Veloce, Singola Ripresa, Temporizzata, Videocamera Manuale); headings 「Consiglio」 / 「Evita」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-037-read.json); third Evita item 「Primissimo Piano」 fully in view after the swipe; long captions wrap to two lines and are whole (「Inquadratura a Distanza Media」, 「Sensazione di Movimento」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Film Horror template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: in the first walk one pager drag moved two cards after sheet 1, so sheets 2–6 were read one card ahead; the sheets were walked again (--tips-only) and this result is from the second walk.",screenshots/TC-037-montage.png screenshots/TC-037-read.json,2026-11-25T07:22:14.768Z
+TC-038,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Фильм ужасов」 with the description 「Жуткие огни и пугающая атмосфера. Фото превращается в сцену фильма ужасов.」
+Step 2: card 2 reads 「Микро-кино」 with the description 「Мечтательные крупные планы создают кинематографичный сюжет. Поэтическое видео — из одного кадра.」
+Step 2: card 3 reads 「Быстрая Нарезка」 with the description 「Смелые быстрые нарезки и стильный ритм. Превратите фото в современное кинематографичное мини-видео.」
+Step 2: card 4 reads 「Снимок за один дубль」 with the description 「Бесшовное замедленное появление камеры — одна фотография превращается в плавное кинодвижение.」
+Step 2: card 5 reads 「Таймлапс」 with the description 「Таймлапс запечатлевает ход времени. Смотрите, как оживают застывшие моменты.」
+Step 2: card 6 reads 「Ручная камера」 with the description 「Ручная камера со сменой фокуса. Одна фотография — трогательный кинематографичный кадр.」
+Step 2: the cards come in this order: 「Фильм ужасов」, 「Микро-кино」, 「Быстрая Нарезка」, 「Снимок за один дубль」, 「Таймлапс」, 「Ручная камера」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang ru-RU. Six cards in the row's order (Фильм ужасов, Микро-кино, Быстрая Нарезка, Снимок за один дубль, Таймлапс, Ручная камера); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-038-read.json); all whole on screen (three lines each, card 4 four lines with the button moved down), none cut off or garbled. CTA 「Импортируйте фото」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-038-montage.png screenshots/TC-038-read.json,2026-11-25T07:24:39.777Z
+TC-039,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Фильм ужасов」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Микро-кино」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Быстрая Нарезка」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Снимок за один дубль」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Таймлапс」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Ручная камера」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Фильм ужасов」
+Step 1: under the first heading: 「Люди в кадре」, 「Глубина по слоям」
+Step 1: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Микро-кино」
+Step 3: under the first heading: 「Кадр среднего плана」, 「Богатая визуальная детализация」
+Step 3: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Быстрая Нарезка」
+Step 5: under the first heading: 「Наличие движения」, 「Богатая визуальная детализация」
+Step 5: under the second heading: 「Статическая композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Снимок за один дубль」
+Step 7: under the first heading: 「Кадр среднего плана」, 「Глубина по слоям」
+Step 7: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Таймлапс」
+Step 9: under the first heading: 「Видимое небо」, 「Городской пейзаж или Ландшафт」
+Step 9: under the second heading: 「Портрет как объект」, 「Крупный план в помещении」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Ручная камера」
+Step 11: under the first heading: 「Глубина по слоям」, 「Богатая визуальная детализация」
+Step 11: under the second heading: 「Плоская композиция」, 「Видимый текст или логотипы」, 「Сверхкрупный план」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Русский (ru-RU). All six sheets opened from the chip and closed with 「Ясно」 back to the same card. Each sentence names its template in bold (Фильм ужасов, Микро-кино, Быстрая Нарезка, Снимок за один дубль, Таймлапс, Ручная камера); headings 「Рекомендация」 / 「Избегайте」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-039-read.json); third item 「Сверхкрупный план」 fully in view after the swipe; long captions wrap to two lines and are whole (「Богатая визуальная детализация」, 「Видимый текст или логотипы」, 「Статическая композиция」, 「Городской пейзаж или Ландшафт」, 「Крупный план в помещении」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Фильм ужасов template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-039-montage.png screenshots/TC-039-read.json,2026-11-25T07:24:39.905Z
+TC-040,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Filme de Terror」 with the description 「Luzes sinistras e atmosfera assustadora. Uma foto vira uma cena de filme de terror.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Close-ups sonhadores constroem uma narrativa cinematográfica. Um vídeo poético surge de uma imagem.」
+Step 2: card 3 reads 「Recorte Rápido」 with the description 「Cortes rápidos e ousados. Ritmo elegante. Transforme uma foto em um curta cinematográfico impactante」
+Step 2: card 4 reads 「Foto Em Uma Única Tomada」 with the description 「Revelação lenta e contínua da câmera. Uma foto vira um movimento cinematográfico e suave.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Time-lapse captura a passagem do tempo. Veja momentos estáticos ganharem vida.」
+Step 2: card 6 reads 「Câmera Portátil」 with the description 「Movimento de câmera na mão com mudanças de foco. Uma foto vira um momento cinematográfico comovente.」
+Step 2: the cards come in this order: 「Filme de Terror」, 「Microcinema」, 「Recorte Rápido」, 「Foto Em Uma Única Tomada」, 「Time-lapse」, 「Câmera Portátil」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang pt-BR. Six cards in the row's order (Filme de Terror, Microcinema, Recorte Rápido, Foto Em Uma Única Tomada, Time-lapse, Câmera Portátil); all six names and five descriptions identical word for word; all whole on screen (two or three lines), none cut off or garbled. One difference, card 3 「Recorte Rápido」 description: expected 「Cortes rápidos e ousados. Ritmo elegante. Transforme uma foto em um curta cinematográfico impactante」 (Cinestory CMS sheet, column pt, no full stop), shown 「Cortes rápidos e ousados. Ritmo elegante. Transforme uma foto em um curta cinematográfico impactante.」 (ends with a full stop like the other five). Only the closing full stop differs: the sheet's own string looks incomplete (PM text question, same finding as TC-025 / TC-028 / TC-030 / TC-032). CTA 「Importar uma foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only). Tool note: the first launch in pt-BR was covered by Google Play's own 「We're updating Google Play for you」 language screen (left with Back, 「Reiniciar」 not tapped); the app was launched again and this result is from that walk.",screenshots/TC-040-montage.png screenshots/TC-040-card3.png screenshots/TC-040-read.json,2026-11-25T07:27:35.779Z
+TC-041,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Filme de Terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Recorte Rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Foto Em Uma Única Tomada」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Câmera Portátil」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Filme de Terror」
+Step 1: under the first heading: 「Pessoas no quadro」, 「Profundidade em Camadas」
+Step 1: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Enquadramento de Distância Média」, 「Detalhes Visuais Ricos」
+Step 3: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Recorte Rápido」
+Step 5: under the first heading: 「Presença de Movimento」, 「Detalhes Visuais Ricos」
+Step 5: under the second heading: 「Composição Estática」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Foto Em Uma Única Tomada」
+Step 7: under the first heading: 「Enquadramento de Distância Média」, 「Profundidade em Camadas」
+Step 7: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Céu Visível」, 「Paisagem Urbana ou Paisagem」
+Step 9: under the second heading: 「Retrato como Sujeito」, 「Plano Fechado Interno」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Câmera Portátil」
+Step 11: under the first heading: 「Profundidade em Camadas」, 「Detalhes Visuais Ricos」
+Step 11: under the second heading: 「Composição Plana」, 「Texto Visível ou Logotipos」, 「Plano Detalhe Extremo」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Português (Brasil) (pt-BR). All six sheets opened from the chip and closed with 「Entendi」 back to the same card. Each sentence names its template in bold (Filme de Terror, Microcinema, Recorte Rápido, Foto Em Uma Única Tomada, Time-lapse, Câmera Portátil); headings 「Recomendação」 / 「Evitar」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-041-read.json); third Evitar item 「Plano Detalhe Extremo」 fully in view after the swipe; long captions wrap to two lines and are whole (「Profundidade em Camadas」, 「Enquadramento de Distância Média」, 「Texto Visível ou Logotipos」, 「Paisagem Urbana ou Paisagem」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Filme de Terror template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-041-montage.png screenshots/TC-041-read.json,2026-11-25T07:27:35.909Z
+TC-042,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Horrorfilm」 with the description 「Spookachtige lichten en een enge sfeer. Eén foto wordt een horrorfilmmoment.」
+Step 2: card 2 reads 「Microcinema」 with the description 「Dromerige close-ups vertellen een filmisch verhaal. Een poëtische video ontvouwt zich uit één foto.」
+Step 2: card 3 reads 「Snel Knip」 with the description 「Gedurfde snelle overgangen en stijlvol tempo. Zet één foto om in een moderne krachtige kortfilm.」
+Step 2: card 4 reads 「Opname In Eén Keer」 with the description 「Een naadloze, langzame camera-onthulling: een foto wordt een vloeiende filmische beweging.」
+Step 2: card 5 reads 「Tijdverloop」 with the description 「Time-lapse-opnamen vangen het verstrijken van tijd. Zie stilstaande momenten tot leven komen.」
+Step 2: card 6 reads 「Camera uit de hand」 with the description 「Handgehouden camerabeweging met focuswisselingen. Eén foto wordt een ontroerend filmisch moment.」
+Step 2: the cards come in this order: 「Horrorfilm」, 「Microcinema」, 「Snel Knip」, 「Opname In Eén Keer」, 「Tijdverloop」, 「Camera uit de hand」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang nl-NL (Launcher 「Startpagina」, tile 「Cinematische reelmaker」). Six cards in the row's order (Horrorfilm, Microcinema, Snel Knip, Opname In Eén Keer, Tijdverloop, Camera uit de hand); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-042-read.json); all whole on screen (two or three lines), none cut off or garbled. CTA 「Foto importeren」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-042-montage.png screenshots/TC-042-read.json,2026-11-25T07:30:59.433Z
+TC-043,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Horrorfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Microcinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Snel Knip」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Opname In Eén Keer」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tijdverloop」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Camera uit de hand」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Horrorfilm」
+Step 1: under the first heading: 「Mensen in beeld」, 「Gelaagde diepte」
+Step 1: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Microcinema」
+Step 3: under the first heading: 「Kadering op gemiddelde afstand」, 「Rijke visuele details」
+Step 3: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Snel Knip」
+Step 5: under the first heading: 「Bewegingsgevoel」, 「Rijke visuele details」
+Step 5: under the second heading: 「Statische compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Opname In Eén Keer」
+Step 7: under the first heading: 「Kadering op gemiddelde afstand」, 「Gelaagde diepte」
+Step 7: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tijdverloop」
+Step 9: under the first heading: 「Zichtbare hemel」, 「Stadsgezicht of Landschap」
+Step 9: under the second heading: 「Portret Als Onderwerp」, 「Binnenshuis close-up」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Camera uit de hand」
+Step 11: under the first heading: 「Gelaagde diepte」, 「Rijke visuele details」
+Step 11: under the second heading: 「Vlakke compositie」, 「Zichtbare tekst of logo's」, 「Extreem dicht bij de camera」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Nederlands (nl-NL). All six sheets opened from the chip and closed with 「Begrepen」 back to the same card. Each sentence names its template in bold (Horrorfilm, Microcinema, Snel Knip, Opname In Eén Keer, Tijdverloop, Camera uit de hand); headings 「Aanbeveling」 / 「Vermijden」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-043-read.json); third item 「Extreem dicht bij de camera」 fully in view after the swipe, on two lines; long captions wrap to two lines and are whole (「Kadering op gemiddelde afstand」, 「Stadsgezicht of Landschap」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Horrorfilm template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: the first walk was interrupted on sheet 6 by the phone's 「Xperia-systeemupdate」 screen (left with Back, 「BIJWERKEN」 not tapped); the sheets were walked again (--tips-only) and this result is from the second walk.",screenshots/TC-043-montage.png screenshots/TC-043-read.json,2026-11-25T07:30:59.564Z
+TC-044,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Horor」 with the description 「Cahaya menyeramkan dan suasana mencekam. Satu foto menjadi adegan film horor.」
+Step 2: card 2 reads 「Sinema Mikro」 with the description 「Close-up bernuansa khayalan membangun cerita sinematik. Video puitis mengalun dari satu gambar.」
+Step 2: card 3 reads 「Potongan Cepat」 with the description 「Potongan cepat berani dan ritme stylish. Ubah satu foto jadi short sinematik modern yang berdampak.」
+Step 2: card 4 reads 「Jepretan Sekali Ambil」 with the description 「Transisi kamera lambat yang mulus — satu foto jadi gerakan kamera sinematik.」
+Step 2: card 5 reads 「Time-lapse」 with the description 「Time-lapse merekam berjalannya waktu. Saksikan momen diam menjadi hidup.」
+Step 2: card 6 reads 「Kamera Genggam」 with the description 「Gerakan kamera genggam dengan pergeseran fokus. Satu foto menjadi momen sinematik penuh perasaan.」
+Step 2: the cards come in this order: 「Film Horor」, 「Sinema Mikro」, 「Potongan Cepat」, 「Jepretan Sekali Ambil」, 「Time-lapse」, 「Kamera Genggam」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang id-ID. Six cards in the row's order (Film Horor, Sinema Mikro, Potongan Cepat, Jepretan Sekali Ambil, Time-lapse, Kamera Genggam); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-044-read.json); all whole on screen (two or three lines), none cut off or garbled. CTA 「Impor Foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-044-montage.png screenshots/TC-044-read.json,2026-11-25T07:34:52.809Z
+TC-045,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Film Horor」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Sinema Mikro」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Potongan Cepat」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Jepretan Sekali Ambil」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Genggam」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Horor」
+Step 1: under the first heading: 「Orang di dalam bingkai」, 「Kedalaman Berlapis」
+Step 1: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Sinema Mikro」
+Step 3: under the first heading: 「Pembingkaian Jarak Sedang」, 「Rincian Visual Kaya」
+Step 3: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Potongan Cepat」
+Step 5: under the first heading: 「Tingkat Gerakan」, 「Rincian Visual Kaya」
+Step 5: under the second heading: 「Komposisi Statis」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Jepretan Sekali Ambil」
+Step 7: under the first heading: 「Pembingkaian Jarak Sedang」, 「Kedalaman Berlapis」
+Step 7: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-lapse」
+Step 9: under the first heading: 「Langit Terlihat」, 「Pemandangan Kota atau Pemandangan」
+Step 9: under the second heading: 「Potret Sebagai Subjek」, 「Close-up Dalam Ruangan」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Genggam」
+Step 11: under the first heading: 「Kedalaman Berlapis」, 「Rincian Visual Kaya」
+Step 11: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Terlihat」, 「Close-up Ekstrem」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Bahasa Indonesia (id-ID). All six sheets opened from the chip and closed with 「Mengerti」 back to the same card. Each sentence names its template in bold (Film Horor, Sinema Mikro, Potongan Cepat, Jepretan Sekali Ambil, Time-lapse, Kamera Genggam); headings 「Rekomendasi」 / 「Hindari」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-045-read.json); third Hindari item 「Close-up Ekstrem」 fully in view after the swipe; long captions wrap to two lines and are whole (「Pembingkaian Jarak Sedang」, 「Teks atau Logo yang Terlihat」, 「Pemandangan Kota atau Pemandangan」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Film Horor template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: in the first walk a pager drag slipped, so every sheet was read one card ahead; the recipe now reads the centred card's title before each sheet, and this result is from the second walk (--tips-only).",screenshots/TC-045-montage.png screenshots/TC-045-read.json,2026-11-25T07:34:52.940Z
+TC-046,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「หนังสยองขวัญ」 with the description 「แสงชวนขนลุกและบรรยากาศน่ากลัว เปลี่ยนภาพเดียวให้เป็นฉากหนังสยองขวัญ」
+Step 2: card 2 reads 「ไมโครซีนีมา」 with the description 「ชวนฝันในช็อตใกล้ ๆ สร้างเรื่องราวภาพยนตร์ วิดีโอเชิงกวีคลี่ออกจากภาพเดียว」
+Step 2: card 3 reads 「ฟาสต์คัท」 with the description 「ตัดเร็วโดดเด่น จังหวะมีสไตล์. เปลี่ยนภาพเดียวให้เป็นหนังสั้นสไตล์ภาพยนตร์ทันสมัยและทรงพลัง」
+Step 2: card 4 reads 「การถ่ายครั้งเดียว」 with the description 「เผยกล้องสโลว์แบบไร้รอยต่อ — รูปเดียวกลายเป็นการเคลื่อนกล้องสไตล์ภาพยนตร์ที่ราบรื่น」
+Step 2: card 5 reads 「ไทม์แลปส์」 with the description 「การถ่ายแบบเร่งเวลาเก็บการผ่านของเวลา ให้ช่วงเวลานิ่งๆ มีชีวิตขึ้น」
+Step 2: card 6 reads 「กล้องแบบถือ」 with the description 「กล้องถือเคลื่อนไหวพร้อมการเปลี่ยนโฟกัส — ภาพเดียวกลายเป็นช็อตภาพยนตร์ที่กินใจ」
+Step 2: the cards come in this order: 「หนังสยองขวัญ」, 「ไมโครซีนีมา」, 「ฟาสต์คัท」, 「การถ่ายครั้งเดียว」, 「ไทม์แลปส์」, 「กล้องแบบถือ」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang th-TH. Six cards in the row's order (หนังสยองขวัญ, ไมโครซีนีมา, ฟาสต์คัท, การถ่ายครั้งเดียว, ไทม์แลปส์, กล้องแบบถือ); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-046-read.json); all whole on screen (two lines, card 3 three lines), tone marks and vowels drawn whole, none cut off or garbled. CTA 「นำเข้าภาพถ่าย」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-046-montage.png screenshots/TC-046-read.json,2026-11-25T07:37:29.307Z
+TC-047,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「หนังสยองขวัญ」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「ไมโครซีนีมา」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「ฟาสต์คัท」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「การถ่ายครั้งเดียว」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「ไทม์แลปส์」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「กล้องแบบถือ」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「หนังสยองขวัญ」
+Step 1: under the first heading: 「มีคนอยู่ในเฟรม」, 「ความลึกเป็นชั้น」
+Step 1: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「ไมโครซีนีมา」
+Step 3: under the first heading: 「การจัดเฟรมระยะปานกลาง」, 「ภาพที่มีรายละเอียดมาก」
+Step 3: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「ฟาสต์คัท」
+Step 5: under the first heading: 「ความรู้สึกของการเคลื่อนไหว」, 「ภาพที่มีรายละเอียดมาก」
+Step 5: under the second heading: 「องค์ประกอบนิ่ง」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「การถ่ายครั้งเดียว」
+Step 7: under the first heading: 「การจัดเฟรมระยะปานกลาง」, 「ความลึกเป็นชั้น」
+Step 7: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「ไทม์แลปส์」
+Step 9: under the first heading: 「เห็นท้องฟ้า」, 「วิวเมืองหรือทิวทัศน์」
+Step 9: under the second heading: 「ภาพบุคคลเป็นหัวเรื่อง」, 「ระยะใกล้ภายในอาคาร」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「กล้องแบบถือ」
+Step 11: under the first heading: 「ความลึกเป็นชั้น」, 「ภาพที่มีรายละเอียดมาก」
+Step 11: under the second heading: 「องค์ประกอบแบบแบน」, 「ข้อความหรือโลโก้ที่มองเห็นได้」, 「โคลสอัพสุดขีด」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"ไทย (th-TH). All six sheets opened from the chip and closed with 「เข้าใจแล้ว」 back to the same card. Each sentence names its template (หนังสยองขวัญ, ไมโครซีนีมา, ฟาสต์คัท, การถ่ายครั้งเดียว, ไทม์แลปส์, กล้องแบบถือ); headings 「คำแนะนำ」 / 「หลีกเลี่ยง」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-047-read.json); third item 「โคลสอัพสุดขีด」 fully in view after the swipe; long captions wrap to two lines and are whole (「ความรู้สึกของการเคลื่อนไหว」, 「ข้อความหรือโลโก้ที่มองเห็นได้」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the หนังสยองขวัญ template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-047-montage.png screenshots/TC-047-read.json,2026-11-25T07:37:29.441Z
+TC-048,R2,R2-d,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Filem Seram」 with the description 「Cahaya menyeramkan dan suasana menakutkan. Satu foto menjadi adegan filem seram.」
+Step 2: card 2 reads 「Sinema Mikro」 with the description 「Close-up penuh khayalan membina cerita visual sinematik. Video puitis terbit dari satu imej.」
+Step 2: card 3 reads 「Potongan Pantas」 with the description 「Potongan pantas berani dan rentak bergaya. Ubah satu foto jadi video sinematik moden yang berimpak.」
+Step 2: card 4 reads 「Syot Sekali Ambil」 with the description 「Pendedahan kamera perlahan lancar. Satu foto bertukar jadi gerakan kamera sinematik halus.」
+Step 2: card 5 reads 「Time Lapse」 with the description 「Gerakan time-lapse menangkap perjalanan masa. Saksikan momen pegun menjadi hidup.」
+Step 2: card 6 reads 「Kamera Genggam」 with the description 「Gerakan kamera genggam dengan peralihan fokus. Satu foto jadi momen sinematik yang menyentuh.」
+Step 2: the cards come in this order: 「Filem Seram」, 「Sinema Mikro」, 「Potongan Pantas」, 「Syot Sekali Ambil」, 「Time Lapse」, 「Kamera Genggam」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang ms-MY. Six cards in the row's order (Filem Seram, Sinema Mikro, Potongan Pantas, Syot Sekali Ambil, Time Lapse, Kamera Genggam); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-048-read.json); all whole on screen (three lines each), none cut off or garbled. CTA 「Import Foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-048-montage.png screenshots/TC-048-read.json,2026-11-25T07:40:03.229Z
+TC-049,R2,R2-d,,Language,"1. Tap the photo tips chip on the 「Filem Seram」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Sinema Mikro」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Potongan Pantas」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Syot Sekali Ambil」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time Lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Genggam」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Filem Seram」
+Step 1: under the first heading: 「Orang dalam bingkai」, 「Kedalaman Berlapis」
+Step 1: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Sinema Mikro」
+Step 3: under the first heading: 「Pembingkaian Jarak Sederhana」, 「Butiran Visual Yang Kaya」
+Step 3: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Potongan Pantas」
+Step 5: under the first heading: 「Kesan Gerakan」, 「Butiran Visual Yang Kaya」
+Step 5: under the second heading: 「Komposisi Statis」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Syot Sekali Ambil」
+Step 7: under the first heading: 「Pembingkaian Jarak Sederhana」, 「Kedalaman Berlapis」
+Step 7: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time Lapse」
+Step 9: under the first heading: 「Langit Kelihatan」, 「Pemandangan Bandar atau Landskap」
+Step 9: under the second heading: 「Potret sebagai Subjek」, 「Close-up Dalaman」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Genggam」
+Step 11: under the first heading: 「Kedalaman Berlapis」, 「Butiran Visual Yang Kaya」
+Step 11: under the second heading: 「Komposisi Datar」, 「Teks atau Logo yang Kelihatan」, 「Rakaman Sangat Dekat」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Bahasa Melayu (ms-MY). All six sheets opened from the chip and closed with 「Faham」 back to the same card. Each sentence names its template in bold (Filem Seram, Sinema Mikro, Potongan Pantas, Syot Sekali Ambil, Time Lapse, Kamera Genggam); headings 「Syor」 / 「Elakkan」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-049-read.json); third Elakkan item 「Rakaman Sangat Dekat」 fully in view after the swipe; long captions wrap to two lines and are whole (「Pembingkaian Jarak Sederhana」, 「Teks atau Logo yang Kelihatan」, 「Pemandangan Bandar atau Landskap」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Filem Seram template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-049-montage.png screenshots/TC-049-read.json,2026-11-25T07:40:03.367Z
+TC-050,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「हॉरर फ़िल्म」 with the description 「सिहराने वाली रोशनी और डरावना माहौल। एक फोटो हॉरर फिल्म के दृश्य में बदल जाता है」
+Step 2: card 2 reads 「माइक्रो सिनेमा」 with the description 「सपने जैसे क्लोज़-अप्स सिनेमैटिक दृश्य कहानी बनाते हैं — एक छवि से कवितात्मक वीडियो उभरता है।」
+Step 2: card 3 reads 「तेज़ कट」 with the description 「साहसिक तेज़ कट और स्टाइलिश पेसिंग। एक फोटो को आधुनिक, प्रभावशाली सिनेमाई शॉर्ट में बदलें।」
+Step 2: card 4 reads 「वन-टेक शॉट」 with the description 「एक निर्बाध स्लो कैमरा खुलता है — एक फोटो से एक सुचारु, सिनेमाई कैमरा मूव बनता है।」
+Step 2: card 5 reads 「टाइमलैप्स」 with the description 「टाइम-लैप्स समय के प्रवाह को कैद करता है। स्थिर पलों को जीवंत होते देखें।」
+Step 2: card 6 reads 「हैंडहेल्ड कैमरा」 with the description 「हाथ से कैमरे की हलचल और फोकस शिफ्ट — एक तस्वीर बनती है एक भावुक सिनेमाई पल।」
+Step 2: the cards come in this order: 「हॉरर फ़िल्म」, 「माइक्रो सिनेमा」, 「तेज़ कट」, 「वन-टेक शॉट」, 「टाइमलैप्स」, 「हैंडहेल्ड कैमरा」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang hi-IN. Six cards in the row's order (हॉरर फ़िल्म, माइक्रो सिनेमा, तेज़ कट, वन-टेक शॉट, टाइमलैप्स, हैंडहेल्ड कैमरा); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-050-read.json; card 1's description has no closing danda in the app and in the sheet alike); all whole on screen (two lines each), none cut off or garbled. CTA 「फ़ोटो आयात करें」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-050-montage.png screenshots/TC-050-read.json,2026-11-25T07:45:32.082Z
+TC-051,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「हॉरर फ़िल्म」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「माइक्रो सिनेमा」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「तेज़ कट」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「वन-टेक शॉट」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「टाइमलैप्स」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「हैंडहेल्ड कैमरा」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「हॉरर फ़िल्म」
+Step 1: under the first heading: 「फ़्रेम में लोग」, 「परतों की गहराई」
+Step 1: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「माइक्रो सिनेमा」
+Step 3: under the first heading: 「मध्यम दूरी की फ़्रेमिंग」, 「समृद्ध दृश्य विवरण」
+Step 3: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「तेज़ कट」
+Step 5: under the first heading: 「मोशन की अनुभूति」, 「समृद्ध दृश्य विवरण」
+Step 5: under the second heading: 「स्थिर कॉम्पोज़िशन」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「वन-टेक शॉट」
+Step 7: under the first heading: 「मध्यम दूरी की फ़्रेमिंग」, 「परतों की गहराई」
+Step 7: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「टाइमलैप्स」
+Step 9: under the first heading: 「दिखने वाला आकाश」, 「सिटीस्केप या लैंडस्केप」
+Step 9: under the second heading: 「विषय के रूप में पोर्ट्रेट」, 「भीतरी निकट शॉट」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「हैंडहेल्ड कैमरा」
+Step 11: under the first heading: 「परतों की गहराई」, 「समृद्ध दृश्य विवरण」
+Step 11: under the second heading: 「समतल रचना」, 「दृश्यमान टेक्स्ट या लोगो」, 「अत्यंत क्लोज़-अप」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"हिन्दी (hi-IN). All six sheets opened from the chip and closed with 「समझ गया」 back to the same card. Each sentence names its template in bold (हॉरर फ़िल्म, माइक्रो सिनेमा, तेज़ कट, वन-टेक शॉट, टाइमलैप्स, हैंडहेल्ड कैमरा); headings 「सिफ़ारिश」 / 「इससे बचें」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-051-read.json); third इससे बचें item 「अत्यंत क्लोज़-अप」 fully in view after the swipe; captions on one line, whole, none cut off or garbled. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the हॉरर फ़िल्म template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: the phone's 「Xperia सिस्‍टम अपडेट」 screen opened during the first walk (sheet 3); left with Back, 「अपडेट」 not tapped, and the six sheets were walked again (--tips-only); this result is from that walk.",screenshots/TC-051-montage.png screenshots/TC-051-read.json,2026-11-25T07:45:32.213Z
+TC-052,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Película de terror」 with the description 「Luces inquietantes y una atmósfera aterradora. Una foto se convierte en una escena de terror.」
+Step 2: card 2 reads 「Micro Cine」 with the description 「Primeros planos oníricos que crean una historia visual cinematográfica desde una sola imagen」
+Step 2: card 3 reads 「Corte Rápido」 with the description 「Cortes audaces y ritmo con estilo: convierte una foto en un corto cinematográfico de alto impacto.」
+Step 2: card 4 reads 「Toma Única」 with the description 「Un paneo lento y fluido: una foto se transforma en un movimiento cinematográfico.」
+Step 2: card 5 reads 「Lapso De Tiempo」 with the description 「El Time-lapse captura el paso del tiempo. Mira cómo los instantes inmóviles cobran vida.」
+Step 2: card 6 reads 「Cámara de mano」 with the description 「Cámara en mano y cambios de enfoque. Una foto se vuelve un momento cinematográfico y emotivo.」
+Step 2: the cards come in this order: 「Película de terror」, 「Micro Cine」, 「Corte Rápido」, 「Toma Única」, 「Lapso De Tiempo」, 「Cámara de mano」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang es-MX (system locale es-MX; the locale helper would turn es-419 into es-ES, and the APK carries es-r419 / es-rMX / es-rUS resources). The app shows the Latin American strings, not the España ones: names Película de terror, Micro Cine, Corte Rápido, Toma Única, Lapso De Tiempo, Cámara de mano (España in TC-028: Microcine, Recorte rápido, Toma única, Time lapse, Cámara en mano). Six cards in the row's order; all six names and five descriptions identical word for word; all whole on screen (three lines each), none cut off or garbled. One difference, card 2 「Micro Cine」 description: expected 「Primeros planos oníricos que crean una historia visual cinematográfica desde una sola imagen」 (Cinestory CMS sheet, no full stop), shown 「Primeros planos oníricos que crean una historia visual cinematográfica desde una sola imagen.」 (ends with a full stop like the other five). Only the closing full stop differs: the sheet's own string looks incomplete (PM text question, same finding as TC-025 / TC-028 / TC-030 / TC-032 / TC-040). CTA 「Importar una foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-052-montage.png screenshots/TC-052-card2.png screenshots/TC-052-read.json,2026-11-25T07:48:08.829Z
+TC-053,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「Película de terror」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Micro Cine」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Corte Rápido」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Toma Única」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Lapso De Tiempo」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Cámara de mano」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Película de terror」
+Step 1: under the first heading: 「Personas en el encuadre」, 「Profundidad En Capas」
+Step 1: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Micro Cine」
+Step 3: under the first heading: 「Encuadre a Media Distancia」, 「Detalles Visuales Ricos」
+Step 3: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Corte Rápido」
+Step 5: under the first heading: 「Sensación de Movimiento」, 「Detalles Visuales Ricos」
+Step 5: under the second heading: 「Composición Estática」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Toma Única」
+Step 7: under the first heading: 「Encuadre a Media Distancia」, 「Profundidad En Capas」
+Step 7: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Lapso De Tiempo」
+Step 9: under the first heading: 「Cielo Visible」, 「Paisaje urbano o Paisaje」
+Step 9: under the second heading: 「Retrato como Sujeto」, 「Primer Plano en Interiores」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Cámara de mano」
+Step 11: under the first heading: 「Profundidad En Capas」, 「Detalles Visuales Ricos」
+Step 11: under the second heading: 「Composición Plana」, 「Texto o Logotipos Visibles」, 「Primerísimo Primer Plano」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Español (Latinoamérica), run as es-MX (the helper turns es-419 into es-ES; the APK carries es-r419 / es-rMX / es-rUS). All six sheets opened from the chip and closed with 「Entendido」 back to the same card. Each sentence names its template in bold (Película de terror, Micro Cine, Corte Rápido, Toma Única, Lapso De Tiempo, Cámara de mano); headings 「Recomendación」 / 「Evita」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-053-read.json); third Evita item 「Primerísimo Primer Plano」 fully in view after the swipe; long captions wrap to two lines and are whole (「Encuadre a Media Distancia」, 「Sensación de Movimiento」, 「Texto o Logotipos Visibles」, 「Primer Plano en Interiores」, 「Primerísimo Primer Plano」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Película de terror template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-053-montage.png screenshots/TC-053-read.json,2026-11-25T07:48:08.961Z
+TC-054,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「فيلم رعب」 with the description 「أنوار مخيفة وأجواء مرعبة. تتحول صورة واحدة إلى مشهد من فيلم رعب.」
+Step 2: card 2 reads 「سينما مصغرة」 with the description 「لقطات مقربة حالمة تبني قصة بصرية سينمائية. فيديو شاعري يتكشف من صورة واحدة.」
+Step 2: card 3 reads 「قطع سريع」 with the description 「قطع سريعة وجريئة وإيقاع أنيق. حوّل صورة واحدة إلى مقطع سينمائي حديث ومؤثر.」
+Step 2: card 4 reads 「لقطة بدون تقطيع」 with the description 「كشف كاميرا بطيئة وسلسة؛ تتحول صورة واحدة إلى حركة كاميرا سينمائية سلسة.」
+Step 2: card 5 reads 「تايم لابس」 with the description 「تصوير الفاصل الزمني يلتقط مرور الزمن. شاهد اللحظات الثابتة تنبض بالحياة.」
+Step 2: card 6 reads 「كاميرا محمولة باليد」 with the description 「حركة كاميرا يدوية مع تغيّر التركيز. صورة واحدة تتحول إلى لحظة سينمائية مؤثرة.」
+Step 2: the cards come in this order: 「فيلم رعب」, 「سينما مصغرة」, 「قطع سريع」, 「لقطة بدون تقطيع」, 「تايم لابس」, 「كاميرا محمولة باليد」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang ar-EG (system locale ar-EG; the locale helper refuses ar without a region, and the APK carries one Arabic resource set, 「ar」, which every region uses). Six cards in the row's order, reached by the same leftward swipes as in other languages (the pager is not mirrored: card 2 comes in from the right): فيلم رعب, سينما مصغرة, قطع سريع, لقطة بدون تقطيع, تايم لابس, كاميرا محمولة باليد; all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-054-read.json); all whole on screen (two lines each), none cut off or garbled, letters joined and read right to left. CTA 「استيراد صورة」; chip English 「View photo tips」 (DRA262611P0290, recorded only). Observation, not in the row: the card's name and description are left-aligned although Arabic reads right to left, and the chip stays top left.",screenshots/TC-054-montage.png screenshots/TC-054-read.json,2026-11-25T07:51:48.798Z
+TC-055,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「فيلم رعب」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「سينما مصغرة」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「قطع سريع」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「لقطة بدون تقطيع」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「تايم لابس」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「كاميرا محمولة باليد」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「فيلم رعب」
+Step 1: under the first heading: 「أشخاص في الإطار」, 「عمق متعدد الطبقات」
+Step 1: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「سينما مصغرة」
+Step 3: under the first heading: 「تأطير على مسافة متوسطة」, 「تفاصيل بصرية غنية」
+Step 3: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「قطع سريع」
+Step 5: under the first heading: 「إحساس الحركة」, 「تفاصيل بصرية غنية」
+Step 5: under the second heading: 「تكوين ثابت」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「لقطة بدون تقطيع」
+Step 7: under the first heading: 「تأطير على مسافة متوسطة」, 「عمق متعدد الطبقات」
+Step 7: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「تايم لابس」
+Step 9: under the first heading: 「سماء مرئية」, 「مشهد حضري أو منظر طبيعي」
+Step 9: under the second heading: 「البورتريه كموضوع」, 「لقطة مقربة داخلية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「كاميرا محمولة باليد」
+Step 11: under the first heading: 「عمق متعدد الطبقات」, 「تفاصيل بصرية غنية」
+Step 11: under the second heading: 「تركيب مسطح」, 「نص مرئي أو شعارات مرئية」, 「لقطة مقربة للغاية」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"العربية (ar-EG; the APK's one Arabic resource set 「ar」). All six sheets opened from the chip and closed with 「حسنًا」 back to the same card. Each sentence names its template in bold (فيلم رعب, سينما مصغرة, قطع سريع, لقطة بدون تقطيع, تايم لابس, كاميرا محمولة باليد); headings 「توصية」 / 「تجنّب」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-055-read.json). The rows are not mirrored: item 1 is leftmost and the third تجنّب item 「لقطة مقربة للغاية」 comes into view with the same leftward swipe, fully in view after it; captions on one line, whole, none cut off or garbled. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the فيلم رعب template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Observation, not in the row: each heading's word sits at the right edge while its coloured bar stays at the left edge and the pictures run left to right (half-mirrored layout). Tool note: the phone's Xperia system update screen (「تحديث」) opened during the first walk (sheet 4); left with Back, not updated, and the six sheets were walked again (--tips-only); this result is from that walk.",screenshots/TC-055-montage.png screenshots/TC-055-read.json,2026-11-25T07:51:48.942Z
+TC-056,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Phim Kinh Dị」 with the description 「Ánh sáng rùng rợn và bầu không khí đáng sợ. Một bức ảnh hóa thành cảnh phim kinh dị.」
+Step 2: card 2 reads 「Rạp Chiếu Mini」 with the description 「Mơ mộng cận cảnh dựng nên câu chuyện hình ảnh điện ảnh. Video giàu chất thơ mở ra từ 1 ảnh duy nhất.」
+Step 2: card 3 reads 「Cắt Nhanh」 with the description 「Cắt nhanh táo bạo, nhịp điệu phong cách. Biến một ảnh thành đoạn phim điện ảnh hiện đại, ấn tượng.」
+Step 2: card 4 reads 「Cảnh Quay Một Lần」 with the description 「Hé lộ chậm, liền mạch của máy quay. Một tấm ảnh biến thành cảnh quay điện ảnh mượt mà.」
+Step 2: card 5 reads 「Tua Nhanh Thời Gian」 with the description 「Chuyển động time-lapse ghi lại dòng chảy của thời gian. Xem khoảnh khắc tĩnh sống dậy.」
+Step 2: card 6 reads 「Máy Ảnh Cầm Tay」 with the description 「Chuyển động máy cầm tay với thay đổi tiêu điểm. Một bức ảnh thành khoảnh khắc điện ảnh đầy cảm xúc.」
+Step 2: the cards come in this order: 「Phim Kinh Dị」, 「Rạp Chiếu Mini」, 「Cắt Nhanh」, 「Cảnh Quay Một Lần」, 「Tua Nhanh Thời Gian」, 「Máy Ảnh Cầm Tay」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang vi-VN. Six cards in the row's order (Phim Kinh Dị, Rạp Chiếu Mini, Cắt Nhanh, Cảnh Quay Một Lần, Tua Nhanh Thời Gian, Máy Ảnh Cầm Tay); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-056-read.json); all whole on screen (three lines each), none cut off or garbled, tone marks drawn. CTA 「Nhập ảnh」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-056-montage.png screenshots/TC-056-read.json,2026-11-25T07:55:54.385Z
+TC-057,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「Phim Kinh Dị」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Rạp Chiếu Mini」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Cắt Nhanh」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Cảnh Quay Một Lần」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tua Nhanh Thời Gian」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Máy Ảnh Cầm Tay」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Phim Kinh Dị」
+Step 1: under the first heading: 「Có người trong khung hình」, 「Độ Sâu Phân Lớp」
+Step 1: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Rạp Chiếu Mini」
+Step 3: under the first heading: 「Đóng Khung Ở Khoảng Cách Trung Bình」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 3: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Cắt Nhanh」
+Step 5: under the first heading: 「Cảm Nhận Chuyển Động」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 5: under the second heading: 「Bố Cục Tĩnh」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Cảnh Quay Một Lần」
+Step 7: under the first heading: 「Đóng Khung Ở Khoảng Cách Trung Bình」, 「Độ Sâu Phân Lớp」
+Step 7: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tua Nhanh Thời Gian」
+Step 9: under the first heading: 「Có thể thấy bầu trời」, 「Cảnh Đô thị hoặc Ngang」
+Step 9: under the second heading: 「Chân dung làm chủ thể」, 「Cận Cảnh Trong Nhà」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Máy Ảnh Cầm Tay」
+Step 11: under the first heading: 「Độ Sâu Phân Lớp」, 「Chi Tiết Hình Ảnh Phong Phú」
+Step 11: under the second heading: 「Bố Cục Phẳng」, 「Văn bản hoặc logo hiển thị」, 「Cận Cảnh Cực Kỳ」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Tiếng Việt (vi-VN). All six sheets opened from the chip and closed with 「Đã hiểu」 back to the same card. Each sentence names its template in bold (Phim Kinh Dị, Rạp Chiếu Mini, Cắt Nhanh, Cảnh Quay Một Lần, Tua Nhanh Thời Gian, Máy Ảnh Cầm Tay); headings 「Đề xuất」 / 「Tránh」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-057-read.json); third Tránh item 「Cận Cảnh Cực Kỳ」 fully in view after the swipe; long captions wrap to two lines and are whole (「Có người trong khung hình」, 「Đóng Khung Ở Khoảng Cách Trung Bình」, 「Chi Tiết Hình Ảnh Phong Phú」, 「Văn bản hoặc logo hiển thị」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Phim Kinh Dị template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: the phone's Xperia system update screen opened during the first walk; left with Back, not updated, and the six sheets were walked again (--tips-only); this result is from that walk.",screenshots/TC-057-montage.png screenshots/TC-057-read.json,2026-11-25T07:55:54.516Z
+TC-058,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Film Grozy」 with the description 「Upiorne światła i przerażająca atmosfera. Jedno zdjęcie staje się sceną horroru.」
+Step 2: card 2 reads 「Mikro Kino」 with the description 「Senne zbliżenia tworzą kinową opowieść wizualną. Poetyczne wideo powstaje z jednego zdjęcia.」
+Step 2: card 3 reads 「Szybkie Cięcie」 with the description 「Śmiałe, szybkie cięcia i stylowe tempo. Z jednego zdjęcia stwórz nowoczesny, efektowny krótki film.」
+Step 2: card 4 reads 「Jedno Ujęcie」 with the description 「Płynne, powolne odsłonięcie kamery. Jedno zdjęcie staje się kinowym, płynnym ruchem kamery.」
+Step 2: card 5 reads 「Film poklatkowy」 with the description 「Ruch poklatkowy ukazuje upływ czasu. Zobacz, jak nieruchome chwile ożywają.」
+Step 2: card 6 reads 「Kamera Ręczna」 with the description 「Ręczne ruchy kamery i zmiany ostrości — jedno zdjęcie staje się poruszającym, kinowym ujęciem.」
+Step 2: the cards come in this order: 「Film Grozy」, 「Mikro Kino」, 「Szybkie Cięcie」, 「Jedno Ujęcie」, 「Film poklatkowy」, 「Kamera Ręczna」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang pl-PL. Six cards in the row's order (Film Grozy, Mikro Kino, Szybkie Cięcie, Jedno Ujęcie, Film poklatkowy, Kamera Ręczna); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-058-read.json); all whole on screen (two or three lines), none cut off or garbled, Polish letters drawn. CTA 「Importuj zdjęcie」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-058-montage.png screenshots/TC-058-read.json,2026-11-25T07:58:52.291Z
+TC-059,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「Film Grozy」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Szybkie Cięcie」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Jedno Ujęcie」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Film poklatkowy」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamera Ręczna」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Film Grozy」
+Step 1: under the first heading: 「Osoby w kadrze」, 「Warstwowa Głębia」
+Step 1: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Kino」
+Step 3: under the first heading: 「Kadrowanie z Średniej Odległości」, 「Bogate Szczegóły Wizualne」
+Step 3: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Szybkie Cięcie」
+Step 5: under the first heading: 「Poczucie Ruchu」, 「Bogate Szczegóły Wizualne」
+Step 5: under the second heading: 「Statyczna Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Jedno Ujęcie」
+Step 7: under the first heading: 「Kadrowanie z Średniej Odległości」, 「Warstwowa Głębia」
+Step 7: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Film poklatkowy」
+Step 9: under the first heading: 「Widoczne Niebo」, 「Miejski krajobraz lub Pozioma」
+Step 9: under the second heading: 「Portret jako temat」, 「Zbliżenie W Pomieszczeniu」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamera Ręczna」
+Step 11: under the first heading: 「Warstwowa Głębia」, 「Bogate Szczegóły Wizualne」
+Step 11: under the second heading: 「Płaska Kompozycja」, 「Widoczny Tekst lub Logotypy」, 「Ekstremalne Zbliżenie」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Polski (pl-PL). All six sheets opened from the chip and closed with 「Rozumiem」 back to the same card. Each sentence names its template in bold (Film Grozy, Mikro Kino, Szybkie Cięcie, Jedno Ujęcie, Film poklatkowy, Kamera Ręczna); headings 「Zalecenie」 / 「Unikaj」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-059-read.json); third Unikaj item 「Ekstremalne Zbliżenie」 fully in view after the swipe; long captions wrap to two lines and are whole (「Kadrowanie z Średniej Odległości」, 「Bogate Szczegóły Wizualne」, 「Widoczny Tekst lub Logotypy」, 「Miejski krajobraz lub Pozioma」, 「Zbliżenie W Pomieszczeniu」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Film Grozy template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Tool note: at sheet 5 the phone's Xperia system update notification took the chip tap; the recipe pressed Back (not updated) and tapped again.",screenshots/TC-059-montage.png screenshots/TC-059-read.json,2026-11-25T07:58:52.422Z
+TC-060,R2,R2-e,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Korku Filmi」 with the description 「Ürpertici ışıklar ve korkutucu bir atmosfer. Bir fotoğraf bir korku filmi sahnesine dönüşüyor.」
+Step 2: card 2 reads 「Mikro Sinema」 with the description 「Rüyavari yakın planlar, sinematik bir görsel hikâye kurar; tek görüntüden şiirsel bir video doğar.」
+Step 2: card 3 reads 「Hızlı Kesme」 with the description 「Cesur kesimler ve şık tempoyla fotoğrafınızı modern, çarpıcı bir kısa sinematik videoya dönüştürün.」
+Step 2: card 4 reads 「Tek Plan Çekimi」 with the description 「Kesintisiz yavaş kamera gösterimi. Bir fotoğraf akıcı, sinematik bir kamera hareketine dönüşür.」
+Step 2: card 5 reads 「Hızlandırılmış Çekim」 with the description 「Time-lapse çekimi zamanın akışını yakalar. Durgun anların canlandığını izleyin.」
+Step 2: card 6 reads 「El Tipi Kamera」 with the description 「Elde çekim hareketleri ve odak kaymaları. Tek fotoğraf içten, sinematik bir ana dönüşür.」
+Step 2: the cards come in this order: 「Korku Filmi」, 「Mikro Sinema」, 「Hızlı Kesme」, 「Tek Plan Çekimi」, 「Hızlandırılmış Çekim」, 「El Tipi Kamera」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang tr-TR. Six cards in the row's order (Korku Filmi, Mikro Sinema, Hızlı Kesme, Tek Plan Çekimi, Hızlandırılmış Çekim, El Tipi Kamera); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-060-read.json); all whole on screen (two or three lines), none cut off or garbled, Turkish letters (ı, ş, ğ, ç) drawn. CTA 「Fotoğrafı içe aktar」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-060-montage.png screenshots/TC-060-read.json,2026-11-25T08:01:53.748Z
+TC-061,R2,R2-e,,Language,"1. Tap the photo tips chip on the 「Korku Filmi」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Sinema」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Hızlı Kesme」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Tek Plan Çekimi」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Hızlandırılmış Çekim」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「El Tipi Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Korku Filmi」
+Step 1: under the first heading: 「Karedeki kişiler」, 「Katmanlı Derinlik」
+Step 1: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Sinema」
+Step 3: under the first heading: 「Orta Mesafe Çerçeveleme」, 「Zengin Görsel Ayrıntılar」
+Step 3: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Hızlı Kesme」
+Step 5: under the first heading: 「Hareket Algısı」, 「Zengin Görsel Ayrıntılar」
+Step 5: under the second heading: 「Durağan Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Tek Plan Çekimi」
+Step 7: under the first heading: 「Orta Mesafe Çerçeveleme」, 「Katmanlı Derinlik」
+Step 7: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Hızlandırılmış Çekim」
+Step 9: under the first heading: 「Görünen Gökyüzü」, 「Şehir Manzarası veya Manzara」
+Step 9: under the second heading: 「Konu: Portre」, 「İç Mekan Yakın Plan」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「El Tipi Kamera」
+Step 11: under the first heading: 「Katmanlı Derinlik」, 「Zengin Görsel Ayrıntılar」
+Step 11: under the second heading: 「Düz Kompozisyon」, 「Görünür Metin veya Logolar」, 「Aşırı Yakın Plan」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Türkçe (tr-TR). All six sheets opened from the chip and closed with 「Anladım」 back to the same card. Each sentence names its template in bold (Korku Filmi, Mikro Sinema, Hızlı Kesme, Tek Plan Çekimi, Hızlandırılmış Çekim, El Tipi Kamera); headings 「öneri」 / 「Kaçının」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-061-read.json); third Kaçının item 「Aşırı Yakın Plan」 fully in view after the swipe; long captions wrap to two lines and are whole (「Orta Mesafe Çerçeveleme」, 「Görünür Metin veya Logolar」, 「Şehir Manzarası veya Manzara」), none cut off. Pictures are the EN column's (EN People in Frame man, Mid-Distance Framing woman by the lake, Layered Depth street café, EN Portrait as Subject, coffee sign 「OPEN DAILY」; Fast Cut's own Rich Visual Details picture), none blank. Sentence frame English: 「For best results with the Korku Filmi template, follow this advice:」, chip 「View photo tips」 English (DRA262611P0290, recorded only). Observation, not in the row (it quotes no heading text): the first heading is written with a small first letter, 「öneri」, while the second 「Kaçının」 and the first heading in every other language start with a capital (expected 「Öneri」); a text point for the orchestrator to decide.",screenshots/TC-061-montage.png screenshots/TC-061-read.json,2026-11-25T08:01:53.879Z
+TC-062,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Pelikulang Nakakatakot」 with the description 「Nakakakilabot na ilaw at nakakatakot na paligid. Isang larawan ang nagiging eksena sa horror movie.」
+Step 2: card 2 reads 「Maliit Na Sinehan」 with the description 「Mga mabighaning close-up ang bumubuo ng sinematikong kuwento. Poetikong video mula sa isang imahe.」
+Step 2: card 3 reads 「Mabilisang Pagputol」 with the description 「Matapang mabilis na putol at estilong ritmo. Gawing isang larawan na moderno matinding maikling sine」
+Step 2: card 4 reads 「Isang Kuha」 with the description 「Makinis at mabagal na pagbubunyag ng kamera — isang larawan ang nagiging sinematikong paggalaw.」
+Step 2: card 5 reads 「Time-Lapse」 with the description 「Kinukuha ng time-lapse ang pagdaan ng oras. Panoorin kung paano nabubuhay ang mga sandali.」
+Step 2: card 6 reads 「Kamerang Hawak sa Kamay」 with the description 「Galaw ng Handheld camera na may focus shifts. Isang larawan, nagiging taos-pusong cinematic moment.」
+Step 2: the cards come in this order: 「Pelikulang Nakakatakot」, 「Maliit Na Sinehan」, 「Mabilisang Pagputol」, 「Isang Kuha」, 「Time-Lapse」, 「Kamerang Hawak sa Kamay」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang fil-PH (system locale fil-PH). The installed APK carries no Filipino app strings: its only Filipino set is 「tl」 with 240 library strings (exo, material, abc), none of the app's own (aapt2 dump of base.apk; sv has 5620), and Filipino is not one of PowerDirector's 26 languages; the card names and descriptions still come in Filipino (from the CMS), so the row was judged. Six cards in the row's order (Pelikulang Nakakatakot, Maliit Na Sinehan, Mabilisang Pagputol, Isang Kuha, Time-Lapse, Kamerang Hawak sa Kamay); all six names and five descriptions identical word for word; all whole on screen (three lines each), none cut off or garbled. One difference, card 3 「Mabilisang Pagputol」 description: expected 「Matapang mabilis na putol at estilong ritmo. Gawing isang larawan na moderno matinding maikling sine」 (Cinestory CMS sheet, no full stop), shown 「Matapang mabilis na putol at estilong ritmo. Gawing isang larawan na moderno matinding maikling sine.」 (ends with a full stop like the other five). Only the closing full stop differs (PM text question, same finding as TC-025 / TC-028 / TC-030 / TC-032 / TC-040 / TC-052). CTA English 「Import a photo」 and Launcher English (no Filipino app strings); chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-062-montage.png screenshots/TC-062-card3.png screenshots/TC-062-read.json,2026-11-25T08:07:19.422Z
+TC-063,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「Pelikulang Nakakatakot」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Maliit Na Sinehan」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Mabilisang Pagputol」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Isang Kuha」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Time-Lapse」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Kamerang Hawak sa Kamay」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Pelikulang Nakakatakot」
+Step 1: under the first heading: 「Mga Tao sa Frame」, 「Patong-Patong na Lalim」
+Step 1: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Maliit Na Sinehan」
+Step 3: under the first heading: 「Pag-Frame sa Katamtamang Distansya」, 「Mga Mayamang Biswal na Detalye」
+Step 3: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Mabilisang Pagputol」
+Step 5: under the first heading: 「Pakiramdam ng Galaw」, 「Mga Mayamang Biswal na Detalye」
+Step 5: under the second heading: 「Komposisyon na Walang Galaw」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Isang Kuha」
+Step 7: under the first heading: 「Pag-Frame sa Katamtamang Distansya」, 「Patong-Patong na Lalim」
+Step 7: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Time-Lapse」
+Step 9: under the first heading: 「Nakikitang Langit」, 「Tanawing Lungsod o Kalikasan」
+Step 9: under the second heading: 「Potret Bilang Paksa」, 「Panloob na Malapitang Kuha」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Kamerang Hawak sa Kamay」
+Step 11: under the first heading: 「Patong-Patong na Lalim」, 「Mga Mayamang Biswal na Detalye」
+Step 11: under the second heading: 「Patag na Komposisyon」, 「Nakikitang Teksto o Mga Logo」, 「Napakalapit na Kuha」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Fail,question,"Filipino (fil-PH). All six sheets opened from the chip and closed with the button back to the same card. Each sentence names its template in bold (Pelikulang Nakakatakot, Maliit Na Sinehan, Mabilisang Pagputol, Isang Kuha, Time-Lapse, Kamerang Hawak sa Kamay); every caption identical word for word and in order to the row (0 differences, screenshots/TC-063-read.json); third Avoid item 「Napakalapit na Kuha」 fully in view after the swipe; long captions wrap to two lines and are whole, none cut off or garbled. Pictures are the EN column's, none blank. Differs from the row's 「the two headings, the captions and the button are in the app language」: the captions are Filipino but the two headings read 「Recommendation」 / 「Avoid」 and the button 「Got it」 in English, on every sheet (a half-translated sheet). Cause seen in the build: the APK has no Filipino app strings (its 「tl」 set holds 240 library strings only; Filipino is not one of the app's 26 languages) while the CMS serves Filipino names and captions. Whether Filipino content should be served to an app without Filipino UI, or the UI strings added, is a PM question. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-063-montage.png screenshots/TC-063-read.json,2026-11-25T08:07:19.551Z
+TC-064,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「فیلم ترسناک」 with the description 「نورهای وهم‌آلود و فضایی ترسناک. یک عکس به صحنه‌ای از فیلم ترسناک تبدیل می‌شود.」
+Step 2: card 2 reads 「میکرو سینما」 with the description 「نماهای بستهٔ رویایی داستان تصویری سینمایی می‌سازند. از یک عکس، ویدئویی شاعرانه پدید می‌آید.」
+Step 2: card 3 reads 「برش سریع」 with the description 「برش‌های جسورانه و ریتمی شیک. از یک عکس، یک کوتاه سینمایی مدرن و تأثیرگذار بسازید.」
+Step 2: card 4 reads 「یک برداشت」 with the description 「نمایش آهسته و یکپارچهٔ دوربین: یک عکس به حرکت سینمایی و روان تبدیل می‌شود.」
+Step 2: card 5 reads 「تایم‌لپس」 with the description 「تایم‌لپس گذر زمان را ثبت می‌کند. ببینید لحظات ساکن جان می‌گیرند.」
+Step 2: card 6 reads 「دوربین دستی」 with the description 「حرکت دوربین دستی با جابجایی فوکوس؛ یک عکس تبدیل به لحظه‌ای سینمایی و پر احساس می‌شود.」
+Step 2: the cards come in this order: 「فیلم ترسناک」, 「میکرو سینما」, 「برش سریع」, 「یک برداشت」, 「تایم‌لپس」, 「دوربین دستی」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang fa-IR (the APK carries one 「fa」 set). Launcher in Persian (tile 「کلیپ‌ساز سینمایی」, tab 「خانه」). Six cards in the row's order (فیلم ترسناک, میکرو سینما, برش سریع, یک برداشت, تایم‌لپس, دوربین دستی); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-064-read.json); all whole on screen (two lines each), none cut off or garbled, Persian letters joined and drawn right to left. CTA 「افزودن عکس」; chip English 「View photo tips」 (DRA262611P0290, recorded only). Observation, not in the row (same as Arabic, TC-054): the page is not mirrored, the card name and description are left-aligned.",screenshots/TC-064-montage.png screenshots/TC-064-read.json,2026-11-25T08:10:48.333Z
+TC-065,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「فیلم ترسناک」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「میکرو سینما」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「برش سریع」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「یک برداشت」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「تایم‌لپس」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「دوربین دستی」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「فیلم ترسناک」
+Step 1: under the first heading: 「افراد در قاب」, 「عمق چندلایه」
+Step 1: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「میکرو سینما」
+Step 3: under the first heading: 「قاب‌بندی در فاصله متوسط」, 「جزئیات بصری غنی」
+Step 3: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「برش سریع」
+Step 5: under the first heading: 「حس حرکت」, 「جزئیات بصری غنی」
+Step 5: under the second heading: 「ترکیب‌بندی ایستا」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「یک برداشت」
+Step 7: under the first heading: 「قاب‌بندی در فاصله متوسط」, 「عمق چندلایه」
+Step 7: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「تایم‌لپس」
+Step 9: under the first heading: 「آسمان قابل مشاهده」, 「شهری یا منظره」
+Step 9: under the second heading: 「پرتره به‌عنوان سوژه」, 「نمای نزدیک داخلی」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「دوربین دستی」
+Step 11: under the first heading: 「عمق چندلایه」, 「جزئیات بصری غنی」
+Step 11: under the second heading: 「ترکیب کم‌عمق」, 「متن یا لوگوهای قابل مشاهده」, 「نمای بسیار بسته」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"فارسی (fa-IR). All six sheets opened from the chip and closed with 「متوجه شدم」 back to the same card. Each sentence names its template (فیلم ترسناک, میکرو سینما, برش سریع, یک برداشت, تایم‌لپس, دوربین دستی); headings 「پیشنهاد」 / 「اجتناب کنید」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-065-read.json); third item 「نمای بسیار بسته」 fully in view after the swipe; captions one line each, whole, none cut off or garbled. Pictures are the EN column's, none blank. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only). Observation, not in the row (same as Arabic, TC-055): the sheet is not mirrored; each heading word sits at the right edge while its coloured bar stays at the left edge, and the picture rows start from the left.",screenshots/TC-065-montage.png screenshots/TC-065-read.json,2026-11-25T08:10:48.469Z
+TC-066,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「סרט אימה」 with the description 「אורות מאיימים ואווירה מפחידה. תמונה אחת הופכת לרגע מסרט אימה.」
+Step 2: card 2 reads 「מיקרו סינמה」 with the description 「תקריבים חלומיים בונים סיפור ויזואלי קולנועי. וידאו פיוטי נפתח מתמונה אחת.」
+Step 2: card 3 reads 「עריכה מהירה」 with the description 「חתכים נועזים ומהירים עם קצב מעודן. הפוך תמונה אחת לסרטון קולנועי מודרני ועוצמתי.」
+Step 2: card 4 reads 「שוט אחד」 with the description 「חשיפה איטית וחלקה של המצלמה. תמונה אחת הופכת לתנועת מצלמה קולנועית.」
+Step 2: card 5 reads 「טיימלפס」 with the description 「צילום טיימלפס לוכד את חלוף הזמן. צפה ברגעים קפואים שמתעוררים לחיים.」
+Step 2: card 6 reads 「מצלמה ניידת」 with the description 「תנועת מצלמה ידנית עם מעברי מיקוד. תמונה אחת הופכת לרגע קולנועי מלא רגש.」
+Step 2: the cards come in this order: 「סרט אימה」, 「מיקרו סינמה」, 「עריכה מהירה」, 「שוט אחד」, 「טיימלפס」, 「מצלמה ניידת」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang he-IL (the APK carries Hebrew as 「iw」). Launcher in Hebrew (tile 「יוצר רילסים קולנועיים」, tab 「בית」). Six cards in the row's order (סרט אימה, מיקרו סינמה, עריכה מהירה, שוט אחד, טיימלפס, מצלמה ניידת); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-066-read.json); all whole on screen (two lines each), none cut off or garbled, drawn right to left. CTA 「ייבא תמונה」; chip English 「View photo tips」 (DRA262611P0290, recorded only). Observation, not in the row (same as Arabic TC-054 and Persian TC-064): the page is not mirrored, the card name and description are left-aligned.",screenshots/TC-066-montage.png screenshots/TC-066-read.json,2026-11-25T08:12:27.949Z
+TC-067,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「סרט אימה」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「מיקרו סינמה」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「עריכה מהירה」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「שוט אחד」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「טיימלפס」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「מצלמה ניידת」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「סרט אימה」
+Step 1: under the first heading: 「אנשים במסגרת」, 「עומק רב-שכבתי」
+Step 1: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「מיקרו סינמה」
+Step 3: under the first heading: 「מסגור במרחק בינוני」, 「פרטים חזותיים עשירים」
+Step 3: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「עריכה מהירה」
+Step 5: under the first heading: 「תחושת תנועה」, 「פרטים חזותיים עשירים」
+Step 5: under the second heading: 「קומפוזיציה סטטית」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「שוט אחד」
+Step 7: under the first heading: 「מסגור במרחק בינוני」, 「עומק רב-שכבתי」
+Step 7: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「טיימלפס」
+Step 9: under the first heading: 「שמיים נראים」, 「נוף עירוני או נוף」
+Step 9: under the second heading: 「נושא: דיוקן」, 「תקריב פנימי」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「מצלמה ניידת」
+Step 11: under the first heading: 「עומק רב-שכבתי」, 「פרטים חזותיים עשירים」
+Step 11: under the second heading: 「קומפוזיציה שטוחה」, 「טקסט גלוי או לוגואים」, 「תקריב קיצוני」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"עברית (he-IL). All six sheets opened from the chip and closed with 「הבנתי」 back to the same card. Each sentence names its template (סרט אימה, מיקרו סינמה, עריכה מהירה, שוט אחד, טיימלפס, מצלמה ניידת); headings 「המלצה」 / 「הימנע」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-067-read.json); third item 「תקריב קיצוני」 fully in view after the swipe; captions one line each, whole, none cut off or garbled. Pictures are the EN column's, none blank. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only). Observation, not in the row (same as Arabic TC-055 and Persian TC-065): the sheet is not mirrored; each heading word sits at the right edge while its coloured bar stays at the left edge.",screenshots/TC-067-montage.png screenshots/TC-067-read.json,2026-11-25T08:12:28.077Z
+TC-068,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Skräckfilm」 with the description 「Spöklika ljus och en skrämmande stämning. Ett foto blir en scen ur en skräckfilm.」
+Step 2: card 2 reads 「Minibiograf」 with the description 「Drömska närbilder skapar en filmisk berättelse. En poetisk video växer fram ur en enda bild.」
+Step 2: card 3 reads 「Snabb Klipp」 with the description 「Djärva snabba klipp och stilfullt tempo. Förvandla ett foto till en modern, filmisk kortvideo.」
+Step 2: card 4 reads 「En Tagning」 with the description 「En sömlös, långsam kamerapanorering. Ett foto förvandlas till en mjuk, filmisk kamerarörelse.」
+Step 2: card 5 reads 「Tidsförlopp」 with the description 「Time-lapse fångar tidens gång. Se stilla ögonblick vakna till liv.」
+Step 2: card 6 reads 「Handhållen Kamera」 with the description 「Handhållen kamerarörelse med fokusändringar. En bild blir ett känslosamt, filmiskt ögonblick.」
+Step 2: the cards come in this order: 「Skräckfilm」, 「Minibiograf」, 「Snabb Klipp」, 「En Tagning」, 「Tidsförlopp」, 「Handhållen Kamera」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang sv-SE (the APK carries 「sv」). Launcher in Swedish (tile 「Filmiska reels」, tab 「Hem」). Six cards in the row's order (Skräckfilm, Minibiograf, Snabb Klipp, En Tagning, Tidsförlopp, Handhållen Kamera); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-068-read.json); all whole on screen (two or three lines), none cut off or garbled, å ä ö drawn. CTA 「Importera ett foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-068-montage.png screenshots/TC-068-read.json,2026-11-25T08:17:03.618Z
+TC-069,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「Skräckfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Minibiograf」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Snabb Klipp」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「En Tagning」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsförlopp」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Handhållen Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Skräckfilm」
+Step 1: under the first heading: 「Personer i bilden」, 「Skiktat Djup」
+Step 1: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Minibiograf」
+Step 3: under the first heading: 「Inramning på medelavstånd」, 「Rika visuella detaljer」
+Step 3: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Snabb Klipp」
+Step 5: under the first heading: 「Känsla av Rörelse」, 「Rika visuella detaljer」
+Step 5: under the second heading: 「Statisk komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「En Tagning」
+Step 7: under the first heading: 「Inramning på medelavstånd」, 「Skiktat Djup」
+Step 7: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsförlopp」
+Step 9: under the first heading: 「Synlig himmel」, 「Stadsbild eller landskap」
+Step 9: under the second heading: 「Porträtt som motiv」, 「Inomhus Närbild」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Handhållen Kamera」
+Step 11: under the first heading: 「Skiktat Djup」, 「Rika visuella detaljer」
+Step 11: under the second heading: 「Platt komposition」, 「Synlig text eller logotyper」, 「Extrem närbild」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Svenska (sv-SE). All six sheets opened from the chip and closed with 「Förstått」 back to the same card. Each sentence names its template in bold (Skräckfilm, Minibiograf, Snabb Klipp, En Tagning, Tidsförlopp, Handhållen Kamera); headings 「Rekommendation」 / 「Undvik」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-069-read.json); third Undvik item 「Extrem närbild」 fully in view after the swipe; 「Inramning på medelavstånd」 wraps to two lines and is whole, none cut off or garbled. Pictures are the EN column's, none blank. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-069-montage.png screenshots/TC-069-read.json,2026-11-25T08:17:03.748Z
+TC-070,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Gyserfilm」 with the description 「Uhyggelige lys og en skræmmende stemning. Et foto bliver til en scene fra en gyserfilm.」
+Step 2: card 2 reads 「Mikrobiograf」 with the description 「Drømmende nærbilleder skaber en filmisk fortælling. En poetisk video udfolder sig fra ét billede.」
+Step 2: card 3 reads 「Hurtigt Klip」 with the description 「Dristige hurtige klip, stilfuld rytme. Forvandl et foto til et moderne, filmisk kort med slagkraft.」
+Step 2: card 4 reads 「Optagelse i ét tag」 with the description 「En sømløs, langsom kameraføring. Et foto bliver til en glidende, filmisk kamerabevægelse.」
+Step 2: card 5 reads 「Tidsforløb」 with the description 「Time-lapse-optagelse fanger tidens gang. Se stille øjeblikke få liv.」
+Step 2: card 6 reads 「Håndholdt Kamera」 with the description 「Håndholdt kamerabevægelse med fokusskift. Ét foto bliver et hjerteligt filmisk øjeblik.」
+Step 2: the cards come in this order: 「Gyserfilm」, 「Mikrobiograf」, 「Hurtigt Klip」, 「Optagelse i ét tag」, 「Tidsforløb」, 「Håndholdt Kamera」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang da-DK (the APK carries 「da」). Launcher in Danish (tile 「Filmiske reels」, tab 「Hjem」). Six cards in the row's order (Gyserfilm, Mikrobiograf, Hurtigt Klip, Optagelse i ét tag, Tidsforløb, Håndholdt Kamera); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-070-read.json); all whole on screen (two or three lines), none cut off or garbled, æ ø å é drawn. CTA 「Importer et foto」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-070-montage.png screenshots/TC-070-read.json,2026-11-25T08:18:48.181Z
+TC-071,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「Gyserfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikrobiograf」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Hurtigt Klip」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Optagelse i ét tag」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsforløb」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Håndholdt Kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Gyserfilm」
+Step 1: under the first heading: 「Personer i billedet」, 「Lagdelt dybde」
+Step 1: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikrobiograf」
+Step 3: under the first heading: 「Indramning på mellemlang afstand」, 「Rige Visuelle Detaljer」
+Step 3: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Hurtigt Klip」
+Step 5: under the first heading: 「Bevægelsesfornemmelse」, 「Rige Visuelle Detaljer」
+Step 5: under the second heading: 「Statisk Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Optagelse i ét tag」
+Step 7: under the first heading: 「Indramning på mellemlang afstand」, 「Lagdelt dybde」
+Step 7: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsforløb」
+Step 9: under the first heading: 「Synlig himmel」, 「Bylandskab eller Landskab」
+Step 9: under the second heading: 「Portræt som motiv」, 「Indendørs Nærbillede」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Håndholdt Kamera」
+Step 11: under the first heading: 「Lagdelt dybde」, 「Rige Visuelle Detaljer」
+Step 11: under the second heading: 「Flad Komposition」, 「Synlig tekst eller logoer」, 「Ekstremt nærbillede」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Fail,defect,"Dansk (da-DK). All six sheets opened from the chip and closed with 「Forstået」 back to the same card (sheet 4's first chip tap was taken by the phone's Xperia update heads-up; the recipe pressed Back and tapped again). Each sentence names its template in bold (Gyserfilm, Mikrobiograf, Hurtigt Klip, Optagelse i ét tag, Tidsforløb, Håndholdt Kamera); headings 「Anbefaling」 / 「Undgå」; every caption identical word for word and in order to the row (0 text differences, screenshots/TC-071-read.json); third Undgå item 「Ekstremt nærbillede」 fully in view after the swipe; pictures are the EN column's, none blank. Differs from 「whole, not cut off and not garbled」 on sheet 3 「Hurtigt Klip」: the first Anbefaling caption 「Bevægelsesfornemmelse」 is one word wider than its picture and is broken inside the word with no hyphen, drawn 「Bevægelsesfornemmels」 on line 1 and a lone 「e」 on line 2 (screenshots/TC-071-open3.png). Every other caption breaks between words (「Indramning på / mellemlang afstand」, 「Bylandskab eller / Landskab」). Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-071-open3.png screenshots/TC-071-montage.png screenshots/TC-071-read.json,2026-11-25T08:18:48.320Z
+TC-072,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Skrekkfilm」 with the description 「Uhyggelige lys og en skummel stemning. Ett bilde blir til en scene fra en skrekkfilm.」
+Step 2: card 2 reads 「Mikro Kino」 with the description 「Drømmende nærbilder skaper en filmatisk historie. En poetisk video blomstrer fra ett bilde.」
+Step 2: card 3 reads 「Rask Klipp」 with the description 「Dristige, raske klipp og stilig rytme. Forvandle ett bilde til en moderne, slagkraftig kortfilm.」
+Step 2: card 4 reads 「Én-Tagning」 with the description 「En sømløs, sakte kameraavsløring. Et bilde blir til en jevn, filmatisk kamerabevegelse.」
+Step 2: card 5 reads 「Tidsforløp」 with the description 「Tidsforløp fanger tidens gang. Se stille øyeblikk få liv.」
+Step 2: card 6 reads 「Håndholdt kamera」 with the description 「Håndholdt kamerabevegelse med fokusendringer. Et bilde blir et gripende, filmatisk øyeblikk.」
+Step 2: the cards come in this order: 「Skrekkfilm」, 「Mikro Kino」, 「Rask Klipp」, 「Én-Tagning」, 「Tidsforløp」, 「Håndholdt kamera」
+Step 2: every name and description is whole, not cut off and not garbled",Pass,,"launch --lang nb-NO (the APK carries Norwegian as 「nb」). Launcher in Norwegian (tile 「Filmatiske reels」, tab 「Hjem」). Six cards in the row's order (Skrekkfilm, Mikro Kino, Rask Klipp, Én-Tagning, Tidsforløp, Håndholdt kamera); all six names and six descriptions identical word for word to the row (0 differences, screenshots/TC-072-read.json); all whole on screen (two or three lines), none cut off or garbled, æ ø å é drawn. CTA 「Importer et bilde」; chip English 「View photo tips」 (DRA262611P0290, recorded only). Card 4's preview video was on a black frame at the moment of the screenshot (the video plays; its sample photo, name and text are drawn). Run note: the recipe's first --launch call tapped the tile position before the Launcher grid had settled and opened 「Tekst til video」 (screenshots/TC-072-check-try1.txt); relaunched, the tile 「Filmatiske reels」 was read at its usual place, tapped, and the recipe run without --launch.",screenshots/TC-072-montage.png screenshots/TC-072-read.json,2026-11-25T08:23:31.689Z
+TC-073,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「Skrekkfilm」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Mikro Kino」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Rask Klipp」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Én-Tagning」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Tidsforløp」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Håndholdt kamera」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Skrekkfilm」
+Step 1: under the first heading: 「Personer i bildet」, 「Lagdelt dybde」
+Step 1: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Mikro Kino」
+Step 3: under the first heading: 「Innramming på middels avstand」, 「Rike Visuelle Detaljer」
+Step 3: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Rask Klipp」
+Step 5: under the first heading: 「Bevegelsesfølelse」, 「Rike Visuelle Detaljer」
+Step 5: under the second heading: 「Statisk Komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Én-Tagning」
+Step 7: under the first heading: 「Innramming på middels avstand」, 「Lagdelt dybde」
+Step 7: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Tidsforløp」
+Step 9: under the first heading: 「Synlig Himmel」, 「Bybilde eller landskap」
+Step 9: under the second heading: 「Stående som motiv」, 「Innendørs Nærbilde」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Håndholdt kamera」
+Step 11: under the first heading: 「Lagdelt dybde」, 「Rike Visuelle Detaljer」
+Step 11: under the second heading: 「Flat komposisjon」, 「Synlig tekst eller logoer」, 「Ekstremt nærbilde」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Norsk bokmål (nb-NO). All six sheets opened from the chip and closed with 「Forstått」 back to the same card. Each sentence names its template in bold (Skrekkfilm, Mikro Kino, Rask Klipp, Én-Tagning, Tidsforløp, Håndholdt kamera); headings 「Anbefaling」 / 「Unngå」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-073-read.json); third Unngå item 「Ekstremt nærbilde」 fully in view after the swipe; 「Innramming på middels avstand」 wraps between words to two lines, 「Bevegelsesfølelse」 fits on one line; none cut off or garbled. Pictures are the EN column's, none blank. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-073-montage.png screenshots/TC-073-read.json,2026-11-25T08:23:31.821Z
+TC-074,R2,R2-f,,Language,"1. Look at the first template card
+2. Swipe the cards left one at a time to the last card","Step 1: card 1 reads 「Фільм жахів」 with the description 「Моторошні вогні та зловісна атмосфера. Одне фото перетворюється на сцену фільму жахів.」
+Step 2: card 2 reads 「Мікро-кінотеатр」 with the description 「Мрійливі крупні плани творять кінематографічну історію. Поетичне відео народжується з одного кадру」
+Step 2: card 3 reads 「Швидкий Монтаж」 with the description 「Сміливі швидкі зрізи й стильний темп. Перетворіть одне фото на сучасне потужне коротке кіно.」
+Step 2: card 4 reads 「Зйомка одним дублем」 with the description 「Плавне повільне відкриття камери. Одне фото перетворюється на кінематографічний рух камери」
+Step 2: card 5 reads 「Таймлапс」 with the description 「Таймлапс захоплює плин часу. Дивіться, як нерухомі миті оживають.」
+Step 2: card 6 reads 「Ручна камера」 with the description 「Рух камери з рук із зсувами фокусу. Одне фото стає зворушливим кінематографічним моментом.」
+Step 2: the cards come in this order: 「Фільм жахів」, 「Мікро-кінотеатр」, 「Швидкий Монтаж」, 「Зйомка одним дублем」, 「Таймлапс」, 「Ручна камера」
+Step 2: every name and description is whole, not cut off and not garbled",Fail,question,"launch --lang uk-UA (the APK carries 「uk」). Launcher in Ukrainian (tile 「Кінематичні рилси」, tab 「Головна」). Six cards in the row's order (Фільм жахів, Мікро-кінотеатр, Швидкий Монтаж, Зйомка одним дублем, Таймлапс, Ручна камера); all six names and four descriptions identical word for word; all whole on screen (two or three lines), none cut off or garbled. Two differences, each only a closing full stop. Card 2 「Мікро-кінотеатр」: expected 「Мрійливі крупні плани творять кінематографічну історію. Поетичне відео народжується з одного кадру」 (Cinestory CMS sheet, no full stop), shown 「…народжується з одного кадру.」. Card 4 「Зйомка одним дублем」: expected 「Плавне повільне відкриття камери. Одне фото перетворюється на кінематографічний рух камери」, shown 「…кінематографічний рух камери.」. In the app all six end with a full stop (PM text question, same finding as TC-025 / TC-028 / TC-030 / TC-032 / TC-040 / TC-052 / TC-062). CTA 「Імпортувати фото」; chip English 「View photo tips」 (DRA262611P0290, recorded only).",screenshots/TC-074-montage.png screenshots/TC-074-card2.png screenshots/TC-074-card4.png screenshots/TC-074-read.json,2026-11-25T08:23:31.950Z
+TC-075,R2,R2-f,,Language,"1. Tap the photo tips chip on the 「Фільм жахів」 card
+2. Tap the button at the bottom of the sheet
+3. Tap the photo tips chip on the 「Мікро-кінотеатр」 card
+4. Tap the button at the bottom of the sheet
+5. Tap the photo tips chip on the 「Швидкий Монтаж」 card
+6. Tap the button at the bottom of the sheet
+7. Tap the photo tips chip on the 「Зйомка одним дублем」 card
+8. Tap the button at the bottom of the sheet
+9. Tap the photo tips chip on the 「Таймлапс」 card
+10. Tap the button at the bottom of the sheet
+11. Tap the photo tips chip on the 「Ручна камера」 card
+12. Tap the button at the bottom of the sheet","Step 1: the sheet's first sentence names the template as 「Фільм жахів」
+Step 1: under the first heading: 「Люди в кадрі」, 「Шарувата глибина」
+Step 1: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 2: the sheet closes, back on the template page
+Step 3: the sheet's first sentence names the template as 「Мікро-кінотеатр」
+Step 3: under the first heading: 「Кадрування на середній відстані」, 「Висока візуальна деталізація」
+Step 3: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 4: the sheet closes, back on the template page
+Step 5: the sheet's first sentence names the template as 「Швидкий Монтаж」
+Step 5: under the first heading: 「Відчуття руху」, 「Висока візуальна деталізація」
+Step 5: under the second heading: 「Статична композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 6: the sheet closes, back on the template page
+Step 7: the sheet's first sentence names the template as 「Зйомка одним дублем」
+Step 7: under the first heading: 「Кадрування на середній відстані」, 「Шарувата глибина」
+Step 7: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 8: the sheet closes, back on the template page
+Step 9: the sheet's first sentence names the template as 「Таймлапс」
+Step 9: under the first heading: 「Видиме Небо」, 「Міський або природний пейзаж」
+Step 9: under the second heading: 「Портрет як об'єкт」, 「Крупний план у приміщенні」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 10: the sheet closes, back on the template page
+Step 11: the sheet's first sentence names the template as 「Ручна камера」
+Step 11: under the first heading: 「Шарувата глибина」, 「Висока візуальна деталізація」
+Step 11: under the second heading: 「Плоска композиція」, 「Видимий текст або логотипи」, 「Екстремальний крупний план」 (swipe the row left to read the third)
+Step 12: the sheet closes, back on the template page
+Every step: the two headings, the captions and the button are in the app language, whole, not cut off and not garbled
+Every step: each picture is the EN picture of that item in the sheet's Pic Link list (specs/2026-11-25/extracted/recommendation-pic-links.png)",Pass,,"Українська (uk-UA). All six sheets opened from the chip and closed with 「Зрозуміло」 back to the same card. Each sentence names its template in bold (Фільм жахів, Мікро-кінотеатр, Швидкий Монтаж, Зйомка одним дублем, Таймлапс, Ручна камера); headings 「Рекомендація」 / 「Уникайте」; every caption identical word for word and in order to the row (0 differences, screenshots/TC-075-read.json); third Уникайте item 「Екстремальний крупний план」 fully in view after the swipe (two lines); long captions wrap between words and are whole, none cut off or garbled. Pictures are the EN column's, none blank. Sentence frame English 「For best results with the … template, follow this advice:」 and chip 「View photo tips」 English (DRA262611P0290, recorded only).",screenshots/TC-075-montage.png screenshots/TC-075-read.json,2026-11-25T08:23:32.081Z

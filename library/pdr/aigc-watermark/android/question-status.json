@@ -1,0 +1,104 @@
+{
+  "Q-2": {
+    "state": "determined",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "The switch is free for every tier: on the Free account it turns On with no paywall, upgrade prompt or sign-in request and stays On after leaving the Menu (TC-006 Pass), and on Pro it is kept after a restart (TC-007 Pass). The assumption holds; no row changes."
+  },
+  "Q-3": {
+    "state": "determined",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "A video's label follows the same 12% rule as an image: saved Text to Video files carry the AI label top-left at 0.0 s and 1.9 s with an outer box of 130 px on a 1080 px short side, portrait and landscape, and none from 2.1 s (TC-012 Pass, TC-013 Pass). The 130 px is an 86 px badge plus a 22 px margin on each side, which is the asset's own padding."
+  },
+  "Q-6": {
+    "state": "filed",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "On 2611193 the switch does not decide the music dialog: 「Generate」 starts at once with the switch On (TC-063 Pass) and also with it Off (TC-054, TC-057 Fail). DRA262611P0229 asks for the missing 「AIGC Watermark」 dialog with the switch Off; its outcome answers this together with Q-20. E1 (2611251): still no music dialog with the switch Off from Editor › Audio, Editor › AI Magic and Audio › Music › AI Music Generator (TC-343, TC-351, TC-359 Fail; TC-344/345, 352/353, 360/361 Blocked).",
+    "codes": [
+      "DRA262611P0229"
+    ]
+  },
+  "Q-8": {
+    "state": "not-reached",
+    "by": "R4 (2026-11-26-r4-changed, 16.9.0.2611201)",
+    "at": "2026-11-26",
+    "note": "TC-128 Blocked again: on 2611201 the music 「Generate」 with the switch Off still opens no 「AIGC Watermark」 dialog (DRA262611P0229), so its 「Don't show again」 cannot be ticked and whether it also silences the export dialog cannot be seen. The export dialog's own 「Don't show again」 works on its own (TC-129, R3). Rerun TC-128 once the music dialog exists. E1 (2611251): still unreachable from the editor entries (TC-344 – TC-361 Blocked on DRA262611P0229)."
+  },
+  "Q-9": {
+    "state": "determined",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "The label goes on the project's first two seconds wherever the AI clip is: with a non-AI clip at 0:00–0:05 and the AI Anime clip from 0:05, the export has the AI label on the non-AI clip at 0.0 s and 1.9 s, none at 2.1 s and none over the anime clip at 5.5 s or 7.0 s (TC-081 Pass). The assumption holds."
+  },
+  "Q-11": {
+    "state": "determined",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "On 2611193 the video and image items are My Artwork results as assumed, except: AI Storytelling keeps its result under AI Storytelling › history 「Generated Story」 with 「Export」, not in My Artwork (TC-032 – TC-034 ran there), and Video Object Removal is not offered (TC-029 – TC-031, TC-109 Blocked). AI Cartoon and AI Sketch are no longer editor tools (only in the Launcher's AI Magic; TC-073 – TC-078 Blocked) and a Voice Changer Effect voice is not treated as AI content while the Pro AI voices are (TC-068; the 2026-11-24 recheck showed the export dialog for Jill, Kathleen and Margaret, none for 「Radio 1」). Rows to change at the next draft: TC-032 – TC-034 preconditions (history, Export), TC-073 – TC-078 (reach AI Cartoon / AI Sketch from the Launcher or drop), TC-067 – TC-069 (name a Pro AI voice). E1 (2611251): AI Style Transfer is back in the editor (Photo / PIP Photo › Portrait; the Launcher AI Cartoon / AI Sketch tiles open it in a new project, O-14), so TC-073 – TC-078 can run again; their results are not My Artwork items, asked as ISS-AWA-25 (drafted, PM)."
+  },
+  "Q-13": {
+    "state": "filed",
+    "by": "Q1 (2026-11-26-q1-questions, 16.9.0.2611231)",
+    "at": "2026-11-26",
+    "drafted": "ISS-AWA-19 (ebugs/2026-11-26-q1, [AIAgent] Functional, BugBelong PM; filed DRA262611P0322 on TR261123-0070, 2026-11-26)",
+    "codes": [
+      "DRA262611P0322"
+    ],
+    "note": "c2patool on the editor exports: TC-065 (AI Text to Speech, switch Off), TC-071 (AI Anime, Off), TC-066 (the TC-065 project, switch On) and TC-158 (Image to Video result in Full Editor, On) all carry one CyberLink-signed manifest: one c2pa.created action with digitalSourceType compositeWithTrainedAlgorithmicMedia, no ingredient, validation Valid (TC-157 Fail question). The switch On export differs only in IDs and hash, which matches Jira's 「the switch controls only the visible watermark」. A photo + song project exports with none (KF-008). The assumption 「none」 does not hold; PM decides whether such exports carry a manifest, what it states, and how the timeline tools' own assets (TC-123 – TC-127) are to be checked. Row to change at the next draft: TC-157's Expected Result (record → the ruling). E1 (2611251): the eight editor-entry exports (TC-295 … TC-337) carry the same single CyberLink manifest; no new filing."
+  },
+  "Q-14": {
+    "state": "not-reached",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "A run cannot answer this: the PM 「AIGC Watermark Spec.pptx」 is still unread and no record shows it was obtained. The rows measured on the device (label size, corner, two seconds: TC-009 – TC-013 Pass) follow the Figma rules only; the file has to be supplied to see whether it adds margin, opacity or per-feature rules."
+  },
+  "Q-16": {
+    "state": "not-reached",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "No row asserts it and no run made a video result shorter than two seconds: the shortest results recorded are about 4 s (TC-013, Veo 3.1 4s). Needs a feature or model that can produce a result under 2 s, if the build has one."
+  },
+  "Q-17": {
+    "state": "determined",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "Android has the feature in 16.9.0 with the same rules: 「Remove AIGC Watermark」 with its info sheet is in the Menu (TC-001 – TC-007 Pass) and results follow the switch, and Android has its own Jira, PDRA-649, whose comments gave the rulings REQ-007 – REQ-009. No row changes."
+  },
+  "Q-19": {
+    "state": "determined",
+    "by": "Q1 (2026-11-26-q1-questions, 16.9.0.2611231)",
+    "at": "2026-11-26",
+    "note": "The export follows the switch, as assumed: a new Image to Video result (Kling 4.0, never saved) opened with 「Full Editor」 and exported with the switch On has no AI label in the preview or the file at 0.0 / 1.9 / 2.1 s and no AIGC dialog (TC-158 Pass); with the switch Off the export has one label at 0.0 / 1.9 s, none at 2.1 s (TC-083 Pass, R3). No row changes; TC-083's caveat (its clip was a gallery file saved Off) remains, but the On side shows the clip itself carries no label."
+  },
+  "Q-20": {
+    "state": "filed",
+    "by": "R3 (2026-11-23-r3-full, 16.9.0.2611193)",
+    "at": "2026-11-25",
+    "note": "DRA262611P0229 (filed from this table, 2026-11-19) reports that AI Music Generator's 「Generate」 shows no 「AIGC Watermark」 dialog with the switch Off; still so on 2611193 (TC-054, TC-057 Fail; TC-055, TC-056, TC-128 Blocked upstream). Whether the dialog stays and what its text promises is decided on that ticket. E1 (2611251): still no music dialog with the switch Off from Editor › Audio, Editor › AI Magic and Audio › Music › AI Music Generator (TC-343, TC-351, TC-359 Fail; TC-344/345, 352/353, 360/361 Blocked).",
+    "codes": [
+      "DRA262611P0229"
+    ]
+  },
+  "Q-22": {
+    "state": "filed",
+    "by": "E1 (2026-11-26-e1-entries, 16.9.0.2611251)",
+    "at": "2026-11-26",
+    "drafted": "ISS-AWA-20 (ebugs/2026-11-26-e1, [AIAgent][UX], BugBelong PM; filed DRA262611P0341 on TR261125-0064, 2026-11-27)",
+    "note": "Presence rows on 2611251: present as the sheet lists — AI Music Generator under Global › Audio and Global › AI Magic and inside Audio › Music (TC-340, TC-348, TC-356), the editor completion banner (TC-372), AI Style Transfer under Photo / PIP Photo › Portrait (TC-328, TC-334), Text to Image under Photo / PIP Photo › Tools (PIP label 「Text to Image」, O-10), the Launcher big shortcut (TC-160), AI Art's 「Turn the image into a video」 (TC-190). Not as listed: Video Edit by Chat and Cinematic Reel Creator are first-layer buttons of the Video / PIP Video and Photo / PIP Photo toolbars, not under Effects (TC-172, TC-178, TC-202, TC-208); 「AI Remove (4/E IOS)」 is not offered (TC-214, TC-220; TC-215 – TC-219, TC-221 – TC-225 Blocked). The bracket notes (8/M, 7/E, 4/E IOS) may be release targets or iOS-only marks, so PM decides.",
+    "codes": [
+      "DRA262611P0341"
+    ],
+    "cancelled": "DRA262611P0341 cancelled on eCL (user, 2026-11-27): its 「no AI Remove」 part was wrong, AI Remove is iOS only (REQ-020). No live ticket for this question."
+  },
+  "Q-10": {
+    "state": "filed",
+    "by": "E1 (2026-11-26-e1-entries, 16.9.0.2611251)",
+    "at": "2026-11-26",
+    "codes": [
+      "DRA262611P0224"
+    ],
+    "note": "Still no AI label in the editor preview on 2611251 for Text to Speech, AI Voice Changer (Pro voices), AI Cartoon and AI Sketch from every editor entry (TC-295, TC-301, TC-307, TC-313, TC-319, TC-325, TC-331, TC-337); the exports carry the label. Filed as DRA262611P0224 (R1)."
+  }
+}

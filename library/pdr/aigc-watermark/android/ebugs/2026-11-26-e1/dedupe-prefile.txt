@@ -1,0 +1,529 @@
+
+1 of 11 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+1 candidate(s) were declined (NAB / Won't Fix / Not Reproducible). Resolve each before filing.
+
+[AIGC-Watermark-E1-01] PDR-A 16.9.0 - [AIAgent][UX] Editor toolbar: Video Edit by Chat, Cinematic Reel Creator not under Effects; no AI Remove
+      feature='Editor toolbar'  terms=['Editor toolbar']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-02] PDR-A 16.9.0 - [AIAgent][UX] Editor toolbar: Video Edit by Chat, Cinematic Reel Creator ignore the selected clip
+      feature='Editor toolbar'  terms=['Editor toolbar']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-03] PDR-A 16.9.0 - [AIAgent] Video Edit by Chat: Source of 8.3 s shown as 00:09 and priced as 9 seconds
+      feature='Video Edit by Chat'  terms=['Video Edit by Chat']  searched 74 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-04] PDR-A 16.9.0 - [AIAgent][UX] Talking Avatar: Audio toolbar entry lacks the By Text / By Voice switch
+      feature='Talking Avatar'  terms=['Talking Avatar']  searched 178 candidate(s)
+    ! 29%  closed    DRA252501-0238  PDR-A 14.8.0 - Talking Avatar : "Voice Change" and "Voice Style" will stack if the user 
+              shares label "by text", label "by voice", label "voice"
+    ! 14%  REJECTED  DRA252502-0013  PDR-A 14.9.0 - Talking Avatar: The title of "By Voice" is incorrect
+              shares label "by voice"
+              ⚠ Propose Wont Fix — RD/PM already declined this. Filing again re-raises that decision: read its status log, and only refile with new grounds (e.g. a newer spec) cited against DRA252502-0013.
+    ! 14%  closed    DRA252502-0012  PDR-A 14.9.0 - [UI]Talking Avatar: "By Voice" icon is not grayed out when not selected
+              shares label "by voice"
+
+[AIGC-Watermark-E1-05] PDR-A 16.9.0 - [AIAgent][UX] Editor (Text to Image): Leaving it clears the photo selection it was opened from
+      feature='Editor (Text to Image)'  terms=['Editor (Text to Image)']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-06] PDR-A 16.9.0 - [AIAgent] AI Cartoon / AI Sketch: Results are applied in a new project and never listed in My Artwork
+      feature='AI Cartoon / AI Sketch'  terms=['AI Cartoon / AI Sketch', 'Cartoon / AI Sketch']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-07] PDR-A 16.9.0 - [AIAgent][UX] AI Cartoon / AI Sketch: Back at the photo step lands in an empty editor, not AI Magic
+      feature='AI Cartoon / AI Sketch'  terms=['AI Cartoon / AI Sketch', 'Cartoon / AI Sketch']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-08] PDR-A 16.9.0 - [AIAgent][UX] Text to Speech: Leaving without a voice keeps the new title on the timeline
+      feature='Text to Speech'  terms=['Text to Speech']  searched 162 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-09] PDR-A 16.9.0 - [AIAgent][UX] Editor (AI Voice Changer): Closing it from the Audio menu leaves the main clip selected
+      feature='Editor (AI Voice Changer)'  terms=['Editor (AI Voice Changer)']  searched 0 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-10] PDR-A 16.9.0 - [AIAgent][UX] Menu (My Artwork): Back returns to Home with the Menu closed, not to the Menu
+      feature='Menu (My Artwork)'  terms=['Menu (My Artwork)']  searched 1 candidate(s)
+      no likely duplicate
+
+[AIGC-Watermark-E1-11] PDR-A 16.9.0 - [AIAgent][UI] My Artwork (Pro tab): Headings and tiles touch the screen edges with no side margin
+      feature='My Artwork (Pro tab)'  terms=['My Artwork (Pro tab)']  searched 0 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 1 ticket(s) of 404 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0203  Assigned     RD   2611161  PDR-A 16.9.0 - [AIFound][UI] Template V2V: Task list titled “Video Edit by Chat” and tasks lack the template name
+
+== Supplementary text searches, open tickets only, 2026-11-27 10:43
+-- Text to Image
+DRA262611P0218    TRCreated       3    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: Image saved with the switch On is signed by Google, not CyberLink (C2PA)
+DRA262611P0217    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: Image shared with the switch Off has no AI label; saved copy has one
+DRA262611P0216    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: A second save of a result writes no new file; the switch change is lost
+DRA262611P0215    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Text to Image: 「Add to Timeline」 puts the labelled saved image on the timeline
+DRA262610-0036    Postpone        2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Credit details list its charges as Text to Image and Text to Speech
+DRA262610P0003    NewCreated      3    PM         2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Image: "Зображення у відео" button text wraps and touches the button edges
+DRA262610P0002    TRCreated       3    RD         2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Image: Add reference images button text overlaps its photo icon
+DRA262609-0059    NewCreated      3    PM         2609141    ALLENCW_CHEN    PDR-A 16.7.0 - [AIFound][UX] Text to Image: Aspect Ratio chips are ordered differently for each model and from spec
+DRA262609-0058    NeedCodeReview  3    RD         2609171    ALLENCW_CHEN    PDR-A 16.7.0 - [AIFound] Text to Image: Downloaded images are PNG data saved with a .jpg extension
+DRA262609P0046    NewCreated      2    PM         2609171    ALLENCW_CHEN    PDR-A 16.7.0 - [AIFound] Text to Image: From Replace BG > AI Images, result page has no Import to use the image as background
+DRA262609-0054    NewCreated      2    RD         2609141    ALLENCW_CHEN    PDR-A 16.7.0 - Text to Image( GPT-Image 2): There is no inspiration
+DRA262609-0017    BugNeedReview   2    RD         2609071    ALLENCW_CHEN    PDR-A 16.6.1 - [IND] Text to Image: There is no new inspirations
+DRA262607-0250    QA Propose Won  2    RD         2607311    SHIRLEY_FANG    PDR-A 16.6.0 - [FAR] Text to Image: The style names are displayed incorrectly
+DRA262607-0217    QA Propose Won  3    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Image: The unit used in the placeholder text ("words") conflicts with the top counter, which actually counts "characters"
+DRA262607-0216    QA Propose Won  3    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Image(Send Feedback): The app opens the feedback page on the "General" tab without attaching the source AI image to the report
+DRA262607-0215    QA Propose Won  3    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Image(Recent Task): The date label directly overlaps the top-right area of the second image thumbnail
+DRA262607-0213    QA Propose Won  3    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Add Media(Text to Image): Tapping "AI Images" opens the Text to Image generator screen with a blank prompt instead of an AI image gallery
+DRA262607-0028    NewFeature      2    RD         2607071    SAM_CHANG       PDR-A 16.5.0 - [VVIP] Text to Image: Prompt input box is too small for long prompt and has no scroll bar
+DRA262607-0024    Assigned        3    RD         2607071    VIVIAN_HUANG    PDR-A 16.5.0 - AI Images, Text to Image (Large View): After tapping select and cancel, display images of different tasks
+DRA262626-0001    QA Propose Won  2    RD         2626301    VIVIAN_HUANG    PDR-A 16.5.0 - [UX] Text to Image: Does not auto-switch back to the recent task room after deleting all tasks on grid view mode
+DRA262606-0304    NewCreated      2    PM         2606301    SHIRLEY_FANG    PDR-A 16.5.0 - [ESM/VIE/ARA/TRK] Text to Image (Inspiration): Inspiration description is not localized in Text to Image
+DRA262606-0303    NewCreated      2    PM         2606301    SHIRLEY_FANG    PDR-A 16.5.0 - [NLD] Text to Image (Example_3036_Propose_Gemini3.1): Example_3036_Propose_Gemini3.1 incorrectly shows ToS warning
+DRA262606-0220    NewCreated      2    PM         2606171    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Text to image: The templates/inspirations are not localized
+DRA262606-0128    NewCreated      2    PM         2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA] Text to image: The Editor's choice is not localized
+DRA262606-0126    NewCreated      2    PM         2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA]Text to image: The style is not localized
+DRA262605-0043    NewCreated      2    PM         2605082    ALLENCW_CHEN    PDR-A 16.4.0 - [VIE] Text to Image: Preset prompt and category are not localized
+DRA262603-0305    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] Text to image: Style names missing translation
+DRA262603-0269    NewCreated      2    PM         2603261    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] Text to Image: Presets in "Editor's Choice" are not localized
+DRA262603-0268    NewCreated      2    PM         2603261    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] Text to Image: Styles are not localized
+DRA262603-0171    BugNeedReview   2    RD         2603101    ALLENCW_CHEN    PDR-A 16.2.0 - [ES-MX] Add Media: Text to Image to truncated
+DRA251808-0001    BugNeedReview   3    PM         180833     VIVIAN_HUANG    PDR-A 16.0.0 - [UX] Text to Image (Large view mode): The thumbnails and import button shift when displaying "1 image selected"
+DRA252509-0174    Propose Wont F  2    RD         2509222    SAM_CHANG       PDR-A 15.8.0 - [UX] Timeline (My Artwork): Cannot add media to timeline after browsing AI Art/Text to Image in My Artwork
+DRA252508-0309    NewCreated      2    RD         2508291    SAM_CHANG       PDR-A 15.7.0 - Text to Image: New tag uses gradient colors
+DRA252508-0242    NewCreated      2    PM         2508251    SHIRLEY_FANG    PDR-A 15.7.0 - Text to Image (Recent Task): "Template" and "Credit" missing after reentering Text to Image Recent Task
+DRA242412-0154    ProposeNAB      3    RD         2412120    BALLY_HSU       PDR-A 14.7.0 - [UX] TTI, Text to Image : During the image generation process, the CTA button remains blue, and the text is gray.
+DRA242409-0166    NewCreated      2    RD         2409250    HAUSEN_LIN      PDR-A 14.5.0 - My Artwrok(Text to Image): Different packages are merged together
+DRA242409-0164    NewCreated      2    RD         2409250    HAUSEN_LIN      PDR-A 14.5.0 - My Artwrok(Text to Image): The page is incorrect after entering
+DRA242405-0106    NewCreated      2    PM         2405160    AMBER_MAI       PDR-A 14.0.0 - [UX]Shortcut(Text to Image): Only support 1:1 aspect ratio for generated images
+DRA252509-0174    Propose Wont F  2    RD         2509222    SAM_CHANG       PDR-A 15.8.0 - [UX] Timeline (My Artwork): Cannot add media to timeline after browsing AI Art/Text to Image in My Artwork
+DRA252508-0309    NewCreated      2    RD         2508291    SAM_CHANG       PDR-A 15.7.0 - Text to Image: New tag uses gradient colors
+-- AI Cartoon
+DRA262611P0226    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Editor (AI Style Transfer): AI Cartoon and AI Sketch results of a portrait photo are turned 90°
+DRA262611P0224    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Timeline: Preview shows no AI label for TTS, AI Anime, AI Cartoon or AI Sketch content
+DRA262608-0184    Assigned        2    RD         2608281    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound] AI Cartoon/ AI Sketch: btn_none after generation destroys the result, reselecting the same style raises Upgrade to Pro
+DRA262608-0183    NewCreated      3    PM         2608281    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] AI Cartoon/ AI Sketch: upgrade dialog says "create AI anime" in the AI Cartoon and AI Sketch categories
+DRA262603-0317    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] AI Cartoon: AI Cartoon effect name missing translation
+DRA262603-0316    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] AI Cartoon: AI Cartoon category name missing translation
+DRA262603-0239    NewCreated      2    PM         2603241    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] AI Anime/AI Cartoon/AI Sketch: Category and style are not localized
+DRA242412-0165    Propose Won't   2    RD         2412161    BALLY_HSU       PDR-A 14.7.0 - AI Creation, AI Cartoon : When users enter AI Cartoon from AI Creation, the shortcut mode page is still displayed.
+DRA242406-0071    NewCreated      2    PM         2406061    GUOWEI_LEE      PDR-A 14.1.0 - Notification : Notification doesn't link to AI Cartoon
+DRA242404-0204    NewCreated      2    PC-Art     2404290    BALLY_HSU       PDR-A 14.0.0 - [Quality] AI Cartoon(Police): Will generate NSFW(sensitive) result with specific photo
+DRA242404-0130    NewCreated      2    PM         2404231    HAUSEN_LIN      PDR-A 14.0.0 - Shortcut(AI Cartoon): IAP highlight on "AI Art"
+11 bug(s)
+-- AI Sketch
+DRA262611P0226    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Editor (AI Style Transfer): AI Cartoon and AI Sketch results of a portrait photo are turned 90°
+DRA262611P0224    NewCreated      3    PM         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Timeline: Preview shows no AI label for TTS, AI Anime, AI Cartoon or AI Sketch content
+DRA262608-0184    Assigned        2    RD         2608281    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound] AI Cartoon/ AI Sketch: btn_none after generation destroys the result, reselecting the same style raises Upgrade to Pro
+DRA262608-0183    NewCreated      3    PM         2608281    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] AI Cartoon/ AI Sketch: upgrade dialog says "create AI anime" in the AI Cartoon and AI Sketch categories
+DRA262603-0315    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] AI Sketch: AI Sketch effect name missing translation
+DRA262603-0314    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] AI Sketch: AI Sketch category name missing translation
+DRA262603-0239    NewCreated      2    PM         2603241    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] AI Anime/AI Cartoon/AI Sketch: Category and style are not localized
+DRA242412-0167    Propose Won't   2    RD         2412161    BALLY_HSU       PDR-A 14.7.0 - AI Creation, AI Sketch : When users enter AI Sketch from AI Creation, the shortcut mode page is still displayed.
+DRA242412-0135    Propose Won't   2    RD         2412110    BALLY_HSU       PDR-A 14.7.0 - AI Sketch : Enable "Don't show again" in recommendation page, "i" will no longer be able to open the recommendation page in Timeline
+DRA242405-0097    NewCreated      2    PM         2405141    HAUSEN_LIN      PDR-A 14.0.0 - [UX]AI Art/AI Sketch: It is easy for a sensitive dialog to pop up in some styles when generating with a sensitive source
+DRA242405-0047    NewCreated      2    RD         2405070    BALLY_HSU       PDR-A 14.0.0 - [UI] Launcher : "AI Sketch" is not displayed in the shortcut area
+DRA242404-0128    NewCreated      2    PM         2404231    HAUSEN_LIN      PDR-A 14.0.0 - Shortcut(AI Sketch): IAP highlight on "AI Art"
+DRA241226-0081    NewCreated      2    PM         1226050    BALLY_HSU       PDR-A 13.2.0 - Shortcut (AI Art/AI Sketch): Display "Text to image" in Choose/Select Media
+DRA241225-0116    QA Propose Won  2    RD         1225230    HAUSEN_LIN      PDR-A 13.2.0 - Shortcut(AI Sketch): Allow users to crop with the free ratio
+DRA241225-0112    Propose Won't   2    RD         1225230    HAUSEN_LIN      PDR-A 13.2.0 - Shortcut(AI Sketch): ROI shifts to the right when cropping the photo
+15 bug(s)
+-- Voice Changer
+DRA262610P0004    NeedCodeReview  3    RD         2610012    ALLENCW_CHEN    PDR-A 16.7.1 - [AIFound] AI Voice Changer: Remove disabled after reopening an effect on extracted audio
+DRA262606-0193    NewCreated      2    PM         2606161    SHERRY_LEE      PDR-A 16.5.0 - [TRK] AI Voice Changer: The templates are not localized
+DRA262606-0133    NewCreated      2    PM         2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA] AI Voice Changer: The templates are not localized
+DRA262605-0190    NewCreated      2    PM         2605272    ALLENCW_CHEN    PDR-A 16.4.5 - [NLD] AI Voice Changer: Styles are not localized
+DRA262605-0178    BugNeedReview   2    RD         2605261    ALLENCW_CHEN    PDR-A 16.4.5 - [NLD] Launcher(Shortcut): Incorrect line break in the Character Motion Swap/Voice Changer/Body Effect
+DRA262605-0136    NewCreated      2    PM         260520     ALLENCW_CHEN    PDR-A 16.4.5 - [NLD] AI Voice Changer: Voice is not localized
+DRA262604-0001    NewCreated      2    PM         2604011    SHIRLEY_FANG    PDR-A 16.3.5 - [AT Found] VIP Benefits: VIP Benefits page missing Voice Changer item under More VIP Benefits
+DRA262603-0265    NewCreated      2    PM         2603261    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] AI Voice Changer: Styles are not localized
+DRA262603-0184    NewCreated      2    PM         2603192    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] AI Voice Changer: Category is not localized
+DRA252511-0058    Assigned        3    RD         2511072    JAMIE_YEH       PDR-A 15.9.0 - Voice Changer: No sound when playing "specific video" with AI Voice Changer applied
+DRA252509-0109    Assigned        2    RD         2509151    JOANNEJA_WANG   PDR-A 15.7.0 - AI Voice Changer: No sound after applying a voice
+DRA252505-0234    Propose Wont F  2    RD         2505231    BALLY_HSU       PDR-A 15.2.0 - [Chromebook] Intro template, Voice changer : AI Voice Changer fails to show content using Intro template music.
+DRA252504-0030    Postpone        2    PM         2504101    AMBER_MAI       PDR-A 15.1.0 - [VVIP][UX]AI Voice Changer: Not support My Favorites
+DRA242407-0080    Propose Postpo  2    RD         2407080    BALLY_HSU       PDR-A 14.2.0 - Timeline [Landscape][Tablet] : Too much blank space in (AI Voice changer) panel
+DRA242403-0109    BugNeedReview   2    RD         2403290    JACK_HSIEH      PDR-A 13.4.0 - Shortcut(AI voice changer): After entering the full editor, click "V" and the audio will disappear.
+DRA241227-0068    NewCreated      2    RD         1227082    HAUSEN_LIN      PDR-A 13.3.0 - [Side Effect][AT Found]Voice Changer: Effect is not removed after tapping remove button
+DRA241226-0123    NewCreated      2    PM         1226060    ALLENCW_CHEN    PDR-A 13.2.0 - [UX]AI Voice Changer: It's unclear if the check and "Apply" buttons exist simultaneously.
+DRA241225-0096    Propose Won't   2    RD         1225191    HAUSEN_LIN      PDR-A 13.1.0 - Shortcut(Voice Changer): Preview continues to play even in the background after returning to the media picker to import again
+DRA231224-0104    Propose Won't   2    RD         1224080    HAUSEN_LIN      PDR-A 13.0.0 - [UX]Shortcut(Voice Changer): It is not easy to drag over a long distance for the selected range
+DRA231224-0097    Propose Won't   2    RD         1224072    ALLENCW_CHEN    PDR-A 13.0.0 - Shortcut(Voice Changer): Generate a different result from what was originally said
+DRA231224-0060    Propose Won't   2    RD         1224050    HAUSEN_LIN      PDR-A 13.0.0 - [UX]Shortcut(Voice Changer): Preview is not stopped when appling
+DRA231224-0058    ProposeNAB      2    PM         1224050    HAUSEN_LIN      PDR-A 13.0.0 - [FRA]Shortcut(Voice Changer): Demo voices is in English
+DRA231224-0035    NewCreated      2    PM         1224011    BALLY_HSU       PDR-A 13.0.0 - Shortcut(Voice Changer): The progress cursor is different from Guidelines
+DRA231224-0026    Assigned        1    RD         1224011    HAUSEN_LIN      PDR-A 13.0.0 - Shortcut(Voice Changer): Audio disappears after trimming
+DRA231223-0256    Propose Won't   2    RD         1223280    HAUSEN_LIN      PDR-A 13.0.0 - Shortcut(Voice Changer): The volume becomes smaller after applying the voice changer
+DRA221146-0025    Assigned        2    RD         114613     NICKLOUS_CHEN1  PDR-A 10.1.0 - SEO(Dynamic Link): Playhead doesn't locate correctly when opening Transition/Voice Changer sample projects via links when set UI mode to Landscape
+DRA219965-0049    Assigned        2    RD         99652      JACK_CHANG      PDR-A 9.3.0 - Timeline/Voice Changer: Temporarily AV unsync if select another Transition (playhead shift) then immediately tap play to preview voice changer clip
+DRA219965-0003    Propose Won't   1    RD         99652      JACK_CHANG      PDR-A 9.3.0 - Timeline/Voice Changer: AP crash when repeatedly preview 2 split videos both each apply voice changer (voice changer sample project can reproduce)
+DRA219366-0044    NewCreated      2    PM         93667      JACK_CHANG      PDR-A 8.2.0 - Edit (Voice Changer/Denoise/Filter/Effect/Stabilizer/Skin Smoothener/Fit & Fill/Pan & Zoom/Animation/Blending/Mask): "Remove function" icon "name" in each function is different
+DRA209172-0009    Propose Won't   2    RD         91720      JACK_CHANG      PDR-A 8.0.0 - Edit (Voice Changer): Have a "da" sound if change different voice effect "during playback"
+DRA209038-0001    Propose Won't   2    RD         90384      JACK_CHANG      PDR-A 7.5.0 - [HTC 801e/Android 5] Edit (Voice Changer): Preview 1 video with apply Voice Changer will not smooth in low-end device
+DRA209025-0010    Propose Won't   2    RD         90251      JACK_CHANG      PDR-A 7.5.0 - [Performance][Pixel 3] Edit (Voice Changer): Preview become not smooth after more or equal than 1 main video+3 pip video+"5 audio" track and "each track with voice" effect
+DRA208973-0050    Propose Won't   2    RD         89735      JACK_CHANG      PDR-A 7.4.0 - Edit (Voice Changer): Apply "Try before Buy" effect then "tap Preview canvas area" will pop IAP
+DRA208973-0028    NewCreated      2    RD         89735      JACK_CHANG      PDR-A 7.4.0 - Voice Changer (Man/Woman/Chipmonk1/Chipmonk2/Child/Robot/Duck): Voice effect affect too much on BGM, not good as competitor
+DRA208973-0025    NewCreated      2    RD         89735      JACK_CHANG      PDR-A 7.4.0 - Voice Changer (Robot): Robot effect on Human sound is weak, not good as competitor
+DRA208951-0030    Assigned        2    RD         89516      JACK_CHANG      PDR-A 7.4.0 - Edit (Voice Changer): Playback stop a while if change voice effect while playback
+36 bug(s)
+-- My Artwork
+DRA262611P0219    TRCreated       2    RD         2611161    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] My Artwork: Full-screen player of a video result shows the 「AI」 badge over the first ~1 s
+DRA262608-0002    QA Propose Won  3    RD         2608061    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] AI Anime Video: My Artwork shows static "Processing..." with no progress or ETA
+DRA262602-0066    NewCreated      2    PM         2602044    JAMIE_YEH       PDR-A 16.2.0 - [UX] My Artwork (Video Enhance): The Video Enhance result needs one more step to Save or enter (Full Edit) compared to PDRi
+DRA262601-0093    QA Propose Won  3    RD         2601121    JAMIE_YEH       PDR-A 16.0.0 - [Google everywhere][Landscape] My Artwork: Scrollbar appears when viewing Image to Video result
+DRA252510-0078    BugNeedReview   2    RD         2510161    JOANNEJA_WANG   PDR-A 15.8.0 - [Light Mode][UI] My Artwork (Image to Video): "Processing" text not clear
+DRA252510-0077    BugNeedReview   2    RD         2510161    JOANNEJA_WANG   PDR-A 15.8.0 - [Light Mode][UI] My Artwork (Image to Video): "Processing" text not clear
+DRA252509-0174    Propose Wont F  2    RD         2509222    SAM_CHANG       PDR-A 15.8.0 - [UX] Timeline (My Artwork): Cannot add media to timeline after browsing AI Art/Text to Image in My Artwork
+DRA252508-0269    Postpone        2    PM         2508273    JOANNEJA_WANG   PDR-A 15.7.0 - [SPEC] Project(My Artwork): The current UI layout ratio differs from the output screen ratio (UI layout needs adjustment).
+DRA252508-0268    Assigned        2    RD         2508273    JOANNEJA_WANG   PDR-A 15.7.0 - [UX] Project(My Artwork): Thumbnails crops head when result count < 4
+DRA252508-0189    NewCreated      2    RD         2508201    SAM_CHANG       PDR-A 15.7.0 - [SPEC] Timeline : "AI Creation Task" label should be "My Artwork" (New Request)
+DRA242410-0014    NewCreated      2    PM         2410010    BALLY_HSU       PDR-A 14.5.0 - [UX][UI] My Artwork : The design of the rectangular thumbnails tends to cut off people's heads.
+DRA242409-0153    Propose Won't   2    RD         2409250    HAUSEN_LIN      PDR-A 14.5.0 - [UI][UX]My Artwork: The text for descriptions without tasks is too small
+12 bug(s)
+-- Cinematic Reel
+DRA262611P0321    NewCreated      3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty picture boxes with no message
+DRA262611P0320    RDResolved      3    PC-Doc     2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öneri」 with a small first letter
+DRA262611P0319    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino captions with English headings and button
+DRA262611P0318    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelsesfornemmelse」 breaks mid-word
+DRA262611P0317    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their bars in Arabic, Persian and Hebrew
+DRA262611P0290    Assigned        2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+DRA262611P0289    RDResolved      2    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+DRA262610P0179    QA Propose Won  2    PC-Art     2610151    SAM_CHANG       PDR-A 16.8.0 - [AIFound] Cinematic Reel Creator (Horror Movies): The last frame sometimes turns black
+DRA262608-0048    BugNeedReview   2    RD         2608091    ALLENCW_CHEN    PDR-A 16.6.0 - [SideEffect] Cinematic Reel Creator(Recent Task): Redundant UI elements are displayed when there are no projects in Recent Tasks
+DRA262607-0190    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN] Cinematic Reel Creator (Time Lapse): Template description is truncated
+DRA262607-0189    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/ITA/RUS/THA] Cinematic Reel Creator (One-Take Shot): Template description is truncated
+DRA262607-0188    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/FRA/THA] Cinematic Reel Creator (Handheld Camera): Template description is truncated
+DRA262607-0187    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/FRA/PTB/RUS/THA/HIN/HEB] Cinematic Reel Creator (Fast Cut): Template description is truncated
+DRA262607-0186    NewCreated      2    PM         2607272    SAM_CHANG       PDR-A 16.5.5 - [JPN/ESP/RUS/THA/HIN/ESM/CHS] Cinematic Reel Creator (Micro Cinema): Template description is truncated
+DRA262607-0184    NewCreated      2    PM         2607242    ALLENCW_CHEN    PDR-A 16.5.5 - [JPN] Cinematic Reel Creator(Template): Description is truncated
+DRA262607-0180    BugNeedReview   2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Opening intro: Enter Video Edit by Chat after Tap CTA on Cinematic Reel Creator's opening intro
+DRA262607-0179    BugNeedReview   1    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - [MUI] Opening intro: The opening intro for Cinematic Reel Creator is only displayed when the language is set to ENG
+DRA262607-0161    NewCreated      2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - AI Magic: There is no entry for Cinematic Reel Creator
+DRA262607-0050    BugNeedReview   2    RD         2607071    ALLENCW_CHEN    PDR-A 16.5.0 - [Landscape][UX] Cinematic Reel Creator: No OSD shows "Portrait mode only" when entering
+19 bug(s)
+-- AI Remove
+0 bug(s)
+-- toolbar
+DRA262611P0284    NeedCodeReview  3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][THA] AI Video Enhance: Panel title, fps chips and clip toolbar label are truncated
+DRA262607-0233    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat(Recent Task): Only the "Delete" action is displayed at the bottom toolbar. No batch "Download" option or control is available
+DRA262603-0281    Assigned        2    RD         2603261    SHIRLEY_FANG    PDR-A 16.3.0 - [Chromebook] Timeline: Toolbar text size is inconsistent in timeline
+DRA262603-0180    NewCreated      2    PM         2603202    SAM_CHANG       PDR-A 16.1.5 - [UX][Google everywhere][Hotkey] Timeline (Transform): Alt+Ctrl+T triggers both Transform toolbar and system panel
+DRA262602-0128    QA Propose Pos  2    RD         2602102    SAM_CHANG       PDR-A 16.1.5 -  [Google everywhere][Landscape] Timeline: Arrow navigation does not prioritize left Toolbar buttons
+DRA262602-0101    QA Propose Pos  2    RD         2602092    JAMIE_YEH       PDR-A 16.1.5 - [Google everywhere][Landscape] Timeline:Toolbar not shown after touch zoom and editing master clip
+DRA252508-0150    QA Propose Won  2    RD         2508191    SHIRLEY_FANG    PDR-A 15.2.1 - [Chromebook] [UX] Timeline: Global toolbar is not obvious in timeline
+DRA252501-0151    Propose Wont F  2    RD         2501120    HAUSEN_LIN      PDR-A 14.8.0 - Mixpanel: There is no "Timeline_Toolbar_Tap" >> "mgt_toolbar" >> "tools_motion_tracking"
+DRA242411-0179    NewCreated      3    PM         2411150    AMBER_MAI       PDR-A 14.6.0 - [UX]Toolbar: Button's highlight/press status is not good-looking
+DRA242411-0086    NewCreated      2    RD         2411060    HAUSEN_LIN      PDR-A 14.6.0 - Timeline: Toolbar is incorrect after backing from audio speed
+DRA242410-0237    Propose Won't   2    RD         2410290    HAUSEN_LIN      PDR-A 14.6.0 - Adjust: Need to tap the back button twice to return the toolbar after tapping reset
+DRA242410-0197    Propose Won't   2    RD         2410240    AMBER_MAI       PDR-A 14.5.2 - [UX]Voice-Over: Save button is placed at the end of toolbar
+DRA242407-0113    QA Propose Pos  2    RD         2407120    BALLY_HSU       PDR-A 14.2.1 - [VVIP] Image Master Toolbar : Crop feature on tool menu isn't renamed to Crop & Rotate (remove Rotate)
+DRA242406-0086    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_photo_toolbar
+DRA242406-0085    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_video_toolbar
+DRA242406-0084    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > master_video_toolbar
+DRA242406-0083    Propose Won't   2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > master_photo_toolbarRandom
+DRA242406-0081    NewCreated      2    PM         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > portrait_main_toolbar > effects_overlay in spec
+DRA242406-0017    NewCreated      2    PM         2406030    BALLY_HSU       PDR-A 14.1.0 - Main Tool Menu : The functions after the [AI ​​Audio tool] toolbar returns are the old sorting
+DRA242404-0084    Propose Won't   2    RD         2404191    HAUSEN_LIN      PDR-A 13.4.1 - [Landscape]Edit: There is a chance that the toolbar doesn't display completely
+DRA242404-0081    Assigned        2    RD         2404100    JACKSON_CHEN    _CS: PDRA The pop up toolbar doesn't have corresponding tools in it CS002802490
+DRA221208-0005    NewCreated      2    PM         120802     BALLY_HSU       PDR-A 11.0.0 - [UX][New feature] : The timeline clip toolbar is too long, need to re-cognize
+DRA221151-0029    QA Propose Pos  2    RD         115116     ALLENCW_CHEN    PDR-A 10.2.0 - Effect Layer: It back to the wrong toolbar when adjusting Brightness/Shadow/Feather then tap back button
+DRA221141-0019    Propose Postpo  2    RD         114181     ALLENCW_CHEN    PDR-A 10.1.0 - [Landscape] Transition: The toolbar of transition is too short. It is unsync with PDR-I
+DRA221131-0012    Assigned        2    RD         113184     BIAGGI_LI       PDR-A 10.0.0 - [Pixel3][Portrait] Toolbar: System bar is triggered after tapping audio button
+DRA221103-0012    Assigned        2    RD         110354     BIAGGI_LI       PDR-A 9.11.0 - Edit (Effect): Toolbar function is incorrect if adding keyframe then changing shape
+DRA211085-0007    NewCreated      3    PM         108562     ALAN_YANG       PDR-A 9.10.0 - [Unsync] Toolbar: Toolbar menu scrolls to right and back automatically in new launch AP
+DRA208656-0011    Assigned        2    RD         86567      JACK_CHANG      PDR-A 7.2.0 - Edit: "After switch" to new toolbar page, "immediately" first time tap < icon will no action
+DRA208091-0030    NewCreated      2    RD         80919      JACK_CHANG      PDR-A 6.9.0 - [Tablet][Samsung Galaxy Tab4][ENU/CHT/CHS/JPN/KOR/DEU/FRA/ITA/IDN/THA] Edit: 2nd line toolbar text is truncated
+DRA207870-0007    Assigned        2    RD         78706      BIAGGI_LI       PDR-A 6.7.1 - Timeline (Edit): Timeline tracks are covered by toolbar after voice-over recording then back
+DRA207738-0012    Assigned        2    RD         77384      BIAGGI_LI       PDR-A 6.7.0 - [UX] Timeline: Toast should be pop-out on the preview screen, not on the toolbar.
+31 bug(s)
+-- Effects
+DRA262609-0088    NewCreated      2    PM         2609243    SHERRY_LEE      PDR-A 16.7.0 - [AIFound][UI][SVE] Effects > Frame category: effect names 「Variety show 13」–「Variety show 15」 are untranslated
+DRA262607-0256    NewCreated      2    PM         2607311    SHIRLEY_FANG    PDR-A 16.6.0 - [FAR] Demo Videos: "Polaroid Style Trasitions/Groovy Electronic Effects" are not fully localized
+DRA262606-0209    NewCreated      2    PM         2606161    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Effects Overlay: The categories are not localized
+DRA262606-0207    NewCreated      2    PM         2606161    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Effects: The categories are not localized
+DRA262606-0190    NewCreated      2    PM         2606161    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Sound Effects: The categories are not localized
+DRA262606-0185    Assigned        3    RD         2606161    ALLENCW_CHEN    PDR-A 16.5.0 - Audio(Sound Effects): The Audio Tool menu and the highlight for "Sound Effects" are enlarged after tapping
+DRA262606-0137    NewCreated      2    PM         2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA] Effects: The category is not localized
+DRA262606-0079    NewCreated      2    PC-Art     2606071    ALLENCW_CHEN    PDR-A 16.5.0 - [UX] Effects(Sunlight Glare): The effect is inconsistent
+DRA262605-0142    BugNeedReview   2    RD         2605212    SHIRLEY_FANG    PDR-A 16.4.0 - Effect Layer: Keyframe function is available in FX Effects
+DRA262603-0310    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] Effect filter: Effects Filter category tabs are missing translation
+DRA262603-0307    NewCreated      2    PM         2603303    ETHAN_HSU       PDR-A 16.3.0 - [ESM] Effects (Effect Overlay): Category names missing translation
+DRA262603-0229    NewCreated      2    PM         2603061    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] Video Effects: Category and effects are not localized
+DRA262603-0222    NewCreated      2    PM         2603061    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] Effects: Category and effect's name are not localized
+DRA262601-0115    NewCreated      2    PM         2601151    SAM_CHANG       PDR-A 16.0.0 - Effect layer (Motion): Video Effects templates not displaying due to incorrect CMS content version
+DRA252511-0102    NewFeature      2    RD         2511141    JAMIE_YEH       PDR-A 15.9.0 - [UX] [Landscape] Effects: Unable to add styles to Favorites in Filter or Effects
+DRA252511-0010    Propose Wont F  2    RD         2511031    SHIRLEY_FANG    PDR-A 15.9.0 - Effects (Tempo Effects): No toast shown after selecting Tempo Effect on a faceless photo
+DRA252510-0062    NewCreated      2    PM         2510141    SAM_CHANG       PDR-A 15.8 - Video Effects (Variety Show 09): "Variety Show 09" effect not visible on dark background
+DRA252508-0181    NewFeature      2    RD         2508201    SAM_CHANG       PDR-A 15.7.0 - [UX] Effects: Add bubble hint to notify user about adding to favorites
+DRA242410-0163    Propose Won't   2    RD         2410150    BALLY_HSU       PDR-A 14.5.1 - [Vivo Y20] Timeline : After applying transition effects, playback will not be smooth on low-end mobile devices.
+DRA242407-0134    NewCreated      2    PM         2407220    AMBER_MAI       PDR-A 14.2.1 - [UX]Music/Sound Fx: No translation for sound effects/music names
+DRA242406-0081    NewCreated      2    PM         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > portrait_main_toolbar > effects_overlay in spec
+DRA242406-0063    NewCreated      2    PM         2406061    JETHRO_WANG     PDR-A 14.1.0 - Shortcut(Tempo Effects): Can import video without sound
+DRA242404-0024    Propose Won't   2    RD         2404010    BALLY_HSU       PDR-A 13.4.0 - Tempo Effect(Timeline): "Speed" ​​and "Tempo effects" can coexist
+DRA241227-0065    Propose Won't   2    RD         1227081    BALLY_HSU       PDR-A 13.2.0 - Timeline [Mi A1/Android 7.1.2]: Some AI effects and transition combinations in low device are not previewed smoothly.
+DRA241226-0101    Propose Postpo  2    RD         1226050    HAUSEN_LIN      PDR-A 13.2.0 - Voice Effects: The icon and name are incorrect
+DRA231224-0095    NeedMoreInfo    2    RD         1224072    BALLY_HSU       PDR-A 13.0.0 - [UX]Title Animation Loop : The animation effects of these two (Fold and Spin) are similar
+DRA231221-0093    NewCreated      2    PM         1221121    BALLY_HSU       PDR-A 12.6.0 - [UX] Video FX, AI Effect : Users don’t know that long press can add effects to favorites
+DRA231216-0057    Assigned        2    RD         1216200    BALLY_HSU       PDR-A 12.1.0 - AI effect(Body - Motion Trail - Pulse 1) : Sometimes the background can also be applied to the Body effects
+DRA221188-0003    NewCreated      3    PC-Art     118803     BALLY_HSU       PDR-A 10.4.0 - Opening Intro video  : Some of the glitch in the video (Vintage Effects)
+DRA221186-0011    Propose Won't   2    RD         118620     AMBER_MAI       PDR-A 10.4.0 - FX Effect: Some effects are not in alphabetical order
+DRA221179-0007    QA Propose Won  2    RD         117964     BALLY_HSU       PDR-A 10.4.0 - Timeline (Effect): When applying different effects the thumbnail will change and the thumbnail will be broken
+DRA221101-0030    NewCreated      2    PM         110105     NICKLOUS_CHEN1  PDR-A 9.11.0 - [Android 9] Sticker(Special Effects): Show obivous halo on 16 stickers animated thumbnail ("Energy_Electric 01 ~ 16")
+DRA221103-0013    NewCreated      2    PM         110354     RYAN_CHANG      PDR-A 9.11.0 - Sticker(Special Effects/Love/Birthday/Character): AP show some specific animated stickers as static of "Special Effects/Love/Birthday/Character". (2022/1/27 11:05am)
+DRA221103-0009    NewCreated      2    PC-Art     110321     STEPHANIE_CHAN  PDR-A 9.11.0 - Sticker(Special Effects) : some stickers show unexpected background on their thumbnail picture
+DRA221101-0025    NewCreated      2    PC-Art     110105     ANGOL_HUANG     PDR-A 9.11.0 - Sticker (Special Effects): "clinhouse_specialfx_3deffect_smoke1" preview flashes in library
+DRA221101-0007    QA Propose Pos  2    RD         110105     ALAN_YANG       PDR-A 9.11.0 - Sticker(Special Effects): Does not show highlighted sticker on preview window when selecting the sticker
+DRA221099-0033    Assigned        2    RD         109992     NICKLOUS_CHEN1  PDR-A 9.11.0 - Sample Project(Hary Potter Effects): Project include premium sticker but doesn't show [Premium features used] tag
+DRA154592-0008    NewFeature      3    PM         45923      KEVIN_CHENG     _CS: [suggestion] customer request to support more effects. AWM15052524L
+38 bug(s)
+-- Video Edit by Chat
+DRA262611P0203    Assigned        3    RD         2611161    ANGOL_HUANG     PDR-A 16.9.0 - [AIFound][UI] Template V2V: Task list titled “Video Edit by Chat” and tasks lack the template name
+DRA262610-0068    NewCreated      2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent] Video Edit by Chat: Little Devil ENU default has 10627 characters, exceeding 5000
+DRA262610-0067    NewCreated      2    PM         2610171    SAM_CHANG       PDR-A 16.8.0 - [AIAgent][SPEC] Video Edit by Chat: Default prompts exceed the 2000-character limit
+DRA262608-0157    TRCreated       3    RD         2608252    SAM_CHANG       PDR-A 16.6.0 - [NOR/DAN/SVE/UKR/TRK] Launcher (Big Shortcut): Video Edit by Chat shortcut name is too close to the boundary
+DRA262607-0259    NewFeature      3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat: The result page only shows a single video preview without any option or control to toggle/compare with the original video
+DRA262607-0237    NewCreated      2    PM         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat: The "Generate Video" button is disabled, and tapping it provides no feedback
+DRA262607-0236    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound] Video Edit by Chat(Remove Passersby): Grammar error in prompt text
+DRA262607-0235    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat(Apply Retro Film/Turn Black & White): Punctuation marks are missing a trailing space in the description
+DRA262607-0234    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat: Card descriptions leak raw internal prompt engineering syntax and model instructions
+DRA262607-0233    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat(Recent Task): Only the "Delete" action is displayed at the bottom toolbar. No batch "Download" option or control is available
+DRA262607-0194    Assigned        3    RD         2607273    SAM_CHANG       PDR-A 16.5.5 - [AIFound][UX] Video Edit by Chat: Generate button should not show credits without input video
+DRA262607-0180    BugNeedReview   2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - Opening intro: Enter Video Edit by Chat after Tap CTA on Cinematic Reel Creator's opening intro
+DRA262606-0218    NewCreated      2    PM         2606171    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Video Edit by Chat: Some inspirations are not localized
+DRA262606-0111    NewCreated      2    PC-Doc     2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA][UI] Video Edit by Chat: The feature name is not localized
+14 bug(s)
+-- Talking Avatar
+DRA262609-0032    Assigned        3    RD         2609071    VIVIAN_HUANG    PDR-A 16.6.1 - Talking Avatar (Change BG): Does not display the Change BG panel title and does not sync with PDRI
+DRA262608-0203    NeedCodeReview  3    RD         2608281    VIVIAN_HUANG    PDR-A 16.6.0 - Talking Avatar: Does not display a toast asking the user to select the Terms checkbox on the recommendation page
+DRA252502-0121    NewFeature      2    RD         2502240    BALLY_HSU       PDR-A 14.9.0 - [UX] Talking Avatar(By Voice) : When an audio clip has been trimmed, and then user press [Generate Talking Avatar for], it will take more time (approximately 17 seconds to 1 minute).
+DRA252502-0094    NewCreated      2    RD         2502170    HAUSEN_LIN      PDR-A 14.9.0 - Talking Avatar: The is no thumbnail for the preset task after completed
+DRA252502-0013    Propose Wont F  2    RD         2502051    HAUSEN_LIN      PDR-A 14.9.0 - Talking Avatar: The title of "By Voice" is incorrect
+DRA252502-0009    NewCreated      3    PM         2502051    HAUSEN_LIN      PDR-A 14.9.0 - [UI]Talking Avatar: The corner radius of the preview in AI Face Art room is incorrect
+DRA252502-0007    NewCreated      2    RD         2502051    HAUSEN_LIN      PDR-A 14.9.0 - [UI]Talking Avatar: The top bar on Crop room is incorrect
+DRA252501-0244    NewCreated      3    PM         2501210    AMBER_MAI       PDR-A 14.8.0 - [UX]Talking Avatar: Estimated duration "xxx s" is difficult to understand whether the 10-minute limit has been exceeded
+DRA252501-0217    Assigned        2    RD         2501161    BALLY_HSU       PDR-A 14.8.0 - Talking Avatar, Recent task page : When the build fails, the button says "Retry" but an Error dialog pops up
+DRA252501-0216    NewCreated      2    RD         2501161    BALLY_HSU       PDR-A 14.8.0 - Talking Avatar: Clicking "Continue" does not respond
+DRA252501-0136    Propose Won't   2    RD         2501120    BALLY_HSU       PDR-A 14.8.0 - [UX] Talking Avatar(Custom-Add AI Face Art) : The "Change BG" option should be changed to "Change Background."
+DRA252501-0134    NewCreated      2    PM         2501090    HAUSEN_LIN      PDR-A 14.8.0 - [UX]Talking Avatar: The message is not clear even when the user selects a single face image
+DRA252501-0044    QA Propose Won  2    RD         2501020    HAUSEN_LIN      PDR-A 14.8.0 - [VVIP][UX]Talking Avatar: [VVIP][UX] Talking Avatar: Doesn't automatically select the corresponding voice based on the preset gender
+DRA252501-0040    NewCreated      2    PM         2501020    HAUSEN_LIN      PDR-A 14.8.0 - [UX]Talking Avatar/AI Video Upscaler/Super Slow Motion: Enabling "Don't show again" causes an issue where recent tasks become inaccessible
+DRA252501-0026    QA Propose Won  2    RD         2501020    HAUSEN_LIN      PDR-A 14.8.0 - Talking Avatar: The audio is not extracted directly after selecting a video
+DRA252501-0022    QA Propose Won  2    RD         2501020    HAUSEN_LIN      PDR-A 14.8.0 - Talking Avatar: There is no volume slider in the select voice panel
+DRA252501-0005    QA Propose Won  2    RD         2501020    HAUSEN_LIN      PDR-A 14.8.0 - Talking Avatar: There is no "Portrait" toggle button
+17 bug(s)
+-- Text to Speech
+DRA262610P0029    NewCreated      3    PM         2610081    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] Text to Speech: Generated audio displays internal file names
+DRA262610P0028    NewCreated      3    PM         2610081    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] Text to Speech: Empty filter results still allow paid generation
+DRA262610-0036    Postpone        2    PM         2610081    BALLY_HSU       PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Credit details list its charges as Text to Image and Text to Speech
+DRA262610P0001    Assigned        3    RD         2610011    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Speech (My Voices): credit hint "1 кредит = 200 символів" is cut off at the bottom
+DRA262609-0048    NewCreated      3    PM         2609101    ALLENCW_CHEN    PDR-A 16.6.2 - [AIFound][UX] Text to Speech: Select Voice reopens on Preset Voices instead of the tab actually applied
+DRA262609-0047    BugNeedReview   3    PM         2609101    ALLENCW_CHEN    PDR-A 16.6.3 - [AIFound][UX] Text to Speech: Preset Voices list spins indefinitely with no error, timeout or retry
+DRA262609-0046    BugNeedReview   3    PM         2609101    ALLENCW_CHEN    PDR-A 16.6.2 - [AIFound][UX] Text to Speech: dialog titled "Replace Voice?" defaults to "Create as new one"
+DRA262609-0045    BugNeedReview   3    PM         2609101    ALLENCW_CHEN    PDR-A 16.6.2 - [AIFound][UX] Text to Speech: Select Voice reopens on Preset Voices instead of the tab actually applied
+DRA262609-0043    NewCreated      3    PM         2609081    ALLENCW_CHEN    PDR-A 16.6.2 - [AIFound][UX] Text to Speech: Casual Voice lists voices as en01-en09 with placeholder avatars
+DRA262609-0042    NewCreated      3    PM         2609081    ALLENCW_CHEN    PDR-A 16.6.2 - [AIFound] Text to Speech: empty text clip is accepted and charged 2 credits with no warning
+DRA262606-0191    NewCreated      2    PM         2606161    SHERRY_LEE      PDR-A 16.5.0 - [TRK] Text to Speech (Profile): The speakers' names are not localized
+DRA262603-0240    NeedCodeReview  3    RD         2603241    SHIRLEY_FANG    PDR-A 16.3.0 - [Landscape][UX] Text to Speech: Style tag text is not centered in Text to Speech
+DRA252508-0148    QA Propose Won  2    RD         2508191    SHIRLEY_FANG    PDR-A 15.2.1 - [Chromebook] [UX] Text: Text to Speech and Auto Captions icons appear pixelated
+DRA252503-0201    NewCreated      4    RD         2503132    HAUSEN_LIN      PDR-A 15.0.0 - [UX]Text to Speech: Doesn't keep the settings after switching the preset voice
+DRA252503-0190    NewCreated      2    PM         2503132    HAUSEN_LIN      PDR-A 15.0.0 - [UX]Text to Speech: Doesn't keep the settings after switching the preset voice
+DRA252503-0132    NewCreated      2    PC-Art     2503101    SHIRLEY_FANG    PDR-A 15.0.0 - [UI] [Landscape] Text to Speech: The shadow area is too wide
+DRA252503-0094    Propose Wont F  2    RD         2503062    HAUSEN_LIN      PDR-A 15.0.0 - [UX]Text to Speech: The filter options in the same category cannot be multi-selected
+DRA252503-0032    Postpone        2    RD         2503041    HAUSEN_LIN      PDR-A 15.0.0 - [UI]Text to Speech: Edit text UI is incorrect
+DRA241226-0216    Propose Won't   2    RD         1226230    JACK_HSIEH      PDR-A 13.3.0 - [Landscape]Timeline(shrink mode): Text to speech used by dragging does not work properly (the language selection interface will not be called up)
+DRA231222-0076    Assigned        2    RD         1222110    BALLY_HSU       PDR-A 12.6.0 - Ripple Editing, Title, Text to speech : Pin button is not hidden on the Designer, TTS panel
+DRA231219-0195    Propose Won't   2    RD         1219260    HAUSEN_LIN      PDR-A 12.4.0 - Text to Speech: If users tap the TTS entry on the main tool and then quickly tap "Text" or "Media", it will open the submenu
+DRA231219-0169    Assigned        2    RD         1219210    HAUSEN_LIN      PDR-A 12.4.0 - Text to Speech: If the TTS audio is longer than the text clip, the timeline is not moving correctly
+DRA231219-0145    ProposeNAB      2    RD         1219180    HAUSEN_LIN      PDR-A 12.4.0 - Text to Speech: The format of values is "1,0" in some languages
+DRA231219-0058    Propose Won't   2    RD         1219101    POYI_KUO        PDR-A 12.4.0 - Text to Speech: Close the TTS room after tap blank space on the canvas
+DRA231219-0042    Propose Won't   2    RD         1219070    HAUSEN_LIN      PDR-A 12.4.0 - Text to Speech: Regenerated TTS audio is not in the original track
+DRA231219-0021    QA Propose Won  2    RD         1219070    HAUSEN_LIN      PDR-A 12.4.0 - Text to Speech: There is no volume slider
+DRA231219-0018    NewCreated      2    RD         1219040    HAUSEN_LIN      PDR-A 12.3.0 - Text to Speech: The voice becomes weak when the pitch is increased with some demo voice
+DRA231219-0017    NewCreated      2    PM         1219040    BALLY_HSU       PDR-A 12.4.0 - Text to Speech:  Show male shadows but make female voices
+28 bug(s)
+-- Recent task
+DRA262611P0245    RDResolved      2    RD         2611171    ALLENCW_CHEN    PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: 「View」 on a completed Recent task card is Regular, not Medium
+DRA262611P0235    NewCreated      2    PM         2611181    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Empty Recent task reads 「No Generated Videos」, not 「No results found」
+DRA262611P0082    TRCreated       2    RD         2611091    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Recent task notice reads 「1 year」 and 「Select」, not 「1 Year」 and 「Manage」
+DRA262611P0081    TRCreated       2    RD         2611091    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Recent task has no ‹ and system Back exits to the Launcher, not the panel
+DRA262611P0028    NeedCodeReview  3    RD         2611041    ALLENCW_CHEN    PDR-A 16.8.0 - [AIAgent][UI] AI Mini Drama: Recent Task Manage 「Delete」 label is regular weight with a smaller icon
+DRA262608-0154    TRCreated       3    RD         2608252    JAMIE_YEH       PDR-A 16.6.0 - Image to Video (Recent task): Final video timecode is one second shorter than the total duration
+DRA262608-0072    NewCreated      2    PM         2608132    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound] Video Enhance: Recent tasks shows a static "4 minutes left..." and a 0% progress bar for the whole run, with no timeout, cancel or retry
+DRA262608-0048    BugNeedReview   2    RD         2608091    ALLENCW_CHEN    PDR-A 16.6.0 - [SideEffect] Cinematic Reel Creator(Recent Task): Redundant UI elements are displayed when there are no projects in Recent Tasks
+DRA262608-0013    NewFeature      3    PM         2608061    SAM_CHANG       PDR-A 16.6.0 - [UX] Image to Video (Recent Task): Add model information to recent task
+DRA262607-0233    QA Propose Won  3    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] Video Edit by Chat(Recent Task): Only the "Delete" action is displayed at the bottom toolbar. No batch "Download" option or control is available
+DRA262607-0229    QA Propose Won  2    RD         2607291    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound] Image to Video(Pet Drunk Dance): The video duration is displayed as 10s on the Recent Task page, whereas the actual generated video duration is 14s
+DRA262607-0225    QA Propose Won  3    RD         2607291    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Auto Edit: Missing recent task entry in Auto Edit. It is inconsistent with other features
+DRA262607-0215    QA Propose Won  3    RD         2607281    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Image(Recent Task): The date label directly overlaps the top-right area of the second image thumbnail
+DRA262626-0001    QA Propose Won  2    RD         2626301    VIVIAN_HUANG    PDR-A 16.5.0 - [UX] Text to Image: Does not auto-switch back to the recent task room after deleting all tasks on grid view mode
+DRA262606-0294    Assigned        2    RD         2606262    SAM_CHANG       PDR-A 16.5.0 - Template (Recent Task): Incorrect action buttons are shown when viewing the first generated video
+DRA262603-0116    Propose Wont F  2    RD         2603161    ALLENCW_CHEN    PDR-A 16.1.5 - [Google everywhere] Image to Video/ Video Enhance(Recent Task): Buttons are not set hover and tool tips
+DRA262602-0224    BugNeedReview   2    RD         2602233    ALLENCW_CHEN    PDR-A 16.2.0 - AI Storytelling: Cannot enter recent task room after tapping recent task button in settings room
+DRA252508-0242    NewCreated      2    PM         2508251    SHIRLEY_FANG    PDR-A 15.7.0 - Text to Image (Recent Task): "Template" and "Credit" missing after reentering Text to Image Recent Task
+DRA252508-0241    NewCreated      2    PM         2508251    SHIRLEY_FANG    PDR-A 15.7.0 - AI Art (Recent Task): "Template" and "Credit" missing after reentering AI Art Recent Task
+DRA252501-0217    Assigned        2    RD         2501161    BALLY_HSU       PDR-A 14.8.0 - Talking Avatar, Recent task page : When the build fails, the button says "Retry" but an Error dialog pops up
+DRA252501-0040    NewCreated      2    PM         2501020    HAUSEN_LIN      PDR-A 14.8.0 - [UX]Talking Avatar/AI Video Upscaler/Super Slow Motion: Enabling "Don't show again" causes an issue where recent tasks become inaccessible
+DRA242409-0003    Propose Won't   2    RD         2409020    BALLY_HSU       PDR-A 14.4.0 - [UX] Super Slow Motion/AI Video Upscaler : "Recent Task" cannot be found from shortcut entry when user checks "don't show again" check box for shotcut demo tutorial page
+22 bug(s)
+-- Text to Video
+DRA262610P0283    Assigned        2    RD         2610221    SAM_CHANG       PDR-A 16.7.4 - [AIFound][UI] Text to Video (Kling 4.0): Russian description overlaps the lower card border
+DRA262610P0281    NewCreated      1    PM         2610221    SAM_CHANG       PDR-A 16.7.4 - Text to Video (Kling 4.0): Kling 4.0 does not display the required credits on the Generate button
+DRA261007-0001    NeedCodeReview  2    RD         1007       SAM_CHANG       PDR-A 16.7.3 - [AIFound][UX] Text to Video: Generate shows Upgrade to Pro instead of Sign in when signed out
+DRA262610P0011    Assigned        2    PM         2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][SWE] Text to Video: Gemini Omni Flash Inspiration caption uses "@image1" instead of "@bild1"
+DRA262610P0010    NewCreated      3    PM         2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][SWE] Text to Video: Wan 2.7 Inspiration captions are not translated
+DRA262610P0008    NewCreated      3    PC-Art     2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Video: settings summary bar shows "Увімкне…" instead of "Увімкнено"
+DRA262610P0007    NewCreated      2    PC-Art     2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Video settings: mode option "Професійний" is cut off as "Професійни"
+DRA262610P0006    NewCreated      3    PC-Art     2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][UKR] Text to Video settings: duration options "10 Секунда(и)" and "15 Секунда(и)" are cut off
+DRA262610P0005    NewCreated      3    PM         2610012    BALLY_HSU       PDR-A 16.7.1 - [AIFound][NOR] Text to Video: model descriptions and prompt hints are shown in Danish
+DRA262609P0093    NewCreated      2    PM         2609243    SHERRY_LEE      PDR-A 16.7.0 - [AIFound][UI] Text to Video (Veo 3.1): Prompt hint leaves the slots [object], [scene], [action] and [mood] untranslated in Danish
+DRA262609-0068    NewCreated      2    RD         2609242    SAM_CHANG       PDR-A 16.7.0 - [HEB] Text to Video: "Add up to x reference images (Optional)" is not localized
+DRA262609-0067    NewCreated      2    RD         2609242    SAM_CHANG       PDR-A 16.7.0 - [HEB] Text to Video: "Current model media upload limit: 6 reference media files in total." is cut off
+DRA262609-0066    NewCreated      2    RD         2609242    SAM_CHANG       PDR-A 16.7.0 - [HEB] Text to Video: "Current model media upload limit: 5 reference media files in total, with up to 5 videos. Each video must be 1-15 seconds long, and total video duration cannot exceed 15 seconds" is not localized
+DRA262609-0061    NewCreated      3    PM         2609171    ALLENCW_CHEN    PDR-A 16.7.0 - [AIFound][UX] Text to Video: the reference-media picker reuses the video editor's footer, reporting "1 clip selected - 00:05" with a storyboard duration strip for a still reference image
+DRA262609-0060    NeedCodeReview  3    RD         2609171    ALLENCW_CHEN    PDR-A 16.7.0 - [AIFound][UX] Text to Video: "Create another one" resets the model back to the default Wan 3.0 along with the prompt and reference media
+DRA262609P0015    NewCreated      2    PM         2609141    JAMIE_YEH       PDR-A 16.7.0 - Text to Video : Generated video resolution does not match the selected resolution for 1:1 aspect ratio
+DRA262607-0198    QA Propose Won  2    RD         2607273    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Video: The selected template name is missing on the settings page
+DRA262607-0195    QA Propose Won  3    RD         2607273    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Video: The bottom blur gradient is not noticeable enough
+DRA262607-0158    Assigned        2    RD         2607231    ALLENCW_CHEN    PDR-A 16.5.5 - [AIFound][UX] Text to Video: The title of the template section below the prompt is 'Story inspirations', but the overwrite confirmation dialog refers to it as 'Editor's Choice' when applying
+DRA262606-0310    NewCreated      2    PM         2606303    SHIRLEY_FANG    PDR-A 16.5.0 - [MUI] Template (Text to Video): Text to Video template prompts are not localized
+DRA262606-0120    NewCreated      2    PM         2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA][UI] Text to video: The description input box is not fully localized
+DRA262606-0119    NewCreated      2    PC-Doc     2606092    SHERRY_LEE      PRO-A 16.5.0 - [ARA][UI] Text to video: "Second" is not localized
+DRA262605-0121    NewFeature      2    RD         2605201    ALLENCW_CHEN    PDR-A 16.4.0 - [UX][Prod] Text to Video: There is a mismatch between the actual wait time and the displayed expected wait time
+DRA262605-0120    BugNeedReview   2    RD         2605201    ALLENCW_CHEN    PDR-A 16.4.0 - Mixpanel: No mixpanel log for "Text to Video" in "Shortcut_Produce_Tap" and "Shortcut_Produce_Save" for shortcut type
+24 bug(s)
+-- model tag
+0 bug(s)
+-- PIP
+DRA262611P0210    Assigned        2    RD         2611161    SAM_CHANG       PDR-A 16.9.0 - Timeline (Auto Caption): Generated STT is abnormal on the PiP track and missing during playback
+DRA262610P0375    Assigned        2    RD         2610281    SAM_CHANG       PDR-A 16.7.4 - [AIFound] Export: All profiles fail with eleven main clips and nine PiP clips
+DRA262610P0371    Assigned        2    RD         2610281    JAMIE_YEH       PDR-A 16.7.4 - Timeline: Timeline preview freezes when CTA moves over a PIP clip
+DRA262610P0020    NeedCodeReview  2    RD         2610082    SAM_CHANG       PDR-A 16.7.3 - Timeline: Green artifacts appear on the main track when a PiP video with cutout is added
+DRA262609-0076    NewCreated      2    PM         2609243    BALLY_HSU       PDR-A 16.7.0 - [AIFound][UKR] PiP / Title Animation / Transition: effect names "STOMP" and "Shift" are not translated
+DRA262607-0201    Assigned        2    RD         2607273    SAM_CHANG       PDR-A 16.5.5 - Timeline: Repeated Redo after resizing PiP triggers memory warning
+DRA262603-0107    Assigned        2    RD         2603133    ALLENCW_CHEN    PDR-A 16.1.5 - [Google everywhere] Timeline: Cannot import specific video to PiP track
+DRA252510-0063    NewCreated      2    PM         2510142    JOANNEJA_WANG   PDR-A 15.8.0 - Auto Edit (Infatuation): PiP media is not photo
+DRA252509-0243    NewFeature      2    RD         2509302    SAM_CHANG       PDR-A 15.8.0 - [UX] Preview: Pip clip is hard to fill the preview screen
+DRA252509-0191    Postpone        2    PM         2509222    SAM_CHANG       PDR-A 15.8.0 - [UX] PIP: UI feedback not obvious when long pressing on PIP
+DRA252509-0084    QA Propose Pos  2    RD         2509091    SHIRLEY_FANG    PDR-A 15.7.0 - Auto Edit (Paw Moments): PiP items misaligned with master clip in last scene
+DRA252508-0284    NewFeature      2    RD         2508291    SAM_CHANG       PDR-A 15.7.0 - PiP: Object resizing should extend towards center if not in Canva's center
+DRA252505-0194    HQQANeedMoreIn  2    RD         2505081    JACKSON_CHEN    _CS: PDRA Once the PiP is moved, the system displayed PiP not supported error CS002983269
+DRA252504-0035    QA Propose Won  2    RD         2504141    BALLY_HSU       PDR-A 15.1.0 - [UX]Music preview to allow seek : When there is no master video but a PIP clip exists, selecting music still plays a "Range" sound.
+DRA252503-0080    NewCreated      2    PM         2503062    SHIRLEY_FANG    PDR-A 15.0.0 - Text (Animation): The tab UI doesn't sync with PiP Animation - "In/Out/Overall" tab
+DRA252501-0236    NewCreated      3    PM         2501220    HAUSEN_LIN      PDR-A 14.8.0 - [UX][EDF]Transform: There is no "Fit" & "Fill" for PiP media
+DRA242411-0191    HQQANeedMoreIn  2    RD         2411010    JACKSON_CHEN    _CS: PDRA Error: Cannot put video to PiP shows when changing video order on master track CS002887939
+DRA242411-0163    Propose Won't   2    RD         2411110    BALLY_HSU       PDR-A 14.6.0 - Ripple Editing(Pin, Trim) : In this case, when dragging a photo from another PIP track to overlap with the photo on the original track, the photo will move to an unexpected position.
+DRA242411-0018    Propose Won't   2    RD         2411030    HAUSEN_LIN      PDR-A 14.6.0 - Timeline: There is no "AI Scene" in pip photo's Effect panel
+DRA242411-0017    Propose Won't   2    RD         2411030    HAUSEN_LIN      PDR-A 14.6.0 - Timeline: There is no "Tempo Effect" in pip photo's Effect panel
+DRA242411-0016    Propose Won't   2    RD         2411030    HAUSEN_LIN      PDR-A 14.6.0 - Timeline: There is no "Body Effect" in pip photo's Effect panel
+DRA242409-0119    Propose Won't   2    RD         2409160    BALLY_HSU       PDR-A 14.5.0 - [UX] Timeline, AI Audio Tool : When the first track in the PiP is not a video, clicking the [AI Audio Tool] will not be automatically selected.
+DRA242406-0086    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_photo_toolbar
+DRA242406-0085    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_video_toolbar
+DRA242405-0079    NewCreated      2    RD         2405090    BALLY_HSU       PDR-A 14.0.0 - [UX] Timeline(PIP) : Does not support sanpping and vibrating when object hit project edge on preview
+DRA241227-0084    NewCreated      2    PM         1227130    BALLY_HSU       PDR-A 13.3.1 - [VVIP] Timeline(Shrink Mode): The width of the PiP track is thinner than [iOS-Zoom mode]
+DRA241227-0076    Propose Won't   2    RD         1227083    BALLY_HSU       PDR-A 13.3.1 -  [UX][PM's request]Timeline(Audio Mixing) : When there's nothing on the pip track, the slider is still displayed with the slider value at 100.
+DRA241226-0127    Propose Won't   2    RD         1226060    BALLY_HSU       PDR-A 13.2.0 - Edit-Timeline : When replacing PIP, using "Google Photos" will add to the main track.
+DRA241226-0124    NewCreated      2    PM         1226060    HAUSEN_LIN      PDR-A 13.2.0 - Flurry: There is no "Exceed_PiPVideo_tracks_limit" and "Exceed_tracks_limit" in "produce_video"
+DRA231224-0134    Propose Won't   2    RD         1224220    HAUSEN_LIN      PDR-A 13.1.0 - Auto Mosaic: Tapping the entry on the main tool menu cannot enter the Auto Mosaic of PiP clip
+DRA231224-0126    Propose Won't   2    RD         1224180    BALLY_HSU       PDR-A 13.1.0 - Intro/Outro(Ripple Editing) [Landscape]: Show "Pin" icon in pip item(Text/image/video/audio)
+DRA231223-0030    Assigned        2    RD         1223010    BALLY_HSU       PDR-A 12.7.0 - Ripple Editing : The fixed point will not move to another track if moving the pinned group to a pip-exist position
+DRA231222-0081    Propose Won't   2    RD         1222110    BALLY_HSU       PDR-A 12.6.0 - Adjustment, HSL(Pip): When applying keyframe, the track bar does not appear
+DRA231222-0077    Assigned        2    RD         1222110    BALLY_HSU       PDR-A 12.6.0 - Ripple Editing: The PIP item disappears when dragging a group with the same begin-time for both the master and PIP to the front.
+DRA231222-0048    NewCreated      2    RD         1222040    HAUSEN_LIN      PDR-A 12.6.0 - Ripple Editing: The pinned pip is moved to the bottom track if moving the pinned group to a pip-exist position
+DRA231222-0045    Assigned        2    RD         1222040    HAUSEN_LIN      PDR-A 12.6.0 - PIP: There is a misalignment between the master clip and pip clip
+DRA242409-0119    Propose Won't   2    RD         2409160    BALLY_HSU       PDR-A 14.5.0 - [UX] Timeline, AI Audio Tool : When the first track in the PiP is not a video, clicking the [AI Audio Tool] will not be automatically selected.
+DRA242406-0086    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_photo_toolbar
+DRA242406-0085    NewCreated      2    RD         2406110    JETHRO_WANG     PDR-A 14.1.0 - Mixpanel: There is no Timeline_Toolbar_Tap > pip_video_toolbar
+DRA242405-0079    NewCreated      2    RD         2405090    BALLY_HSU       PDR-A 14.0.0 - [UX] Timeline(PIP) : Does not support sanpping and vibrating when object hit project edge on preview
+-- selection
+DRA262611P0230    TRCreated       2    RD         2611181    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Video Enhance: Play does nothing when the playhead sits at the selection's end
+DRA262611P0123    Assigned        3    RD         2611111    ALLENCW_CHEN    PDR-A 16.8.1 - [AIFound][Samsung Galaxy A54/13] Timeline: selection is rejected for clips shown in Samsung Gallery
+DRA262611P0091    Assigned        2    RD         2611091    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Video Enhance: Dragging the selection moves the range the opposite way to the finger
+DRA262611P0087    TRCreated       2    RD         2611091    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Video Enhance: Trim handles can meet, leaving a 「00:00」 selection under the 1 s minimum
+DRA262611P0075    TRCreated       2    RD         2611091    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] AI Video Enhance: A selection shown as 「02:30」 cannot switch to Professional
+DRA262610P0196    Assigned        3    RD         2610151    ALLENCW_CHEN    PDR-A 16.8.0 - [AIFound][UX] AI Mini Drama: Character selection omits the next-role hint
+DRA262608-0006    QA Propose Won  3    RD         2608061    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] AI Anime Video: Pricing/credit information is completely missing on the style selection screen and is only disclosed on the subsequent IAP screen.
+DRA262607-0268    QA Propose Won  2    RD         2607311    ALLENCW_CHEN    PDR-A 16.6.0 - [AIFound][UX] AI Art: Switching gender tabs silently resets the selected style back to the first item ("Baby Face") and resets the horizontal scroll position to zero, losing the user's previous selection.
+DRA262603-0271    NewCreated      2    PM         2603261    ALLENCW_CHEN    PDR-A 16.3.0 - [ESM] AI Storytelling: The default prompt and the recommended selections are not localized
+DRA262603-0251    Propose Wont F  2    RD         2603251    SAM_CHANG       PDR-A 16.1.5 - [Google everywhere] Timeline (Media Picker): Overlay media picker does not support Shift+Click selection
+DRA262601-0052    QA Propose Pos  3    RD         2601071    JAMIE_YEH       PDR-A 16.0.0 - [Google everywhere] [Resize] Recent Projects / My Projects: Project selection state not cleared on resize
+DRA241226-0261    NewCreated      2    PM         1226290    AMBER_MAI       PDR-A 13.3.0 - [UX]Timeline: Not support clip multiple selection
+DRA241226-0216    Propose Won't   2    RD         1226230    JACK_HSIEH      PDR-A 13.3.0 - [Landscape]Timeline(shrink mode): Text to speech used by dragging does not work properly (the language selection interface will not be called up)
+DRA231223-0125    Propose Won't   2    RD         1223080    BALLY_HSU       PDR-A 12.7.0 - Edit : When rotating the image to snap, the selection border separates from the media on preview screen
+DRA231221-0146    Assigned        3    RD         1221270    BALLY_HSU       PDR-A 12.6.0 - Audio\Volume : The selection border is truncat when entering the Volume page.
+DRA231221-0116    Assigned        2    RD         1221220    BALLY_HSU       PDR-A 12.5.1 - Crop : First adjust the screen selection area and then press the aspect ratio. A black area appears within the selection range.
+DRA221160-0033    Propose Postpo  2    RD         116017     HAUSEN_LIN      PDR-A 10.3.0 - Video Intros(Category): Category tags UI is not synced with spec in category selection page when sharing
+DRA221158-0015    Assigned        2    RD         115847     HAUSEN_LIN      PDR-A 10.2.0 - [Tab s6] Voice-Over: Audio track selection dialog is not fit
+DRA221107-0082    QA Propose Pos  3    RD         110755     ANGOL_HUANG     PDR-A 10.0.0 - [UX][Portrait] Library: Not support 3rd party App option for file selection
+19 bug(s)
+-- margin
+DRA221208-0025    NewCreated      2    RD         120820     HAUSEN_LIN      PDR-A 11.0.0 - Font: The right and left margin are not synced
+1 bug(s)
+-- Menu
+DRA262606-0185    Assigned        3    RD         2606161    ALLENCW_CHEN    PDR-A 16.5.0 - Audio(Sound Effects): The Audio Tool menu and the highlight for "Sound Effects" are enlarged after tapping
+DRA262605-0007    NewCreated      2    PM         2605041    ALLENCW_CHEN    PDR-A 16.4.0 - [VIE] Menu(Demo Videos): Title are not localized
+DRA262603-0158    Propose Wont F  3    RD         2603181    ALLENCW_CHEN    PDR-A 16.1.5 - [Google everywhere] Menu(Demo Video/Preferences): The page should remain open and adjust to the new orientation without closing
+DRA262602-0135    NewCreated      2    PM         2602102    SAM_CHANG       PDR-A 16.1.5 -  [UX][Google everywhere][Landscape] Timeline: Produce button should not highlight in full screen menu
+DRA262602-0134    QA Propose Pos  2    RD         2602102    SAM_CHANG       PDR-A 16.1.5 - [Google everywhere][Landscape] Timeline: UI shifts up when full screen menu appearsnter key has no effect when highligt on orientation button
+DRA262601-0128    Fail            2    RD         2601221    JAMIE_YEH       PDR-A 16.1.0 - [Google everywhere] [Portrait] Timeline: Tool menu text is crowded (Display resolution: 1366x768)
+DRA262601-0041    QA Propose Pos  2    RD         2601061    JAMIE_YEH       PDR-A 16.0.0 - [Google everywhere] [Resize] [Portrait] Timeline: Edit menu overlaps after resizing app
+DRA262601-0013    QA Propose Won  3    RD         2601021    JAMIE_YEH       PDR-A 16.0.0 - [Google everywhere] [Landscape] Menu: Preferences and FAQ pages not full screen
+DRA252508-0197    BugNeedReview   2    RD         2508201    JOANNEJA_WANG   PDR-A 15.7.0 - Menu (Preferences): App resets to dark mode after restart when light mode is selected
+DRA252508-0162    NewCreated      2    RD         2508201    HAUSEN_LIN      PDR-A 15.7.0 - [Light Mode]Menu(User Sign in): User Sign in page is not light mode
+DRA252503-0319    NeedCodeReview  3    RD         2503311    BALLY_HSU       PDR-A 15.1.0 - [Landscape] Timeline, Text, MGT : The [⌵] symbol in the dropdown menu does not match the UI guidelines.
+DRA252502-0032    NewCreated      1    RD         2502090    HAUSEN_LIN      PDR-A 14.9.0 - [Side Effect]Timeline: Crash after create an AI Video Enhancer and open the menu
+DRA242412-0025    NewCreated      2    PM         2412040    BALLY_HSU       PDR-A 14.7.0 - Menu> Preferences(Subscribed) : There is no "Notification on and off" function
+DRA242408-0140    Propose Won't   2    RD         2408072    HAUSEN_LIN      PDR-A 14.3.0 - Timeline: There is no red dot on the menu if task is completed
+DRA242408-0108    Propose Won't   2    RD         2408061    BALLY_HSU       PDR-I 14.3.0 - Text, Titles, MGT : The navigation bar will be opened when the MGT drop-down menu is opened
+DRA242408-0088    Propose Won't   2    RD         2408061    BALLY_HSU       PDR-A 14.3.0 - Text, Title, MGT : The drop-down menu is different from SPEC
+DRA242408-0023    Propose Won't   2    RD         2408020    HAUSEN_LIN      PDR-A 14.3.0 - [Spec]Auto Captions: There are no Change duration and Add caption on the caption menu
+DRA242407-0113    QA Propose Pos  2    RD         2407120    BALLY_HSU       PDR-A 14.2.1 - [VVIP] Image Master Toolbar : Crop feature on tool menu isn't renamed to Crop & Rotate (remove Rotate)
+DRA242406-0017    NewCreated      2    PM         2406030    BALLY_HSU       PDR-A 14.1.0 - Main Tool Menu : The functions after the [AI ​​Audio tool] toolbar returns are the old sorting
+DRA242406-0016    NewCreated      2    RD         2406030    BALLY_HSU       PDR-A 14.1.0 - Main Tool Menu [Android 10] : Function ordering does not match SPEC
+DRA241226-0269    Propose Postpo  2    RD         1226270    HAUSEN_LIN      PDR-A 13.3.0 - [UX]Text(Mask): There is no "Mask" on the title clip menu
+DRA241224-0011    Propose Postpo  2    RD         1224290    HAUSEN_LIN      PDR-A 13.1.0 - [Landscape]Mosaic(Layer): The "Strength" and "Feather" options are on the tool menu
+DRA231224-0134    Propose Won't   2    RD         1224220    HAUSEN_LIN      PDR-A 13.1.0 - Auto Mosaic: Tapping the entry on the main tool menu cannot enter the Auto Mosaic of PiP clip
+DRA231224-0090    QA Propose Won  2    RD         1224071    HAUSEN_LIN      PDR-A 13.0.0 - Shortcut(Auto Captions): Preview is not paused when open caption menu
+DRA252503-0319    NeedCodeReview  3    RD         2503311    BALLY_HSU       PDR-A 15.1.0 - [Landscape] Timeline, Text, MGT : The [⌵] symbol in the dropdown menu does not match the UI guidelines.
+DRA252502-0032    NewCreated      1    RD         2502090    HAUSEN_LIN      PDR-A 14.9.0 - [Side Effect]Timeline: Crash after create an AI Video Enhancer and open the menu
+DRA242412-0025    NewCreated      2    PM         2412040    BALLY_HSU       PDR-A 14.7.0 - Menu> Preferences(Subscribed) : There is no "Notification on and off" function
+DRA242408-0140    Propose Won't   2    RD         2408072    HAUSEN_LIN      PDR-A 14.3.0 - Timeline: There is no red dot on the menu if task is completed
+DRA242408-0108    Propose Won't   2    RD         2408061    BALLY_HSU       PDR-I 14.3.0 - Text, Titles, MGT : The navigation bar will be opened when the MGT drop-down menu is opened
+DRA242408-0088    Propose Won't   2    RD         2408061    BALLY_HSU       PDR-A 14.3.0 - Text, Title, MGT : The drop-down menu is different from SPEC
+DRA242408-0023    Propose Won't   2    RD         2408020    HAUSEN_LIN      PDR-A 14.3.0 - [Spec]Auto Captions: There are no Change duration and Add caption on the caption menu
+DRA242407-0113    QA Propose Pos  2    RD         2407120    BALLY_HSU       PDR-A 14.2.1 - [VVIP] Image Master Toolbar : Crop feature on tool menu isn't renamed to Crop & Rotate (remove Rotate)
+DRA242406-0017    NewCreated      2    PM         2406030    BALLY_HSU       PDR-A 14.1.0 - Main Tool Menu : The functions after the [AI ​​Audio tool] toolbar returns are the old sorting
+DRA242406-0016    NewCreated      2    RD         2406030    BALLY_HSU       PDR-A 14.1.0 - Main Tool Menu [Android 10] : Function ordering does not match SPEC
+DRA241226-0269    Propose Postpo  2    RD         1226270    HAUSEN_LIN      PDR-A 13.3.0 - [UX]Text(Mask): There is no "Mask" on the title clip menu
+DRA241224-0011    Propose Postpo  2    RD         1224290    HAUSEN_LIN      PDR-A 13.1.0 - [Landscape]Mosaic(Layer): The "Strength" and "Feather" options are on the tool menu
+DRA231224-0134    Propose Won't   2    RD         1224220    HAUSEN_LIN      PDR-A 13.1.0 - Auto Mosaic: Tapping the entry on the main tool menu cannot enter the Auto Mosaic of PiP clip
+DRA231224-0090    QA Propose Won  2    RD         1224071    HAUSEN_LIN      PDR-A 13.0.0 - Shortcut(Auto Captions): Preview is not paused when open caption menu
+38 bug(s)
+-- created since 2026-11-26
+DRA262611P0340    BugNeedReview   3    RD         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: 「Selected Length」 has no ⓘ on a video within the Mode limit
+DRA262611P0339    BugNeedReview   3    PM         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: System Back does nothing on the 「Turn on notifications」 dialog
+DRA262611P0338    BugNeedReview   2    RD         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Mode bubble reads 「up to 8 min」 / 「up to 2:30」, not 「up to 08:00」 / 「up to 02:30」
+DRA262611P0337    Cancelled       3    RD         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: 「Selected Length」 has no ⓘ on a video within the Mode limit
+DRA262611P0336    Cancelled       3    PM         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: System Back does nothing on the 「Turn on notifications」 dialog
+DRA262611P0335    Cancelled       2    RD         2611251    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Video Enhance: Mode bubble reads 「up to 8 min」 / 「up to 2:30」, not 「up to 08:00」 / 「up to 02:30」
+DRA262611P0334    Assigned        2    RD         2611251    SAM_CHANG       PDR-A 16.9.0 - [AIAgent] Image to Video: Mini World quote drops from 40 to 15 after confirming Settings
+DRA262611P0333    RDResolved      3    PC-Doc     2611251    ALLENCW_CHEN    PDR-A 16.9.0 - [AIFound][MUI] Opening Intro( AI Video Enhance): Title and description do not match the expected translations
+DRA262611P0332    Assigned        3    RD         2611251    ANGOL_HUANG     PDR-A 16.9.0 - [AIAgent][UI] Mine / Pro Page (Credits Bar): Credits bar 27% taller than Design, card proportions off
+DRA262611P0331    Assigned        3    RD         2611251    ANGOL_HUANG     PDR-A 16.9.0 - [AIAgent][UI] New Year Sale (IAP): Annual plan card uses the dark-mode background in light mode
+DRA262611P0330    Propose Wont F  2    PM         2611192    ALLENCW_CHEN    PDR-A 16.8.2 - [AIFound] AI Video Enhance: Demo page plays the new demo video in this build
+DRA262611P0329    Assigned        3    RD         2611251    ANGOL_HUANG     PDR-A 16.9.0 - [AIAgent][UI][VIE] Christmas Sale (Not Enough Credit): Paid dialog body mostly English
+DRA262611P0328    Assigned        3    RD         2611251    ANGOL_HUANG     PDR-A 16.9.0 - [AIAgent][UI][ITA/VIE] Christmas Sale (Not Enough Credit): Free dialog body says Pro+; VIE mostly English
+DRA262611P0327    Assigned        2    RD         2611251    ANGOL_HUANG     PDR-A 16.9.0 - [AIAgent] Christmas & New Year Sale (Not Enough Credit): Free dialog: one Back also closes Image to Video
+DRA262611P0326    NewCreated      2    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: No GenAI consent or disclosure before the first upload after a reset
+DRA262611P0325    Cancelled       2    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] AI Video Enhance: No rule for what play does at the end of the selection
+DRA262611P0324    NewCreated      3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] AI Mini Drama: 「Every frame is done. Ready to create your video?」 never shows in the chat
+DRA262611P0323    Cancelled       3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] AI Mini Drama: Templates show on a non-US/JP store; PM's US & JP day 1 limit is undefined
+DRA262611P0322    NewCreated      3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent] Export: Projects with AI content export with a C2PA manifest marking the whole video as AI
+DRA262611P0321    NewCreated      3    PM         2611231    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty picture boxes with no message
+DRA262611P0320    RDResolved      3    PC-Doc     2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öneri」 with a small first letter
+DRA262611P0319    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino captions with English headings and button
+DRA262611P0318    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelsesfornemmelse」 breaks mid-word
+DRA262611P0317    Assigned        3    RD         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their bars in Arabic, Persian and Hebrew
+DRA262611P0316    Cancelled       3    PM         2611201    ETHAN_HSU       PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Template descriptions end with a full stop the CMS sheet lacks (9 languages)
+
+25 bug(s)
+
+== Verdict (2026-11-27, before create): no same-OS duplicate for ISS-AWA-20 – 30. Talking Avatar matches are 14.x closed/rejected tickets on By Voice labels (unrelated, as in dedupe.txt); DRA262611P0203 is Template V2V's task list title; the 16.9.0 tickets on this TR (DRA262611P0327 – P0340) are sale / credits / Image to Video / AI Video Enhance. Nothing commented on.

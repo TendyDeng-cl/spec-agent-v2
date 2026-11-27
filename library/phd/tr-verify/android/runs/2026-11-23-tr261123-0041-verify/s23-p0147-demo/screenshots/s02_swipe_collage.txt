@@ -1,0 +1,32 @@
+Current weather and forecast
+Partly Cloudy
+Mon,Day Mostly Cloudy,Night Showers Late,High 28 degrees, Low 19 degrees,Tue,Day Rain,Night Showers Late,High 20 degrees, Low 15 degrees,Wed,Day Cloudy,Night Cloudy,High 19 degrees, Low 18 degrees,Thu,Day AM Showers,Night Partly Cloudy,High 24 degrees, Low 19 degrees,
+Mon
+28° 19°
+High 28 degrees, Low 19 degrees
+Tue
+20° 15°
+High 20 degrees, Low 15 degrees
+26°
+Current temperature, 26 degrees
+Wed
+19° 18°
+High 19 degrees, Low 18 degrees
+Rain possible tonight
+Thu
+24° 19°
+High 24 degrees, Low 19 degrees
+Fuxing
+Current location Fuxing
+U
+Google, Folder, 6 notifications
+Google
+File Manager +
+Gallery
+Play Store, 2 notifications
+Play Store
+Google Discover
+Page 1 of 1. 
+Phone
+Messages
+Camera

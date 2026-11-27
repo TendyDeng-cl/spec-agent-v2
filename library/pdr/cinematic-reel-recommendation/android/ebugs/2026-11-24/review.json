@@ -1,0 +1,14 @@
+{
+ "tr": "TR261123-0015",
+ "build": "2611201",
+ "trNote": "TR261123-0015, build 16.9.0.2611201 (Google Play internal test track), the build R1 ran on. First batch for this feature: the filing defaults come from another feature's batch — confirm.",
+ "lede": "Both cards are open questions filed to PM for a decision (AGENTS.md 2026-11-11). Neither is failure-related, so no log is attached. verify_ebug_drafts.py still flags [AIAgent][UX] and non-Figma Spec Links (stale against the 2026-11-11 rule); check_ebug_format.py passes with 0 errors.",
+ "why": {
+  "ISS-CRA-01": "PM decision, Type UX (Q-1): Jira PDRA-661 asks for a media room 「?」 that opens the photo tips; Design 26.07_v2 draws Add Media without one and the build follows the Design.",
+  "ISS-CRA-02": "PM decision, text (Q-2): in 繁體中文 and 日本語 the chip and the sheet's first sentence stay English while headings, captions and button are localized; no spec gives the translations."
+ },
+ "related": {
+  "ISS-CRA-01": "One finding on all six cards (TC-010 – TC-015); TC-016 and TC-021 are Blocked behind it.",
+  "ISS-CRA-02": "O-3; TC-017 / TC-018 passed as written under Q-2. JP captions show although the CMS JP column is empty."
+ }
+}

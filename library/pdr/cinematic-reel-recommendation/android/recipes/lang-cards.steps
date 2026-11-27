@@ -1,0 +1,28 @@
+# Language rows, cards (TC-023, TC-024, TC-025 … one per language): reads the six template cards in order.
+# Starts: Cinematic Reel Creator template page just entered from the Launcher (card 1 centred), no sheet open.
+# Ends: template page on card 6, no sheet open. Picks no photo, uses no credits.
+# Args: $1 = case ID (names the screenshots). Each `shot` line closes one card's block of `els` output.
+# The pager only moves with `drag` (not fingerdrag); the centred card's texts are the tv_title / tv_description at x=187.
+# Called by lang-check.ts, which parses the output and compares it with the row.
+els tv_
+shot $1-card1
+drag 800 1000 250 1000
+wait 1
+els tv_
+shot $1-card2
+drag 800 1000 250 1000
+wait 1
+els tv_
+shot $1-card3
+drag 800 1000 250 1000
+wait 1
+els tv_
+shot $1-card4
+drag 800 1000 250 1000
+wait 1
+els tv_
+shot $1-card5
+drag 800 1000 250 1000
+wait 1
+els tv_
+shot $1-card6

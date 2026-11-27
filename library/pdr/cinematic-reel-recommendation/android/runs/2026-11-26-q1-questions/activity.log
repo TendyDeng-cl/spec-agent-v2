@@ -1,0 +1,180 @@
+2026-11-26T02:40:15.264Z status 
+2026-11-26T02:40:15.802Z restart R5CTB22S05Y
+2026-11-26T02:40:29.356Z build 
+2026-11-26T02:40:29.649Z logcat start
+2026-11-26T02:40:29.913Z wifi status
+2026-11-26T02:40:30.209Z shot start.png
+2026-11-26T02:40:31.037Z texts 
+2026-11-26T02:40:36.956Z case TC-077
+2026-11-26T02:40:37.087Z lbl Cinematic Reel Creator
+2026-11-26T02:40:37.479Z waitfor View photo tips|What is Cinematic --timeout 30
+2026-11-26T02:41:09.272Z els 
+2026-11-26T02:41:15.431Z tap 78 750
+2026-11-26T02:41:17.726Z shot tc077-00-page.png
+2026-11-26T02:41:19.278Z els 
+2026-11-26T02:41:23.787Z els 
+2026-11-26T02:41:28.713Z texts 
+2026-11-26T02:41:29.025Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:41:31.590Z texts 
+2026-11-26T02:41:38.839Z els 
+2026-11-26T02:41:39.249Z shot tc077-01-micro
+2026-11-26T02:41:40.499Z id btn_photo_tips
+2026-11-26T02:41:44.060Z shot tc077-02-sheet
+2026-11-26T02:41:45.110Z els 
+2026-11-26T02:41:48.823Z tap 540 500
+2026-11-26T02:41:50.594Z shot tc077-03-after-dimtap
+2026-11-26T02:41:51.766Z els 
+2026-11-26T02:41:58.564Z id btn_photo_tips
+2026-11-26T02:42:01.962Z shot tc077-04-sheet-again
+2026-11-26T02:42:02.989Z els 
+2026-11-26T02:42:03.231Z record start
+2026-11-26T02:42:04.158Z fingerdrag 540 800 540 2000 12
+2026-11-26T02:42:07.464Z record stop TC-077-swipe
+2026-11-26T02:42:09.065Z shot tc077-05-after-swipe
+2026-11-26T02:42:10.422Z els 
+2026-11-26T02:42:26.788Z run-log set TC-077 Fail
+2026-11-26T02:42:31.511Z case TC-079
+2026-11-26T02:42:31.739Z launch 
+2026-11-26T02:42:33.684Z waitfor Cinematic Reel Creator --timeout 60
+2026-11-26T02:43:34.721Z tapif Cinematic Reel Creator
+2026-11-26T02:43:34.952Z waitfor View photo tips --timeout 30
+2026-11-26T02:44:07.692Z texts 
+2026-11-26T02:44:10.929Z lbl Close
+2026-11-26T02:44:15.620Z tapif Cinematic Reel Creator
+2026-11-26T02:44:16.655Z waitfor View photo tips --timeout 30
+2026-11-26T02:44:18.220Z els 
+2026-11-26T02:44:22.123Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:44:24.717Z els 
+2026-11-26T02:44:25.037Z id btn_photo_tips
+2026-11-26T02:44:30.453Z shot tc079-01-mc-online
+2026-11-26T02:44:31.533Z lbl Got it
+2026-11-26T02:44:32.946Z wifi off
+2026-11-26T02:44:36.413Z wifi status
+2026-11-26T02:44:45.622Z shot tc079-02-offline-page
+2026-11-26T02:44:47.023Z id btn_photo_tips
+2026-11-26T02:44:52.417Z shot tc079-03-mc-offline
+2026-11-26T02:44:53.550Z texts 
+2026-11-26T02:45:00.703Z lbl Got it
+2026-11-26T02:45:02.203Z els 
+2026-11-26T02:45:02.519Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:45:05.112Z els 
+2026-11-26T02:45:05.409Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:45:07.975Z els 
+2026-11-26T02:45:08.303Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:45:10.897Z els 
+2026-11-26T02:45:11.222Z shot tc079-04-timelapse-card-offline
+2026-11-26T02:45:15.440Z id btn_photo_tips
+2026-11-26T02:45:20.803Z shot tc079-05-tl-offline
+2026-11-26T02:45:21.580Z texts 
+2026-11-26T02:45:28.571Z lbl Got it
+2026-11-26T02:45:29.955Z shot tc079-06-closed-offline
+2026-11-26T02:45:31.185Z els 
+2026-11-26T02:45:31.457Z wifi on
+2026-11-26T02:45:38.960Z wifi status
+2026-11-26T02:45:39.290Z id btn_photo_tips
+2026-11-26T02:45:44.679Z shot tc079-07-tl-online
+2026-11-26T02:45:45.761Z texts 
+2026-11-26T02:45:58.203Z lbl Got it
+2026-11-26T02:45:58.585Z run-log set TC-079 Fail
+2026-11-26T02:46:05.386Z case TC-078
+2026-11-26T02:46:05.519Z terminate 
+2026-11-26T02:46:06.360Z wifi off
+2026-11-26T02:46:09.920Z launch 
+2026-11-26T02:46:18.847Z shot tc078-01-launch-offline
+2026-11-26T02:46:19.773Z texts 
+2026-11-26T02:46:23.450Z lbl Cinematic Reel Creator
+2026-11-26T02:46:31.164Z shot tc078-02-crc-offline
+2026-11-26T02:46:32.453Z els 
+2026-11-26T02:46:43.604Z els 
+2026-11-26T02:46:43.863Z shot tc078-03-card1
+2026-11-26T02:46:45.151Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:46:47.555Z els 
+2026-11-26T02:46:47.899Z shot tc078-03-card2
+2026-11-26T02:46:49.103Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:46:51.715Z els 
+2026-11-26T02:46:52.038Z shot tc078-03-card3
+2026-11-26T02:46:53.251Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:46:55.740Z els 
+2026-11-26T02:46:56.024Z shot tc078-03-card4
+2026-11-26T02:46:57.349Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:46:59.848Z els 
+2026-11-26T02:47:00.172Z shot tc078-03-card5
+2026-11-26T02:47:01.462Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:47:04.073Z els 
+2026-11-26T02:47:04.402Z shot tc078-03-card6
+2026-11-26T02:47:05.755Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:47:08.197Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:10.254Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:12.310Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:14.380Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:16.440Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:18.497Z fingerdrag 200 1500 900 1500 8
+2026-11-26T02:47:20.402Z els 
+2026-11-26T02:47:26.797Z id btn_photo_tips
+2026-11-26T02:47:31.186Z shot tc078-04-hm-sheet-offline
+2026-11-26T02:47:32.074Z texts 
+2026-11-26T02:47:42.938Z lbl Got it
+2026-11-26T02:47:44.349Z els 
+2026-11-26T02:47:44.657Z wifi on
+2026-11-26T02:47:52.246Z wifi status
+2026-11-26T02:47:52.662Z id iv_back
+2026-11-26T02:47:56.224Z texts 
+2026-11-26T02:47:57.496Z lbl Cinematic Reel Creator
+2026-11-26T02:47:59.031Z waitfor View photo tips --timeout 30
+2026-11-26T02:48:00.549Z fingerdrag 900 1500 200 1500 8
+2026-11-26T02:48:03.103Z els 
+2026-11-26T02:48:03.401Z id btn_photo_tips
+2026-11-26T02:48:09.802Z shot tc078-05-mc-online
+2026-11-26T02:48:10.884Z texts 
+2026-11-26T02:48:18.051Z lbl Got it
+2026-11-26T02:48:38.477Z els 
+2026-11-26T02:48:38.755Z shot o1-credit-dashes-online
+2026-11-26T02:48:40.014Z id iv_back
+2026-11-26T02:48:45.196Z lbl Cinematic Reel Creator
+2026-11-26T02:48:52.882Z els 
+2026-11-26T02:48:53.181Z id iv_back
+2026-11-26T02:48:56.928Z texts 
+2026-11-26T02:49:08.135Z run-log set TC-078 Fail
+2026-11-26T02:49:13.609Z case O-1
+2026-11-26T02:49:13.742Z launch 
+2026-11-26T02:49:21.048Z tapif Close
+2026-11-26T02:49:22.054Z lbl Cinematic Reel Creator
+2026-11-26T02:49:30.103Z els 
+2026-11-26T02:49:30.410Z shot o1-after-relaunch
+2026-11-26T02:49:31.527Z id iv_back
+2026-11-26T02:49:35.758Z texts 
+2026-11-26T02:49:43.167Z pull-logs Q1-a
+2026-11-26T02:40:30.879Z file screenshots/start.png
+2026-11-26T02:41:09.104Z file screenshots/waitfor-timeout-20261126-104107.png
+2026-11-26T02:41:18.989Z file screenshots/tc077-00-page.png
+2026-11-26T02:41:40.339Z file screenshots/tc077-01-micro.png
+2026-11-26T02:41:44.960Z file screenshots/tc077-02-sheet.png
+2026-11-26T02:41:51.611Z file screenshots/tc077-03-after-dimtap.png
+2026-11-26T02:42:02.840Z file screenshots/tc077-04-sheet-again.png
+2026-11-26T02:42:10.188Z file screenshots/tc077-05-after-swipe.png
+2026-11-26T02:42:15.555Z file screenshots/tc077-swipe-tiles.png
+2026-11-26T02:43:34.577Z file screenshots/waitfor-timeout-20261126-104333.png
+2026-11-26T02:44:07.550Z file screenshots/waitfor-timeout-20261126-104406.png
+2026-11-26T02:44:31.379Z file screenshots/tc079-01-mc-online.png
+2026-11-26T02:44:46.731Z file screenshots/tc079-02-offline-page.png
+2026-11-26T02:44:53.327Z file screenshots/tc079-03-mc-offline.png
+2026-11-26T02:45:12.243Z file screenshots/tc079-04-timelapse-card-offline.png
+2026-11-26T02:45:21.443Z file screenshots/tc079-05-tl-offline.png
+2026-11-26T02:45:30.970Z file screenshots/tc079-06-closed-offline.png
+2026-11-26T02:45:45.605Z file screenshots/tc079-07-tl-online.png
+2026-11-26T02:46:19.633Z file screenshots/tc078-01-launch-offline.png
+2026-11-26T02:46:32.261Z file screenshots/tc078-02-crc-offline.png
+2026-11-26T02:46:44.966Z file screenshots/tc078-03-card1.png
+2026-11-26T02:46:48.884Z file screenshots/tc078-03-card2.png
+2026-11-26T02:46:53.051Z file screenshots/tc078-03-card3.png
+2026-11-26T02:46:57.126Z file screenshots/tc078-03-card4.png
+2026-11-26T02:47:01.199Z file screenshots/tc078-03-card5.png
+2026-11-26T02:47:05.531Z file screenshots/tc078-03-card6.png
+2026-11-26T02:47:26.656Z file screenshots/tc078-03-cards-tiles.png
+2026-11-26T02:47:31.934Z file screenshots/tc078-04-hm-sheet-offline.png
+2026-11-26T02:48:10.731Z file screenshots/tc078-05-mc-online.png
+2026-11-26T02:48:39.863Z file screenshots/o1-credit-dashes-online.png
+2026-11-26T02:49:31.374Z file screenshots/o1-after-relaunch.png
+2026-11-26T02:49:43.818Z file logs/.live
+2026-11-26T02:49:49.751Z file logs/Q1-a-20261126-104943
+2026-11-26T02:53:15.833Z texts 

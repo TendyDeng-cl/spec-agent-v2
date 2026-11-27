@@ -1,0 +1,13 @@
+library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md
+  2 entries · 6 images · 4 Spec Link lines · 0/0 ▲ rows · max ShortDesc 115
+FAILED:
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e1: malformed -> Spec Link: Jira PDRA-661 description (UI: the chip and the media room 
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e1: unknown sheet 'Jira PDRA-661 description (UI: the chip and the media room 「?」 both open the recommendation page)'
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e1: unknown sheet 'Cinematic Reel Creator Design spec (CineStory, frame 26.07_v2), Add Media board (no 「?」 drawn, ic_info layer hidden)'
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e1 (ISS-CRA-01): Class UX needs 'Basis: External — …' or 'Basis: None — …'
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e1 (ISS-CRA-01): [AIAgent] entries never carry [UX]
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e2 (ISS-CRA-02): links 'Cinematic Reel Creator Design spec (CineStory, frame 26.07_v2), 0820 add photo tips board (chip and sentence drawn in English only)' but Description never names Cinematic (ambiguous=False)
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e2: unknown sheet 'Cinematic Reel Creator Design spec (CineStory, frame 26.07_v2), 0820 add photo tips board (chip and sentence drawn in English only)'
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e2: malformed -> Spec Link: Cinestory CMS, Recommendation tab (picture list: JP and EN 
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e2 (ISS-CRA-02): links 'Cinestory CMS, Recommendation tab (picture list: JP and EN columns empty)' but Description never names Cinestory (ambiguous=False)
+  library/pdr/cinematic-reel-recommendation/android/ebugs/2026-11-24/20261124_eBug_drafts_Cinematic-Reel-Recommendation-R1_16.9.0.md e2: unknown sheet 'Cinestory CMS, Recommendation tab (picture list: JP and EN columns empty)'

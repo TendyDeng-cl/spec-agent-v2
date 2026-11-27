@@ -1,0 +1,341 @@
+{
+ "tr": "TR261123-0041",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/23",
+ "version": "20.19.0",
+ "build": "202611231214",
+ "buildDay": "1123",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611231214 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R7)",
+ "testResult": "PHD-A - Bug verification [OK=18, Fail=3]",
+ "env": {
+  "device": "Google Pixel 8a / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611231214 (versionCode 90201902, SR PHA261029-01), installed by the tester 2026/11/23 14:24",
+  "scope": "every eBug on this TR's verify list (PHD-A rule)"
+ },
+ "observations": [
+  "Swipe Collage: a new 「Add text」 box is very small and taps on it did nothing until a preset enlarged it.",
+  "Swipe Collage: on a locked frame the floating Duplicate stays enabled while Delete is greyed.",
+  "Swipe Collage eyedropper: the pin tip sits about 120 px above the finger, so the canvas top and the part behind the panel cannot be sampled.",
+  "Swipe Collage AI Enhance: no history button; Advanced Enhance costs 6 credits where the Design shows 5 (open question Q-27).",
+  "Batch Editing: the 2730 x 1535 photo shows 「2560 x 1439」 as its size label in Crop & Rotate.",
+  "Reel Creator: Import replaces the photos tapped before it instead of adding to them; Travel Recap (max 3) accepts 4 imported photos with Next disabled; the two at-least-6 messages are worded differently.",
+  "Image to Video: Reuse from Save & Share leaves the photo slot empty."
+ ],
+ "rows": [
+  {
+   "bug": "PHA262026P0078",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Text and text bubble content cannot be typed or edited",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_p0078_bubble_tap1.png",
+    "screenshots/a_p0078_bubble_edited.png",
+    "screenshots/a_p0078_text_tap_again.png",
+    "screenshots/a_p0078_text_field_keyboard.png"
+   ],
+   "result": "OK",
+   "summary": "Text and Text Bubble now open a text field with the keyboard, and the typed words replace the text on the canvas."
+  },
+  {
+   "bug": "PHA262026P0079",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Frame tool bar has no Flip H, Flip V or Shadow, and the floating icons no Lock",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0079_frame_focus.png",
+    "screenshots/a_p0079_frame_bar_end.png",
+    "screenshots/a_p0079_locked.png"
+   ],
+   "result": "Fail",
+   "summary": "The frame tool bar now has Flip H, Flip V and Lock, and the floating Lock works, but there is still no Shadow.",
+   "observed": "The frame tool bar now has Flip H, Flip V and Lock, and the floating Lock works, but there is still no Shadow.",
+   "observedZh": "框工具列已有 Flip H、Flip V 與鎖，浮動鎖也可用，但仍沒有 Shadow。",
+   "expected": "Frame focus should also offer Shadow, with Opacity, Flip H, Flip V, Duplicate, Lock and Delete.",
+   "expectedZh": "框工具列應包含 Shadow。"
+  },
+  {
+   "bug": "PHA262026P0081",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Image tool bar labels are not the spec's Flip H / Flip V / Adjust / Enhance",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0081_image_bar_start.png",
+    "screenshots/a_p0081_image_bar_labels.png"
+   ],
+   "result": "OK",
+   "summary": "The image tool bar shows Horizontal Flip, Vertical Flip, Adjustments and AI Enhance, accepted by the tester as the intended labels."
+  },
+  {
+   "bug": "PHA262026P0086",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Credit button reads 「--」 and opens nothing",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0086_enhance_page.png",
+    "screenshots/a_p0086_advanced_no_credit_button.png"
+   ],
+   "result": "Hold",
+   "note": "The build removed the credit button (RD: ui modify), but the newest Design (Enhance_2) and R-211 still draw it; no newer spec in the repo removes it.",
+   "summary": "The AI Enhance page no longer has a credit button; the current Design still draws one."
+  },
+  {
+   "bug": "PHA262026P0088",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Background eyedropper pin cannot be moved, so no photo colour can be picked",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0088_eyedropper_on.png",
+    "screenshots/a_p0088_hold_face.png",
+    "screenshots/a_p0088_pin_on_face.png",
+    "screenshots/a_p0088_picked_face.png"
+   ],
+   "result": "OK",
+   "summary": "The eyedropper pin now moves to the touched point and follows a drag, and it picks the photo's colour under its tip."
+  },
+  {
+   "bug": "PHA262026P0090",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Sticker panel lacks the store, Favorites, AI Sticker, More tile and ✕ / ✓",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0090_sticker_panel.png",
+    "screenshots/a_p0090_tabs_end.png",
+    "screenshots/a_after_drag.png",
+    "screenshots/a_p0090_sticker_added.png"
+   ],
+   "result": "OK",
+   "summary": "The Sticker panel now has Favorites and ✕ / ✓; the store button, AI Sticker tab and More tile are no longer part of this panel."
+  },
+  {
+   "bug": "PHA262026P0091",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Swipe_Collage: Text Bubble panel has no 「∅」 none item first and no ✕ / ✓ bar",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0091_bubble_panel.png",
+    "screenshots/a_p0091_bubble_added.png",
+    "screenshots/a_p0091_bubble_applied.png"
+   ],
+   "result": "OK",
+   "summary": "The Text Bubble panel now has the ✕ / ✓ bar; the 「∅」 (none) item is no longer part of this panel."
+  },
+  {
+   "bug": "PHA262026P0093",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Ratio change resizes the canvas from its centre and squashes the frames",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0093_ratio_panel.png",
+    "screenshots/a_p0093_ratio_9x16.png",
+    "screenshots/a_p0093_ratio_16x9.png"
+   ],
+   "result": "OK",
+   "summary": "Changing the ratio no longer squashes the frames."
+  },
+  {
+   "bug": "PHA262026P0095",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages has no ✓ or ✕; leaving keeps every page change without 「Discard changes?」",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0095_pages.png",
+    "screenshots/a_p0095_page_added.png",
+    "screenshots/a_p0095_x_dialog.png",
+    "screenshots/a_p0095_back_after_add_s.png"
+   ],
+   "result": "Fail",
+   "summary": "Pages now has ✕ / ✓ and ✓ applies the changes, but ✕ and system Back drop the changes at once with no 「Discard changes?」.",
+   "observed": "Pages now has ✕ / ✓ and ✓ applies the changes, but ✕ and system Back drop the changes at once with no 「Discard changes?」.",
+   "observedZh": "Pages 已有 ✕ / ✓ 且 ✓ 可套用，但 ✕ 與返回鍵直接放棄變更，不詢問。",
+   "expected": "When there are changes, ✕ should ask 「Discard changes?」 first.",
+   "expectedZh": "有變更時，✕ 應先詢問「Discard changes?」。"
+  },
+  {
+   "bug": "PHA262026P0096",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages keeps ↶ and ↷ on screen and they undo page changes there",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/a_p0096_pages_4.png",
+    "screenshots/a_p0096_pages_deleted_no_undo.png"
+   ],
+   "result": "OK",
+   "summary": "Pages no longer shows ↶ / ↷; its bottom bar holds only ✕ and ✓."
+  },
+  {
+   "bug": "PHA262026P0107",
+   "title": "PHD-A 20.19.0 - AI_Edit_Agent: The [Suggestion] button is still triggered after tapping the blank space to the right of the [Suggestion] button",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/d_P0107_picker.png",
+    "screenshots/d_P0107_after_blank_taps.png",
+    "screenshots/d_P0107_chip_tap.png",
+    "screenshots/d_P0107_edit_result.png"
+   ],
+   "result": "OK",
+   "summary": "Taps beside a chip or suggestion bubble, far right or right next to it, no longer trigger it, and tapping the bubble itself still fills its prompt, for both the starter chips and the AI suggestions."
+  },
+  {
+   "bug": "PHA262026P0118",
+   "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: First Custom result shows no one-time My AI Artwork 100% dialog",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_p0118_generating.png",
+    "screenshots/b_p0118_first_result_bubble.png",
+    "screenshots/b_p0118_after_intensity_drag.png",
+    "screenshots/b_p0118_retry_done.png"
+   ],
+   "result": "OK",
+   "summary": "The first Custom result now shows a one-time tip on the Artwork button saying all results are saved there at full intensity."
+  },
+  {
+   "bug": "PHA262026P0120",
+   "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: 「All」 stays enabled on a photo with no change of its own after switching photos",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_p0120_adj_photo1_changed.png",
+    "screenshots/b_p0120_adj_photo2_all_disabled.png",
+    "screenshots/b_p0120_adj_photo2_own_change_enabled.png",
+    "screenshots/b_p0120_adj_after_all.png"
+   ],
+   "result": "OK",
+   "summary": "All now follows the shown photo's own unapplied change in Adjustments and Crop & Rotate: disabled on a photo with no change, enabled once it has its own, disabled again after All is applied."
+  },
+  {
+   "bug": "PHA262026P0125",
+   "title": "PHD-A 20.19.0 - [AIAgent] Batch_Editing: App crashes when Crop & Rotate shows a 2730 x 1535 or 1706 x 2559 photo",
+   "creator": "WILLY_WU",
+   "severity": "1",
+   "images": [
+    "screenshots/b_p0125_picked.png",
+    "screenshots/b_p0125_crop_2730_opened.png",
+    "screenshots/b_p0125_crop_back_to_2730.png",
+    "screenshots/b_p0125_crop_open_on_800_tap_2730.png"
+   ],
+   "result": "OK",
+   "summary": "Crop & Rotate now opens on the 2730 x 1535 and 1706 x 2559 photos, first or by thumbnail, showing the photo and its size label without crashing."
+  },
+  {
+   "bug": "PHA262026P0126",
+   "title": "PHD-A 20.19.0 - [AIAgent] image-to-video: Recent Custom result opens Save & Share without Prompts & Settings",
+   "creator": "IAN_SWEN",
+   "severity": "2",
+   "images": [
+    "screenshots/d_P0126_settings.png",
+    "screenshots/d_P0126_after_generate.png",
+    "screenshots/d_P0126_artwork_done.png",
+    "screenshots/d_P0126_i2v_cat_top.png"
+   ],
+   "result": "OK",
+   "summary": "The new Custom video opened from My AI Artwork > Recent > Video shows 'Prompts & Settings' with Kling 3.0, 5s, std and Sound off next to the prompt, the same as from the Image to Video category."
+  },
+  {
+   "bug": "PHA262026P0127",
+   "title": "PHD-A 20.19.0 - [AIAgent] AI_Hair_Color: Custom palette: colour picked with Done is not added to the row as a new circle",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/b_p0127_ombre_before.png",
+    "screenshots/b_p0127_palette_blue.png",
+    "screenshots/b_p0127_after_done.png",
+    "screenshots/b_p0118_first_result_bubble.png"
+   ],
+   "result": "OK",
+   "summary": "A colour picked with Done is now added as a new ringed circle right after the colour wheel and the other colours move one place right."
+  },
+  {
+   "bug": "PHA262026P0130",
+   "title": "PHD-A 20.19.0 - Reel_Creator: The APP crashes after tapping the [Import] button",
+   "creator": "WILLY_WU",
+   "severity": "1",
+   "images": [
+    "screenshots/d_P0130_template.png",
+    "screenshots/d_P0130_confirm.png",
+    "screenshots/d_P0130_generating.png",
+    "screenshots/d_P0130_generated.png"
+   ],
+   "result": "OK",
+   "summary": "After a successful Reel Creator generation, Import on the 'Use the 4 photos you picked last time?' prompt worked on Walking Shift and Travel Recap with no crash and nothing new in the crash buffer."
+  },
+  {
+   "bug": "PHA262026P0132",
+   "title": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker: imported count out of range shows no red tray text",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_P0132_import_above_max.png",
+    "screenshots/c_P0132_in_range.png",
+    "screenshots/c_P0132_import_below_min.png"
+   ],
+   "result": "OK",
+   "summary": "With an out-of-range count after Import, Next stays disabled and no red text shows, as the updated PM spec asks."
+  },
+  {
+   "bug": "PHA262026P0133",
+   "title": "PHD-A 20.19.0 - [AIAgent] Reel_Creator: Photo picker Import: imported photos unticked; tapping one adds it twice",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/c_P0133_A_import.png",
+    "screenshots/c_P0133_A_tap_unpick.png",
+    "screenshots/c_P0133_B_import.png",
+    "screenshots/c_P0133_B_tap_unpick.png"
+   ],
+   "result": "OK",
+   "summary": "After Import every imported photo is ticked with its number, also after two of the picked photos were deleted, and tapping one unpicks it instead of adding it twice."
+  },
+  {
+   "bug": "PHA262026P0134",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: no 「9:16」 ratio and no reorder hint",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_P0134_confirm.png"
+   ],
+   "result": "OK",
+   "summary": "The confirm page now shows no 9:16 label and no reorder hint, as the updated PM spec asks."
+  },
+  {
+   "bug": "PHA262026P0135",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Reel_Creator: Confirm page: count below min (14/40) is not red",
+   "creator": "WILLY_WU",
+   "severity": "3",
+   "images": [
+    "screenshots/c_P0135_below.png",
+    "screenshots/c_P0135_toast.png",
+    "screenshots/c_P0135_back_in_range.png"
+   ],
+   "result": "OK",
+   "summary": "Below the template's count the 'n/max' part turns red and Generate stays disabled; back in range the title returns to white and Generate is enabled."
+  },
+  {
+   "bug": "PHA262026P0147",
+   "title": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: App crashes on every open after it was closed with a canvas being edited",
+   "creator": "WILLY_WU",
+   "severity": "1",
+   "images": [
+    "screenshots/a_p0147_try_first.png",
+    "screenshots/a_p0147_after_x_canvas.png",
+    "screenshots/a_p0147_reopen1.png"
+   ],
+   "result": "Fail",
+   "summary": "After Removal, Try First, ✕ and a force stop, Swipe Collage still crashes at once on every open (ClassCastException in SwipeCollageDraftUseCase).",
+   "observed": "After Removal, Try First, ✕ and a force stop, Swipe Collage still crashes at once on every open (ClassCastException in SwipeCollageDraftUseCase).",
+   "observedZh": "強制關閉後再進入 Swipe Collage 仍每次立即閃退。",
+   "expected": "No crash: 「Continue editing?」 restores the project, or Swipe Collage opens normally.",
+   "expectedZh": "不應閃退，應出現「Continue editing?」還原專案或正常進入。"
+  }
+ ]
+}

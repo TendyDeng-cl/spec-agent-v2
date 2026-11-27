@@ -2,13 +2,13 @@
   "feature": "pdr/video-enhance",
   "platform": "android",
   "title": "Video Enhance",
-  "version": 11,
-  "approved_at": "2026-11-24T04:03:29.011Z",
-  "draft": "20261124-150000",
+  "version": 16,
+  "approved_at": "2026-11-26T08:11:21.276Z",
+  "draft": "20261126-170000",
   "spec_folder": "specs/2026-11-03",
   "spec_files": [],
   "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
-  "cases": 246,
+  "cases": 273,
   "history": [
     {
       "version": 1,
@@ -106,6 +106,51 @@
       "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
       "draft": "20261124-150000",
       "cases": 246,
+      "csv": "history/v11.csv",
+      "requirements": "history/v11-requirements.md"
+    },
+    {
+      "version": 12,
+      "approved_at": "2026-11-25T06:49:48.172Z",
+      "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
+      "draft": "edit-20261125-144948",
+      "cases": 246,
+      "csv": "history/v12.csv",
+      "requirements": "history/v12-requirements.md"
+    },
+    {
+      "version": 13,
+      "approved_at": "2026-11-25T09:27:47.499Z",
+      "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
+      "draft": "20261125-171701",
+      "cases": 248,
+      "csv": "history/v13.csv",
+      "requirements": "history/v13-requirements.md"
+    },
+    {
+      "version": 14,
+      "approved_at": "2026-11-26T00:47:52.826Z",
+      "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
+      "draft": "20261125-190000",
+      "cases": 250,
+      "csv": "history/v14.csv",
+      "requirements": "history/v14-requirements.md"
+    },
+    {
+      "version": 15,
+      "approved_at": "2026-11-26T07:49:27.365Z",
+      "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
+      "draft": "20261126-111500",
+      "cases": 273,
+      "csv": "history/v15.csv",
+      "requirements": "history/v15-requirements.md"
+    },
+    {
+      "version": 16,
+      "approved_at": "2026-11-26T08:11:21.276Z",
+      "spec_set_sha256": "c1d60aed2d699df6196069d8a0db670b4ca14529f0d3efaa4923aec852188bfe",
+      "draft": "20261126-170000",
+      "cases": 273,
       "csv": "cases.csv",
       "requirements": "requirements.md"
     }

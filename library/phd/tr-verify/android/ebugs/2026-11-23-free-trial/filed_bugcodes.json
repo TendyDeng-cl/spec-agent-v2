@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0041",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611231214",
+    "filed_on": "2026-11-23"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0158",
+      "short": "PHD-A 20.19.0 - [AIAgent] AI_Video_Try_On: Free video needs a clip of 2 s or less, but the trimmer stops at 3 s",
+      "status": "NewCreated",
+      "severity": 2,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "WILLY_WU",
+      "created": "2026-11-23T16:22:37",
+      "build": "202611231214",
+      "tr": "TR261123-0041",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "MEG_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP with a Free account\n2. Tap AI Videos on the Launcher\n3. Tap AI Video Try-On\n4. Tap Import under 「Import a Source Video (3s-10s)」\n5. Select a video of 4 s or longer\n6. Tap Done\n7. Tap OK on 「Enjoy a Free Video on Us」\n8. Drag the trimmer's right handle all the way left\n9. Check the result\n\nResult:\nThe trimmer stops at 0:3 (54 credits), so the 2-second free video the dialog offers cannot be selected.\n摘要：裁切最短只能到 3 秒（54 點），無法剪到對話框說的 2 秒免費長度。\n{20.19.0_ft01_free_video_dialog.jpg} {20.19.0_ft01_trimmer_min_3s.jpg}\n\nExpect Result:\nThe trim length and the free-video rule agree, so a free generation can be made as the dialog says.\n摘要：可裁切長度與免費條件應一致，使用者能照對話框說明免費生成。\n\nNote:\nDevice: Samsung Galaxy S23 (SM-S9110) / Android 16\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_ft01_free_video_dialog.jpg",
+        "20.19.0_ft01_trimmer_min_3s.jpg"
+      ],
+      "key": "Free-Trial-Video-Try-On-01",
+      "iss": "ISS-FT-01",
+      "feature": "Free-Trial-Video-Try-On",
+      "problem_type": "Functional"
+    }
+  ],
+  "dispositions": {}
+}

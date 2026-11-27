@@ -17,6 +17,8 @@ export type PageData = {
   requirements: string; update_plan: string; update_plan_zh?: string; requirements_zh?: string;
   // Open questions and their answers (scripts/lib/questions.ts); the review page shows them above the table
   questions?: { id: string; text: string; rows: string[] }[];
+  question_settled?: Record<string, { state: string; by: string; at: string; note: string; codes?: string[] }>;   // what a completed run settled (lib/questions.ts readSettled)
+  question_bugs?: Record<string, string[]>;   // Q-id → the filed eBugs that carry the question to its owner (lib/boards.ts filedQuestions)
   questions_zh?: Record<string, string>;   // Chinese reading copy of the questions by Q-id (questions.zh-Hant.json), shown in 中文 mode
   answers?: Record<string, { answer: string; by: string; at: string; platform: string; status: string; resolution?: string; question: string }>;
   zh?: Record<string, Record<string, string>>;   // Chinese reading copy by case ID (review.ts), shown in 中文 mode

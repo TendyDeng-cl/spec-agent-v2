@@ -1,0 +1,11 @@
+{
+  "Q-21": {
+    "question": "Playhead: the Design draws a playhead on the strip (a line, a time bubble and a ◀▶ knob) but no note says how far it may be dragged (only inside the selection, or the whole video) or whether play starts from it. Assumption: dragging it scrubs the Preview inside the selection and changes neither the selection nor the price. R-192, R-193 (TC-215).",
+    "answer": "play should start from where the playhead is and it can be dragged between the two white <> icons",
+    "by": "user",
+    "at": "2026-11-25T09:19:24.868Z",
+    "platform": "android",
+    "status": "done",
+    "resolution": "REQ-044, draft 20261125-171701 on both platforms (to be reviewed and saved): R-193 and R-027 changed, Q-21 answered, new Q-28; Android TC-215 and TC-037 modified, TC-348 and TC-349 new; iOS TC-215 and TC-037 modified, TC-347 and TC-348 new."
+  }
+}

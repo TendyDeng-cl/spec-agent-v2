@@ -1,0 +1,11 @@
+
+0 of 1 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[AIGC-Watermark-Q1-01] PDR-A 16.9.0 - [AIAgent] Export: Projects with AI content export with a C2PA manifest marking the whole video as AI
+      feature='Export'  terms=['Export']  searched 168 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 3 ticket(s) of 168 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0202  Assigned     RD   2611161  PDR-A 16.9.0 - [AIFound] Template V2V: Picker ↗ preview Next opens Full Editor/Export, clip never returns to template
+      DRA262611P0223  TRCreated    RD   2611161  PDR-A 16.9.0 - [AIAgent] Export: Project with an AI Music Generator song exports with no AIGC dialog or AI label
+      DRA262611P0225  Assigned     RD   2611161  PDR-A 16.9.0 - [AIAgent]Export: AIGC dialog opens after 「Produce」, not on 「Export」; Cancel returns to Produce

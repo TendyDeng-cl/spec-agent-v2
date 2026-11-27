@@ -1,0 +1,10 @@
+11-23 16:42:40.912 E/AndroidRuntime(16214): FATAL EXCEPTION: main
+11-23 16:42:40.912 E/AndroidRuntime(16214): Process: com.cyberlink.photodirector, PID: 16214
+11-23 16:42:40.912 E/AndroidRuntime(16214): java.lang.ClassCastException: com.google.gson.internal.LinkedTreeMap cannot be cast to uw8
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at com.cyberlink.photodirector.pages.swipeCollage.usecase.SwipeCollageDraftUseCase$load$2.invokeSuspend(SourceFile:94)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(SourceFile:7)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at eo3.run(SourceFile:113)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at te7.run(SourceFile:597)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at wa9.run(SourceFile:2)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	at g43.run(SourceFile:87)
+11-23 16:42:40.912 E/AndroidRuntime(16214): 	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [gk8{Cancelling}@dd0c3a5, Dispatchers.Main.immediate]

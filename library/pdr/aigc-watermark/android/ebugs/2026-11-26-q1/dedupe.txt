@@ -1,0 +1,9 @@
+# AIGC Watermark Android, question round Q1 (Q-13): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-26
+# Pool read with `ecl_query.py bugs --text … --product "PowerDirector Mobile for Android" --limit 300` (dedupe-query.txt):
+# 「C2PA」 3, 「Content Credentials」 0, 「AIGC」 6, 「manifest」 2, 「Watermark」 38 tickets; every AIGC / C2PA ticket read against ISS-AWA-19:
+#   DRA262611P0220, DRA262611P0221 (NAB): saved Image to Video results carry CyberLink's manifest: saved results, not an editor export (the rulings behind R-050 / R-056)
+#   DRA262611P0218 (TRCreated): Text to Image saved On keeps Google's manifest: a saved result
+#   DRA262611P0223 (TRCreated): a project with an AI Music song exports with no dialog or label: no C2PA point
+#   DRA262611P0229, P0227, P0225, P0214, DRA262610P0301: dialog, default, sheet and other features: unrelated
+#   The other 「Watermark」 tickets are the product watermark, AI Mini Drama or older features: unrelated
+# No same-OS ticket covers Q-13: ISS-AWA-19 is a new entry. Nothing commented on (rule 6).

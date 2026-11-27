@@ -1,0 +1,24 @@
+{
+  "_note": "Where the Kanban roadmap puts this feature, per platform (user, 2026-11-26): the app version and the roadmap items it covers (titles as on the sheet). The Dashboard lists the feature under that version.",
+  "source": "Kanban App Compiled Roadmap (Google Sheets 17ohWkcbvz9qhg-ZoYImtGWFcAxti4myKib4ePd1b74Q)",
+  "tab": "PDRM Roadmap",
+  "read": "2026-11-26",
+  "android": {
+    "version": "16.8.0",
+    "items": [
+      "AI Mini-drama Edit by Chat",
+      "Mini Drama support Seedance 2.5",
+      "Mini Drama support changing character look by chatting",
+      "Mini Drama support TTS Gemini Flash 3.8 for better voice quality"
+    ]
+  },
+  "ios": {
+    "version": "16.9.0",
+    "items": [
+      "AI Mini-drama Edit by Chat",
+      "Mini Drama support Seedance 2.5",
+      "Mini Drama support changing character look by chatting",
+      "Mini Drama support TTS Gemini Flash 3.8 for better voice quality"
+    ]
+  }
+}

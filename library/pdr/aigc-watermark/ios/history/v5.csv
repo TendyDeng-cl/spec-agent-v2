@@ -1,0 +1,1465 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes
+TC-001,Settings entry,Tier Free (Launcher › Pink › ☰ › [0] IAP › status = Free),"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」","The row 「Remove AIGC Watermark」 shows the remove-AI icon, the text, an ⓘ right after the text and a switch at the right, with no chevron
+It sits directly below 「Remove Watermark」 and above 「Preferences」",P2,"R-001, R-002",
+TC-002,Settings entry,Tier Pro (Launcher › Pink › ☰ › [0] IAP › status = Pro),"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」","「Remove AIGC Watermark」 is shown with its ⓘ and switch
+There is no 「Remove Watermark」 row
+「Preferences」 follows it",P2,R-003,PM-only: no Design frame of the paid Menu (Design 2608).
+TC-003,Settings entry,Tier Pro+ (Launcher › Pink › ☰ › [0] IAP › status = Pro+),"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」","「Remove AIGC Watermark」 is shown with its ⓘ and switch
+There is no 「Remove Watermark」 row
+「Preferences」 follows it",P2,R-003,PM-only: no Design frame of the paid Menu (Design 2608).
+TC-004,Settings entry,"1. Tier Free (Launcher › Pink › ☰ › [0] IAP › status = Free)
+2. Menu › Settings open",Tap the ⓘ beside 「Remove AIGC Watermark」,"The Menu dims and a bottom sheet opens
+Title 「AIGC Watermark」
+Body 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」
+One button 「Got it」, no X",P2,"R-004, R-005",PM draws an X on the sheet; the Design (newer source by priority) has none.
+TC-005,Settings entry,"1. Tier Pro (Launcher › Pink › ☰ › [0] IAP › status = Pro)
+2. Menu › Settings open","1. Tap the ⓘ beside 「Remove AIGC Watermark」
+2. Tap 「Got it」","Step 1: the same 「AIGC Watermark」 sheet opens
+Step 2: the sheet closes, the Menu is shown again and the switch keeps its value",P2,"R-006, R-007",
+TC-006,Settings entry,"1. Tier Free (Launcher › Pink › ☰ › [0] IAP › status = Free)
+2. Menu › Settings › 「Remove AIGC Watermark」 is Off","1. Turn 「Remove AIGC Watermark」 On
+2. Leave the Menu and open it again","Step 1: the switch turns On with no paywall, upgrade prompt or sign-in request
+Step 2: the switch is still On",P1,"R-011, R-008",Q-2: tier gating not stated; the Essential mockup draws the switch On.
+TC-007,Settings entry,Menu › Settings › 「Remove AIGC Watermark」 is On,"1. Close the app completely
+2. Open it again
+3. Open ☰ Menu › Settings",「Remove AIGC Watermark」 is still On,P2,R-010,
+TC-008,Settings entry,Fresh install of the build (not possible on the QA iPhone: recorded Blocked as test-data),"1. Open the app and get past the first-launch screens
+2. Open ☰ Menu › Settings",「Remove AIGC Watermark」 is Off,P1,R-009,Q-1. PowerDirector cannot be reinstalled on the QA iPhone (AGENTS.md): Blocked --as test-data.
+TC-009,Watermark artwork and placement,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result in portrait (9:16) in My Artwork","1. Open the result
+2. Tap 「Save」
+3. Copy the saved image to the computer","The AI label sits in the top-left corner
+Its outer box (padding included) is 12% of the short side (1080 × 1920 → label 130 px, ±2 px)
+It is the AI label artwork: dark rounded square, white 「AI」 in a bracket frame, sparkle at the top right",P1,"R-012, R-013, R-014","Measure on the full-resolution file, not a screenshot. If the build saves another resolution, 12% of its short side applies."
+TC-010,Watermark artwork and placement,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result in landscape (16:9) in My Artwork","1. Open the result
+2. Tap 「Save」
+3. Copy the saved image to the computer","The AI label sits in the top-left corner
+Its outer box (padding included) is 12% of the short side (1920 × 1080 → label 130 px, ±2 px)
+It is the AI label artwork: dark rounded square, white 「AI」 in a bracket frame, sparkle at the top right",P2,"R-012, R-013, R-014","Measure on the full-resolution file, not a screenshot. If the build saves another resolution, 12% of its short side applies."
+TC-011,Watermark artwork and placement,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result in square (1:1) in My Artwork","1. Open the result
+2. Tap 「Save」
+3. Copy the saved image to the computer","The AI label sits in the top-left corner
+Its outer box (padding included) is 12% of the short side (1080 × 1080 → label 130 px, ±2 px)
+It is the AI label artwork: dark rounded square, white 「AI」 in a bracket frame, sparkle at the top right",P2,"R-012, R-013, R-014","Measure on the full-resolution file, not a screenshot. If the build saves another resolution, 12% of its short side applies."
+TC-012,Watermark artwork and placement,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result in portrait (9:16) in My Artwork","1. Open the result
+2. Tap 「Save」
+3. Copy the saved video to the computer
+4. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner, 12% of the short side (1080 × 1920 → 130 px, ±2 px)
+2.1 s and every later frame checked (middle, last): no label",P1,"R-015, R-016, R-014","Q-3: video size assumed 12% like images. Q-16: a result shorter than 2 s keeps the label throughout (assumption, not asserted)."
+TC-013,Watermark artwork and placement,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result in landscape (16:9) in My Artwork","1. Open the result
+2. Tap 「Save」
+3. Copy the saved video to the computer
+4. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner, 12% of the short side (1920 × 1080 → 130 px, ±2 px)
+2.1 s and every later frame checked (middle, last): no label",P1,"R-015, R-016, R-014","Q-3: video size assumed 12% like images. Q-16: a result shorter than 2 s keeps the label throughout (assumption, not asserted)."
+TC-014,Watermark artwork and placement,"1. App language English (ENU)
+2. Menu › Settings › 「Remove AIGC Watermark」 is Off","1. Generate a song in AI Music Generator (answer the AIGC dialog with 「Generate」)
+2. Play it in My AI Music from the start","The song starts straight with the music
+No spoken clip 「This audio was generated by AI.」 in any language",P1,R-055,"REQ-009: PM (PDRA-649, Phoebe_Chang) 「no need to handle watermark for audio」, so no canned audio clip. Evidence: screen recording with sound."
+TC-017,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Video Edit by Chat result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Video Edit by Chat thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-018,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Video Edit by Chat result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-019,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Video Edit by Chat result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-020,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Image to Video result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Image to Video tile
+3. Tap it
+4. Tap 「View」 on the result
+5. Play the first 3 s
+6. Tap 「Full Editor」 and play the first 3 s","Step 2: the tile shows no AI label
+Step 3: the Image to Video task list opens
+Step 4: the result page opens with Share Video, 「Full Editor」 and 「Save」
+Steps 5–6: no AI label in the player or the editor preview",P2,"R-018, R-022, R-023",The switch is Off so a label would show if the rule were broken.
+TC-021,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Image to Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-022,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Image to Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-023,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Cinematic Reel Creator result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Cinematic Reel Creator thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-024,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Cinematic Reel Creator result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-025,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Cinematic Reel Creator result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-026,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Character Motion Swap result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Character Motion Swap thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-027,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Character Motion Swap result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-028,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Character Motion Swap result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-029,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Video Object Removal result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Video Object Removal thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-030,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Video Object Removal result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-031,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Video Object Removal result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-032,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished AI Storytelling result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the AI Storytelling thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-033,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The AI Storytelling result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-034,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same AI Storytelling result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-035,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Text to Video result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Text to Video thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-036,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Text to Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-037,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Text to Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-038,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished AI Anime Video result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the AI Anime Video thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-039,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The AI Anime Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-040,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same AI Anime Video result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-041,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Talking Avatar result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Talking Avatar thumbnail
+3. Open the result and play its first 3 s
+4. Tap 「Full Editor」 and play the first 3 s","Step 2: the thumbnail shows no AI label
+Steps 3–4: no AI label in the player or the editor preview",P2,R-018,The switch is Off so a label would show if the rule were broken.
+TC-042,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Talking Avatar result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","0.0 s and 1.9 s: the AI label is in the top-left corner at 12% of the short side
+2.1 s and later: no label
+The rest of the video is unchanged",P1,R-019,Keep this file for the C2PA rows and the already-saved rows.
+TC-043,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Talking Avatar result page open","1. Tap 「Save」
+2. Copy the saved video to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","No AI label at 0.0 s, 1.9 s or later",P1,"R-020, R-008",
+TC-044,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result page open
+3. Instagram installed and signed in on the phone","1. Tap 「Instagram」 under Share Video
+2. Look at the video in Instagram's composer
+3. Leave Instagram without posting","Instagram opens with the video
+Its first 2 s show the AI label at the top-left, later frames none
+Nothing is posted",P2,R-021,Never post. Evidence: screen recording of the composer preview.
+TC-045,My Artwork — video results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Image to Video result page open
+3. Instagram installed and signed in","1. Tap 「Instagram」 under Share Video
+2. Look at the video in Instagram's composer
+3. Leave Instagram without posting","The video shows no AI label
+Nothing is posted",P2,R-021,
+TC-046,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished AI Art result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the AI Art thumbnail
+3. Open the result","Step 2: the thumbnail shows no AI label
+Step 3: the result shows no AI label",P2,R-024,"REQ-003: AI Art has no 「Full Editor」, so the image rule's Full Editor step is not done here."
+TC-047,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The AI Art result open","1. Tap 「Save」
+2. Copy the saved image to the computer",The AI label is in the top-left corner at 12% of the short side,P1,R-025,"Q-4: PM states Save / Share only for videos; images assumed the same (Global Rule, Jira)."
+TC-048,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same AI Art result open","1. Tap 「Save」
+2. Copy the saved image to the computer",The image has no AI label,P1,R-025,
+TC-049,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A finished Text to Image result in My Artwork","1. Open AI Magic › 「My Artwork」
+2. Look at the Text to Image thumbnail
+3. Open the result
+4. Tap 「Full Editor」","Step 2: the thumbnail shows no AI label
+Step 3: the result shows no AI label
+Step 4: the editor preview shows no AI label",P2,R-024,
+TC-050,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The Text to Image result open","1. Tap 「Save」
+2. Copy the saved image to the computer",The AI label is in the top-left corner at 12% of the short side,P1,R-025,"Q-4: PM states Save / Share only for videos; images assumed the same (Global Rule, Jira)."
+TC-051,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Text to Image result open","1. Tap 「Save」
+2. Copy the saved image to the computer",The image has no AI label,P1,R-025,
+TC-052,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result open
+3. Instagram installed and signed in","1. Share it to Instagram
+2. Look at the image in Instagram's composer
+3. Leave without posting","The image shows the AI label at the top-left
+Nothing is posted",P2,R-026,Q-4. Never post.
+TC-053,My Artwork — image results,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same Text to Image result open
+3. Instagram installed and signed in","1. Share it to Instagram
+2. Look at the image in Instagram's composer
+3. Leave without posting","The image shows no AI label
+Nothing is posted",P2,R-026,
+TC-054,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. AI Music Generator open with a description typed",Tap 「Generate for ◆ 6」,"The dialog 「AIGC Watermark」 opens
+Body 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」
+An unticked checkbox 「Don’t show again」
+Buttons 「Cancel」 and 「Generate」",P2,R-027,"PM-only: no Design frame yet (Design 2608). Credit price on the button is the build's, not checked here."
+TC-055,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The music 「AIGC Watermark」 dialog open
+3. Credit balance read",Tap 「Cancel」,"The dialog closes
+The AI Music Generator page shows the same description and settings
+Nothing is generating
+The credit balance is unchanged",P2,R-028,
+TC-056,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The music 「AIGC Watermark」 dialog open",Tap 「Generate」 (checkbox left unticked),"The dialog closes
+The popup 「Generating...」 with a percentage and 「Go to My AI Music」 appears",P1,R-029,
+TC-057,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The song from the previous row finished in My AI Music",Play it from the start in My AI Music,"It starts straight with the music, with no spoken clip 「This audio was generated by AI.」",P1,R-055,Evidence: screen recording with sound.
+TC-058,Music Generator (pure audio),The same song in My AI Music,"1. Download it
+2. Play the downloaded file in the phone's Files / music app","The file starts straight with the music, with no spoken clip",P1,R-055,
+TC-059,Music Generator (pure audio),The same song in My AI Music,"1. Add it to the timeline of a new project
+2. Play the project from 0:00",The song plays without the spoken clip,P1,R-055,Also builds the project the next rows export.
+TC-060,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The project from the previous row (only the song and one non-AI photo)","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Steps 1–2: the export AIGC dialog appears and leads to the Produce sheet
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s
+Step 5: no spoken clip at the start",P1,R-035,
+TC-061,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project","1. Tap 「Export」
+2. Tap 「Produce」
+3. Copy the file to the computer
+4. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P2,R-035,
+TC-062,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. AI Music Generator open with a description typed","1. Tap 「Generate for ◆ 6」
+2. When the song is ready, play it from the start in My AI Music","Step 1: no AIGC dialog, the generation starts at once
+Step 2: the song has no spoken clip",P1,"R-031, R-055",REQ-009 answers the clip part of Q-6: no song carries one. Q-20 for the dialog.
+TC-063,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A new project with one non-AI video clip and AI Text to Speech content added from the editor",Play the project from 0:00 in the editor preview,"The AI label shows at the top-left of the preview for the first two seconds, then disappears",P2,R-037,Q-10: assumption for the timeline wording.
+TC-064,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The same project with AI Text to Speech content","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: the export AIGC dialog appears
+Step 2: the Produce sheet opens
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s",P1,"R-038, R-044",
+TC-065,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project with AI Text to Speech content","1. Play from 0:00 in the editor
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P1,"R-037, R-038, R-047",
+TC-066,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A new project with one non-AI video clip and Voice Changer content added from the editor",Play the project from 0:00 in the editor preview,"The AI label shows at the top-left of the preview for the first two seconds, then disappears",P2,R-037,Q-10: assumption for the timeline wording.
+TC-067,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The same project with Voice Changer content","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: the export AIGC dialog appears
+Step 2: the Produce sheet opens
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s",P1,"R-038, R-044",
+TC-068,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project with Voice Changer content","1. Play from 0:00 in the editor
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P1,"R-037, R-038, R-047",
+TC-069,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A new project with one non-AI video clip and AI Anime content added from the editor",Play the project from 0:00 in the editor preview,"The AI label shows at the top-left of the preview for the first two seconds, then disappears",P2,R-037,Q-10: assumption for the timeline wording.
+TC-070,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The same project with AI Anime content","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: the export AIGC dialog appears
+Step 2: the Produce sheet opens
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s",P1,"R-038, R-044",
+TC-071,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project with AI Anime content","1. Play from 0:00 in the editor
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P1,"R-037, R-038, R-047",
+TC-072,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A new project with one non-AI video clip and AI Cartoon content added from the editor",Play the project from 0:00 in the editor preview,"The AI label shows at the top-left of the preview for the first two seconds, then disappears",P2,R-037,Q-10: assumption for the timeline wording.
+TC-073,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The same project with AI Cartoon content","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: the export AIGC dialog appears
+Step 2: the Produce sheet opens
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s",P1,"R-038, R-044",
+TC-074,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project with AI Cartoon content","1. Play from 0:00 in the editor
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P1,"R-037, R-038, R-047",
+TC-075,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A new project with one non-AI video clip and AI Sketch content added from the editor",Play the project from 0:00 in the editor preview,"The AI label shows at the top-left of the preview for the first two seconds, then disappears",P2,R-037,Q-10: assumption for the timeline wording.
+TC-076,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The same project with AI Sketch content","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: the export AIGC dialog appears
+Step 2: the Produce sheet opens
+Step 5: the AI label is at the top-left at 0.0 s and 1.9 s, gone at 2.1 s",P1,"R-038, R-044",
+TC-077,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project with AI Sketch content","1. Play from 0:00 in the editor
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 4: no AI label in any frame",P1,"R-037, R-038, R-047",
+TC-078,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A project with AI Text to Speech content","1. Share the project to Instagram from the editor's share screen
+2. Look at the video in Instagram's composer
+3. Leave without posting","The first 2 s show the AI label at the top-left
+Nothing is posted",P2,R-039,Never post.
+TC-079,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. The same project","1. Share the project to Instagram from the editor
+2. Look at the video in the composer
+3. Leave without posting","No AI label
+Nothing is posted",P2,R-039,
+TC-080,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A project whose first clip is a 5 s non-AI clip
+3. An AI Anime clip follows it from 0:05","1. Export it (answer the AIGC dialog with 「Export」)
+2. Copy the file to the computer
+3. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","The AI label is on the non-AI clip at 0.0 s and 1.9 s
+No label from 2.1 s on, including over the AI Anime clip at 0:05",P2,R-040,"Q-9: from the PM example (badge on the first, non-AI clip)."
+TC-081,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A project with only non-AI clips, text and stickers","1. Tap 「Export」
+2. Tap 「Produce」
+3. Copy the file to the computer","Step 1: no AIGC dialog, the Produce sheet opens directly
+Step 3: no AI label",P2,R-041,Q-7.
+TC-082,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result that was never saved with the switch Off (a new result, or one saved only with the switch On), opened with 「Full Editor」 (no other change)","1. Tap 「Export」
+2. Tap 「Export」 in the AIGC dialog if shown
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","The AIGC dialog appears
+The produced file has the AI label at 0.0 s and 1.9 s, none from 2.1 s",P2,R-042; REQ-014,"Q-19: the PM says only that the timeline shows no watermark; export assumed to follow the switch. The result must not have been saved with the switch Off: its timeline clip can be the gallery file with the label already burned in (Android R3), and the export's own label then cannot be told from the clip's. Switch On: TC-155."
+TC-155,Editor — AI content on the timeline,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. An Image to Video result that was never saved with the switch Off (a new result, or one saved only with the switch On), opened with 「Full Editor」 (no other change)","1. Play the project from 0:00 in the editor preview
+2. Tap 「Export」
+3. Tap 「Produce」
+4. Copy the file to the computer
+5. Grab frames of the file at 0.0 s, 1.9 s and 2.1 s on the computer (ffmpeg)","Step 1: no AI label in the preview
+Step 2: no AIGC dialog, the Produce sheet opens directly
+Step 5: no AI label at 0.0 s, 1.9 s or 2.1 s",P2,"R-042, R-047; REQ-014","Q-19, the switch On side. With the switch On nothing adds a label, so a label in step 1 or step 5 is one burned into the clip itself, not the export's: with TC-082 on the same kind of result this tells the two apart."
+TC-083,Export dialog,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A project with AI Anime content",Tap 「Export」,"The dialog 「AIGC Watermark」 opens over the dimmed editor
+Body 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」
+An unticked checkbox 「Don’t show again」
+Buttons 「Cancel」 and 「Export」",P2,R-043,PM-only: no Design frame yet (Design 2608).
+TC-084,Export dialog,The export 「AIGC Watermark」 dialog open,Tap 「Cancel」,"The dialog closes
+The editor stays open with the project unchanged
+No Produce sheet and no export",P2,R-045,
+TC-085,Already-saved content,The video saved with the switch Off in the Image to Video save row,"1. Turn the switch On
+2. Open the saved video again in the phone's gallery",The saved video still shows the AI label in its first 2 s,P2,R-048,
+TC-086,Already-saved content,The video saved with the switch On in the Image to Video save row,"1. Turn the switch Off
+2. Open that saved video again in the gallery",It still has no AI label,P2,R-048,
+TC-087,Already-saved content,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result already saved once with the switch On","1. Open the result again in My Artwork
+2. Tap 「Save」
+3. Compare the two saved files","The new file has the AI label
+The earlier file still has none",P2,R-049,
+TC-088,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Google (Veo) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvGoogle (有簽章 (Google)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-089,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a BytePlus (Seedance) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvByteplus (有簽章 (BytePlus)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-090,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Flux model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvFlux (有簽章 (Black Forest Labs)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-091,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Kling model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvKling (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-092,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Vidu model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvVidu (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-093,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Hailuo model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvHailuo (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-094,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Pixverse model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvPixverse (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-095,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with an Alibaba (Wan) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext ItvAlibaba (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-096,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An Image to Video result made with a Google model with automatic music","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Apt4 ItvGoogleAutoMusic (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-097,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Google (Veo) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvGoogle (有簽章 (Google)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-098,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a BytePlus (Seedance) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvByteplus (有簽章 (BytePlus)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-099,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Flux model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvFlux (有簽章 (Black Forest Labs)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-100,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Kling model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvKling (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-101,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Vidu model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvVidu (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-102,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Hailuo model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvHailuo (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-103,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with a Pixverse model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvPixverse (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-104,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Video result made with an Alibaba (Wan) model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext TtvAlibaba (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-105,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Character Motion Swap result made with the Kling model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext MotionSwapKlingVid / MotionSwapKlingImg (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-106,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Character Motion Swap result made with the CyberLink model (Wan Animate)","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Wana WanAnimate / Sca2 MotionSwapScail2 (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-107,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Video Object Removal result made with its only path","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Vor VideoObjectRemoval (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-108,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An AI Storytelling result made with its default path","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext StorytellingAssetsV3 (有簽章 (Microsoft)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-109,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Cinematic Reel Creator result made with a BytePlus model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext CineStoryByteplusVendorMusic (有簽章 (BytePlus)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-110,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Cinematic Reel Creator result made with a Kling model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext CineStoryKling (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-111,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Video Edit by Chat result made with a Google model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext VtvGoogle (有簽章 (Google)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-112,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Video Edit by Chat result made with a Kling model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext VtvKling (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-113,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An AI Anime Video result made with its only path","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Vani VideoAIAnime (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-114,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Talking Avatar result made with its only path","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Anch AIAnchor / AIAnchorV2 (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-115,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. An AI Art result made with its default style","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056","Sheet line: Flux ItiFlux (assumed, Q-12) (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model."
+TC-116,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Text to Image result made with its default model","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Apt3 / Flux TextToImage (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-117,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Music Generator result made with a prompt-only song","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Ext MusicGenerator (無簽章). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-118,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A Music Generator result made with a song from lyrics","1. Save (or download) the result
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","A C2PA manifest is present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P2,"R-050, R-056",Sheet line: Lts LyricsToSong (有簽章 (CyberLink)). The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-119,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. A Text to Image result","1. Tap 「Save」
+2. Copy the file to the computer
+3. Read its Content Credentials (c2patool <file>)","The image has no AI label
+The C2PA manifest is still present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P1,"R-052, R-050, R-056",The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-120,C2PA metadata,"1. Menu › Settings › 「Remove AIGC Watermark」 is On
+2. An Image to Video result made with a Google model","1. Tap 「Save」
+2. Copy the file to the computer
+3. Read its Content Credentials","The video has no AI label
+The C2PA manifest is still present and valid
+Its signer is CyberLink
+It is the only manifest: no provider manifest and no ingredient
+It marks the content as AI-generated",P1,"R-052, R-050, R-056",The sheet names who signs the provider file; the app re-signs it as CyberLink (KF-007). n/a when the build does not offer the model.
+TC-121,C2PA metadata,A project with AI Anime content,"1. Find a way to read the generated asset as a file
+2. Read its Content Credentials",The AI Anime asset carries a C2PA manifest signed by CyberLink,P3,R-053,Sheet line: AniLcm AIAnime 有簽章 (CyberLink). Parked: the asset stays inside the project (Q-13).
+TC-122,C2PA metadata,A project with AI Cartoon content,"1. Find a way to read the generated asset as a file
+2. Read its Content Credentials",The AI Cartoon asset carries a C2PA manifest signed by CyberLink,P3,R-053,Sheet line: AniLcm AICartoon 有簽章 (CyberLink). Parked: the asset stays inside the project (Q-13).
+TC-123,C2PA metadata,A project with AI Sketch content,"1. Find a way to read the generated asset as a file
+2. Read its Content Credentials",The AI Sketch asset carries a C2PA manifest signed by CyberLink,P3,R-053,Sheet line: AniLcm AISketch 有簽章 (CyberLink). Parked: the asset stays inside the project (Q-13).
+TC-124,C2PA metadata,A project with Voice Changer content,"1. Find a way to read the generated asset as a file
+2. Read its Content Credentials",The Voice Changer asset carries a C2PA manifest signed by CyberLink,P3,R-053,Sheet line: Apt1 VoiceChangerV2 有簽章 (CyberLink). Parked: the asset stays inside the project (Q-13).
+TC-125,C2PA metadata,A project with AI Text to Speech content,"1. Find a way to read the generated asset as a file
+2. Read its Content Credentials",The AI Text to Speech asset carries a C2PA manifest signed by CyberLink,P3,R-053,Sheet line: Apt1 TextToSpeechCL 有簽章 (CyberLink). Parked: the asset stays inside the project (Q-13).
+TC-154,C2PA metadata,"1. The file TC-064 exported (AI Text to Speech project, switch Off) on the computer
+2. The file TC-070 exported (AI Anime project, switch Off) on the computer
+3. The file TC-065 exported (AI Text to Speech project, switch On) on the computer","1. Read the Content Credentials of the TC-064 file (c2patool <file>)
+2. Read the Content Credentials of the TC-070 file
+3. Read the Content Credentials of the TC-065 file","Steps 1–3: record for each file whether it carries a C2PA manifest or c2patool answers 「No claim found」
+Steps 1–3: for each manifest found, record its signer, its actions with their digitalSourceType, and any ingredient
+Step 3: record whether the switch On export differs from the switch Off export of the same project (step 1)
+Steps 1–3: the spec does not say whether an editor export carries a manifest (Q-13), so no outcome is a Pass: record what was read as Fail (question) for PM",P2,R-053; REQ-014,"Q-13. No new export: the row reads the files TC-064, TC-070 and TC-065 produced, so keep them in the run folder's files/. Known on Android: a photo + song project exported with the switch Off wrote no claim although the C2PA library loaded (KF-008). The timeline tool's own asset still cannot be read as a file (TC-121 – TC-125)."
+TC-126,Music Generator (pure audio),"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. The music AIGC dialog open
+3. The export dialog has never been silenced (TC-127 not run yet)
+4. The project with AI Text to Speech content (TC-064) saved","1. Tick 「Don’t show again」
+2. Tap 「Generate」
+3. When it finishes, start another generation
+4. Open the project with AI Text to Speech content and tap 「Export」
+5. Tap 「Cancel」","Step 2: the generation starts
+Step 3: no AIGC dialog, the second generation starts at once
+Step 3: the second song starts straight with the music, with no spoken clip 「This audio was generated by AI.」
+Step 4: the export 「AIGC Watermark」 dialog still opens, with 「Don’t show again」 unticked
+Step 5: the dialog closes and nothing is produced",P2,"R-030, R-055, R-046; REQ-014",One-way state: runs after every row that needs the music dialog and before TC-127. Q-8: steps 4–5 show whether the music dialog's tick also silences the export dialog (assumption: separate).
+TC-127,Export dialog,"1. Menu › Settings › 「Remove AIGC Watermark」 is Off
+2. A project with AI Sketch content
+3. The export dialog has never been silenced","1. Tap 「Export」
+2. Tick 「Don’t show again」
+3. Tap 「Export」 and produce
+4. Tap 「Export」 again on the same project
+5. Produce and copy both files to the computer","Step 4: no AIGC dialog, the Produce sheet opens directly
+Step 5: both files have the AI label in their first 2 s",P2,R-046,One-way state: runs after every row that needs the export dialog (pass 9 of the coverage rules). Q-8.
+TC-128,MUI,"1. App language set to Traditional Chinese (`launch --lang zh-Hant-TW`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Traditional Chinese (traditional characters, Taiwan wording) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI CHT (zh-Hant-TW). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-129,MUI,"1. App language set to Simplified Chinese (`launch --lang zh-Hans-CN`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Simplified Chinese (simplified characters) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI CHS (zh-Hans-CN). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-130,MUI,"1. App language set to Japanese (`launch --lang ja-JP`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Japanese and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI JPN (ja-JP). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-131,MUI,"1. App language set to Spanish (`launch --lang es-ES`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Spanish (Spanish of Spain) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI ESP (es-ES). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-132,MUI,"1. App language set to Korean (`launch --lang ko-KR`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Korean and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI KOR (ko-KR). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-133,MUI,"1. App language set to German (`launch --lang de-DE`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in German and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI DEU (de-DE). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-134,MUI,"1. App language set to French (`launch --lang fr-FR`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in French and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI FRA (fr-FR). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-135,MUI,"1. App language set to Italian (`launch --lang it-IT`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Italian and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI ITA (it-IT). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-136,MUI,"1. App language set to Russian (`launch --lang ru-RU`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Russian and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI RUS (ru-RU). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-137,MUI,"1. App language set to Portuguese (Brazil) (`launch --lang pt-BR`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Portuguese (Brazil) (Brazilian Portuguese) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI PTB (pt-BR). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-138,MUI,"1. App language set to Dutch (`launch --lang nl-NL`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Dutch and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI NLD (nl-NL). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-139,MUI,"1. App language set to Indonesian (`launch --lang id-ID`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Indonesian and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI IND (id-ID). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-140,MUI,"1. App language set to Thai (`launch --lang th-TH`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Thai and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI THA (th-TH). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-141,MUI,"1. App language set to Malay (`launch --lang ms-MY`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Malay and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI MAY (ms-MY). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-142,MUI,"1. App language set to Hindi (`launch --lang hi-IN`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Hindi and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI HIN (hi-IN). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-143,MUI,"1. App language set to Spanish (Mexico) (`launch --lang es-MX`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Spanish (Mexico) (Mexican Spanish) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI ESM (es-MX). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-144,MUI,"1. App language set to Arabic (`launch --lang ar-SA`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Arabic and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Arabic is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+12. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+13. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+14. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+15. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI ARA (ar-SA). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-145,MUI,"1. App language set to Vietnamese (`launch --lang vi-VN`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Vietnamese and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI VIT (vi-VN). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-146,MUI,"1. App language set to Polish (`launch --lang pl-PL`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Polish and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI PLK (pl-PL). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-147,MUI,"1. App language set to Turkish (`launch --lang tr-TR`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Turkish and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI TRK (tr-TR). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-148,MUI,"1. App language set to Persian (`launch --lang fa-IR`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Persian and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Persian is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+12. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+13. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+14. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+15. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI FAR (fa-IR). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-149,MUI,"1. App language set to Hebrew (`launch --lang he-IL`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Hebrew and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Hebrew is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+12. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+13. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+14. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+15. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI HEB (he-IL). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-150,MUI,"1. App language set to Swedish (`launch --lang sv-SE`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Swedish and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI SVE (sv-SE). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-151,MUI,"1. App language set to Danish (`launch --lang da-DK`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Danish and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI DAN (da-DK). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-152,MUI,"1. App language set to Norwegian Bokmål (`launch --lang nb-NO`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Norwegian Bokmål (Norwegian Bokmål) and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI NOR (nb-NO). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).
+TC-153,MUI,"1. App language set to Ukrainian (`launch --lang uk-UA`)
+2. After the row a plain `launch` restores the language
+3. Any tier (Launcher › Pink › ☰ › [0] IAP), with at least 6 credits
+4. Menu › Settings › 「Remove AIGC Watermark」 is Off
+5. Neither 「Don’t show again」 ticked on this install: the MUI phase runs before TC-126 and TC-127
+6. The project with AI Anime content of TC-083","1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-004)
+4. Tap 「Got it」 (TC-005)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-083)
+11. Tap 「Cancel」 (TC-084)","1. Every string shows in Ukrainian and says what the English says
+2. No string is left in English, except 「AIGC」 (an acronym, may stay as is)
+3. No string shows a key, a placeholder (%@, %s, {0}) or another language
+4. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+5. No translation sheet (REQ-011): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+6. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+7. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+8. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+9. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+10. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+11. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+12. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+13. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」
+14. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",P2,R-057; R-058; REQ-011; REQ-012,MUI UKR (uk-UA). One `texts` read and screenshot per screen; nothing generated or exported (both dialogs end in 「Cancel」).

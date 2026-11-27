@@ -1,0 +1,45 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.v202611232103 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R8)
+
+=== Test Result
+PHD-A - Bug verification [OK=6, Fail=0]
+
+=== Testing Date
+2026/11/24
+
+=== Test Result Details
+PHD-A - Bug verification [OK=6, Fail=0]
+
+=== PHA262026P0071  [OK]
+Verified OK with 202611232103 build.
+Template cards now show the template's first page with page dots, and the Template Preview shows its pages and dots.
+Risk test: n/a
+
+=== PHA262026P0104  [OK]
+Verified OK with 202611232103 build.
+PRO textures and frames now carry a crown; no item shows a NEW tag, as none appears to be marked new in the CMS.
+Risk test: n/a
+
+=== PHA262026P0105  [OK]
+Verified OK with 202611232103 build.
+A Free user now gets the PhotoDirector Premium page at the 3rd and 6th export.
+Risk test: n/a
+
+=== PHA262026P0106  [OK]
+Verified OK with 202611232103 build.
+After the app is closed with a Swipe Collage edit open, 「Continue editing?」 appears on entering Swipe Collage and Continue restores the edit.
+Risk test: n/a
+
+=== PHA262026P0111  [OK]
+Verified OK with 202611232103 build.
+The Custom panel now has a grab handle and rounded top corners, with no ✕ ↩ ↪ ✓ row under it, as the Design draws.
+Risk test: n/a
+
+=== PHA262026P0147  [OK]
+Verified OK with 202611232103 build.
+Swipe Collage now opens normally after a force stop with a canvas being edited, and a saved draft restores without a crash.
+Risk test: n/a
+

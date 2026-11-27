@@ -5,6 +5,10 @@ NAT="window frames, wall and HUD edges crisper, no halos, natural look = lighter
 PNAT="foliage, ground and wall texture visibly re-detailed beyond the Standard twin, HUD text crisper, colours natural, no halos = more detail with a light, realistic enhancement"; PSH="edges, HUD text and textures sharper and more detailed than both Original and the Standard twin, colours natural = more detail with a moderate, sharp, clear enhancement"
 while read -r id st fp rs md <&3; do
   [ -n "$rs" ] || continue
+  # R4-g2: stop before a row once the Play test subscription has lapsed (logcat updateSubscribingStatus: false since the chain started)
+  RR=${RUN:-x}; case $RR in /*) ;; *) RR=/Users/ethanhsu/Desktop/pdr-spec-casebook/$RR;; esac
+  LF=$(ls -t $RR/logs/.live/logcat-*.txt 2>/dev/null | head -1)
+  if [ -n "$LF" ] && [ -n "$T0" ] && awk -v t="$T0" '$0>=t' "$LF" | grep -q "updateSubscribingStatus: false"; then echo "TIER-LAPSED before $id $(date +%T)"; exit 3; fi
   L=$NAT; [ "$st" = sharp ] && L=$SH; if [ "$md" = professional ]; then L=$PNAT; [ "$st" = sharp ] && L=$PSH; fi; [ "$rs" = 4k ] && L="$L (4K compared at 720p)"
   $S/row $id chip_style_$st chip_fps_$fp chip_resolution_$rs ${md:-standard} > $S/$id.out 2>&1 < /dev/null || { echo "$id FAILED"; tail -5 $S/$id.out; exit 1; }
   $S/rec $id $NET "$L" "" ${md:-standard} < /dev/null

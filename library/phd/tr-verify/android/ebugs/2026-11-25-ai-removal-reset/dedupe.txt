@@ -1,0 +1,5 @@
+Dedupe — AI Removal Reset / Smart Select layout, TR261124-0075 (PHD-A 20.19.0.v202611241937, R11, S23), 2026-11-25.
+Android pool only (product "PhotoDirector Mobile for Android"; dedupe per OS).
+Text searches: "AI_Removal" (8), "AI Removal" (4), "Smart Select" (3), "Reset" (56), "Removal" (67).
+No same-OS open match. Nearest: PHA252025-0544 (Close) "[RUS]Removal: The [Smart Select] button is truncated" — Russian only,
+20.5.0, a different cause (no Reset button then); PHA262026-0299 (Close) AI Removal name in Edit Room on two lines (IND) — other screen.

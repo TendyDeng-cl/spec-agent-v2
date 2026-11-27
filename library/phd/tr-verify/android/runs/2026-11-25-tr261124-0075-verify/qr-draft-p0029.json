@@ -1,0 +1,41 @@
+{
+ "tr": "TR261124-0075",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/25",
+ "version": "20.19.0",
+ "build": "202611241937",
+ "buildDay": "1124",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611241937 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R11)",
+ "testResult": "PHD-A - Bug verification [OK=1, Fail=0]",
+ "env": {
+  "device": "Samsung Galaxy S23 (SM-S9110) / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611241937 (versionCode 90201902), installed by the tester; the installed APK carries v202611241937",
+  "scope": "PHA262026P0029, the one bug left Not yet verified on QR261125-0017; verified through the Effects tab hint bubble as the tester directed"
+ },
+ "observations": [
+  "The Portrait tab's AI Hair Color hint still never shows on this build; the fix was checked with the Effects tab hint, which uses the same auto-scroll and bubble."
+ ],
+ "rows": [
+  {
+   "bug": "PHA262026P0029",
+   "title": "PHD-A 20.18.0 - [UX]Edit: AI haircolor hint bubble is truncated after auto-scrolling to Hair category",
+   "creator": "ALBERT_CHANG",
+   "severity": "3",
+   "images": [
+    "screenshots/f_03_effects_settled.png",
+    "screenshots/f_19_clear1_d680_effects_settled.png"
+   ],
+   "result": "OK",
+   "summary": "The Effects tab hint bubble shows in full over its item at normal and enlarged display sizes."
+  }
+ ]
+}

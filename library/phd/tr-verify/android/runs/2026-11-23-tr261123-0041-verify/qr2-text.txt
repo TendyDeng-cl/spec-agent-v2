@@ -1,0 +1,20 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.v202611231214 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R7)
+
+=== Test Result
+PHD-A - Bug verification [OK=1, Fail=0]
+
+=== Testing Date
+2026/11/23
+
+=== Test Result Details
+PHD-A - Bug verification [OK=1, Fail=0]
+
+=== PHA262026P0086  [OK]
+Verified OK with 202611231214 build.
+The AI Enhance page no longer shows the credit button; the tester accepts the changed UI.
+Risk test: n/a
+

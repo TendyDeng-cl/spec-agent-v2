@@ -1,0 +1,9 @@
+{
+ "lede": "One open question filed to PM for a decision (Q-13), Functional, BugBelong PM. Q-19 was determined on the device (TC-158 Pass) and is not filed. Build 16.9.0.2611231 on Samsung SM-A5360; the earlier exports read are from 2611193. The TR for 2611231 is not known: confirm it before filing.",
+ "why": {
+  "ISS-AWA-19": "PM decision (Q-13): editor exports with AI content carry a CyberLink manifest marking the whole video as AI, also with the switch On; no spec says whether or how they should."
+ },
+ "related": {
+  "ISS-AWA-19": "TC-157 (TC-065, TC-071, TC-066 files) and TC-158's switch On export. Saved results: DRA262611P0220 / P0221 (NAB rulings). Song project with no manifest: DRA262611P0223."
+ }
+}

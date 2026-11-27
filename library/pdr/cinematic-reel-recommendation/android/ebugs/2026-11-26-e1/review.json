@@ -1,0 +1,11 @@
+{
+ "lede": "Both cards are open questions filed to PM for a decision (Q-8/Q-9, Q-10), Type UX, BugBelong PM (AGENTS.md 2026-11-11). Build 16.9.0.2611251 on Sony XQ-BT52; the run plan names TR261125-0064 for this build: confirm before filing.",
+ "why": {
+  "ISS-CRA-05": "PM decision, Type UX (Q-8, Q-9): the toolbar sheet lists Cinematic Reel Creator under Effects; the build has it as a first-layer button on both photo toolbars.",
+  "ISS-CRA-06": "PM decision, Type UX (Q-10): no spec draws Back while a reel is made or on the result page; the app returns to the preview with Generate active while the task runs on."
+ },
+ "related": {
+  "ISS-CRA-05": "TC-092, TC-096. DRA262608-0041 (closed) added the entry without a place.",
+  "ISS-CRA-06": "TC-082 (upload spinner), TC-083, TC-087, TC-091, TC-095, TC-099 (every entry)."
+ }
+}

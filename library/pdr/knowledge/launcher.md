@@ -113,3 +113,21 @@ say 「Meme Dance Generator」; use the build's name and don't file the differen
 
 After leaving an editor the Launcher can come back on the Project tab, where ☰ does nothing: tap Home (107,2335 on the
 Sony) first. `lbl Project` and `lbl Pro` both match 「New Project」 (opening an empty project): tap the tab by bounds.
+
+## KP-128 Android Home on 2611251
+- kind: fact · platform: android · use: analysis, run · tags: launcher, cms, shortcuts, layout
+- source: Recent Task Model Info Android run 2026-11-26-r1-full O-15 (inbox I-028) · verified: 16.9.0 build 2611251 (2026-11-27)
+
+Shortcut tiles (CMS, KP-012) page 1: Image to Video, Character Motion Swap, Cinematic Reel Creator, AI Mini Drama, AI
+Storytelling, AI Video Upscaler, Text To Video, Auto Captions; page 2: Auto Edit, Photo Enhance, Replace BG, Fix Shake,
+AI Anime Video, Adjust Speed, Facial Mosaic, Voice Changer. AI-Powered Creation: Movie-Style Reels, Describe & Edit,
+Create with Veo3.1, Text To Video, 60s Vlog Master, Animate your image (= Image to Video); What's Trending holds Image
+to Video templates (Ghost Step 15, Breakthrough / Tiny Darling 25 credits). No Text to Image entry on Home.
+
+## KP-129 Home drags and theme switches
+- kind: quirk · platform: android · use: run · tags: launcher, gestures, dark-mode, navigation
+- source: Recent Task Model Info Android run 2026-11-26-r1-full O-8 (inbox I-027, I-029) · verified: 16.9.0 build 2611251 (2026-11-27)
+
+A drag on the AI-Powered Creation row can land as a tap on a Recent Projects card when the page sits lower: find
+`tv_smart_tools` first and drag about 330 px below it. Switching the phone's dark / light mode recreates the Launcher:
+Back from an open Recent page then lands on Home, not where it came from.

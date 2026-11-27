@@ -1,0 +1,10 @@
+# Note: the 'ERROR: not found' lines below are a first attempt whose file list was passed as one argument (shell quoting); nothing was sent. The uploads after them are the real ones; files.log confirms every file on its page.
+
+ERROR: not found: cinematic-reel-recommendation/android/ebugs/2026-11-26-e1/upload/16.9.0_cra06_analyzing_before_back.jpg cinematic-reel-recommendation/android/ebugs/2026-11-26-e1/upload/16.9.0_cra06_preview_after_back.jpg cinematic-reel-recommendation/android/ebugs/2026-11-26-e1/upload/16.9.0_cra06_task_still_processing.jpg cinematic-reel-recommendation/android/ebugs/2026-11-26-e1/upload/16.9.0_cra06_result_back_to_task_list.jpg cinematic-reel-recommendation/android/ebugs/2026-11-26-e1/upload/16.9.0_cra06_back_task_continues_log.txt
+  16.9.0_cra06_analyzing_before_back.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_cra06_preview_after_back.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_cra06_task_still_processing.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_cra06_result_back_to_task_list.jpg  uploaded, formDataUpdated  (objectKey None)
+  16.9.0_cra06_back_task_continues_log.txt  uploaded, formDataUpdated  (objectKey None)
+
+DRA262611P0359: 5 file(s) on the page

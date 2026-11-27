@@ -1,0 +1,1801 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes,Change,Change Reason
+TC-049,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. The Launcher shown on its Home tab","1. Tap 「Cinematic Reel Creator」 on the Launcher
+2. Tap ‹ on the template page","Step 1: the Launcher shows 「Cinematic Reel Creator」
+Step 1: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 1: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 1: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the Launcher (Home tab) is shown again",P2,"R-030, R-001; REQ-010","Entry › Launcher, the primary entry (pass 12): the landing and the way back. Template page ‹ and system Back are not drawn; leaving and returning is the team's QA rule.",new,REQ-010 (pass 12): the primary entry had no row for its landing and its way back
+TC-050,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Credits on the account for two Micro Cinema generations
+6. A gallery photo that is not in the project, the generation photo (fixtures.md)","1. Read the credit pill on the template page
+2. Swipe the template cards to the 「Micro Cinema」 card
+3. Tap 「Import a Photo」
+4. In Add Media, tap the generation photo (skip when Add Media does not open)
+5. Tap 「Generate」 on the preview
+6. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+7. Wait until Analyzing & Generating hands over to the task list
+8. Read the credit pill","Step 1: record the balance
+Step 3: Add Media opens
+Before step 5: the preview shows the generation photo
+Before step 5: 「Generate」 shows its credit price (record it)
+Step 6: record each dialog's title and text (none is in the spec)
+Step 7: Analyzing & Generating runs its steps, then the task list shows a 「Micro Cinema <MMDD>」 task in progress
+Step 8: the balance is lower by exactly the price on 「Generate」, charged once",P1,R-030; REQ-010,"Generation per entry: user ruling 2026-11-26 (REQ-010). Flow: Design arrows Add Media photo → preview 「Generate」 → Analyzing & Generating → task list; the 「AI Processing Notice」 and the price on 「Generate」 are from the exploration notes, not the spec. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits). Leave the task running: TC-052 opens its reel.",new,"REQ-010 (pass 12, user ruling 2026-11-26 「Yes, generate per entry」): a reel generated and charged through Launcher › 「Cinematic Reel Creator」"
+TC-051,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Credits on the account for two Micro Cinema generations
+6. A gallery photo that is not in the project, the generation photo (fixtures.md)
+7. The 「Micro Cinema」 card in view","1. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+2. In Add Media, tap the generation photo (skip when Add Media does not open)
+3. Tap 「Generate」 on the preview
+4. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+5. While 「Uploading」 or Analyzing & Generating shows, tap ‹ at the top left (record when there is none)
+6. If the app is still on that page, tap 「View later」
+7. Open the Cinematic Reel Creator task list from the template page's history icon, reaching the template page through this Section's entry if the app left it","Step 5: record what happens: the page closes to the template page, to the Launcher (Home tab), a leave or cancel dialog opens (quote it), or nothing
+Step 5: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 7: record whether the task is in the list (in progress, done or failed)
+Step 7: the credit pill shows one charge for this generation, or a refund if the generation was cancelled (record which)
+Steps 1–7: the app does not crash or freeze",P2,R-030; REQ-010,Generation per entry: user ruling 2026-11-26 (REQ-010). Q-10: leaving while a reel is generated. iOS has no system Back: the top-left control is the way out. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits).,new,"REQ-010 (pass 12, user ruling 2026-11-26 「Yes, generate per entry」): leaving during a generation through Launcher › 「Cinematic Reel Creator」"
+TC-052,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The task started by TC-050 (Micro Cinema) running or done","1. Tap the history icon on the template page
+2. Wait until the task started by TC-050 shows 「View」
+3. Tap 「View」
+4. Tap ‹ on the result page
+5. Tap ‹ until Cinematic Reel Creator is left
+6. Open the Launcher's 「Project」 tab
+7. Open the 「AI Magic」 tab › 「My Artwork」","Step 3: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 4: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 5: the Launcher (Home tab) is shown again
+Step 6: record whether a new project appeared
+Step 7: My Artwork's 「Cinematic Reel Creator」 block shows the reel",P1,R-030; REQ-010,Generation per entry: user ruling 2026-11-26 (REQ-010). Design arrows: task 「View」 → result page. KP-103: open the task list once if the My Artwork tile still reads 「Processing...」. KP-079: the reel is not saved to the gallery by itself.,new,"REQ-010 (pass 12, user ruling 2026-11-26 「Yes, generate per entry」): the finished reel, where it lands and the way out through Launcher › 「Cinematic Reel Creator」"
+TC-001,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Horror Movie template, follow this advice:」 with 「Horror Movie」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「People in Frame」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Horror Movie. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-002,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the template page header (‹, credit pill, ?, history) stays visible behind the dim
+Step 2: the sheet reads 「For best results with the Micro Cinema template, follow this advice:」 with 「Micro Cinema」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P1,"R-001, R-002, R-003, R-006, R-007, R-008, R-012, R-011, R-015","CMS › Recommendation row Micro_Cinema. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD). Design 0820 add photo tips draws this template.",unchanged,
+TC-003,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the One-Take Shot template, follow this advice:」 with 「One-Take Shot」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row One_Take_Shot. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-004,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Time Lapse template, follow this advice:」 with 「Time Lapse」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Visible Sky」 and 「Cityscape or Landscape」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Time_Lapse. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-005,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Handheld Camera template, follow this advice:」 with 「Handheld Camera」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Layered Depth」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Handheld_Camera. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-006,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Fast Cut template, follow this advice:」 with 「Fast Cut」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Sense of Motion」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Fast_Cut. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD).",unchanged,
+TC-007,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The 「Micro Cinema」 card in view","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the same card again","Step 2: the sheet closes and the dim is gone
+Step 2: the template page shows the 「Micro Cinema」 card, as before step 1
+Step 3: the same Micro Cinema tips sheet opens again",P1,"R-010, R-003",Only 「Got it」 is drawn as a way to close (Q-3).,unchanged,
+TC-046,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The 「Micro Cinema」 card in view","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap the dimmed template page above the sheet, below the header
+3. If the sheet is still open, tap 「Got it」
+4. Tap 「View photo tips」 on the same card again
+5. Swipe the sheet down, starting on its first sentence (not on the 「Avoid」 row)
+6. If the sheet is still open, tap 「Got it」","Step 2: record whether the sheet closes or stays open
+Step 2: nothing behind the dim reacts: the template page stays on the 「Micro Cinema」 card and no other screen opens
+Step 5: record whether the sheet closes, follows the finger and springs back, or does not move
+Steps 3 and 6: once the sheet is closed the dim is gone and the template page shows the 「Micro Cinema」 card, as before step 1
+Steps 2 and 5: the Design draws only 「Got it」 and says nothing of these two gestures (Q-3), so neither outcome is a Pass: record what each does as Fail (question) for PM",P3,R-010; REQ-009,Q-3: 「Got it」 is TC-007. The same two gestures on a sheet opened from Add Media wait for Q-1 (no 「?」 there yet).,unchanged,
+TC-008,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The Micro Cinema photo tips sheet open (its 「View photo tips」 chip)","1. Swipe the 「Avoid」 row left
+2. Swipe it back right","Before step 1: the third Avoid item runs past the right edge of the sheet
+Step 1: 「Extreme Close-up」 comes fully into view with its ⊗ badge and caption
+Step 1: the 「Recommendation」 row does not move
+Step 2: 「Flat Composition」 is back at the left edge",P2,R-009,Design draws the third Avoid item cut off at the right edge; whether the row scrolls is not written (Q-5).,unchanged,
+TC-009,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Tap 「View photo tips」 on the 「Handheld Camera」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Fast Cut」 card","Step 1: 「Rich Visual Details」 shows the general Rich Visual Details picture
+Step 3: 「Rich Visual Details」 shows a different picture, the one made for Fast Cut",P3,R-013,CMS picture list: 「Rich Visual Details (畫面細節豐富) for Fast Cut」 is its own picture. Compare the two screenshots.,unchanged,
+TC-010,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Horror Movie template, follow this advice:」
+Step 3: 「Recommendation」 lists 「People in Frame」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-011,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Micro Cinema template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P1,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-012,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the One-Take Shot template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-013,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Time Lapse template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Visible Sky」 and 「Cityscape or Landscape」
+Step 3: 「Avoid」 lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-014,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Handheld Camera template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Layered Depth」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-015,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Fast Cut template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Sense of Motion」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1.",unchanged,
+TC-016,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Add Media opened from the 「Micro Cinema」 card (「Import a Photo」), no photo picked","1. Tap 「?」 in the Add Media header
+2. Tap 「Got it」","Step 2: the sheet closes and Add Media is shown again
+Step 2: Add Media keeps its tab (Recents) and no photo is picked",P2,"R-004, R-010",PM-only: no Design frame yet (Q-1).,unchanged,
+TC-017,Language,"1. PowerDirector signed in on the test account
+2. App language 繁體中文 (iOS Settings › PowerDirector › Language)
+3. Cinematic Reel Creator open on its template page","1. Swipe to the Micro Cinema card
+2. Tap the photo tips chip on it","Step 2: the sheet's first sentence names the template as 「微電影畫境」
+Step 2: the sentence, the two headings and every caption are whole, not cut off and not garbled
+Step 2: 「Got it」 is shown in the app language",P3,R-015,"CMS Template Name Localization: 微電影畫境. Whether the captions are translated is open (Q-2): record their language, do not fail on it. Restore English after the row.",unchanged,
+TC-018,Language,"1. PowerDirector signed in on the test account
+2. App language 日本語 (iOS Settings › PowerDirector › Language)
+3. Cinematic Reel Creator open on its template page","1. Swipe to the Micro Cinema card
+2. Tap the photo tips chip on it","Step 2: the sheet's first sentence names the template as 「マイクロシネマ」
+Step 2: the sentence, the two headings and every caption are whole, not cut off and not garbled
+Step 2: 「Got it」 is shown in the app language",P3,R-015,"CMS Template Name Localization: マイクロシネマ. Whether the captions are translated is open (Q-2): record their language, do not fail on it. Restore English after the row.",unchanged,
+TC-019,Data source,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. App log cleared before opening the feature","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Time Lapse」 card
+4. Tap 「Got it」
+5. Pull the app log","Step 5: the log shows the template data from the CMS with recommend_samples for each template
+Step 5: the items each sheet showed match that template's recommend_samples",P3,R-014,Hidden clause (pass 9). Park (needs: cms-log) if the log shows no CMS template data.,unchanged,
+TC-047,Data source,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. PowerDirector force-stopped (not running)
+5. Wi-Fi off and no cellular data (the phone on USB, Appium confirmed first)","1. Launch PowerDirector
+2. Tap 「Cinematic Reel Creator」 on the Launcher
+3. Swipe through the template cards
+4. Tap 「View photo tips」 on the first card that shows the chip (skip steps 4–5 when no card shows one)
+5. Tap 「Got it」
+6. Turn Wi-Fi back on
+7. Leave Cinematic Reel Creator and open it again
+8. Tap 「View photo tips」 on the 「Micro Cinema」 card","Step 2: record what opens: the template page with its cards, an empty page, a loading state or an offline message (quote it)
+Step 3: record which cards show and whether each has the 「View photo tips」 chip
+Step 4: record what the sheet shows: its sentence, headings and captions, and whether the pictures load or stay blank
+Steps 1–5: the app does not crash or freeze, and every screen can be left
+Step 8: back online the Micro Cinema sheet shows 「Mid-Distance Framing」 and 「Rich Visual Details」 under 「Recommendation」 and 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」 under 「Avoid」, each with its picture
+Steps 2–4: no spec says what the feature shows without the CMS (Q-4), so no outcome is a Pass: record it as Fail (question) for PM",P2,"R-014, R-001, R-012; REQ-009","Q-4, the offline half: a new app process with no network. Data kept on the phone from an earlier online visit may still show: say so if the page looks complete. Real network loss; turn Wi-Fi back on in step 6 whatever happened. The other half of Q-4, a template with no recommend_samples, cannot be set up by QA (the CMS is the server's).",unchanged,
+TC-048,Data source,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A new app process: PowerDirector force-stopped and launched again with Wi-Fi on
+5. Launcher › 「Cinematic Reel Creator」 open on its template page
+6. The phone on USB (Appium confirmed)","1. Tap 「View photo tips」 on the 「Micro Cinema」 card and wait for its pictures
+2. Tap 「Got it」
+3. Turn Wi-Fi off
+4. Tap 「View photo tips」 on the 「Micro Cinema」 card again
+5. Tap 「Got it」
+6. Tap 「View photo tips」 on the 「Time Lapse」 card (not opened since the launch)
+7. Tap 「Got it」
+8. Turn Wi-Fi back on
+9. Tap 「View photo tips」 on the 「Time Lapse」 card","Step 4: record whether the sheet opens and whether its sentence, captions and pictures still show
+Step 6: record whether the sheet opens and whether its captions and pictures show, stay blank or give a message (quote it)
+Steps 3–7: record whether the cards keep their 「View photo tips」 chips
+Steps 3–7: the app does not crash or freeze, and each sheet that opened closes with 「Got it」
+Step 9: back online the Time Lapse sheet shows 「Visible Sky」 and 「Cityscape or Landscape」 under 「Recommendation」 and 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」 under 「Avoid」, each with its picture
+Steps 4 and 6: no spec says what a sheet shows without the CMS (Q-4), so no outcome is a Pass: record it as Fail (question) for PM",P2,"R-014, R-012; REQ-009","Q-4, the offline half: the network is lost after one sheet was loaded. No cellular data on the phone. Pictures of Time Lapse kept from an earlier row may still show: say so. Real network loss; turn Wi-Fi back on in step 8 whatever happened.",unchanged,
+TC-053,Entry › AI Magic tab › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. The Launcher shown on its Home tab","1. Tap the 「AI Magic」 tab at the bottom
+2. Tap 「Cinematic Reel Creator」 in the AI Magic list","Step 1: the AI Magic list shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence for the phase wrap-up (a PM question there) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)",P1,"R-031, R-001; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Entry: Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」, from KP-012, KP-013 (the AI Magic tab lists the AI tools; the Launcher's AI-Powered Creation 「View more」 opens it); not in the toolbar sheet. The spec draws only the Launcher entry, so this Section asserts the Launcher behaviour. Exits are TC-056.",new,"REQ-010 (pass 12, UI pass): presence, the landing and what the entry brings in through Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」"
+TC-054,Entry › AI Magic tab › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. The Launcher shown on its Home tab
+5. Cinematic Reel Creator opened from Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」, on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Tap 「Got it」
+13. Swipe the template cards to the 「One-Take Shot」 card
+14. Tap 「View photo tips」 on that card
+15. Tap 「Got it」
+16. Swipe the template cards to the 「Time Lapse」 card
+17. Tap 「View photo tips」 on that card
+18. Tap 「Got it」
+19. Swipe the template cards to the 「Handheld Camera」 card
+20. Tap 「View photo tips」 on that card
+21. Tap 「Got it」
+22. Swipe the template cards to the 「Fast Cut」 card
+23. Tap 「View photo tips」 on that card
+24. Tap 「Got it」
+25. Tap 「?」 in the template page header
+26. Close the tutorial with its X
+27. Tap the history icon in the header
+28. Tap the task list's top-left control","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 14: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 15: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 17: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 18: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 20: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 21: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 23: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 24: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 25: the Cinematic Reel Creator tutorial opens (record its title)
+Step 26: the template page is shown again
+Step 27: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 28: the template page is shown again
+Steps 1–28: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",P2,"R-031, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-001 – TC-009, TC-046 (chip on each card, the sheet, Avoid row swipe, dimmed area and swipe down (Q-3), 「Got it」) and the header 「?」 and history (control-trace.json). Q-3 outcomes are recorded, not failed here: TC-046 files them. Entry: Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): every template page and photo tips control once through Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」"
+TC-055,Entry › AI Magic tab › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. The Launcher shown on its Home tab
+5. Cinematic Reel Creator opened from Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」, on its template page
+6. A gallery photo that is not in the project, the generation photo (fixtures.md)","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap each Add Media source tab once, ending on 「Recents」
+6. Tap ‹ in the Add Media header
+7. Tap 「Import a Photo」
+8. Tap the generation photo
+9. Tap ‹ on the preview","Step 2: Add Media opens
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 5: each tab shows its photos or its own sign-in or empty state, with no error
+Step 6: the template page is shown again on the 「Micro Cinema」 card
+Step 8: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 8: the photo on the preview is the one picked, whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 8: the price is the one the Launcher entry shows for Micro Cinema (TC-050)
+Step 9: record where it leads (Add Media or the template page), with no photo kept that was not picked",P1,"R-031, R-004, R-005, R-010; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-010 – TC-016 (「Import a Photo」, the Add Media 「?」, 「Got it」) and Add Media's tabs, ‹ and photo pick. The input is the photo: the preview must show it as it is. Entry: Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): Add Media and the photo the page reads through Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」"
+TC-056,Entry › AI Magic tab › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. The Launcher shown on its Home tab
+5. Cinematic Reel Creator opened from Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」, on its template page
+6. Credits on the account for two Micro Cinema generations
+7. A gallery photo that is not in the project, the generation photo (fixtures.md)
+8. The 「Micro Cinema」 card in view","1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, tap ‹ at the top left (record when there is none)
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Tap ‹ on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Open the Launcher's 「Project」 tab
+16. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the AI Magic tab, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the AI Magic tab is shown again
+Step 15: no new project appeared, as from the Launcher entry
+Step 16: My Artwork's 「Cinematic Reel Creator」 block shows the reel",P1,R-031; REQ-010,"Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Generate once (user ruling 2026-11-26 「Yes, generate per entry」), the leave-during-generation check folded in (Q-10); a second generation only if leaving cancelled the first. Checklist: the exits of the primary rows TC-049, TC-050, TC-051, TC-052. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits). KP-103: open the task list once if the My Artwork tile still reads 「Processing...」. Entry: Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): Generate once, where the reel lands and every exit through Launcher › 「AI Magic」 tab › 「Cinematic Reel Creator」"
+TC-057,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. Nothing selected on the timeline (the Global Toolbar shown)","1. Tap 「AI Magic」 on the editor toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence for the phase wrap-up (a PM question there) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: the page brings nothing in from the project, as from the Launcher entry",P1,"R-032, R-001; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Entry: Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」, from toolbar sheet tab 「2026/11 Auto Reframe」, Global Toolbar › AI Magic (7/E), KP-107. The spec draws only the Launcher entry, so this Section asserts the Launcher behaviour. Exits are TC-060.",new,"REQ-010 (pass 12, UI pass): presence, the landing and what the entry brings in through Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」"
+TC-058,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. Nothing selected on the timeline (the Global Toolbar shown)
+6. Cinematic Reel Creator opened from Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」, on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Tap 「Got it」
+13. Swipe the template cards to the 「One-Take Shot」 card
+14. Tap 「View photo tips」 on that card
+15. Tap 「Got it」
+16. Swipe the template cards to the 「Time Lapse」 card
+17. Tap 「View photo tips」 on that card
+18. Tap 「Got it」
+19. Swipe the template cards to the 「Handheld Camera」 card
+20. Tap 「View photo tips」 on that card
+21. Tap 「Got it」
+22. Swipe the template cards to the 「Fast Cut」 card
+23. Tap 「View photo tips」 on that card
+24. Tap 「Got it」
+25. Tap 「?」 in the template page header
+26. Close the tutorial with its X
+27. Tap the history icon in the header
+28. Tap the task list's top-left control","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 14: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 15: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 17: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 18: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 20: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 21: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 23: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 24: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 25: the Cinematic Reel Creator tutorial opens (record its title)
+Step 26: the template page is shown again
+Step 27: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 28: the template page is shown again
+Steps 1–28: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",P2,"R-032, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-001 – TC-009, TC-046 (chip on each card, the sheet, Avoid row swipe, dimmed area and swipe down (Q-3), 「Got it」) and the header 「?」 and history (control-trace.json). Q-3 outcomes are recorded, not failed here: TC-046 files them. Entry: Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): every template page and photo tips control once through Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」"
+TC-059,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. Nothing selected on the timeline (the Global Toolbar shown)
+6. Cinematic Reel Creator opened from Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」, on its template page
+7. A gallery photo that is not in the project, the generation photo (fixtures.md)","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap each Add Media source tab once, ending on 「Recents」
+6. Tap ‹ in the Add Media header
+7. Tap 「Import a Photo」
+8. Tap the generation photo
+9. Tap ‹ on the preview","Step 2: Add Media opens
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 5: each tab shows its photos or its own sign-in or empty state, with no error
+Step 6: the template page is shown again on the 「Micro Cinema」 card
+Step 8: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 8: the photo on the preview is the one picked, whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 8: the price is the one the Launcher entry shows for Micro Cinema (TC-050)
+Step 9: record where it leads (Add Media or the template page), with no photo kept that was not picked",P1,"R-032, R-004, R-005, R-010; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-010 – TC-016 (「Import a Photo」, the Add Media 「?」, 「Got it」) and Add Media's tabs, ‹ and photo pick. The input is the photo: the preview must show it as it is. Entry: Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): Add Media and the photo the page reads through Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」"
+TC-060,Entry › Editor › Global Toolbar › AI Magic › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. Nothing selected on the timeline (the Global Toolbar shown)
+6. Cinematic Reel Creator opened from Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」, on its template page
+7. Credits on the account for two Micro Cinema generations
+8. A gallery photo that is not in the project, the generation photo (fixtures.md)
+9. The 「Micro Cinema」 card in view","1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, tap ‹ at the top left (record when there is none)
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Tap ‹ on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+17. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 15: the reel is not added to the project, as from the Launcher entry
+Step 15: both photos are where they were, and nothing else on the timeline changed
+Step 16: no new project appeared, as from the Launcher entry
+Step 17: My Artwork's 「Cinematic Reel Creator」 block shows the reel",P1,R-032; REQ-010,"Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Generate once (user ruling 2026-11-26 「Yes, generate per entry」), the leave-during-generation check folded in (Q-10); a second generation only if leaving cancelled the first. Checklist: the exits of the primary rows TC-049, TC-050, TC-051, TC-052. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits). KP-103: open the task list once if the My Artwork tile still reads 「Processing...」. Entry: Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」.",new,"REQ-010 (pass 12, UI pass): Generate once, where the reel lands and every exit through Editor (nothing selected) › Global Toolbar › 「AI Magic」 › 「Cinematic Reel Creator」"
+TC-061,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the main track selected (the Photo Toolbar shown)","1. Tap 「Effects」 on the Photo Toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence as Fail (question) for PM (Q-8) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: record whether the page brings in the selected main-track photo (shown on a card or a preview, 「Import a Photo」 replaced or skipped)
+Step 2: the Launcher entry brings nothing in, which is assumed here (Q-8): anything brought in is recorded as Fail (question) for PM",P1,"R-033, R-001; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Entry: Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, from toolbar sheet tab 「2026/11 Auto Reframe」, Photo Toolbar › Effects (7/E), KP-107. The spec draws only the Launcher entry, so this Section asserts the Launcher behaviour (Q-8). Exits are TC-064.",new,"REQ-010 (pass 12, UI pass): presence, the landing and what the entry brings in through Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-062,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the main track selected (the Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Tap 「Got it」
+13. Swipe the template cards to the 「One-Take Shot」 card
+14. Tap 「View photo tips」 on that card
+15. Tap 「Got it」
+16. Swipe the template cards to the 「Time Lapse」 card
+17. Tap 「View photo tips」 on that card
+18. Tap 「Got it」
+19. Swipe the template cards to the 「Handheld Camera」 card
+20. Tap 「View photo tips」 on that card
+21. Tap 「Got it」
+22. Swipe the template cards to the 「Fast Cut」 card
+23. Tap 「View photo tips」 on that card
+24. Tap 「Got it」
+25. Tap 「?」 in the template page header
+26. Close the tutorial with its X
+27. Tap the history icon in the header
+28. Tap the task list's top-left control","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 14: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 15: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 17: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 18: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 20: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 21: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 23: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 24: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 25: the Cinematic Reel Creator tutorial opens (record its title)
+Step 26: the template page is shown again
+Step 27: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 28: the template page is shown again
+Steps 1–28: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",P2,"R-033, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-001 – TC-009, TC-046 (chip on each card, the sheet, Avoid row swipe, dimmed area and swipe down (Q-3), 「Got it」) and the header 「?」 and history (control-trace.json). Q-3 outcomes are recorded, not failed here: TC-046 files them. Entry: Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-8).",new,"REQ-010 (pass 12, UI pass): every template page and photo tips control once through Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-063,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the main track selected (the Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page
+7. A gallery photo that is not in the project, the generation photo (fixtures.md)","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap each Add Media source tab once, ending on 「Recents」
+6. Tap ‹ in the Add Media header
+7. Tap 「Import a Photo」
+8. Tap the generation photo
+9. Tap ‹ on the preview","Step 2: record whether Add Media opens or the selected main-track photo is taken without it
+Step 2: the Launcher entry opens Add Media, which is assumed here (Q-8): a photo taken from the editor is recorded as Fail (question) for PM
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 5: each tab shows its photos or its own sign-in or empty state, with no error
+Step 6: the template page is shown again on the 「Micro Cinema」 card
+Step 8: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 8: the photo on the preview is the one picked (record if it is the selected main-track photo instead), whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 8: the price is the one the Launcher entry shows for Micro Cinema (TC-050)
+Step 9: record where it leads (Add Media or the template page), with no photo kept that was not picked",P1,"R-033, R-004, R-005, R-010; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-010 – TC-016 (「Import a Photo」, the Add Media 「?」, 「Got it」) and Add Media's tabs, ‹ and photo pick. The input is the photo: the preview must show it as it is. Entry: Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-8).",new,"REQ-010 (pass 12, UI pass): Add Media and the photo the page reads through Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-064,Entry › Editor › Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the main track selected (the Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page
+7. Credits on the account for two Micro Cinema generations
+8. A gallery photo that is not in the project, the generation photo (fixtures.md)
+9. The 「Micro Cinema」 card in view","1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, tap ‹ at the top left (record when there is none)
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Tap ‹ on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+17. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 14: no spec draws this entry's way back (Q-8): the editor is assumed
+Step 15: record where the reel is: replacing the main-track photo, added as a new clip, or not in the project
+Step 15: the Launcher entry adds nothing to any project, which is assumed here (Q-8): a reel in the project is recorded as Fail (question) for PM
+Step 15: the overlay photo is where it was, and nothing else on the timeline changed
+Step 16: record whether a new project appeared (the Launcher entry opens none, assumed here, Q-8)
+Step 17: My Artwork's 「Cinematic Reel Creator」 block shows the reel",P1,R-033; REQ-010,"Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Generate once (user ruling 2026-11-26 「Yes, generate per entry」), the leave-during-generation check folded in (Q-10); a second generation only if leaving cancelled the first. Checklist: the exits of the primary rows TC-049, TC-050, TC-051, TC-052. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits). KP-103: open the task list once if the My Artwork tile still reads 「Processing...」. Entry: Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-8).",new,"REQ-010 (pass 12, UI pass): Generate once, where the reel lands and every exit through Editor › select a main-track photo › Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-065,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the overlay track selected (the PIP Photo Toolbar shown)","1. Tap 「Effects」 on the PIP Photo Toolbar
+2. Tap 「Cinematic Reel Creator」","Step 1: the menu shows 「Cinematic Reel Creator」 (record where it sits)
+Step 1: if it is not there, record the absence as Fail (question) for PM (Q-9) and mark the rest of this Section Blocked
+Step 2: the Cinematic Reel Creator template page opens directly, with no tutorial
+Step 2: the template cards show, each with its 「View photo tips」 chip and 「Import a Photo」
+Step 2: the header shows ‹, the credit pill with the account's balance, 「?」 and history
+Step 2: the cards are in the region's CMS order, the order the Launcher entry shows (record the first three names)
+Step 2: record whether the page brings in the selected overlay photo (shown on a card or a preview, 「Import a Photo」 replaced or skipped)
+Step 2: the Launcher entry brings nothing in, which is assumed here (Q-9): anything brought in is recorded as Fail (question) for PM",P1,"R-034, R-001; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Entry: Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, from toolbar sheet tab 「2026/11 Auto Reframe」, PIP Photo Toolbar › Effects (7/E), KP-107. The spec draws only the Launcher entry, so this Section asserts the Launcher behaviour (Q-9). Exits are TC-068.",new,"REQ-010 (pass 12, UI pass): presence, the landing and what the entry brings in through Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-066,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the overlay track selected (the PIP Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card
+3. Tap 「Got it」
+4. Swipe the template cards to the 「Micro Cinema」 card
+5. Tap 「View photo tips」 on that card
+6. Swipe the 「Avoid」 row left
+7. Swipe the 「Avoid」 row back right
+8. Tap the dimmed page above the sheet
+9. If the sheet is still open, swipe it down from its first sentence
+10. If the sheet is still open, tap 「Got it」
+11. Tap 「View photo tips」 on the same card again
+12. Tap 「Got it」
+13. Swipe the template cards to the 「One-Take Shot」 card
+14. Tap 「View photo tips」 on that card
+15. Tap 「Got it」
+16. Swipe the template cards to the 「Time Lapse」 card
+17. Tap 「View photo tips」 on that card
+18. Tap 「Got it」
+19. Swipe the template cards to the 「Handheld Camera」 card
+20. Tap 「View photo tips」 on that card
+21. Tap 「Got it」
+22. Swipe the template cards to the 「Fast Cut」 card
+23. Tap 「View photo tips」 on that card
+24. Tap 「Got it」
+25. Tap 「?」 in the template page header
+26. Close the tutorial with its X
+27. Tap the history icon in the header
+28. Tap the task list's top-left control","Step 2: the photo tips sheet opens over the dimmed page and reads 「For best results with the Horror Movie template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 3: the sheet closes, the dim is gone and the 「Horror Movie」 card is shown
+Step 5: the photo tips sheet opens over the dimmed page and reads 「For best results with the Micro Cinema template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 7: the row scrolls to 「Extreme Close-up」 and back, the 「Recommendation」 row stays
+Step 8: record whether the sheet closes (Q-3)
+Step 8: nothing behind the dim reacts
+Step 9: record whether the swipe closes the sheet (Q-3)
+Step 11: the Micro Cinema sheet is open again
+Step 12: the sheet closes, the dim is gone and the 「Micro Cinema」 card is shown
+Step 14: the photo tips sheet opens over the dimmed page and reads 「For best results with the One-Take Shot template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 15: the sheet closes, the dim is gone and the 「One-Take Shot」 card is shown
+Step 17: the photo tips sheet opens over the dimmed page and reads 「For best results with the Time Lapse template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 18: the sheet closes, the dim is gone and the 「Time Lapse」 card is shown
+Step 20: the photo tips sheet opens over the dimmed page and reads 「For best results with the Handheld Camera template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 21: the sheet closes, the dim is gone and the 「Handheld Camera」 card is shown
+Step 23: the photo tips sheet opens over the dimmed page and reads 「For best results with the Fast Cut template, follow this advice:」, with two 「Recommendation」 and three 「Avoid」 items, each picture loaded
+Step 24: the sheet closes, the dim is gone and the 「Fast Cut」 card is shown
+Step 25: the Cinematic Reel Creator tutorial opens (record its title)
+Step 26: the template page is shown again
+Step 27: the Cinematic Reel Creator task list opens (its tasks or 「No videos yet. Choose a template to create!」)
+Step 28: the template page is shown again
+Steps 1–28: every control responds once, with no error message, crash, freeze, blank picture or wrong template name",P2,"R-034, R-001, R-002, R-003, R-006, R-007, R-008, R-009, R-010, R-012; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-001 – TC-009, TC-046 (chip on each card, the sheet, Avoid row swipe, dimmed area and swipe down (Q-3), 「Got it」) and the header 「?」 and history (control-trace.json). Q-3 outcomes are recorded, not failed here: TC-046 files them. Entry: Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-9).",new,"REQ-010 (pass 12, UI pass): every template page and photo tips control once through Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-067,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the overlay track selected (the PIP Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page
+7. A gallery photo that is not in the project, the generation photo (fixtures.md)","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header (skip steps that need Add Media when it did not open)
+4. Tap 「Got it」
+5. Tap each Add Media source tab once, ending on 「Recents」
+6. Tap ‹ in the Add Media header
+7. Tap 「Import a Photo」
+8. Tap the generation photo
+9. Tap ‹ on the preview","Step 2: record whether Add Media opens or the selected overlay photo is taken without it
+Step 2: the Launcher entry opens Add Media, which is assumed here (Q-9): a photo taken from the editor is recorded as Fail (question) for PM
+Step 3: the Micro Cinema photo tips sheet opens over Add Media (Q-1: a missing 「?」 is DRA262611P0289, cited, not filed again)
+Step 4: Add Media is shown again, no photo picked
+Step 5: each tab shows its photos or its own sign-in or empty state, with no error
+Step 6: the template page is shown again on the 「Micro Cinema」 card
+Step 8: the preview opens with the template 「Micro Cinema」 and 「Generate」 with its credit price (record it)
+Step 8: the photo on the preview is the one picked (record if it is the selected overlay photo instead), whole, in its own orientation and aspect, not rotated, stretched, cropped to another photo or blank
+Step 8: the price is the one the Launcher entry shows for Micro Cinema (TC-050)
+Step 9: record where it leads (Add Media or the template page), with no photo kept that was not picked",P1,"R-034, R-004, R-005, R-010; REQ-010","Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Checklist: the controls of the primary rows TC-010 – TC-016 (「Import a Photo」, the Add Media 「?」, 「Got it」) and Add Media's tabs, ‹ and photo pick. The input is the photo: the preview must show it as it is. Entry: Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-9).",new,"REQ-010 (pass 12, UI pass): Add Media and the photo the page reads through Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-068,Entry › Editor › PIP Photo Toolbar › Effects › Cinematic Reel Creator,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. A project open in the editor with one photo on the main track and one photo on an overlay track (fixtures.md)
+5. The photo on the overlay track selected (the PIP Photo Toolbar shown)
+6. Cinematic Reel Creator opened from Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」, on its template page
+7. Credits on the account for two Micro Cinema generations
+8. A gallery photo that is not in the project, the generation photo (fixtures.md)
+9. The 「Micro Cinema」 card in view","1. Read the credit pill on the template page
+2. Tap 「Import a Photo」 on the 「Micro Cinema」 card
+3. In Add Media, tap the generation photo (skip when Add Media does not open)
+4. Tap 「Generate」 on the preview
+5. If a notice or a credit confirmation opens, tap 「I Agree」 or 「OK」
+6. While 「Uploading」 or Analyzing & Generating shows, tap ‹ at the top left (record when there is none)
+7. If the app is still on that page, tap 「View later」
+8. Open the task list from the template page's history icon, reaching the template page through this entry if the app left it
+9. If the task was cancelled, generate again from the 「Micro Cinema」 card and do not leave
+10. Wait until the task shows 「View」
+11. Read the credit pill
+12. Tap 「View」
+13. Tap ‹ on the result page
+14. Tap ‹ until Cinematic Reel Creator is left
+15. Look at the project's timeline
+16. Tap ⌂ in the editor and open the Launcher's 「Project」 tab
+17. Open the 「AI Magic」 tab › 「My Artwork」","Step 1: record the balance
+Step 5: record each dialog's title and text (none is in the spec)
+Step 6: record what happens: the page closes to the template page, to the editor, a leave or cancel dialog opens (quote it), or nothing
+Step 6: the Design draws only 「View later」 and 「Create another one」 on that page (Q-10), so any outcome is recorded as Fail (question) for PM
+Step 8: record whether the task is in the list (in progress, done or failed)
+Step 11: the balance is lower by exactly the price on 「Generate」, charged once for the reel that finished (a cancelled task refunded)
+Step 12: the result page opens with the reel's cover, 「Add Text」 and 「Edit Music」
+Step 13: record where it leads (the task list or the template page): no spec draws it (Q-10), so it is recorded as Fail (question) for PM
+Step 14: the editor is shown again
+Step 14: no spec draws this entry's way back (Q-9): the editor is assumed
+Step 15: record where the reel is: replacing the overlay photo on its overlay track, added as a new clip, or not in the project
+Step 15: the Launcher entry adds nothing to any project, which is assumed here (Q-9): a reel in the project is recorded as Fail (question) for PM
+Step 15: the main-track photo is where it was, and nothing else on the timeline changed
+Step 16: record whether a new project appeared (the Launcher entry opens none, assumed here, Q-9)
+Step 17: My Artwork's 「Cinematic Reel Creator」 block shows the reel",P1,R-034; REQ-010,"Entry UI pass (analysis.md pass 12; user, 2026-11-26: 「for each entry, it should only check the UI, so click everything once and make sure there's no errors for each button and options」). Generate once (user ruling 2026-11-26 「Yes, generate per entry」), the leave-during-generation check folded in (Q-10); a second generation only if leaving cancelled the first. Checklist: the exits of the primary rows TC-049, TC-050, TC-051, TC-052. A generation takes minutes: keep the app in front; spend the credits it needs (AGENTS.md › Credits). KP-103: open the task list once if the My Artwork tile still reads 「Processing...」. Entry: Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」 (Q-9).",new,"REQ-010 (pass 12, UI pass): Generate once, where the reel lands and every exit through Editor › select an overlay photo › PIP Photo Toolbar › 「Effects」 › 「Cinematic Reel Creator」"
+TC-020,MUI,"1. App language set to Traditional Chinese (`launch --lang zh-Hant-TW`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column cht, and every description the one Template Description Localization rows 2–7 give in column cht (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column CHT for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Traditional Chinese (traditional characters, Taiwan wording) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI CHT (zh-Hant-TW). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-021,MUI,"1. App language set to Simplified Chinese (`launch --lang zh-Hans-CN`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column chs, and every description the one Template Description Localization rows 2–7 give in column chs (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column CHS for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Simplified Chinese (simplified characters) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI CHS (zh-Hans-CN). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-022,MUI,"1. App language set to Japanese (`launch --lang ja-JP`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column ja, and every description the one Template Description Localization rows 2–7 give in column ja (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column JPN for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Japanese and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI JPN (ja-JP). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-023,MUI,"1. App language set to Spanish (`launch --lang es-ES`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column es, and every description the one Template Description Localization rows 2–7 give in column es (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column ESP for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Spanish (Spanish of Spain) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI ESP (es-ES). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-024,MUI,"1. App language set to Korean (`launch --lang ko-KR`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column ko, and every description the one Template Description Localization rows 2–7 give in column ko (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column KOR for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Korean and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI KOR (ko-KR). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-025,MUI,"1. App language set to German (`launch --lang de-DE`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column de, and every description the one Template Description Localization rows 2–7 give in column de (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column DEU for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in German and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI DEU (de-DE). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-026,MUI,"1. App language set to French (`launch --lang fr-FR`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column fr, and every description the one Template Description Localization rows 2–7 give in column fr (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column FRA for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in French and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI FRA (fr-FR). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-027,MUI,"1. App language set to Italian (`launch --lang it-IT`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column it, and every description the one Template Description Localization rows 2–7 give in column it (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column ITA for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Italian and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI ITA (it-IT). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-028,MUI,"1. App language set to Russian (`launch --lang ru-RU`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column ru, and every description the one Template Description Localization rows 2–7 give in column ru (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column RUS for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Russian and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI RUS (ru-RU). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-029,MUI,"1. App language set to Portuguese (Brazil) (`launch --lang pt-BR`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column pt, and every description the one Template Description Localization rows 2–7 give in column pt (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column PTB for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Portuguese (Brazil) (Brazilian Portuguese) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI PTB (pt-BR). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-030,MUI,"1. App language set to Dutch (`launch --lang nl-NL`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column nl, and every description the one Template Description Localization rows 2–7 give in column nl (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column NLD for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Dutch and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI NLD (nl-NL). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-031,MUI,"1. App language set to Indonesian (`launch --lang id-ID`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column id, and every description the one Template Description Localization rows 2–7 give in column id (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column IDN for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Indonesian and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI IND (id-ID). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-032,MUI,"1. App language set to Thai (`launch --lang th-TH`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column th, and every description the one Template Description Localization rows 2–7 give in column th (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column THA for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Thai and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI THA (th-TH). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-033,MUI,"1. App language set to Malay (`launch --lang ms-MY`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column ms, and every description the one Template Description Localization rows 2–7 give in column ms (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column MAY for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Malay and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI MAY (ms-MY). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-034,MUI,"1. App language set to Hindi (`launch --lang hi-IN`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column hi, and every description the one Template Description Localization rows 2–7 give in column hi (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column HIN for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Hindi and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI HIN (hi-IN). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-035,MUI,"1. App language set to Spanish (Mexico) (`launch --lang es-MX`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column esm, and every description the one Template Description Localization rows 2–7 give in column esm (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column ESM for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Spanish (Mexico) (Mexican Spanish) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI ESM (es-MX). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-036,MUI,"1. App language set to Arabic (`launch --lang ar-SA`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column ar, and every description the one Template Description Localization rows 2–7 give in column ar (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column ARA for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Arabic and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Arabic is right-to-left: text runs from the right and no string is clipped at the left edge
+11. Cards: six names, six descriptions, the chip on each
+12. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+13. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI ARA (ar-SA). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-037,MUI,"1. App language set to Vietnamese (`launch --lang vi-VN`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column vi, and every description the one Template Description Localization rows 2–7 give in column vi (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column VIT for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Vietnamese and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI VIT (vi-VN). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-038,MUI,"1. App language set to Polish (`launch --lang pl-PL`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column pl, and every description the one Template Description Localization rows 2–7 give in column pl (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column PLK for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Polish and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI PLK (pl-PL). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-039,MUI,"1. App language set to Turkish (`launch --lang tr-TR`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column tr, and every description the one Template Description Localization rows 2–7 give in column tr (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column TRK for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Turkish and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI TRK (tr-TR). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-040,MUI,"1. App language set to Persian (`launch --lang fa-IR`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column fa, and every description the one Template Description Localization rows 2–7 give in column fa (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column FAR for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Persian and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Persian is right-to-left: text runs from the right and no string is clipped at the left edge
+11. Cards: six names, six descriptions, the chip on each
+12. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+13. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI FAR (fa-IR). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-041,MUI,"1. App language set to Hebrew (`launch --lang he-IL`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column he, and every description the one Template Description Localization rows 2–7 give in column he (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column HEB for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Hebrew and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Hebrew is right-to-left: text runs from the right and no string is clipped at the left edge
+11. Cards: six names, six descriptions, the chip on each
+12. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+13. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI HEB (he-IL). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-042,MUI,"1. App language set to Swedish (`launch --lang sv-SE`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column sv, and every description the one Template Description Localization rows 2–7 give in column sv (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column SVE for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Swedish and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI SVE (sv-SE). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-043,MUI,"1. App language set to Danish (`launch --lang da-DK`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column da, and every description the one Template Description Localization rows 2–7 give in column da (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column DAN for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Danish and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI DAN (da-DK). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-044,MUI,"1. App language set to Norwegian Bokmål (`launch --lang nb-NO`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column nb, and every description the one Template Description Localization rows 2–7 give in column nb (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column NOR for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Norwegian Bokmål (Norwegian Bokmål) and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI NOR (nb-NO). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,
+TC-045,MUI,"1. App language set to Ukrainian (`launch --lang uk-UA`)
+2. After the row a plain `launch` restores the language
+3. PowerDirector signed in on the test account
+4. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+5. Launcher › Cinematic Reel Creator open on its template page","1. Read the first template card (TC-001)
+2. Swipe the cards left one at a time to the last card, reading each
+3. Tap the photo tips chip on card 1 (TC-001 – TC-006)
+4. Swipe the second row of the sheet left to its last item (TC-008)
+5. Tap the button at the bottom of the sheet (TC-007)
+6. Tap the photo tips chip on card 2 (TC-001 – TC-006)
+7. Swipe the second row of the sheet left to its last item (TC-008)
+8. Tap the button at the bottom of the sheet (TC-007)
+9. Tap the photo tips chip on card 3 (TC-001 – TC-006)
+10. Swipe the second row of the sheet left to its last item (TC-008)
+11. Tap the button at the bottom of the sheet (TC-007)
+12. Tap the photo tips chip on card 4 (TC-001 – TC-006)
+13. Swipe the second row of the sheet left to its last item (TC-008)
+14. Tap the button at the bottom of the sheet (TC-007)
+15. Tap the photo tips chip on card 5 (TC-001 – TC-006)
+16. Swipe the second row of the sheet left to its last item (TC-008)
+17. Tap the button at the bottom of the sheet (TC-007)
+18. Tap the photo tips chip on card 6 (TC-001 – TC-006)
+19. Swipe the second row of the sheet left to its last item (TC-008)
+20. Tap the button at the bottom of the sheet (TC-007)
+21. Swipe back to the first card
+22. Tap its 「Import a Photo」 button (TC-010)
+23. Tap 「?」 in the Add Media header (TC-010)
+24. Tap the button at the bottom of the sheet (TC-016)","1. Every card name is the one Cinestory CMS › Template Name Localization gives in column uk, and every description the one Template Description Localization rows 2–7 give in column uk (specs/2026-11-25/extracted)
+2. Every caption is the one I2V Recommendation › Localization gives in column UKR for that item (#54–67; Fast Cut's 「Rich Visual Details」 is #56)
+3. The sheet's first sentence names the template as its card does
+4. The app strings (「View photo tips」, 「For best results with the <template> template, follow this advice:」, 「Recommendation」, 「Avoid」, 「Got it」) show in Ukrainian and say what the English says; the chip and the sentence still in English is DRA262611P0290 (Q-2): cite it, do not file it again
+5. No string shows a key, an unfilled placeholder (%@, %1$s) or another language
+6. No translation sheet for the app strings (REQ-002): a string that only seems off is a translation doubt in the run's mui-doubts.md, not a fail
+7. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+8. The chip stays inside its pill over the preview; the sentence wraps instead of being cut; each caption fits under its picture
+9. Longest strings first: the descriptions on the cards, the sheet sentence, the longest captions
+10. Cards: six names, six descriptions, the chip on each
+11. Each of the six sheets: the sentence, 「Recommendation」 with two captions, 「Avoid」 with three captions, the button
+12. The Add Media 「?」 sheet: the same strings for the first card's template",P2,R-028; R-029; REQ-002; REQ-007,"MUI UKR (uk-UA). One `texts` read and screenshot per screen (each card, each sheet); nothing is generated. Card order and pictures per language are the Android Language rows' (REQ-006, not on iOS yet).",unchanged,

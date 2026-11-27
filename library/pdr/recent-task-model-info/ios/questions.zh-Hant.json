@@ -1,0 +1,8 @@
+{
+  "Q-1": "Text to Image：Jira 標題寫「(I2V/T2V/TTI)」，但 Design 1006 畫面、規則和 Guideline 都只說 I2V、T2V 顯示 model，而且 Text to Image 的 Recent 頁畫的是 prompt 卡片，不是 Recent task 卡片。Text to Image 要不要顯示 model（例如「GPT-Image-2.6 Sunburst」）？要的話顯示在哪？假設：以 Design 為準，Text to Image 不顯示 model 標籤。R-022、TC-033。",
+  "Q-2": "這個版本之前產生的任務要不要顯示 model？規格沒寫。假設：顯示 model 標籤或整行不顯示都可以，但不能出現空白標籤，卡片高度維持 120 pt。R-041、TC-041。",
+  "Q-3": "範本：Guideline 寫範本生成不開 model（「範本生成不開」）。如果 Image to Video 或 Text to Video 的範本讓使用者選 model，卡片要顯示嗎？假設：範本產生的任務一律不顯示標籤。R-020、TC-029、TC-030。",
+  "Q-4": "標籤寬度：規格說名稱過長以「…」截斷，但沒寫標籤最寬多少。假設：標籤可以用到名稱下方、卡片右側內距為止，不能蓋到「View」。R-014、TC-027、TC-028。",
+  "Q-8": "編輯器 › Global 工具列 › 「AI Magic」 › Image to Video / Text to Video / Text to Image（產品團隊的工具列表，KP-107）：從這裡開啟的工具，Recent 任務是否相同（列出該工具的所有任務，不只這個專案的）、標籤相同？在這裡產生的任務有沒有標籤？結果頁和每個 ‹ 會到哪裡（結果會不會放進專案）？假設：清單與標籤相同，顯示所選 model 的標籤；每個 ‹ 退回上一步，最後回到編輯器，專案不變。R-093、TC-089、TC-090、TC-091、TC-092、TC-093、TC-094、TC-095、TC-096、TC-097、TC-098、TC-099、TC-100、TC-101、TC-102。",
+  "Q-9": "工具列表也把 Text to Image 放在 Photo 工具列 › 「Tools」，以及 PIP Photo 工具列 › 「Tools」（名稱為「AI Text to Image」）（KP-107）。這個版本有這兩個入口嗎？是同一個工具、同一份 Recent 任務嗎？產生結果後，選取的相片會怎樣（不變、被取代、多一個素材）？假設：入口存在，是同一個工具與 Recent 任務，沒有 model 標籤（Q-1）；結果對相片的影響記錄下來交給 PM。R-094、R-095、TC-103、TC-104、TC-105、TC-106、TC-107、TC-108、TC-109、TC-110。"
+}

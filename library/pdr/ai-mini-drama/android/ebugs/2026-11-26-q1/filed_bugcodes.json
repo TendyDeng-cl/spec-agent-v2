@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "creator": "ETHAN_HSU",
+    "creators_read_back": [
+      "ETHAN_HSU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0070",
+    "server": "Stage",
+    "version": "16.9.0",
+    "build": "2611231",
+    "filed_on": "2026-11-26"
+  },
+  "bugs": [
+    {
+      "bugcode": "DRA262611P0323",
+      "short": "PDR-A 16.9.0 - [AIAgent][UX] AI Mini Drama: Templates show on a non-US/JP store; PM's US & JP day 1 limit is undefined",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:36:52",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Open Google Play\n2. Tap the profile icon\n3. Tap 「Settings」\n4. Tap 「General」\n5. Tap 「Account and device preferences」\n6. Read 「Country and profiles」\n7. Launch the APP\n8. Tap 「AI Mini Drama」 on the Launcher\n9. Tap 「Try It Now」\n10. Tap the credit pill\n11. Tap 「Buy More」\n12. Read the price currency\n13. Tap Back twice\n14. Count the templates under 「Start from a template」\n15. Tap 「More」\n16. Count the categories and the templates in each\n\nResult:\nOn a Play account billed in NT$ (not US or JP), More shows all 20 templates in 5 categories.\n摘要：Play 帳號以新台幣計價（非美、日），「More」仍顯示 5 類共 20 個範本。\n{16.9.0_amda71_play_country.jpg} {16.9.0_amda71_prices_ntd.jpg} {16.9.0_amda71_landing_templates.jpg} {16.9.0_amda71_more_top.jpg} {16.9.0_amda71_more_bottom.jpg}\n\nExpect Result:\nPM to decide what 「day 1 只有 US & JP」 limits and what a store outside US and JP should see.\n摘要：請 PM 決定「day 1 只有 US & JP」限制什麼，以及美、日以外商店應看到什麼。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android\nBasis: In-product — the PM main flow note 「day 1 只有 US & JP」 stands beside the template grid; no board or note says what it limits (templates, preset characters or the whole feature) or how it is applied. Seen on the Stage server (yellow Launcher bar); Production not checked.\nRelated: Play 「Country and profiles」 names no current country and offers 「Switch to the Taiwan Play Store」; credit packs priced NT$330 – NT$6990. Categories: Workplace Romance 5, Fantasy & Destiny 5, Urban Romance 4, Family & Life 4, Animated Stories 2.\nRelated: open question Q-18.\nSpec Link: AI Mini Drama PM spec, Main flow board (「day 1 只有 US & JP」 beside the template grid) -\nhttps://www.figma.com/design/44RyrcOcWi2MvhGci9bO5F/AI-Mini-Drama?node-id=2016-2\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_amda71_play_country.jpg",
+        "16.9.0_amda71_prices_ntd.jpg",
+        "16.9.0_amda71_landing_templates.jpg",
+        "16.9.0_amda71_more_top.jpg",
+        "16.9.0_amda71_more_bottom.jpg"
+      ],
+      "key": "AI-Mini-Drama-Q1-01",
+      "iss": "ISS-AMDA-71",
+      "feature": "AI-Mini-Drama-Q1",
+      "problem_type": "UX"
+    },
+    {
+      "bugcode": "DRA262611P0324",
+      "short": "PDR-A 16.9.0 - [AIAgent][UI] AI Mini Drama: 「Every frame is done. Ready to create your video?」 never shows in the chat",
+      "status": "BugNeedReview",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "ETHAN_HSU",
+      "created": "2026-11-26T14:36:56",
+      "build": "2611231",
+      "tr": "TR261123-0070",
+      "product": "PowerDirector Mobile for Android",
+      "template": "Generic v16.9",
+      "assignee": null,
+      "handler": "ALBERT_CHANG, BALLY_HSU, MIKE_LU, NICKLOUS_CHEN, SAM_CHANG, WILLY_WU",
+      "version": "16.9.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap 「AI Mini Drama」 on the Launcher\n3. Tap the 「After Closing」 template\n4. Tap 「Make my version」\n5. Tap 「Generate」 on the format card\n6. Tap 「Generate」 on the 「Create storyboard」 card\n7. Wait until the storyboard is done\n8. Read the messages between the Storyboard Result card and 「Choose your video settings」\n9. Play the Storyboard Preview to the end\n10. Close the player\n11. Tap 「Generate video」 with Standard and 「Preview - 30 sec」\n12. Wait until the video is done\n13. Read the messages from the Storyboard Preview to the end of the chat\n\nResult:\n「Every frame is done. Ready to create your video?」 shows nowhere after the storyboard or the preview video.\n摘要：分鏡與預覽影片完成後都沒出現「Every frame is done…」。\n{16.9.0_amda72_storyboard_to_settings.jpg} {16.9.0_amda72_preview_to_full_card.jpg}\n\nExpect Result:\nPM to decide whether storyboard.all_videos.q and ladder.beat_video.q are still used, and where each shows.\n摘要：請 PM 決定這兩個字串鍵是否仍使用，以及各自顯示的位置。\n\nNote:\nDevice: Samsung SM-A5360 (Galaxy A53 5G) / Android\nBasis: In-product — the PM string list gives the same English 「Every frame is done. Ready to create your video?」 to two keys, and no board places either in the current chat flow; if both stay, PM to say whether one text for both is intended. Seen on the Stage server.\nRelated: between the Storyboard Result and 「Choose your video settings」 no message shows; after the preview video the chat asks 「Looking good! Ready for the full video?」; after the rest of the video it asks 「Ready for the next episode?」.\nRelated: the full-episode card reads 「Create the rest of the video (60 sec)」; its 60 s length is DRA262610P0159.\nRelated: open question Q-5.\nSpec Link: AI Mini Drama PM spec, Chat result states (top mockup group) board -\nhttps://www.figma.com/design/44RyrcOcWi2MvhGci9bO5F/AI-Mini-Drama?node-id=2016-2\n<Claude Reviewed>",
+      "attachments": [
+        "16.9.0_amda72_storyboard_to_settings.jpg",
+        "16.9.0_amda72_preview_to_full_card.jpg"
+      ],
+      "key": "AI-Mini-Drama-Q1-02",
+      "iss": "ISS-AMDA-72",
+      "feature": "AI-Mini-Drama-Q1",
+      "problem_type": "UI"
+    }
+  ],
+  "dispositions": {}
+}

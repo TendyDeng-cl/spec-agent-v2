@@ -1,0 +1,41 @@
+{
+ "qr": "QR261123-0070",
+ "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261123-0070",
+ "tr": "TR261123-0041",
+ "template": "Standard Report (QRTemplateID=14830)",
+ "created": "2026-11-23",
+ "testResult": "PHD-A - Bug verification [OK=18, Fail=3]",
+ "ok": [
+  "PHA262026P0078",
+  "PHA262026P0081",
+  "PHA262026P0088",
+  "PHA262026P0090",
+  "PHA262026P0091",
+  "PHA262026P0093",
+  "PHA262026P0096",
+  "PHA262026P0107",
+  "PHA262026P0118",
+  "PHA262026P0120",
+  "PHA262026P0125",
+  "PHA262026P0126",
+  "PHA262026P0127",
+  "PHA262026P0130",
+  "PHA262026P0132",
+  "PHA262026P0133",
+  "PHA262026P0134",
+  "PHA262026P0135"
+ ],
+ "fail": [
+  "PHA262026P0079",
+  "PHA262026P0095",
+  "PHA262026P0147"
+ ],
+ "held": [
+  "PHA262026P0086"
+ ],
+ "filesOnBugs": "none (text only)",
+ "readBack": "Short Description, Test Result, Testing Date, Details and all 21 States and Reasons match qr-text.txt; PHA262026P0086 not on the QR (Not Yet Verified); Product Version, Build Day, Build No., OS, OS Language and Attachment empty.",
+ "trAfter": "updating row by row a few minutes after Create (P0079 and P0147 Fail, OK rows moving to Close); P0159 Cancelled by the user",
+ "mismatch": null,
+ "related": "PHA262026P0159 filed on this TR 16:45 as a duplicate of P0147; the user cancels it by hand."
+}

@@ -83,7 +83,7 @@ refuses them), and it runs in one folder, e.g. `runs/<date>-p23-regression-flows
   follow the spec-casebook skill (SKILL.md, references/run.md) and read `knowledge.ts <feature> <platform> --for run`; do exactly one segment, then pull and slice the logs,
   checkpoint, update the plan's Status and Log, and reply with at most 10 lines: tally, next case, blockers." A
   phase's last segment adds the phase wrap-up (summary, `time`, tokens, eBug drafts and review page, report.md plus report.zh-Hant.md and its HTML by `scripts/report-html.ts` in
-  `comparisons/<date>_<round>-report.html`, user 2026-11-26). The
+  `comparisons/<date>_<round>-report.html`, user 2026-11-26), and every Open question settled: determined, filed or not reached (`ebugs.md` step 1). The
   orchestrator reads only that reply (never screenshots or logs), decides the next brief from `run-log next` and
   phases.json, and repeats until every phase in the plan is done, never asking the user between segments; after a
   compaction or restart it resumes from `run-log next`. A phase not yet released carries `hold` in phases.json
@@ -212,7 +212,10 @@ refuses them), and it runs in one folder, e.g. `runs/<date>-p23-regression-flows
      never in a phase's run folder, whose `activity.log` decides the run's time and tokens; move stray commands out.
 2. `node scripts/run-log.ts <run dir> init <cases.csv> --phase <draft>/phases.json <phase id>`, then record every case
    as it is exercised: `set <ID> <Pass|Fail|Blocked|Inconclusive|Not run> "<what was seen>" [--as <disposition>]
-   screenshots/<file>.png …` (verdict rule 4). Quote on-screen strings exactly. `summary` shows the tally; the run is
+   screenshots/<file>.png …` (verdict rule 4). Quote on-screen strings exactly. **A Fail says the problem first
+   (user, 2026-11-25):** its text opens with one sentence naming what is wrong (what the app does against what was
+   expected), then the details; a row with several steps writes `Step N (…): … pass.` / `Step N: … defect …` per
+   step, so the Results page can list the steps and mark the failing one under 「What happened」. `summary` shows the tally; the run is
    complete only at 0 Not run and an empty Inconclusive queue.
 3. Device commands: `shot`, `els [filter]`, `source`, `logs [ID]`, `ledger [ID]`, `tap`, `hold`, `drag`, `id`, `lbl`,
    `type`, `pinch X Y FROM TO [ms]`, `setval <id> <text>` (fast long input), `clear <id>`, `hidekb`, `burst X Y [n]`,

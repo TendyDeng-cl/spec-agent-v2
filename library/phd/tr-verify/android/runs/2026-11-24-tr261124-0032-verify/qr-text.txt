@@ -1,0 +1,120 @@
+=== Template
+Standard Report
+
+=== Short Description
+20.19.0.v202611241407 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R9)
+
+=== Test Result
+PHD-A - Bug verification [OK=21, Fail=0]
+
+=== Testing Date
+2026/11/24
+
+=== Test Result Details
+PHD-A - Bug verification [OK=21, Fail=0]
+
+=== PHA262026P0070  [OK]
+Verified OK with 202611241407 build.
+Saving a photo and a video in My AI Artwork Recent now logs the Mixpanel event Artwork_Result_Save.
+Risk test: n/a
+
+=== PHA262026P0072  [OK]
+Verified OK with 202611241407 build.
+Templates now open with as many empty frames as the photo count on the card.
+Risk test: n/a
+
+=== PHA262026P0073  [OK]
+Verified OK with 202611241407 build.
+Selected photos are now marked with numbers in the photo picker grid.
+Risk test: n/a
+
+=== PHA262026P0074  [OK]
+Verified OK with 202611241407 build.
+The picker limit now counts the empty frames on all pages (all 7 photos can be picked at once on the 7-photo · 3-page template), as RD's fix describes.
+Risk test: n/a
+
+=== PHA262026P0076  [OK]
+Verified OK with 202611241407 build.
+Discard now returns to the Template Preview of that template.
+Risk test: n/a
+
+=== PHA262026P0077  [OK]
+Verified OK with 202611241407 build.
+System Back now closes the 「Discard changes?」 dialog as Keep does.
+Risk test: n/a
+
+=== PHA262026P0079  [OK]
+Verified OK with 202611241407 build.
+Frame focus now offers Opacity, Shadow, Flip H, Flip V, Duplicate, Lock and Delete, and the floating icons include Lock.
+Risk test: n/a
+
+=== PHA262026P0080  [OK]
+Verified OK with 202611241407 build.
+A tap in image focus now returns to frame focus.
+Risk test: n/a
+
+=== PHA262026P0082  [OK]
+Verified OK with 202611241407 build.
+Long-press and drag swaps the photos; per RD's resolution no extra hint is shown, as in the original Collage.
+Risk test: n/a
+
+=== PHA262026P0083  [OK]
+Verified OK with 202611241407 build.
+Frame thumbnails in Add Layer › Frame and Replace frame show their slot layout, which per RD's resolution indicates the photo count.
+Risk test: n/a
+
+=== PHA262026P0094  [OK]
+Verified OK with 202611241407 build.
+Pages now shows the − | + stepper above the bottom panel and 「Page N / total」 for the selected page, as RD's fix describes.
+Risk test: n/a
+
+=== PHA262026P0095  [OK]
+Verified OK with 202611241407 build.
+Pages now has ✕ and ✓: ✓ applies the changes and ✕ asks 「Discard changes?」 first when there are changes.
+Risk test: n/a
+
+=== PHA262026P0097  [OK]
+Verified OK with 202611241407 build.
+A dragged page is now enlarged, tilted and translucent, and long-press-and-drag reorders pages, as RD's fix describes.
+Risk test: n/a
+
+=== PHA262026P0103  [OK]
+Verified OK with 202611241407 build.
+Tapping a crowned PRO template no longer opens the IAP; the template can be previewed and used on the Canvas, and the IAP shows only at export, as RD's fix describes.
+Risk test: n/a
+
+=== PHA262026P0138  [OK]
+Verified OK with 202611241937 build.
+With the connection lost while Apply Effect was sent, the confirm page now shows 「Network Error」 instead of 「Credits refunded」, Retry in My AI Artwork finishes the reel, and the job is charged only once.
+Risk test: n/a
+
+=== PHA262026P0141  [OK]
+Verified OK with 202611241407 build.
+Reuse now shows the toast 「Settings applied」 when the Custom page opens.
+Risk test: n/a
+
+=== PHA262026P0143  [OK]
+Verified OK with 202611241407 build.
+‹ and system Back in the room opened by Reuse now return to the video's Save & Share page.
+Risk test: n/a
+
+=== PHA262026P0144  [OK]
+Verified OK with 202611241407 build.
+Tapping Reuse now logs ImageToVideo_Reuse_Click with the video's model.
+Risk test: n/a
+
+=== PHA262026P0152  [OK]
+Verified OK with 202611241407 build.
+During the NY Sale the Free user's Launcher IAP icon is now the animated champagne glasses.
+Risk test: n/a
+
+=== PHA262026P0160  [OK]
+Verified OK with 202611241407 build.
+Tapping a frame cycles between the element and its slot, and the slot's 「+」 opens the photo picker, as RD's fix describes.
+Risk test: n/a
+
+=== PHA262026P0162  [OK]
+Verified OK with 202611241407 build.
+The Removal room now shows the photo with its Adjustments, as on the Canvas.
+Risk test: n/a
+

@@ -1,0 +1,15 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# 2026-11-25, product PowerDirector Mobile for Android, whole pool:
+#   ecl_query.py dedupe upload/bodies.json: 75 candidates per entry (「Cinematic Reel Creator」); 2 open on 16.9.0, both read against all five entries (dedupe-query.txt)
+#   ecl_query.py bugs --text "Cinematic Reel": 75 tickets; the [MUI] ones are closed 16.5.5 / 16.6.0 tutorial, banner and opening-intro tickets (DRA262607-0105, -0178, -0179, -0210, DRA262608-0158), other screens
+#
+# Same-OS matches, left off (R2 findings that repeat a filed ticket):
+#   Add Media opened from a template has no 「?」 — TC-010, TC-011, TC-012, TC-013, TC-014, TC-015 (Fail), TC-016, TC-021 (Blocked) — DRA262611P0289 (Assigned, RD, 2611201)
+#   Chip 「View photo tips」 and the sheet's first sentence stay English — recorded in every Language row (TC-017, TC-018, TC-023 … TC-075) — DRA262611P0290 (NewCreated, PM, 2611201)
+#
+# New entries, no same-OS match:
+#   ISS-CRA-03 full stop on 14 descriptions (9 languages): no candidate.
+#   ISS-CRA-04 right-to-left headings split from their bars: only the shared phrase 「photo tips」 with P0289 / P0290 (25 %), other defects.
+#   ISS-CRA-05 Danish caption broken mid-word: only the shared phrase (22 %).
+#   ISS-CRA-06 Filipino sheet half translated: 44 % with DRA262611P0290, read: P0290 is the chip and the sentence staying English where headings, captions and button are translated (繁中, 日本語); here the headings and the button themselves are English because the app has no Filipino strings. Different text, different decision: new card, P0290 named as related in its QA note.
+#   ISS-CRA-07 Turkish heading 「öneri」: only the shared phrase (22 %).

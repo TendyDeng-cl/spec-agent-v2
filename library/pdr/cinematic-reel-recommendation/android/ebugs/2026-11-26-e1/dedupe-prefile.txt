@@ -1,0 +1,17 @@
+
+0 of 1 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Cinematic-Reel-Recommendation-E1-02] PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Back while generating returns to the preview; the task keeps running
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 81 candidate(s)
+      no likely duplicate
+
+== Open in the pool on 16.9.0: 7 ticket(s) of 81 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0289  RDResolved   RD   2611201  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+      DRA262611P0290  Assigned     RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語
+      DRA262611P0317  Assigned     RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their bars in Arabic, Persian and Hebrew
+      DRA262611P0318  Assigned     RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelsesfornemmelse」 breaks mid-word
+      DRA262611P0319  Assigned     RD   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino captions with English headings and button
+      DRA262611P0320  RDResolved   PC-Doc 2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öneri」 with a small first letter
+      DRA262611P0321  NewCreated   PM   2611231  PDR-A 16.9.0 - [AIAgent][UX] Cinematic Reel Creator: Offline, photo tips sheets show empty picture boxes with no message
+
+== Verdict (2026-11-27, before create): no same-OS duplicate for ISS-CRA-06 (the open 16.9.0 Cinematic Reel tickets are photo tips / MUI / offline). CRA-05 is not filed (duplicate of ISS-AWA-20, AIGC Watermark E1). Nothing commented on.

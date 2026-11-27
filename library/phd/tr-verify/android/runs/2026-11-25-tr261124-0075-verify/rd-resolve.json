@@ -1,0 +1,285 @@
+[
+  {
+    "bug": "PHA242024-1271",
+    "resolvedIn": [],
+    "count": 1,
+    "newest": {
+      "RootCause": "not handle it",
+      "Solution": "this feature is in ai art",
+      "Function": "",
+      "Changeset": "",
+      "by": "LEO_CHEN",
+      "time": "2025-09-04T14:07:26"
+    },
+    "all": [
+      {
+        "RootCause": "not handle it",
+        "Solution": "this feature is in ai art",
+        "Function": "",
+        "Changeset": "",
+        "by": "LEO_CHEN",
+        "time": "2025-09-04T14:07:26"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0031",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "lost to update it",
+      "Solution": "update it",
+      "Function": "",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/933/commits/32292a809067a34632d4c7ae947426dd0d13423c",
+      "by": "LEO_CHEN",
+      "time": "2026-01-19T09:30:57"
+    },
+    "all": [
+      {
+        "RootCause": "lost to update it",
+        "Solution": "update it",
+        "Function": "",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/933/commits/32292a809067a34632d4c7ae947426dd0d13423c",
+        "by": "LEO_CHEN",
+        "time": "2026-01-19T09:30:57"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0051",
+    "resolvedIn": [],
+    "count": 1,
+    "newest": {
+      "RootCause": "Old issue",
+      "Solution": "Issue is gone in current build",
+      "Function": "",
+      "Changeset": "-",
+      "by": "JANE_LAI",
+      "time": "2026-11-23T14:23:17"
+    },
+    "all": [
+      {
+        "RootCause": "Old issue",
+        "Solution": "Issue is gone in current build",
+        "Function": "",
+        "Changeset": "-",
+        "by": "JANE_LAI",
+        "time": "2026-11-23T14:23:17"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0243",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Changing language changes the CMS ETag, so the whole I2V style folder is deleted and the sample images are re-downloaded one by one in background.\nThe sample image was only read from the local file when a style is selected, so it fell back to the default image (or read a partially written file), and the UI was never refreshed after the download finished.",
+      "Solution": "1. ImageToVideoTemplatesTabFragment: when the local sample image is missing, show the default image first and load sourceImageURL via Glide,\ncancel the pending request when switching style or destroying the view.\n 2. ImageToVideoActivityViewModel: download to a .tmp file and rename it only after the MD5 check passes, so readers never see a partially written file.",
+      "Function": "only affect image to video room",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/e36cf3fae98cfc261dfb37102b748bfad6b05ee7\ne36cf3fae98cfc261dfb37102b748bfad6b05ee7"
+    },
+    "all": [
+      {
+        "RootCause": "Changing language changes the CMS ETag, so the whole I2V style folder is deleted and the sample images are re-downloaded one by one in background.\nThe sample image was only read from the local file when a style is selected, so it fell back to the default image (or read a partially written file), and the UI was never refreshed after the download finished.",
+        "Solution": "1. ImageToVideoTemplatesTabFragment: when the local sample image is missing, show the default image first and load sourceImageURL via Glide,\ncancel the pending request when switching style or destroying the view.\n 2. ImageToVideoActivityViewModel: download to a .tmp file and rename it only after the MD5 check passes, so readers never see a partially written file.",
+        "Function": "only affect image to video room",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/e36cf3fae98cfc261dfb37102b748bfad6b05ee7\ne36cf3fae98cfc261dfb37102b748bfad6b05ee7"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0289",
+    "resolvedIn": [
+      "20.19.0.v202611241407"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "The ViewEngine reset after [X] runs on the Muse thread and races with the viewer redraw, and nothing redraws after the reset finishes.",
+      "Solution": "SkinBasePanel.onBack: for Makeup, redraw the viewer in the resetViewEngine callback.",
+      "Function": "only affect id photo room.",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/4cd70b786afcbbd27bc37f0966756809e350c2f5\n4cd70b786afcbbd27bc37f0966756809e350c2f5"
+    },
+    "all": [
+      {
+        "RootCause": "The ViewEngine reset after [X] runs on the Muse thread and races with the viewer redraw, and nothing redraws after the reset finishes.",
+        "Solution": "SkinBasePanel.onBack: for Makeup, redraw the viewer in the resetViewEngine callback.",
+        "Function": "only affect id photo room.",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/4cd70b786afcbbd27bc37f0966756809e350c2f5\n4cd70b786afcbbd27bc37f0966756809e350c2f5"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0360",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Old issue",
+      "Solution": "Sound is normal now",
+      "Function": "Related feature: Image to Video",
+      "Changeset": "-"
+    },
+    "all": [
+      {
+        "RootCause": "Old issue",
+        "Solution": "Sound is normal now",
+        "Function": "Related feature: Image to Video",
+        "Changeset": "-"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026-0407",
+    "resolvedIn": [],
+    "count": 1,
+    "newest": {
+      "RootCause": "Missing handling.",
+      "Solution": "Add \"thumbnail_for_light_modeUrl\" to show the light icon in light mode.",
+      "Function": "",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/f8bcb92bf06ef3e3955d761e0cdae3c0b737933d",
+      "by": "LAURA_KUAN",
+      "time": "2026-09-18T11:30:10"
+    },
+    "all": [
+      {
+        "RootCause": "Missing handling.",
+        "Solution": "Add \"thumbnail_for_light_modeUrl\" to show the light icon in light mode.",
+        "Function": "",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/f8bcb92bf06ef3e3955d761e0cdae3c0b737933d",
+        "by": "LAURA_KUAN",
+        "time": "2026-09-18T11:30:10"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0025",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "old issue",
+      "Solution": "Confirmed by PM: add artwork button to AI Background",
+      "Function": "Related feature: AI Background",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/4ea35728656e9bf793f0a9ebf852f187d929d883"
+    },
+    "all": [
+      {
+        "RootCause": "old issue",
+        "Solution": "Confirmed by PM: add artwork button to AI Background",
+        "Function": "Related feature: AI Background",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/4ea35728656e9bf793f0a9ebf852f187d929d883"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0029",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "it only sctoll to item visible",
+      "Solution": "scroll item in the middle",
+      "Function": "can not verify it in this app version",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2158"
+    },
+    "all": [
+      {
+        "RootCause": "it only sctoll to item visible",
+        "Solution": "scroll item in the middle",
+        "Function": "can not verify it in this app version",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2158"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0045",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "onGoArtwork hardcoded ARTWORK_AI_EDIT_CHAT_IMAGE for both the auto-scroll target and the preference Artwork reloads on resume, so the page always landed on the photo tab whatever the room had produced.",
+      "Solution": "GoToArtworkPage now carries the tab to open and the navigator uses it for both, still defaulting to the photo tab. The view model picks it from the newest finished result of the room on screen: a video result opens the video tab, anything else, or a room with no result yet, opens the photo tab. Results still running are skipped since they have no file to tell image from video yet.",
+      "Function": "only affect \"ai edit agent\" go artwork \n會參考最後一個完成的結果來進行artwork tab的導航",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/969282b25ecf7d44281d9937057366535176583b\n969282b25ecf7d44281d9937057366535176583b"
+    },
+    "all": [
+      {
+        "RootCause": "onGoArtwork hardcoded ARTWORK_AI_EDIT_CHAT_IMAGE for both the auto-scroll target and the preference Artwork reloads on resume, so the page always landed on the photo tab whatever the room had produced.",
+        "Solution": "GoToArtworkPage now carries the tab to open and the navigator uses it for both, still defaulting to the photo tab. The view model picks it from the newest finished result of the room on screen: a video result opens the video tab, anything else, or a room with no result yet, opens the photo tab. Results still running are skipped since they have no file to tell image from video yet.",
+        "Function": "only affect \"ai edit agent\" go artwork \n會參考最後一個完成的結果來進行artwork tab的導航",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/969282b25ecf7d44281d9937057366535176583b\n969282b25ecf7d44281d9937057366535176583b"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0056",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "The info panel should display the actual image generation credit cost from the server instead of a hardcodedvalue.",
+      "Solution": "Add AIEditChatSkillPermissionUseCase.getImageGenCredit() using CreditInfo.AIEditChat to look up the local credit\ncost by featureID/actionID. Expose _imageGenCredit StateFlow and refreshImageGenCredit() in\nAIEditChatActivityViewModel.",
+      "Function": "only affect ai edit agent room",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/3ad56d3e\n3ad56d3e"
+    },
+    "all": [
+      {
+        "RootCause": "The info panel should display the actual image generation credit cost from the server instead of a hardcodedvalue.",
+        "Solution": "Add AIEditChatSkillPermissionUseCase.getImageGenCredit() using CreditInfo.AIEditChat to look up the local credit\ncost by featureID/actionID. Expose _imageGenCredit StateFlow and refreshImageGenCredit() in\nAIEditChatActivityViewModel.",
+        "Function": "only affect ai edit agent room",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/commit/3ad56d3e\n3ad56d3e"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0142",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "Reuse passed the saved prompt to the Image to Video screen. A non-empty prompt made shouldShowMainPageDirectly() return true, so the app opened the Custom page directly and never checked the explanation sheet.",
+      "Solution": "A Custom Reuse (one with reuse settings) no longer takes that shortcut. It goes through the normal intro check, which respects \"Don't show again\" and deep links. After \"Try now\" it opens Custom with the reused model and prompt, which the view model already holds. Prompt-only reuse and restored state still open the main page directly",
+      "Function": "low",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2195/changes/a88c4710d07dd44d039d447bb56a0bacf64cf4d7"
+    },
+    "all": [
+      {
+        "RootCause": "Reuse passed the saved prompt to the Image to Video screen. A non-empty prompt made shouldShowMainPageDirectly() return true, so the app opened the Custom page directly and never checked the explanation sheet.",
+        "Solution": "A Custom Reuse (one with reuse settings) no longer takes that shortcut. It goes through the normal intro check, which respects \"Don't show again\" and deep links. After \"Try now\" it opens Custom with the reused model and prompt, which the view model already holds. Prompt-only reuse and restored state still open the main page directly",
+        "Function": "low",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2195/changes/a88c4710d07dd44d039d447bb56a0bacf64cf4d7"
+      }
+    ]
+  },
+  {
+    "bug": "PHA262026P0145",
+    "resolvedIn": [
+      "20.19.0.v202611241937"
+    ],
+    "count": 1,
+    "newest": {
+      "RootCause": "The portrait lock in BaseActivity only runs after a delayed post. The Image to Video screen is laid out first with no orientation set, so it can briefly appear rotated.",
+      "Solution": "ImageToVideoActivity now locks portrait right away in onCreate on small screens. Tablets are unchanged.",
+      "Function": "only fix image to video, other activity also has same problem",
+      "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2198"
+    },
+    "all": [
+      {
+        "RootCause": "The portrait lock in BaseActivity only runs after a delayed post. The Image to Video screen is laid out first with no orientation set, so it can briefly appear rotated.",
+        "Solution": "ImageToVideoActivity now locks portrait right away in onCreate on small screens. Tablets are unchanged.",
+        "Function": "only fix image to video, other activity also has same problem",
+        "Changeset": "https://github.com/CyberLink-Team/photodirector-android-app/pull/2198"
+      }
+    ]
+  }
+]

@@ -1,0 +1,191 @@
+{
+ "draft": "20261120-152114",
+ "current": [
+  "R1"
+ ],
+ "needs": {
+  "TC-023": [
+   "purchase"
+  ],
+  "TC-066": [
+   "purchase"
+  ],
+  "TC-067": [
+   "purchase"
+  ],
+  "TC-062": [
+   "credit-account-state"
+  ],
+  "TC-064": [
+   "credit-account-state"
+  ],
+  "TC-049": [
+   "app-language"
+  ],
+  "TC-050": [
+   "app-language"
+  ]
+ },
+ "unavailable": {
+  "credit-account-state": "test-data: no account eligible for Credit Auto Pass or for the first credit purchase as a paid user supplied for R1 (Q-8, REQ-003)"
+ },
+ "notes": "app-language (TC-049, TC-050): switching the phone language is a system setting; ask the user before R1-b's TC-049, unless the app has its own language setting. purchase (TC-023, TC-066, TC-067): released by the user 2026-11-20 (REQ-004): the phone's Play account is a license tester; buy with 「Test card, always approves」, cancel the test subscription after TC-023.",
+ "phases": [
+  {
+   "id": "R1",
+   "name": "Full run of v1 on the SM-A5560 (first run of the table)",
+   "round": true,
+   "note": "SM-A5560 R5CX30YHZHV, PhotoDirector 20.19.0, Test Server. Clock set by adb (REQ-003). Free user except the paid rows of R1-c.",
+   "origin": {
+    "TC-001": "R1",
+    "TC-002": "R1",
+    "TC-070": "R1",
+    "TC-030": "R1",
+    "TC-010": "R1",
+    "TC-012": "R1",
+    "TC-013": "R1",
+    "TC-014": "R1",
+    "TC-019": "R1",
+    "TC-020": "R1",
+    "TC-022": "R1",
+    "TC-045": "R1",
+    "TC-046": "R1",
+    "TC-048": "R1",
+    "TC-051": "R1",
+    "TC-053": "R1",
+    "TC-072": "R1",
+    "TC-075": "R1",
+    "TC-058": "R1",
+    "TC-060": "R1",
+    "TC-065": "R1",
+    "TC-068": "R1",
+    "TC-040": "R1",
+    "TC-041": "R1",
+    "TC-042": "R1",
+    "TC-043": "R1",
+    "TC-015": "R1",
+    "TC-016": "R1",
+    "TC-018": "R1",
+    "TC-047": "R1",
+    "TC-049": "R1",
+    "TC-033": "R1",
+    "TC-034": "R1",
+    "TC-003": "R1",
+    "TC-038": "R1",
+    "TC-004": "R1",
+    "TC-036": "R1",
+    "TC-071": "R1",
+    "TC-073": "R1",
+    "TC-054": "R1",
+    "TC-063": "R1",
+    "TC-062": "R1",
+    "TC-064": "R1",
+    "TC-031": "R1",
+    "TC-032": "R1",
+    "TC-011": "R1",
+    "TC-021": "R1",
+    "TC-044": "R1",
+    "TC-052": "R1",
+    "TC-059": "R1",
+    "TC-061": "R1",
+    "TC-069": "R1",
+    "TC-074": "R1",
+    "TC-050": "R1",
+    "TC-035": "R1",
+    "TC-037": "R1",
+    "TC-006": "R1",
+    "TC-005": "R1",
+    "TC-023": "R1",
+    "TC-066": "R1",
+    "TC-067": "R1"
+   },
+   "segments": [
+    {
+     "id": "R1-a",
+     "name": "Before the sale, Xmas start, Xmas free trial user: IAP page, interstitial, Credit IAP, splash, Mine (clock 12/10 → 12/15)",
+     "cases": [
+      "TC-001",
+      "TC-002",
+      "TC-070",
+      "TC-030",
+      "TC-010",
+      "TC-012",
+      "TC-013",
+      "TC-014",
+      "TC-019",
+      "TC-020",
+      "TC-022",
+      "TC-045",
+      "TC-046",
+      "TC-048",
+      "TC-051",
+      "TC-053",
+      "TC-072",
+      "TC-075",
+      "TC-058",
+      "TC-060",
+      "TC-065",
+      "TC-068"
+     ]
+    },
+    {
+     "id": "R1-b",
+     "name": "Interstitial days and A/B, non-trial user texts (clock 12/15 → 12/18)",
+     "cases": [
+      "TC-040",
+      "TC-041",
+      "TC-042",
+      "TC-043",
+      "TC-015",
+      "TC-016",
+      "TC-018",
+      "TC-047",
+      "TC-049"
+     ]
+    },
+    {
+     "id": "R1-c",
+     "name": "Xmas countdown and end, paid user in Xmas, Xmas → NY switch (clock 12/24 → 12/28)",
+     "cases": [
+      "TC-033",
+      "TC-034",
+      "TC-003",
+      "TC-038",
+      "TC-004",
+      "TC-036",
+      "TC-071",
+      "TC-073",
+      "TC-054",
+      "TC-063",
+      "TC-062",
+      "TC-064"
+     ]
+    },
+    {
+     "id": "R1-d",
+     "name": "NY Sale: icon, IAP, interstitial, Credit IAP, splash / Mine, NY countdown and end (clock 12/29 → 2027/01/06)",
+     "cases": [
+      "TC-031",
+      "TC-032",
+      "TC-011",
+      "TC-021",
+      "TC-044",
+      "TC-052",
+      "TC-059",
+      "TC-061",
+      "TC-069",
+      "TC-074",
+      "TC-050",
+      "TC-035",
+      "TC-037",
+      "TC-006",
+      "TC-005",
+      "TC-023",
+      "TC-066",
+      "TC-067"
+     ]
+    }
+   ]
+  }
+ ]
+}

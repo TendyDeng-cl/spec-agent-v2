@@ -34,6 +34,18 @@ export function readQuestionsZh(dir: string | null): Record<string, string> {
   return p && existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : {};
 }
 
+// What a completed run settled about a question on one platform (user, 2026-11-25: no question is left open by a
+// completed run): <table>/question-status.json, { "Q-5": { state, by, at, note } }. `determined`: the device, a ruling or
+// an existing ticket answers it (the note says how); `filed`: an eBug carries it that the batch files do not link by
+// Q-id (`codes` names the tickets); `not-reached`: its rows were blocked or not run (the note says
+// why; it stays open); `to-file`: it must go to PM as an eBug and has not yet (it stays open, flagged). Per platform,
+// because a device answers for its own app only; question-answers.json holds the team's answers about the spec itself.
+export type Settled = { state: 'determined' | 'filed' | 'not-reached' | 'to-file'; by: string; at: string; note: string; codes?: string[] };
+export function readSettled(tableDir: string): Record<string, Settled> {
+  const p = join(tableDir, 'question-status.json');
+  try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : {}; } catch { return {}; }
+}
+
 const answersFile = (feature: string) => join(featureDir(feature), 'question-answers.json');
 export const readAnswers = (feature: string): Record<string, Answer> =>
   existsSync(answersFile(feature)) ? JSON.parse(readFileSync(answersFile(feature), 'utf8')) : {};

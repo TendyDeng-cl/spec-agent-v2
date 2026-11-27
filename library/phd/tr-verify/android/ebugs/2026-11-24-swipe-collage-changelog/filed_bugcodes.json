@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0071",
+    "server": "",
+    "version": "20.19.0",
+    "build": "202611232103",
+    "filed_on": "2026-11-24"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0164",
+      "short": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: Pages ✓ returns the Canvas to page 3, not the selected new page 4",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-24T17:11:13",
+      "build": "202611241407",
+      "tr": "TR261124-0032",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "JANE_LAI",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher tool grid left\n3. Tap Collage\n4. Tap the Swipe Collage banner\n5. Scroll to the 「4 photos · 3 pages」 card in Year-end Recap\n6. Tap the card\n7. Tap Use Template\n8. Tap Pages\n9. Tap the stepper 「+」\n10. Tap ✓\n11. Check the result\n\nResult:\nAfter ✓ the Canvas shows page 3, not the new page 4 that was selected in Pages (「Page 4 / 4」).\n摘要：按 ✓ 後畫布停在第 3 頁，而不是 Pages 中選取的新第 4 頁。\n{20.19.0_scc52_pages_page4_selected.jpg} {20.19.0_scc52_canvas_shows_page3.jpg}\n\nExpect Result:\n✓ applies the change and returns to the Canvas on the selected page (page 4).\n摘要：✓ 套用後應回到畫布並停在選取的頁面（第 4 頁）。\nSpec string: 「✓ 套用回 Canvas，定位到選取頁」\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: Swipe Collage PhDM Spec.pdf (PM), flow-table board (Pages ✓, D1-24 / D1-26: apply and return to the Canvas on the selected page)\nSpec Link: Swipe Collage Design Figma, page board (Pages with the selected page and ✓) -\nhttps://www.figma.com/design/iUy5kOrVNG7IjcyxGGnp9t/Swipe_collage?node-id=74-3076\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_scc52_pages_page4_selected.jpg",
+        "20.19.0_scc52_canvas_shows_page3.jpg"
+      ],
+      "key": "Swipe-Collage-Changelog-01",
+      "iss": "ISS-SWC-52",
+      "feature": "Swipe-Collage-Changelog",
+      "problem_type": "Functional",
+      "moved": "2026-11-24: rechecked on R9 (S23, runs/2026-11-24-tr261124-0032-recheck), still reproduces; TR and Build No moved from TR261123-0071 / 202611232103 on the user's request"
+    },
+    {
+      "bugcode": "PHA262026P0165",
+      "short": "PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Cross-page frame hangs past the last page after a page move or page removal",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "WILLY_WU",
+      "created": "2026-11-24T17:11:17",
+      "build": "202611241407",
+      "tr": "TR261124-0032",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "MEG_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher tool grid left\n3. Tap Collage\n4. Tap the Swipe Collage banner\n5. Scroll to the 「4 photos · 3 pages」 card in Year-end Recap\n6. Tap the card\n7. Tap Use Template\n8. Tap Pages\n9. Hold page 1's move button\n10. Drag it to the right end of the strip\n11. Release\n12. Check the result\n\nResult:\nThe player frame moved with page 1 hangs past the strip's right edge, drawn translucent outside the pages.\n摘要：跨頁的播放器框隨第 1 頁移到最後，超出頁面右緣並以半透明畫在頁面外。\n{20.19.0_scc53_reorder_frame_past_strip.jpg} {20.19.0_scc53_one_page_frame_over_plus.jpg}\n\nExpect Result:\nAfter pages move or are removed, a cross-page element stays within the pages and is not drawn over the strip's 「+」.\n摘要：移動或刪除頁面後，跨頁元素應留在頁面內，不應畫到頁面外或蓋住「+」。\nSpec string: 「元件依中心點所在頁決定跟誰走；跨頁元件拖曳後仍跨頁」\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: Swipe Collage PhDM Spec.pdf (PM), states-canvas board (F13: elements move with the page holding their centre; a cross-page element stays cross-page)\nSpec Link: Swipe Collage Design Figma, page board (page strip and 「+」) -\nhttps://www.figma.com/design/iUy5kOrVNG7IjcyxGGnp9t/Swipe_collage?node-id=74-3076\nBasis: None — PM decision requested (no spec says where a cross-page element goes when its page ends up last; Q-7 open)\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_scc53_reorder_frame_past_strip.jpg",
+        "20.19.0_scc53_one_page_frame_over_plus.jpg"
+      ],
+      "key": "Swipe-Collage-Changelog-02",
+      "iss": "ISS-SWC-53",
+      "feature": "Swipe-Collage-Changelog",
+      "problem_type": "UX",
+      "moved": "2026-11-24: rechecked on R9 (S23, runs/2026-11-24-tr261124-0032-recheck), still reproduces; TR and Build No moved from TR261123-0071 / 202611232103 on the user's request"
+    },
+    {
+      "bugcode": "PHA262026P0166",
+      "short": "PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: At 10 pages the strip's move and ••• buttons shrink to about 12 dp",
+      "status": "NewCreated",
+      "severity": 3,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "WILLY_WU",
+      "created": "2026-11-24T17:11:21",
+      "build": "202611241407",
+      "tr": "TR261124-0032",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "MEG_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "1/1",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher tool grid left\n3. Tap Collage\n4. Tap the Swipe Collage banner\n5. Scroll to the 「4 photos · 3 pages」 card in Year-end Recap\n6. Tap the card\n7. Tap Use Template\n8. Tap Pages\n9. Tap the stepper 「+」 7 times\n10. Check the move and ••• buttons under the strip\n\nResult:\nAt 10 pages each move and ••• button is about 30 px (12 dp) wide, too small to tap reliably.\n摘要：10 頁時每個移動與 ••• 按鈕只剩約 30 px（12 dp），難以準確點選。\n{20.19.0_scc54_ten_pages_small_buttons.jpg} {20.19.0_scc54_four_pages_buttons.jpg}\n\nExpect Result:\nPM to decide how the page strip's controls stay a tappable size at 10 pages (e.g. a scrolling strip).\n摘要：請 PM 決定 10 頁時頁面列按鈕如何維持可點選的大小（例如可捲動）。\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: Swipe Collage Design Figma, page board (page strip with move and ••• buttons) -\nhttps://www.figma.com/design/iUy5kOrVNG7IjcyxGGnp9t/Swipe_collage?node-id=74-3076\nSpec Link: Swipe Collage PhDM Spec.pdf (PM), states-pages board (D1-12 / D1-27: 1 to 10 pages, ••• under each page)\nBasis: None — PM decision requested (neither spec sizes the strip controls at 10 pages)\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_scc54_ten_pages_small_buttons.jpg",
+        "20.19.0_scc54_four_pages_buttons.jpg"
+      ],
+      "key": "Swipe-Collage-Changelog-03",
+      "iss": "ISS-SWC-54",
+      "feature": "Swipe-Collage-Changelog",
+      "problem_type": "UX",
+      "moved": "2026-11-24: rechecked on R9 (S23, runs/2026-11-24-tr261124-0032-recheck), still reproduces; TR and Build No moved from TR261123-0071 / 202611232103 on the user's request"
+    },
+    {
+      "bugcode": "PHA262026P0167",
+      "short": "PHD-A 20.19.0 - [AIAgent][UX] Swipe_Collage: Frame selection box far exceeds the frame; its menu covers nearby text",
+      "status": "Cancelled",
+      "severity": 4,
+      "priority": 5,
+      "belong": "PM",
+      "creator": "WILLY_WU",
+      "created": "2026-11-24T17:11:24",
+      "build": "202611232103",
+      "tr": "TR261123-0071",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "MEG_CHEN",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "2/2",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Swipe the Launcher tool grid left\n3. Tap Collage\n4. Tap the Swipe Collage banner\n5. Scroll to the 「4 photos · 3 pages」 card in Year-end Recap\n6. Tap the card\n7. Tap Use Template\n8. Swipe the canvas left until 「Goodbye 2026」 shows\n9. Tap the player frame next to 「Goodbye 2026」\n10. Check the result\n\nResult:\nThe frame's selection box extends far past the drawn frame, and its floating menu covers the 「Goodbye 2026」 text.\n摘要：框的選取框遠大於實際畫出的框，浮動選單蓋住「Goodbye 2026」文字。\n{20.19.0_scc55_frame_box_menu_over_text.jpg} {20.19.0_scc55_image_focus_menu_over_text.jpg}\n\nExpect Result:\nPM to decide: the selection box fits the drawn frame and its floating menu does not cover other elements.\n摘要：請 PM 決定：選取框貼合實際框線，浮動選單不遮住其他元素。\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: Swipe Collage Design Figma, canvas_frame_focus board (orange outline with handles, floating icons above the frame) -\nhttps://www.figma.com/design/iUy5kOrVNG7IjcyxGGnp9t/Swipe_collage?node-id=33-2230\nBasis: None — PM decision requested (no spec covers a frame asset with a transparent margin)\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_scc55_frame_box_menu_over_text.jpg",
+        "20.19.0_scc55_image_focus_menu_over_text.jpg"
+      ],
+      "key": "Swipe-Collage-Changelog-04",
+      "iss": "ISS-SWC-55",
+      "feature": "Swipe-Collage-Changelog",
+      "problem_type": "UX",
+      "moved": "2026-11-24: changed on R9 (menu gone, handles over the text); cancelled by the user"
+    }
+  ],
+  "dispositions": {
+    "moved_to_TR261124-0032": [
+      "PHA262026P0164",
+      "PHA262026P0165",
+      "PHA262026P0166"
+    ],
+    "cancelled_by_user": [
+      "PHA262026P0167"
+    ]
+  }
+}

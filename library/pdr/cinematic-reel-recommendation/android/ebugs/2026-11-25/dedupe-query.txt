@@ -1,0 +1,38 @@
+
+4 of 5 entries have a possible duplicate (overlap >= 34%, or a shared quoted label / rare phrase, marked !). Judge each one yourself — wording varies, so this ranks candidates, it does not decide.
+
+[Cinematic-Reel-Recommendation-R2-01] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Template descriptions end with a full stop the CMS sheet lacks (9 languages)
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 75 candidate(s)
+      no likely duplicate
+
+[Cinematic-Reel-Recommendation-R2-02] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips headings are split from their bars in Arabic, Persian and Hebrew
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 75 candidate(s)
+    ! 25%  OPEN      DRA262611P0290  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence 
+              shares phrase "photo tips"
+    ! 25%  OPEN      DRA262611P0289  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no
+              shares phrase "photo tips"
+
+[Cinematic-Reel-Recommendation-R2-03] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Danish photo tips caption 「Bevægelsesfornemmelse」 breaks mid-word
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 75 candidate(s)
+    ! 22%  OPEN      DRA262611P0290  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence 
+              shares phrase "photo tips"
+    ! 22%  OPEN      DRA262611P0289  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no
+              shares phrase "photo tips"
+
+[Cinematic-Reel-Recommendation-R2-04] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Filipino photo tips sheet mixes Filipino captions with English headings and button
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 75 candidate(s)
+    ! 44%  OPEN      DRA262611P0290  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence 
+              shares phrase "photo tips"
+    ! 22%  OPEN      DRA262611P0289  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no
+              shares phrase "photo tips"
+
+[Cinematic-Reel-Recommendation-R2-05] PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Turkish photo tips heading reads 「öneri」 with a small first letter
+      feature='Cinematic Reel Creator'  terms=['Cinematic Reel Creator']  searched 75 candidate(s)
+    ! 22%  OPEN      DRA262611P0290  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence 
+              shares phrase "photo tips"
+    ! 22%  OPEN      DRA262611P0289  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no
+              shares phrase "photo tips"
+
+== Open in the pool on 16.9.0: 2 ticket(s) of 75 searched. Judge every entry against each one; the ranking above misses rewordings.
+      DRA262611P0289  Assigned     RD   2611201  PDR-A 16.9.0 - [AIAgent] Cinematic Reel Creator: Add Media opened from a template has no 「?」 for the photo tips
+      DRA262611P0290  NewCreated   PM   2611201  PDR-A 16.9.0 - [AIAgent][UI] Cinematic Reel Creator: Photo tips chip and sheet sentence stay English in 繁中 and 日本語

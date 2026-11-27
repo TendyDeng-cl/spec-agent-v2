@@ -1,0 +1,27 @@
+{
+  "feature": "pdr/cinematic-reel-recommendation",
+  "platform": "ios",
+  "title": "Cinematic Reel Creator — Photo Tips (Recommendation page)",
+  "draft": "20261126-111221",
+  "created_at": "2026-11-26T03:12:21.146Z",
+  "based_on_version": 3,
+  "spec_folder": "specs/2026-11-23",
+  "spec_files": [
+    {
+      "name": "Cinestory CMS - Recommendation.md",
+      "sha256": "4a997249a9ceafb76d194a03e17ea4d75112c8c7ed448834c06c00d50b906701",
+      "bytes": 5216
+    },
+    {
+      "name": "PDRA-661 Jira description.md",
+      "sha256": "dca0c22bc2423621f7c4f6f04903a048d4a47fee30f62bceff21a0f5ebb51656",
+      "bytes": 886
+    },
+    {
+      "name": "Cinematic Reel Recommendation - Design Figma 107-2283.md",
+      "sha256": "fa0702f3d9841d86f4effbc8ef257bdb30424b5fda080264e0a23b54ce03174c",
+      "bytes": 8580
+    }
+  ],
+  "spec_set_sha256": "3fe37ae7904cead1ab432f7a567bc490d6ba945308d85c305198d06d897f6f39"
+}

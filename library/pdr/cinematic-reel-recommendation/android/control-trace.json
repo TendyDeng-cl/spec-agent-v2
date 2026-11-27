@@ -131,7 +131,7 @@
     "K-c1f48e"
    ],
    "app": [],
-   "press": "TC-007, TC-016",
+   "press": "TC-007, TC-016, TC-077, TC-078, TC-079, TC-085, TC-086, TC-089, TC-090, TC-093, TC-094, TC-097, TC-098",
    "how": "manual"
   },
   {
@@ -278,7 +278,7 @@
     "K-4dd587"
    ],
    "app": [],
-   "press": "TC-010, TC-011, TC-012, TC-013, TC-014, TC-015",
+   "press": "TC-010, TC-011, TC-012, TC-013, TC-014, TC-015, TC-081, TC-082, TC-086, TC-087, TC-090, TC-091, TC-094, TC-095, TC-098, TC-099",
    "how": "manual"
   },
   {
@@ -576,7 +576,7 @@
     "M-c92386"
    ],
    "app": [],
-   "press": "TC-001, TC-002, TC-003, TC-004, TC-005, TC-006",
+   "press": "TC-001, TC-002, TC-003, TC-004, TC-005, TC-006, TC-077, TC-078, TC-079, TC-085, TC-089, TC-093, TC-097",
    "how": "manual"
   },
   {

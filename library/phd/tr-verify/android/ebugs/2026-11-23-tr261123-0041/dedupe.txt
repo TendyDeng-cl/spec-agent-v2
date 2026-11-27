@@ -1,0 +1,6 @@
+Dedupe 2026-11-23 (TSR.EbugSearch, PhotoDirector Mobile for Android, texts: "Swipe_Collage: App", "Swipe Collage crash", "Swipe_Collage crash", "Continue editing")
+ISS-SWC-51 (Swipe Collage crash on open after force stop with a canvas being edited)
+  same-OS match: PHA262026P0147 (TRCreated, open) — same crash, still reproduces on 20.19.0.v202611231214.
+  Filed as a new bug anyway on the user's explicit instruction (2026-11-23: 「那請把這隻保留不要verify他 然後直接發一支新的crash bug」);
+  P0147 is held off the TR261123-0041 QR (not verified). Related line names P0147.
+  PHA262026P0106 (RDResolved, no Continue editing? after kill) — different symptom, not a duplicate.

@@ -1,0 +1,22 @@
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0288 on 2026-11-24
+Format check: PDR-A 16.9.0
+
+2 bug(s) checked — 0 error(s), 0 warning(s)
+Format OK — clear to file.
+
+[Cinematic-Reel-Recommendation-R1-01] created DRA262611P0289
+  DRA262611P0289  sev 2  PM  BugNeedReview  build 2611201  by ETHAN_HSU
+[Cinematic-Reel-Recommendation-R1-02] created DRA262611P0290
+
+created 2 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0289  sev 2  PM  BugNeedReview  build 2611201  by ETHAN_HSU
+  DRA262611P0290  sev 2  PM  BugNeedReview  build 2611201  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0289  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0290  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

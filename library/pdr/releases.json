@@ -1,0 +1,68 @@
+{
+ "_note": "The GM date of each app version, per platform, from the Kanban roadmap (user, 2026-11-26): the date on the release's own row of the sheet. The Dashboard shows it beside the version. A snapshot (the sheet needs a Google sign-in): update it when the roadmap moves a date or adds a version.",
+ "source": "Kanban App Compiled Roadmap (Google Sheets 17ohWkcbvz9qhg-ZoYImtGWFcAxti4myKib4ePd1b74Q)",
+ "tab": "PDRM Roadmap",
+ "read": "2026-11-26",
+ "releases": [
+  {
+   "platform": "ios",
+   "version": "16.8.0",
+   "gm": "2026-09-24"
+  },
+  {
+   "platform": "ios",
+   "version": "16.8.5",
+   "gm": "2026-10-14"
+  },
+  {
+   "platform": "ios",
+   "version": "16.9.0",
+   "gm": "2026-11-11"
+  },
+  {
+   "platform": "ios",
+   "version": "17.0.0",
+   "gm": "2026-12-09"
+  },
+  {
+   "platform": "ios",
+   "version": "17.2.0",
+   "gm": "2027-01-13"
+  },
+  {
+   "platform": "android",
+   "version": "16.8.0",
+   "gm": "2026-11-06"
+  },
+  {
+   "platform": "android",
+   "version": "16.8.1",
+   "gm": "2026-11-13"
+  },
+  {
+   "platform": "android",
+   "version": "16.9.0",
+   "gm": "2026-12-02"
+  },
+  {
+   "platform": "android",
+   "version": "17.0.0",
+   "gm": "2026-12-16"
+  },
+  {
+   "platform": "android",
+   "version": "17.0.1",
+   "gm": "2026-12-30"
+  },
+  {
+   "platform": "android",
+   "version": "17.1.0",
+   "gm": "2027-01-06"
+  },
+  {
+   "platform": "android",
+   "version": "17.2.0",
+   "gm": "2027-02-17"
+  }
+ ]
+}

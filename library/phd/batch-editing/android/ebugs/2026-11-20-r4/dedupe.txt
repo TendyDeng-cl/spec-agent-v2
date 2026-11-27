@@ -1,0 +1,26 @@
+Dedupe — Batch Editing Android, run 2026-11-20-r4 (phase R4, table v9, full run), PhotoDirector 20.19.0.v202611181947
+(90201901, SR PHA261029-01, TR261118-0070). Read-only; Android pool only (product "PhotoDirector Mobile for Android";
+dedupe per OS, user 2026-10-28). 2026-11-20. Nothing commented.
+
+Same-OS matches left off the drafts and the review page (none closed, so none becomes a new card):
+| Case(s) | Finding on this build | Ticket | Status |
+|---|---|---|---|
+| TC-012 | 21st-photo toast 「You can only select 20 photos.」, not 「Please pick at most 20 photos.」 | PHA262026P0061 | Assigned |
+| TC-062, TC-076 | One Undo after an edit + 「All」 reverts the 11 others; photo 1 keeps its own 3:2 / Exposure | PHA262026P0121 | NewCreated (PM) |
+| TC-058 | 237 x 237 accepted in Custom resolution (minimum 147, Section 3 says 238) | PHA262026P0122 | NewCreated (PM) |
+| TC-049 | ④ 2730 x 1535 held as 「2560 x 1439」; 3:4 box 「1079 x 1439」 vs Section 3's 1151 x 1535 | PHA262026P0122 | NewCreated (PM): its Note names the 2560 px copy and its Expect asks PM for the range computed from the original |
+| TC-057 | 3000 x 3000 refused with 「Width should be between 147 and 2560. Please try again.」 | PHA262026P0122 (range) + PHA262026P0123 (width-only toast) | NewCreated (PM) |
+| TC-135 | Free: no native ad card on the Batch Save page (single Save & Share has one) | PHA262026P0124 | NewCreated (PM) |
+
+Release-note tickets on this build: PHA262026P0120 (RDResolved) fixed — TC-162 / TC-164 Pass; PHA262026P0125 (RDResolved)
+fixed — no Crop & Rotate crash with ① 1706 x 2559 or ④ 2730 x 1535 (0 FATAL EXCEPTION). P0057–P0060 are Close and pass
+(TC-110, TC-144, TC-145 / TC-142, TC-060). Information for the TR's verification only; no comment posted (team rule).
+
+1. ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android" --limit 600 (raw in
+   dedupe-raw.txt): 0 of 3 flagged; searched 11 candidates, 7 open on 20.19.0 (P0061, P0120–P0125), each read against
+   ISS-BEA-21/22/23: different findings.
+2. Whole pool: ecl_query.py bugs --text "Batch" / "Batch Edit" / "AI Exposure" / "Auto" (Android): the Batch list is the 11
+   above; AI Exposure tickets are 20.18.0 single-photo ones (P0002, P0009, -0459, all Close): not duplicates. No ticket
+   about the Launcher shortcut or Auto + Apply to all.
+3. Earlier drafts: ISS-BEA-18 (TC-128, Q-20) stays held by the user (2026-11-17). ISS-BEA-17 (TC-100 / TC-142) is gone:
+   both Pass under the REQ-018 ruling. TC-151 is held as a table question for the user (Q-13 reading), not drafted.

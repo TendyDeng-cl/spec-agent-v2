@@ -34,7 +34,7 @@ skill's body. Rule numbers are cited elsewhere (AGENTS.md: "rule 5 of the eBug o
    means that previous batch's TR when the build matches: read the TR header (`ecl_query.py tr <TR>`) and confirm it
    still names the build the findings were verified on before filing; if not, stop and ask.
 5. **No `[UX]` on casebook findings (RD, 2026-10-21 — in force until the user reverts it).** The casebook tests
-   against the spec, so every finding is `[AIAgent]` (Functional) or `[AIAgent][UI]`, owner RD (text: RD when the spec states it and the app differs, PM when the spec's own text must change, never Doc; user, 2026-11-11, `ebug-draft-generator` › Owner) —
+   against the spec, so every finding is `[AIAgent]` (Functional) or `[AIAgent][UI]`, owner RD (text: RD when the spec states it and the app differs, PM when the spec's own text must change; a translation problem, i.e. the wording of a translated string, is PC-Doc, never PM (user, 2026-11-26); user, 2026-11-11, `ebug-draft-generator` › Owner) —
    interaction and flow problems included; RD forwards one to PM when it wants a ruling. A plainly visible defect whose
    exact expected wording is only a proposal or open question is filed, not held, and an open question the run
    cannot settle (an undecided string, a proposal the app differs from) is filed to PM (BugBelong PM) for a
@@ -50,14 +50,17 @@ skill's body. Rule numbers are cited elsewhere (AGENTS.md: "rule 5 of the eBug o
 6. **No comments on existing tickets (user, 2026-10-21, until the user lifts it; a QR's own evidence files may be
    added to the bugs in that QR, `qa-report/SKILL.md` › *Evidence on each eBug*, REQ-099).** Never post a comment on, reopen
    or reject the fix of an existing eBug — not for rechecks, not for "still reproduces", not for fixed tickets. Only
-   new tickets the user decided to file are created.
+   new tickets the user decided to file are created. Reading comments is fine; `ecl_if3.py comment` (the add-comment
+   API) refuses unless `ALLOW_ECL_COMMENT=1`, which only the user lifting this rule allows.
 7. **Dedupe per OS (user, 2026-10-28).** iOS and Android bugs are deduped separately: search only the tested OS's
    product (`PowerDirector Mobile for iOS` / `… for Android`). A ticket on the other OS never makes a finding a
    duplicate: the finding is a new entry for this OS (the other OS's BugCode may go in its Note). A finding that
    matches an existing ticket on the same OS's TRs is **not listed** — no card on the review page, no Rechecks
    section, no on-hold entry; it is kept only in the batch's `dedupe.txt` (finding, case IDs, matching BugCode) for
    traceability. Exception: a same-OS ticket that is **closed** while the bug is back does not hide the finding; it
-   stays a new card that names the closed ticket as related. The search covers the whole pool and every open
+   stays a new card that names the closed ticket as related. A cancelled, declined or closed match is judged by why
+   it ended, from its comments, which `dedupe` prints (user, 2026-11-27; `references/dedupe.md` › *Ended tickets:
+   read why*). The search covers the whole pool and every open
    ticket on the build's version is read against every entry (2026-11-19: Video Enhance Android R2 missed
    DRA262611P0113 / P0115 on a 90-of-182 search; `references/dedupe.md` › *Whole pool*).
 8. **MUI bugs (user, 2026-11-24).** Findings of a table's MUI section (spec-casebook `references/mui.md` §4) carry
@@ -66,7 +69,9 @@ skill's body. Rule numbers are cited elsewhere (AGENTS.md: "rule 5 of the eBug o
    is one bug per language. No `[UI]` beside them; Class UI in the drafts. The language tags come from the
    translation sheet, else from the user, asked before the run, and live in `library/<product>/<feature>/mui.json`.
    Each entry has a `MUI: <translation|truncation> — <tags|all>` Note line and the sheet as Spec Link;
-   `check_ebug_format.py --mui <mui.json>` enforces it.
+   `check_ebug_format.py --mui <mui.json>` enforces it. Owner: a missing, wrong or doubtful translation is BugBelong
+   `PC-Doc`, never PM (user, 2026-11-26); truncation and layout stay RD.
+
 
 ## MyEdit and MyEdit Biz (user, 2026-11-25)
 

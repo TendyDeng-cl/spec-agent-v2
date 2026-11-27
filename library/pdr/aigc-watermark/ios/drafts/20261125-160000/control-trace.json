@@ -1,0 +1,909 @@
+{
+  "spec_folder": "specs/2026-11-17",
+  "platform": "ios",
+  "inventory": "specs/2026-11-17/extracted/inventory.json",
+  "entries": [
+    {
+      "group": "K-f89c37",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "btn_mani_text_m",
+      "label": "Got it",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-5bbee1"
+      ],
+      "app": [],
+      "press": "TC-005",
+      "how": "manual"
+    },
+    {
+      "group": "K-2a1c7d",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "btn_paid_text_s",
+      "label": "Get free trial",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-97c53a"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner",
+      "how": "manual"
+    },
+    {
+      "group": "C-61b7d7",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 5: 「Tutorials & Tips」 「My Artwork」 「Produced Videos」 「Demo Videos」 …",
+      "set": true,
+      "instances": 10,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-c91169",
+        "K-d7ef87",
+        "K-e18200",
+        "K-1b714c",
+        "K-e01fe2"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "K-dcebc5",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "menu_list",
+      "label": "Remove Watermark",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-89cab2"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "C-fc5922",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 2: 「Preferences」 「User Sign in」",
+      "set": true,
+      "instances": 4,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-584739",
+        "K-c91ad3"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "K-894c0c",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_cloud_upload",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-549003"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-c83c6d",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_crown",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-c30400"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-a3b09a",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_cutout_advanced",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-58aa42"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-9985e2",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_film_sparkle",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-e49da5"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-271363",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_info",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-54a686"
+      ],
+      "app": [],
+      "press": "TC-004, TC-005",
+      "how": "manual"
+    },
+    {
+      "group": "K-5d5610",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_remove_ai",
+      "label": "AI",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-fb90dd"
+      ],
+      "app": [],
+      "press": "n/a: decorative row icon (the row itself is not a button; the switch is)",
+      "how": "manual"
+    },
+    {
+      "group": "K-2e4a91",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "round/ic_speech_2_text",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-41db54"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-1ec280",
+      "kind": "toggle",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "Switch",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-eb56f3"
+      ],
+      "app": [],
+      "press": "TC-006, TC-085, TC-086",
+      "how": "manual"
+    },
+    {
+      "group": "K-31d4e1",
+      "kind": "button",
+      "board": "AIGC Watermark settings",
+      "boards": [
+        "AIGC Watermark settings"
+      ],
+      "name": "Top_Navigation_menu",
+      "label": "Menu",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-18a65a"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu page back button",
+      "how": "manual"
+    },
+    {
+      "group": "K-b8eb37",
+      "kind": "button",
+      "board": "pm-export",
+      "boards": [
+        "pm-export"
+      ],
+      "name": "check",
+      "label": "Don’t show again",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "Dialog_text_02-2"
+      ],
+      "controls": [
+        "K-2209f0"
+      ],
+      "app": [],
+      "press": "TC-127",
+      "how": "manual"
+    },
+    {
+      "group": "K-775d65",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "back",
+      "label": "AI Music Generator",
+      "set": false,
+      "instances": 3,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-c6a91d"
+      ],
+      "app": [],
+      "press": "n/a: other feature: AI Music Generator page controls",
+      "how": "manual"
+    },
+    {
+      "group": "K-7032ba",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "BTN",
+      "label": "Go to My AI Music",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-09ba0f"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Music Generator progress popup",
+      "how": "manual"
+    },
+    {
+      "group": "K-7249bb",
+      "kind": "toggle",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "checkbox",
+      "label": "",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-43df5a"
+      ],
+      "app": [],
+      "press": "TC-126",
+      "how": "manual"
+    },
+    {
+      "group": "C-5b036e",
+      "kind": "item",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "chips",
+      "label": "choice of 2: 「On」 「Off」",
+      "set": true,
+      "instances": 6,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-13ac92",
+        "K-b735f8",
+        "K-1daca1",
+        "K-bd3601"
+      ],
+      "app": [],
+      "press": "n/a: other feature: AI Music Generator Vocal On / Off",
+      "how": "manual"
+    },
+    {
+      "group": "K-ca5a9c",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music",
+        "pm-export"
+      ],
+      "name": "cta",
+      "label": "Cancel",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "AI Music",
+        "Dialog_text_02-2"
+      ],
+      "controls": [
+        "K-0ebff1",
+        "K-763605"
+      ],
+      "app": [],
+      "press": "TC-055, TC-056, TC-084, TC-064",
+      "how": "manual"
+    },
+    {
+      "group": "K-928d69",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "ic_history_n",
+      "label": "",
+      "set": false,
+      "instances": 7,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-e71a8e",
+        "K-e31a88",
+        "K-4e8c28"
+      ],
+      "app": [],
+      "press": "n/a: other feature: AI Music Generator page controls",
+      "how": "manual"
+    },
+    {
+      "group": "K-4ef7da",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "round/ic_add_image",
+      "label": "",
+      "set": false,
+      "instances": 3,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-6fcbc5",
+        "K-66a0cd"
+      ],
+      "app": [],
+      "press": "n/a: other feature: AI Music Generator page controls",
+      "how": "manual"
+    },
+    {
+      "group": "K-f4363a",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "round/ic_chevron_left",
+      "label": "",
+      "set": false,
+      "instances": 3,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-a8e787"
+      ],
+      "app": [],
+      "press": "n/a: other feature: AI Music Generator page controls",
+      "how": "manual"
+    },
+    {
+      "group": "C-5adc05",
+      "kind": "button",
+      "board": "pm-music",
+      "boards": [
+        "pm-music"
+      ],
+      "name": "round/ic_xmark",
+      "label": "choice of 2",
+      "set": true,
+      "instances": 2,
+      "screens": [
+        "AI Music"
+      ],
+      "controls": [
+        "K-2b136b",
+        "K-d32ca2"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Music Generator progress popup X",
+      "how": "manual"
+    },
+    {
+      "group": "K-042d19",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings",
+        "pm-music"
+      ],
+      "name": "btn",
+      "label": "Generate Music",
+      "set": false,
+      "instances": 4,
+      "screens": [
+        "menu",
+        "AI Music"
+      ],
+      "controls": [
+        "K-96e28d",
+        "K-0264d6",
+        "K-f864c7"
+      ],
+      "app": [],
+      "press": "TC-005",
+      "how": "manual"
+    },
+    {
+      "group": "K-2fa49e",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "btn_paid_text_s",
+      "label": "Get free trial",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-831960"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner",
+      "how": "manual"
+    },
+    {
+      "group": "C-aae732",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 5: 「Tutorials & Tips」 「My Artwork」 「Produced Videos」 「Demo Videos」 …",
+      "set": true,
+      "instances": 15,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-bccf2f",
+        "K-1d28fd",
+        "K-8600e2",
+        "K-14e60e",
+        "K-92ed48",
+        "K-64fcab",
+        "K-34ef8d",
+        "K-6ad41f",
+        "K-1be619",
+        "K-89eafc"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "K-0f413d",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "menu_list",
+      "label": "Remove Watermark",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-7d8878"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "C-734b4e",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 2: 「Preferences」 「User Sign in」",
+      "set": true,
+      "instances": 4,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-51bbfb",
+        "K-7be839"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "C-e93776",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 2: 「Preferences」 「YenHan Chang」",
+      "set": true,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-4abbf0",
+        "K-264870"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "C-f0e363",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "menu_list",
+      "label": "choice of 4: 「Send Feedback」 「About」 「Youtube」 「Instagram」",
+      "set": true,
+      "instances": 4,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-9862b2",
+        "K-b2ecd3",
+        "K-462aac",
+        "K-b7c7d4"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu rows of other features (Tutorials & Tips, My Artwork, Preferences, account, Information)",
+      "how": "manual"
+    },
+    {
+      "group": "K-2e5da6",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_cloud_upload",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-4e04c5"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-4478ae",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_crown",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-4462a6"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-899ed6",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_cutout_advanced",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-5d8518"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-b53220",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_film_sparkle",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-de1267"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-82e184",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_image_off",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-7d8d75",
+        "K-878b46"
+      ],
+      "app": [],
+      "press": "n/a: decorative row icon (the row itself is not a button; the switch is)",
+      "how": "manual"
+    },
+    {
+      "group": "K-5b71f7",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings",
+        "pm-music"
+      ],
+      "name": "round/ic_info",
+      "label": "",
+      "set": false,
+      "instances": 6,
+      "screens": [
+        "menu",
+        "AI Music"
+      ],
+      "controls": [
+        "K-cc2a1a",
+        "K-5f978a",
+        "K-7a9e50",
+        "K-8f3ab2",
+        "K-2037c5"
+      ],
+      "app": [],
+      "press": "TC-004, TC-005",
+      "how": "manual"
+    },
+    {
+      "group": "K-2cf37b",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_speech_2_text",
+      "label": "",
+      "set": false,
+      "instances": 2,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-bb32e6"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu subscription banner icons",
+      "how": "manual"
+    },
+    {
+      "group": "K-6e29c6",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "round/ic_xmark",
+      "label": "",
+      "set": false,
+      "instances": 1,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-012210"
+      ],
+      "app": [],
+      "press": "n/a: the PM info sheet X; the Design sheet (priority) has no X, so the app is not expected to draw one",
+      "how": "manual"
+    },
+    {
+      "group": "K-5286c7",
+      "kind": "toggle",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "Switch",
+      "label": "",
+      "set": false,
+      "instances": 3,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-4a3049",
+        "K-442e01"
+      ],
+      "app": [],
+      "press": "TC-006, TC-085, TC-086",
+      "how": "manual"
+    },
+    {
+      "group": "K-f9622f",
+      "kind": "button",
+      "board": "pm-settings",
+      "boards": [
+        "pm-settings"
+      ],
+      "name": "Top_Navigation_menu",
+      "label": "Menu",
+      "set": false,
+      "instances": 3,
+      "screens": [
+        "menu"
+      ],
+      "controls": [
+        "K-91fdec"
+      ],
+      "app": [],
+      "press": "n/a: other feature: Menu page back button",
+      "how": "manual"
+    }
+  ]
+}

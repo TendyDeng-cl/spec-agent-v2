@@ -1,0 +1,7 @@
+library/pdr/video-enhance/android/ebugs/2026-11-25-questions/20261125_eBug_drafts_Video-Enhance-Questions_16.9.0.md
+  1 entries · 2 images · 1 Spec Link lines · 0/0 ▲ rows · max ShortDesc 115
+FAILED:
+  library/pdr/video-enhance/android/ebugs/2026-11-25-questions/20261125_eBug_drafts_Video-Enhance-Questions_16.9.0.md e1 (ISS-VEA-57): links 'AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance (settings) board (Length: playhead line, time bubble and ◀▶ knob drawn, no note on its range or on play, Q-21)' but Description never names that sheet in full (ambiguous=True)
+  library/pdr/video-enhance/android/ebugs/2026-11-25-questions/20261125_eBug_drafts_Video-Enhance-Questions_16.9.0.md e1: unknown sheet 'AI Video Enhance Design spec (Video Enhance, section AI Video Enhance_26.09_v2), AI Video Enhance (settings) board (Length: playhead line, time bubble and ◀▶ knob drawn, no note on its range or on play, Q-21)'
+  library/pdr/video-enhance/android/ebugs/2026-11-25-questions/20261125_eBug_drafts_Video-Enhance-Questions_16.9.0.md e1 (ISS-VEA-57): Class UX needs 'Basis: External — …' or 'Basis: None — …'
+  library/pdr/video-enhance/android/ebugs/2026-11-25-questions/20261125_eBug_drafts_Video-Enhance-Questions_16.9.0.md e1 (ISS-VEA-57): [AIAgent] entries never carry [UX]

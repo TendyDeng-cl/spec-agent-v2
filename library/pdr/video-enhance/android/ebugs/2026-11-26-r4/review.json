@@ -1,0 +1,16 @@
+{
+ "tr": "pending",
+ "build": "2611251",
+ "trNote": "TR: pending (build 2611251). The TR for build 16.9.0.2611251 is not known yet; do not file on TR261123-0070 (build 2611231). Enter the TR once given.",
+ "lede": "Three cards for failures new in round R4 on 2611251: the Mode bubble wording against the redrawn Design (RD), system Back on the 「Turn on notifications」 dialog (Q-20, PM decision) and the missing ⓘ beside 「Selected Length」 on videos within the Mode limit (RD). Every other R4 failure repeats an Android ticket (dedupe.txt). Deduped against the whole Android pool on 2026-11-27.",
+ "why": {
+  "ISS-VEA-60": "The Design board 3300:32003 was redrawn on 2026-11-26 to 「up to 08:00」 / 「up to 02:30」; the app still shows 「up to 8 min」 / 「up to 2:30」 from every entry.",
+  "ISS-VEA-61": "PM decision (Q-20): the dialog is PM-only and no source gives its Back rule. First seen on 2611251 (DRA262611P0232 fixed); Back leaves it open.",
+  "ISS-VEA-62": "R-020 draws 「Selected Length ⓘ」 on a 01:30 video's panel; on 2611251 only videos over the Mode limit get the ⓘ."
+ },
+ "related": {
+  "ISS-VEA-60": "DRA262611P0093 is the 8-minute limit bubble covering the Preview time, not the Mode bubble's words.",
+  "ISS-VEA-61": "DRA262611P0232 (the dialog never showed) is fixed on 2611251; TC-118 – TC-120 pass.",
+  "ISS-VEA-62": "If the Design's VE · 01 frame is only a long-video example, switch to PM / UX or drop it."
+ }
+}

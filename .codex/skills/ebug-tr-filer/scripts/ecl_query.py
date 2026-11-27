@@ -11,6 +11,8 @@ Token: `~/.ecl_token` (chmod 600), or $ECL_TOKEN. Never passed on argv.
     ./ecl_query.py bugs --product PowerDirector --build 189063
     ./ecl_query.py bugs --text "AI Music Generator" --open-only --limit 30
     ./ecl_query.py bug DRI261883-0063
+    ./ecl_query.py resolve PHA262026P0074 --json   # RD's newest resolve note
+    ./ecl_query.py comments DRA262611P0050 VDE261031P0006   # comments on the eBug page
     ./ecl_query.py tr TR260915-0007
     ./ecl_query.py dedupe upload/bodies.json
     ./ecl_query.py calibrate --product "PowerDirector Mobile for iOS" --since 2026-06-01
@@ -28,7 +30,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from ecl_if3 import ECLError, call, query  # noqa: E402
+from ecl_if3 import ECLError, call, query, strip_tags  # noqa: E402
 
 PAGE = 200
 
@@ -205,6 +207,14 @@ def cmd_bug(a):
             for f in files:
                 print(f"  {f.get('FileName')}  {f.get('FileURL')}")
 
+        if _is_if3(r["BugCode"]):
+            cs = comments([r["BugCode"]]).get(r["BugCode"], [])
+            if cs:
+                print("\n--- Comments " + "-" * 65)
+                for c in cs:
+                    print(f"  {str(c.get('CreateTime'))[:16]}  {c.get('Creator')}: "
+                          f"{_one_line(c.get('Comment'), 300)}")
+
         if a.log and log:
             print("\n--- Status log " + "-" * 63)
             for e in log:
@@ -226,6 +236,172 @@ def _json_field(row, key):
 
 def _clean(s):
     return str(s).replace("\r\n", "\n").replace("\r", "\n").strip()
+
+
+# ------------------------------------------------------------------ resolve
+
+RESOLVE_LABELS = (
+    ("RootCause", "Root cause"),
+    ("Solution", "Solution / Workaround"),
+    ("Function", "Function / Behavior / OS / HW might impact"),
+    ("Changeset", "Changeset (SVN number or Trac / Git URL)"),
+)
+
+
+def resolve_notes(code):
+    """Every RD resolve note on a bug, oldest first.
+
+    IF3 bugs keep them in TSR.EbugLogAndData DataJSON.ResolveComment (the
+    RootCause / Solution / Function / Changeset fields of RD's Resolve form,
+    appended per resolve); old-ASP bugs in StatusLog entries with RootCause or
+    Solution. The newest note is the last one.
+    """
+    notes = []
+    rows = query("TSR.EbugLogAndData",
+                 [{"field": "FormCode", "term": {"query": code}}])
+    builds = []
+    if rows:
+        d = rows[0].get("DataJSON")
+        d = json.loads(d) if isinstance(d, str) else (d or {})
+        builds = d.get("BuildResolveInfos") or []
+        for e in d.get("ResolveComment") or []:
+            notes.append({k: _clean(e.get(k) or "") for k, _ in RESOLVE_LABELS})
+    if not notes:
+        old = query("TSR.SP.GetOldEbugData",
+                    [{"field": "BugCode", "term": {"query": code}}])
+        for e in _json_field(old[0], "StatusLog") if old else []:
+            if e.get("RootCause") or e.get("Solution"):
+                notes.append({
+                    "RootCause": _clean(e.get("RootCause") or ""),
+                    "Solution": _clean(e.get("Solution") or ""),
+                    "Function": _clean(e.get("Function") or ""),
+                    "Changeset": _clean(e.get("TraceURL") or ""),
+                    "by": e.get("UserName"),
+                    "time": str(e.get("StatusTime"))[:19],
+                })
+    return {"bug": code, "resolvedIn": builds, "count": len(notes),
+            "newest": notes[-1] if notes else None, "all": notes}
+
+
+def cmd_resolve(a):
+    out = [resolve_notes(c) for c in a.bugcodes]
+    if a.json:
+        json.dump(out if len(out) > 1 else out[0], sys.stdout, indent=2,
+                  ensure_ascii=False)
+        print()
+        return 0
+    for r in out:
+        print("=" * 78)
+        print(f"{r['bug']}  —  {r['count']} resolve note(s)"
+              f"{'   resolved in ' + ', '.join(r['resolvedIn']) if r['resolvedIn'] else ''}")
+        n = r["newest"]
+        if not n:
+            print("  (no RD resolve note)")
+            continue
+        print("  newest:" + (f" by {n['by']} {n['time']}" if n.get("by") else ""))
+        for k, label in RESOLVE_LABELS:
+            print(f"  {label}:")
+            for line in (n.get(k) or "—").split("\n"):
+                print(f"    {line}")
+        if a.all and r["count"] > 1:
+            for i, o in enumerate(r["all"][:-1], 1):
+                print(f"  earlier #{i}: {o.get('RootCause')} / {o.get('Solution')}")
+    return 0
+
+
+# ----------------------------------------------------------------- comments
+
+def _is_if3(code):
+    """IF3 bug codes use a P separator (PDP260906P0001); old ASP uses '-'."""
+    return bool(re.match(r"^[A-Z]+\d{6}P\d{4}$", str(code)))
+
+
+def comments(codes, deleted=False):
+    """{BugCode: [comment, ...]} oldest first, from TSR.EbugComments.
+
+    Public API doc #api-17 (2026-11-27): one row per comment, paged by comment
+    (not by bug); deleted comments come back with IsValid=false and cannot be
+    filtered server-side (an IsValid / Creator / CreateTime condition applies to
+    the eBug, not the comment). Only IF3 bugs: old ASP comments live in other
+    tables and are silently missing, so they are not asked for.
+    """
+    codes = [c for c in dict.fromkeys(codes) if _is_if3(c)]
+    out = {c: [] for c in codes}
+    for i in range(0, len(codes), 50):
+        chunk = codes[i:i + 50]
+        rows = paged("TSR.EbugComments",
+                     [{"field": "BugCode", "term": {"querys": chunk}}],
+                     10000, sort_by="CreateTime", desc=False)
+        for r in rows:
+            if not deleted and r.get("IsValid") is False:
+                continue
+            out.setdefault(str(r.get("BugCode", "")).upper(), []).append(r)
+    for v in out.values():
+        v.sort(key=lambda r: (str(r.get("CreateTime")), r.get("JCID") or 0))
+    return out
+
+
+_CODE = re.compile(r"\b[A-Z]{2,4}\d{6}(?:P\d{4}|-\d{3,4})\b")
+
+# Why a ticket ended, as the comments word it. A hint for the reader, never a verdict.
+_REASONS = (
+    ("duplicate", r"dup|duplicate|same (issue|bug|as)|重複|同\s*(單|問題)"),
+    ("filed wrongly / refiled", r"wrong (template|pool|tr|product|build|os|platform)|re-?fil|filed by mistake|"
+                               r"mistake|開錯|重開|重新開"),
+    ("by design / spec", r"by design|as design|design(ed)? behavio|spec|expected behavio|"
+                         r"not a bug|working as|規格|設計|預期"),
+    ("PM decision", r"\bpm\b.*(decid|confirm|rul|agree)|(decid|confirm)\w* by pm|PM 決定|PM 確認"),
+    ("fixed outside the app", r"\bcms\b|server|backend|data (has been|was|is) (updated|fixed|corrected)|"
+                              r"refund|config"),
+    ("not reproducible", r"not reproduc|cannot reproduce|can't reproduce|could not reproduce|"
+                         r"無法重現|不能重現"),
+    ("fixed", r"\bfixed\b|已修|修正"),
+)
+
+
+# What each reason means for a new finding that matches the ended ticket
+# (references/dedupe.md › *Ended tickets: read why*).
+_REASON_ACTION = {
+    "duplicate": "judge the finding against the ticket it duplicates (→ names)",
+    "filed wrongly / refiled": "not a ruling: judge against the refiled ticket; none → treat as no match",
+    "by design / spec": "a ruling: drop, unless today's spec contradicts it (then a card citing both)",
+    "PM decision": "a ruling: drop, unless a newer spec or PM item changes it (then cite both)",
+    "fixed outside the app": "fixed in data/server: a card only if it is wrong again now, naming this ticket",
+    "not reproducible": "a card only with a repro that works on this build, naming this ticket",
+    "fixed": "fixed: a card only if the bug is back on this build, naming this ticket",
+}
+
+
+def reason_hints(rows):
+    text = "\n".join(str(r.get("Comment") or "") for r in rows)
+    return [name for name, rx in _REASONS if re.search(rx, text, re.I)]
+
+
+def _one_line(s, n=180):
+    s = " ".join(_clean(strip_tags(str(s))).split())
+    return s if len(s) <= n else s[:n - 1] + "…"
+
+
+def cmd_comments(a):
+    old = [c for c in a.bugcodes if not _is_if3(c)]
+    got = comments([c.upper() for c in a.bugcodes], deleted=a.deleted)
+    if a.json:
+        json.dump(got, sys.stdout, indent=2, ensure_ascii=False)
+        print()
+        return 0
+    for code, rows in got.items():
+        print("=" * 78)
+        print(f"{code}  —  {len(rows)} comment(s)"
+              + (f"   hints: {', '.join(reason_hints(rows))}" if reason_hints(rows) else ""))
+        for r in rows:
+            gone = "  [deleted]" if r.get("IsValid") is False else ""
+            print(f"  {str(r.get('CreateTime'))[:16]}  {r.get('Creator')}{gone}")
+            for line in _clean(strip_tags(str(r.get("Comment") or ""))).split("\n"):
+                print(f"    {line}")
+    for c in old:
+        print(f"{c}: old ASP ticket — the comment API does not cover it; read its "
+              f"status log with `bug {c} --log`.", file=sys.stderr)
+    return 0
 
 
 # ----------------------------------------------------------------------- tr
@@ -362,18 +538,52 @@ def _shared_labels(short, other):
                   {l for l in _labels(other) if _contains(a, l)})
 
 
+def _print_why_ended(r, why_ended, pool):
+    """The ended ticket's own comments: why it was cancelled / declined / closed."""
+    code = r["BugCode"]
+    if not _is_if3(code):
+        print(f"              why {r.get('Status')}: old ASP ticket, no comment API — "
+              f"`bug {code} --log`")
+        return
+    if code not in why_ended:
+        return  # comments not read (--no-comments or the read failed)
+    cs = why_ended.get(code) or []
+    hints = reason_hints(cs)
+    print(f"              why {r.get('Status')}: "
+          + (", ".join(hints) if hints else "no reason recognised")
+          + f"  ({len(cs)} comment(s))")
+    if not cs:
+        print("                (no comment on the ticket — read `bug "
+              f"{code} --log`; say \"no reason recorded\" on the review page)")
+    for h in hints:
+        print(f"                ▸ {h}: {_REASON_ACTION[h]}")
+    if not hints:
+        print("                ▸ read the comments below and decide; record the reason on the card")
+    for c in cs[-3:]:
+        print(f"                {str(c.get('CreateTime'))[:10]} {c.get('Creator')}: "
+              f"{_one_line(c.get('Comment'))}")
+    named = sorted({m for c in cs for m in _CODE.findall(str(c.get("Comment") or ""))}
+                   - {code})
+    for m in named:
+        o = pool.get(m)
+        st = f"{o.get('Status')}  {str(o.get('ShortDescription'))[:60]}" if o else \
+            "not in the searched pool — `bug " + m + "`"
+        print(f"                → names {m}: {st}")
+
+
 def cmd_dedupe(a):
     shorts = []
     if a.source.endswith(".json"):
-        data = json.load(open(a.source))
+        data = json.load(open(a.source, encoding="utf-8"))
         shorts = [(k, v["short"]) for k, v in sorted(data.items())]
     else:
-        with open(a.source) as f:
+        with open(a.source, encoding="utf-8") as f:
             shorts = [(str(i + 1), ln.strip())
                       for i, ln in enumerate(f) if ln.strip()]
 
     hits = rejected_hits = 0
     pool, versions = {}, set()  # every candidate searched; the batch's versions
+    results = []
     for key, short in shorts:
         feature, words, terms = _keywords(short)
         # Quoted labels are searched on their own too: the same button can be
@@ -439,12 +649,28 @@ def cmd_dedupe(a):
         shown = [x for x in scored if x[0]]
         shown += [x for x in scored if not x[0]][:a.show]
 
+        results.append((key, short, feature, terms, labels, len(rows), shown))
+
+    # Why each ended candidate ended: one batched comment read (public API
+    # #api-17, 2026-11-27) for every cancelled / declined / closed IF3 ticket
+    # shown, so the reader judges the reason, not just the status word.
+    ended = [r["BugCode"] for res in results for _f, _o, _w, r in res[6]
+             if not _is_open(r)]
+    why_ended = {}
+    if ended and not a.no_comments:
+        try:
+            why_ended = comments(ended)
+        except ECLError as e:
+            print(f"comment read failed ({e}); judge ended tickets from "
+                  f"`bug <code> --log` instead", file=sys.stderr)
+
+    for key, short, feature, terms, labels, searched, shown in results:
         print(f"\n[{key}] {short}")
         how = (f"feature={feature!r}" if feature else
                f"NO FEATURE NAME, fell back to keywords {terms}")
         if labels:
             how += f"  labels={labels}"
-        print(f"      {how}  terms={terms}  searched {len(rows)} candidate(s)")
+        print(f"      {how}  terms={terms}  searched {searched} candidate(s)")
         if not shown:
             print("      no likely duplicate")
             continue
@@ -453,7 +679,9 @@ def cmd_dedupe(a):
             if _is_rejected(r):
                 state = "REJECTED"
             else:
-                state = "OPEN    " if _is_open(r) else "closed  "
+                state = "OPEN    " if _is_open(r) else (
+                    "CANCELED" if "cancel" in str(r.get("Status", "")).lower()
+                    else "closed  ")
             mark = "!" if flagged else " "
             print(f"    {mark}{ov:>4.0%}  {state}  {r['BugCode']}  "
                   f"{str(r.get('ShortDescription'))[:88]}")
@@ -465,6 +693,8 @@ def cmd_dedupe(a):
                       f"this. Filing again re-raises that decision: read its "
                       f"status log, and only refile with new grounds (e.g. a "
                       f"newer spec) cited against {r['BugCode']}.")
+            if not _is_open(r):
+                _print_why_ended(r, why_ended, pool)
 
     # Word overlap misses rewordings even inside the pool: on 2026-11-19
     # "1 fps video opens with no fps chip selected" scored 0% against
@@ -554,6 +784,20 @@ def main():
     s.add_argument("--json", action="store_true")
     s.set_defaults(fn=cmd_bug)
 
+    s = sub.add_parser("resolve", help="RD's newest resolve note per bug "
+                       "(root cause, solution, impact, changeset)")
+    s.add_argument("bugcodes", nargs="+")
+    s.add_argument("--all", action="store_true", help="also list earlier notes")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(fn=cmd_resolve)
+
+    s = sub.add_parser("comments", help="comments on the eBug page (IF3 bugs only)")
+    s.add_argument("bugcodes", nargs="+")
+    s.add_argument("--deleted", action="store_true",
+                   help="also list comments deleted on the page (IsValid=false)")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(fn=cmd_comments)
+
     s = sub.add_parser("tr", help="TR detail and its eBugs")
     s.add_argument("trcode")
     s.add_argument("--open-only", action="store_true")
@@ -570,6 +814,8 @@ def main():
                         "of candidates carry it (min 2)")
     s.add_argument("--limit", type=int, default=2000,
                    help="max candidates per search term (warns when reached)")
+    s.add_argument("--no-comments", action="store_true",
+                   help="skip reading why cancelled / declined / closed candidates ended")
     s.add_argument("--no-open-list", action="store_true",
                    help="skip the list of every open candidate on the batch's version")
     s.set_defaults(fn=cmd_dedupe)

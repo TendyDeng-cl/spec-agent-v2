@@ -27,6 +27,7 @@
 {"at":"2026-11-18T18:14:41.294Z","fiveHourPct":16,"fiveHourResetsAt":"2026-11-18T19:00:00.728Z","weeklyPct":77,"weeklyResetsAt":"2026-11-24T06:00:00.728Z","proMultiplier":6.25,"note":"R2-g2 end / R2-h start"}
 {"at":"2026-11-18T20:28:22.394Z","fiveHourPct":5,"fiveHourResetsAt":"2026-11-19T00:00:00.052Z","weeklyPct":78,"weeklyResetsAt":"2026-11-24T06:00:00.052Z","proMultiplier":6.25,"note":"R2-h end / R2-x settings reruns start"}
 {"at":"2026-11-18T20:46:56.313Z","fiveHourPct":7,"fiveHourResetsAt":"2026-11-19T00:00:00.851Z","weeklyPct":78,"weeklyResetsAt":"2026-11-24T06:00:00.851Z","proMultiplier":6.25,"note":"R2-x end / R2 wrap-up start"}
+{"at":"2026-11-19T03:02:03.967Z","fiveHourPct":null,"fiveHourResetsAt":null,"weeklyPct":null,"weeklyResetsAt":null,"proMultiplier":1.25,"note":"seat set on the Settings page"}
 {"at":"2026-11-24T02:14:04.441Z","fiveHourPct":15,"fiveHourResetsAt":"2026-11-24T05:40:00.000Z","weeklyPct":13,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R3 first attempt prepared (discarded unrun, 2026-11-24)"}
 {"at":"2026-11-24T09:44:17.784Z","fiveHourPct":21,"fiveHourResetsAt":"2026-11-24T10:40:00.000Z","weeklyPct":20,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R3 (second plan) prepared, before setup"}
 {"at":"2026-11-24T09:51:17.728Z","fiveHourPct":23,"fiveHourResetsAt":"2026-11-24T10:40:00.000Z","weeklyPct":20,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R3-0 end / R3-a start"}
@@ -41,3 +42,18 @@
 {"at":"2026-11-24T16:43:53.880Z","fiveHourPct":2,"fiveHourResetsAt":"2026-11-24T20:39:59.000Z","weeklyPct":25,"weeklyResetsAt":"2026-11-28T14:59:59.000Z","proMultiplier":6.25,"note":"R3-g1 end / R3-g2 start"}
 {"at":"2026-11-24T19:14:58.929Z","fiveHourPct":3,"fiveHourResetsAt":"2026-11-24T20:40:00.000Z","weeklyPct":25,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R3-g2 end / R3-h start"}
 {"at":"2026-11-24T21:28:45.593Z","fiveHourPct":2,"fiveHourResetsAt":"2026-11-25T01:40:00.000Z","weeklyPct":26,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R3-h end / R3 wrap-up start"}
+{"at":"2026-11-26T07:51:06.064Z","fiveHourPct":12,"fiveHourResetsAt":"2026-11-26T11:10:00.003Z","weeklyPct":64,"weeklyResetsAt":"2026-11-28T15:00:00.003Z","proMultiplier":6.25,"note":"gaps run start"}
+{"at":"2026-11-26T08:10:18.698Z","fiveHourPct":15,"fiveHourResetsAt":"2026-11-26T11:10:00.000Z","weeklyPct":64,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4 start (before R4-0)"}
+{"at":"2026-11-26T08:16:59.263Z","fiveHourPct":19,"fiveHourResetsAt":"2026-11-26T11:10:00.000Z","weeklyPct":65,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-0 end / R4-a start"}
+{"at":"2026-11-26T09:27:22.893Z","fiveHourPct":44,"fiveHourResetsAt":"2026-11-26T11:09:59.000Z","weeklyPct":69,"weeklyResetsAt":"2026-11-28T14:59:59.000Z","proMultiplier":6.25,"note":"R4-a end / R4-i start"}
+{"at":"2026-11-26T09:42:50.877Z","fiveHourPct":48,"fiveHourResetsAt":"2026-11-26T11:09:59.000Z","weeklyPct":70,"weeklyResetsAt":"2026-11-28T14:59:59.000Z","proMultiplier":6.25,"note":"R4-i end / R4-b start"}
+{"at":"2026-11-26T10:16:42.310Z","fiveHourPct":56,"fiveHourResetsAt":"2026-11-26T11:09:59.000Z","weeklyPct":71,"weeklyResetsAt":"2026-11-28T14:59:59.000Z","proMultiplier":6.25,"note":"R4-b end / R4-c start"}
+{"at":"2026-11-26T10:58:45.794Z","fiveHourPct":64,"fiveHourResetsAt":"2026-11-26T11:10:00.000Z","weeklyPct":72,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-c end / R4-d start"}
+{"at":"2026-11-26T11:10:16.960Z","fiveHourPct":0,"fiveHourResetsAt":"2026-11-26T16:09:59.000Z","weeklyPct":73,"weeklyResetsAt":"2026-11-28T14:59:59.000Z","proMultiplier":6.25,"note":"R4-d end / R4-d2 start"}
+{"at":"2026-11-26T11:35:20.644Z","fiveHourPct":5,"fiveHourResetsAt":"2026-11-26T16:10:00.000Z","weeklyPct":73,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-d2 end / R4-e start"}
+{"at":"2026-11-26T13:14:31.930Z","fiveHourPct":20,"fiveHourResetsAt":"2026-11-26T16:10:00.000Z","weeklyPct":76,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-e end / R4-f start"}
+{"at":"2026-11-26T13:54:22.354Z","fiveHourPct":27,"fiveHourResetsAt":"2026-11-26T16:10:00.000Z","weeklyPct":77,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-f end / R4-g1 start"}
+{"at":"2026-11-26T15:22:40.610Z","fiveHourPct":41,"fiveHourResetsAt":"2026-11-26T16:10:00.000Z","weeklyPct":79,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-g1 end / R4-g2 start"}
+{"at":"2026-11-26T17:56:14.247Z","fiveHourPct":10,"fiveHourResetsAt":"2026-11-26T21:10:00.000Z","weeklyPct":82,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-g2 end / R4-h start"}
+{"at":"2026-11-26T19:03:24.670Z","fiveHourPct":20,"fiveHourResetsAt":"2026-11-26T21:10:00.000Z","weeklyPct":84,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-h end / R4-j start"}
+{"at":"2026-11-26T20:18:33.979Z","fiveHourPct":29,"fiveHourResetsAt":"2026-11-26T21:10:00.000Z","weeklyPct":85,"weeklyResetsAt":"2026-11-28T15:00:00.000Z","proMultiplier":6.25,"note":"R4-j end / R4 wrap-up start"}

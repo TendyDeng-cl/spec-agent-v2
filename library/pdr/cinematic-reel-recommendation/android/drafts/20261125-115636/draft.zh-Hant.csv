@@ -1,0 +1,1547 @@
+﻿編號,區塊,前置條件,操作步驟,預期結果,優先度,規格對應,備註,變更,變更原因
+TC-001,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Horror Movie template, follow this advice:」，其中「Horror Movie」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「People in Frame」、「Layered Depth」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Horror Movie 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-002,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：變暗的背景仍看得到 template 頁的頁首（‹、點數、?、歷史紀錄）
+步驟 2：面板顯示「For best results with the Micro Cinema template, follow this advice:」，其中「Micro Cinema」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Mid-Distance Framing」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P1,"R-001, R-002, R-003, R-006, R-007, R-008, R-012, R-011, R-015",對應 CMS › Recommendation 的 Micro_Cinema 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。Design 0820 add photo tips 畫的就是這個 template。,未變更,
+TC-003,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「One-Take Shot」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the One-Take Shot template, follow this advice:」，其中「One-Take Shot」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Mid-Distance Framing」、「Layered Depth」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 One_Take_Shot 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-004,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Time Lapse」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Time Lapse template, follow this advice:」，其中「Time Lapse」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Visible Sky」、「Cityscape or Landscape」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Portrait as Subject」、「Indoor Close-up」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Time_Lapse 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-005,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Handheld Camera」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Handheld Camera template, follow this advice:」，其中「Handheld Camera」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Layered Depth」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Handheld_Camera 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-006,View photo tips 標籤,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Fast Cut」卡片
+2. 點該卡片上的「View photo tips」","步驟 1：卡片左上角有帶燈泡圖示的「View photo tips」標籤
+步驟 2：拍照建議面板從下方升起，後方 template 頁變暗
+步驟 2：面板顯示「For best results with the Fast Cut template, follow this advice:」，其中「Fast Cut」為粗體
+步驟 2：「Recommendation」（藍色標示）列出「Sense of Motion」、「Rich Visual Details」，每項都是一張右下角有 ✓ 標記的圖片，下方附說明文字
+步驟 2：「Avoid」（粉紅色標示）列出「Static Composition」、「Visible Text or Logos」、「Extreme Close-up」，每項都是一張有 ⊗ 標記的圖片，下方附說明文字（第三項要往左滑才看得到）
+步驟 2：最下方是滿版的「Got it」按鈕",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012",對應 CMS › Recommendation 的 Fast_Cut 列。請依名稱找卡片：CMS Order 各區順序不同（Global、JP/TW/KOR/CHS、MyEdit/PDR/PHD）。,未變更,
+TC-007,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 畫面上是「Micro Cinema」卡片","1. 點「Micro Cinema」卡片上的「View photo tips」
+2. 點「Got it」
+3. 再點一次同一張卡片上的「View photo tips」","步驟 2：面板關閉，背景不再變暗
+步驟 2：template 頁仍停在「Micro Cinema」卡片，和步驟 1 之前一樣
+步驟 3：再次打開同一個 Micro Cinema 拍照建議面板",P1,"R-010, R-003",Design 只畫了「Got it」這個關閉方式（Q-3）。,未變更,
+TC-008,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從「View photo tips」標籤打開 Micro Cinema 的拍照建議面板","1. 把「Avoid」那一列往左滑
+2. 再往右滑回來","步驟 1 之前：Avoid 的第三項超出面板右緣
+步驟 1：「Extreme Close-up」完整出現，含 ⊗ 標記與說明文字
+步驟 1：「Recommendation」那一列不會跟著動
+步驟 2：「Flat Composition」回到最左邊",P2,R-009,Design 把 Avoid 第三項畫成被右緣切掉，但沒寫這一列能不能滑動（Q-5）。,未變更,
+TC-020,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從標籤打開 Micro Cinema 的拍照建議面板",按系統返回鍵,"面板關閉，template 頁停在「Micro Cinema」卡片
+App 不會離開 Cinematic Reel Creator",P2,R-016,每個面板都要測系統返回鍵（團隊規則 2026-10-28）。Design 只畫了「Got it」（Q-3），先假設返回鍵效果相同。,未變更,
+TC-009,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 點「Handheld Camera」卡片上的「View photo tips」
+2. 點「Got it」
+3. 點「Fast Cut」卡片上的「View photo tips」","步驟 1：「Rich Visual Details」顯示一般版的 Rich Visual Details 圖片
+步驟 3：「Rich Visual Details」換成另一張 Fast Cut 專用的圖片",P3,R-013,CMS 圖片清單中「Rich Visual Details (畫面細節豐富) for Fast Cut」是獨立的一張圖，請比對兩張截圖。,未變更,
+TC-022,拍照建議面板,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 English（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang en-US）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Horror Movie」卡片上的「View photo tips」
+2. 點「Got it」
+3. 點「Micro Cinema」卡片上的「View photo tips」
+4. 點「Got it」
+5. 點「Fast Cut」卡片上的「View photo tips」
+6. 點「Got it」
+7. 點「One-Take Shot」卡片上的「View photo tips」
+8. 點「Got it」
+9. 點「Time Lapse」卡片上的「View photo tips」
+10. 點「Got it」
+11. 點「Handheld Camera」卡片上的「View photo tips」
+12. 點「Got it」","步驟 1、3、5、7、9、11：每個項目的圖片都和 Cinestory CMS › Recommendation ›「Pic Link」裡同一項目旁的 EN 圖片相同（specs/2026-11-25/extracted/recommendation-pic-links.png）
+步驟 1、3、5、7、9、11：同一項目出現在多個 template 時，圖片都一樣；只有 Fast Cut 的「Rich Visual Details」用它自己的「for Fast Cut」圖片
+步驟 1、3、5、7、9、11：沒有空白、破圖、變形或預設佔位的圖片",P2,"R-034, R-013",TR261019-014 的「Thumbnail」連結 = Cinestory CMS gid 1744053327（Recommendation）。共 14 個項目（#54–67）：用肉眼和存下的試算表圖片比對。,新增,REQ-006：TR261019-014 列出縮圖，原本沒有任何一列拿圖片和試算表比對
+TC-010,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Horror Movie」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Horror Movie template, follow this advice:」
+步驟 3：「Recommendation」列出「People in Frame」、「Layered Depth」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-011,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Micro Cinema」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Micro Cinema template, follow this advice:」
+步驟 3：「Recommendation」列出「Mid-Distance Framing」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P1,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-012,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「One-Take Shot」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the One-Take Shot template, follow this advice:」
+步驟 3：「Recommendation」列出「Mid-Distance Framing」、「Layered Depth」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-013,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Time Lapse」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Time Lapse template, follow this advice:」
+步驟 3：「Recommendation」列出「Visible Sky」、「Cityscape or Landscape」
+步驟 3：「Avoid」列出「Portrait as Subject」、「Indoor Close-up」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-014,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Handheld Camera」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Handheld Camera template, follow this advice:」
+步驟 3：「Recommendation」列出「Layered Depth」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Flat Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-015,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁","1. 滑動 template 卡片到「Fast Cut」卡片
+2. 點「Import a Photo」
+3. 點 Add Media 頁首的「?」","步驟 2：進入 Add Media，頁首有「?」
+步驟 3：打開拍照建議面板，顯示「For best results with the Fast Cut template, follow this advice:」
+步驟 3：「Recommendation」列出「Sense of Motion」、「Rich Visual Details」
+步驟 3：「Avoid」列出「Static Composition」、「Visible Text or Logos」、「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only：Design 尚未畫出（Design 26.07_v2 的 Add Media 沒有「?」，ⓘ 圖層是隱藏的）。依據 Jira PDRA-661 的「media room ""?""」。見 Q-1。",未變更,
+TC-016,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從「Micro Cinema」卡片點「Import a Photo」進入 Add Media，尚未選照片","1. 點 Add Media 頁首的「?」
+2. 點「Got it」","步驟 2：面板關閉，回到 Add Media
+步驟 2：Add Media 仍在原分頁（Recents），沒有選到任何照片",P2,"R-004, R-010",PM-only：Design 尚未畫出（Q-1）。,未變更,
+TC-021,Media room「?」,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 已從「Micro Cinema」卡片進入 Add Media，並點「?」打開拍照建議面板",按系統返回鍵,"面板關閉，回到 Add Media
+沒有選到任何照片",P2,"R-016, R-004",每個面板都要測系統返回鍵（團隊規則 2026-10-28）。此入口為 PM-only（Q-1）。,未變更,
+TC-023,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 English（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang en-US）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Horror Movie」，說明為「Eerie lights and a scary atmosphere. One photo becomes a horror movie moment.」
+步驟 2：第 2 張卡片顯示「Micro Cinema」，說明為「Dreamy close-ups turn a single image into a poetic cinematic video.」
+步驟 2：第 3 張卡片顯示「Fast Cut」，說明為「Bold fast cuts and stylish pacing. Turn one photo into a modern, high-impact cinematic short.」
+步驟 2：第 4 張卡片顯示「One-Take Shot」，說明為「A seamless slow camera reveal. One photo becomes a smooth cinematic camera move.」
+步驟 2：第 5 張卡片顯示「Time Lapse」，說明為「Time-lapse motion captures the passage of time. Watch still moments come alive.」
+步驟 2：第 6 張卡片顯示「Handheld Camera」，說明為「Handheld camera motion with focus shifts. One photo becomes a heartfelt cinematic moment.」
+步驟 2：卡片依序為：「Horror Movie」、「Micro Cinema」、「Fast Cut」、「One-Take Shot」、「Time Lapse」、「Handheld Camera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P2,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 en 欄；› Template Description Localization 第 2–7 列的 en 欄。若 App 的語言清單沒有 English，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-024,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 繁體中文 (台灣)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang zh-Hant-TW）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「恐怖電影」，說明為「詭異燈光與陰森氛圍，一張照片化身恐怖電影場景。」
+步驟 2：第 2 張卡片顯示「微電影畫境」，說明為「夢幻特寫勾勒動人氛圍，讓一張照片化身詩意電影短片。」
+步驟 2：第 3 張卡片顯示「快速剪輯」，說明為「俐落快剪搭配時尚節奏，讓照片變身吸睛電影短片。」
+步驟 2：第 4 張卡片顯示「一鏡到底」，說明為「流暢的慢速鏡頭推進，讓照片化為電影感運鏡畫面。」
+步驟 2：第 5 張卡片顯示「手持相機」，說明為「手持鏡頭與景深變化，讓照片呈現真摯動人的電影時刻。」
+步驟 2：第 6 張卡片顯示「縮時影片」，說明為「縮時動態刻畫時間流轉，讓靜止畫面展現生命力。」
+步驟 2：卡片依序為：「恐怖電影」、「微電影畫境」、「快速剪輯」、「一鏡到底」、「手持相機」、「縮時影片」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P2,"R-029, R-030, R-031",Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 cht 欄；› Template Description Localization 第 2–7 列的 cht 欄。若 App 的語言清單沒有 繁體中文 (台灣)，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-017,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 繁體中文 (台灣)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang zh-Hant-TW）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「恐怖電影」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「微電影畫境」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「快速剪輯」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「一鏡到底」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「手持相機」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「縮時影片」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「恐怖電影」
+步驟 1：第一個標題下：「畫面含有人物」、「具前中後景層次」
+步驟 1：第二個標題下：「平面單調構圖」、「有明顯文字或 Logo」、「過度近景」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「微電影畫境」
+步驟 3：第一個標題下：「中距離取景」、「畫面視覺豐富」
+步驟 3：第二個標題下：「平面單調構圖」、「有明顯文字或 Logo」、「過度近景」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「快速剪輯」
+步驟 5：第一個標題下：「畫面具動態感」、「畫面視覺豐富」
+步驟 5：第二個標題下：「靜態單調構圖」、「有明顯文字或 Logo」、「過度近景」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「一鏡到底」
+步驟 7：第一個標題下：「中距離取景」、「具前中後景層次」
+步驟 7：第二個標題下：「平面單調構圖」、「有明顯文字或 Logo」、「過度近景」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「手持相機」
+步驟 9：第一個標題下：「具前中後景層次」、「畫面視覺豐富」
+步驟 9：第二個標題下：「平面單調構圖」、「有明顯文字或 Logo」、「過度近景」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「縮時影片」
+步驟 11：第一個標題下：「有可見天空」、「城市或風景」
+步驟 11：第二個標題下：「人像為主體」、「室內近景」、「過度近景」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 JP 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P2,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 CHT 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 繁體中文 (台灣) 的卡片列之後跑，語言不變。,修改,REQ-006：I2V Recommendation › Localization 分頁給了每種語言的說明文字（Q-2 部分已解答）；本列改成讀完六個 template
+TC-025,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 简体中文（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang zh-Hans-CN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「恐怖电影」，說明為「诡异灯光与恐怖氛围，一张照片化为恐怖电影场景。」
+步驟 2：第 2 張卡片顯示「微影院」，說明為「梦幻特写勾勒动人氛围，让一张照片化身诗意电影短片。」
+步驟 2：第 3 張卡片顯示「快速剪辑」，說明為「俐落快剪搭配时尚节奏，让照片变身吸睛电影短片。」
+步驟 2：第 4 張卡片顯示「一镜到底」，說明為「流畅的慢速镜头推进，让照片化为电影感运镜画面」
+步驟 2：第 5 張卡片顯示「手持相机」，說明為「手持镜头与景深变化，让照片呈现真挚动人的电影时刻。」
+步驟 2：第 6 張卡片顯示「延时摄影」，說明為「缩时动态刻画时间流转，让静止画面展现生命力。」
+步驟 2：卡片依序為：「恐怖电影」、「微影院」、「快速剪辑」、「一镜到底」、「手持相机」、「延时摄影」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 chs 欄；› Template Description Localization 第 2–7 列的 chs 欄。若 App 的語言清單沒有 简体中文，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-026,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 简体中文（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang zh-Hans-CN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「恐怖电影」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「微影院」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「快速剪辑」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「一镜到底」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「手持相机」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「延时摄影」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「恐怖电影」
+步驟 1：第一個標題下：「画面含有人物」、「具前中后景层次」
+步驟 1：第二個標題下：「平面单调构图」、「有明显文字或 Logo」、「过度近景」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「微影院」
+步驟 3：第一個標題下：「中距离取景」、「画面视觉丰富」
+步驟 3：第二個標題下：「平面单调构图」、「有明显文字或 Logo」、「过度近景」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「快速剪辑」
+步驟 5：第一個標題下：「画面具动态感」、「画面视觉丰富」
+步驟 5：第二個標題下：「静态单调构图」、「有明显文字或 Logo」、「过度近景」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「一镜到底」
+步驟 7：第一個標題下：「中距离取景」、「具前中后景层次」
+步驟 7：第二個標題下：「平面单调构图」、「有明显文字或 Logo」、「过度近景」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「手持相机」
+步驟 9：第一個標題下：「具前中后景层次」、「画面视觉丰富」
+步驟 9：第二個標題下：「平面单调构图」、「有明显文字或 Logo」、「过度近景」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「延时摄影」
+步驟 11：第一個標題下：「有可见天空」、「城市或风景」
+步驟 11：第二個標題下：「人像为主体」、「室内近景」、「过度近景」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 JP 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 CHS 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 简体中文 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-027,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 日本語（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ja-JP）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「ホラー映画」，說明為「不気味な光と恐ろしい雰囲気。1枚の写真がホラー映画のワンシーンに。」
+步驟 2：第 2 張卡片顯示「マイクロシネマ」，說明為「夢のようなクローズアップで画像を幻想的な映像に。」
+步驟 2：第 3 張卡片顯示「ファストカット」，說明為「大胆なカットと軽快なテンポで画像を印象的な映画風ショート動画に。」
+步驟 2：第 4 張卡片顯示「ワンテイク」，說明為「なめらかなカメラワークで画像を映画のような映像に。」
+步驟 2：第 5 張卡片顯示「手持ちカメラ」，說明為「手持ちカメラ風の動きで画像を心に響く映画のワンシーンに。」
+步驟 2：第 6 張卡片顯示「タイムラプス」，說明為「タイムラプスで時の流れを表現。静止画が動き出します。」
+步驟 2：卡片依序為：「ホラー映画」、「マイクロシネマ」、「ファストカット」、「ワンテイク」、「手持ちカメラ」、「タイムラプス」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P2,"R-029, R-030, R-031",Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 ja 欄；› Template Description Localization 第 2–7 列的 ja 欄。若 App 的語言清單沒有 日本語，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-018,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 日本語（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ja-JP）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「ホラー映画」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「マイクロシネマ」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「ファストカット」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「ワンテイク」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「手持ちカメラ」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「タイムラプス」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「ホラー映画」
+步驟 1：第一個標題下：「フレーム内に人物」、「奥行きのある構図」
+步驟 1：第二個標題下：「平面的な構図」、「文字またはロゴが見える」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「マイクロシネマ」
+步驟 3：第一個標題下：「中距離の構図」、「細部が多い」
+步驟 3：第二個標題下：「平面的な構図」、「文字またはロゴが見える」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「ファストカット」
+步驟 5：第一個標題下：「躍動感」、「細部が多い」
+步驟 5：第二個標題下：「静的な構図」、「文字またはロゴが見える」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「ワンテイク」
+步驟 7：第一個標題下：「中距離の構図」、「奥行きのある構図」
+步驟 7：第二個標題下：「平面的な構図」、「文字またはロゴが見える」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「手持ちカメラ」
+步驟 9：第一個標題下：「奥行きのある構図」、「細部が多い」
+步驟 9：第二個標題下：「平面的な構図」、「文字またはロゴが見える」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「タイムラプス」
+步驟 11：第一個標題下：「空が見える」、「街並みまたは風景」
+步驟 11：第二個標題下：「人物がメイン」、「室内でのクローズアップ」、「超クローズアップ」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 JP 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P2,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 JPN 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 日本語 的卡片列之後跑，語言不變。,修改,REQ-006：I2V Recommendation › Localization 分頁給了每種語言的說明文字（Q-2 部分已解答）；本列改成讀完六個 template
+TC-028,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Español (España)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang es-ES）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Película de terror」，說明為「Luces tétricas y ambiente inquietante. Una foto se vuelve terror.」
+步驟 2：第 2 張卡片顯示「Microcine」，說明為「Primeros planos oníricos: una imagen se vuelve un video cinematográfico.」
+步驟 2：第 3 張卡片顯示「Recorte rápido」，說明為「Cortes rápidos y ritmo elegante. Transforma tu foto en un corto impactante.」
+步驟 2：第 4 張卡片顯示「Toma única」，說明為「Revelado lento y fluido: una foto pasa a movimiento cinematográfico.」
+步驟 2：第 5 張卡片顯示「Time lapse」，說明為「El time-lapse muestra el paso del tiempo. Observa instantes cobrar vida.」
+步驟 2：第 6 張卡片顯示「Cámara en mano」，說明為「Cámara en mano con cambios de foco; una foto se vuelve cine emotivo」
+步驟 2：卡片依序為：「Película de terror」、「Microcine」、「Recorte rápido」、「Toma única」、「Time lapse」、「Cámara en mano」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 es 欄；› Template Description Localization 第 2–7 列的 es 欄。若 App 的語言清單沒有 Español (España)，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-029,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Español (España)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang es-ES）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Película de terror」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Microcine」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Recorte rápido」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Toma única」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Cámara en mano」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Película de terror」
+步驟 1：第一個標題下：「Personas en el encuadre」、「Profundidad en capas」
+步驟 1：第二個標題下：「Composición plana」、「Texto o logotipos visibles」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Microcine」
+步驟 3：第一個標題下：「Encuadre a media distancia」、「Detalles visuales ricos」
+步驟 3：第二個標題下：「Composición plana」、「Texto o logotipos visibles」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Recorte rápido」
+步驟 5：第一個標題下：「Sensación de movimiento」、「Detalles visuales ricos」
+步驟 5：第二個標題下：「Composición estática」、「Texto o logotipos visibles」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Toma única」
+步驟 7：第一個標題下：「Encuadre a media distancia」、「Profundidad en capas」
+步驟 7：第二個標題下：「Composición plana」、「Texto o logotipos visibles」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time lapse」
+步驟 9：第一個標題下：「Cielo visible」、「Paisaje urbano o paisaje natural」
+步驟 9：第二個標題下：「Retrato como sujeto」、「Primer plano interior」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Cámara en mano」
+步驟 11：第一個標題下：「Profundidad en capas」、「Detalles visuales ricos」
+步驟 11：第二個標題下：「Composición plana」、「Texto o logotipos visibles」、「Primer plano extremo」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 ESP 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Español (España) 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-030,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 한국어（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ko-KR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「공포 영화」，說明為「섬뜩한 불빛과 오싹한 분위기. 사진 한 장이 공포 영화의 한 장면으로.」
+步驟 2：第 2 張卡片顯示「마이크로 시네마」，說明為「몽환적 클로즈업으로 이미지를 시적인 영화로」
+步驟 2：第 3 張卡片顯示「빠름 컷」，說明為「대담한 컷, 세련된 템포—사진을 강렬한 시네마틱 쇼츠로」
+步驟 2：第 4 張卡片顯示「원테이크 촬영」，說明為「사진이 부드럽게 펼쳐지는 느린 시네마틱 카메라 연출」
+步驟 2：第 5 張卡片顯示「휴대용 카메라」，說明為「핸드헬드 흔들림과 초점 전환으로 사진이 감성적인 시네마틱 순간이 됩니다.」
+步驟 2：第 6 張卡片顯示「타임랩스」，說明為「타임랩스가 시간의 흐름을 담습니다. 정지된 순간이 살아납니다.」
+步驟 2：卡片依序為：「공포 영화」、「마이크로 시네마」、「빠름 컷」、「원테이크 촬영」、「휴대용 카메라」、「타임랩스」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PDRM JP/TW/KOR/CHS」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 ko 欄；› Template Description Localization 第 2–7 列的 ko 欄。若 App 的語言清單沒有 한국어，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-031,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 한국어（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ko-KR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「공포 영화」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「마이크로 시네마」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「빠름 컷」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「원테이크 촬영」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「휴대용 카메라」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「타임랩스」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「공포 영화」
+步驟 1：第一個標題下：「프레임 안에 사람」、「레이어별 깊이」
+步驟 1：第二個標題下：「평면 구성」、「보이는 텍스트 또는 로고」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「마이크로 시네마」
+步驟 3：第一個標題下：「중간 거리 구도」、「풍부한 시각적 세부사항」
+步驟 3：第二個標題下：「평면 구성」、「보이는 텍스트 또는 로고」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「빠름 컷」
+步驟 5：第一個標題下：「모션 감지」、「풍부한 시각적 세부사항」
+步驟 5：第二個標題下：「정적 구도」、「보이는 텍스트 또는 로고」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「원테이크 촬영」
+步驟 7：第一個標題下：「중간 거리 구도」、「레이어별 깊이」
+步驟 7：第二個標題下：「평면 구성」、「보이는 텍스트 또는 로고」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「휴대용 카메라」
+步驟 9：第一個標題下：「레이어별 깊이」、「풍부한 시각적 세부사항」
+步驟 9：第二個標題下：「평면 구성」、「보이는 텍스트 또는 로고」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「타임랩스」
+步驟 11：第一個標題下：「선명한 하늘」、「도시 또는 풍경」
+步驟 11：第二個標題下：「인물이 주제인 경우」、「실내 클로즈업」、「초근접 촬영」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 JP 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 KOR 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 한국어 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-032,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Deutsch（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang de-DE）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Horrorfilm」，說明為「Unheimliche Lichter, gruselige Stimmung. Foto wird Horror.」
+步驟 2：第 2 張卡片顯示「Mikro-Kino」，說明為「Träumerische Nahaufnahmen verwandeln ein Bild in ein poetisches Filmvideo」
+步驟 2：第 3 張卡片顯示「Fast Cut」，說明為「Markante, schnelle Schnitt und stylisches Pacing. Ein Foto wird zum modernen Kurzfilm.」
+步驟 2：第 4 張卡片顯示「One-Take-Aufnahme」，說明為「Nahtloser langsamer Schwenk: Ein Foto wird zur kinoreifen Kamerafahrt.」
+步驟 2：第 5 張卡片顯示「Zeitraffer」，說明為「Zeitraffer zeigt den Zeitverlauf. Statische Momente werden lebendig.」
+步驟 2：第 6 張卡片顯示「Handheld-Kamera」，說明為「Handkamera mit Fokuswechseln verwandelt ein Foto in einen filmischen Moment」
+步驟 2：卡片依序為：「Horrorfilm」、「Mikro-Kino」、「Fast Cut」、「One-Take-Aufnahme」、「Zeitraffer」、「Handheld-Kamera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 de 欄；› Template Description Localization 第 2–7 列的 de 欄。若 App 的語言清單沒有 Deutsch，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-033,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Deutsch（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang de-DE）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Horrorfilm」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Mikro-Kino」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Fast Cut」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「One-Take-Aufnahme」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Zeitraffer」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Handheld-Kamera」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Horrorfilm」
+步驟 1：第一個標題下：「Personen im Bild」、「Räumliche Tiefe」
+步驟 1：第二個標題下：「Flache Komposition」、「Sichtbarer Text oder sichtbare Logos」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Mikro-Kino」
+步驟 3：第一個標題下：「Motiv mit mittlerem Abstand」、「Viele visuelle Details」
+步驟 3：第二個標題下：「Flache Komposition」、「Sichtbarer Text oder sichtbare Logos」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Fast Cut」
+步驟 5：第一個標題下：「Bewegungsintensität」、「Viele visuelle Details」
+步驟 5：第二個標題下：「Statische Komposition」、「Sichtbarer Text oder sichtbare Logos」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「One-Take-Aufnahme」
+步驟 7：第一個標題下：「Motiv mit mittlerem Abstand」、「Räumliche Tiefe」
+步驟 7：第二個標題下：「Flache Komposition」、「Sichtbarer Text oder sichtbare Logos」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Zeitraffer」
+步驟 9：第一個標題下：「Sichtbarer Himmel」、「Stadtbild oder Landschaft」
+步驟 9：第二個標題下：「Porträt als Motiv」、「Nahaufnahme (innen)」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Handheld-Kamera」
+步驟 11：第一個標題下：「Räumliche Tiefe」、「Viele visuelle Details」
+步驟 11：第二個標題下：「Flache Komposition」、「Sichtbarer Text oder sichtbare Logos」、「Extreme Nahaufnahme」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 DEU 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Deutsch 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-034,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Français（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fr-FR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Film d'horreur」，說明為「Lueurs inquiétantes, ambiance effrayante. Une photo vire à l'horreur.」
+步驟 2：第 2 張卡片顯示「Micro Cinéma」，說明為「Des gros plans oniriques transforment une photo en vidéo poétique.」
+步驟 2：第 3 張卡片顯示「Découpe Rapide」，說明為「Montage rapide, rythme dynamique. Une photo devient un clip percutant.」
+步驟 2：第 4 張卡片顯示「Prise Unique」，說明為「Un lent mouvement de caméra, fluide. Une photo devient une scène de cinéma.」
+步驟 2：第 5 張卡片顯示「Time-lapse」，說明為「Un time-lapse capture le temps qui passe. Des instants figés prennent vie.」
+步驟 2：第 6 張卡片顯示「Caméra portable」，說明為「Une caméra vivante, à l'épaule, capture un instant chargé d'émotion.」
+步驟 2：卡片依序為：「Film d'horreur」、「Micro Cinéma」、「Découpe Rapide」、「Prise Unique」、「Time-lapse」、「Caméra portable」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 fr 欄；› Template Description Localization 第 2–7 列的 fr 欄。若 App 的語言清單沒有 Français，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-035,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Français（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fr-FR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Film d'horreur」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Micro Cinéma」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Découpe Rapide」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Prise Unique」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time-lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Caméra portable」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Film d'horreur」
+步驟 1：第一個標題下：「Personnes dans le cadre」、「Profondeur Multi-Plans」
+步驟 1：第二個標題下：「Composition plate」、「Texte ou logos visibles」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Micro Cinéma」
+步驟 3：第一個標題下：「Cadrage à distance moyenne」、「Détails visuels riches」
+步驟 3：第二個標題下：「Composition plate」、「Texte ou logos visibles」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Découpe Rapide」
+步驟 5：第一個標題下：「Sens du mouvement」、「Détails visuels riches」
+步驟 5：第二個標題下：「Composition statique」、「Texte ou logos visibles」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Prise Unique」
+步驟 7：第一個標題下：「Cadrage à distance moyenne」、「Profondeur Multi-Plans」
+步驟 7：第二個標題下：「Composition plate」、「Texte ou logos visibles」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time-lapse」
+步驟 9：第一個標題下：「Ciel visible」、「Paysage urbain ou Paysage」
+步驟 9：第二個標題下：「Portrait comme sujet」、「Gros Plan Intérieur」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Caméra portable」
+步驟 11：第一個標題下：「Profondeur Multi-Plans」、「Détails visuels riches」
+步驟 11：第二個標題下：「Composition plate」、「Texte ou logos visibles」、「Gros plan extrême」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 FRA 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Français 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-036,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Italiano（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang it-IT）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Film Horror」，說明為「Luci inquietanti e atmosfera cupa. Una foto diventa horror.」
+步驟 2：第 2 張卡片顯示「Microcinema」，說明為「Primi piani da sogno trasformano una singola foto in un video poetico.」
+步驟 2：第 3 張卡片顯示「Taglio Veloce」，說明為「Tagli decisi e rapidi, ritmo stiloso. Una foto diventa un corto d'impatto.」
+步驟 2：第 4 張卡片顯示「Singola Ripresa」，說明為「Inquadratura a scoprire: da una foto a un movimento di videocamera fluido.」
+步驟 2：第 5 張卡片顯示「Temporizzata」，說明為「Il time-lapse cattura il passare del tempo: gli scatti prendono vita.」
+步驟 2：第 6 張卡片顯示「Videocamera Manuale」，說明為「Videocamera manuale con cambi di messa a fuoco: uno scatto diventa cinema.」
+步驟 2：卡片依序為：「Film Horror」、「Microcinema」、「Taglio Veloce」、「Singola Ripresa」、「Temporizzata」、「Videocamera Manuale」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 it 欄；› Template Description Localization 第 2–7 列的 it 欄。若 App 的語言清單沒有 Italiano，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-037,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Italiano（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang it-IT）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Film Horror」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Microcinema」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Taglio Veloce」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Singola Ripresa」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Temporizzata」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Videocamera Manuale」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Film Horror」
+步驟 1：第一個標題下：「Persone nell'inquadratura」、「Profondità Stratificata」
+步驟 1：第二個標題下：「Composizione Piatta」、「Testo o Loghi Visibili」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Microcinema」
+步驟 3：第一個標題下：「Inquadratura a Distanza Media」、「Ricchi Dettagli」
+步驟 3：第二個標題下：「Composizione Piatta」、「Testo o Loghi Visibili」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Taglio Veloce」
+步驟 5：第一個標題下：「Sensazione di Movimento」、「Ricchi Dettagli」
+步驟 5：第二個標題下：「Composizione Statica」、「Testo o Loghi Visibili」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Singola Ripresa」
+步驟 7：第一個標題下：「Inquadratura a Distanza Media」、「Profondità Stratificata」
+步驟 7：第二個標題下：「Composizione Piatta」、「Testo o Loghi Visibili」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Temporizzata」
+步驟 9：第一個標題下：「Cielo Visibile」、「Paesaggio Urbano o Non」
+步驟 9：第二個標題下：「Ritratto come Soggetto」、「Primo Piano in Interni」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Videocamera Manuale」
+步驟 11：第一個標題下：「Profondità Stratificata」、「Ricchi Dettagli」
+步驟 11：第二個標題下：「Composizione Piatta」、「Testo o Loghi Visibili」、「Primissimo Piano」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 ITA 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Italiano 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-038,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Русский（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ru-RU）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Фильм ужасов」，說明為「Жуткие огни и пугающая атмосфера. Фото превращается в сцену фильма ужасов.」
+步驟 2：第 2 張卡片顯示「Микро-кино」，說明為「Мечтательные крупные планы создают кинематографичный сюжет. Поэтическое видео — из одного кадра.」
+步驟 2：第 3 張卡片顯示「Быстрая Нарезка」，說明為「Смелые быстрые нарезки и стильный ритм. Превратите фото в современное кинематографичное мини-видео.」
+步驟 2：第 4 張卡片顯示「Снимок за один дубль」，說明為「Бесшовное замедленное появление камеры — одна фотография превращается в плавное кинодвижение.」
+步驟 2：第 5 張卡片顯示「Таймлапс」，說明為「Таймлапс запечатлевает ход времени. Смотрите, как оживают застывшие моменты.」
+步驟 2：第 6 張卡片顯示「Ручная камера」，說明為「Ручная камера со сменой фокуса. Одна фотография — трогательный кинематографичный кадр.」
+步驟 2：卡片依序為：「Фильм ужасов」、「Микро-кино」、「Быстрая Нарезка」、「Снимок за один дубль」、「Таймлапс」、「Ручная камера」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 ru 欄；› Template Description Localization 第 2–7 列的 ru 欄。若 App 的語言清單沒有 Русский，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-039,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Русский（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ru-RU）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Фильм ужасов」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Микро-кино」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Быстрая Нарезка」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Снимок за один дубль」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Таймлапс」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Ручная камера」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Фильм ужасов」
+步驟 1：第一個標題下：「Люди в кадре」、「Глубина по слоям」
+步驟 1：第二個標題下：「Плоская композиция」、「Видимый текст или логотипы」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Микро-кино」
+步驟 3：第一個標題下：「Кадр среднего плана」、「Богатая визуальная детализация」
+步驟 3：第二個標題下：「Плоская композиция」、「Видимый текст или логотипы」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Быстрая Нарезка」
+步驟 5：第一個標題下：「Наличие движения」、「Богатая визуальная детализация」
+步驟 5：第二個標題下：「Статическая композиция」、「Видимый текст или логотипы」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Снимок за один дубль」
+步驟 7：第一個標題下：「Кадр среднего плана」、「Глубина по слоям」
+步驟 7：第二個標題下：「Плоская композиция」、「Видимый текст или логотипы」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Таймлапс」
+步驟 9：第一個標題下：「Видимое небо」、「Городской пейзаж или Ландшафт」
+步驟 9：第二個標題下：「Портрет как объект」、「Крупный план в помещении」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Ручная камера」
+步驟 11：第一個標題下：「Глубина по слоям」、「Богатая визуальная детализация」
+步驟 11：第二個標題下：「Плоская композиция」、「Видимый текст или логотипы」、「Сверхкрупный план」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 RUS 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Русский 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-040,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Português (Brasil)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang pt-BR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Filme de Terror」，說明為「Luzes sinistras e atmosfera assustadora. Uma foto vira uma cena de filme de terror.」
+步驟 2：第 2 張卡片顯示「Microcinema」，說明為「Close-ups sonhadores constroem uma narrativa cinematográfica. Um vídeo poético surge de uma imagem.」
+步驟 2：第 3 張卡片顯示「Recorte Rápido」，說明為「Cortes rápidos e ousados. Ritmo elegante. Transforme uma foto em um curta cinematográfico impactante」
+步驟 2：第 4 張卡片顯示「Foto Em Uma Única Tomada」，說明為「Revelação lenta e contínua da câmera. Uma foto vira um movimento cinematográfico e suave.」
+步驟 2：第 5 張卡片顯示「Time-lapse」，說明為「Time-lapse captura a passagem do tempo. Veja momentos estáticos ganharem vida.」
+步驟 2：第 6 張卡片顯示「Câmera Portátil」，說明為「Movimento de câmera na mão com mudanças de foco. Uma foto vira um momento cinematográfico comovente.」
+步驟 2：卡片依序為：「Filme de Terror」、「Microcinema」、「Recorte Rápido」、「Foto Em Uma Única Tomada」、「Time-lapse」、「Câmera Portátil」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 pt 欄；› Template Description Localization 第 2–7 列的 pt 欄。若 App 的語言清單沒有 Português (Brasil)，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-041,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Português (Brasil)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang pt-BR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Filme de Terror」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Microcinema」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Recorte Rápido」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Foto Em Uma Única Tomada」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time-lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Câmera Portátil」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Filme de Terror」
+步驟 1：第一個標題下：「Pessoas no quadro」、「Profundidade em Camadas」
+步驟 1：第二個標題下：「Composição Plana」、「Texto Visível ou Logotipos」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Microcinema」
+步驟 3：第一個標題下：「Enquadramento de Distância Média」、「Detalhes Visuais Ricos」
+步驟 3：第二個標題下：「Composição Plana」、「Texto Visível ou Logotipos」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Recorte Rápido」
+步驟 5：第一個標題下：「Presença de Movimento」、「Detalhes Visuais Ricos」
+步驟 5：第二個標題下：「Composição Estática」、「Texto Visível ou Logotipos」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Foto Em Uma Única Tomada」
+步驟 7：第一個標題下：「Enquadramento de Distância Média」、「Profundidade em Camadas」
+步驟 7：第二個標題下：「Composição Plana」、「Texto Visível ou Logotipos」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time-lapse」
+步驟 9：第一個標題下：「Céu Visível」、「Paisagem Urbana ou Paisagem」
+步驟 9：第二個標題下：「Retrato como Sujeito」、「Plano Fechado Interno」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Câmera Portátil」
+步驟 11：第一個標題下：「Profundidade em Camadas」、「Detalhes Visuais Ricos」
+步驟 11：第二個標題下：「Composição Plana」、「Texto Visível ou Logotipos」、「Plano Detalhe Extremo」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 PTB 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Português (Brasil) 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-042,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Nederlands（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang nl-NL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Horrorfilm」，說明為「Spookachtige lichten en een enge sfeer. Eén foto wordt een horrorfilmmoment.」
+步驟 2：第 2 張卡片顯示「Microcinema」，說明為「Dromerige close-ups vertellen een filmisch verhaal. Een poëtische video ontvouwt zich uit één foto.」
+步驟 2：第 3 張卡片顯示「Snel Knip」，說明為「Gedurfde snelle overgangen en stijlvol tempo. Zet één foto om in een moderne krachtige kortfilm.」
+步驟 2：第 4 張卡片顯示「Opname In Eén Keer」，說明為「Een naadloze, langzame camera-onthulling: een foto wordt een vloeiende filmische beweging.」
+步驟 2：第 5 張卡片顯示「Tijdverloop」，說明為「Time-lapse-opnamen vangen het verstrijken van tijd. Zie stilstaande momenten tot leven komen.」
+步驟 2：第 6 張卡片顯示「Camera uit de hand」，說明為「Handgehouden camerabeweging met focuswisselingen. Eén foto wordt een ontroerend filmisch moment.」
+步驟 2：卡片依序為：「Horrorfilm」、「Microcinema」、「Snel Knip」、「Opname In Eén Keer」、「Tijdverloop」、「Camera uit de hand」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 nl 欄；› Template Description Localization 第 2–7 列的 nl 欄。若 App 的語言清單沒有 Nederlands，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-043,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Nederlands（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang nl-NL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Horrorfilm」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Microcinema」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Snel Knip」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Opname In Eén Keer」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Tijdverloop」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Camera uit de hand」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Horrorfilm」
+步驟 1：第一個標題下：「Mensen in beeld」、「Gelaagde diepte」
+步驟 1：第二個標題下：「Vlakke compositie」、「Zichtbare tekst of logo's」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Microcinema」
+步驟 3：第一個標題下：「Kadering op gemiddelde afstand」、「Rijke visuele details」
+步驟 3：第二個標題下：「Vlakke compositie」、「Zichtbare tekst of logo's」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Snel Knip」
+步驟 5：第一個標題下：「Bewegingsgevoel」、「Rijke visuele details」
+步驟 5：第二個標題下：「Statische compositie」、「Zichtbare tekst of logo's」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Opname In Eén Keer」
+步驟 7：第一個標題下：「Kadering op gemiddelde afstand」、「Gelaagde diepte」
+步驟 7：第二個標題下：「Vlakke compositie」、「Zichtbare tekst of logo's」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Tijdverloop」
+步驟 9：第一個標題下：「Zichtbare hemel」、「Stadsgezicht of Landschap」
+步驟 9：第二個標題下：「Portret Als Onderwerp」、「Binnenshuis close-up」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Camera uit de hand」
+步驟 11：第一個標題下：「Gelaagde diepte」、「Rijke visuele details」
+步驟 11：第二個標題下：「Vlakke compositie」、「Zichtbare tekst of logo's」、「Extreem dicht bij de camera」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 NLD 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Nederlands 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-044,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Bahasa Indonesia（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang id-ID）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Film Horor」，說明為「Cahaya menyeramkan dan suasana mencekam. Satu foto menjadi adegan film horor.」
+步驟 2：第 2 張卡片顯示「Sinema Mikro」，說明為「Close-up bernuansa khayalan membangun cerita sinematik. Video puitis mengalun dari satu gambar.」
+步驟 2：第 3 張卡片顯示「Potongan Cepat」，說明為「Potongan cepat berani dan ritme stylish. Ubah satu foto jadi short sinematik modern yang berdampak.」
+步驟 2：第 4 張卡片顯示「Jepretan Sekali Ambil」，說明為「Transisi kamera lambat yang mulus — satu foto jadi gerakan kamera sinematik.」
+步驟 2：第 5 張卡片顯示「Time-lapse」，說明為「Time-lapse merekam berjalannya waktu. Saksikan momen diam menjadi hidup.」
+步驟 2：第 6 張卡片顯示「Kamera Genggam」，說明為「Gerakan kamera genggam dengan pergeseran fokus. Satu foto menjadi momen sinematik penuh perasaan.」
+步驟 2：卡片依序為：「Film Horor」、「Sinema Mikro」、「Potongan Cepat」、「Jepretan Sekali Ambil」、「Time-lapse」、「Kamera Genggam」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 id 欄；› Template Description Localization 第 2–7 列的 id 欄。若 App 的語言清單沒有 Bahasa Indonesia，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-045,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Bahasa Indonesia（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang id-ID）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Film Horor」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Sinema Mikro」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Potongan Cepat」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Jepretan Sekali Ambil」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time-lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Kamera Genggam」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Film Horor」
+步驟 1：第一個標題下：「Orang di dalam bingkai」、「Kedalaman Berlapis」
+步驟 1：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Terlihat」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Sinema Mikro」
+步驟 3：第一個標題下：「Pembingkaian Jarak Sedang」、「Rincian Visual Kaya」
+步驟 3：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Terlihat」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Potongan Cepat」
+步驟 5：第一個標題下：「Tingkat Gerakan」、「Rincian Visual Kaya」
+步驟 5：第二個標題下：「Komposisi Statis」、「Teks atau Logo yang Terlihat」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Jepretan Sekali Ambil」
+步驟 7：第一個標題下：「Pembingkaian Jarak Sedang」、「Kedalaman Berlapis」
+步驟 7：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Terlihat」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time-lapse」
+步驟 9：第一個標題下：「Langit Terlihat」、「Pemandangan Kota atau Pemandangan」
+步驟 9：第二個標題下：「Potret Sebagai Subjek」、「Close-up Dalam Ruangan」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Kamera Genggam」
+步驟 11：第一個標題下：「Kedalaman Berlapis」、「Rincian Visual Kaya」
+步驟 11：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Terlihat」、「Close-up Ekstrem」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 IDN 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Bahasa Indonesia 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-046,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 ไทย（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang th-TH）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「หนังสยองขวัญ」，說明為「แสงชวนขนลุกและบรรยากาศน่ากลัว เปลี่ยนภาพเดียวให้เป็นฉากหนังสยองขวัญ」
+步驟 2：第 2 張卡片顯示「ไมโครซีนีมา」，說明為「ชวนฝันในช็อตใกล้ ๆ สร้างเรื่องราวภาพยนตร์ วิดีโอเชิงกวีคลี่ออกจากภาพเดียว」
+步驟 2：第 3 張卡片顯示「ฟาสต์คัท」，說明為「ตัดเร็วโดดเด่น จังหวะมีสไตล์. เปลี่ยนภาพเดียวให้เป็นหนังสั้นสไตล์ภาพยนตร์ทันสมัยและทรงพลัง」
+步驟 2：第 4 張卡片顯示「การถ่ายครั้งเดียว」，說明為「เผยกล้องสโลว์แบบไร้รอยต่อ — รูปเดียวกลายเป็นการเคลื่อนกล้องสไตล์ภาพยนตร์ที่ราบรื่น」
+步驟 2：第 5 張卡片顯示「ไทม์แลปส์」，說明為「การถ่ายแบบเร่งเวลาเก็บการผ่านของเวลา ให้ช่วงเวลานิ่งๆ มีชีวิตขึ้น」
+步驟 2：第 6 張卡片顯示「กล้องแบบถือ」，說明為「กล้องถือเคลื่อนไหวพร้อมการเปลี่ยนโฟกัส — ภาพเดียวกลายเป็นช็อตภาพยนตร์ที่กินใจ」
+步驟 2：卡片依序為：「หนังสยองขวัญ」、「ไมโครซีนีมา」、「ฟาสต์คัท」、「การถ่ายครั้งเดียว」、「ไทม์แลปส์」、「กล้องแบบถือ」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 th 欄；› Template Description Localization 第 2–7 列的 th 欄。若 App 的語言清單沒有 ไทย，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-047,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 ไทย（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang th-TH）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「หนังสยองขวัญ」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「ไมโครซีนีมา」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「ฟาสต์คัท」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「การถ่ายครั้งเดียว」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「ไทม์แลปส์」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「กล้องแบบถือ」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「หนังสยองขวัญ」
+步驟 1：第一個標題下：「มีคนอยู่ในเฟรม」、「ความลึกเป็นชั้น」
+步驟 1：第二個標題下：「องค์ประกอบแบบแบน」、「ข้อความหรือโลโก้ที่มองเห็นได้」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「ไมโครซีนีมา」
+步驟 3：第一個標題下：「การจัดเฟรมระยะปานกลาง」、「ภาพที่มีรายละเอียดมาก」
+步驟 3：第二個標題下：「องค์ประกอบแบบแบน」、「ข้อความหรือโลโก้ที่มองเห็นได้」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「ฟาสต์คัท」
+步驟 5：第一個標題下：「ความรู้สึกของการเคลื่อนไหว」、「ภาพที่มีรายละเอียดมาก」
+步驟 5：第二個標題下：「องค์ประกอบนิ่ง」、「ข้อความหรือโลโก้ที่มองเห็นได้」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「การถ่ายครั้งเดียว」
+步驟 7：第一個標題下：「การจัดเฟรมระยะปานกลาง」、「ความลึกเป็นชั้น」
+步驟 7：第二個標題下：「องค์ประกอบแบบแบน」、「ข้อความหรือโลโก้ที่มองเห็นได้」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「ไทม์แลปส์」
+步驟 9：第一個標題下：「เห็นท้องฟ้า」、「วิวเมืองหรือทิวทัศน์」
+步驟 9：第二個標題下：「ภาพบุคคลเป็นหัวเรื่อง」、「ระยะใกล้ภายในอาคาร」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「กล้องแบบถือ」
+步驟 11：第一個標題下：「ความลึกเป็นชั้น」、「ภาพที่มีรายละเอียดมาก」
+步驟 11：第二個標題下：「องค์ประกอบแบบแบน」、「ข้อความหรือโลโก้ที่มองเห็นได้」、「โคลสอัพสุดขีด」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 THA 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 ไทย 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-048,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Bahasa Melayu（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ms-MY）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Filem Seram」，說明為「Cahaya menyeramkan dan suasana menakutkan. Satu foto menjadi adegan filem seram.」
+步驟 2：第 2 張卡片顯示「Sinema Mikro」，說明為「Close-up penuh khayalan membina cerita visual sinematik. Video puitis terbit dari satu imej.」
+步驟 2：第 3 張卡片顯示「Potongan Pantas」，說明為「Potongan pantas berani dan rentak bergaya. Ubah satu foto jadi video sinematik moden yang berimpak.」
+步驟 2：第 4 張卡片顯示「Syot Sekali Ambil」，說明為「Pendedahan kamera perlahan lancar. Satu foto bertukar jadi gerakan kamera sinematik halus.」
+步驟 2：第 5 張卡片顯示「Time Lapse」，說明為「Gerakan time-lapse menangkap perjalanan masa. Saksikan momen pegun menjadi hidup.」
+步驟 2：第 6 張卡片顯示「Kamera Genggam」，說明為「Gerakan kamera genggam dengan peralihan fokus. Satu foto jadi momen sinematik yang menyentuh.」
+步驟 2：卡片依序為：「Filem Seram」、「Sinema Mikro」、「Potongan Pantas」、「Syot Sekali Ambil」、「Time Lapse」、「Kamera Genggam」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 ms 欄；› Template Description Localization 第 2–7 列的 ms 欄。若 App 的語言清單沒有 Bahasa Melayu，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-049,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Bahasa Melayu（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ms-MY）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Filem Seram」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Sinema Mikro」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Potongan Pantas」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Syot Sekali Ambil」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time Lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Kamera Genggam」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Filem Seram」
+步驟 1：第一個標題下：「Orang dalam bingkai」、「Kedalaman Berlapis」
+步驟 1：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Kelihatan」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Sinema Mikro」
+步驟 3：第一個標題下：「Pembingkaian Jarak Sederhana」、「Butiran Visual Yang Kaya」
+步驟 3：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Kelihatan」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Potongan Pantas」
+步驟 5：第一個標題下：「Kesan Gerakan」、「Butiran Visual Yang Kaya」
+步驟 5：第二個標題下：「Komposisi Statis」、「Teks atau Logo yang Kelihatan」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Syot Sekali Ambil」
+步驟 7：第一個標題下：「Pembingkaian Jarak Sederhana」、「Kedalaman Berlapis」
+步驟 7：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Kelihatan」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time Lapse」
+步驟 9：第一個標題下：「Langit Kelihatan」、「Pemandangan Bandar atau Landskap」
+步驟 9：第二個標題下：「Potret sebagai Subjek」、「Close-up Dalaman」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Kamera Genggam」
+步驟 11：第一個標題下：「Kedalaman Berlapis」、「Butiran Visual Yang Kaya」
+步驟 11：第二個標題下：「Komposisi Datar」、「Teks atau Logo yang Kelihatan」、「Rakaman Sangat Dekat」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 MAY 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Bahasa Melayu 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-050,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 हिन्दी（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang hi-IN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「हॉरर फ़िल्म」，說明為「सिहराने वाली रोशनी और डरावना माहौल। एक फोटो हॉरर फिल्म के दृश्य में बदल जाता है」
+步驟 2：第 2 張卡片顯示「माइक्रो सिनेमा」，說明為「सपने जैसे क्लोज़-अप्स सिनेमैटिक दृश्य कहानी बनाते हैं — एक छवि से कवितात्मक वीडियो उभरता है।」
+步驟 2：第 3 張卡片顯示「तेज़ कट」，說明為「साहसिक तेज़ कट और स्टाइलिश पेसिंग। एक फोटो को आधुनिक, प्रभावशाली सिनेमाई शॉर्ट में बदलें।」
+步驟 2：第 4 張卡片顯示「वन-टेक शॉट」，說明為「एक निर्बाध स्लो कैमरा खुलता है — एक फोटो से एक सुचारु, सिनेमाई कैमरा मूव बनता है।」
+步驟 2：第 5 張卡片顯示「टाइमलैप्स」，說明為「टाइम-लैप्स समय के प्रवाह को कैद करता है। स्थिर पलों को जीवंत होते देखें।」
+步驟 2：第 6 張卡片顯示「हैंडहेल्ड कैमरा」，說明為「हाथ से कैमरे की हलचल और फोकस शिफ्ट — एक तस्वीर बनती है एक भावुक सिनेमाई पल।」
+步驟 2：卡片依序為：「हॉरर फ़िल्म」、「माइक्रो सिनेमा」、「तेज़ कट」、「वन-टेक शॉट」、「टाइमलैप्स」、「हैंडहेल्ड कैमरा」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 hi 欄；› Template Description Localization 第 2–7 列的 hi 欄。若 App 的語言清單沒有 हिन्दी，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-051,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 हिन्दी（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang hi-IN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「हॉरर फ़िल्म」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「माइक्रो सिनेमा」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「तेज़ कट」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「वन-टेक शॉट」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「टाइमलैप्स」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「हैंडहेल्ड कैमरा」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「हॉरर फ़िल्म」
+步驟 1：第一個標題下：「फ़्रेम में लोग」、「परतों की गहराई」
+步驟 1：第二個標題下：「समतल रचना」、「दृश्यमान टेक्स्ट या लोगो」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「माइक्रो सिनेमा」
+步驟 3：第一個標題下：「मध्यम दूरी की फ़्रेमिंग」、「समृद्ध दृश्य विवरण」
+步驟 3：第二個標題下：「समतल रचना」、「दृश्यमान टेक्स्ट या लोगो」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「तेज़ कट」
+步驟 5：第一個標題下：「मोशन की अनुभूति」、「समृद्ध दृश्य विवरण」
+步驟 5：第二個標題下：「स्थिर कॉम्पोज़िशन」、「दृश्यमान टेक्स्ट या लोगो」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「वन-टेक शॉट」
+步驟 7：第一個標題下：「मध्यम दूरी की फ़्रेमिंग」、「परतों की गहराई」
+步驟 7：第二個標題下：「समतल रचना」、「दृश्यमान टेक्स्ट या लोगो」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「टाइमलैप्स」
+步驟 9：第一個標題下：「दिखने वाला आकाश」、「सिटीस्केप या लैंडस्केप」
+步驟 9：第二個標題下：「विषय के रूप में पोर्ट्रेट」、「भीतरी निकट शॉट」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「हैंडहेल्ड कैमरा」
+步驟 11：第一個標題下：「परतों की गहराई」、「समृद्ध दृश्य विवरण」
+步驟 11：第二個標題下：「समतल रचना」、「दृश्यमान टेक्स्ट या लोगो」、「अत्यंत क्लोज़-अप」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 HIN 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 हिन्दी 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-052,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Español (Latinoamérica)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang es-419）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Película de terror」，說明為「Luces inquietantes y una atmósfera aterradora. Una foto se convierte en una escena de terror.」
+步驟 2：第 2 張卡片顯示「Micro Cine」，說明為「Primeros planos oníricos que crean una historia visual cinematográfica desde una sola imagen」
+步驟 2：第 3 張卡片顯示「Corte Rápido」，說明為「Cortes audaces y ritmo con estilo: convierte una foto en un corto cinematográfico de alto impacto.」
+步驟 2：第 4 張卡片顯示「Toma Única」，說明為「Un paneo lento y fluido: una foto se transforma en un movimiento cinematográfico.」
+步驟 2：第 5 張卡片顯示「Lapso De Tiempo」，說明為「El Time-lapse captura el paso del tiempo. Mira cómo los instantes inmóviles cobran vida.」
+步驟 2：第 6 張卡片顯示「Cámara de mano」，說明為「Cámara en mano y cambios de enfoque. Una foto se vuelve un momento cinematográfico y emotivo.」
+步驟 2：卡片依序為：「Película de terror」、「Micro Cine」、「Corte Rápido」、「Toma Única」、「Lapso De Tiempo」、「Cámara de mano」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 esm 欄；› Template Description Localization 第 2–7 列的 esm 欄。若 App 的語言清單沒有 Español (Latinoamérica)，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-053,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Español (Latinoamérica)（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang es-419）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Película de terror」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Micro Cine」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Corte Rápido」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Toma Única」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Lapso De Tiempo」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Cámara de mano」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Película de terror」
+步驟 1：第一個標題下：「Personas en el encuadre」、「Profundidad En Capas」
+步驟 1：第二個標題下：「Composición Plana」、「Texto o Logotipos Visibles」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Micro Cine」
+步驟 3：第一個標題下：「Encuadre a Media Distancia」、「Detalles Visuales Ricos」
+步驟 3：第二個標題下：「Composición Plana」、「Texto o Logotipos Visibles」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Corte Rápido」
+步驟 5：第一個標題下：「Sensación de Movimiento」、「Detalles Visuales Ricos」
+步驟 5：第二個標題下：「Composición Estática」、「Texto o Logotipos Visibles」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Toma Única」
+步驟 7：第一個標題下：「Encuadre a Media Distancia」、「Profundidad En Capas」
+步驟 7：第二個標題下：「Composición Plana」、「Texto o Logotipos Visibles」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Lapso De Tiempo」
+步驟 9：第一個標題下：「Cielo Visible」、「Paisaje urbano o Paisaje」
+步驟 9：第二個標題下：「Retrato como Sujeto」、「Primer Plano en Interiores」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Cámara de mano」
+步驟 11：第一個標題下：「Profundidad En Capas」、「Detalles Visuales Ricos」
+步驟 11：第二個標題下：「Composición Plana」、「Texto o Logotipos Visibles」、「Primerísimo Primer Plano」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 ESM 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Español (Latinoamérica) 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-054,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 العربية（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ar）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「فيلم رعب」，說明為「أنوار مخيفة وأجواء مرعبة. تتحول صورة واحدة إلى مشهد من فيلم رعب.」
+步驟 2：第 2 張卡片顯示「سينما مصغرة」，說明為「لقطات مقربة حالمة تبني قصة بصرية سينمائية. فيديو شاعري يتكشف من صورة واحدة.」
+步驟 2：第 3 張卡片顯示「قطع سريع」，說明為「قطع سريعة وجريئة وإيقاع أنيق. حوّل صورة واحدة إلى مقطع سينمائي حديث ومؤثر.」
+步驟 2：第 4 張卡片顯示「لقطة بدون تقطيع」，說明為「كشف كاميرا بطيئة وسلسة؛ تتحول صورة واحدة إلى حركة كاميرا سينمائية سلسة.」
+步驟 2：第 5 張卡片顯示「تايم لابس」，說明為「تصوير الفاصل الزمني يلتقط مرور الزمن. شاهد اللحظات الثابتة تنبض بالحياة.」
+步驟 2：第 6 張卡片顯示「كاميرا محمولة باليد」，說明為「حركة كاميرا يدوية مع تغيّر التركيز. صورة واحدة تتحول إلى لحظة سينمائية مؤثرة.」
+步驟 2：卡片依序為：「فيلم رعب」、「سينما مصغرة」、「قطع سريع」、「لقطة بدون تقطيع」、「تايم لابس」、「كاميرا محمولة باليد」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 ar 欄；› Template Description Localization 第 2–7 列的 ar 欄。若 App 的語言清單沒有 العربية，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-055,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 العربية（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang ar）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「فيلم رعب」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「سينما مصغرة」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「قطع سريع」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「لقطة بدون تقطيع」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「تايم لابس」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「كاميرا محمولة باليد」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「فيلم رعب」
+步驟 1：第一個標題下：「أشخاص في الإطار」、「عمق متعدد الطبقات」
+步驟 1：第二個標題下：「تركيب مسطح」、「نص مرئي أو شعارات مرئية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「سينما مصغرة」
+步驟 3：第一個標題下：「تأطير على مسافة متوسطة」、「تفاصيل بصرية غنية」
+步驟 3：第二個標題下：「تركيب مسطح」、「نص مرئي أو شعارات مرئية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「قطع سريع」
+步驟 5：第一個標題下：「إحساس الحركة」、「تفاصيل بصرية غنية」
+步驟 5：第二個標題下：「تكوين ثابت」、「نص مرئي أو شعارات مرئية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「لقطة بدون تقطيع」
+步驟 7：第一個標題下：「تأطير على مسافة متوسطة」、「عمق متعدد الطبقات」
+步驟 7：第二個標題下：「تركيب مسطح」、「نص مرئي أو شعارات مرئية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「تايم لابس」
+步驟 9：第一個標題下：「سماء مرئية」、「مشهد حضري أو منظر طبيعي」
+步驟 9：第二個標題下：「البورتريه كموضوع」、「لقطة مقربة داخلية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「كاميرا محمولة باليد」
+步驟 11：第一個標題下：「عمق متعدد الطبقات」、「تفاصيل بصرية غنية」
+步驟 11：第二個標題下：「تركيب مسطح」、「نص مرئي أو شعارات مرئية」、「لقطة مقربة للغاية」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 ARA 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 العربية 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-056,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Tiếng Việt（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang vi-VN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Phim Kinh Dị」，說明為「Ánh sáng rùng rợn và bầu không khí đáng sợ. Một bức ảnh hóa thành cảnh phim kinh dị.」
+步驟 2：第 2 張卡片顯示「Rạp Chiếu Mini」，說明為「Mơ mộng cận cảnh dựng nên câu chuyện hình ảnh điện ảnh. Video giàu chất thơ mở ra từ 1 ảnh duy nhất.」
+步驟 2：第 3 張卡片顯示「Cắt Nhanh」，說明為「Cắt nhanh táo bạo, nhịp điệu phong cách. Biến một ảnh thành đoạn phim điện ảnh hiện đại, ấn tượng.」
+步驟 2：第 4 張卡片顯示「Cảnh Quay Một Lần」，說明為「Hé lộ chậm, liền mạch của máy quay. Một tấm ảnh biến thành cảnh quay điện ảnh mượt mà.」
+步驟 2：第 5 張卡片顯示「Tua Nhanh Thời Gian」，說明為「Chuyển động time-lapse ghi lại dòng chảy của thời gian. Xem khoảnh khắc tĩnh sống dậy.」
+步驟 2：第 6 張卡片顯示「Máy Ảnh Cầm Tay」，說明為「Chuyển động máy cầm tay với thay đổi tiêu điểm. Một bức ảnh thành khoảnh khắc điện ảnh đầy cảm xúc.」
+步驟 2：卡片依序為：「Phim Kinh Dị」、「Rạp Chiếu Mini」、「Cắt Nhanh」、「Cảnh Quay Một Lần」、「Tua Nhanh Thời Gian」、「Máy Ảnh Cầm Tay」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 vi 欄；› Template Description Localization 第 2–7 列的 vi 欄。若 App 的語言清單沒有 Tiếng Việt，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-057,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Tiếng Việt（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang vi-VN）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Phim Kinh Dị」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Rạp Chiếu Mini」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Cắt Nhanh」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Cảnh Quay Một Lần」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Tua Nhanh Thời Gian」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Máy Ảnh Cầm Tay」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Phim Kinh Dị」
+步驟 1：第一個標題下：「Có người trong khung hình」、「Độ Sâu Phân Lớp」
+步驟 1：第二個標題下：「Bố Cục Phẳng」、「Văn bản hoặc logo hiển thị」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Rạp Chiếu Mini」
+步驟 3：第一個標題下：「Đóng Khung Ở Khoảng Cách Trung Bình」、「Chi Tiết Hình Ảnh Phong Phú」
+步驟 3：第二個標題下：「Bố Cục Phẳng」、「Văn bản hoặc logo hiển thị」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Cắt Nhanh」
+步驟 5：第一個標題下：「Cảm Nhận Chuyển Động」、「Chi Tiết Hình Ảnh Phong Phú」
+步驟 5：第二個標題下：「Bố Cục Tĩnh」、「Văn bản hoặc logo hiển thị」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Cảnh Quay Một Lần」
+步驟 7：第一個標題下：「Đóng Khung Ở Khoảng Cách Trung Bình」、「Độ Sâu Phân Lớp」
+步驟 7：第二個標題下：「Bố Cục Phẳng」、「Văn bản hoặc logo hiển thị」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Tua Nhanh Thời Gian」
+步驟 9：第一個標題下：「Có thể thấy bầu trời」、「Cảnh Đô thị hoặc Ngang」
+步驟 9：第二個標題下：「Chân dung làm chủ thể」、「Cận Cảnh Trong Nhà」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Máy Ảnh Cầm Tay」
+步驟 11：第一個標題下：「Độ Sâu Phân Lớp」、「Chi Tiết Hình Ảnh Phong Phú」
+步驟 11：第二個標題下：「Bố Cục Phẳng」、「Văn bản hoặc logo hiển thị」、「Cận Cảnh Cực Kỳ」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 VIT 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Tiếng Việt 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-058,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Polski（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang pl-PL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Film Grozy」，說明為「Upiorne światła i przerażająca atmosfera. Jedno zdjęcie staje się sceną horroru.」
+步驟 2：第 2 張卡片顯示「Mikro Kino」，說明為「Senne zbliżenia tworzą kinową opowieść wizualną. Poetyczne wideo powstaje z jednego zdjęcia.」
+步驟 2：第 3 張卡片顯示「Szybkie Cięcie」，說明為「Śmiałe, szybkie cięcia i stylowe tempo. Z jednego zdjęcia stwórz nowoczesny, efektowny krótki film.」
+步驟 2：第 4 張卡片顯示「Jedno Ujęcie」，說明為「Płynne, powolne odsłonięcie kamery. Jedno zdjęcie staje się kinowym, płynnym ruchem kamery.」
+步驟 2：第 5 張卡片顯示「Film poklatkowy」，說明為「Ruch poklatkowy ukazuje upływ czasu. Zobacz, jak nieruchome chwile ożywają.」
+步驟 2：第 6 張卡片顯示「Kamera Ręczna」，說明為「Ręczne ruchy kamery i zmiany ostrości — jedno zdjęcie staje się poruszającym, kinowym ujęciem.」
+步驟 2：卡片依序為：「Film Grozy」、「Mikro Kino」、「Szybkie Cięcie」、「Jedno Ujęcie」、「Film poklatkowy」、「Kamera Ręczna」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 pl 欄；› Template Description Localization 第 2–7 列的 pl 欄。若 App 的語言清單沒有 Polski，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-059,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Polski（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang pl-PL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Film Grozy」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Mikro Kino」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Szybkie Cięcie」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Jedno Ujęcie」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Film poklatkowy」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Kamera Ręczna」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Film Grozy」
+步驟 1：第一個標題下：「Osoby w kadrze」、「Warstwowa Głębia」
+步驟 1：第二個標題下：「Płaska Kompozycja」、「Widoczny Tekst lub Logotypy」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Mikro Kino」
+步驟 3：第一個標題下：「Kadrowanie z Średniej Odległości」、「Bogate Szczegóły Wizualne」
+步驟 3：第二個標題下：「Płaska Kompozycja」、「Widoczny Tekst lub Logotypy」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Szybkie Cięcie」
+步驟 5：第一個標題下：「Poczucie Ruchu」、「Bogate Szczegóły Wizualne」
+步驟 5：第二個標題下：「Statyczna Kompozycja」、「Widoczny Tekst lub Logotypy」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Jedno Ujęcie」
+步驟 7：第一個標題下：「Kadrowanie z Średniej Odległości」、「Warstwowa Głębia」
+步驟 7：第二個標題下：「Płaska Kompozycja」、「Widoczny Tekst lub Logotypy」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Film poklatkowy」
+步驟 9：第一個標題下：「Widoczne Niebo」、「Miejski krajobraz lub Pozioma」
+步驟 9：第二個標題下：「Portret jako temat」、「Zbliżenie W Pomieszczeniu」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Kamera Ręczna」
+步驟 11：第一個標題下：「Warstwowa Głębia」、「Bogate Szczegóły Wizualne」
+步驟 11：第二個標題下：「Płaska Kompozycja」、「Widoczny Tekst lub Logotypy」、「Ekstremalne Zbliżenie」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 PLK 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Polski 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-060,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Türkçe（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang tr-TR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Korku Filmi」，說明為「Ürpertici ışıklar ve korkutucu bir atmosfer. Bir fotoğraf bir korku filmi sahnesine dönüşüyor.」
+步驟 2：第 2 張卡片顯示「Mikro Sinema」，說明為「Rüyavari yakın planlar, sinematik bir görsel hikâye kurar; tek görüntüden şiirsel bir video doğar.」
+步驟 2：第 3 張卡片顯示「Hızlı Kesme」，說明為「Cesur kesimler ve şık tempoyla fotoğrafınızı modern, çarpıcı bir kısa sinematik videoya dönüştürün.」
+步驟 2：第 4 張卡片顯示「Tek Plan Çekimi」，說明為「Kesintisiz yavaş kamera gösterimi. Bir fotoğraf akıcı, sinematik bir kamera hareketine dönüşür.」
+步驟 2：第 5 張卡片顯示「Hızlandırılmış Çekim」，說明為「Time-lapse çekimi zamanın akışını yakalar. Durgun anların canlandığını izleyin.」
+步驟 2：第 6 張卡片顯示「El Tipi Kamera」，說明為「Elde çekim hareketleri ve odak kaymaları. Tek fotoğraf içten, sinematik bir ana dönüşür.」
+步驟 2：卡片依序為：「Korku Filmi」、「Mikro Sinema」、「Hızlı Kesme」、「Tek Plan Çekimi」、「Hızlandırılmış Çekim」、「El Tipi Kamera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 tr 欄；› Template Description Localization 第 2–7 列的 tr 欄。若 App 的語言清單沒有 Türkçe，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-061,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Türkçe（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang tr-TR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Korku Filmi」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Mikro Sinema」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Hızlı Kesme」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Tek Plan Çekimi」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Hızlandırılmış Çekim」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「El Tipi Kamera」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Korku Filmi」
+步驟 1：第一個標題下：「Karedeki kişiler」、「Katmanlı Derinlik」
+步驟 1：第二個標題下：「Düz Kompozisyon」、「Görünür Metin veya Logolar」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Mikro Sinema」
+步驟 3：第一個標題下：「Orta Mesafe Çerçeveleme」、「Zengin Görsel Ayrıntılar」
+步驟 3：第二個標題下：「Düz Kompozisyon」、「Görünür Metin veya Logolar」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Hızlı Kesme」
+步驟 5：第一個標題下：「Hareket Algısı」、「Zengin Görsel Ayrıntılar」
+步驟 5：第二個標題下：「Durağan Kompozisyon」、「Görünür Metin veya Logolar」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Tek Plan Çekimi」
+步驟 7：第一個標題下：「Orta Mesafe Çerçeveleme」、「Katmanlı Derinlik」
+步驟 7：第二個標題下：「Düz Kompozisyon」、「Görünür Metin veya Logolar」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Hızlandırılmış Çekim」
+步驟 9：第一個標題下：「Görünen Gökyüzü」、「Şehir Manzarası veya Manzara」
+步驟 9：第二個標題下：「Konu: Portre」、「İç Mekan Yakın Plan」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「El Tipi Kamera」
+步驟 11：第一個標題下：「Katmanlı Derinlik」、「Zengin Görsel Ayrıntılar」
+步驟 11：第二個標題下：「Düz Kompozisyon」、「Görünür Metin veya Logolar」、「Aşırı Yakın Plan」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 TRK 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Türkçe 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-062,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Filipino（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fil-PH）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Pelikulang Nakakatakot」，說明為「Nakakakilabot na ilaw at nakakatakot na paligid. Isang larawan ang nagiging eksena sa horror movie.」
+步驟 2：第 2 張卡片顯示「Maliit Na Sinehan」，說明為「Mga mabighaning close-up ang bumubuo ng sinematikong kuwento. Poetikong video mula sa isang imahe.」
+步驟 2：第 3 張卡片顯示「Mabilisang Pagputol」，說明為「Matapang mabilis na putol at estilong ritmo. Gawing isang larawan na moderno matinding maikling sine」
+步驟 2：第 4 張卡片顯示「Isang Kuha」，說明為「Makinis at mabagal na pagbubunyag ng kamera — isang larawan ang nagiging sinematikong paggalaw.」
+步驟 2：第 5 張卡片顯示「Time-Lapse」，說明為「Kinukuha ng time-lapse ang pagdaan ng oras. Panoorin kung paano nabubuhay ang mga sandali.」
+步驟 2：第 6 張卡片顯示「Kamerang Hawak sa Kamay」，說明為「Galaw ng Handheld camera na may focus shifts. Isang larawan, nagiging taos-pusong cinematic moment.」
+步驟 2：卡片依序為：「Pelikulang Nakakatakot」、「Maliit Na Sinehan」、「Mabilisang Pagputol」、「Isang Kuha」、「Time-Lapse」、「Kamerang Hawak sa Kamay」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 fil 欄；› Template Description Localization 第 2–7 列的 fil 欄。若 App 的語言清單沒有 Filipino，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-063,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Filipino（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fil-PH）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Pelikulang Nakakatakot」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Maliit Na Sinehan」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Mabilisang Pagputol」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Isang Kuha」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Time-Lapse」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Kamerang Hawak sa Kamay」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Pelikulang Nakakatakot」
+步驟 1：第一個標題下：「Mga Tao sa Frame」、「Patong-Patong na Lalim」
+步驟 1：第二個標題下：「Patag na Komposisyon」、「Nakikitang Teksto o Mga Logo」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Maliit Na Sinehan」
+步驟 3：第一個標題下：「Pag-Frame sa Katamtamang Distansya」、「Mga Mayamang Biswal na Detalye」
+步驟 3：第二個標題下：「Patag na Komposisyon」、「Nakikitang Teksto o Mga Logo」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Mabilisang Pagputol」
+步驟 5：第一個標題下：「Pakiramdam ng Galaw」、「Mga Mayamang Biswal na Detalye」
+步驟 5：第二個標題下：「Komposisyon na Walang Galaw」、「Nakikitang Teksto o Mga Logo」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Isang Kuha」
+步驟 7：第一個標題下：「Pag-Frame sa Katamtamang Distansya」、「Patong-Patong na Lalim」
+步驟 7：第二個標題下：「Patag na Komposisyon」、「Nakikitang Teksto o Mga Logo」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Time-Lapse」
+步驟 9：第一個標題下：「Nakikitang Langit」、「Tanawing Lungsod o Kalikasan」
+步驟 9：第二個標題下：「Potret Bilang Paksa」、「Panloob na Malapitang Kuha」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Kamerang Hawak sa Kamay」
+步驟 11：第一個標題下：「Patong-Patong na Lalim」、「Mga Mayamang Biswal na Detalye」
+步驟 11：第二個標題下：「Patag na Komposisyon」、「Nakikitang Teksto o Mga Logo」、「Napakalapit na Kuha」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 FPO 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Filipino 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-064,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 فارسی（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fa-IR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「فیلم ترسناک」，說明為「نورهای وهم‌آلود و فضایی ترسناک. یک عکس به صحنه‌ای از فیلم ترسناک تبدیل می‌شود.」
+步驟 2：第 2 張卡片顯示「میکرو سینما」，說明為「نماهای بستهٔ رویایی داستان تصویری سینمایی می‌سازند. از یک عکس، ویدئویی شاعرانه پدید می‌آید.」
+步驟 2：第 3 張卡片顯示「برش سریع」，說明為「برش‌های جسورانه و ریتمی شیک. از یک عکس، یک کوتاه سینمایی مدرن و تأثیرگذار بسازید.」
+步驟 2：第 4 張卡片顯示「یک برداشت」，說明為「نمایش آهسته و یکپارچهٔ دوربین: یک عکس به حرکت سینمایی و روان تبدیل می‌شود.」
+步驟 2：第 5 張卡片顯示「تایم‌لپس」，說明為「تایم‌لپس گذر زمان را ثبت می‌کند. ببینید لحظات ساکن جان می‌گیرند.」
+步驟 2：第 6 張卡片顯示「دوربین دستی」，說明為「حرکت دوربین دستی با جابجایی فوکوس؛ یک عکس تبدیل به لحظه‌ای سینمایی و پر احساس می‌شود.」
+步驟 2：卡片依序為：「فیلم ترسناک」、「میکرو سینما」、「برش سریع」、「یک برداشت」、「تایم‌لپس」、「دوربین دستی」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 fa 欄；› Template Description Localization 第 2–7 列的 fa 欄。若 App 的語言清單沒有 فارسی，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-065,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 فارسی（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang fa-IR）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「فیلم ترسناک」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「میکرو سینما」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「برش سریع」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「یک برداشت」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「تایم‌لپس」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「دوربین دستی」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「فیلم ترسناک」
+步驟 1：第一個標題下：「افراد در قاب」、「عمق چندلایه」
+步驟 1：第二個標題下：「ترکیب کم‌عمق」、「متن یا لوگوهای قابل مشاهده」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「میکرو سینما」
+步驟 3：第一個標題下：「قاب‌بندی در فاصله متوسط」、「جزئیات بصری غنی」
+步驟 3：第二個標題下：「ترکیب کم‌عمق」、「متن یا لوگوهای قابل مشاهده」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「برش سریع」
+步驟 5：第一個標題下：「حس حرکت」、「جزئیات بصری غنی」
+步驟 5：第二個標題下：「ترکیب‌بندی ایستا」、「متن یا لوگوهای قابل مشاهده」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「یک برداشت」
+步驟 7：第一個標題下：「قاب‌بندی در فاصله متوسط」、「عمق چندلایه」
+步驟 7：第二個標題下：「ترکیب کم‌عمق」、「متن یا لوگوهای قابل مشاهده」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「تایم‌لپس」
+步驟 9：第一個標題下：「آسمان قابل مشاهده」、「شهری یا منظره」
+步驟 9：第二個標題下：「پرتره به‌عنوان سوژه」、「نمای نزدیک داخلی」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「دوربین دستی」
+步驟 11：第一個標題下：「عمق چندلایه」、「جزئیات بصری غنی」
+步驟 11：第二個標題下：「ترکیب کم‌عمق」、「متن یا لوگوهای قابل مشاهده」、「نمای بسیار بسته」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 FAR 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 فارسی 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-066,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 עברית（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang he-IL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「סרט אימה」，說明為「אורות מאיימים ואווירה מפחידה. תמונה אחת הופכת לרגע מסרט אימה.」
+步驟 2：第 2 張卡片顯示「מיקרו סינמה」，說明為「תקריבים חלומיים בונים סיפור ויזואלי קולנועי. וידאו פיוטי נפתח מתמונה אחת.」
+步驟 2：第 3 張卡片顯示「עריכה מהירה」，說明為「חתכים נועזים ומהירים עם קצב מעודן. הפוך תמונה אחת לסרטון קולנועי מודרני ועוצמתי.」
+步驟 2：第 4 張卡片顯示「שוט אחד」，說明為「חשיפה איטית וחלקה של המצלמה. תמונה אחת הופכת לתנועת מצלמה קולנועית.」
+步驟 2：第 5 張卡片顯示「טיימלפס」，說明為「צילום טיימלפס לוכד את חלוף הזמן. צפה ברגעים קפואים שמתעוררים לחיים.」
+步驟 2：第 6 張卡片顯示「מצלמה ניידת」，說明為「תנועת מצלמה ידנית עם מעברי מיקוד. תמונה אחת הופכת לרגע קולנועי מלא רגש.」
+步驟 2：卡片依序為：「סרט אימה」、「מיקרו סינמה」、「עריכה מהירה」、「שוט אחד」、「טיימלפס」、「מצלמה ניידת」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 he 欄；› Template Description Localization 第 2–7 列的 he 欄。若 App 的語言清單沒有 עברית，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-067,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 עברית（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang he-IL）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「סרט אימה」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「מיקרו סינמה」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「עריכה מהירה」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「שוט אחד」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「טיימלפס」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「מצלמה ניידת」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「סרט אימה」
+步驟 1：第一個標題下：「אנשים במסגרת」、「עומק רב-שכבתי」
+步驟 1：第二個標題下：「קומפוזיציה שטוחה」、「טקסט גלוי או לוגואים」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「מיקרו סינמה」
+步驟 3：第一個標題下：「מסגור במרחק בינוני」、「פרטים חזותיים עשירים」
+步驟 3：第二個標題下：「קומפוזיציה שטוחה」、「טקסט גלוי או לוגואים」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「עריכה מהירה」
+步驟 5：第一個標題下：「תחושת תנועה」、「פרטים חזותיים עשירים」
+步驟 5：第二個標題下：「קומפוזיציה סטטית」、「טקסט גלוי או לוגואים」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「שוט אחד」
+步驟 7：第一個標題下：「מסגור במרחק בינוני」、「עומק רב-שכבתי」
+步驟 7：第二個標題下：「קומפוזיציה שטוחה」、「טקסט גלוי או לוגואים」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「טיימלפס」
+步驟 9：第一個標題下：「שמיים נראים」、「נוף עירוני או נוף」
+步驟 9：第二個標題下：「נושא: דיוקן」、「תקריב פנימי」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「מצלמה ניידת」
+步驟 11：第一個標題下：「עומק רב-שכבתי」、「פרטים חזותיים עשירים」
+步驟 11：第二個標題下：「קומפוזיציה שטוחה」、「טקסט גלוי או לוגואים」、「תקריב קיצוני」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 HEB 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 עברית 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-068,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Svenska（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang sv-SE）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Skräckfilm」，說明為「Spöklika ljus och en skrämmande stämning. Ett foto blir en scen ur en skräckfilm.」
+步驟 2：第 2 張卡片顯示「Minibiograf」，說明為「Drömska närbilder skapar en filmisk berättelse. En poetisk video växer fram ur en enda bild.」
+步驟 2：第 3 張卡片顯示「Snabb Klipp」，說明為「Djärva snabba klipp och stilfullt tempo. Förvandla ett foto till en modern, filmisk kortvideo.」
+步驟 2：第 4 張卡片顯示「En Tagning」，說明為「En sömlös, långsam kamerapanorering. Ett foto förvandlas till en mjuk, filmisk kamerarörelse.」
+步驟 2：第 5 張卡片顯示「Tidsförlopp」，說明為「Time-lapse fångar tidens gång. Se stilla ögonblick vakna till liv.」
+步驟 2：第 6 張卡片顯示「Handhållen Kamera」，說明為「Handhållen kamerarörelse med fokusändringar. En bild blir ett känslosamt, filmiskt ögonblick.」
+步驟 2：卡片依序為：「Skräckfilm」、「Minibiograf」、「Snabb Klipp」、「En Tagning」、「Tidsförlopp」、「Handhållen Kamera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 sv 欄；› Template Description Localization 第 2–7 列的 sv 欄。若 App 的語言清單沒有 Svenska，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-069,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Svenska（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang sv-SE）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Skräckfilm」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Minibiograf」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Snabb Klipp」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「En Tagning」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Tidsförlopp」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Handhållen Kamera」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Skräckfilm」
+步驟 1：第一個標題下：「Personer i bilden」、「Skiktat Djup」
+步驟 1：第二個標題下：「Platt komposition」、「Synlig text eller logotyper」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Minibiograf」
+步驟 3：第一個標題下：「Inramning på medelavstånd」、「Rika visuella detaljer」
+步驟 3：第二個標題下：「Platt komposition」、「Synlig text eller logotyper」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Snabb Klipp」
+步驟 5：第一個標題下：「Känsla av Rörelse」、「Rika visuella detaljer」
+步驟 5：第二個標題下：「Statisk komposition」、「Synlig text eller logotyper」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「En Tagning」
+步驟 7：第一個標題下：「Inramning på medelavstånd」、「Skiktat Djup」
+步驟 7：第二個標題下：「Platt komposition」、「Synlig text eller logotyper」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Tidsförlopp」
+步驟 9：第一個標題下：「Synlig himmel」、「Stadsbild eller landskap」
+步驟 9：第二個標題下：「Porträtt som motiv」、「Inomhus Närbild」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Handhållen Kamera」
+步驟 11：第一個標題下：「Skiktat Djup」、「Rika visuella detaljer」
+步驟 11：第二個標題下：「Platt komposition」、「Synlig text eller logotyper」、「Extrem närbild」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 SVE 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Svenska 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-070,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Dansk（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang da-DK）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Gyserfilm」，說明為「Uhyggelige lys og en skræmmende stemning. Et foto bliver til en scene fra en gyserfilm.」
+步驟 2：第 2 張卡片顯示「Mikrobiograf」，說明為「Drømmende nærbilleder skaber en filmisk fortælling. En poetisk video udfolder sig fra ét billede.」
+步驟 2：第 3 張卡片顯示「Hurtigt Klip」，說明為「Dristige hurtige klip, stilfuld rytme. Forvandl et foto til et moderne, filmisk kort med slagkraft.」
+步驟 2：第 4 張卡片顯示「Optagelse i ét tag」，說明為「En sømløs, langsom kameraføring. Et foto bliver til en glidende, filmisk kamerabevægelse.」
+步驟 2：第 5 張卡片顯示「Tidsforløb」，說明為「Time-lapse-optagelse fanger tidens gang. Se stille øjeblikke få liv.」
+步驟 2：第 6 張卡片顯示「Håndholdt Kamera」，說明為「Håndholdt kamerabevægelse med fokusskift. Ét foto bliver et hjerteligt filmisk øjeblik.」
+步驟 2：卡片依序為：「Gyserfilm」、「Mikrobiograf」、「Hurtigt Klip」、「Optagelse i ét tag」、「Tidsforløb」、「Håndholdt Kamera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 da 欄；› Template Description Localization 第 2–7 列的 da 欄。若 App 的語言清單沒有 Dansk，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-071,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Dansk（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang da-DK）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Gyserfilm」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Mikrobiograf」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Hurtigt Klip」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Optagelse i ét tag」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Tidsforløb」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Håndholdt Kamera」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Gyserfilm」
+步驟 1：第一個標題下：「Personer i billedet」、「Lagdelt dybde」
+步驟 1：第二個標題下：「Flad Komposition」、「Synlig tekst eller logoer」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Mikrobiograf」
+步驟 3：第一個標題下：「Indramning på mellemlang afstand」、「Rige Visuelle Detaljer」
+步驟 3：第二個標題下：「Flad Komposition」、「Synlig tekst eller logoer」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Hurtigt Klip」
+步驟 5：第一個標題下：「Bevægelsesfornemmelse」、「Rige Visuelle Detaljer」
+步驟 5：第二個標題下：「Statisk Komposition」、「Synlig tekst eller logoer」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Optagelse i ét tag」
+步驟 7：第一個標題下：「Indramning på mellemlang afstand」、「Lagdelt dybde」
+步驟 7：第二個標題下：「Flad Komposition」、「Synlig tekst eller logoer」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Tidsforløb」
+步驟 9：第一個標題下：「Synlig himmel」、「Bylandskab eller Landskab」
+步驟 9：第二個標題下：「Portræt som motiv」、「Indendørs Nærbillede」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Håndholdt Kamera」
+步驟 11：第一個標題下：「Lagdelt dybde」、「Rige Visuelle Detaljer」
+步驟 11：第二個標題下：「Flad Komposition」、「Synlig tekst eller logoer」、「Ekstremt nærbillede」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 DAN 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Dansk 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-072,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Norsk bokmål（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang nb-NO）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Skrekkfilm」，說明為「Uhyggelige lys og en skummel stemning. Ett bilde blir til en scene fra en skrekkfilm.」
+步驟 2：第 2 張卡片顯示「Mikro Kino」，說明為「Drømmende nærbilder skaper en filmatisk historie. En poetisk video blomstrer fra ett bilde.」
+步驟 2：第 3 張卡片顯示「Rask Klipp」，說明為「Dristige, raske klipp og stilig rytme. Forvandle ett bilde til en moderne, slagkraftig kortfilm.」
+步驟 2：第 4 張卡片顯示「Én-Tagning」，說明為「En sømløs, sakte kameraavsløring. Et bilde blir til en jevn, filmatisk kamerabevegelse.」
+步驟 2：第 5 張卡片顯示「Tidsforløp」，說明為「Tidsforløp fanger tidens gang. Se stille øyeblikk få liv.」
+步驟 2：第 6 張卡片顯示「Håndholdt kamera」，說明為「Håndholdt kamerabevegelse med fokusendringer. Et bilde blir et gripende, filmatisk øyeblikk.」
+步驟 2：卡片依序為：「Skrekkfilm」、「Mikro Kino」、「Rask Klipp」、「Én-Tagning」、「Tidsforløp」、「Håndholdt kamera」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 nb 欄；› Template Description Localization 第 2–7 列的 nb 欄。若 App 的語言清單沒有 Norsk bokmål，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-073,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Norsk bokmål（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang nb-NO）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Skrekkfilm」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Mikro Kino」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Rask Klipp」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Én-Tagning」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Tidsforløp」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Håndholdt kamera」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Skrekkfilm」
+步驟 1：第一個標題下：「Personer i bildet」、「Lagdelt dybde」
+步驟 1：第二個標題下：「Flat komposisjon」、「Synlig tekst eller logoer」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Mikro Kino」
+步驟 3：第一個標題下：「Innramming på middels avstand」、「Rike Visuelle Detaljer」
+步驟 3：第二個標題下：「Flat komposisjon」、「Synlig tekst eller logoer」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Rask Klipp」
+步驟 5：第一個標題下：「Bevegelsesfølelse」、「Rike Visuelle Detaljer」
+步驟 5：第二個標題下：「Statisk Komposisjon」、「Synlig tekst eller logoer」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Én-Tagning」
+步驟 7：第一個標題下：「Innramming på middels avstand」、「Lagdelt dybde」
+步驟 7：第二個標題下：「Flat komposisjon」、「Synlig tekst eller logoer」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Tidsforløp」
+步驟 9：第一個標題下：「Synlig Himmel」、「Bybilde eller landskap」
+步驟 9：第二個標題下：「Stående som motiv」、「Innendørs Nærbilde」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Håndholdt kamera」
+步驟 11：第一個標題下：「Lagdelt dybde」、「Rike Visuelle Detaljer」
+步驟 11：第二個標題下：「Flat komposisjon」、「Synlig tekst eller logoer」、「Ekstremt nærbilde」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 NOR 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Norsk bokmål 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-074,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Українська（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang uk-UA）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 看第一張 template 卡片
+2. 把卡片一張一張往左滑到最後一張","步驟 1：第 1 張卡片顯示「Фільм жахів」，說明為「Моторошні вогні та зловісна атмосфера. Одне фото перетворюється на сцену фільму жахів.」
+步驟 2：第 2 張卡片顯示「Мікро-кінотеатр」，說明為「Мрійливі крупні плани творять кінематографічну історію. Поетичне відео народжується з одного кадру」
+步驟 2：第 3 張卡片顯示「Швидкий Монтаж」，說明為「Сміливі швидкі зрізи й стильний темп. Перетворіть одне фото на сучасне потужне коротке кіно.」
+步驟 2：第 4 張卡片顯示「Зйомка одним дублем」，說明為「Плавне повільне відкриття камери. Одне фото перетворюється на кінематографічний рух камери」
+步驟 2：第 5 張卡片顯示「Таймлапс」，說明為「Таймлапс захоплює плин часу. Дивіться, як нерухомі миті оживають.」
+步驟 2：第 6 張卡片顯示「Ручна камера」，說明為「Рух камери з рук із зсувами фокусу. Одне фото стає зворушливим кінематографічним моментом.」
+步驟 2：卡片依序為：「Фільм жахів」、「Мікро-кінотеатр」、「Швидкий Монтаж」、「Зйомка одним дублем」、「Таймлапс」、「Ручна камера」
+步驟 2：每個名稱和說明都完整顯示，沒有被截斷或亂碼",P3,"R-029, R-030, R-031",Cinestory CMS › Order 「PHDM/PDRM Global」（依 App 語言，使用者 2026-11-25 裁定）；› Template Name Localization 的 uk 欄；› Template Description Localization 第 2–7 列的 uk 欄。若 App 的語言清單沒有 Українська，記為 Blocked（test-data）並寫出清單內容。語言組跑完後改回英文。,新增,REQ-006：TR260923-022（Cinestory template 資訊）— 各 App 語言的卡片順序、名稱與說明
+TC-075,語言,"1. PowerDirector 已用測試帳號登入
+2. App 語言為 Українська（Android 設定 › 應用程式 › PowerDirector › 語言；執行時用 launch --lang uk-UA）
+3. 已開啟 Cinematic Reel Creator 的 template 頁","1. 點「Фільм жахів」卡片上的拍照建議標籤
+2. 點面板最下方的按鈕
+3. 點「Мікро-кінотеатр」卡片上的拍照建議標籤
+4. 點面板最下方的按鈕
+5. 點「Швидкий Монтаж」卡片上的拍照建議標籤
+6. 點面板最下方的按鈕
+7. 點「Зйомка одним дублем」卡片上的拍照建議標籤
+8. 點面板最下方的按鈕
+9. 點「Таймлапс」卡片上的拍照建議標籤
+10. 點面板最下方的按鈕
+11. 點「Ручна камера」卡片上的拍照建議標籤
+12. 點面板最下方的按鈕","步驟 1：面板第一句裡的 template 名稱為「Фільм жахів」
+步驟 1：第一個標題下：「Люди в кадрі」、「Шарувата глибина」
+步驟 1：第二個標題下：「Плоска композиція」、「Видимий текст або логотипи」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 2：面板關閉，回到 template 頁
+步驟 3：面板第一句裡的 template 名稱為「Мікро-кінотеатр」
+步驟 3：第一個標題下：「Кадрування на середній відстані」、「Висока візуальна деталізація」
+步驟 3：第二個標題下：「Плоска композиція」、「Видимий текст або логотипи」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 4：面板關閉，回到 template 頁
+步驟 5：面板第一句裡的 template 名稱為「Швидкий Монтаж」
+步驟 5：第一個標題下：「Відчуття руху」、「Висока візуальна деталізація」
+步驟 5：第二個標題下：「Статична композиція」、「Видимий текст або логотипи」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 6：面板關閉，回到 template 頁
+步驟 7：面板第一句裡的 template 名稱為「Зйомка одним дублем」
+步驟 7：第一個標題下：「Кадрування на середній відстані」、「Шарувата глибина」
+步驟 7：第二個標題下：「Плоска композиція」、「Видимий текст або логотипи」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 8：面板關閉，回到 template 頁
+步驟 9：面板第一句裡的 template 名稱為「Таймлапс」
+步驟 9：第一個標題下：「Видиме Небо」、「Міський або природний пейзаж」
+步驟 9：第二個標題下：「Портрет як об'єкт」、「Крупний план у приміщенні」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 10：面板關閉，回到 template 頁
+步驟 11：面板第一句裡的 template 名稱為「Ручна камера」
+步驟 11：第一個標題下：「Шарувата глибина」、「Висока візуальна деталізація」
+步驟 11：第二個標題下：「Плоска композиція」、「Видимий текст або логотипи」、「Екстремальний крупний план」（第三項要往左滑才看得到）
+步驟 12：面板關閉，回到 template 頁
+每個步驟：兩個標題、說明文字和按鈕都是 App 語言，完整顯示，沒有被截斷或亂碼
+每個步驟：每張圖片都是試算表 Pic Link 清單裡該項目的 EN 圖片（specs/2026-11-25/extracted/recommendation-pic-links.png）",P3,"R-015, R-032, R-012, R-034",I2V Recommendation › Localization 的 UKR 欄（CMS 項目 #54–67）；Fast Cut 的「Rich Visual Details」是項目 #56（…_fast_cut），說明文字依使用者 2026-11-25 裁定。標籤和第一句本身的文字是 Q-2（已開 DRA262611P0290）：記錄其語言，不判失敗。緊接在 Українська 的卡片列之後跑，語言不變。,新增,REQ-006：TR261019-014 Localization — 各 App 語言的面板說明文字與 template 名稱
+TC-019,資料來源,"1. PowerDirector 已用測試帳號登入
+2. App 語言為英文
+3. 之前已關閉過 Cinematic Reel Creator 教學（進入後直接到 template 頁）
+4. 已從 Launcher › 「Cinematic Reel Creator」進到 template 頁
+5. 從 App 啟動起錄 logcat","1. 點「Micro Cinema」卡片上的「View photo tips」
+2. 點「Got it」
+3. 點「Time Lapse」卡片上的「View photo tips」
+4. 點「Got it」
+5. 拉取 App log","步驟 5：log 裡有從 CMS 取得的 template 資料，每個 template 都帶 recommend_samples
+步驟 5：每個面板顯示的項目和該 template 的 recommend_samples 一致",P3,R-014,隱藏條款（pass 9）。如果 log 看不到 CMS template 資料，這列先擱置（needs: cms-log）。,未變更,

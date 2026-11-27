@@ -1,0 +1,506 @@
+﻿ID,Phase,Segment,Needs,Section,Action,Expected Result,Result,Disposition,Actual,Evidence,Recorded At
+TC-130,MUI,MUI-apk,,MUI,"1. Run `node scripts/mui-strings.ts pdr/aigc-watermark --apk <build dir> --out <run dir>/mui`
+2. Read every string of `mui-strings.json` in each language against its English","1. Each of the 26 languages (CHT, CHS, JPN, ESP, KOR, DEU, FRA, ITA, RUS, PTB, NLD, IND, THA, MAY, HIN, ESM, ARA, VIT, PLK, TRK, FAR, HEB, SVE, DAN, NOR, UKR) has its own text for every string of the feature (the Settings row, the info sheet, the export dialog, the music dialog): none shows the English default or another locale's text
+2. The music dialog body 「Your generated music will include an AIGC watermark…」 is in the APK at all (2611231 has none: DRA262611P0229, cited not refiled)
+3. No string is left identical to English, except 「AIGC」
+4. Placeholders and line breaks match the English in every language (the dialog bodies hold a line break)
+5. Each translation says what the English says, in that language's script and regional wording (CHT traditional and Taiwan, CHS simplified, PTB Brazilian, ESM Mexican)
+6. The feature name and the terms (AIGC Watermark, Remove AIGC Watermark, Don’t show again) read the same on every screen; 「Menu > Settings」 in both dialog bodies uses the words the Menu and Settings screens show in that language
+7. No translation sheet (REQ-011): a string that only seems off is a translation doubt in mui-doubts.md, not a fail",Fail,defect,"The music dialog body 「Your generated music will include an AIGC watermark…」 is not in the 2611201 APK in any language (DRA262611P0229, cited, not refiled), and the export dialog's 「Don't show again」 shows a stray apostrophe in NLD and ARA (both keys; TRK too if the dialog uses ai_video_anime_checkbox; same strings as DRA262611P0286, cited). APK of 16.9.0.2611201, 5 AIGC Watermark strings plus the dialogs' shared strings (Got it, Don't show again, Cancel, Export, Menu, Settings) × 26 languages: every language has its own text, nothing identical to English, the export body keeps its line break everywhere, 「Menu > Settings」 matches the Menu and Settings words in all 26. 8 translation doubts TD-1…TD-8 (mui-doubts.md): ITA turns AIGC into 「AI」 (TD-1) and 「Got it」 into 「Fatto」 (TD-8); NLD u/je mixed (TD-2); IND English 「watermark」 in the info body (TD-3); VIT 「dấu chìm」 and Menu/Settings case (TD-4); KOR 「알았음」 (TD-5); HEB 「אל להציג שוב」 (TD-6); PLK 「Eksport」 noun button (TD-7). mui-strings.ts fixed this segment: it dropped multi-line strings (the export body). Walks: note which Don't-show-again key the export dialog shows (NLD 「weergeven」 = dont_show_message_again, 「tonen」 = ai_video_anime_checkbox).",mui/mui-strings.md mui/review.md mui-doubts.md,2026-11-25T11:46:49.678Z
+TC-131,MUI,MUI-CHT,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"CHT (zh-Hant-TW), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「移除 AIGC 浮水印」 (bounds 118–544 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC 浮水印」, body 「根據適用的法律法規，您在公開分享 AI 生成的內容前，可能需要對其進行標示或新增浮水印。提供此功能旨在協助您符合相關要求。」 on three centred lines, 「瞭解」. Export dialog (project 「Project 11-25」, an Image to Video result in Full Editor, 0 credits): 「AIGC 浮水印」, 「您匯出的檔案將包含 AIGC 浮水印。 若要移除浮水印，請前往 [選單] > [設定]。」 on two lines, checkbox 「不要再顯示此訊息」 beside its box (unchecked), 「取消」 / 「匯出」 side by side as in English; Cancel returned to the editor. Don't show again string: 「不要再顯示此訊息」, identical in dont_show_message_again and ai_video_anime_checkbox for CHT, so the key is not told apart here (help_disable_tip view). Steps 5–8 not walked: no music dialog on Android (DRA262611P0229) and Generate would charge 6 credits. Locale reset to en-US after.",screenshots/TC-131-settings.png screenshots/TC-131-info.png screenshots/TC-131-export.png screenshots/TC-131-cancel.png,2026-11-25T11:52:49.590Z
+TC-132,MUI,MUI-CHS,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"CHS (zh-Hans-CN), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「删除 AIGC 水印」 (118–498 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC 水印」, body 「根据适用的法律法规，您在公开分享 AI 生成的内容前，可能需要对其进行标注或添加水印。提供此功能旨在帮助您满足相关要求。」 on three centred lines, 「明白了」. Export dialog (「Project 11-25」, Image to Video result, 0 credits): 「AIGC 水印」, 「您导出的文件将包含 AIGC 水印。 如需删除水印，请前往 [菜单] > [设置]。」 on two lines, checkbox 「不再显示此信息」 beside its box (unchecked), 「取消」 / 「导出」 side by side; Cancel returned to the editor. Don't show again string: 「不再显示此信息」, identical in both keys for CHS (key not told apart). Steps 5–8 not walked: no music dialog on Android (DRA262611P0229), Generate would charge 6 credits. Locale reset to en-US after.",screenshots/TC-132-settings.png screenshots/TC-132-info.png screenshots/TC-132-export.png screenshots/TC-132-cancel.png,2026-11-25T11:53:48.162Z
+TC-133,MUI,MUI-JPN,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"JPN (ja-JP), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「AIGC ウォーターマークを削除」 (118–809 px, the longest of the five so far) with ⓘ right after it and the switch at the right edge, one line, ⓘ clear of the switch. Info sheet: 「AIGC ウォーターマーク」, body 「適用される法令や規制によっては、AI 生成コンテンツを公開する前に、ラベルやウォーターマークを付ける必要があります。この機能は、こうした要件への対応をサポートします。」 on four centred lines, 「OK」. Export dialog (「Project 11-25」, 0 credits): 「AIGC ウォーターマーク」, 「書き出したファイルには AIGC ウォーターマークが追加されます。 削除するには、[メニュー] > [設定] を開いてください。」 on four lines (dialog grows, nothing cut), checkbox 「今後は表示しません」 beside its box (unchecked), 「キャンセル」 / 「書き出し」 side by side. The body breaks 「ウォーターマーク」 so a line starts with 「ー」 (O-1, layout nit, not truncation). Don't show again string: 「今後は表示しません」, identical in both keys for JPN. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-133-settings.png screenshots/TC-133-info.png screenshots/TC-133-export.png screenshots/TC-133-cancel.png,2026-11-25T11:54:47.094Z
+TC-134,MUI,MUI-ESP,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"ESP (es-ES), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Quitar marca de agua AIGC」 (118–741 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Marca de agua AIGC」, body 「Según las leyes y normativas aplicables, es posible que debas etiquetar o aplicar una marca de agua al contenido generado por IA antes de compartirlo públicamente. Esta función está diseñada para ayudarte a cumplir esos requisitos.」 on five centred lines, 「Entendido」. Export dialog (「Project 11-25」, 0 credits): 「Marca de agua AIGC」, 「El archivo exportado incluirá una marca de agua AIGC. Para quitarla, ve a Menú > Configuración.」 on three lines, checkbox 「No mostrar de nuevo」 beside its box (unchecked), 「Cancelar」 / 「Exportar」 side by side. Doubt TD-9 (Quitar on the AIGC row under 「Eliminar marca de agua」). Don't show again string: 「No mostrar de nuevo」, identical in both keys for ESP. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-134-settings.png screenshots/TC-134-info.png screenshots/TC-134-export.png screenshots/TC-134-cancel.png,2026-11-25T11:55:44.478Z
+TC-135,MUI,MUI-KOR,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"KOR (ko-KR), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「AIGC 워터마크 제거」 (118–566 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC 워터마크」, body 「관련 법률과 규정에 따라 AI 생성 콘텐츠를 공개적으로 공유하기 전에 레이블이나 워터마크를 넣어야 할 수 있습니다. 이 기능은 그러한 요구 사항을 충족하는 데 도움이 됩니다.」 on four centred lines, 「알았음」 (TD-5 already raised). Export dialog (「Project 11-25」, 0 credits): 「AIGC 워터마크」, 「내보낸 파일에 AIGC 워터마크가 포함됩니다. 워터마크를 제거하려면 메뉴 > 설정으로 이동하세요.」 on three lines, checkbox 「이 메시지를 다시 표시하지 않습니다」 (the longest checkbox label so far, 97–828 px) beside its box inside the dialog (unchecked), 「취소」 / 「내보내기」 side by side. Both bodies wrap mid-word (O-2, layout nit, not truncation). The first Export tap was lost while the editor loaded (O-3), a second showed the dialog. Don't show again string: 「이 메시지를 다시 표시하지 않습니다」, identical in both keys for KOR. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-135-settings.png screenshots/TC-135-info.png screenshots/TC-135-export.png screenshots/TC-135-cancel.png,2026-11-25T11:57:17.264Z
+TC-136,MUI,MUI-DEU,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"DEU (de-DE), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「AIGC-Wasserzeichen entfernen」 (118–819 px, the longest row so far) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC-Wasserzeichen」, body 「Je nach geltenden Gesetzen und Vorschriften können Sie verpflichtet sein, KI-generierte Inhalte vor der öffentlichen Verbreitung zu kennzeichnen oder mit einem Wasserzeichen zu versehen. Diese Funktion hilft Ihnen dabei, die entsprechenden Anforderungen zu erfüllen.」 on six centred lines, 「OK」 (a Sony system-update heads-up covered the status bar at capture, not the sheet). Export dialog (「Project 11-25」, 0 credits): 「AIGC-Wasserzeichen」, 「Ihre exportierte Datei enthält ein AIGC-Wasserzeichen. Um das Wasserzeichen zu entfernen, gehen Sie zu Menü > Einstellungen.」 on four lines, checkbox 「Nicht mehr anzeigen」 beside its box (unchecked), 「Abbrechen」 / 「Exportieren」 side by side, both in full. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-136-settings.png screenshots/TC-136-info.png screenshots/TC-136-export.png screenshots/TC-136-cancel.png,2026-11-25T11:59:52.476Z
+TC-137,MUI,MUI-FRA,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"FRA (fr-FR), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Supprimer le filigrane AIGC」 (118–735 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Filigrane AIGC」, body 「Selon les lois et réglementations en vigueur, vous pourriez être tenu d'identifier ou d'apposer un filigrane sur le contenu généré par IA avant de le partager publiquement. Cette fonctionnalité est conçue pour vous aider à respecter ces obligations.」 on five centred lines, 「Compris」. Export dialog (「Project 11-25」, 0 credits): 「Filigrane AIGC」, 「Votre fichier exporté comportera un filigrane AIGC. Pour supprimer le filigrane, accédez à Menu > Paramètres.」 on four lines, checkbox 「Ne plus afficher ce message」 (97–728 px) beside its box inside the dialog (unchecked), 「Annuler」 / 「Exporter」 side by side. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-137-settings.png screenshots/TC-137-info.png screenshots/TC-137-export.png screenshots/TC-137-cancel.png,2026-11-25T12:00:56.402Z
+TC-138,MUI,MUI-ITA,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"ITA (it-IT), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Rimuovi Filigrana AI」 with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Filigrana AI」, body 「A seconda delle leggi e delle normative vigenti, potresti dover etichettare o apporre una filigrana sui contenuti generati dall'AI prima di condividerli pubblicamente. Questa funzione è pensata per aiutarti a rispettare tali requisiti.」 on five centred lines, 「Fatto」. Export dialog (「Project 11-25」, 0 credits): 「Filigrana AI」, 「Il file esportato includerà una filigrana AI. Per rimuoverla, vai su Menu > Impostazioni.」 on three lines (the path breaks after 「Menu >」, O-4, layout nit), checkbox 「Non mostrare più il messaggio」 (97–771 px) beside its box (unchecked), 「Annulla」 / 「Esporta」 side by side. Translation doubts already raised from the APK: TD-1 (AI for AIGC, title case; the neighbouring row reads 「Rimuovi filigrana」 in lower case), TD-8 (Fatto for Got it). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-138-settings.png screenshots/TC-138-info.png screenshots/TC-138-export.png screenshots/TC-138-cancel.png,2026-11-25T12:01:58.356Z
+TC-139,MUI,MUI-RUS,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"RUS (ru-RU), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Удалить водяной знак AIGC」 (118–790 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Водяной знак AIGC」, body 「В зависимости от применимых законов и нормативных актов вам может потребоваться пометить контент, созданный с помощью ИИ, или добавить на него водяной знак перед публикацией. Эта функция поможет вам выполнить эти требования.」 on six centred lines, 「Ясно」. Export dialog (「Project 11-25」, 0 credits): 「Водяной знак AIGC」, 「Экспортированный файл будет содержать водяной знак AIGC. Чтобы удалить водяной знак, выберите Меню > Настройки.」 on four lines, checkbox 「Больше не показывать」 beside its box (unchecked), 「Отмена」 / 「Экспорт」 side by side. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-139-settings.png screenshots/TC-139-info.png screenshots/TC-139-export.png screenshots/TC-139-cancel.png,2026-11-25T12:02:55.177Z
+TC-140,MUI,MUI-PTB,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"PTB (pt-BR), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Remover marca d'água AIGC」 (118–768 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Marca d'água AIGC」, body 「Dependendo das leis e regulamentações aplicáveis, pode ser necessário rotular ou aplicar marca d'água ao conteúdo gerado por IA antes de compartilhá-lo publicamente. Este recurso está disponível para ajudá-lo a cumprir esses requisitos.」 on five centred lines, 「Entendi」. Export dialog (「Project 11-25」, 0 credits): 「Marca d'água AIGC」, 「Seu arquivo exportado incluirá uma marca d'água AIGC. Para remover a marca d'água, acesse Menu > Configurações.」 on four lines, checkbox 「Não exibir mensagem de novo」 (97–767 px) beside its box (unchecked), 「Cancelar」 / 「Exportar」 side by side. Brazilian forms throughout (arquivo, Configurações, Seu). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-140-settings.png screenshots/TC-140-info.png screenshots/TC-140-export.png screenshots/TC-140-cancel.png,2026-11-25T12:03:51.994Z
+TC-141,MUI,MUI-NLD,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"NLD (nl-NL), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「AIGC-watermerk verwijderen」 with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC-watermerk」, body 「Afhankelijk van de toepasselijke wet- en regelgeving moet u mogelijk AI-gegenereerde inhoud labelen of van een watermerk voorzien voordat u deze openbaar deelt. Deze functie is bedoeld om u te helpen aan die vereisten te voldoen.」 on five centred lines, 「Begrepen」. Export dialog (「Project 11-25」, 0 credits): 「AIGC-watermerk」, 「Je geëxporteerde bestand krijgt een AIGC-watermerk. Ga naar Menu > Instellingen om het watermerk te verwijderen.」 on four lines, checkbox 「Niet' meer weergeven」 (97–599 px, unchecked) beside its box, 「Annuleren」 / 「Exporteren」 side by side. The checkbox text is key dont_show_message_again (weergeven) and shows the stray apostrophe on screen: a translation fault already counted in TC-130 (DRA262611P0286, cited), not truncation. u/je mix seen as TD-2. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-141-settings.png screenshots/TC-141-info.png screenshots/TC-141-export.png screenshots/TC-141-cancel.png,2026-11-25T12:06:32.040Z
+TC-142,MUI,MUI-IND,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"IND (id-ID), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Hapus Tanda Air AIGC」 with ⓘ right after it and the switch at the right edge, one line (the row above reads 「Hapus tanda air」 in sentence case). Info sheet: 「Tanda Air AIGC」, body 「Bergantung pada undang-undang dan peraturan yang berlaku, Anda mungkin perlu memberi label atau watermark pada konten buatan AI sebelum membagikannya secara publik. Fitur ini disediakan untuk membantu Anda memenuhi persyaratan tersebut.」 on six centred lines, 「Mengerti」 (English 「watermark」 in the body on screen: TD-3). Export dialog (「Project 11-25」, 0 credits): 「Tanda Air AIGC」, 「File yang Anda ekspor akan menyertakan tanda air AIGC. Untuk menghapus tanda air, buka Menu > Pengaturan.」 on four lines (path breaks after 「Menu >」, O-5), checkbox 「Jangan perlihatkan ini lagi」 (97–682 px, unchecked) beside its box, 「Batal」 / 「Ekspor」 side by side. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-142-settings.png screenshots/TC-142-info.png screenshots/TC-142-export.png screenshots/TC-142-cancel.png,2026-11-25T12:07:40.700Z
+TC-143,MUI,MUI-THA,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"THA (th-TH), Free acda.test7, switch Off. Every string shows in full, nothing overlaps; screenshot checked for Thai glyphs: tone marks and upper vowels (ตั้ง, น้ำ, ไม่ต้อง) and lower vowels (ปฏิบัติ) are drawn whole, none clipped by a line or box edge. Settings row: 「ลบลายน้ำ AIGC ออก」 with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「ลายน้ำ AIGC」, body 「ตามกฎหมายและข้อบังคับที่บังคับใช้ คุณอาจต้องติดป้ายกำกับหรือใส่ลายน้ำให้กับเนื้อหาที่สร้างโดย AI ก่อนแชร์ต่อสาธารณะ คุณสมบัตินี้มีไว้เพื่อช่วยให้คุณปฏิบัติตามข้อกำหนดดังกล่าว」 on four centred lines, 「เข้าใจแล้ว」. Export dialog (「Project 11-25」, 0 credits): 「ลายน้ำ AIGC」, 「ไฟล์ที่ส่งออกจะมีลายน้ำ AIGC หากต้องการลบลายน้ำ ให้ไปที่ เมนู > การตั้งค่า」 on three lines, checkbox 「ไม่ต้องแสดงข้อความนี้อีก」 (unchecked) beside its box, 「ยกเลิก」 / 「ส่งออก」 side by side. Lines break inside words (การตั้ง / ค่า alone on the last line, ติดป้าย / กำกับ, ข้อ / กำหนด): layout nit O-6, nothing lost. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-143-settings.png screenshots/TC-143-info.png screenshots/TC-143-export.png screenshots/TC-143-cancel.png,2026-11-25T12:12:38.149Z
+TC-144,MUI,MUI-MAY,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"MAY (ms-MY), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Keluarkan tera air AIGC」 with ⓘ right after it and the switch at the right edge, one line; the row above reads 「Alih keluar tera air」 (TD-10). Info sheet: 「Tera Air AIGC」, body 「Bergantung pada undang-undang dan peraturan yang berkenaan, anda mungkin perlu melabel atau meletakkan tera air pada kandungan yang dijana AI sebelum berkongsinya secara umum. Ciri ini disediakan untuk membantu anda memenuhi keperluan tersebut.」 on six centred lines, 「Faham」. Export dialog (「Project 11-25」, 0 credits): 「Tera Air AIGC」, 「Fail yang anda eksport akan mengandungi tera air AIGC. Untuk mengeluarkan tera air, pergi ke Menu > Tetapan.」 on four lines (path kept together), checkbox 「Jangan tunjukkan ini lagi」 (unchecked) beside its box, 「Batal」 / 「Eksport」 side by side. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-144-settings.png screenshots/TC-144-info.png screenshots/TC-144-export.png screenshots/TC-144-cancel.png,2026-11-25T12:12:38.271Z
+TC-145,MUI,MUI-HIN,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"HIN (hi-IN), Free acda.test7, switch Off. Every string shows in full, nothing overlaps; screenshot checked for Devanagari: headlines, matras and nuktas (वॉटरमार्क, हटाएँ, फ़ाइल, दिखाएं) drawn whole, none clipped. Settings row: 「AIGC वॉटरमार्क हटाएँ」 with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC वॉटरमार्क」, body 「लागू कानूनों और नियमों के अनुसार, AI-जनित सामग्री को सार्वजनिक रूप से साझा करने से पहले आपको उस पर लेबल या वॉटरमार्क लगाना पड़ सकता है. यह सुविधा इन आवश्यकताओं को पूरा करने में आपकी मदद के लिए दी गई है.」 on four centred lines, 「समझ गया」. Export dialog (「Project 11-25」, 0 credits): 「AIGC वॉटरमार्क」, 「आपकी एक्सपोर्ट की गई फ़ाइल में AIGC वॉटरमार्क शामिल होगा. वॉटरमार्क हटाने के लिए, मेनू > सेटिंग्स पर जाएँ.」 on three lines, checkbox 「यह संदेश मुझे फिर न दिखाएं」 (97–615 px, unchecked) beside its box, 「रद्द करें」 / 「निर्यात करें」 side by side (body says एक्सपोर्ट, button निर्यात: TD-11). First walk lost the Export tap while the editor loaded (O-7, as O-3); walked again in full and the dialog showed. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-145-settings.png screenshots/TC-145-info.png screenshots/TC-145-export.png screenshots/TC-145-cancel.png,2026-11-25T12:12:38.395Z
+TC-146,MUI,MUI-ESM,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"ESM (es-MX), Free acda.test7, switch Off. Every string shows in full, nothing overlaps. Settings row: 「Eliminar marca de agua AIGC」 with ⓘ right after it and the switch at the right edge, one line; the row above reads 「Eliminar marca de agua」 (same verb, unlike ESP TD-9). Info sheet: 「Marca de agua AIGC」, body 「Según las leyes y normativas aplicables, es posible que debas etiquetar o aplicar una marca de agua al contenido generado por IA antes de compartirlo públicamente. Esta función está diseñada para ayudarte a cumplir esos requisitos.」 on five centred lines, 「Entendido」. Export dialog (「Project 11-25」, 0 credits): 「Marca de agua AIGC」, 「El archivo exportado incluirá una marca de agua AIGC. Para eliminar la marca de agua, ve a Menú > Configuración.」 on four lines (path breaks before 「> Configuración」, O-5), checkbox 「No volver a mostrar」 (unchecked) beside its box, 「Cancelar」 / 「Exportar」 side by side (the page source read the buttons mid-animation, 104 px tall; the screenshot shows them at full size). Mexican tú forms (debas, ve a). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-146-settings.png screenshots/TC-146-info.png screenshots/TC-146-export.png screenshots/TC-146-cancel.png,2026-11-25T12:12:38.516Z
+TC-147,MUI,MUI-ARA,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Arabic is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+7. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+8. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+9. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+10. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"ARA (ar-SA), Free acda.test7, switch Off. Every string shows in full, nothing overlaps or is clipped at either edge; Arabic glyphs and diacritics (المُصدَّر, المولَّد) drawn whole. Settings row: 「إزالة العلامة المائية AIGC」 (118–612 px) with ⓘ and the switch at the right edge, one line. Info sheet: 「العلامة المائية AIGC」, body 「وفقاً للقوانين واللوائح المعمول بها، قد يلزمك وضع تسمية أو علامة مائية على المحتوى المولَّد بالذكاء الاصطناعي قبل مشاركته علناً. تتوفر هذه الميزة لمساعدتك على استيفاء هذه المتطلبات.」 on three centred lines, 「حسنًا」. Export dialog (「Project 11-25」, 0 credits): 「العلامة المائية AIGC」, 「سيتضمن الملف المُصدَّر علامة مائية AIGC. لإزالة العلامة المائية، انتقل إلى القائمة > الإعدادات.」 on two lines (path on one line), checkbox 「لا' تظهر مرة أخرى」 (97–455 px, unchecked) beside its box, 「إلغاء」 / 「تصدير」 side by side. The checkbox is key dont_show_message_again and shows the stray apostrophe on screen: a translation fault counted in TC-130 (DRA262611P0286, cited), not truncation. RTL (observation O-8, not a fail): text runs right-to-left inside each label, but the app layout is not mirrored: the Settings row keeps icon left, text, ⓘ, switch at the right; list chevrons point right; the checkbox box is on the left of its label; Cancel stays left, Export right; the system navigation bar is mirrored. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-147-settings.png screenshots/TC-147-info.png screenshots/TC-147-export.png screenshots/TC-147-cancel.png,2026-11-25T12:22:05.628Z
+TC-148,MUI,MUI-VIT,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"VIT (vi-VN), Free acda.test7, switch Off. Every string shows in full, nothing overlaps; Vietnamese stacked diacritics (Xóa, chìm, hiểu, Hủy, Xuất) drawn whole. Settings row: 「Xóa dấu chìm AIGC」 (118–581 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Dấu chìm AIGC」, body 「Tùy theo luật và quy định hiện hành, bạn có thể cần gắn nhãn hoặc dấu chìm cho nội dung do AI tạo trước khi chia sẻ công khai. Tính năng này được cung cấp để giúp bạn đáp ứng các yêu cầu đó.」 on four centred lines, 「Đã hiểu」. Export dialog (「Project 11-25」, 0 credits): 「Dấu chìm AIGC」, 「Tệp bạn xuất sẽ có dấu chìm AIGC. Để xóa dấu chìm, hãy vào Trình đơn > Cài đặt.」 on three lines (「Cài」 / 「đặt.」 split across lines, O-9), checkbox 「Không hiển thị lại」 (97–513 px, unchecked) beside its box, 「Hủy」 / 「Xuất」 side by side. Dấu chìm and Trình đơn > Cài đặt vs the menu's 「Trình Đơn」 / 「Cài Đặt」 seen on screen as raised in TD-4. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-148-settings.png screenshots/TC-148-info.png screenshots/TC-148-export.png screenshots/TC-148-cancel.png,2026-11-25T12:22:05.752Z
+TC-149,MUI,MUI-PLK,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"PLK (pl-PL), Free acda.test7, switch Off. Every string shows in full, nothing overlaps; Polish diacritics (Usuń, usunąć, przejdź, ułatwienie) drawn whole. Settings row: 「Usuń znak wodny AIGC」 (118–659 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「Znak wodny AIGC」, body 「Zgodnie z obowiązującymi przepisami prawnymi, przed publicznym udostępnieniem treści generowanych przez AI może być wymagane opatrzenie ich znakiem wodnym lub oznaczeniem. Ta funkcja ma na celu ułatwienie spełnienia tych wymogów.」 on six centred lines, 「Rozumiem」. Export dialog (「Project 11-25」, 0 credits): 「Znak wodny AIGC」, 「Wyeksportowany plik będzie zawierał znak wodny AIGC. Aby usunąć znak wodny, przejdź do Menu > Ustawienia.」 on four lines (path breaks before 「>」, O-9), checkbox 「Nie pokazuj ponownie」 (97–606 px, unchecked) beside its box, 「Anuluj」 / 「Eksport」 side by side (noun on the button, TD-7 seen on screen). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-149-settings.png screenshots/TC-149-info.png screenshots/TC-149-export.png screenshots/TC-149-cancel.png,2026-11-25T12:22:05.878Z
+TC-150,MUI,MUI-TRK,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"TRK (tr-TR), Free acda.test7, switch Off. Every string shows in full, nothing overlaps; dotted/dotless i and cedillas (İptal, Dışa, filigranı) drawn whole. Settings row: 「AIGC filigranını kaldır」 (118–614 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC filigranı」, body 「Geçerli yasa ve düzenlemelere bağlı olarak, AI tarafından oluşturulan içerikleri herkese açık olarak paylaşmadan önce etiketlemeniz veya filigran eklemeniz gerekebilir. Bu özellik, söz konusu gereksinimleri karşılamanıza yardımcı olmak için sunulmaktadır.」 on six centred lines, 「Anladım」. Export dialog (「Project 11-25」, 0 credits): 「AIGC filigranı」, 「Dışa aktarılan dosyanız bir AIGC filigranı içerecektir. Filigranı kaldırmak için Menü > Ayarlar'a gidin.」 on four lines (path kept together), checkbox 「Bir daha gösterme」 (97–536 px, unchecked) beside its box, 「İptal」 / 「Dışa aktar」 side by side. The checkbox is key dont_show_message_again: no stray apostrophe on screen (the apostrophe in ai_video_anime_checkbox does not reach this dialog), so TC-130's TRK condition does not apply. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-150-settings.png screenshots/TC-150-info.png screenshots/TC-150-export.png screenshots/TC-150-cancel.png,2026-11-25T12:22:06.001Z
+TC-151,MUI,MUI-FAR,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Persian is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+7. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+8. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+9. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+10. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"FAR (fa-IR), Free acda.test7, switch Off. Every string shows in full, nothing overlaps or is clipped at either edge; Persian glyphs and the zero-width non-joiner (می‌شود, اشتراک‌گذاری) render correctly. Settings row: 「حذف واترمارک AIGC」 (118–551 px) with ⓘ and the switch at the right edge, one line. Info sheet: 「واترمارک AIGC」, body 「بسته به قوانین و مقررات مربوط، ممکن است لازم باشد پیش از اشتراک‌گذاری عمومی محتوای تولیدشده توسط AI، روی آن برچسب یا واترمارک بگذارید. این قابلیت برای کمک به شما در رعایت این الزامات ارائه شده است.」 on four centred lines, 「متوجه شدم」. Export dialog (「Project 11-25」, 0 credits): 「واترمارک AIGC」, 「فایل خروجی شما شامل واترمارک AIGC می‌شود. برای حذف واترمارک، به منو > تنظیمات بروید.」 on two lines (path on one line), checkbox 「دیگر نمایش ندهید」 (97–466 px, unchecked) beside its box, 「لغو」 / 「خروجی」 side by side (noun on the button, TD-12). RTL (O-8, not a fail): text right-to-left inside labels, app layout not mirrored (row, chevrons, checkbox, buttons as in English). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-151-settings.png screenshots/TC-151-info.png screenshots/TC-151-export.png screenshots/TC-151-cancel.png,2026-11-25T12:22:06.124Z
+TC-152,MUI,MUI-HEB,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Hebrew is right-to-left: text runs from the right, the switch and ⓘ mirror, and no string is clipped at the left edge
+7. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+8. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+9. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+10. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"HEB (he-IL, Android iw), Free acda.test7, switch Off. Every string shows in full, nothing overlaps or is clipped at either edge. Settings row: 「הסרת סימן המים של AIGC」 (118–696 px, the longest of this segment) with ⓘ and the switch at the right edge, one line; the row above reads 「הסר סימן מים」 (TD-13). Info sheet: 「סימן המים של AIGC」, body 「בהתאם לחוקים ולתקנות החלים, ייתכן שיהיה צורך לסמן תוכן שנוצר באמצעות AI או להוסיף לו סימן מים לפני שמשתפים אותו בפומבי. התכונה הזו נועדה לעזור לעמוד בדרישות האלה.」 on four centred lines, 「הבנתי」. Export dialog (「Project 11-25」, 0 credits): 「סימן המים של AIGC」, 「הקובץ המיוצא יכלול סימן מים של AIGC. כדי להסיר את סימן המים, יש לעבור אל תפריט > הגדרות.」 on three lines (path kept together), checkbox 「אל להציג שוב」 (97–426 px, unchecked; ungrammatical, TD-6 seen on screen) beside its box, 「בטל」 / 「ייצא」 side by side. RTL (O-8, not a fail): layout not mirrored, as ARA/FAR. First walk: while the editor loaded, Android SystemUI (uid 10287, not the app) opened the Internet connectivity panel over the editor (O-10); Back closed it, the next Export tap showed the dialog (screenshots/TC-152-export2.png). Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-152-settings.png screenshots/TC-152-info.png screenshots/TC-152-export2.png screenshots/TC-152-cancel.png screenshots/waitfor-timeout-20261125-202014.png,2026-11-25T12:22:06.247Z
+TC-153,MUI,MUI-SVE,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"SVE (sv-SE), acda.test7 (Free), switch Off. Every string shows in full, nothing overlaps or is clipped. Settings row: 「Ta bort AIGC-vattenstämpel」 (118–752 px) with ⓘ right after it and the switch at the right edge, one line. Info sheet: 「AIGC-vattenstämpel」, body 「Beroende på gällande lagar och regler kan du behöva märka eller vattenstämpla AI-genererat innehåll innan du delar det offentligt. Den här funktionen finns för att hjälpa dig att uppfylla de kraven.」 on four centred lines, 「Förstått」. Export dialog (「Project 11-25」, 0 credits): 「AIGC-vattenstämpel」, 「Den exporterade filen innehåller en AIGC-vattenstämpel. Gå till Meny > Inställningar om du vill ta bort vattenstämpeln.」 on four lines (path kept together), checkbox 「Visa inte igen」 (97–440 px, unchecked, key dont_show_message_again) beside its box, 「Avbryt」 / 「Exportera」 side by side; Cancel, nothing exported. No translation doubts. Steps 5–8 not walked (no music dialog on Android, DRA262611P0229; Generate would charge). Locale reset to en-US after.",screenshots/TC-153-settings.png screenshots/TC-153-info.png screenshots/TC-153-export.png screenshots/TC-153-cancel.png,2026-11-25T12:30:54.804Z
+TC-154,MUI,MUI-DAN,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"DAN (da-DK), acda.test7 (Free), switch Off. Every string shows in full, nothing overlaps or is clipped. Settings row: 「Fjern AIGC-vandmærke」 (118–657 px) with ⓘ and the switch at the right edge, one line. Info sheet: 「AIGC-vandmærke」, body 「Afhængigt af gældende love og regler skal du muligvis mærke AI-genereret indhold eller forsyne det med et vandmærke, før du deler det offentligt. Denne funktion hjælper dig med at opfylde disse krav.」 on five centred lines (last 「krav.」 alone), 「Forstået」. Export dialog (「Project 11-25」, 0 credits): 「AIGC-vandmærke」, 「Din eksporterede fil indeholder et AIGC-vandmærke. Gå til Menu > Indstillinger for at fjerne vandmærket.」 on four lines (path kept together), checkbox 「Vis ikke igen」 (97–423 px, unchecked) beside its box, 「Annuller」 / 「Eksporter」 side by side; Cancel, nothing exported. No translation doubts. First walk: the ☰ tap was lost while Home loaded (recipe stopped at scrollto, O-13); second walk clean. Steps 5–8 not walked (DRA262611P0229). Locale reset to en-US after.",screenshots/TC-154-settings.png screenshots/TC-154-info.png screenshots/TC-154-export.png screenshots/TC-154-cancel.png screenshots/do-fail-20261125-202718.png,2026-11-25T12:30:54.926Z
+TC-155,MUI,MUI-NOR,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"NOR (nb-NO), acda.test7 (Free), switch Off. Every string shows in full, nothing overlaps or is clipped. Settings row: 「Fjern AIGC-vannmerke」 (118–641 px) with ⓘ and the switch at the right edge, one line. Info sheet: 「AIGC-vannmerke」, body 「Avhengig av gjeldende lover og forskrifter kan det hende du må merke AI-generert innhold eller legge vannmerke på det før du deler det offentlig. Denne funksjonen hjelper deg med å oppfylle disse kravene.」 on four centred lines, 「Forstått」. Export dialog (「Project 11-25」, 0 credits): 「AIGC-vannmerke」, 「Den eksporterte filen får et AIGC-vannmerke. Gå til Meny > Innstillinger for å fjerne vannmerket.」 on four lines (path kept together), checkbox 「Ikke vis igjen」 (97–429 px, unchecked) beside its box, 「Avbryt」 / 「Eksporter」 side by side; Cancel, nothing exported. No translation doubts. Steps 5–8 not walked (DRA262611P0229). Locale reset to en-US after.",screenshots/TC-155-settings.png screenshots/TC-155-info.png screenshots/TC-155-export.png screenshots/TC-155-cancel.png,2026-11-25T12:30:55.047Z
+TC-156,MUI,MUI-UKR,,MUI,"1. Open Home › ☰ Menu
+2. Scroll to 「Settings」 and read the 「Remove AIGC Watermark」 row (TC-001)
+3. Tap the ⓘ beside the row and read the sheet (TC-003)
+4. Tap 「Got it」 (TC-004)
+5. Open AI Music Generator
+6. Type a short description
+7. Tap 「Generate for ◆ 6」 and read the dialog (TC-054)
+8. Tap 「Cancel」 (TC-055: nothing is generated, no credits taken)
+9. Open the project with AI Anime content
+10. Tap 「Export」 and read the dialog (TC-084)
+11. Tap 「Cancel」 (TC-085)","1. Every string on every screen of the walk shows in full: none ends in 「…」, is cut at an edge or loses a line
+2. No string overlaps another element or runs out of its row, sheet, checkbox, button or dialog
+3. The Settings row keeps its ⓘ right after the text and its switch at the right edge, on the same line or wrapped, never pushed off the screen
+4. The dialog buttons (「Cancel」 and 「Generate」 / 「Export」) keep their size and place, side by side or stacked as in English, and the checkbox label stays beside its box
+5. Longest strings first: the info sheet body, the two dialog bodies, 「Remove AIGC Watermark」 in the Settings row
+6. Settings row: 「Remove AIGC Watermark」 beside its ⓘ and switch
+7. Info sheet: 「AIGC Watermark」, 「Depending on applicable laws and regulations, you may need to label or watermark AI-generated content before sharing it publicly. This feature is provided to help you meet those requirements.」, 「Got it」
+8. Music dialog: 「AIGC Watermark」, 「Your generated music will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Generate」 (no dialog on Android so far, DRA262611P0229: record it and go on)
+9. Export dialog: 「AIGC Watermark」, 「Your exported file will include an AIGC watermark. To remove the watermark, go to Menu > Settings.」, 「Don’t show again」, 「Cancel」, 「Export」",Pass,,"UKR (uk-UA), acda.test7 (Free), switch Off. Every string shows in full, nothing overlaps or is clipped; Cyrillic glyphs whole. Settings row: 「Видалити водяний знак AIGC」 (118–822 px, the longest of this segment) with ⓘ right after it and the switch at the right edge, one line; ⓘ and switch close (about 25 px apart) but not touching (O-12). Info sheet: 「Водяний знак AIGC」, body 「Залежно від чинних законів і нормативних актів вам може знадобитися позначити вміст, створений AI, або додати до нього водяний знак, перш ніж публічно ним ділитися. Ця функція допомагає дотримуватися цих вимог.」 on five centred lines, 「Зрозуміло」. Export dialog (「Project 11-25」, 0 credits): 「Водяний знак AIGC」, 「Експортований файл міститиме водяний знак AIGC. Щоб видалити водяний знак, відкрийте Меню > Налаштування.」 on four lines (path kept together), checkbox 「Не показувати знову」 (97–609 px, unchecked) beside its box, 「Скасувати」 / 「Експортувати」 side by side, labels inside their buttons; Cancel, nothing exported. No translation doubts. Steps 5–8 not walked (DRA262611P0229). Locale reset to en-US after.",screenshots/TC-156-settings.png screenshots/TC-156-info.png screenshots/TC-156-export.png screenshots/TC-156-cancel.png,2026-11-25T12:30:55.170Z

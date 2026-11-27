@@ -21,8 +21,10 @@ $D shot $ID-panel >/dev/null
 $D do /Users/ethanhsu/Desktop/pdr-spec-casebook/library/pdr/video-enhance/android/recipes/$STEPS $ID $ST $FPS $RES 2>&1 | grep -E "chip_|tv_charge|tv_selected_length |tv_enhance_cost|clicked|✓|✗|rror"
 [ ${PIPESTATUS[0]} -eq 0 ] || { echo 'price recipe failed: NOT tapping Enhance'; exit 1; }
 [ -n "$4" ] || exit 1
+# R4-g1 (2611251): never tap Enhance unless the whole 3.2 s video is selected again (「00:04」); a missed handle drag charged a 1 s task once
+$D els tv_selected_length | grep -q "| 00:04 |" || { echo "selection not back to the whole video: NOT tapping Enhance"; $D shot $ID-badsel >/dev/null; exit 1; }
 echo "enhance tap $(date +%T)"; $D id layout_enhance >/dev/null; sleep 1.5; $D texts | head -3 | tr '\n' ' '; echo; $D shot $ID-up >/dev/null
-$D waitfor "Processing|minutes left|Retry|View Details" --fail "Unlock Pro to Enhance|Upgrade to Pro|Not enough credits" --timeout 1800 || { echo "no Recent task"; $D shot $ID-stuck; exit 1; }
+$D waitfor "Processing|minutes left|Retry|View Details" --fail "Unlock Pro to Enhance|Upgrade to Pro|Not enough credits" --timeout 900 || { echo "no Recent task"; $D shot $ID-stuck; exit 1; }
 echo "recent task $(date +%T)"; $D shot $ID-task >/dev/null
 $S/waitdone 3000 || exit 1
 $D els "" | grep -E "duration|btn_action" | head -2 | cut -d'|' -f2,3 | tr '\n' ' '; echo
@@ -33,7 +35,16 @@ $D shot $ID-done >/dev/null
 $D tap 916 730 >/dev/null; sleep 4
 $D texts | grep -q "Save Result" || { sleep 3; $D tap 916 730 >/dev/null; sleep 4; }
 $D shot $ID-res >/dev/null
-$D tap 79 1678 >/dev/null; sleep 5; echo "play: $($D els tv_time | cut -d'|' -f3)"; $D shot $ID-play >/dev/null
+$D tap 79 1678 >/dev/null; sleep 5; PT=$($D els tv_time | cut -d'|' -f3); echo "play: $PT"; $D shot $ID-play >/dev/null
+# R4-g2 (O-24): a Result that keeps loading shows no time; reopen it (back, View again) before judging or saving, twice at most
+for TRY in 1 2; do
+  echo "$PT" | grep -q "[0-9]:[0-9]" && break
+  echo "result not loaded: reopen $TRY $(date +%T)"; $D shot $ID-noload$TRY >/dev/null
+  $D back >/dev/null; sleep 3; $D tap 916 730 >/dev/null; sleep 6
+  $D texts | grep -q "Save Result" || { sleep 3; $D tap 916 730 >/dev/null; sleep 5; }
+  $D tap 79 1678 >/dev/null; sleep 5; PT=$($D els tv_time | cut -d'|' -f3); echo "play: $PT"; $D shot $ID-play >/dev/null
+done
+echo "$PT" | grep -q "[0-9]:[0-9]" || { echo "RESULT NOT LOADED after two reopens: NOT saving"; exit 1; }
 $D id tv_segment_original >/dev/null; sleep 2; $D shot $ID-orig >/dev/null
 $D id tv_segment_result >/dev/null; sleep 1
 echo "save $(date +%T)"; $D id tool_save >/dev/null; sleep 0.3; $D shot $ID-toast >/dev/null

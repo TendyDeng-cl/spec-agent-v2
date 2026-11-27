@@ -1,0 +1,38 @@
+"function name"," CMS Field Name","欄位說明","Type","File Size","Mobile UI Shown","Web/PC UI Shown","","","","","","","","","","","","","","","","",""
+"GUID","guid","編號","","","","","","","","","","","","","","","","","","","","",""
+"Name","name","Template name","","","V","V","","","","","","","","","","","","","","","","",""
+"Content Version","contentVer","版號","","","","","","","","","","","","","","","","","","","","",""
+"Description","template_description","by language
+敘述template","","","V","V","","","","","","","","","","","","","","","","",""
+"Preview_image","preview_imageUrl","template preview image","","","V","V","","","","","","","","","","","","","","","","",""
+"Preview_mp4","preview_videoUrl","template preview page w/ sound","mp4","上限10mb","V","V","","","","","","","","","","","","","","","","",""
+"Sample Photo","sample_photoUrl","示意原本的照片","圖片上傳
+image","","V","V","","","","","","","","","","","","","","","","",""
+"Style ID","Styleid","讓server mapping template","","","","","","","","","","","","","","","","","","","","",""
+"Vendor","Vendor","Kling","","","","","","","","","","","","","","","","","","","","",""
+"Model","Model","kling-v3-omni","","","","","","","","","","","","","","","","","","","","",""
+"Mode","Mode","o3pro","","","","","","","","","","","","","","","","","","","","",""
+"Sound","audio_setting_toServer","none (關) / native (開且用AI gen)","","","","","","","","","","","","","","","","","","","","",""
+"Start Frame","start_frame_setting","user_input (user照片) / black_frame (AP需要動態生跟user resolution 一樣的黑圖) / none (不送圖)","String (user_input, black_frame, none)","","","","","","","","","","","","","","","","","","","",""
+"End Frame","end_frame_setting","user_input (user照片) / black_frame (AP需要動態生跟user resolution 一樣的黑圖) / none (不送圖)","String (user_input, black_frame, none)","","","","","","","","","","","","","","","","","","","",""
+"Reference Frame","reference_setting","user_input (user照片) / black_frame (AP需要動態生跟user resolution 一樣的黑圖) / none (不送圖)","String (user_input, black_frame, none)","","","","","","","","","","","","","","","","","","","",""
+"Aspect Ratio (show options on UI)","aspect_ratio_onUI","UI 讓 user 選擇","String array (9:16, 16:9, 1:1)","","","V","","","","","","","","","","","","","","","","",""
+"Aspect Ratio (options)","aspect_ratio_toServer","AP 選擇最接近 user input image 一個 aspect ratio 送 engine
+(不開option的產品可以直接送這個值)","String (9:16, 16:9, 1:1)","","","","","","","","","","","","","","","","","","","",""
+"Duration","video_duration","template 長度","integer","","","","","","","","","","","","","","","","","","","",""
+"","post_operation","音訊是否需要post operation = mix","String (mix, n/a )","","","","","","","","","","","","","","","","","","","",""
+"","sample_photo_1_1","1:1 sample photo","","","","","","","","","","","","","","","","","","","","",""
+"","sample_photo_16_9","16:9 sample photo","","","","","","","","","","","","","","","","","","","","",""
+"","sample_photo_9_16","9:16 sample photo","","","","","","","","","","","","","","","","","","","","",""
+"recommendSamples","recommend_samples","每個template對應的 recommendation/avoid (link) from recommendation page on CMS","","","","","","","","","","","","","","","","","","","","",""
+"Action_ID","Pattern","${Prefix}_${Quantity}_${Unit}_${Vendor}_${Attr1}_${Attr2}_${Attr3}","","","","","","","","","","","","","","","","","","","","",""
+"","Prefix","genvideo","","","","","","","","","","","","","","","","","","","","",""
+"","Quantity","1","","","","","","","","","","","","","","","","","","","","",""
+"","Unit","sec","","","","","","","","","","","","","","","","","","","","",""
+"","Vendor","kling","","","","","","","","","","","","","","","","","","","","",""
+"","Attr1 
+(mode)","o3pro","","","","","","","","","","","","","","","","","","","","",""
+"","Attr2
+(sound generator)","enable","","","","","","","","","","","","","","","","","","","","",""
+"","Attr3
+(resolution)","1080p","","","","","","","","","","","","","","","","","","","","",""

@@ -1,0 +1,1306 @@
+2026-11-25T11:46:49.680Z run-log set TC-130 Fail
+2026-11-25T11:47:46.937Z restart 
+2026-11-25T11:47:54.222Z build 
+2026-11-25T11:47:54.461Z locale status
+2026-11-25T11:47:54.646Z logcat start
+2026-11-25T11:47:57.859Z shot setup-launcher
+2026-11-25T11:47:59.394Z texts 
+2026-11-25T11:48:10.791Z lbl Mine
+2026-11-25T11:48:14.937Z texts setup-mine
+2026-11-25T11:48:20.518Z tap 107 2335
+2026-11-25T11:48:21.817Z tap 92 115
+2026-11-25T11:48:24.124Z scrollto Remove AIGC Watermark
+2026-11-25T11:48:25.053Z els AIGC
+2026-11-25T11:48:25.480Z shot setup-settings-en
+2026-11-25T11:48:29.803Z id remove_aigc_watermark_switch
+2026-11-25T11:48:32.703Z els remove_aigc_watermark_switch
+2026-11-25T11:48:33.603Z texts setup-switch-off
+2026-11-25T11:48:38.248Z back 
+2026-11-25T11:48:39.970Z tap 756 2335
+2026-11-25T11:48:42.277Z texts setup-projects
+2026-11-25T11:48:49.668Z tap 972 2335
+2026-11-25T11:48:52.003Z lbl My Artwork
+2026-11-25T11:48:55.815Z texts setup-artwork
+2026-11-25T11:49:09.209Z tap 270 828
+2026-11-25T11:49:12.489Z texts setup-i2v-result
+2026-11-25T11:49:15.999Z lbl View
+2026-11-25T11:49:20.500Z texts setup-i2v-view
+2026-11-25T11:49:25.431Z lbl Full Editor
+2026-11-25T11:49:31.923Z tapif Got it
+2026-11-25T11:49:32.854Z texts setup-editor
+2026-11-25T11:49:37.740Z lbl Export
+2026-11-25T11:49:41.230Z texts setup-export-en
+2026-11-25T11:49:42.348Z els 
+2026-11-25T11:49:49.944Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:49:51.391Z texts 
+2026-11-25T11:50:16.094Z lbl [AID]TimeLine_Home
+2026-11-25T11:50:20.050Z texts 
+2026-11-25T11:50:23.694Z tap 756 2335
+2026-11-25T11:50:25.959Z els 
+2026-11-25T11:50:30.150Z tap 107 2335
+2026-11-25T11:50:31.449Z tap 92 115
+2026-11-25T11:50:33.764Z scrollto remove_aigc_watermark_info
+2026-11-25T11:50:48.269Z id remove_aigc_watermark_info
+2026-11-25T11:50:51.024Z els 
+2026-11-25T11:51:09.041Z id button_aigc_watermark_info_got_it
+2026-11-25T11:51:10.550Z back 
+2026-11-25T11:51:12.267Z tap 756 2335
+2026-11-25T11:51:14.583Z id iv_thumbnail
+2026-11-25T11:51:21.020Z els Export
+2026-11-25T11:51:21.720Z els 
+2026-11-25T11:51:24.695Z id btn_save_menu
+2026-11-25T11:51:27.206Z els 
+2026-11-25T11:51:39.005Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:51:40.483Z lbl [AID]TimeLine_Home
+2026-11-25T11:51:43.219Z case TC-131
+2026-11-25T11:51:43.354Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-131 zh-Hant-TW 移除 A
+2026-11-25T11:51:43.355Z case TC-131
+2026-11-25T11:51:43.358Z launch --lang zh-Hant-TW
+2026-11-25T11:51:45.068Z wait 5
+2026-11-25T11:51:50.175Z locale status
+2026-11-25T11:51:50.300Z tapif [AID]IAP_Back
+2026-11-25T11:51:54.126Z tap 107 2335
+2026-11-25T11:51:54.337Z wait 1
+2026-11-25T11:51:55.399Z tap 92 115
+2026-11-25T11:51:55.546Z wait 2
+2026-11-25T11:51:57.604Z scrollto 移除 AIGC 浮水印
+2026-11-25T11:51:58.445Z texts TC-131-settings
+2026-11-25T11:52:01.346Z id remove_aigc_watermark_info
+2026-11-25T11:52:01.887Z wait 2
+2026-11-25T11:52:03.964Z texts TC-131-info
+2026-11-25T11:52:05.666Z id button_aigc_watermark_info_got_it
+2026-11-25T11:52:05.871Z wait 1
+2026-11-25T11:52:06.915Z back 
+2026-11-25T11:52:07.455Z wait 1
+2026-11-25T11:52:08.496Z tap 756 2335
+2026-11-25T11:52:08.578Z wait 2
+2026-11-25T11:52:10.615Z id iv_thumbnail
+2026-11-25T11:52:10.772Z wait 6
+2026-11-25T11:52:16.829Z tapif [AID]IAP_Back
+2026-11-25T11:52:17.550Z id btn_save_menu
+2026-11-25T11:52:17.741Z wait 2
+2026-11-25T11:52:19.775Z texts TC-131-export
+2026-11-25T11:52:20.899Z els help_disable_tip
+2026-11-25T11:52:21.010Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:52:21.220Z wait 1
+2026-11-25T11:52:22.268Z texts TC-131-cancel
+2026-11-25T11:52:23.676Z lbl [AID]TimeLine_Home
+2026-11-25T11:52:23.995Z wait 2
+2026-11-25T11:52:47.796Z locale reset
+2026-11-25T11:52:49.376Z locale status
+2026-11-25T11:52:49.591Z run-log set TC-131 Pass
+2026-11-25T11:52:53.734Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-132 zh-Hans-CN 删除 A
+2026-11-25T11:52:53.736Z case TC-132
+2026-11-25T11:52:53.739Z launch --lang zh-Hans-CN
+2026-11-25T11:52:59.656Z wait 5
+2026-11-25T11:53:04.715Z locale status
+2026-11-25T11:53:04.824Z tapif [AID]IAP_Back
+2026-11-25T11:53:05.544Z tap 107 2335
+2026-11-25T11:53:06.192Z wait 1
+2026-11-25T11:53:07.249Z tap 92 115
+2026-11-25T11:53:07.334Z wait 2
+2026-11-25T11:53:09.353Z scrollto 删除 AIGC 水印
+2026-11-25T11:53:10.297Z texts TC-132-settings
+2026-11-25T11:53:12.582Z id remove_aigc_watermark_info
+2026-11-25T11:53:12.944Z wait 2
+2026-11-25T11:53:14.988Z texts TC-132-info
+2026-11-25T11:53:15.628Z id button_aigc_watermark_info_got_it
+2026-11-25T11:53:15.755Z wait 1
+2026-11-25T11:53:16.795Z back 
+2026-11-25T11:53:17.268Z wait 1
+2026-11-25T11:53:18.309Z tap 756 2335
+2026-11-25T11:53:18.392Z wait 2
+2026-11-25T11:53:20.434Z id iv_thumbnail
+2026-11-25T11:53:20.601Z wait 6
+2026-11-25T11:53:26.636Z tapif [AID]IAP_Back
+2026-11-25T11:53:27.496Z id btn_save_menu
+2026-11-25T11:53:27.674Z wait 2
+2026-11-25T11:53:29.714Z texts TC-132-export
+2026-11-25T11:53:30.535Z els help_disable_tip
+2026-11-25T11:53:30.574Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:53:30.719Z wait 1
+2026-11-25T11:53:31.751Z texts TC-132-cancel
+2026-11-25T11:53:34.277Z lbl [AID]TimeLine_Home
+2026-11-25T11:53:34.876Z wait 2
+2026-11-25T11:53:47.289Z locale reset
+2026-11-25T11:53:48.163Z run-log set TC-132 Pass
+2026-11-25T11:53:48.296Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-133 ja-JP AIGC ウォータ
+2026-11-25T11:53:48.298Z case TC-133
+2026-11-25T11:53:48.300Z launch --lang ja-JP
+2026-11-25T11:53:50.446Z wait 5
+2026-11-25T11:53:55.503Z locale status
+2026-11-25T11:53:55.618Z tapif [AID]IAP_Back
+2026-11-25T11:53:57.509Z tap 107 2335
+2026-11-25T11:53:57.637Z wait 1
+2026-11-25T11:53:58.677Z tap 92 115
+2026-11-25T11:53:58.736Z wait 2
+2026-11-25T11:54:00.797Z scrollto AIGC ウォーターマークを削除
+2026-11-25T11:54:02.118Z texts TC-133-settings
+2026-11-25T11:54:04.066Z id remove_aigc_watermark_info
+2026-11-25T11:54:04.430Z wait 2
+2026-11-25T11:54:06.469Z texts TC-133-info
+2026-11-25T11:54:07.104Z id button_aigc_watermark_info_got_it
+2026-11-25T11:54:07.258Z wait 1
+2026-11-25T11:54:08.296Z back 
+2026-11-25T11:54:08.791Z wait 1
+2026-11-25T11:54:09.826Z tap 756 2335
+2026-11-25T11:54:09.929Z wait 2
+2026-11-25T11:54:11.967Z id iv_thumbnail
+2026-11-25T11:54:12.141Z wait 6
+2026-11-25T11:54:18.188Z tapif [AID]IAP_Back
+2026-11-25T11:54:19.057Z id btn_save_menu
+2026-11-25T11:54:19.300Z wait 2
+2026-11-25T11:54:21.339Z texts TC-133-export
+2026-11-25T11:54:22.170Z els help_disable_tip
+2026-11-25T11:54:22.210Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:54:22.357Z wait 1
+2026-11-25T11:54:23.398Z texts TC-133-cancel
+2026-11-25T11:54:24.990Z lbl [AID]TimeLine_Home
+2026-11-25T11:54:25.445Z wait 2
+2026-11-25T11:54:46.296Z locale reset
+2026-11-25T11:54:47.095Z run-log set TC-133 Pass
+2026-11-25T11:54:47.229Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-134 es-ES Quitar ma
+2026-11-25T11:54:47.231Z case TC-134
+2026-11-25T11:54:47.234Z launch --lang es-ES
+2026-11-25T11:54:49.147Z wait 5
+2026-11-25T11:54:54.214Z locale status
+2026-11-25T11:54:54.351Z tapif [AID]IAP_Back
+2026-11-25T11:54:57.687Z tap 107 2335
+2026-11-25T11:54:57.769Z wait 1
+2026-11-25T11:54:58.803Z tap 92 115
+2026-11-25T11:54:58.873Z wait 2
+2026-11-25T11:55:00.905Z scrollto Quitar marca de agua AIGC
+2026-11-25T11:55:01.703Z texts TC-134-settings
+2026-11-25T11:55:03.288Z id remove_aigc_watermark_info
+2026-11-25T11:55:03.683Z wait 2
+2026-11-25T11:55:05.711Z texts TC-134-info
+2026-11-25T11:55:06.332Z id button_aigc_watermark_info_got_it
+2026-11-25T11:55:06.459Z wait 1
+2026-11-25T11:55:07.495Z back 
+2026-11-25T11:55:07.970Z wait 1
+2026-11-25T11:55:09.007Z tap 756 2335
+2026-11-25T11:55:09.082Z wait 2
+2026-11-25T11:55:11.123Z id iv_thumbnail
+2026-11-25T11:55:11.289Z wait 6
+2026-11-25T11:55:17.340Z tapif [AID]IAP_Back
+2026-11-25T11:55:18.149Z id btn_save_menu
+2026-11-25T11:55:18.331Z wait 2
+2026-11-25T11:55:20.373Z texts TC-134-export
+2026-11-25T11:55:21.173Z els help_disable_tip
+2026-11-25T11:55:21.208Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:55:21.342Z wait 1
+2026-11-25T11:55:22.376Z texts TC-134-cancel
+2026-11-25T11:55:23.915Z lbl [AID]TimeLine_Home
+2026-11-25T11:55:24.267Z wait 2
+2026-11-25T11:55:43.775Z locale reset
+2026-11-25T11:55:44.480Z run-log set TC-134 Pass
+2026-11-25T11:55:44.614Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-135 ko-KR AIGC 워터마크
+2026-11-25T11:55:44.616Z case TC-135
+2026-11-25T11:55:44.619Z launch --lang ko-KR
+2026-11-25T11:55:46.170Z wait 5
+2026-11-25T11:55:51.192Z locale status
+2026-11-25T11:55:51.283Z tapif [AID]IAP_Back
+2026-11-25T11:55:53.447Z tap 107 2335
+2026-11-25T11:55:53.510Z wait 1
+2026-11-25T11:55:54.547Z tap 92 115
+2026-11-25T11:55:54.626Z wait 2
+2026-11-25T11:55:56.658Z scrollto AIGC 워터마크 제거
+2026-11-25T11:55:57.316Z texts TC-135-settings
+2026-11-25T11:55:58.688Z id remove_aigc_watermark_info
+2026-11-25T11:55:59.176Z wait 2
+2026-11-25T11:56:01.214Z texts TC-135-info
+2026-11-25T11:56:01.855Z id button_aigc_watermark_info_got_it
+2026-11-25T11:56:02.322Z wait 1
+2026-11-25T11:56:03.359Z back 
+2026-11-25T11:56:03.845Z wait 1
+2026-11-25T11:56:04.881Z tap 756 2335
+2026-11-25T11:56:04.964Z wait 2
+2026-11-25T11:56:07.002Z id iv_thumbnail
+2026-11-25T11:56:07.183Z wait 6
+2026-11-25T11:56:13.233Z tapif [AID]IAP_Back
+2026-11-25T11:56:14.233Z id btn_save_menu
+2026-11-25T11:56:15.525Z wait 2
+2026-11-25T11:56:17.558Z texts TC-135-export
+2026-11-25T11:56:19.293Z els help_disable_tip
+2026-11-25T11:56:19.596Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:56:26.905Z locale status
+2026-11-25T11:56:27.128Z texts TC-135-now
+2026-11-25T11:56:32.052Z id btn_save_menu
+2026-11-25T11:56:35.557Z texts TC-135-export
+2026-11-25T11:56:36.642Z els help_disable_tip
+2026-11-25T11:56:43.601Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:56:45.083Z texts TC-135-cancel
+2026-11-25T11:56:47.137Z lbl [AID]TimeLine_Home
+2026-11-25T11:56:50.008Z locale reset
+2026-11-25T11:56:50.650Z locale status
+2026-11-25T11:57:17.266Z run-log set TC-135 Pass
+2026-11-25T11:57:17.402Z pull-logs MUI-CHT-KOR
+2026-11-25T11:58:30.550Z restart 
+2026-11-25T11:58:44.080Z build 
+2026-11-25T11:58:44.339Z locale status
+2026-11-25T11:58:44.536Z logcat start
+2026-11-25T11:58:44.671Z texts DEU-start
+2026-11-25T11:58:51.871Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-136 de-DE AIGC-Wass
+2026-11-25T11:58:51.873Z case TC-136
+2026-11-25T11:58:51.875Z launch --lang de-DE
+2026-11-25T11:58:53.468Z wait 5
+2026-11-25T11:58:58.512Z locale status
+2026-11-25T11:58:58.618Z tapif [AID]IAP_Back
+2026-11-25T11:59:00.087Z tap 107 2335
+2026-11-25T11:59:00.809Z wait 1
+2026-11-25T11:59:01.851Z tap 92 115
+2026-11-25T11:59:01.913Z wait 2
+2026-11-25T11:59:03.961Z scrollto AIGC-Wasserzeichen entfernen
+2026-11-25T11:59:04.827Z texts TC-136-settings
+2026-11-25T11:59:06.497Z id remove_aigc_watermark_info
+2026-11-25T11:59:07.042Z wait 2
+2026-11-25T11:59:09.084Z texts TC-136-info
+2026-11-25T11:59:09.754Z id button_aigc_watermark_info_got_it
+2026-11-25T11:59:09.938Z wait 1
+2026-11-25T11:59:10.981Z back 
+2026-11-25T11:59:11.493Z wait 1
+2026-11-25T11:59:12.534Z tap 756 2335
+2026-11-25T11:59:12.625Z wait 2
+2026-11-25T11:59:14.669Z id iv_thumbnail
+2026-11-25T11:59:14.833Z wait 10
+2026-11-25T11:59:24.892Z tapif [AID]IAP_Back
+2026-11-25T11:59:25.956Z id btn_save_menu
+2026-11-25T11:59:26.233Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T11:59:26.348Z texts TC-136-export
+2026-11-25T11:59:27.591Z els help_disable_tip
+2026-11-25T11:59:27.686Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T11:59:27.857Z wait 1
+2026-11-25T11:59:28.901Z texts TC-136-cancel
+2026-11-25T11:59:30.497Z lbl [AID]TimeLine_Home
+2026-11-25T11:59:30.899Z wait 2
+2026-11-25T11:59:44.533Z locale reset
+2026-11-25T11:59:45.173Z locale status
+2026-11-25T11:59:52.478Z run-log set TC-136 Pass
+2026-11-25T11:59:52.613Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-137 fr-FR Supprimer
+2026-11-25T11:59:52.615Z case TC-137
+2026-11-25T11:59:52.618Z launch --lang fr-FR
+2026-11-25T11:59:54.345Z wait 5
+2026-11-25T11:59:59.425Z locale status
+2026-11-25T11:59:59.533Z tapif [AID]IAP_Back
+2026-11-25T12:00:00.343Z tap 107 2335
+2026-11-25T12:00:00.915Z wait 1
+2026-11-25T12:00:01.949Z tap 92 115
+2026-11-25T12:00:02.035Z wait 2
+2026-11-25T12:00:04.077Z scrollto Supprimer le filigrane AIGC
+2026-11-25T12:00:04.862Z texts TC-137-settings
+2026-11-25T12:00:06.610Z id remove_aigc_watermark_info
+2026-11-25T12:00:07.150Z wait 2
+2026-11-25T12:00:09.189Z texts TC-137-info
+2026-11-25T12:00:09.871Z id button_aigc_watermark_info_got_it
+2026-11-25T12:00:10.041Z wait 1
+2026-11-25T12:00:11.080Z back 
+2026-11-25T12:00:11.573Z wait 1
+2026-11-25T12:00:12.614Z tap 756 2335
+2026-11-25T12:00:12.702Z wait 2
+2026-11-25T12:00:14.745Z id iv_thumbnail
+2026-11-25T12:00:14.908Z wait 10
+2026-11-25T12:00:24.969Z tapif [AID]IAP_Back
+2026-11-25T12:00:25.562Z id btn_save_menu
+2026-11-25T12:00:25.757Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:00:25.864Z texts TC-137-export
+2026-11-25T12:00:27.186Z els help_disable_tip
+2026-11-25T12:00:27.232Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:00:27.959Z wait 1
+2026-11-25T12:00:29.001Z texts TC-137-cancel
+2026-11-25T12:00:30.915Z lbl [AID]TimeLine_Home
+2026-11-25T12:00:31.631Z wait 2
+2026-11-25T12:00:55.762Z locale reset
+2026-11-25T12:00:56.404Z run-log set TC-137 Pass
+2026-11-25T12:00:56.536Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-138 it-IT Rimuovi F
+2026-11-25T12:00:56.538Z case TC-138
+2026-11-25T12:00:56.541Z launch --lang it-IT
+2026-11-25T12:00:58.049Z wait 5
+2026-11-25T12:01:03.077Z locale status
+2026-11-25T12:01:03.207Z tapif [AID]IAP_Back
+2026-11-25T12:01:07.646Z tap 107 2335
+2026-11-25T12:01:07.717Z wait 1
+2026-11-25T12:01:08.762Z tap 92 115
+2026-11-25T12:01:08.860Z wait 2
+2026-11-25T12:01:10.898Z scrollto Rimuovi Filigrana AI
+2026-11-25T12:01:11.361Z texts TC-138-settings
+2026-11-25T12:01:12.552Z id remove_aigc_watermark_info
+2026-11-25T12:01:13.038Z wait 2
+2026-11-25T12:01:15.084Z texts TC-138-info
+2026-11-25T12:01:15.758Z id button_aigc_watermark_info_got_it
+2026-11-25T12:01:15.884Z wait 1
+2026-11-25T12:01:16.922Z back 
+2026-11-25T12:01:17.397Z wait 1
+2026-11-25T12:01:18.439Z tap 756 2335
+2026-11-25T12:01:18.529Z wait 2
+2026-11-25T12:01:20.573Z id iv_thumbnail
+2026-11-25T12:01:20.768Z wait 10
+2026-11-25T12:01:30.827Z tapif [AID]IAP_Back
+2026-11-25T12:01:31.889Z id btn_save_menu
+2026-11-25T12:01:32.121Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:01:32.242Z texts TC-138-export
+2026-11-25T12:01:33.514Z els help_disable_tip
+2026-11-25T12:01:33.559Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:01:33.735Z wait 1
+2026-11-25T12:01:34.774Z texts TC-138-cancel
+2026-11-25T12:01:36.456Z lbl [AID]TimeLine_Home
+2026-11-25T12:01:37.102Z wait 2
+2026-11-25T12:01:57.685Z locale reset
+2026-11-25T12:01:58.357Z run-log set TC-138 Pass
+2026-11-25T12:01:58.488Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-139 ru-RU Удалить в
+2026-11-25T12:01:58.490Z case TC-139
+2026-11-25T12:01:58.493Z launch --lang ru-RU
+2026-11-25T12:02:00.166Z wait 5
+2026-11-25T12:02:05.209Z locale status
+2026-11-25T12:02:05.273Z tapif [AID]IAP_Back
+2026-11-25T12:02:06.893Z tap 107 2335
+2026-11-25T12:02:07.224Z wait 1
+2026-11-25T12:02:08.262Z tap 92 115
+2026-11-25T12:02:08.344Z wait 2
+2026-11-25T12:02:10.385Z scrollto Удалить водяной знак AIGC
+2026-11-25T12:02:11.086Z texts TC-139-settings
+2026-11-25T12:02:12.689Z id remove_aigc_watermark_info
+2026-11-25T12:02:13.257Z wait 2
+2026-11-25T12:02:15.300Z texts TC-139-info
+2026-11-25T12:02:15.946Z id button_aigc_watermark_info_got_it
+2026-11-25T12:02:16.120Z wait 1
+2026-11-25T12:02:17.158Z back 
+2026-11-25T12:02:17.647Z wait 1
+2026-11-25T12:02:18.690Z tap 756 2335
+2026-11-25T12:02:18.774Z wait 2
+2026-11-25T12:02:20.816Z id iv_thumbnail
+2026-11-25T12:02:21.001Z wait 10
+2026-11-25T12:02:31.050Z tapif [AID]IAP_Back
+2026-11-25T12:02:32.007Z id btn_save_menu
+2026-11-25T12:02:32.205Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:02:32.317Z texts TC-139-export
+2026-11-25T12:02:33.595Z els help_disable_tip
+2026-11-25T12:02:33.708Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:02:33.910Z wait 1
+2026-11-25T12:02:34.947Z texts TC-139-cancel
+2026-11-25T12:02:36.427Z lbl [AID]TimeLine_Home
+2026-11-25T12:02:36.803Z wait 2
+2026-11-25T12:02:54.591Z locale reset
+2026-11-25T12:02:55.179Z run-log set TC-139 Pass
+2026-11-25T12:02:55.312Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-140 pt-BR Remover m
+2026-11-25T12:02:55.314Z case TC-140
+2026-11-25T12:02:55.317Z launch --lang pt-BR
+2026-11-25T12:02:56.948Z wait 5
+2026-11-25T12:03:01.990Z locale status
+2026-11-25T12:03:02.109Z tapif [AID]IAP_Back
+2026-11-25T12:03:03.868Z tap 107 2335
+2026-11-25T12:03:03.952Z wait 1
+2026-11-25T12:03:05.003Z tap 92 115
+2026-11-25T12:03:05.082Z wait 2
+2026-11-25T12:03:07.125Z scrollto Remover marca d'água AIGC
+2026-11-25T12:03:07.746Z texts TC-140-settings
+2026-11-25T12:03:08.993Z id remove_aigc_watermark_info
+2026-11-25T12:03:09.429Z wait 2
+2026-11-25T12:03:11.470Z texts TC-140-info
+2026-11-25T12:03:12.091Z id button_aigc_watermark_info_got_it
+2026-11-25T12:03:12.208Z wait 1
+2026-11-25T12:03:13.247Z back 
+2026-11-25T12:03:13.725Z wait 1
+2026-11-25T12:03:14.763Z tap 756 2335
+2026-11-25T12:03:14.847Z wait 2
+2026-11-25T12:03:16.886Z id iv_thumbnail
+2026-11-25T12:03:17.058Z wait 10
+2026-11-25T12:03:27.094Z tapif [AID]IAP_Back
+2026-11-25T12:03:27.802Z id btn_save_menu
+2026-11-25T12:03:28.006Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:03:28.641Z texts TC-140-export
+2026-11-25T12:03:29.545Z els help_disable_tip
+2026-11-25T12:03:29.590Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:03:29.720Z wait 1
+2026-11-25T12:03:30.755Z texts TC-140-cancel
+2026-11-25T12:03:32.472Z lbl [AID]TimeLine_Home
+2026-11-25T12:03:33.040Z wait 2
+2026-11-25T12:03:51.115Z locale reset
+2026-11-25T12:03:51.790Z locale status
+2026-11-25T12:03:51.996Z run-log set TC-140 Pass
+2026-11-25T12:03:52.117Z pull-logs MUI-DEU-PTB
+2026-11-25T12:03:55.384Z pull-logs MUI-DEU-PTB
+2026-11-25T12:03:59.635Z pull-logs MUI-DEU-PTB
+2026-11-25T12:05:00.083Z restart 
+2026-11-25T12:05:07.130Z status 
+2026-11-25T12:05:07.624Z logcat start
+2026-11-25T12:05:07.761Z locale status
+2026-11-25T12:05:07.952Z build 
+2026-11-25T12:05:11.614Z texts seg4-start
+2026-11-25T12:05:17.790Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-141 nl-NL AIGC-wate
+2026-11-25T12:05:17.791Z case TC-141
+2026-11-25T12:05:17.794Z launch --lang nl-NL
+2026-11-25T12:05:19.396Z wait 5
+2026-11-25T12:05:24.426Z locale status
+2026-11-25T12:05:24.533Z tapif [AID]IAP_Back
+2026-11-25T12:05:24.930Z tap 107 2335
+2026-11-25T12:05:25.345Z wait 1
+2026-11-25T12:05:26.367Z tap 92 115
+2026-11-25T12:05:26.435Z wait 2
+2026-11-25T12:05:28.455Z scrollto AIGC-watermerk verwijderen
+2026-11-25T12:05:29.557Z texts TC-141-settings
+2026-11-25T12:05:31.264Z id remove_aigc_watermark_info
+2026-11-25T12:05:31.833Z wait 2
+2026-11-25T12:05:33.873Z texts TC-141-info
+2026-11-25T12:05:34.507Z id button_aigc_watermark_info_got_it
+2026-11-25T12:05:34.658Z wait 1
+2026-11-25T12:05:35.702Z back 
+2026-11-25T12:05:36.199Z wait 1
+2026-11-25T12:05:37.239Z tap 756 2335
+2026-11-25T12:05:37.332Z wait 2
+2026-11-25T12:05:39.379Z id iv_thumbnail
+2026-11-25T12:05:39.575Z wait 10
+2026-11-25T12:05:49.633Z tapif [AID]IAP_Back
+2026-11-25T12:05:50.652Z id btn_save_menu
+2026-11-25T12:05:50.855Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:05:51.508Z texts TC-141-export
+2026-11-25T12:05:52.281Z els help_disable_tip
+2026-11-25T12:05:52.384Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:05:52.542Z wait 1
+2026-11-25T12:05:53.584Z texts TC-141-cancel
+2026-11-25T12:05:55.299Z lbl [AID]TimeLine_Home
+2026-11-25T12:05:55.906Z wait 2
+2026-11-25T12:06:01.323Z locale reset
+2026-11-25T12:06:01.981Z locale status
+2026-11-25T12:06:32.042Z run-log set TC-141 Pass
+2026-11-25T12:06:32.181Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-142 id-ID Hapus Tan
+2026-11-25T12:06:32.182Z case TC-142
+2026-11-25T12:06:32.185Z launch --lang id-ID
+2026-11-25T12:06:33.986Z wait 5
+2026-11-25T12:06:39.048Z locale status
+2026-11-25T12:06:39.147Z tapif [AID]IAP_Back
+2026-11-25T12:06:44.697Z tap 107 2335
+2026-11-25T12:06:44.788Z wait 1
+2026-11-25T12:06:45.826Z tap 92 115
+2026-11-25T12:06:45.889Z wait 2
+2026-11-25T12:06:47.941Z scrollto Hapus Tanda Air AIGC
+2026-11-25T12:06:48.913Z texts TC-142-settings
+2026-11-25T12:06:50.679Z id remove_aigc_watermark_info
+2026-11-25T12:06:51.250Z wait 2
+2026-11-25T12:06:53.292Z texts TC-142-info
+2026-11-25T12:06:53.954Z id button_aigc_watermark_info_got_it
+2026-11-25T12:06:54.077Z wait 1
+2026-11-25T12:06:55.121Z back 
+2026-11-25T12:06:55.627Z wait 1
+2026-11-25T12:06:56.670Z tap 756 2335
+2026-11-25T12:06:56.745Z wait 2
+2026-11-25T12:06:58.794Z id iv_thumbnail
+2026-11-25T12:06:58.991Z wait 10
+2026-11-25T12:07:09.039Z tapif [AID]IAP_Back
+2026-11-25T12:07:10.171Z id btn_save_menu
+2026-11-25T12:07:10.454Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:07:11.103Z texts TC-142-export
+2026-11-25T12:07:11.878Z els help_disable_tip
+2026-11-25T12:07:11.932Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:07:12.051Z wait 1
+2026-11-25T12:07:13.090Z texts TC-142-cancel
+2026-11-25T12:07:15.754Z lbl [AID]TimeLine_Home
+2026-11-25T12:07:19.895Z wait 2
+2026-11-25T12:07:22.119Z locale reset
+2026-11-25T12:07:40.702Z run-log set TC-142 Pass
+2026-11-25T12:07:40.840Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-143 th-TH ลบลายน้ำ 
+2026-11-25T12:07:40.841Z case TC-143
+2026-11-25T12:07:40.844Z launch --lang th-TH
+2026-11-25T12:07:42.529Z wait 5
+2026-11-25T12:07:47.616Z locale status
+2026-11-25T12:07:47.744Z tapif [AID]IAP_Back
+2026-11-25T12:07:53.247Z tap 107 2335
+2026-11-25T12:07:53.347Z wait 1
+2026-11-25T12:07:54.390Z tap 92 115
+2026-11-25T12:07:54.449Z wait 2
+2026-11-25T12:07:56.491Z scrollto ลบลายน้ำ AIGC ออก
+2026-11-25T12:07:57.046Z texts TC-143-settings
+2026-11-25T12:07:58.586Z id remove_aigc_watermark_info
+2026-11-25T12:07:59.040Z wait 2
+2026-11-25T12:08:01.084Z texts TC-143-info
+2026-11-25T12:08:01.745Z id button_aigc_watermark_info_got_it
+2026-11-25T12:08:02.669Z wait 1
+2026-11-25T12:08:03.710Z back 
+2026-11-25T12:08:04.204Z wait 1
+2026-11-25T12:08:05.242Z tap 756 2335
+2026-11-25T12:08:05.326Z wait 2
+2026-11-25T12:08:07.369Z id iv_thumbnail
+2026-11-25T12:08:07.554Z wait 10
+2026-11-25T12:08:17.604Z tapif [AID]IAP_Back
+2026-11-25T12:08:18.601Z id btn_save_menu
+2026-11-25T12:08:18.817Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:08:18.965Z texts TC-143-export
+2026-11-25T12:08:20.201Z els help_disable_tip
+2026-11-25T12:08:20.308Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:08:20.458Z wait 1
+2026-11-25T12:08:21.503Z texts TC-143-cancel
+2026-11-25T12:08:23.080Z lbl [AID]TimeLine_Home
+2026-11-25T12:08:23.565Z wait 2
+2026-11-25T12:08:25.787Z locale reset
+2026-11-25T12:08:26.428Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-144 ms-MY Keluarkan
+2026-11-25T12:08:26.430Z case TC-144
+2026-11-25T12:08:26.433Z launch --lang ms-MY
+2026-11-25T12:08:27.915Z wait 5
+2026-11-25T12:08:32.957Z locale status
+2026-11-25T12:08:33.126Z tapif [AID]IAP_Back
+2026-11-25T12:08:35.754Z tap 107 2335
+2026-11-25T12:08:35.841Z wait 1
+2026-11-25T12:08:36.870Z tap 92 115
+2026-11-25T12:08:36.965Z wait 2
+2026-11-25T12:08:39.003Z scrollto Keluarkan tera air AIGC
+2026-11-25T12:08:39.759Z texts TC-144-settings
+2026-11-25T12:08:41.178Z id remove_aigc_watermark_info
+2026-11-25T12:08:41.787Z wait 2
+2026-11-25T12:08:43.831Z texts TC-144-info
+2026-11-25T12:08:44.479Z id button_aigc_watermark_info_got_it
+2026-11-25T12:08:44.642Z wait 1
+2026-11-25T12:08:45.681Z back 
+2026-11-25T12:08:46.174Z wait 1
+2026-11-25T12:08:47.213Z tap 756 2335
+2026-11-25T12:08:47.298Z wait 2
+2026-11-25T12:08:49.335Z id iv_thumbnail
+2026-11-25T12:08:49.505Z wait 10
+2026-11-25T12:08:59.560Z tapif [AID]IAP_Back
+2026-11-25T12:09:00.504Z id btn_save_menu
+2026-11-25T12:09:00.675Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:09:00.795Z texts TC-144-export
+2026-11-25T12:09:02.037Z els help_disable_tip
+2026-11-25T12:09:02.083Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:09:02.281Z wait 1
+2026-11-25T12:09:03.320Z texts TC-144-cancel
+2026-11-25T12:09:04.984Z lbl [AID]TimeLine_Home
+2026-11-25T12:09:05.351Z wait 2
+2026-11-25T12:09:07.575Z locale reset
+2026-11-25T12:09:08.300Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-145 hi-IN AIGC वॉटर
+2026-11-25T12:09:08.302Z case TC-145
+2026-11-25T12:09:08.304Z launch --lang hi-IN
+2026-11-25T12:09:09.672Z wait 5
+2026-11-25T12:09:14.718Z locale status
+2026-11-25T12:09:14.900Z tapif [AID]IAP_Back
+2026-11-25T12:09:17.428Z tap 107 2335
+2026-11-25T12:09:17.506Z wait 1
+2026-11-25T12:09:18.547Z tap 92 115
+2026-11-25T12:09:18.621Z wait 2
+2026-11-25T12:09:20.664Z scrollto AIGC वॉटरमार्क हटाएँ
+2026-11-25T12:09:21.264Z texts TC-145-settings
+2026-11-25T12:09:24.230Z id remove_aigc_watermark_info
+2026-11-25T12:09:24.606Z wait 2
+2026-11-25T12:09:26.644Z texts TC-145-info
+2026-11-25T12:09:27.814Z id button_aigc_watermark_info_got_it
+2026-11-25T12:09:28.001Z wait 1
+2026-11-25T12:09:29.041Z back 
+2026-11-25T12:09:29.541Z wait 1
+2026-11-25T12:09:30.574Z tap 756 2335
+2026-11-25T12:09:30.653Z wait 2
+2026-11-25T12:09:32.690Z id iv_thumbnail
+2026-11-25T12:09:32.862Z wait 10
+2026-11-25T12:09:42.902Z tapif [AID]IAP_Back
+2026-11-25T12:09:43.444Z id btn_save_menu
+2026-11-25T12:09:44.704Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:09:58.007Z locale reset
+2026-11-25T12:09:58.717Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-146 es-MX Eliminar 
+2026-11-25T12:09:58.718Z case TC-146
+2026-11-25T12:09:58.721Z launch --lang es-MX
+2026-11-25T12:10:00.424Z wait 5
+2026-11-25T12:10:05.450Z locale status
+2026-11-25T12:10:05.562Z tapif [AID]IAP_Back
+2026-11-25T12:10:08.625Z tap 107 2335
+2026-11-25T12:10:09.421Z wait 1
+2026-11-25T12:10:10.467Z tap 92 115
+2026-11-25T12:10:10.554Z wait 2
+2026-11-25T12:10:12.581Z scrollto Eliminar marca de agua AIGC
+2026-11-25T12:10:13.453Z texts TC-146-settings
+2026-11-25T12:10:16.098Z id remove_aigc_watermark_info
+2026-11-25T12:10:17.509Z wait 2
+2026-11-25T12:10:19.543Z texts TC-146-info
+2026-11-25T12:10:20.715Z id button_aigc_watermark_info_got_it
+2026-11-25T12:10:20.875Z wait 1
+2026-11-25T12:10:21.906Z back 
+2026-11-25T12:10:22.405Z wait 1
+2026-11-25T12:10:23.448Z tap 756 2335
+2026-11-25T12:10:23.514Z wait 2
+2026-11-25T12:10:25.548Z id iv_thumbnail
+2026-11-25T12:10:25.704Z wait 10
+2026-11-25T12:10:35.758Z tapif [AID]IAP_Back
+2026-11-25T12:10:36.650Z id btn_save_menu
+2026-11-25T12:10:36.855Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:10:36.972Z texts TC-146-export
+2026-11-25T12:10:38.360Z els help_disable_tip
+2026-11-25T12:10:38.396Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:10:38.526Z wait 1
+2026-11-25T12:10:39.561Z texts TC-146-cancel
+2026-11-25T12:10:41.251Z lbl [AID]TimeLine_Home
+2026-11-25T12:10:41.733Z wait 2
+2026-11-25T12:10:43.954Z locale reset
+2026-11-25T12:11:00.420Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-145 hi-IN AIGC वॉटर
+2026-11-25T12:11:00.422Z case TC-145
+2026-11-25T12:11:00.425Z launch --lang hi-IN
+2026-11-25T12:11:02.178Z wait 5
+2026-11-25T12:11:07.277Z locale status
+2026-11-25T12:11:07.388Z tapif [AID]IAP_Back
+2026-11-25T12:11:15.181Z tap 107 2335
+2026-11-25T12:11:15.271Z wait 1
+2026-11-25T12:11:16.307Z tap 92 115
+2026-11-25T12:11:16.388Z wait 2
+2026-11-25T12:11:18.425Z scrollto AIGC वॉटरमार्क हटाएँ
+2026-11-25T12:11:19.096Z texts TC-145-settings
+2026-11-25T12:11:21.068Z id remove_aigc_watermark_info
+2026-11-25T12:11:22.092Z wait 2
+2026-11-25T12:11:24.127Z texts TC-145-info
+2026-11-25T12:11:24.852Z id button_aigc_watermark_info_got_it
+2026-11-25T12:11:24.980Z wait 1
+2026-11-25T12:11:26.012Z back 
+2026-11-25T12:11:26.507Z wait 1
+2026-11-25T12:11:27.543Z tap 756 2335
+2026-11-25T12:11:27.619Z wait 2
+2026-11-25T12:11:29.656Z id iv_thumbnail
+2026-11-25T12:11:29.824Z wait 10
+2026-11-25T12:11:39.873Z tapif [AID]IAP_Back
+2026-11-25T12:11:40.808Z id btn_save_menu
+2026-11-25T12:11:40.923Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:11:41.050Z texts TC-145-export
+2026-11-25T12:11:42.336Z els help_disable_tip
+2026-11-25T12:11:42.422Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:11:42.555Z wait 1
+2026-11-25T12:11:43.594Z texts TC-145-cancel
+2026-11-25T12:11:45.435Z lbl [AID]TimeLine_Home
+2026-11-25T12:11:46.070Z wait 2
+2026-11-25T12:11:48.290Z locale reset
+2026-11-25T12:12:38.151Z run-log set TC-143 Pass
+2026-11-25T12:12:38.273Z run-log set TC-144 Pass
+2026-11-25T12:12:38.396Z run-log set TC-145 Pass
+2026-11-25T12:12:38.517Z run-log set TC-146 Pass
+2026-11-25T12:12:48.828Z pull-logs MUI-NLD-ESM
+2026-11-25T12:13:48.498Z restart 
+2026-11-25T12:13:55.671Z status 
+2026-11-25T12:13:56.196Z build 
+2026-11-25T12:13:56.430Z logcat start
+2026-11-25T12:13:56.563Z locale status
+2026-11-25T12:13:56.755Z texts seg5-start
+2026-11-25T12:14:19.219Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-147 ar-SA إزالة الع
+2026-11-25T12:14:19.221Z case TC-147
+2026-11-25T12:14:19.224Z launch --lang ar-SA
+2026-11-25T12:14:20.805Z wait 5
+2026-11-25T12:14:25.889Z locale status
+2026-11-25T12:14:26.042Z tapif [AID]IAP_Back
+2026-11-25T12:14:27.340Z tap 107 2335
+2026-11-25T12:14:27.594Z wait 1
+2026-11-25T12:14:28.615Z tap 92 115
+2026-11-25T12:14:28.681Z wait 2
+2026-11-25T12:14:30.740Z scrollto إزالة العلامة المائية AIGC
+2026-11-25T12:14:31.184Z texts TC-147-settings
+2026-11-25T12:14:32.681Z id remove_aigc_watermark_info
+2026-11-25T12:14:32.919Z wait 2
+2026-11-25T12:14:34.938Z texts TC-147-info
+2026-11-25T12:14:36.600Z id button_aigc_watermark_info_got_it
+2026-11-25T12:14:38.582Z wait 1
+2026-11-25T12:14:39.675Z back 
+2026-11-25T12:14:40.302Z wait 1
+2026-11-25T12:14:41.325Z tap 756 2335
+2026-11-25T12:14:41.382Z wait 2
+2026-11-25T12:14:43.436Z id iv_thumbnail
+2026-11-25T12:14:43.637Z wait 10
+2026-11-25T12:14:53.681Z tapif [AID]IAP_Back
+2026-11-25T12:14:54.771Z id btn_save_menu
+2026-11-25T12:14:55.000Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:14:55.133Z texts TC-147-export
+2026-11-25T12:14:57.008Z els help_disable_tip
+2026-11-25T12:14:57.155Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:14:57.339Z wait 1
+2026-11-25T12:14:58.368Z texts TC-147-cancel
+2026-11-25T12:15:00.494Z lbl [AID]TimeLine_Home
+2026-11-25T12:15:00.911Z wait 2
+2026-11-25T12:15:16.624Z locale reset
+2026-11-25T12:15:18.176Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-148 vi-VN Xóa dấu c
+2026-11-25T12:15:18.179Z case TC-148
+2026-11-25T12:15:18.181Z launch --lang vi-VN
+2026-11-25T12:15:21.759Z wait 5
+2026-11-25T12:15:26.836Z locale status
+2026-11-25T12:15:26.962Z tapif [AID]IAP_Back
+2026-11-25T12:15:29.597Z tap 107 2335
+2026-11-25T12:15:29.920Z wait 1
+2026-11-25T12:15:30.946Z tap 92 115
+2026-11-25T12:15:31.037Z wait 2
+2026-11-25T12:15:33.094Z scrollto Xóa dấu chìm AIGC
+2026-11-25T12:15:34.609Z texts TC-148-settings
+2026-11-25T12:15:38.936Z id remove_aigc_watermark_info
+2026-11-25T12:15:39.850Z wait 2
+2026-11-25T12:15:41.915Z texts TC-148-info
+2026-11-25T12:15:44.104Z id button_aigc_watermark_info_got_it
+2026-11-25T12:15:44.392Z wait 1
+2026-11-25T12:15:45.442Z back 
+2026-11-25T12:15:46.146Z wait 1
+2026-11-25T12:15:47.187Z tap 756 2335
+2026-11-25T12:15:47.333Z wait 2
+2026-11-25T12:15:49.367Z id iv_thumbnail
+2026-11-25T12:15:49.558Z wait 10
+2026-11-25T12:15:59.632Z tapif [AID]IAP_Back
+2026-11-25T12:16:00.669Z id btn_save_menu
+2026-11-25T12:16:00.890Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:16:03.123Z texts TC-148-export
+2026-11-25T12:16:04.641Z els help_disable_tip
+2026-11-25T12:16:04.700Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:16:04.882Z wait 1
+2026-11-25T12:16:05.919Z texts TC-148-cancel
+2026-11-25T12:16:07.757Z lbl [AID]TimeLine_Home
+2026-11-25T12:16:08.359Z wait 2
+2026-11-25T12:16:26.611Z locale reset
+2026-11-25T12:16:27.858Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-149 pl-PL Usuń znak
+2026-11-25T12:16:27.860Z case TC-149
+2026-11-25T12:16:27.863Z launch --lang pl-PL
+2026-11-25T12:16:30.057Z wait 5
+2026-11-25T12:16:35.189Z locale status
+2026-11-25T12:16:35.371Z tapif [AID]IAP_Back
+2026-11-25T12:16:41.364Z tap 107 2335
+2026-11-25T12:16:41.502Z wait 1
+2026-11-25T12:16:42.534Z tap 92 115
+2026-11-25T12:16:42.617Z wait 2
+2026-11-25T12:16:44.657Z scrollto Usuń znak wodny AIGC
+2026-11-25T12:16:45.525Z texts TC-149-settings
+2026-11-25T12:16:48.169Z id remove_aigc_watermark_info
+2026-11-25T12:16:48.682Z wait 2
+2026-11-25T12:16:50.724Z texts TC-149-info
+2026-11-25T12:16:51.483Z id button_aigc_watermark_info_got_it
+2026-11-25T12:16:52.205Z wait 1
+2026-11-25T12:16:53.246Z back 
+2026-11-25T12:16:53.796Z wait 1
+2026-11-25T12:16:54.837Z tap 756 2335
+2026-11-25T12:16:54.927Z wait 2
+2026-11-25T12:16:56.968Z id iv_thumbnail
+2026-11-25T12:16:57.174Z wait 10
+2026-11-25T12:17:07.214Z tapif [AID]IAP_Back
+2026-11-25T12:17:08.001Z id btn_save_menu
+2026-11-25T12:17:08.151Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:17:08.289Z texts TC-149-export
+2026-11-25T12:17:09.597Z els help_disable_tip
+2026-11-25T12:17:09.639Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:17:10.473Z wait 1
+2026-11-25T12:17:11.517Z texts TC-149-cancel
+2026-11-25T12:17:13.512Z lbl [AID]TimeLine_Home
+2026-11-25T12:17:14.272Z wait 2
+2026-11-25T12:17:26.838Z locale reset
+2026-11-25T12:17:27.879Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-150 tr-TR AIGC fili
+2026-11-25T12:17:27.881Z case TC-150
+2026-11-25T12:17:27.883Z launch --lang tr-TR
+2026-11-25T12:17:29.955Z wait 5
+2026-11-25T12:17:34.997Z locale status
+2026-11-25T12:17:35.114Z tapif [AID]IAP_Back
+2026-11-25T12:17:37.099Z tap 107 2335
+2026-11-25T12:17:37.421Z wait 1
+2026-11-25T12:17:38.442Z tap 92 115
+2026-11-25T12:17:38.563Z wait 2
+2026-11-25T12:17:40.617Z scrollto AIGC filigranını kaldır
+2026-11-25T12:17:42.048Z texts TC-150-settings
+2026-11-25T12:17:44.329Z id remove_aigc_watermark_info
+2026-11-25T12:17:44.928Z wait 2
+2026-11-25T12:17:46.971Z texts TC-150-info
+2026-11-25T12:17:47.855Z id button_aigc_watermark_info_got_it
+2026-11-25T12:17:48.069Z wait 1
+2026-11-25T12:17:49.108Z back 
+2026-11-25T12:17:49.638Z wait 1
+2026-11-25T12:17:50.677Z tap 756 2335
+2026-11-25T12:17:50.762Z wait 2
+2026-11-25T12:17:52.803Z id iv_thumbnail
+2026-11-25T12:17:52.976Z wait 10
+2026-11-25T12:18:03.018Z tapif [AID]IAP_Back
+2026-11-25T12:18:03.938Z id btn_save_menu
+2026-11-25T12:18:04.174Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:18:04.312Z texts TC-150-export
+2026-11-25T12:18:05.817Z els help_disable_tip
+2026-11-25T12:18:05.857Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:18:05.981Z wait 1
+2026-11-25T12:18:07.016Z texts TC-150-cancel
+2026-11-25T12:18:08.770Z lbl [AID]TimeLine_Home
+2026-11-25T12:18:09.874Z wait 2
+2026-11-25T12:18:20.436Z locale reset
+2026-11-25T12:18:21.244Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-151 fa-IR حذف واترم
+2026-11-25T12:18:21.246Z case TC-151
+2026-11-25T12:18:21.249Z launch --lang fa-IR
+2026-11-25T12:18:23.197Z wait 5
+2026-11-25T12:18:28.334Z locale status
+2026-11-25T12:18:28.511Z tapif [AID]IAP_Back
+2026-11-25T12:18:32.985Z tap 107 2335
+2026-11-25T12:18:33.796Z wait 1
+2026-11-25T12:18:34.865Z tap 92 115
+2026-11-25T12:18:34.965Z wait 2
+2026-11-25T12:18:36.992Z scrollto حذف واترمارک AIGC
+2026-11-25T12:18:38.262Z texts TC-151-settings
+2026-11-25T12:18:40.834Z id remove_aigc_watermark_info
+2026-11-25T12:18:41.366Z wait 2
+2026-11-25T12:18:43.414Z texts TC-151-info
+2026-11-25T12:18:45.328Z id button_aigc_watermark_info_got_it
+2026-11-25T12:18:45.506Z wait 1
+2026-11-25T12:18:46.550Z back 
+2026-11-25T12:18:47.086Z wait 1
+2026-11-25T12:18:48.159Z tap 756 2335
+2026-11-25T12:18:48.273Z wait 2
+2026-11-25T12:18:50.313Z id iv_thumbnail
+2026-11-25T12:18:50.591Z wait 10
+2026-11-25T12:19:00.669Z tapif [AID]IAP_Back
+2026-11-25T12:19:02.117Z id btn_save_menu
+2026-11-25T12:19:02.422Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:19:04.747Z texts TC-151-export
+2026-11-25T12:19:05.925Z els help_disable_tip
+2026-11-25T12:19:05.962Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:19:06.107Z wait 1
+2026-11-25T12:19:07.145Z texts TC-151-cancel
+2026-11-25T12:19:09.105Z lbl [AID]TimeLine_Home
+2026-11-25T12:19:09.530Z wait 2
+2026-11-25T12:19:23.244Z locale reset
+2026-11-25T12:19:23.994Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-152 he-IL הסרת סימן
+2026-11-25T12:19:23.996Z case TC-152
+2026-11-25T12:19:23.998Z launch --lang he-IL
+2026-11-25T12:19:25.772Z wait 5
+2026-11-25T12:19:30.870Z locale status
+2026-11-25T12:19:30.988Z tapif [AID]IAP_Back
+2026-11-25T12:19:34.235Z tap 107 2335
+2026-11-25T12:19:34.874Z wait 1
+2026-11-25T12:19:35.900Z tap 92 115
+2026-11-25T12:19:35.970Z wait 2
+2026-11-25T12:19:38.024Z scrollto הסרת סימן המים של AIGC
+2026-11-25T12:19:39.730Z texts TC-152-settings
+2026-11-25T12:19:43.584Z id remove_aigc_watermark_info
+2026-11-25T12:19:44.109Z wait 2
+2026-11-25T12:19:46.139Z texts TC-152-info
+2026-11-25T12:19:48.617Z id button_aigc_watermark_info_got_it
+2026-11-25T12:19:48.808Z wait 1
+2026-11-25T12:19:49.829Z back 
+2026-11-25T12:19:50.458Z wait 1
+2026-11-25T12:19:51.498Z tap 756 2335
+2026-11-25T12:19:51.553Z wait 2
+2026-11-25T12:19:53.583Z id iv_thumbnail
+2026-11-25T12:19:53.738Z wait 10
+2026-11-25T12:20:03.803Z tapif [AID]IAP_Back
+2026-11-25T12:20:04.721Z id btn_save_menu
+2026-11-25T12:20:04.931Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:20:24.998Z back 
+2026-11-25T12:20:26.326Z texts TC-152-afterpanel
+2026-11-25T12:20:32.439Z id btn_save_menu
+2026-11-25T12:20:32.882Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:20:33.649Z texts TC-152-export2
+2026-11-25T12:20:40.275Z els help_disable_tip
+2026-11-25T12:20:40.586Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:20:42.021Z texts TC-152-cancel
+2026-11-25T12:20:44.116Z lbl [AID]TimeLine_Home
+2026-11-25T12:20:47.002Z locale reset
+2026-11-25T12:21:27.084Z pull-logs MUI-ARA-HEB
+2026-11-25T12:22:05.630Z run-log set TC-147 Pass
+2026-11-25T12:22:05.756Z run-log set TC-148 Pass
+2026-11-25T12:22:05.879Z run-log set TC-149 Pass
+2026-11-25T12:22:06.003Z run-log set TC-150 Pass
+2026-11-25T12:22:06.127Z run-log set TC-151 Pass
+2026-11-25T12:22:06.249Z run-log set TC-152 Pass
+2026-11-25T12:22:34.712Z locale status
+2026-11-25T12:23:13.880Z restart 
+2026-11-25T12:23:22.106Z status 
+2026-11-25T12:23:22.553Z build 
+2026-11-25T12:23:22.797Z logcat start
+2026-11-25T12:23:22.931Z locale status
+2026-11-25T12:23:23.121Z texts seg6-start
+2026-11-25T12:23:38.053Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-153 sv-SE Ta bort A
+2026-11-25T12:23:38.055Z case TC-153
+2026-11-25T12:23:38.058Z launch --lang sv-SE
+2026-11-25T12:23:39.619Z wait 5
+2026-11-25T12:23:44.656Z locale status
+2026-11-25T12:23:44.745Z tapif [AID]IAP_Back
+2026-11-25T12:23:49.064Z tap 107 2335
+2026-11-25T12:23:49.276Z wait 1
+2026-11-25T12:23:50.296Z tap 92 115
+2026-11-25T12:23:50.355Z wait 2
+2026-11-25T12:23:52.399Z scrollto Ta bort AIGC-vattenstämpel
+2026-11-25T12:23:53.122Z texts TC-153-settings
+2026-11-25T12:23:55.024Z id remove_aigc_watermark_info
+2026-11-25T12:23:55.967Z wait 2
+2026-11-25T12:23:58.009Z texts TC-153-info
+2026-11-25T12:23:58.766Z id button_aigc_watermark_info_got_it
+2026-11-25T12:23:58.944Z wait 1
+2026-11-25T12:23:59.992Z back 
+2026-11-25T12:24:00.490Z wait 1
+2026-11-25T12:24:01.526Z tap 756 2335
+2026-11-25T12:24:01.614Z wait 2
+2026-11-25T12:24:03.655Z id iv_thumbnail
+2026-11-25T12:24:03.855Z wait 10
+2026-11-25T12:24:13.921Z tapif [AID]IAP_Back
+2026-11-25T12:24:15.112Z id btn_save_menu
+2026-11-25T12:24:15.375Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:24:17.593Z texts TC-153-export
+2026-11-25T12:24:18.363Z els help_disable_tip
+2026-11-25T12:24:18.407Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:24:18.553Z wait 1
+2026-11-25T12:24:19.594Z texts TC-153-cancel
+2026-11-25T12:24:21.089Z lbl [AID]TimeLine_Home
+2026-11-25T12:24:21.541Z wait 2
+2026-11-25T12:24:23.770Z locale reset
+2026-11-25T12:24:24.479Z locale status
+2026-11-25T12:24:38.309Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-154 da-DK Fjern AIG
+2026-11-25T12:24:38.311Z case TC-154
+2026-11-25T12:24:38.314Z launch --lang da-DK
+2026-11-25T12:24:39.840Z wait 5
+2026-11-25T12:24:44.916Z locale status
+2026-11-25T12:24:45.047Z tapif [AID]IAP_Back
+2026-11-25T12:24:45.338Z tap 107 2335
+2026-11-25T12:24:45.676Z wait 1
+2026-11-25T12:24:46.743Z tap 92 115
+2026-11-25T12:24:46.826Z wait 2
+2026-11-25T12:24:48.869Z scrollto Fjern AIGC-vandmærke
+2026-11-25T12:27:20.927Z locale reset
+2026-11-25T12:27:27.878Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-154 da-DK Fjern AIG
+2026-11-25T12:27:27.881Z case TC-154
+2026-11-25T12:27:27.883Z launch --lang da-DK
+2026-11-25T12:27:29.911Z wait 5
+2026-11-25T12:27:34.951Z locale status
+2026-11-25T12:27:35.065Z tapif [AID]IAP_Back
+2026-11-25T12:27:37.823Z tap 107 2335
+2026-11-25T12:27:37.898Z wait 1
+2026-11-25T12:27:38.937Z tap 92 115
+2026-11-25T12:27:39.018Z wait 2
+2026-11-25T12:27:41.051Z scrollto Fjern AIGC-vandmærke
+2026-11-25T12:27:41.945Z texts TC-154-settings
+2026-11-25T12:27:43.582Z id remove_aigc_watermark_info
+2026-11-25T12:27:44.064Z wait 2
+2026-11-25T12:27:46.103Z texts TC-154-info
+2026-11-25T12:27:47.062Z id button_aigc_watermark_info_got_it
+2026-11-25T12:27:47.255Z wait 1
+2026-11-25T12:27:48.287Z back 
+2026-11-25T12:27:49.401Z wait 1
+2026-11-25T12:27:50.442Z tap 756 2335
+2026-11-25T12:27:50.527Z wait 2
+2026-11-25T12:27:52.566Z id iv_thumbnail
+2026-11-25T12:27:52.737Z wait 10
+2026-11-25T12:28:02.787Z tapif [AID]IAP_Back
+2026-11-25T12:28:03.690Z id btn_save_menu
+2026-11-25T12:28:03.913Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:28:04.048Z texts TC-154-export
+2026-11-25T12:28:05.302Z els help_disable_tip
+2026-11-25T12:28:05.428Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:28:05.604Z wait 1
+2026-11-25T12:28:06.645Z texts TC-154-cancel
+2026-11-25T12:28:08.335Z lbl [AID]TimeLine_Home
+2026-11-25T12:28:10.590Z wait 2
+2026-11-25T12:28:12.816Z locale reset
+2026-11-25T12:28:25.717Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-155 nb-NO Fjern AIG
+2026-11-25T12:28:25.719Z case TC-155 nb-NO Fjern AIGC-vannmerke
+2026-11-25T12:28:25.722Z launch --lang TC-155 nb-NO Fjern AIGC-vannmerke
+2026-11-25T12:28:28.404Z locale reset
+2026-11-25T12:28:28.803Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-156 uk-UA Видалити 
+2026-11-25T12:28:28.804Z case TC-156 uk-UA Видалити водяний знак AIGC
+2026-11-25T12:28:28.807Z launch --lang TC-156 uk-UA Видалити водяний знак AIGC
+2026-11-25T12:28:31.262Z locale reset
+2026-11-25T12:28:36.274Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-155 nb-NO Fjern AIG
+2026-11-25T12:28:36.276Z case TC-155
+2026-11-25T12:28:36.279Z launch --lang nb-NO
+2026-11-25T12:28:37.975Z wait 5
+2026-11-25T12:28:43.005Z locale status
+2026-11-25T12:28:43.085Z tapif [AID]IAP_Back
+2026-11-25T12:28:47.426Z tap 107 2335
+2026-11-25T12:28:47.501Z wait 1
+2026-11-25T12:28:48.534Z tap 92 115
+2026-11-25T12:28:48.617Z wait 2
+2026-11-25T12:28:50.652Z scrollto Fjern AIGC-vannmerke
+2026-11-25T12:28:51.299Z texts TC-155-settings
+2026-11-25T12:28:52.796Z id remove_aigc_watermark_info
+2026-11-25T12:28:53.348Z wait 2
+2026-11-25T12:28:55.387Z texts TC-155-info
+2026-11-25T12:28:56.207Z id button_aigc_watermark_info_got_it
+2026-11-25T12:28:56.373Z wait 1
+2026-11-25T12:28:57.410Z back 
+2026-11-25T12:28:57.902Z wait 1
+2026-11-25T12:28:58.939Z tap 756 2335
+2026-11-25T12:28:59.013Z wait 2
+2026-11-25T12:29:01.045Z id iv_thumbnail
+2026-11-25T12:29:01.221Z wait 10
+2026-11-25T12:29:11.274Z tapif [AID]IAP_Back
+2026-11-25T12:29:12.196Z id btn_save_menu
+2026-11-25T12:29:12.464Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:29:14.662Z texts TC-155-export
+2026-11-25T12:29:15.421Z els help_disable_tip
+2026-11-25T12:29:15.474Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:29:15.597Z wait 1
+2026-11-25T12:29:16.639Z texts TC-155-cancel
+2026-11-25T12:29:18.231Z lbl [AID]TimeLine_Home
+2026-11-25T12:29:18.777Z wait 2
+2026-11-25T12:29:20.996Z locale reset
+2026-11-25T12:29:21.554Z do library/pdr/aigc-watermark/android/recipes/mui-walk.steps TC-156 uk-UA Видалити 
+2026-11-25T12:29:21.556Z case TC-156
+2026-11-25T12:29:21.558Z launch --lang uk-UA
+2026-11-25T12:29:23.118Z wait 5
+2026-11-25T12:29:28.157Z locale status
+2026-11-25T12:29:28.257Z tapif [AID]IAP_Back
+2026-11-25T12:29:29.854Z tap 107 2335
+2026-11-25T12:29:29.910Z wait 1
+2026-11-25T12:29:30.936Z tap 92 115
+2026-11-25T12:29:31.010Z wait 2
+2026-11-25T12:29:33.028Z scrollto Видалити водяний знак AIGC
+2026-11-25T12:29:33.685Z texts TC-156-settings
+2026-11-25T12:29:35.084Z id remove_aigc_watermark_info
+2026-11-25T12:29:36.419Z wait 2
+2026-11-25T12:29:38.453Z texts TC-156-info
+2026-11-25T12:29:39.336Z id button_aigc_watermark_info_got_it
+2026-11-25T12:29:39.495Z wait 1
+2026-11-25T12:29:40.524Z back 
+2026-11-25T12:29:40.987Z wait 1
+2026-11-25T12:29:42.021Z tap 756 2335
+2026-11-25T12:29:42.097Z wait 2
+2026-11-25T12:29:44.134Z id iv_thumbnail
+2026-11-25T12:29:44.723Z wait 10
+2026-11-25T12:29:54.752Z tapif [AID]IAP_Back
+2026-11-25T12:29:55.325Z id btn_save_menu
+2026-11-25T12:29:55.520Z waitfor [AID]ConfirmDialog_Cancel --timeout 8
+2026-11-25T12:29:55.654Z texts TC-156-export
+2026-11-25T12:29:56.917Z els help_disable_tip
+2026-11-25T12:29:56.967Z lbl [AID]ConfirmDialog_Cancel
+2026-11-25T12:29:57.146Z wait 1
+2026-11-25T12:29:58.181Z texts TC-156-cancel
+2026-11-25T12:29:59.852Z lbl [AID]TimeLine_Home
+2026-11-25T12:30:00.249Z wait 2
+2026-11-25T12:30:02.470Z locale reset
+2026-11-25T12:30:54.806Z run-log set TC-153 Pass
+2026-11-25T12:30:54.927Z run-log set TC-154 Pass
+2026-11-25T12:30:55.050Z run-log set TC-155 Pass
+2026-11-25T12:30:55.172Z run-log set TC-156 Pass
+2026-11-25T12:30:55.311Z pull-logs MUI-SVE-UKR
+2026-11-25T12:30:56.735Z locale status
+2026-11-25T11:47:59.214Z file screenshots/setup-launcher.png
+2026-11-25T11:48:15.287Z file screenshots/setup-mine.txt
+2026-11-25T11:48:15.899Z file screenshots/setup-mine.png
+2026-11-25T11:48:26.196Z file screenshots/setup-settings-en.png
+2026-11-25T11:48:34.441Z file screenshots/setup-switch-off.txt
+2026-11-25T11:48:35.141Z file screenshots/setup-switch-off.png
+2026-11-25T11:48:42.498Z file screenshots/setup-projects.txt
+2026-11-25T11:48:42.925Z file screenshots/setup-projects.png
+2026-11-25T11:48:56.874Z file screenshots/setup-artwork.txt
+2026-11-25T11:48:57.562Z file screenshots/setup-artwork.png
+2026-11-25T11:49:12.660Z file screenshots/setup-i2v-result.txt
+2026-11-25T11:49:13.227Z file screenshots/setup-i2v-result.png
+2026-11-25T11:49:20.856Z file screenshots/setup-i2v-view.txt
+2026-11-25T11:49:22.105Z file screenshots/setup-i2v-view.png
+2026-11-25T11:49:33.580Z file screenshots/setup-editor.txt
+2026-11-25T11:49:34.740Z file screenshots/setup-editor.png
+2026-11-25T11:49:41.371Z file screenshots/setup-export-en.txt
+2026-11-25T11:49:42.156Z file screenshots/setup-export-en.png
+2026-11-25T11:51:59.335Z file screenshots/TC-131-settings.txt
+2026-11-25T11:52:01.346Z file screenshots/TC-131-settings.png
+2026-11-25T11:52:04.078Z file screenshots/TC-131-info.txt
+2026-11-25T11:52:05.665Z file screenshots/TC-131-info.png
+2026-11-25T11:52:19.834Z file screenshots/TC-131-export.txt
+2026-11-25T11:52:20.897Z file screenshots/TC-131-export.png
+2026-11-25T11:52:22.583Z file screenshots/TC-131-cancel.txt
+2026-11-25T11:52:23.674Z file screenshots/TC-131-cancel.png
+2026-11-25T11:53:11.016Z file screenshots/TC-132-settings.txt
+2026-11-25T11:53:12.581Z file screenshots/TC-132-settings.png
+2026-11-25T11:53:15.080Z file screenshots/TC-132-info.txt
+2026-11-25T11:53:15.627Z file screenshots/TC-132-info.png
+2026-11-25T11:53:29.782Z file screenshots/TC-132-export.txt
+2026-11-25T11:53:30.533Z file screenshots/TC-132-export.png
+2026-11-25T11:53:33.233Z file screenshots/TC-132-cancel.txt
+2026-11-25T11:53:34.276Z file screenshots/TC-132-cancel.png
+2026-11-25T11:54:02.776Z file screenshots/TC-133-settings.txt
+2026-11-25T11:54:04.065Z file screenshots/TC-133-settings.png
+2026-11-25T11:54:06.546Z file screenshots/TC-133-info.txt
+2026-11-25T11:54:07.104Z file screenshots/TC-133-info.png
+2026-11-25T11:54:21.436Z file screenshots/TC-133-export.txt
+2026-11-25T11:54:22.170Z file screenshots/TC-133-export.png
+2026-11-25T11:54:23.925Z file screenshots/TC-133-cancel.txt
+2026-11-25T11:54:24.989Z file screenshots/TC-133-cancel.png
+2026-11-25T11:55:02.423Z file screenshots/TC-134-settings.txt
+2026-11-25T11:55:03.288Z file screenshots/TC-134-settings.png
+2026-11-25T11:55:05.781Z file screenshots/TC-134-info.txt
+2026-11-25T11:55:06.332Z file screenshots/TC-134-info.png
+2026-11-25T11:55:20.443Z file screenshots/TC-134-export.txt
+2026-11-25T11:55:21.171Z file screenshots/TC-134-export.png
+2026-11-25T11:55:22.832Z file screenshots/TC-134-cancel.txt
+2026-11-25T11:55:23.912Z file screenshots/TC-134-cancel.png
+2026-11-25T11:55:57.978Z file screenshots/TC-135-settings.txt
+2026-11-25T11:55:58.686Z file screenshots/TC-135-settings.png
+2026-11-25T11:56:01.297Z file screenshots/TC-135-info.txt
+2026-11-25T11:56:01.854Z file screenshots/TC-135-info.png
+2026-11-25T11:56:21.337Z file screenshots/do-fail-20261125-195620.png
+2026-11-25T11:56:27.611Z file screenshots/TC-135-now.txt
+2026-11-25T11:56:28.788Z file screenshots/TC-135-now.png
+2026-11-25T11:56:35.664Z file screenshots/TC-135-export.txt
+2026-11-25T11:56:36.451Z file screenshots/TC-135-export.png
+2026-11-25T11:56:45.878Z file screenshots/TC-135-cancel.txt
+2026-11-25T11:56:46.954Z file screenshots/TC-135-cancel.png
+2026-11-25T11:57:22.287Z file logs/MUI-CHT-KOR-20261125-195717
+2026-11-25T11:58:46.279Z file screenshots/DEU-start.txt
+2026-11-25T11:58:47.219Z file screenshots/DEU-start.png
+2026-11-25T11:59:05.732Z file screenshots/TC-136-settings.txt
+2026-11-25T11:59:06.497Z file screenshots/TC-136-settings.png
+2026-11-25T11:59:09.174Z file screenshots/TC-136-info.txt
+2026-11-25T11:59:09.753Z file screenshots/TC-136-info.png
+2026-11-25T11:59:26.872Z file screenshots/TC-136-export.txt
+2026-11-25T11:59:27.590Z file screenshots/TC-136-export.png
+2026-11-25T11:59:29.384Z file screenshots/TC-136-cancel.txt
+2026-11-25T11:59:30.495Z file screenshots/TC-136-cancel.png
+2026-11-25T12:00:05.538Z file screenshots/TC-137-settings.txt
+2026-11-25T12:00:06.609Z file screenshots/TC-137-settings.png
+2026-11-25T12:00:09.292Z file screenshots/TC-137-info.txt
+2026-11-25T12:00:09.870Z file screenshots/TC-137-info.png
+2026-11-25T12:00:26.465Z file screenshots/TC-137-export.txt
+2026-11-25T12:00:27.185Z file screenshots/TC-137-export.png
+2026-11-25T12:00:29.798Z file screenshots/TC-137-cancel.txt
+2026-11-25T12:00:30.912Z file screenshots/TC-137-cancel.png
+2026-11-25T12:01:11.767Z file screenshots/TC-138-settings.txt
+2026-11-25T12:01:12.552Z file screenshots/TC-138-settings.png
+2026-11-25T12:01:15.182Z file screenshots/TC-138-info.txt
+2026-11-25T12:01:15.758Z file screenshots/TC-138-info.png
+2026-11-25T12:01:32.801Z file screenshots/TC-138-export.txt
+2026-11-25T12:01:33.514Z file screenshots/TC-138-export.png
+2026-11-25T12:01:35.359Z file screenshots/TC-138-cancel.txt
+2026-11-25T12:01:36.455Z file screenshots/TC-138-cancel.png
+2026-11-25T12:02:11.778Z file screenshots/TC-139-settings.txt
+2026-11-25T12:02:12.689Z file screenshots/TC-139-settings.png
+2026-11-25T12:02:15.384Z file screenshots/TC-139-info.txt
+2026-11-25T12:02:15.946Z file screenshots/TC-139-info.png
+2026-11-25T12:02:32.883Z file screenshots/TC-139-export.txt
+2026-11-25T12:02:33.595Z file screenshots/TC-139-export.png
+2026-11-25T12:02:35.359Z file screenshots/TC-139-cancel.txt
+2026-11-25T12:02:36.426Z file screenshots/TC-139-cancel.png
+2026-11-25T12:03:08.295Z file screenshots/TC-140-settings.txt
+2026-11-25T12:03:08.993Z file screenshots/TC-140-settings.png
+2026-11-25T12:03:11.548Z file screenshots/TC-140-info.txt
+2026-11-25T12:03:12.090Z file screenshots/TC-140-info.png
+2026-11-25T12:03:28.692Z file screenshots/TC-140-export.txt
+2026-11-25T12:03:29.544Z file screenshots/TC-140-export.png
+2026-11-25T12:03:31.401Z file screenshots/TC-140-cancel.txt
+2026-11-25T12:03:32.470Z file screenshots/TC-140-cancel.png
+2026-11-25T12:04:01.831Z file logs/MUI-DEU-PTB-20261125-200359
+2026-11-25T12:05:12.912Z file screenshots/seg4-start.txt
+2026-11-25T12:05:14.052Z file screenshots/seg4-start.png
+2026-11-25T12:05:30.255Z file screenshots/TC-141-settings.txt
+2026-11-25T12:05:31.264Z file screenshots/TC-141-settings.png
+2026-11-25T12:05:33.981Z file screenshots/TC-141-info.txt
+2026-11-25T12:05:34.507Z file screenshots/TC-141-info.png
+2026-11-25T12:05:51.558Z file screenshots/TC-141-export.txt
+2026-11-25T12:05:52.280Z file screenshots/TC-141-export.png
+2026-11-25T12:05:54.215Z file screenshots/TC-141-cancel.txt
+2026-11-25T12:05:55.297Z file screenshots/TC-141-cancel.png
+2026-11-25T12:06:49.708Z file screenshots/TC-142-settings.txt
+2026-11-25T12:06:50.679Z file screenshots/TC-142-settings.png
+2026-11-25T12:06:53.406Z file screenshots/TC-142-info.txt
+2026-11-25T12:06:53.954Z file screenshots/TC-142-info.png
+2026-11-25T12:07:11.157Z file screenshots/TC-142-export.txt
+2026-11-25T12:07:11.878Z file screenshots/TC-142-export.png
+2026-11-25T12:07:14.707Z file screenshots/TC-142-cancel.txt
+2026-11-25T12:07:15.754Z file screenshots/TC-142-cancel.png
+2026-11-25T12:07:57.463Z file screenshots/TC-143-settings.txt
+2026-11-25T12:07:58.585Z file screenshots/TC-143-settings.png
+2026-11-25T12:08:01.183Z file screenshots/TC-143-info.txt
+2026-11-25T12:08:01.744Z file screenshots/TC-143-info.png
+2026-11-25T12:08:19.488Z file screenshots/TC-143-export.txt
+2026-11-25T12:08:20.199Z file screenshots/TC-143-export.png
+2026-11-25T12:08:22.030Z file screenshots/TC-143-cancel.txt
+2026-11-25T12:08:23.079Z file screenshots/TC-143-cancel.png
+2026-11-25T12:08:40.432Z file screenshots/TC-144-settings.txt
+2026-11-25T12:08:41.178Z file screenshots/TC-144-settings.png
+2026-11-25T12:08:43.925Z file screenshots/TC-144-info.txt
+2026-11-25T12:08:44.478Z file screenshots/TC-144-info.png
+2026-11-25T12:09:01.327Z file screenshots/TC-144-export.txt
+2026-11-25T12:09:02.037Z file screenshots/TC-144-export.png
+2026-11-25T12:09:03.915Z file screenshots/TC-144-cancel.txt
+2026-11-25T12:09:04.983Z file screenshots/TC-144-cancel.png
+2026-11-25T12:09:55.774Z file screenshots/waitfor-timeout-20261125-200954.png
+2026-11-25T12:09:56.943Z file screenshots/do-fail-20261125-200955.png
+2026-11-25T12:10:14.196Z file screenshots/TC-146-settings.txt
+2026-11-25T12:10:16.097Z file screenshots/TC-146-settings.png
+2026-11-25T12:10:19.837Z file screenshots/TC-146-info.txt
+2026-11-25T12:10:20.714Z file screenshots/TC-146-info.png
+2026-11-25T12:10:37.508Z file screenshots/TC-146-export.txt
+2026-11-25T12:10:38.360Z file screenshots/TC-146-export.png
+2026-11-25T12:10:40.170Z file screenshots/TC-146-cancel.txt
+2026-11-25T12:10:41.250Z file screenshots/TC-146-cancel.png
+2026-11-25T12:11:19.756Z file screenshots/TC-145-settings.txt
+2026-11-25T12:11:21.068Z file screenshots/TC-145-settings.png
+2026-11-25T12:11:24.219Z file screenshots/TC-145-info.txt
+2026-11-25T12:11:24.852Z file screenshots/TC-145-info.png
+2026-11-25T12:11:41.607Z file screenshots/TC-145-export.txt
+2026-11-25T12:11:42.336Z file screenshots/TC-145-export.png
+2026-11-25T12:11:44.352Z file screenshots/TC-145-cancel.txt
+2026-11-25T12:11:45.433Z file screenshots/TC-145-cancel.png
+2026-11-25T12:12:58.139Z file logs/MUI-NLD-ESM-20261125-201248
+2026-11-25T12:13:57.782Z file screenshots/seg5-start.txt
+2026-11-25T12:13:58.773Z file screenshots/seg5-start.png
+2026-11-25T12:14:31.459Z file screenshots/TC-147-settings.txt
+2026-11-25T12:14:32.681Z file screenshots/TC-147-settings.png
+2026-11-25T12:14:35.197Z file screenshots/TC-147-info.txt
+2026-11-25T12:14:36.599Z file screenshots/TC-147-info.png
+2026-11-25T12:14:55.671Z file screenshots/TC-147-export.txt
+2026-11-25T12:14:57.007Z file screenshots/TC-147-export.png
+2026-11-25T12:14:59.308Z file screenshots/TC-147-cancel.txt
+2026-11-25T12:15:00.493Z file screenshots/TC-147-cancel.png
+2026-11-25T12:15:35.357Z file screenshots/TC-148-settings.txt
+2026-11-25T12:15:38.936Z file screenshots/TC-148-settings.png
+2026-11-25T12:15:42.003Z file screenshots/TC-148-info.txt
+2026-11-25T12:15:44.102Z file screenshots/TC-148-info.png
+2026-11-25T12:16:03.188Z file screenshots/TC-148-export.txt
+2026-11-25T12:16:04.640Z file screenshots/TC-148-export.png
+2026-11-25T12:16:06.438Z file screenshots/TC-148-cancel.txt
+2026-11-25T12:16:07.755Z file screenshots/TC-148-cancel.png
+2026-11-25T12:16:46.677Z file screenshots/TC-149-settings.txt
+2026-11-25T12:16:48.167Z file screenshots/TC-149-settings.png
+2026-11-25T12:16:50.829Z file screenshots/TC-149-info.txt
+2026-11-25T12:16:51.481Z file screenshots/TC-149-info.png
+2026-11-25T12:17:08.808Z file screenshots/TC-149-export.txt
+2026-11-25T12:17:09.597Z file screenshots/TC-149-export.png
+2026-11-25T12:17:12.357Z file screenshots/TC-149-cancel.txt
+2026-11-25T12:17:13.510Z file screenshots/TC-149-cancel.png
+2026-11-25T12:17:42.940Z file screenshots/TC-150-settings.txt
+2026-11-25T12:17:44.327Z file screenshots/TC-150-settings.png
+2026-11-25T12:17:47.029Z file screenshots/TC-150-info.txt
+2026-11-25T12:17:47.853Z file screenshots/TC-150-info.png
+2026-11-25T12:18:04.847Z file screenshots/TC-150-export.txt
+2026-11-25T12:18:05.816Z file screenshots/TC-150-export.png
+2026-11-25T12:18:07.513Z file screenshots/TC-150-cancel.txt
+2026-11-25T12:18:08.769Z file screenshots/TC-150-cancel.png
+2026-11-25T12:18:39.003Z file screenshots/TC-151-settings.txt
+2026-11-25T12:18:40.833Z file screenshots/TC-151-settings.png
+2026-11-25T12:18:43.585Z file screenshots/TC-151-info.txt
+2026-11-25T12:18:45.327Z file screenshots/TC-151-info.png
+2026-11-25T12:19:04.803Z file screenshots/TC-151-export.txt
+2026-11-25T12:19:05.925Z file screenshots/TC-151-export.png
+2026-11-25T12:19:07.752Z file screenshots/TC-151-cancel.txt
+2026-11-25T12:19:09.104Z file screenshots/TC-151-cancel.png
+2026-11-25T12:19:40.782Z file screenshots/TC-152-settings.txt
+2026-11-25T12:19:43.582Z file screenshots/TC-152-settings.png
+2026-11-25T12:19:46.184Z file screenshots/TC-152-info.txt
+2026-11-25T12:19:48.615Z file screenshots/TC-152-info.png
+2026-11-25T12:20:15.073Z file screenshots/waitfor-timeout-20261125-202014.png
+2026-11-25T12:20:15.633Z file screenshots/do-fail-20261125-202015.png
+2026-11-25T12:20:27.042Z file screenshots/TC-152-afterpanel.txt
+2026-11-25T12:20:28.326Z file screenshots/TC-152-afterpanel.png
+2026-11-25T12:20:33.755Z file screenshots/TC-152-export2.txt
+2026-11-25T12:20:34.603Z file screenshots/TC-152-export2.png
+2026-11-25T12:20:42.820Z file screenshots/TC-152-cancel.txt
+2026-11-25T12:20:43.931Z file screenshots/TC-152-cancel.png
+2026-11-25T12:21:34.875Z file logs/MUI-ARA-HEB-20261125-202127
+2026-11-25T12:23:25.260Z file screenshots/seg6-start.txt
+2026-11-25T12:23:26.286Z file screenshots/seg6-start.png
+2026-11-25T12:23:53.749Z file screenshots/TC-153-settings.txt
+2026-11-25T12:23:55.022Z file screenshots/TC-153-settings.png
+2026-11-25T12:23:58.116Z file screenshots/TC-153-info.txt
+2026-11-25T12:23:58.764Z file screenshots/TC-153-info.png
+2026-11-25T12:24:17.647Z file screenshots/TC-153-export.txt
+2026-11-25T12:24:18.363Z file screenshots/TC-153-export.png
+2026-11-25T12:24:20.016Z file screenshots/TC-153-cancel.txt
+2026-11-25T12:24:21.088Z file screenshots/TC-153-cancel.png
+2026-11-25T12:27:19.597Z file screenshots/do-fail-20261125-202718.png
+2026-11-25T12:27:42.440Z file screenshots/TC-154-settings.txt
+2026-11-25T12:27:43.581Z file screenshots/TC-154-settings.png
+2026-11-25T12:27:46.421Z file screenshots/TC-154-info.txt
+2026-11-25T12:27:47.060Z file screenshots/TC-154-info.png
+2026-11-25T12:28:04.582Z file screenshots/TC-154-export.txt
+2026-11-25T12:28:05.301Z file screenshots/TC-154-export.png
+2026-11-25T12:28:07.243Z file screenshots/TC-154-cancel.txt
+2026-11-25T12:28:08.333Z file screenshots/TC-154-cancel.png
+2026-11-25T12:28:51.858Z file screenshots/TC-155-settings.txt
+2026-11-25T12:28:52.794Z file screenshots/TC-155-settings.png
+2026-11-25T12:28:55.573Z file screenshots/TC-155-info.txt
+2026-11-25T12:28:56.206Z file screenshots/TC-155-info.png
+2026-11-25T12:29:14.727Z file screenshots/TC-155-export.txt
+2026-11-25T12:29:15.420Z file screenshots/TC-155-export.png
+2026-11-25T12:29:17.168Z file screenshots/TC-155-cancel.txt
+2026-11-25T12:29:18.230Z file screenshots/TC-155-cancel.png
+2026-11-25T12:29:34.338Z file screenshots/TC-156-settings.txt
+2026-11-25T12:29:35.083Z file screenshots/TC-156-settings.png
+2026-11-25T12:29:38.528Z file screenshots/TC-156-info.txt
+2026-11-25T12:29:39.336Z file screenshots/TC-156-info.png
+2026-11-25T12:29:56.196Z file screenshots/TC-156-export.txt
+2026-11-25T12:29:56.917Z file screenshots/TC-156-export.png
+2026-11-25T12:29:58.761Z file screenshots/TC-156-cancel.txt
+2026-11-25T12:29:59.851Z file screenshots/TC-156-cancel.png
+2026-11-25T12:30:56.011Z file logs/.live
+2026-11-25T12:31:02.419Z file logs/MUI-SVE-UKR-20261125-203055

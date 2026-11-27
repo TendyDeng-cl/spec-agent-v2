@@ -1,0 +1,170 @@
+﻿ID,Section,Precondition,Action,Expected Result,Priority,Spec Ref,Notes
+TC-001,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Horror Movie template, follow this advice:」 with 「Horror Movie」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「People in Frame」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Horror Movie. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD)."
+TC-002,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the template page header (‹, credit pill, ?, history) stays visible behind the dim
+Step 2: the sheet reads 「For best results with the Micro Cinema template, follow this advice:」 with 「Micro Cinema」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P1,"R-001, R-002, R-003, R-006, R-007, R-008, R-012, R-011, R-015","CMS › Recommendation row Micro_Cinema. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD). Design 0820 add photo tips draws this template."
+TC-003,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the One-Take Shot template, follow this advice:」 with 「One-Take Shot」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Mid-Distance Framing」 and 「Layered Depth」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row One_Take_Shot. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD)."
+TC-004,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Time Lapse template, follow this advice:」 with 「Time Lapse」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Visible Sky」 and 「Cityscape or Landscape」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Time_Lapse. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD)."
+TC-005,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Handheld Camera template, follow this advice:」 with 「Handheld Camera」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Layered Depth」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Handheld_Camera. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD)."
+TC-006,View photo tips chip,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「View photo tips」 on that card","Step 1: the card shows a 「View photo tips」 chip with a lightbulb icon at its top-left corner
+Step 2: the photo tips sheet opens from the bottom over the dimmed template page
+Step 2: the sheet reads 「For best results with the Fast Cut template, follow this advice:」 with 「Fast Cut」 in bold
+Step 2: 「Recommendation」 (blue bar) lists 「Sense of Motion」 and 「Rich Visual Details」, each a picture with a ✓ badge at its bottom-right and the caption under it
+Step 2: 「Avoid」 (pink bar) lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」, each a picture with a ⊗ badge and the caption under it (swipe the row left to read the third)
+Step 2: a full-width 「Got it」 button is at the bottom",P2,"R-001, R-002, R-003, R-006, R-007, R-008, R-012","CMS › Recommendation row Fast_Cut. Find the card by its name: the CMS Order differs by region (Global, JP/TW/KOR/CHS, MyEdit/PDR/PHD)."
+TC-007,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The 「Micro Cinema」 card in view","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the same card again","Step 2: the sheet closes and the dim is gone
+Step 2: the template page shows the 「Micro Cinema」 card, as before step 1
+Step 3: the same Micro Cinema tips sheet opens again",P1,"R-010, R-003",Only 「Got it」 is drawn as a way to close (Q-3).
+TC-008,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. The Micro Cinema photo tips sheet open (its 「View photo tips」 chip)","1. Swipe the 「Avoid」 row left
+2. Swipe it back right","Before step 1: the third Avoid item runs past the right edge of the sheet
+Step 1: 「Extreme Close-up」 comes fully into view with its ⊗ badge and caption
+Step 1: the 「Recommendation」 row does not move
+Step 2: 「Flat Composition」 is back at the left edge",P2,R-009,Design draws the third Avoid item cut off at the right edge; whether the row scrolls is not written (Q-5).
+TC-009,Photo tips sheet,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Tap 「View photo tips」 on the 「Handheld Camera」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Fast Cut」 card","Step 1: 「Rich Visual Details」 shows the general Rich Visual Details picture
+Step 3: 「Rich Visual Details」 shows a different picture, the one made for Fast Cut",P3,R-013,CMS picture list: 「Rich Visual Details (畫面細節豐富) for Fast Cut」 is its own picture. Compare the two screenshots.
+TC-010,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Horror Movie」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Horror Movie template, follow this advice:」
+Step 3: 「Recommendation」 lists 「People in Frame」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-011,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Micro Cinema」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Micro Cinema template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P1,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-012,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「One-Take Shot」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the One-Take Shot template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Mid-Distance Framing」 and 「Layered Depth」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-013,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Time Lapse」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Time Lapse template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Visible Sky」 and 「Cityscape or Landscape」
+Step 3: 「Avoid」 lists 「Portrait as Subject」, 「Indoor Close-up」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-014,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Handheld Camera」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Handheld Camera template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Layered Depth」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Flat Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-015,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page","1. Swipe the template cards to the 「Fast Cut」 card
+2. Tap 「Import a Photo」
+3. Tap 「?」 in the Add Media header","Step 2: the Add Media room opens and shows a 「?」 in its header
+Step 3: the photo tips sheet opens with 「For best results with the Fast Cut template, follow this advice:」
+Step 3: 「Recommendation」 lists 「Sense of Motion」 and 「Rich Visual Details」
+Step 3: 「Avoid」 lists 「Static Composition」, 「Visible Text or Logos」 and 「Extreme Close-up」",P2,"R-004, R-005, R-012","PM-only: no Design frame yet (Design 26.07_v2 draws Add Media without a 「?」; its ⓘ layer is hidden). Jira PDRA-661: 「media room ""?""」. Q-1."
+TC-016,Media room ?,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. Add Media opened from the 「Micro Cinema」 card (「Import a Photo」), no photo picked","1. Tap 「?」 in the Add Media header
+2. Tap 「Got it」","Step 2: the sheet closes and Add Media is shown again
+Step 2: Add Media keeps its tab (Recents) and no photo is picked",P2,"R-004, R-010",PM-only: no Design frame yet (Q-1).
+TC-017,Language,"1. PowerDirector signed in on the test account
+2. App language 繁體中文 (iOS Settings › PowerDirector › Language)
+3. Cinematic Reel Creator open on its template page","1. Swipe to the Micro Cinema card
+2. Tap the photo tips chip on it","Step 2: the sheet's first sentence names the template as 「微電影畫境」
+Step 2: the sentence, the two headings and every caption are whole, not cut off and not garbled
+Step 2: 「Got it」 is shown in the app language",P3,R-015,"CMS Template Name Localization: 微電影畫境. Whether the captions are translated is open (Q-2): record their language, do not fail on it. Restore English after the row."
+TC-018,Language,"1. PowerDirector signed in on the test account
+2. App language 日本語 (iOS Settings › PowerDirector › Language)
+3. Cinematic Reel Creator open on its template page","1. Swipe to the Micro Cinema card
+2. Tap the photo tips chip on it","Step 2: the sheet's first sentence names the template as 「マイクロシネマ」
+Step 2: the sentence, the two headings and every caption are whole, not cut off and not garbled
+Step 2: 「Got it」 is shown in the app language",P3,R-015,"CMS Template Name Localization: マイクロシネマ. Whether the captions are translated is open (Q-2): record their language, do not fail on it. Restore English after the row."
+TC-019,Data source,"1. PowerDirector signed in on the test account
+2. App language English
+3. The Cinematic Reel Creator tutorial was dismissed before (its template page opens directly)
+4. Launcher › 「Cinematic Reel Creator」 open on its template page
+5. App log cleared before opening the feature","1. Tap 「View photo tips」 on the 「Micro Cinema」 card
+2. Tap 「Got it」
+3. Tap 「View photo tips」 on the 「Time Lapse」 card
+4. Tap 「Got it」
+5. Pull the app log","Step 5: the log shows the template data from the CMS with recommend_samples for each template
+Step 5: the items each sheet showed match that template's recommend_samples",P3,R-014,Hidden clause (pass 9). Park (needs: cms-log) if the log shows no CMS template data.

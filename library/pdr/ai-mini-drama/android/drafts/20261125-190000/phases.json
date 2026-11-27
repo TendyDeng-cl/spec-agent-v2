@@ -1,0 +1,125 @@
+{
+ "draft": "20261125-190000",
+ "current": [
+  "A8"
+ ],
+ "needs": {},
+ "unavailable": {},
+ "phases": [
+  {
+   "id": "Q1",
+   "name": "Question round: rows that observe Open questions (REQ-111 / REQ-045 / REQ-014 / REQ-009)",
+   "round": true,
+   "origin": {
+    "TC-580": "Q1",
+    "TC-581": "Q1",
+    "TC-582": "Q1"
+   },
+   "note": "Every row here is recorded Fail (question) for PM with what it saw, never Pass, unless its Expected Result passes outright. Credits: use what a row needs (AGENTS.md, 2026-11-26).",
+   "segments": [
+    {
+     "id": "Q1-a",
+     "name": "Template availability by store (Q-18) and 「Every frame is done」 (Q-5)",
+     "note": "TC-580 reads the Play store country and the template counts. TC-581 follows a new storyboard (credits allowed). TC-582 reads a drama with a finished Preview video; if none exists in History, generate one (credits allowed, user 2026-11-26).",
+     "cases": [
+      "TC-580",
+      "TC-581",
+      "TC-582"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "A8",
+   "name": "Round A8: rows added since the last full run (TC-551 – TC-579), never run",
+   "round": true,
+   "origin": {
+    "TC-551": "A8",
+    "TC-566": "A8",
+    "TC-567": "A8",
+    "TC-568": "A8",
+    "TC-552": "A8",
+    "TC-574": "A8",
+    "TC-575": "A8",
+    "TC-576": "A8",
+    "TC-577": "A8",
+    "TC-578": "A8",
+    "TC-579": "A8",
+    "TC-555": "A8",
+    "TC-558": "A8",
+    "TC-564": "A8",
+    "TC-565": "A8",
+    "TC-569": "A8",
+    "TC-570": "A8",
+    "TC-571": "A8",
+    "TC-572": "A8",
+    "TC-573": "A8",
+    "TC-559": "A8",
+    "TC-560": "A8",
+    "TC-561": "A8",
+    "TC-562": "A8",
+    "TC-563": "A8",
+    "TC-556": "A8",
+    "TC-557": "A8",
+    "TC-553": "A8",
+    "TC-554": "A8"
+   },
+   "note": "REQ-112 (user, 2026-11-26, \"Run VE, AMD, CR gaps\"): approved rows never run or changed since their last run, after the pull to 61dcda8. Sony XQ-BT52 on 16.9.0 (2611201); 2611251 needs Android 13. Credits: whatever a row needs, full videos included (AGENTS.md 2026-11-26).",
+   "segments": [
+    {
+     "id": "A8-a",
+     "name": "Outline light mode, Choose Character filters, Characters card, Make your character moderation, Close on a real-person cast",
+     "cases": [
+      "TC-551",
+      "TC-566",
+      "TC-567",
+      "TC-568",
+      "TC-552",
+      "TC-574",
+      "TC-575",
+      "TC-576",
+      "TC-577",
+      "TC-578",
+      "TC-579"
+     ]
+    },
+    {
+     "id": "A8-b",
+     "name": "Storyboard: Update characters card, pricing interruption, failed scenes and the fix-first prompts",
+     "cases": [
+      "TC-555",
+      "TC-558",
+      "TC-564",
+      "TC-565",
+      "TC-569",
+      "TC-570",
+      "TC-571",
+      "TC-572",
+      "TC-573"
+     ]
+    },
+    {
+     "id": "A8-c",
+     "name": "Video errors: busy / mixed failures, fix card, regeneration while another runs",
+     "cases": [
+      "TC-559",
+      "TC-560",
+      "TC-561",
+      "TC-562",
+      "TC-563"
+     ]
+    },
+    {
+     "id": "A8-d",
+     "name": "Chat behaviour and History: scene edit, long chat, outline-stage reopen, pinned message",
+     "cases": [
+      "TC-556",
+      "TC-557",
+      "TC-553",
+      "TC-554"
+     ]
+    }
+   ]
+  }
+ ]
+}

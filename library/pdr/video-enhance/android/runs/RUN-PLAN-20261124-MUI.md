@@ -16,7 +16,7 @@ of a full run (references/mui.md).
 ## Segments
 | Segment | Cases | Status |
 |---|---|---|
-| MUI-apk | TC-321 | done: Fail (35 fails, 67 doubts) |
+| MUI-apk | TC-321 | done: Fail (43 fails, 81 doubts; 8 fails and 14 doubts from the 2026-11-26 top-up) |
 | MUI-CHT … MUI-UKR | TC-322 – TC-347, one language each | in batches of five languages per segment agent |
 
 ## Log
@@ -51,3 +51,4 @@ of a full run (references/mui.md).
 - 2026-11-24 Result screens for CHT–KOR (Recent task was empty on their walks): no truncation; TC-322–326 stay Pass (re-recorded with -16-result / -17-save-toast).
 - 2026-11-24 Part 3 (VIT/ARA generating subtitle) blocked: the Pro test subscription lapsed (Enhance opens the Pro purchase page); not re-bought per the brief. Balance 30018.
 - 2026-11-24 eBugs filed on TR261123-0015 (16.9.0.2611201): DRA262611P0280–0288, 9 bugs, all sev 3 RD, attachments on every page (ebugs/2026-11-24-mui/filed_bugcodes.md). 79 translation doubts undecided, not filed. OS Language still to set on the web form.
+- 2026-11-26 MUI-apk top-up: the first read dropped strings with a line break (mui-strings.ts fixed 2026-11-25). Re-read 2611201 into mui/../mui-topup (68 strings): 3 new keys. 8 fails, APK-only, held in the drafts (effects hint dialog 「Video Enhance」 in English: ESM, ARA, PLK, HEB, SVE, NOR, UKR; JPN refund message line break) and 14 doubts TD-A27…A31, TD-E42…E50. TC-321 stays Fail. Nothing filed.

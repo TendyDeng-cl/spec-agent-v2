@@ -1,0 +1,8 @@
+[
+  {
+    "bug": "PHA262026P0152",
+    "verdict": "FIXED",
+    "summary": "At 2026/12/30 10:00 the Free user's Launcher IAP icon is the animated, looping two champagne glasses (NY_ani), not the orange crown.",
+    "screenshots": ["e_04_ny_launcher.png", "e_06_ny_icon_crop.png", "e_05_ny_icon_frames.png", "e_03_xmas_icon.png", "e_07_xmas_icon_crop.png", "e_08_mine_free.png", "e_09_end_launcher.png"]
+  }
+]

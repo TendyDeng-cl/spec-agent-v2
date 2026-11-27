@@ -1,0 +1,28 @@
+{
+  "Xmas-NY-Sale-R1-05": {
+    "entry": 5,
+    "iss": "ISS-XNS-05",
+    "title": "NY Sale: Launcher IAP icon stays the regular orange crown, no champagne glasses",
+    "feature": "Xmas-NY-Sale-R1",
+    "type": "Functional",
+    "sev": 2,
+    "belong": "RD",
+    "out": 5,
+    "times": 5,
+    "short": "PHD-A 20.19.0 - [AIAgent] Xmas_NY_Sale: Launcher: NY Sale IAP icon stays regular orange crown, no champagne-glasses animation",
+    "desc": "Repro Steps:\n1. Set the phone clock to 2026/12/30 10:00 local time (automatic date and time off)\n2. Force-stop PhotoDirector\n3. Launch the APP\n4. Look at the IAP icon at the Launcher's top right\n5. Check the result\n\nResult:\nDuring the NY Sale the Launcher IAP icon is the regular orange crown, not the champagne glasses.\n摘要：新年特賣期間 Launcher IAP 圖示仍為一般橘色皇冠，不是香檳杯。\n{20.19.0_xns05_ny_regular_crown.jpg} {20.19.0_xns05_ny_icon_crop.jpg} {20.19.0_xns05_xmas_icon_before.jpg} {20.19.0_xns05_after_midnight_crown.jpg} {20.19.0_xns05_design_ny_launcher.jpg} {20.19.0_xns05_log.txt}\n\nExpect Result:\nDuring the NY Sale a free user's IAP icon is the animated two champagne glasses (NY_ani).\n摘要：新年特賣期間免費用戶的 IAP 圖示應為香檳杯動畫（NY_ani）。\n\nNote:\nDevice: Samsung Galaxy A55 (SM-A5560) / Android 15, Test Server, Free account\nSpec Link: Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), Launcher NY frame (NY_ani annotation) -\nhttps://www.figma.com/design/2ogGJ14xElxFo4V8QjteOM/IAP?node-id=9740-344\nSpec Link: Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board -\nhttps://www.figma.com/design/taJPs6ntbB61LQG0wJ0PiZ/PhD-MX-IAP-Page?node-id=14724-43580\n<Claude Reviewed>",
+    "files": [
+      "20.19.0_xns05_ny_regular_crown.jpg",
+      "20.19.0_xns05_ny_icon_crop.jpg",
+      "20.19.0_xns05_xmas_icon_before.jpg",
+      "20.19.0_xns05_after_midnight_crown.jpg",
+      "20.19.0_xns05_design_ny_launcher.jpg",
+      "20.19.0_xns05_log.txt"
+    ],
+    "images_dir": "D:\\spec-casebook\\library\\phd\\xmas-ny-sale\\android\\ebugs\\2026-11-20\\20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0_images/05_ISS-XNS-05",
+    "qa_note": "R-031 / R-032 (PM spec note: 「free user sale 期間 Launcher IAP icon 改圖」; Design Launcher NY frame: icon 「NY_ani」, two champagne glasses, Lottie @raw/ny_ani_cheers, loop and autoplay). Free user. At 2026/12/27 23:59:59 → 12/28 00:00:01 on the open Launcher the Xmas bubble reaches 「00:00:00」 (never negative, Pass) and the Santa-hat icon (btnLauncherCampaignPurchase) is replaced by the regular orange crown (btnLauncherPurchase), not the glasses (TC-038). The same after a force-stop and relaunch at 12/28 00:01 (TC-004), at 12/29 09:00 and 12/30 10:00 (TC-031) and 2027/01/02–01/05 (TC-035, TC-006; the NY countdown bubble then sits under the regular crown); TC-032 (animation loop) Blocked behind it. The Xmas Santa-hat crown did show 12/11–12/27 (TC-030 Pass). Log at each launch lists 「addEvent 2027_New_Year_Sale_Campaign」 and ThemeUtils 「LottieAnimationView is an AppCompat widget …」, but the Lottie line appears on every launch, also on the real date and during the Xmas Sale, so it is not shown to be the cause. ⚠ Caveat for the reviewer: with the moved clock the launcher campaign query (hy5 「queryContent Exception … Chain validation failed」, the class that logs 「queryLauncherCampaignData」) fails on every launch (O-3, KP-144); if the NY icon is chosen by server campaign data rather than the build, this may be the moved-clock artefact and RD's server-side sale switch is needed to confirm. Hold it if you want that confirmation first.",
+    "ux": false,
+    "basis": "",
+    "ux_check": "—"
+  }
+}

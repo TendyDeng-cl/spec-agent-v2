@@ -1,0 +1,11 @@
+# PDR-A 16.9.0 (2611251), Sony XQ-BT52, logcat of PowerDirector, TC-087: Generate 16:33:46, system Back on
+# Analyzing & Generating at 16:33:50; the task keeps running (the task list shows 「View」 by 16:40); balance lines cut after the number
+2026-11-26 16:33:45.305 23387 27334 D CreditSystemManager: getMemberCreditRemain, gGetMemberRemainResponse: GGetMemberRemainResponse(totalRemain=2266 …
+2026-11-26 16:33:46.742 23387 23497 D ImageToVideo:  create session response code->200
+2026-11-26 16:33:46.972 23387 23802 E Upload to S3: start
+2026-11-26 16:33:47.609 23387 23802 E Upload to S3: finish
+2026-11-26 16:33:47.736 23387 23802 E Upload to S3: start
+2026-11-26 16:33:47.922 23387 23802 E Upload to S3: finish
+2026-11-26 16:33:48.219 23387 23497 D ImageToVideo:  apply effect response code->200
+2026-11-26 16:33:58.405 23387 23387 D ImageToVideoRepository: applyEffect status: Applying 0
+2026-11-26 16:37:34.433 23387 27332 D CreditSystemManager: getMemberCreditRemain, gGetMemberRemainResponse: GGetMemberRemainResponse(totalRemain=2218 …

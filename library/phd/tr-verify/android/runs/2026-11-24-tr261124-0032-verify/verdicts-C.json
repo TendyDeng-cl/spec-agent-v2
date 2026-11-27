@@ -1,0 +1,26 @@
+[
+  {
+    "bug": "PHA262026P0070",
+    "verdict": "FIXED",
+    "summary": "Saving a photo and a video in My AI Artwork › Recent each logs the Mixpanel event Artwork_Result_Save with tab Recent, plus GenAI_Result_Save or ImageToVideo_Result_Save.",
+    "screenshots": ["c_43_photo_pack.png", "c_44_photo_saved.png", "c_63_recent_video_done.png", "c_65_video_saving.png"]
+  },
+  {
+    "bug": "PHA262026P0141",
+    "verdict": "FIXED",
+    "summary": "After Reuse the Custom page shows the toast 「Settings applied」 for about two seconds, with Kling 2.6, 10s, Pro, Sound Off and the prompt applied.",
+    "screenshots": ["c_52_saveshare.png", "c_55_custom_after_reuse.png", "c_56_reuse_settings.png"]
+  },
+  {
+    "bug": "PHA262026P0143",
+    "verdict": "FIXED",
+    "summary": "Both ‹ and system Back in the room opened by Reuse return to the video's Save & Share page.",
+    "screenshots": ["c_59_p0143_room2.png", "c_57_p0143_chevron.png", "c_60_p0143_sysback.png"]
+  },
+  {
+    "bug": "PHA262026P0144",
+    "verdict": "FIXED",
+    "summary": "Tapping Reuse logs ImageToVideo_Reuse_Click with model Model_Kling-2.6, and Artwork_Reuse_Click is no longer sent.",
+    "screenshots": ["c_52_saveshare.png", "c_53_reuse_room.png"]
+  }
+]

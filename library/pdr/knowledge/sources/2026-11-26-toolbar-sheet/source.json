@@ -1,0 +1,23 @@
+{
+ "from": "Product team's PDRM toolbar sheet (https://docs.google.com/spreadsheets/d/1OvToKsZ6tTkROzuznVnVfUfU3oRCY8SQHrMk0xGuIes/edit)",
+ "received": "2026-11-26",
+ "checked": "2026-11-26",
+ "tab": "2026/11 Auto Reframe",
+ "gid": "366131507",
+ "other_tabs": [
+  "2026/09 Replace Audio Re-order",
+  "2026/07&08 add Video Edit by Chat & CineStory",
+  "2026/02 add AI Remove",
+  "2026/01",
+  "old"
+ ],
+ "note": "Entry point reference (user, 2026-11-26): the newest dated tab is the reference; re-fetched at each analysis by scripts/entry-points.ts. Original HTML stays local.",
+ "extracted_sha256": "aa88fa41cd01c8c37e604b042ab9b707a3e16540893c719e310a714755643440",
+ "files": [
+  {
+   "name": "sheet.html",
+   "bytes": 131101,
+   "sha256": "9f0ccc1be854b52a61d2e0e5765bf002aed03516644efa63df006c0d6e92d338"
+  }
+ ]
+}

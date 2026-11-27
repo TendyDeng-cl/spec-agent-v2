@@ -1,0 +1,894 @@
+{
+  "draft": "20261126-111601",
+  "current": [
+    "R1"
+  ],
+  "needs": {
+    "TC-008": [
+      "fresh-install"
+    ],
+    "TC-009": [
+      "credits"
+    ],
+    "TC-010": [
+      "credits"
+    ],
+    "TC-011": [
+      "credits"
+    ],
+    "TC-012": [
+      "credits"
+    ],
+    "TC-013": [
+      "credits"
+    ],
+    "TC-014": [
+      "credits",
+      "app-language"
+    ],
+    "TC-015": [
+      "credits",
+      "app-language"
+    ],
+    "TC-016": [
+      "credits",
+      "app-language"
+    ],
+    "TC-017": [
+      "credits"
+    ],
+    "TC-018": [
+      "credits"
+    ],
+    "TC-019": [
+      "credits"
+    ],
+    "TC-020": [
+      "credits"
+    ],
+    "TC-021": [
+      "credits"
+    ],
+    "TC-022": [
+      "credits"
+    ],
+    "TC-023": [
+      "credits"
+    ],
+    "TC-024": [
+      "credits"
+    ],
+    "TC-025": [
+      "credits"
+    ],
+    "TC-026": [
+      "credits"
+    ],
+    "TC-027": [
+      "credits"
+    ],
+    "TC-028": [
+      "credits"
+    ],
+    "TC-029": [
+      "credits"
+    ],
+    "TC-030": [
+      "credits"
+    ],
+    "TC-031": [
+      "credits"
+    ],
+    "TC-032": [
+      "credits"
+    ],
+    "TC-033": [
+      "credits"
+    ],
+    "TC-034": [
+      "credits"
+    ],
+    "TC-035": [
+      "credits"
+    ],
+    "TC-036": [
+      "credits"
+    ],
+    "TC-037": [
+      "credits"
+    ],
+    "TC-038": [
+      "credits"
+    ],
+    "TC-039": [
+      "credits"
+    ],
+    "TC-040": [
+      "credits"
+    ],
+    "TC-041": [
+      "credits"
+    ],
+    "TC-042": [
+      "credits"
+    ],
+    "TC-043": [
+      "credits"
+    ],
+    "TC-044": [
+      "credits",
+      "share-app"
+    ],
+    "TC-045": [
+      "credits",
+      "share-app"
+    ],
+    "TC-046": [
+      "credits"
+    ],
+    "TC-047": [
+      "credits"
+    ],
+    "TC-048": [
+      "credits"
+    ],
+    "TC-049": [
+      "credits"
+    ],
+    "TC-050": [
+      "credits"
+    ],
+    "TC-051": [
+      "credits"
+    ],
+    "TC-052": [
+      "credits",
+      "share-app"
+    ],
+    "TC-053": [
+      "credits",
+      "share-app"
+    ],
+    "TC-054": [
+      "credits"
+    ],
+    "TC-056": [
+      "credits"
+    ],
+    "TC-057": [
+      "credits"
+    ],
+    "TC-058": [
+      "credits"
+    ],
+    "TC-059": [
+      "credits"
+    ],
+    "TC-060": [
+      "credits"
+    ],
+    "TC-062": [
+      "credits"
+    ],
+    "TC-063": [
+      "credits"
+    ],
+    "TC-064": [
+      "credits"
+    ],
+    "TC-065": [
+      "credits"
+    ],
+    "TC-066": [
+      "credits"
+    ],
+    "TC-067": [
+      "credits"
+    ],
+    "TC-068": [
+      "credits"
+    ],
+    "TC-069": [
+      "credits"
+    ],
+    "TC-070": [
+      "credits"
+    ],
+    "TC-071": [
+      "credits"
+    ],
+    "TC-072": [
+      "credits"
+    ],
+    "TC-073": [
+      "credits"
+    ],
+    "TC-074": [
+      "credits"
+    ],
+    "TC-075": [
+      "credits"
+    ],
+    "TC-076": [
+      "credits"
+    ],
+    "TC-077": [
+      "credits"
+    ],
+    "TC-078": [
+      "credits",
+      "share-app"
+    ],
+    "TC-079": [
+      "share-app"
+    ],
+    "TC-080": [
+      "credits"
+    ],
+    "TC-082": [
+      "credits"
+    ],
+    "TC-083": [
+      "credits"
+    ],
+    "TC-087": [
+      "credits"
+    ],
+    "TC-088": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-089": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-090": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-091": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-092": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-093": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-094": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-095": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-096": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-097": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-098": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-099": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-100": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-101": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-102": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-103": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-104": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-105": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-106": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-107": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-108": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-109": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-110": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-111": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-112": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-113": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-114": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-115": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-116": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-117": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-118": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-119": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-120": [
+      "credits",
+      "c2pa-tool"
+    ],
+    "TC-121": [
+      "credits",
+      "c2pa-tool",
+      "observability-asset"
+    ],
+    "TC-122": [
+      "credits",
+      "c2pa-tool",
+      "observability-asset"
+    ],
+    "TC-123": [
+      "credits",
+      "c2pa-tool",
+      "observability-asset"
+    ],
+    "TC-124": [
+      "credits",
+      "c2pa-tool",
+      "observability-asset"
+    ],
+    "TC-125": [
+      "credits",
+      "c2pa-tool",
+      "observability-asset"
+    ],
+    "TC-126": [
+      "credits"
+    ],
+    "TC-127": [
+      "credits"
+    ],
+    "TC-160": [
+      "credits"
+    ],
+    "TC-165": [
+      "credits"
+    ],
+    "TC-170": [
+      "credits"
+    ],
+    "TC-175": [
+      "credits"
+    ],
+    "TC-180": [
+      "credits"
+    ],
+    "TC-185": [
+      "credits"
+    ],
+    "TC-190": [
+      "credits"
+    ],
+    "TC-195": [
+      "credits"
+    ],
+    "TC-200": [
+      "credits"
+    ],
+    "TC-205": [
+      "credits"
+    ],
+    "TC-210": [
+      "credits"
+    ],
+    "TC-215": [
+      "credits"
+    ],
+    "TC-220": [
+      "credits"
+    ],
+    "TC-225": [
+      "credits"
+    ],
+    "TC-230": [
+      "credits"
+    ],
+    "TC-235": [
+      "credits"
+    ],
+    "TC-240": [
+      "credits"
+    ],
+    "TC-245": [
+      "credits"
+    ],
+    "TC-250": [
+      "credits"
+    ],
+    "TC-255": [
+      "credits"
+    ],
+    "TC-260": [
+      "credits"
+    ],
+    "TC-265": [
+      "credits"
+    ],
+    "TC-270": [
+      "credits"
+    ],
+    "TC-275": [
+      "credits"
+    ],
+    "TC-280": [
+      "credits"
+    ],
+    "TC-285": [
+      "credits"
+    ],
+    "TC-290": [
+      "credits"
+    ],
+    "TC-295": [
+      "credits"
+    ],
+    "TC-300": [
+      "credits"
+    ],
+    "TC-305": [
+      "credits"
+    ],
+    "TC-310": [
+      "credits"
+    ],
+    "TC-316": [
+      "credits"
+    ],
+    "TC-322": [
+      "credits"
+    ],
+    "TC-327": [
+      "credits"
+    ],
+    "TC-330": [
+      "credits"
+    ],
+    "TC-332": [
+      "credits"
+    ]
+  },
+  "unavailable": {
+    "observability-asset": "observability: a timeline tool's generated asset stays inside the project; no file to read its C2PA manifest from (Q-13)",
+    "fresh-install": "PowerDirector cannot be reinstalled on the QA iPhone (AGENTS.md, until lifted)"
+  },
+  "phases": [
+    {
+      "id": "R1",
+      "name": "Full run of the draft (ios)",
+      "round": true,
+      "note": "Every saved or exported file is copied to the computer and checked there: frames at 0.0 / 1.9 / 2.1 s with ffmpeg, the label size in pixels on the full-resolution file, C2PA with c2patool. Read the switch at every segment start and record it. Never post to Instagram.",
+      "segments": [
+        {
+          "id": "R1-a",
+          "name": "Settings: the switch row, tiers, ⓘ sheet, persistence",
+          "note": "Free tier first, then each paid tier; restore the tier at the end. Leave the switch Off when done.",
+          "cases": [
+            "TC-001",
+            "TC-002",
+            "TC-003",
+            "TC-004",
+            "TC-005",
+            "TC-006",
+            "TC-007"
+          ]
+        },
+        {
+          "id": "R1-b",
+          "name": "Image results: Text to Image (portrait, landscape, square), AI Art, image C2PA, re-save",
+          "note": "One Text to Image generation per aspect ratio; each result is saved Off, then On. Keep the files for c2patool.",
+          "cases": [
+            "TC-009",
+            "TC-010",
+            "TC-011",
+            "TC-046",
+            "TC-047",
+            "TC-048",
+            "TC-049",
+            "TC-050",
+            "TC-051",
+            "TC-052",
+            "TC-053",
+            "TC-087",
+            "TC-115",
+            "TC-116",
+            "TC-119"
+          ]
+        },
+        {
+          "id": "R1-c",
+          "name": "Image to Video: tile → list → View, Save Off / On, Share, already-saved files, C2PA per model",
+          "note": "One generation per model the build offers (n/a for a model it lacks). The Save Off / On files of the first model feed the already-saved rows.",
+          "cases": [
+            "TC-020",
+            "TC-021",
+            "TC-022",
+            "TC-044",
+            "TC-045",
+            "TC-085",
+            "TC-086",
+            "TC-088",
+            "TC-089",
+            "TC-090",
+            "TC-091",
+            "TC-092",
+            "TC-093",
+            "TC-094",
+            "TC-095",
+            "TC-120"
+          ]
+        },
+        {
+          "id": "R1-d",
+          "name": "Other video results: Video Edit by Chat, Cinematic Reel Creator, Character Motion Swap, Video Object Removal, AI Storytelling, AI Anime Video, Talking Avatar",
+          "note": "One generation per feature (per model where a C2PA row names one).",
+          "cases": [
+            "TC-017",
+            "TC-018",
+            "TC-019",
+            "TC-023",
+            "TC-024",
+            "TC-025",
+            "TC-026",
+            "TC-027",
+            "TC-028",
+            "TC-029",
+            "TC-030",
+            "TC-031",
+            "TC-032",
+            "TC-033",
+            "TC-034",
+            "TC-038",
+            "TC-039",
+            "TC-040",
+            "TC-041",
+            "TC-042",
+            "TC-043",
+            "TC-105",
+            "TC-106",
+            "TC-107",
+            "TC-108",
+            "TC-109",
+            "TC-110",
+            "TC-111",
+            "TC-112",
+            "TC-113",
+            "TC-114"
+          ]
+        },
+        {
+          "id": "R1-e",
+          "name": "Text to Video: portrait / landscape label size, Save Off / On, C2PA per model",
+          "cases": [
+            "TC-012",
+            "TC-013",
+            "TC-035",
+            "TC-036",
+            "TC-037",
+            "TC-097",
+            "TC-098",
+            "TC-099",
+            "TC-100",
+            "TC-101",
+            "TC-102",
+            "TC-103",
+            "TC-104"
+          ]
+        },
+        {
+          "id": "R1-f",
+          "name": "Music Generator: dialog, Cancel, Generate, spoken clip (Preview, Download, timeline, export), languages, C2PA",
+          "note": "Language rows switch the app language and restore it after the segment.",
+          "cases": [
+            "TC-014",
+            "TC-015",
+            "TC-016",
+            "TC-054",
+            "TC-055",
+            "TC-056",
+            "TC-057",
+            "TC-058",
+            "TC-059",
+            "TC-060",
+            "TC-061",
+            "TC-062",
+            "TC-096",
+            "TC-117",
+            "TC-118"
+          ]
+        },
+        {
+          "id": "R1-g",
+          "name": "Editor: TTS, Voice Changer, AI Anime, AI Cartoon, AI Sketch on the timeline, export dialog, project export rules",
+          "note": "One project per tool; reuse it for preview, export Off and export On.",
+          "cases": [
+            "TC-063",
+            "TC-064",
+            "TC-065",
+            "TC-066",
+            "TC-067",
+            "TC-068",
+            "TC-069",
+            "TC-070",
+            "TC-071",
+            "TC-072",
+            "TC-073",
+            "TC-074",
+            "TC-075",
+            "TC-076",
+            "TC-077",
+            "TC-078",
+            "TC-079",
+            "TC-080",
+            "TC-081",
+            "TC-082",
+            "TC-083",
+            "TC-084",
+            "TC-121",
+            "TC-122",
+            "TC-123",
+            "TC-124",
+            "TC-125"
+          ]
+        },
+        {
+          "id": "R1-h",
+          "name": "One-way states last: music and export 「Don’t show again」, default on a fresh install",
+          "note": "Each row here leaves a state the UI cannot undo; the default row resets the app (Android pm clear) and runs very last.",
+          "cases": [
+            "TC-008",
+            "TC-126",
+            "TC-127"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MUI",
+      "name": "MUI: 26 languages (translation and truncation on the phone)",
+      "note": "REQ-011 (user, 2026-11-24). Run on request, never in a full run. One segment per language; every segment ends with a plain launch. Needs both 「Don’t show again」 unticked (before TC-126 / TC-127). Doubtful translations go to mui-doubts.md (references/mui.md §3).",
+      "segments": [
+        {
+          "id": "MUI-CHT",
+          "name": "Traditional Chinese (zh-Hant-TW)",
+          "cases": [
+            "TC-128"
+          ]
+        },
+        {
+          "id": "MUI-CHS",
+          "name": "Simplified Chinese (zh-Hans-CN)",
+          "cases": [
+            "TC-129"
+          ]
+        },
+        {
+          "id": "MUI-JPN",
+          "name": "Japanese (ja-JP)",
+          "cases": [
+            "TC-130"
+          ]
+        },
+        {
+          "id": "MUI-ESP",
+          "name": "Spanish (es-ES)",
+          "cases": [
+            "TC-131"
+          ]
+        },
+        {
+          "id": "MUI-KOR",
+          "name": "Korean (ko-KR)",
+          "cases": [
+            "TC-132"
+          ]
+        },
+        {
+          "id": "MUI-DEU",
+          "name": "German (de-DE)",
+          "cases": [
+            "TC-133"
+          ]
+        },
+        {
+          "id": "MUI-FRA",
+          "name": "French (fr-FR)",
+          "cases": [
+            "TC-134"
+          ]
+        },
+        {
+          "id": "MUI-ITA",
+          "name": "Italian (it-IT)",
+          "cases": [
+            "TC-135"
+          ]
+        },
+        {
+          "id": "MUI-RUS",
+          "name": "Russian (ru-RU)",
+          "cases": [
+            "TC-136"
+          ]
+        },
+        {
+          "id": "MUI-PTB",
+          "name": "Portuguese (Brazil) (pt-BR)",
+          "cases": [
+            "TC-137"
+          ]
+        },
+        {
+          "id": "MUI-NLD",
+          "name": "Dutch (nl-NL)",
+          "cases": [
+            "TC-138"
+          ]
+        },
+        {
+          "id": "MUI-IND",
+          "name": "Indonesian (id-ID)",
+          "cases": [
+            "TC-139"
+          ]
+        },
+        {
+          "id": "MUI-THA",
+          "name": "Thai (th-TH)",
+          "cases": [
+            "TC-140"
+          ]
+        },
+        {
+          "id": "MUI-MAY",
+          "name": "Malay (ms-MY)",
+          "cases": [
+            "TC-141"
+          ]
+        },
+        {
+          "id": "MUI-HIN",
+          "name": "Hindi (hi-IN)",
+          "cases": [
+            "TC-142"
+          ]
+        },
+        {
+          "id": "MUI-ESM",
+          "name": "Spanish (Mexico) (es-MX)",
+          "cases": [
+            "TC-143"
+          ]
+        },
+        {
+          "id": "MUI-ARA",
+          "name": "Arabic (ar-SA)",
+          "cases": [
+            "TC-144"
+          ]
+        },
+        {
+          "id": "MUI-VIT",
+          "name": "Vietnamese (vi-VN)",
+          "cases": [
+            "TC-145"
+          ]
+        },
+        {
+          "id": "MUI-PLK",
+          "name": "Polish (pl-PL)",
+          "cases": [
+            "TC-146"
+          ]
+        },
+        {
+          "id": "MUI-TRK",
+          "name": "Turkish (tr-TR)",
+          "cases": [
+            "TC-147"
+          ]
+        },
+        {
+          "id": "MUI-FAR",
+          "name": "Persian (fa-IR)",
+          "cases": [
+            "TC-148"
+          ]
+        },
+        {
+          "id": "MUI-HEB",
+          "name": "Hebrew (he-IL)",
+          "cases": [
+            "TC-149"
+          ]
+        },
+        {
+          "id": "MUI-SVE",
+          "name": "Swedish (sv-SE)",
+          "cases": [
+            "TC-150"
+          ]
+        },
+        {
+          "id": "MUI-DAN",
+          "name": "Danish (da-DK)",
+          "cases": [
+            "TC-151"
+          ]
+        },
+        {
+          "id": "MUI-NOR",
+          "name": "Norwegian Bokmål (nb-NO)",
+          "cases": [
+            "TC-152"
+          ]
+        },
+        {
+          "id": "MUI-UKR",
+          "name": "Ukrainian (uk-UA)",
+          "cases": [
+            "TC-153"
+          ]
+        }
+      ]
+    }
+  ]
+}

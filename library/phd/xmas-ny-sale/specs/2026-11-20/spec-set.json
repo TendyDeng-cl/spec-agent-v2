@@ -1,0 +1,28 @@
+{
+  "feature": "phd/xmas-ny-sale",
+  "folder": "2026-11-20",
+  "received_at": "2026-11-20T07:21:14.140Z",
+  "spec_set_sha256": "c32e3bd13743c7185b7db91f9d509fb424f82aef64213c255b81870a3fea2e87",
+  "files": [
+    {
+      "name": "Xmas NY Sale - PM Figma 14724-43579.md",
+      "sha256": "17b971e9aa56e68d6cddc94d92be6bfc9192422d384fb51cd5090872a0a85ff3",
+      "bytes": 5240
+    },
+    {
+      "name": "Xmas NY Sale - Design Figma 9627-6.md",
+      "sha256": "43634554c3e0e95d5bbca007a022b8d32bc98cbfce0ef96939ce743cd9d45b0a",
+      "bytes": 2627
+    }
+  ],
+  "source_priority": [
+    "design",
+    "pm"
+  ],
+  "figma": {
+    "design": "https://www.figma.com/design/2ogGJ14xElxFo4V8QjteOM/IAP?node-id=9627-6",
+    "pm": "https://www.figma.com/design/taJPs6ntbB61LQG0wJ0PiZ/PhD-MX-IAP-Page?node-id=14724-43579"
+  },
+  "figma_only": true,
+  "note": "Figma-only spec set (user, 2026-11-20): the spec files are text snapshots of the PM page 「11E Christmas Sale」 (PhD MX IAP Page file) and the Design page 「261117_xmas_NY_sale」 (IAP file), written from the inventory reads; no PDF export."
+}

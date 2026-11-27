@@ -1,0 +1,53 @@
+[
+  {
+    "bug": "PHA262026P0094",
+    "verdict": "FIXED",
+    "summary": "Pages now has the − | + stepper, but opened from page 2 (or page 1) it selects no page and shows no 「Page n / 3」 text until a stepper or move button is tapped.",
+    "observed": "Opened from page 2, Pages selects no page and shows no 「Page 2 / 3」; only the − | + stepper is there.",
+    "expected": "Pages opens on the current page with 「Page 2 / 3」 above a − | + stepper.",
+    "observedZh": "從第 2 頁開啟 Pages 時沒有選取目前頁，也沒有「Page 2 / 3」；只有 − | + 步進器。",
+    "expectedZh": "應停在目前頁，並在 − | + 步進器上方顯示「Page 2 / 3」。",
+    "screenshots": [
+      "b_10_p0094_pages_from_p1.png",
+      "b_12_p0094_tap_page2_frame.png",
+      "b_13_p0094_canvas_on_page2.png",
+      "b_14_p0094_pages_from_p2.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve note (rd-resolve.json); original observation kept in result file."
+  },
+  {
+    "bug": "PHA262026P0095",
+    "verdict": "FIXED",
+    "summary": "Pages has ✕ and ✓: ✓ applies the added page, ✕ with a change asks 「Discard changes?」 (Keep stays, Discard drops the page), and system Back behaves as ✕.",
+    "screenshots": [
+      "b_20_p0095_added.png",
+      "b_21_p0095_x_dialog.png",
+      "b_22_p0095_after_keep.png",
+      "b_26_p0095_discard_tap_coord.png",
+      "b_27_p0095_pages_after_discard.png",
+      "b_30_p0095_pages_after_apply.png",
+      "b_31_p0095_chevron_with_change.png",
+      "b_32_p0095_chevron_discard.png",
+      "b_34_p0095_back_with_change.png",
+      "b_35_p0095_back_discard.png"
+    ]
+  },
+  {
+    "bug": "PHA262026P0097",
+    "verdict": "FIXED",
+    "summary": "A dragged page is now enlarged, tilted and translucent, but a plain tap on the move button still selects the page and no 「Hold ≡ & drag to reorder」 hint shows while dragging.",
+    "observed": "A plain tap on the move button selects page 1 (outline, 「Page 1 / 3」); dragged, the page is enlarged and translucent but no 「Hold ≡ & drag to reorder」 hint shows.",
+    "expected": "A plain tap does nothing; dragged, the page is enlarged and translucent with 「Hold ≡ & drag to reorder」.",
+    "observedZh": "單點移動鈕會選取第 1 頁（出現外框與「Page 1 / 3」）；拖曳時頁面有放大、半透明，但沒有「Hold ≡ & drag to reorder」提示。",
+    "expectedZh": "單點應無反應；拖曳時頁面放大、半透明並顯示「Hold ≡ & drag to reorder」。",
+    "screenshots": [
+      "b_40_p0097_pages_before.png",
+      "b_41_p0097_after_plain_tap.png",
+      "b_42_p0097_after_drop.png",
+      "../recordings/p0097-pair.png",
+      "../recordings/p0097-mid-full.png",
+      "../recordings/p0097-sheet-full.png"
+    ],
+    "ruling": "User 2026-11-25: PASS per RD resolve note (rd-resolve.json); original observation kept in result file."
+  }
+]

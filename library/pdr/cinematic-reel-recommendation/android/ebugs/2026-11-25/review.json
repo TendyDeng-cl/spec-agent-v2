@@ -1,0 +1,20 @@
+{
+ "tr": "TR261123-0015",
+ "build": "2611201",
+ "trNote": "TR261123-0015, build 16.9.0.2611201 (Google Play internal test track), the build R2 ran on; same TR and build as the 2026-11-24 batch (DRA262611P0289, DRA262611P0290).",
+ "lede": "Five new cards from the R2 full run of table v2 (75 rows). Two are layout defects for RD, three are translation problems for the Doc team (PC-Doc). The missing Add Media 「?」 (DRA262611P0289) and the English chip and sentence (DRA262611P0290) are already filed on Android and left off. None is failure-related, so no log is attached.",
+ "why": {
+  "ISS-CRA-03": "PC-Doc translation text: 14 template descriptions in 9 languages end with a full stop in the app while the Cinestory CMS sheet's strings have none; the sheet is inconsistent inside each language, the app is not.",
+  "ISS-CRA-04": "RD layout: in Arabic, Persian and Hebrew each sheet heading is right-aligned while its coloured bar stays at the left edge.",
+  "ISS-CRA-05": "RD layout: the Danish caption 「Bevægelsesfornemmelse」 wraps inside the word, leaving a lone 「e」 on the second line.",
+  "ISS-CRA-06": "PC-Doc translation: the CMS serves Filipino names and captions but the app has no Filipino strings, so the sheet's headings and button are English.",
+  "ISS-CRA-07": "PC-Doc translation text: the Turkish first heading is 「öneri」 with a small first letter; no sheet gives the heading translations."
+ },
+ "related": {
+  "ISS-CRA-03": "TC-025, TC-028, TC-030, TC-032, TC-040, TC-052, TC-062, TC-074. Thai and Hindi card 1 have no closing mark in both sheet and app (Pass).",
+  "ISS-CRA-04": "Observation on TC-054/055 (ar), TC-064/065 (fa), TC-066/067 (he); the rows passed as written. Card name and description are left-aligned too.",
+  "ISS-CRA-05": "TC-071. Norwegian 「Bevegelsesfølelse」 fits on one line.",
+  "ISS-CRA-06": "TC-063 (and the English card button in TC-062). Wider than DRA262611P0290, where headings and button are translated.",
+  "ISS-CRA-07": "Observation on TC-061; the row passed as written."
+ }
+}

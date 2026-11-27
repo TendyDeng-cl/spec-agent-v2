@@ -1,0 +1,18 @@
+[
+  {
+    "bug": "PHA262026P0138",
+    "verdict": "FIXED",
+    "summary": "With the connection cut during Apply Effect (server charged 90, app got no answer: applyEffect UnknownHost), the confirm page shows 「Network Error」 instead of 「Credits refunded」, My AI Artwork's ⚠ Retry leads to the finished Color Rush reel, and Detail has exactly one −90 for the job; a job that really failed (AI Transition) was refunded (+120).",
+    "screenshots": [
+      "f_25_try4_dialog.png",
+      "f_27_try4_history.png",
+      "f_34_try4_retry.png",
+      "f_35_try4_done.png",
+      "f_36_detail_after.png",
+      "f_39_ots_dialog.png",
+      "f_46_outfit_dialog.png",
+      "f_50_outfit_detail.png",
+      "f_51_detail_end.png"
+    ]
+  }
+]

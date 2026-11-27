@@ -1,0 +1,114 @@
+{
+ "TC-002": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-010": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-022": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-045": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-046": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-048": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-051": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-053": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-075": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-058": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-040": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-041": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-042": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-043": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-047": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-049": {
+  "label": "Phone language change not allowed (no in-app language setting)"
+ },
+ "TC-003": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-054": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-063": {
+  "label": "Paid account is Credit Auto Pass eligible (no 'neither' account, Q-8)"
+ },
+ "TC-011": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-021": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-044": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-052": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-059": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-069": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-050": {
+  "label": "Phone language change not allowed (no in-app language setting)"
+ },
+ "TC-006": {
+  "label": "Server-fed sale content not loaded with the moved clock (O-3); needs RD's server-side sale switch",
+  "note": "REQ-004: not filed"
+ },
+ "TC-067": {
+  "label": "Paid account is Credit Auto Pass eligible (no 'neither' account, Q-8)"
+ },
+ "TC-032": {
+  "group": "upstream",
+  "note": "no NY champagne-glasses icon to watch (TC-031, eBug draft ISS-XNS-05)"
+ }
+}

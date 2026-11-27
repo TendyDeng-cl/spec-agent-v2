@@ -1,0 +1,204 @@
+{
+  "Q-1": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0086"
+    ],
+    "note": "Still so on 2611251: the Demo page description is AI Reframe's text (TC-011 Fail). Carried by DRA262611P0086 (RD, NeedCodeReview), which asks for a Video Enhance description; the exact words stay PM's (proposal 「Make blurry, noisy or dark videos look sharp and clear.」)."
+  },
+  "Q-2": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "The app follows the Design: 「Cancel」 › 「Sure You Want to Leave?」 › 「Leave」 returns to the panel and the credits are not restored at once (TC-113 Pass, −4). The upload still goes on after Leave and a refund comes ~3 h later (+4 at 00:00, KF-003): that is DRA262611P0094 (RD, Assigned), not this question."
+  },
+  "Q-5": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "The app decides by the short side: a 1080×1920 portrait source opens with 「1080p」 selected and the badge 「30fps · 1080p」 (TC-059 Pass), as PM B3 proposes."
+  },
+  "Q-6": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "A tap on a disabled chip changes nothing and shows no toast (TC-064 Pass: 「120fps」 disabled for a 24 fps source); the priced combinations are enabled where the source allows them (TC-254: none disabled)."
+  },
+  "Q-7": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "The IAP page on this build offers no free trial: one 「PowerDirector Pro」 page with yearly and monthly prices and 「Continue」, no trial wording (TC-093 Pass), as PM §7 says."
+  },
+  "Q-8": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Ruled by DRA262611P0097 (BugBelong PM, Close): 「Manage」 turns Recent task into a select mode with 「Delete」 only, no separate page and no download (TC-144, TC-355, TC-361, TC-368 on 2611251). Rows to change at the next draft: TC-144's Expected Result and the 「Manage」 step of TC-355 / TC-361 / TC-368 (select + Delete)."
+  },
+  "Q-9": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "Existing Android ticket DRA242410-0142 (Close, fixed in 15.1.0) rules that Back on the media picker opened with 「Try It Now」 goes to the Launcher on purpose, which is what the app does (TC-021, TC-201). Back from the Result returns to Recent task (TC-155 Pass). The rows TC-021 and TC-201 still expect the Demo page and change at the next draft."
+  },
+  "Q-10": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0099"
+    ],
+    "note": "Still so on 2611251: a 10:00 Timeline clip opens the panel capped at 08:00 with the 「Max 8 minutes…」 bubble, no 「Split clips longer than 8 minutes first」 toast (TC-161 Fail). Carried by DRA262611P0099 (RD, NeedCodeReview). The 2:30–8:00 part holds: the Professional toast shows and Professional switches at 02:20 (TC-160, TC-276 Pass)."
+  },
+  "Q-11": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0100"
+    ],
+    "note": "Still so on 2611251: a finished task from the Timeline (and from the main-track and PIP clip toolbars) does not replace the clip, shows no 「Applied Video Enhance」, and 「Add to Timeline」 opens a new project holding only the result (TC-162, TC-165, TC-362, TC-369 Fail). Carried by DRA262611P0100 (RD, Assigned)."
+  },
+  "Q-12": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "A second task can start while one is processing: two processing cards at once, no limit message (TC-121 Pass). PM's proposed cap of 3 was not probed."
+  },
+  "Q-13": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0089",
+      "DRA262611P0101"
+    ],
+    "note": "Still so on 2611251: a 0.933 s video and an MKV are not greyed and open the panel (TC-022 steps 4–5, TC-269 step 1; DRA262611P0089, RD, Assigned), and the 8K source opens on 1080p 「30fps · 1080p」 instead of 4K (TC-022; DRA262611P0101, RD, NeedCodeReview). 1440p / 4K sources open with 4K (Design 預設值規則, R-196). PM E1's 「≤ 4K」 greying was cancelled with DRA262611P0072 (old board)."
+  },
+  "Q-14": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "drafted": "ISS-VEA-59 (ebugs/2026-11-26-q1, [AIAgent][UX], BugBelong PM; filed DRA262611P0326 on TR261123-0070, 2026-11-26)",
+    "codes": [
+      "DRA262611P0326"
+    ],
+    "note": "After `pm clear` the first 「Enhance」 (TC-351, Pro, Stage) went straight to 「Video uploading...」: no consent or disclosure screen between the tap and the processing dialog (12 rapid screencaps), and none of the screens since the reset (Welcome with Terms of Service / Privacy Policy, notification prompt, Pro credits dialog, Account Sign In notice, Demo page, file-access and media permissions) mentions AI processing in a third party's cloud. The account had run Enhance before, so a consent kept with the account is not ruled out. PM / Legal decide whether the GenAI consent dialog must show and its text. Rows to change at the next draft: TC-351's Expected Result (record → the ruling) and its precondition price (ve-000100-720p30 is 「Enhance ◆ 2」, KF-001). R4 (2611251, 2026-11-26 17:39): the same on the first Enhance after the 17:22 pm clear (TC-351 Fail question, −2): no consent or disclosure screen. DRA262611P0326 (PM) is NewCreated: still holds."
+  },
+  "Q-15": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "Tapping the panel's credit pill opens 「My Credits」 (TC-097 Pass)."
+  },
+  "Q-16": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0095"
+    ],
+    "note": "Success push: the system notification reads the in-app banner copy, not PM's 「Your video is ready. Tap to view.」 (TC-133 Fail on 2611251; the in-app banner matches the Design, TC-130 Pass). Carried by DRA262611P0095 (RD, Assigned). The failure push (PM Gap 8, D1) is not reached: TC-174 needs a server failure that Android cannot inject (Blocked observability, KP-003)."
+  },
+  "Q-17": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "As drawn on 2611251: the panel has the Recent task icon at the top right (TC-140 Pass, also from the AI Magic tab and both clip toolbars: TC-355, TC-356, TC-361, TC-362, TC-368, TC-369) and processing cards read 「Processing…」 with 「N minutes left…」 (TC-114, TC-265 – TC-267). Their times are DRA262611P0084 (R-204), not this question; the static remaining time is the older PM tickets DRA262608-0071 / 0072."
+  },
+  "Q-18": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0079"
+    ],
+    "note": "Changed on 2611251: Home during 「Video uploading...」 no longer ends the task; the upload goes on, the task completes and is charged (4 credits; TC-115 Fail question), where PM C3 [建議] proposes cancel with no card and no charge. Carried by DRA262611P0079 (RD, NeedCodeReview, 「Home during upload ends the task but charges…」), which now looks fixed toward 'continue'; PM's C3 remains for PM on that ticket."
+  },
+  "Q-19": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "The app shows the Design's format: 「Selected Length」 as mm:ss (「08:00」, 「00:30」) with no 「/ max」 (TC-033 and the trim rows)."
+  },
+  "Q-20": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "drafted": "ISS-VEA-61 (ebugs/2026-11-26-r4, [AIAgent][UX], BugBelong PM)",
+    "codes": [
+      "DRA262611P0339"
+    ],
+    "note": "On 2611251 the 「Turn on notifications」 dialog showed for the first time (DRA262611P0232 fixed) and system Back does nothing on it: it stays open until 「Turn On」 or 「Later」 (TC-211 Fail question, Appium and adb Back). The other screens follow the assumption: Back closes a bubble, asks on the processing dialog and keeps uploading on the leave dialog (TC-203, TC-204, TC-205 Pass). Filed to PM on TR261125-0064 as DRA262611P0339 (2026-11-27)."
+  },
+  "Q-21": {
+    "state": "determined",
+    "by": "ruling 2026-11-25 (user, REQ-044)",
+    "at": "2026-11-25",
+    "note": "Ruling: the playhead can be dragged only between the two white trim handles (‹ ›), and play starts from where the playhead is. R3 recorded the drag inside the selection (TC-215); dragging against a handle and play from the playhead are not yet run and become rows in the next draft. The drafted PM eBug ISS-VEA-57 is withdrawn."
+  },
+  "Q-22": {
+    "state": "determined",
+    "by": "R3 (2026-11-24-r3-full, 16.9.0)",
+    "at": "2026-11-25",
+    "note": "Tapping a completed card's thumbnail opens the same Result as 「View」 (TC-143 Pass)."
+  },
+  "Q-24": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0090"
+    ],
+    "note": "Still so on 2611251: 「Professional」 does not re-lay the strip to 2:30 per width (TC-045, TC-264 Fail question). Carried by DRA262611P0090 (BugBelong PM, status Fail since 2026-11-26: a delivered fix was rejected)."
+  },
+  "Q-27": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0113",
+      "DRA262611P0208"
+    ],
+    "note": "Still so on 2611251: the Preview frame lags the trim handles (TC-042, TC-214, TC-216, TC-044, TC-272) and stays on the old frame for the whole ◀▶ knob drag, updating 0.4–1.25 s after the finger stops (TC-215, TC-371 – TC-374), from every entry. Carried by DRA262611P0113 (handles, 「Clarification: allowed Preview delay while trimming」) and DRA262611P0208 (knob), both RD, Assigned."
+  },
+  "Q-28": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0325"
+    ],
+    "note": "Changed: DRA262611P0325 (the Q-28 PM eBug from Q1) was Cancelled by PM on 2026-11-26 16:27 with no note, so the app's behaviour stands. On 2611251 it is the same as on 2611231: play stops at the right trim handle by itself and the next play restarts from the selection start (TC-350 Fail question); play starts from the playhead and stops at both handles (TC-348, TC-349 Pass). Row to change at the next draft: TC-350's Expected Result (record → stop at the right handle, next play from the selection start). Ask PM for the reason if a rule is wanted in writing."
+  },
+  "Q-29": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Present on 2611251: the PIP Video toolbar has 「Enhance」 › 「AI Video Enhance」 and it opens the panel on the overlay clip (TC-364 Pass), reading the clip's own fps, resolution and length (TC-365 – TC-370)."
+  },
+  "Q-30": {
+    "state": "filed",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "codes": [
+      "DRA262611P0100"
+    ],
+    "note": "Not determinable on 2611251: a task from the PIP Video toolbar is not pasted back at all (no replace of the overlay, no 「Applied Video Enhance」; 「Add to Timeline」 makes a new project; TC-369 Fail), the same missing paste-back as the main track, DRA262611P0100 (RD, Assigned). Where an overlay result lands is decided with that ticket."
+  },
+  "Q-33": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "The panel opened from the main-track or the PIP Video toolbar holds the clip's own trimmed part with its in / out points at the handles, not the whole source (TC-359, TC-366 Pass on 2611251), as assumed."
+  },
+  "Q-34": {
+    "state": "determined",
+    "by": "R4 (2026-11-26-r4-full, 16.9.0.2611251)",
+    "at": "2026-11-27",
+    "note": "Not reproduced on 2611251: a long video (ve-0800-1080p30, ve-1230-1080p30) shows its frame ~0.25–0.5 s and its strip ~0.5–1.0 s after the panel opens from Add Media, the same as from the AI Magic tab, the main track and the PIP Video toolbar (TC-371 – TC-374; O-28). What those rows fail on is the knob-drag lag (Q-27, DRA262611P0208). Rows to change at the next draft: TC-371 – TC-374's Expected Result (opening times are as fast as from the timeline)."
+  }
+}

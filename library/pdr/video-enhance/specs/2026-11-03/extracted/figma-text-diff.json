@@ -1,21 +1,17 @@
 {
-  "checked_at": "2026-11-10T06:04:02.814Z",
+  "checked_at": "2026-11-26T08:06:38.796Z",
   "set": "2026-11-03",
   "boards": [
     {
-      "board": "Alternative & Exception",
-      "id": "3293:15052",
-      "group": "d3",
-      "baseline": "figma",
-      "added": [],
-      "removed": [],
-      "reqs": []
+      "board": "AI Video Enhance",
+      "id": "3300:32003",
+      "group": "d4",
+      "baseline": "none"
     }
   ],
   "no_texts": [
     "d1",
     "d2",
-    "d4",
     "p1",
     "p2"
   ]

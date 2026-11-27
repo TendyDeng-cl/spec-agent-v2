@@ -1,0 +1,7 @@
+{
+  "Q-1": "Media room 的「?」：Jira 寫 Add Media 有一個「?」可以打開建議頁，但 Design 26.07_v2 的 Add Media 沒畫（round/ic_info 圖層是隱藏的），而 template 頁本身的「?」是教學。「?」放在哪、用什麼圖示、是否顯示「從哪個 template 進來」的那份建議？假設：Add Media 頁首有「?」，點了顯示該 template 的建議，點「Got it」回到 Add Media。R-004，TC-010 – TC-016。",
+  "Q-2": "語言：CMS 有各語言的 template 名稱，但圖片清單的 JP、EN 欄是空的，面板那句話也沒有翻譯。那句話、標題和說明文字會翻譯嗎？假設：template 名稱跟著 App 語言；其他部分只記錄、不判 Fail。R-015，TC-017、TC-018。 MUI（REQ-002）：PowerDirector 每個功能都要支援產品清單的 26 種語言，所以 MUI 各列（TC-020 – TC-045）預期標籤和句子都有翻譯；沒翻的話就是 DRA262611P0290，引用即可，不重開。",
+  "Q-3": "關閉方式：Design 只畫了「Got it」。點變暗的區域或把面板往下滑，會不會關閉？這兩種手勢沒有假設：TC-046 兩種都做，把各自的結果記為 Fail（question）交給 PM；「Got it」由 TC-007 檢查。",
+  "Q-4": "缺資料時：範本在 CMS 沒有 recommend_samples，或連不上 CMS（離線）時，畫面顯示什麼？沒有假設。離線的部分：TC-047（沒有網路時啟動 App）和 TC-048（連線時載入過的面板離線後再開一次，再開一個沒開過的）記下範本頁、chip 和面板顯示的內容，記為 Fail（question）交給 PM。沒有 recommend_samples 的範本 QA 做不出來（CMS 在伺服器端，每個範本都有資料）：這一半要等 PM 回答，沒有對應的案例。",
+  "Q-5": "滑動：Design 把 Avoid 第三項畫成超出面板邊緣。Avoid 那一列可以左右滑嗎？如果某個 template 的 Recommendation 超過兩項，也能滑嗎？假設：Avoid 那一列可以左右滑。R-009，TC-008。"
+}

@@ -1,0 +1,8 @@
+Dedupe — AIGC Watermark Android MUI batch (2026-11-25), PowerDirector Mobile for Android only (overlay rule 7)
+No draft entries, so no bodies.json dedupe run; the pool was read by hand: ecl_query.py bugs --text "AIGC" (6), "AIGC Watermark" (3), "Watermark" (50), "Don't show again" (24), "MUI" (100), Android product.
+
+Same-OS duplicates (findings left off the drafts):
+- DRA262611P0229 (NewCreated, PM, 2611171): AI Music Generator shows no 「AIGC Watermark」 dialog. Covers TC-130's missing music dialog body (no string in the 2611201 APK, any language).
+- DRA262611P0286 (NewCreated, PC-Doc, 2611201): [NLD][ARA][TRK] 「Don't show again」 stray apostrophe (Video Enhance Demo page). Covers TC-130's NLD / ARA apostrophe in the AIGC export dialog (same key dont_show_message_again; TRK not affected there).
+
+No Android ticket covers any translation doubt TD-1 – TD-14 or any AIGC Watermark string's translation or truncation.

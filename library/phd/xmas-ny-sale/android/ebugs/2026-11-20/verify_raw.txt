@@ -1,0 +1,27 @@
+20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md
+  7 entries ¡P 23 images ¡P 13 Spec Link lines ¡P 0/0 ¡¶ rows ¡P max ShortDesc 137
+WARNINGS (not blocking):
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md: mixed Device lines across entries ['Samsung Galaxy A55 (SM-A5560) / Android 15, Test Server, Free account', 'Samsung Galaxy A55 (SM-A5560) / Android 15, Test Server, paid (VIP) account']
+FAILED:
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e1: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Splash page (Xmas only) frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e1: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e2 (ISS-XNS-02): links 'Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), IAP page Xmas frame' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e2: unknown sheet 'Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), IAP page Xmas frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e2 (ISS-XNS-02): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), IAP Page frame' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e2: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), IAP Page frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e3 (ISS-XNS-03): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e3: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e4 (ISS-XNS-04): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e4: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e4 (ISS-XNS-04): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Credit IAP Page, Free user frame' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e4: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Credit IAP Page, Free user frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e5 (ISS-XNS-05): links 'Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), Launcher NY frame (NY_ani annotation)' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e5: unknown sheet 'Xmas & NY Sale Design Figma (IAP, page 261117_xmas_NY_sale), Launcher NY frame (NY_ani annotation)'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e5 (ISS-XNS-05): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e5: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e6 (ISS-XNS-06): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e6: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e6 (ISS-XNS-06): links 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Launcher - IAP icon frame' but Description never names Xmas (ambiguous=False)
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e6: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Launcher - IAP icon frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e7: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), Mine tab (Xmas only) frame'
+  20261120_eBug_drafts_Xmas-NY-Sale-R1_20.19.0.md e7: unknown sheet 'Xmas & NY Sale PM Figma (PhD MX IAP Page, page 11E Christmas Sale, section spec), spec note board'

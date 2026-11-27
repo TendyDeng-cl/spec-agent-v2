@@ -1,0 +1,14 @@
+# Dedupe — Xmas & NY Sale R1 (Android), re-run 2026-11-23 — DONE, no duplicates
+# ecl_query.py dedupe upload/bodies.json --product "PhotoDirector Mobile for Android": 0 candidates per entry (the
+# feature tag Xmas_NY_Sale is new), so the pool was also searched by text (ecl_query.py bugs --text …):
+# Xmas, Christmas, NY Sale, New Year, countdown, Santa, Subscribe for, interstitial, summer_sale, "Continue (".
+# Every Android hit is a CLOSED ticket of an earlier year's sale (19.9.0 2024, 20.8.0 2025) or another feature;
+# none is the same defect, so none is cited as a reopened bug:
+#   PHA242024-1314 Close  Launcher-Xmas_sale: PHD logo while loading not changed to Xmas style (2024: no Xmas logo at
+#                         all; R1-01 is a Xmas logo whose art differs from the mockup) — related, not a duplicate.
+#   PHA252025-0751 Close  Launcher: number in the countdown area not showing (2025) — related to R1-06 (bubble shown only
+#                         after a relaunch), not the same defect.
+#   PHA242024-1348 Close  Launcher-NY_sale: no fireworks in the Launcher (2024) — other NY item, not R1-05.
+#   PHA242024-1313 / -1312, PHA252025-0745 – -0750 Close: last years' sale pop-ups / Christmas IAP — other screens.
+#   PHA262026-0279 Postpone Interstitial MEX/THA/ARA/VIT not translated — KP-057, unrelated to R1's entries.
+# Result: all 7 entries stay new. Raw output: dedupe_raw.txt.

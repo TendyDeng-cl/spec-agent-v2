@@ -1,0 +1,210 @@
+{
+  "d-interstitial-xmas-a.png": {
+    "board": "9688:8",
+    "group": "d-xmas",
+    "hash": "5d0ff1d9",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:11.897Z",
+    "box": [
+      -531,
+      10,
+      375,
+      812
+    ]
+  },
+  "d-interstitial-xmas-b.png": {
+    "board": "9688:101",
+    "group": "d-xmas",
+    "hash": "2d1c804f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:12.378Z",
+    "box": [
+      -117,
+      10,
+      375,
+      812
+    ]
+  },
+  "d-interstitial-ny.png": {
+    "board": "9706:19",
+    "group": "d-xmas",
+    "hash": "324fc94a",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:12.880Z",
+    "box": [
+      637,
+      10,
+      375,
+      812
+    ]
+  },
+  "d-iap-xmas.png": {
+    "board": "9707:7836",
+    "group": "d-xmas",
+    "hash": "cbe3073f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:13.397Z",
+    "box": [
+      1113,
+      10,
+      375,
+      812
+    ]
+  },
+  "d-iap-ny.png": {
+    "board": "9747:794",
+    "group": "d-xmas",
+    "hash": "d61b9e5c",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:13.899Z",
+    "box": [
+      1516,
+      10,
+      375,
+      812
+    ]
+  },
+  "d-launcher-ny.png": {
+    "board": "9740:344",
+    "group": "d-xmas",
+    "hash": "d563d074",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:14.379Z",
+    "box": [
+      -1599,
+      -2,
+      375,
+      812
+    ]
+  },
+  "d-assets.png": {
+    "board": "9747:1167",
+    "group": "d-xmas",
+    "hash": "6575ec27",
+    "overlay": "20e96eb7",
+    "captured_at": "2026-11-20T07:22:15.112Z",
+    "box": [
+      2912,
+      -160,
+      2360,
+      2026
+    ]
+  },
+  "pm-iap.png": {
+    "board": "14729:50273",
+    "group": "p-xmas",
+    "hash": "fa4e85e8",
+    "overlay": "769cf37c",
+    "captured_at": "2026-11-20T07:22:15.847Z",
+    "box": [
+      -2665,
+      -1029,
+      375,
+      858
+    ]
+  },
+  "pm-credit-paid.png": {
+    "board": "14724:44495",
+    "group": "p-xmas",
+    "hash": "961a64c5",
+    "overlay": "2a24b610",
+    "captured_at": "2026-11-20T07:22:16.431Z",
+    "box": [
+      -2214,
+      -1029,
+      375,
+      844
+    ]
+  },
+  "pm-credit-free.png": {
+    "board": "14729:52322",
+    "group": "p-xmas",
+    "hash": "d1843876",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:16.996Z",
+    "box": [
+      -1816,
+      -1029,
+      375,
+      844
+    ]
+  },
+  "pm-interstitial.png": {
+    "board": "14737:661",
+    "group": "p-xmas",
+    "hash": "34c6a8b7",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:17.637Z",
+    "box": [
+      -1346,
+      -1028,
+      375,
+      844
+    ]
+  },
+  "pm-interstitial-ref.png": {
+    "board": "14729:50207",
+    "group": "p-xmas",
+    "hash": "b636a293",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:18.270Z",
+    "box": [
+      -914,
+      -1029,
+      375,
+      844
+    ]
+  },
+  "pm-launcher.png": {
+    "board": "14724:43681",
+    "group": "p-xmas",
+    "hash": "ccebed1f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:18.912Z",
+    "box": [
+      -2665,
+      294,
+      375,
+      858
+    ]
+  },
+  "pm-splash.png": {
+    "board": "14729:52119",
+    "group": "p-xmas",
+    "hash": "04595415",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:19.412Z",
+    "box": [
+      -2228,
+      339,
+      375,
+      813
+    ]
+  },
+  "pm-mine.png": {
+    "board": "14729:51975",
+    "group": "p-xmas",
+    "hash": "7f8aab0b",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:19.994Z",
+    "box": [
+      -1791,
+      340,
+      375,
+      812
+    ]
+  },
+  "pm-note.png": {
+    "board": "14724:43580/pm-note",
+    "group": "p-xmas",
+    "hash": "815ddc1f",
+    "overlay": "",
+    "captured_at": "2026-11-20T07:22:20.769Z",
+    "box": [
+      -400,
+      -1050,
+      1600,
+      1900
+    ]
+  }
+}

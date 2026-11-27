@@ -1,0 +1,39 @@
+Filing as Creator: ETHAN_HSU
+  Creator verified — last filed DRA262611P0294 on 2026-11-25
+Format check: PDR-A 16.9.0
+⚠ WARN  Cinematic-Reel-Recommendation-R2-01  Short Description is 129 chars (budget 120)
+⚠ WARN  Cinematic-Reel-Recommendation-R2-01  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Cinematic-Reel-Recommendation-R2-02  Short Description is 128 chars (budget 120)
+⚠ WARN  Cinematic-Reel-Recommendation-R2-02  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Cinematic-Reel-Recommendation-R2-03  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Cinematic-Reel-Recommendation-R2-04  Short Description is 135 chars (budget 120)
+⚠ WARN  Cinematic-Reel-Recommendation-R2-04  Repro Steps do not start with '1. Launch the APP'
+⚠ WARN  Cinematic-Reel-Recommendation-R2-05  Repro Steps do not start with '1. Launch the APP'
+
+5 bug(s) checked — 0 error(s), 8 warning(s)
+Format OK — clear to file.
+
+[Cinematic-Reel-Recommendation-R2-01] created DRA262611P0316
+  DRA262611P0316  sev 3  PC-Doc  BugNeedReview  build 2611201  by ETHAN_HSU
+[Cinematic-Reel-Recommendation-R2-02] created DRA262611P0317
+[Cinematic-Reel-Recommendation-R2-03] created DRA262611P0318
+[Cinematic-Reel-Recommendation-R2-04] created DRA262611P0319
+[Cinematic-Reel-Recommendation-R2-05] created DRA262611P0320
+
+created 5 · skipped 0 · failed 0
+
+Read-back (Status: OK is not proof — Version has been seen not to persist):
+  DRA262611P0316  sev 3  PC-Doc  BugNeedReview  build 2611201  by ETHAN_HSU
+  DRA262611P0317  sev 3  RD  BugNeedReview  build 2611201  by ETHAN_HSU
+  DRA262611P0318  sev 3  RD  BugNeedReview  build 2611201  by ETHAN_HSU
+  DRA262611P0319  sev 3  PC-Doc  BugNeedReview  build 2611201  by ETHAN_HSU
+  DRA262611P0320  sev 3  PC-Doc  BugNeedReview  build 2611201  by ETHAN_HSU
+
+Required fields the API cannot set — fill them on each ticket's web edit form:
+  DRA262611P0316  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0317  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0318  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0319  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+  DRA262611P0320  OS Language (Traditional Chinese / English / 9 Languages / 24 Languages / Japanese / Korean)
+
+Attachments are NOT part of create — upload them with `ecl_if3.py upload <BugCode> <files…>` (SKILL.md → IF3 attachments over the API).

@@ -15,11 +15,21 @@ TC-002,Entry and landing,"1. App on Home
 2. Hero banner rotating",Wait for the 「AI Mini Drama with Seedance 2.0 >」 banner and tap it,AI Mini Drama landing page opens,P2,R-002,Banner rotation is CMS-driven; Blocked if it never appears
 TC-003,Entry and landing,AI Mini Drama landing open,Look at the landing page,"Shows 「Hi, I'm your」「AI Drama Assistant」, 「Describe your idea and watch it come to life as a short drama.」, 「Create Your Drama」, 「Start from a template」 with 「More」 and a template grid
 Header has back, credit pill and History
-Each template thumbnail is the template's poster still",P1,"R-003, R-289","Regression DRI261893-0051 (Assigned, untagged): The ""Hi, I'm your"" text has a shadow on it — also recheck this ticket here. Q-18: are templates US and JP only on day 1?"
+Each template thumbnail is the template's poster still",P1,"R-003, R-289","Regression DRI261893-0051 (Assigned, untagged): The ""Hi, I'm your"" text has a shadow on it — also recheck this ticket here. Q-18 (are templates US and JP only on day 1?): TC-458 records the store region and the template counts"
+TC-458,Entry and landing,"1. Signed in with the test account
+2. The server the build points at noted (Developer, Stage or Production)
+3. AI Mini Drama landing open","1. Open the phone's Settings › General › Language & Region and note 「Region」
+2. In PowerDirector tap the credit pill on the landing and note the currency of the prices on My Credits (credit packs, else the page behind 「Subscribe Now」)
+3. Go back to the landing and count the templates under 「Start from a template」
+4. Tap 「More」 and count the categories and the templates in each","Steps 1–2: the store region and the price currency are recorded in the result
+Step 3: the landing shows a template grid, and its template count is recorded
+Step 4, on a US or JP store: 5 categories with 20 templates in all
+Step 4, on any other store: the categories and the template count are recorded, and the row is recorded as Fail (question) for PM with these figures, not as a pass (Q-18)",P3,"R-289, R-006; REQ-111","Q-18 (REQ-111): the PM main flow note 「day 1 只有 US & JP」 stands beside the template grid and no source says what it limits. Known so far: the QA account on the Developer Server got the grid and all 20 templates in every run (TC-003, TC-010), but no run recorded the store region. The answer needs both sides, a US or JP store and another one: the run does not change the account's store (signing in to another store account is the user's), so the result says which side it saw and what is still missing. Nothing is bought."
 TC-004,Entry and landing,"1. Landing open
 2. 6 or more templates",Check the template row header,「More」 is shown next to 「Start from a template」,P3,R-004,Fewer-than-6 branch needs a server config
 TC-005,Entry and landing,Landing open,Compare the credit pill with Mine → credits,The pill shows the current credit balance,P2,R-005,"Regression DRI261894-0001 (RDResolved, AIAgent): Template preview show stale credit balance after a credit deduction — also recheck this ticket here"
-TC-006,Templates,Landing open,Tap 「More」,"All-categories page opens: categories with icon and name (Office Romance, Fantasy World, Urban Romance, Family & Life, Animated Stories), each a row of covers with names",P2,R-006,
+TC-006,Templates,Landing open,Tap 「More」,"All-categories page opens: categories with icon and name (Office Romance, Fantasy World, Urban Romance, Family & Life, Animated Stories), each a row of covers with names
+The number of covers a category row shows without scrolling is recorded (3 or 4, Q-36)",P2,R-006,Design 11/5 draws the page with 3 covers per row (5756:33097) and with 4 (5756:33322); either passes (Q-36)
 TC-007,Templates,Landing open,Tap a template cover,"Template detail opens
 The template video plays automatically with sound
 「Make my version」 is shown",P1,R-007,
@@ -35,6 +45,12 @@ TC-399,Idea input,Empty chat (after TC-011),"1. Tap the mic button without speak
 2. Tap it again (or its cancel control) to stop","Voice input starts: a listening state shows (on first use iOS first asks for microphone or speech-recognition access)
 Stopping it leaves the input empty and the composer ready for typing",P2,"R-011, R-331","Needs no speech: Appium cannot give the phone speech, so TC-191 covers the transcription. An iOS permission prompt is a system setting: record it and ask the user before answering it"
 TC-012,Idea input,"Empty chat, input focused",Look above the input,「Surprise me」 and two inspiration chips are shown,P2,R-012,
+TC-462,Idea input,"Empty chat, input focused","1. Look at both ends of the composer
+2. Type 「A lost umbrella」 and look again
+3. If an add-image button (＋ or a picture icon) shows, tap it and close what opens without choosing
+4. Clear the text","Steps 1–2: the composer holds only the text input and the mic, plus Send once text is typed
+Steps 1–2: no add-image button shows in or beside the composer
+Step 3: if one shows, where it is and what its tap opens are recorded with a screenshot, and the row is recorded as Fail (question) for MX / PM, not as a pass (Q-31)",P3,R-012; REQ-111,"Q-31 (REQ-111): the MX mockups (mx-a-left) draw an add-image button in an older composer (controls K-a256f3, K-f7167a). The Design / PM composer has only the input and the mic, which is the assumption. The cast controls are TC-463."
 TC-013,Idea input,Empty chat with inspiration chips,Tap an inspiration chip,The chip text is placed in the input (not sent),P2,R-013,
 TC-014,Idea input,Empty chat,Tap 「Surprise me」 twice,"First tap fills the input with an inspiration
 Second tap appends another inspiration after the existing text instead of replacing it",P2,R-014,"Regression DRI261893-0124 (NewCreated, AIAgent) — Conflicts with the append rule in TC-014 (DRI261895P0023); recheck against the current spec.: Surprise me changes its suggestion within one landing session — also recheck this ticket here; Regression DRI261895P0023 (NewCreated, AIAgent): Surprise me replaces the composer instead of appending its suggestion — also recheck this ticket here"
@@ -53,7 +69,15 @@ TC-373,Idea input,"Chat with an outline, keyboard open",Type until the text pass
 Further text scrolls inside the box and covers no other control",P3,R-273,
 TC-019,Idea input,Chat with at least one message,"1. Look above the input
 2. Tap 「More ideas +」","「More ideas +」 chip is shown
-Tapping it offers more story ideas for the input (record what appears, Q-19)",P3,"R-017, R-318",
+Tapping it offers more story ideas for the input (record what appears, Q-19)",P3,"R-017, R-318","Where the chip shows only under Iris's option chips, the tap is TC-465 (Q-19)"
+TC-465,Idea input,"1. Chat with a cast set
+2. Iris has asked a question with option chips (send 「Can you change one of the characters to look older?」, as in TC-348)
+3. 「More ideas」 shows between the option chips and the input","1. Tap 「More ideas」
+2. Read what appears
+3. Close or leave what appeared without choosing an idea","Step 1: the tap does something visible within 5 s (more chips, a filled input, a new message or a sheet)
+Step 2: what appeared is recorded word for word, with a screenshot
+Step 3: Iris's question and its option chips are still shown
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-19)",P3,"R-318, R-017; REQ-111","Q-19 (REQ-111): no frame or note says what a tap shows. On 16.9.0 (189872) the chip never showed above the composer of a plain chat (TC-019 Fail; DRI261896P0059 ruled NAB), but 「More ideas」 did show above the input under Iris's option chips (P9, TC-348), where it was never tapped. This row taps it there. If it does not show there either, record that and Blocked (observability)."
 TC-020,Format card,Empty chat,Send an idea (e.g. 「A barista and a regular fall in love over a lost umbrella」),"Assistant asks 「What format would you like for your video?」 with two questions:
 1. Video language (English, Spanish, French, German, Japanese, Korean, Chinese)
 2. Captions (「Yes, include captions」/「No captions」)
@@ -344,6 +368,16 @@ TC-397,Storyboard,"1. A scene whose Location and scene images both failed (Pink 
 2. 「Regenerate Image」 ◆6 tapped in its scene detail (after TC-070)",Stay on the scene detail until the generation ends,"The skeletons are replaced by the new Location and scene images side by side
 The 「Couldn't create image」 card and 「Edit」 are gone
 The title and full script stay",P2,"R-306, R-059, R-060","Design Storyboard Error 「生成」 → result frame (flow arrow 4299-168964). If the fixture fails only the main image, record Blocked (test-data); TC-292 covers that case"
+TC-461,Storyboard,"1. Scene detail open on a scene whose image has just been regenerated (after TC-397, TC-141 or TC-292)
+2. The new image shown","1. Look over the regenerated Location and scene images for a ⋯ button
+2. If a ⋯ shows, tap it
+3. Tap outside the menu to close it without choosing
+4. Long-press the regenerated scene image for 2 s
+5. Close anything the long-press opened without choosing","Step 1: no ⋯ shows on either regenerated image, as the Design's regenerated scene detail draws it (R-306)
+Step 2: if a ⋯ shows, every item of its menu is recorded with a screenshot and the row is recorded as Fail (question) for PM, not as a pass (Q-28)
+Step 3: the menu closes and the scene detail is unchanged
+Step 4: what the long-press opens (nothing, a menu or a preview) is recorded
+Step 5: the scene detail still shows the new images, the title and the full script",P3,"R-306, R-366; REQ-111","Q-28 (REQ-111): the PM Error Handling frame 2621:30383 draws a ⋯ on the regenerated scene image (board note 「… menu on the image」, control K-0b6874) with no frame for its menu. The Design draws none, and Design first makes that the assumption. No frame implies a long-press: it is tried only to see whether a menu hides behind one. Costs nothing beyond the regeneration of the row it follows."
 TC-072,Storyboard,Storyboard finished,Ask in chat 「Update the image for Scene 2 to show rain」,"Iris replies with a 「Create storyboard」 card with the price (3 credits per image redrawn, plus 1 credit of Text to Speech when the Storyboard Preview is remade) and Generate",P2,R-061,"PM 10/20: the card reads Create storyboard for script and image changes alike; DRI261895P0025 asked for the old ""Update storyboard images"" label; Regression DRI261895P0025 (NewCreated, AIAgent): Storyboard revision offer is mislabeled Create storyboard — also recheck this ticket here Price: Credit System forms 22632766997 / 22833510933 (REQ-103); Android 16.8.0.2611041 quoted ◆13 for 4 images (2026-11-05)."
 TC-385,Storyboard,The 「Create storyboard」 card from TC-072 shown,Tap Generate and watch the storyboard,"Only the changed scene and the Storyboard Preview show skeletons
 The other scenes stay as they were",P2,R-295,
@@ -364,6 +398,14 @@ Playing shows a narrated slideshow
 The player shows X, ⏸, a scrubber and the time (e.g. 「00:40/01:30」)
 ⏸ pauses and ▶ resumes the slideshow
 Dragging the scrubber jumps to that point and the time follows",P1,"R-064, R-328",
+TC-459,Storyboard Preview,"1. Storyboard just finished in the chat (as in TC-060)
+2. Nothing tapped since it finished","1. Tap ↓ to go to the bottom of the chat
+2. Read every assistant message from the Storyboard Result card down to the 「Choose your video settings」 card
+3. Play the Storyboard Preview to the end and close the player
+4. Tap ↓ again and read the messages below the Storyboard Preview card","Step 2: every assistant message between the two cards is recorded word for word, with a screenshot
+Step 2: whether 「Every frame is done. Ready to create your video?」 is among them is recorded, with the card it stands above
+Step 4: any message added after the preview played is recorded the same way
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-5)",P3,"R-408, R-064; REQ-111","Q-5 (REQ-111): the PM string list gives 「Every frame is done. Ready to create your video?」 for two keys, storyboard.all_videos.q and ladder.beat_video.q, and no run has seen it: the chat went from 「Here's your storyboard」 to the video settings card. This row reads the storyboard side and TC-460 the video side. No video is generated and no credits are spent beyond the storyboard the row follows."
 TC-076,Storyboard Preview,Drama created with 「No captions」,Play the Storyboard Preview,Preview has captions anyway,P3,R-065,
 TC-077,Storyboard Preview,Storyboard with a missing scene image,Look at the Storyboard Preview card,「Storyboard preview unavailable. Complete the image generation above first to view the preview.」 and no generate button,P2,R-066,Needs a failed scene
 TC-078,Storyboard Preview,Storyboard preview generation failed,Look at the card,「Couldn't create the storyboard preview. Your credits have been refunded. Try again.」 with Retry,P3,R-067,Needs fault injection
@@ -381,7 +423,8 @@ The price updates at once",P2,R-069,"PM 10/16 is newer than the Design frame, wh
 TC-081,Video,First video generation on this install,Tap Generate Video,「Get notified when your video is ready?」/「Videos take a few minutes. We'll let you know as soon as yours is done.」 with 「Notify me」/「Not now」,P2,R-070,"Only on the first video; may already have been dismissed; Regression DRI261895P0022 (NewCreated, AIAgent): First-video generation omits the required notification preprompt — also recheck this ticket here"
 TC-406,Video,"1. Video settings card shown (the notification prompt already answered)
 2. Credit pill read",Tap Generate Video and watch the card and the credit pill until the video starts,"The video settings card turns into a skeleton titled 「Advancing the mini drama production.」 in place and the credit pill stays the same
-When the card reads 「Making your video...」 the credit pill drops by the price shown on the card",P1,"R-333, R-279","PM Figma 10/22 (4422:2); PM-only: no Design frame yet. Charge moved to the start of phase ② (RD to confirm, Q-20)"
+When the card reads 「Making your video...」 the credit pill drops by the price shown on the card
+No user message is added when Generate Video is tapped (the bubble's text is recorded if one shows, Q-34)",P1,"R-333, R-279","PM Figma 10/22 (4422:2); PM-only: no Design frame yet. Charge moved to the start of phase ② (RD to confirm, Q-20); PM 11/4 §13.2 ② sends a card's Answer as a user message, but the 10/22 note keeps this card turning into the skeleton in place (Q-34)"
 TC-407,Video,Video phase ①: the card shows 「Advancing the mini drama production.」,"1. Tap Back
 2. Tap 「Stay」","「Leave while we're preparing?」/「Your video will start soon. If you leave now, we'll have to prepare it again when you come back.」 with 「Stay」 and a red 「Leave anyway」
 Stay closes it, the chat stays and the card goes on to 「Making your video...」",P1,R-071,PM Figma 10/22 (4422:2); PM-only: no Design frame yet
@@ -425,6 +468,13 @@ Tapping anywhere dismisses it",P3,R-072,Own fresh install; runs in segment P1-h.
 TC-084,Video,Video generating,Open History,The card shows 「processing..」 without a progress bar,P2,R-073,
 TC-085,Video,"Video generating, user elsewhere in the app",Wait on another page until the video finishes,"Toast 「Good news! Your ""{Drama title}"" is ready. Tap here to view your results.」 with Close / View",P2,R-074,
 TC-086,Video,Preview video finished,Read the chat,"「Here's your drama.」 with the video card, then 「Looking good! Ready for the full video?」 with 「Create the full episode (90 sec)」 and price",P1,R-075,"Regression DRI261894P0016 (NewCreated, AIFound): paid preview is shown as the finished drama, full episode sold afterwards — also recheck this ticket here; Regression DRI261894P0035 (RDResolved, AIFound): Video Generate makes no video and the chat jumps to the full-episode offer — also recheck this ticket here; Regression DRI261894P0051 (NewCreated, AIFound): Settings card offers 75/90 s full video but later offer says 60 sec — also recheck this ticket here; Regression DRI261896P0020 (NeedMoreInfo, AIFound): Final drama video generation always fails with ""1 clip couldn't be generated"" — also recheck this ticket here"
+TC-460,Video,"1. A drama whose Preview • 30 sec video has finished and whose full episode is not made yet (TC-086's drama, or one from History)
+2. No new video is generated for this row","1. Open the drama and tap ↓ to go to the bottom of the chat
+2. Read every assistant message from the Storyboard Preview card down to the end of the chat
+3. Read the question above the 「Create the full episode (90 sec)」 card","Step 2: every assistant message from the Storyboard Preview card to the end of the chat is recorded word for word, with screenshots
+Step 3: the question above the full-episode card is recorded (R-075 gives 「Looking good! Ready for the full video?」)
+Steps 2–3: whether 「Every frame is done. Ready to create your video?」 shows anywhere is recorded, with the card it stands above
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-5)",P3,R-075; REQ-111,"Q-5 (REQ-111): the video side of TC-459 (key ladder.beat_video.q). When the run generates a Preview video with the user's go-ahead (TC-406), also read the chat while it generates and add what it shows. With no finished Preview video and no go-ahead the row is Blocked (test-data): a video generation needs the user's go-ahead (REQ-073)."
 TC-087,Video,Full video finished,Read the chat,「Ready for the next episode?」 with 「Create Next Episode」,P2,R-076,Needs a full-video generation
 TC-088,Video,Video finished,"1. Open the result and tap Full Edit
 2. Go back and tap Export Full Video","Full Edit shows one clip per scene
@@ -451,7 +501,8 @@ TC-376,Video errors,Video with failed scenes,Tap 「Edit」 in the chat's failur
 Edit opens Full Edit on the first failed scene",P2,R-278,Needs a failed scene video (Pink › Inject failure status; record the switch)
 TC-092,Video errors,Failed scene video,"1. Tap Retry
 2. If it fails again tap Edit","「Couldn't create scene」/「Something went wrong. Give it another try.」 with Retry
-Then 「Retrying didn't work. Try a different description.」 with Edit → editor → Regenerate scene priced at the scene's length × the drama model's rate (6 per second Seedance 2.5, 4 Seedance 2.0, 2 Seedance 2.0 Mini; a 15 s scene → ◆90 / ◆60 / ◆30)",P2,R-081,Needs a failed scene video
+Then 「Retrying didn't work. Try a different description.」 with Edit → editor → Regenerate scene priced at the scene's length × the drama model's rate (6 per second Seedance 2.5, 4 Seedance 2.0, 2 Seedance 2.0 Mini; a 15 s scene → ◆90 / ◆60 / ◆30)
+The second failure's card has no ⓘ and no 「Your credits have been refunded.」 line (the Design copy; the card is recorded word for word if it differs, Q-27)",P2,R-081,Needs a failed scene video; PM frame 2621:30259 draws 「Couldn't create video ⓘ」 with the refund line on the second failure; rows follow the Design (Q-27)
 TC-362,Video errors,"One scene video fails with 4xxx (Pink › Inject failure status = moderation_blocked, that beat; record the switch)","1. Look at the failed clip
 2. Tap ⓘ","The clip card shows 「Couldn't create video ⓘ」 with the refund text
 ⓘ opens 「Couldn't generate this video」/「Your credits have been refunded. The description may not meet our terms of service, such as violence, NSFW content, or content involving minors. Edit the description to try again.」 with Got it
@@ -631,7 +682,15 @@ TC-441,Video errors,After TC-440: the first regeneration still running,"1. Wait 
 2. Tap 「Regenerate Clip」 on the other scene","Step 1: 「Regenerate Clip」 returns to full opacity
 Step 2: the other scene regenerates and its price is charged once",P3,R-489,PM 10/29 §13.25 (4784:70878). PM-only: no Design frame yet
 TC-412,Video errors,"Scene video regenerating, back in the chat (TC-144)",Look at the composer while the regeneration runs,"The input shows only the mic
-No ■ stop button or other stop control appears until the video is updated",P2,R-332,PM Figma 10/22 (4422:2); PM-only: no Design frame yet. Whether a regeneration also has the 「Leave while we're preparing?」 phase is Q-22
+No ■ stop button or other stop control appears until the video is updated",P2,R-332,"PM Figma 10/22 (4422:2); PM-only: no Design frame yet. Whether a regeneration also has the 「Leave while we're preparing?」 phase is Q-22, recorded by TC-464"
+TC-464,Video errors,"1. Drama with a finished video, every scene done (an existing one: no new full video is generated for this row)
+2. Credit Details read","1. Open a scene in the scene editor, change its description and tap 「Regenerate Video」 (as in TC-144)
+2. Leave the scene editor to the chat at once
+3. Tap Back within 5 s of the regeneration's start
+4. On the dialog tap the answer that stays (「Stay」 or 「Keep Generating」)","Step 3: the dialog's title, body and buttons are recorded with a screenshot (「Leave while we're preparing?」, 「Stop and lose your credits?」 or no dialog)
+Step 4: the dialog closes and the line under the video card still reads 「Updating 1 scene... Your video will refresh when it's done.」
+Credit Details books the regeneration once
+The outcome is recorded as Fail (question) for PM with the capture, whatever shows, not as a pass (Q-22)",P3,"R-332, R-129; REQ-111","Q-22 (REQ-111): frame 4422:2 names a video regeneration among the generations with no stop, but draws the 「Leave while we're preparing?」 phase only for the storyboard and the video. If Back leaves with no dialog, reopen the drama from History and record whether the regeneration went on. Spends one scene regeneration (allowed, REQ-073). TC-412 covers the composer."
 TC-145,Video errors,"Scene video regenerating, user in the chat",Wait for regeneration to finish,The chat replaces the old video with the refreshed one,P2,R-130,Figma flow arrow 4006-73628
 TC-146,Video errors,Video with a failed scene clip,Tap Edit on the failed clip,The scene-video description editor opens,P2,R-131,Figma flow arrow 2820-116878
 TC-147,Video errors,"Failed scene-video editor open (Edit on a failed clip, TC-146)","1. Tap the expand icon on the description
@@ -1230,7 +1289,8 @@ The failed scene shows 「!」 and 「1 image couldn't be updated. Your credits 
 Credit Details shows the refund",P2,R-157,
 TC-294,Storyboard,"1. Generate tapped on the 「Create storyboard」 card after asking Iris to update a scene image
 2. Phase ① (「Preparing your scenes...」)",Tap Back,"「Leave while we're preparing?」/「Your storyboard will start soon. If you leave now, we'll have to prepare it again when you come back.」 with 「Stay」 and a red 「Leave anyway」
-No 「Stop and lose your credits?」",P2,R-158,PM Figma 10/22 (4422:2) is newer than PM 10/21 §13.6 and the Design 1016 frames (newer wins). The frame names the storyboard update in chat with the two-phase rule; its phase ① card title is not drawn (Q-22)
+No 「Stop and lose your credits?」
+The phase ① card's title at the Back tap is recorded (「Preparing your scenes...」 assumed, Q-22)",P2,R-158,PM Figma 10/22 (4422:2) is newer than PM 10/21 §13.6 and the Design 1016 frames (newer wins). The frame names the storyboard update in chat with the two-phase rule; its phase ① card title is not drawn (Q-22)
 TC-413,Storyboard,"Storyboard update requested in chat, phase ②: the card reads 「Creating your storyboard...」","1. Tap Back
 2. Reopen the drama from History","No dialog
 The toast 「We'll keep making your storyboard. Find it in History.」 shows
@@ -1284,6 +1344,13 @@ TC-308,History,Drama renamed in History while its video is generating,"1. Wait f
 TC-309,Characters,Change Characters with the hint 「Tap to choose a look for {name}」 showing,Tap a different slot than the one the hint points to,The hint disappears,P3,R-172,"Needs the hint, which shows once per user (first use): run with TC-034"
 TC-310,Characters,Every cast slot already has a look,Tap the ⟳ switch icon on a character in the outline card and change that look,"The ⟳ icon opens Change Characters on that character
 No 「Tap to choose a look for…」 hint appears",P3,"R-172, R-326",
+TC-463,Characters,"1. Custom drama with its 「Story Outline & Characters Result」 card shown
+2. 「Choose your characters」 shown under it with at least one look set","1. Read the 「Story Outline & Characters Result」 card from its header to its last character
+2. Read the 「Choose your characters」 block and any card under it, down to the composer
+3. If an edit (pencil) icon or 「Customize my characters (optional)」 shows, tap it and close what opens without changing anything","Step 1: no edit (pencil) icon shows on the card or beside a character
+Step 1: a character with a look has the ⟳ switch icon as its only change control (R-172)
+Step 2: no line or button reads 「Customize my characters (optional)」
+Step 3: if either control shows, where it is and what its tap opens are recorded with a screenshot, and the row is recorded as Fail (question) for MX / PM, not as a pass (Q-31)",P3,"R-172, R-029; REQ-111","Q-31 (REQ-111): the MX mockups (mx-a-mid) draw an edit icon on Characters Result (control K-e2edba) and 「Customize my characters (optional)」 on an older 「Create characters」 card (K-f168be). The assumption is that they are illustrations only. The other Q-31 items already have rows: no aspect-ratio question (TC-020), the template chat (TC-235), the scene editor (TC-070), 「Consume credits?」 (Q-3), and the add-image button is TC-462."
 TC-311,Chat behaviour,"1. Finished video
 2. Chat scrolled up to an earlier card","1. Open Full Edit
 2. Come back to the chat",The chat opens at the bottom (newest message),P3,R-173,"PM 10/20 §13.2 replaced ""keeps the position the user left""; TC-101/102 cover History and Change Characters"

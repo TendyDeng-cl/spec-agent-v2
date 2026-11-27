@@ -1,0 +1,12 @@
+# AIGC Watermark Android, open questions flagged to-file (Q-13): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-25
+# No entry was drafted (the observation is not recorded), so `ecl_query.py dedupe` had no bodies.json to rank;
+# the pool was read with `ecl_query.py bugs --text … --product "PowerDirector Mobile for Android" --limit 300`
+# (dedupe-query.txt): 「C2PA」 3, 「Content Credentials」 0, 「AIGC」 6 tickets.
+# Read against the question (editor export with signed AI content: C2PA metadata; timeline-tool asset as a file):
+#   DRA262611P0218 (NeedCodeReview): Text to Image saved with the switch On keeps Google's manifest: a saved result, not an editor export
+#   DRA262611P0220, DRA262611P0221 (NAB): Image to Video saves carry CyberLink's manifest: saved results; the rulings behind R-050 / R-056
+#   DRA262611P0223 (NeedCodeReview): project with an AI Music song exports with no dialog or label: no C2PA point, a song is not signed AI content
+#   DRA262611P0229, P0227, P0225, P0214, DRA262610P0301: dialog, default, sheet and other features: unrelated
+# No same-OS ticket covers the question. Nothing commented on (rule 6).
+
+No same-OS ticket covers Q-13: it stays to-file (not drafted, needs a recorded Content Credentials read of an editor export; see the drafts file).

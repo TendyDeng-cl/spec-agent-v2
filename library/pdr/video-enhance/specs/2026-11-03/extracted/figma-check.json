@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-24T01:55:02.935Z",
+  "checked_at": "2026-11-26T08:05:08.348Z",
   "set": "2026-11-03",
   "unchanged": [
     {
@@ -54,17 +54,6 @@
         5985,
         6100,
         1552
-      ],
-      "holder": "3293:13053"
-    },
-    {
-      "id": "3300:32003",
-      "group": "d4",
-      "box": [
-        20612,
-        3054,
-        4148,
-        2590
       ],
       "holder": "3293:13053"
     },
@@ -135,11 +124,37 @@
       "holder": ""
     }
   ],
-  "changed": [],
+  "changed": [
+    {
+      "id": "3300:32003",
+      "group": "d4",
+      "box": [
+        20612,
+        3054,
+        4148,
+        2590
+      ],
+      "holder": "3293:13053",
+      "why": [
+        "board"
+      ]
+    }
+  ],
   "removed": [],
   "baseline": [],
   "new_boards": [],
   "missed_arrows": [],
-  "reread": [],
-  "shots": []
+  "reread": [
+    {
+      "group": "d4",
+      "server": "figma-design",
+      "save_as": "library/pdr/video-enhance/specs/2026-11-03/extracted/figma-inventory-d4.json"
+    }
+  ],
+  "shots": [
+    {
+      "png": "ai-video-enhance.png",
+      "board": "3300:32003"
+    }
+  ]
 }

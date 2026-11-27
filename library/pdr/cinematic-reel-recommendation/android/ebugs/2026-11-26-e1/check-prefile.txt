@@ -1,0 +1,4 @@
+⚠ WARN  Cinematic-Reel-Recommendation-E1-02  Short Description is 121 chars (budget 120)
+
+1 bug(s) checked — 0 error(s), 1 warning(s)
+Format OK — clear to file.

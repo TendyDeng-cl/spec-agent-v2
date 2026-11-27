@@ -16,11 +16,83 @@ existing eBugs, and only when the user asks for it in chat. Never add eBug comme
 ## Inputs
 
 - The TR (`ecl_query.py tr <TR>`): product, build, the verify list and its creators. "My bugs" = rows whose
-  Creator is the tester, unless the user names another relation.
+  Creator is the tester, unless the user names another relation. **PhotoDirector Android (PHD-A) TRs only:** every
+  bug on the verify list, whoever created it (*PHD-A QR*, below).
 - A verification run with a verdict, screenshots and logs per bug (`library/<product>/<feature>/<platform>/runs/<date>-<tr>-verify/`,
   `result*.md`). Every verdict must have been seen on the TR's build; a bug never checked is not on the report.
 - The QRs other testers already filed on the TR (links in the TR's 「QA Report」 list): read one or two for the
   team's current wording before drafting.
+
+## PHD-A QR (user, 2026-11-13; PhotoDirector Android TRs only)
+
+On a PhotoDirector Mobile for Android TR, follow the team's template QR261102-0081 exactly; everything else in this
+skill (other products and platforms) keeps its own format below.
+
+- **Scope:** verify every bug on the TR's verify list, whoever created it (Creator ALBERT_CHANG, WILLY_WU, …); the
+  bug rows keep their own Creator.
+- **Draft:** `"style": "phd-a"`, `"textOnly": true`, `"shortDescription"` = the TR's Short Description copied
+  verbatim (e.g. `20.19.0.v202611111946 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, …) (R3)`).
+  `qa-report.ts check` enforces these.
+- **Form fields:** Short Description (the TR's), Test Result `PHD-A - Bug verification [OK=n, Fail=n]`, Testing
+  Date. Test Result Details is that same Test Result line only (no lettered list). Product Version, Build Day,
+  Build No., Operation System and OS Language stay empty. No attachments, no uploads to the eBugs.
+- **OK Reason** (the row's `summary` is the middle sentence, ending with a full stop):
+  ```
+  Verified OK with 202611111946 build.
+  AI Hair Color template names now stay on one line and are no longer truncated.
+  Risk test: n/a
+  ```
+- **Fail Reason** (`observed` / `expected` in English, `observedZh` / `expectedZh` the 摘要 in Traditional Chinese):
+  ```
+  Verified Fail with 202611111946 build.
+
+  Result:
+  Small triangles still show at the bottom corners of the First and Last Frame sample photos.
+  摘要：首尾影格範例圖下方兩角仍出現小三角形。
+
+  Expected Result:
+  The sample photos should show no triangles at their bottom corners.
+  摘要：範例圖下方兩角不應出現三角形。
+
+  Risk test: n/a
+  ```
+- The build in a Reason is the build number alone (`202611111946`, no version, no device). The *Wording* section's
+  Short Description, Test Result prefix, lettered Details and Account line do not apply to PHD-A.
+- **RD's resolve note drives the check** (*RD's resolve note*, below).
+
+## RD's resolve note (user, 2026-11-25; PHD-A bugs)
+
+When RD resolves a PHD-A bug they write four fields: **RootCause**, **Solution / Workaround**, **Function / Behavior /
+OS / HW might impact**, and the **Changeset** (SVN number, Trac or Git URL). Read the **newest** note on every bug
+before planning the verify; earlier notes are superseded by it.
+
+1. **Fetch** into the run folder, no MCP call needed:
+   `PYTHONIOENCODING=utf-8 python .claude/skills/ebug-tr-filer/scripts/ecl_query.py resolve <BugCode…> --json > rd-resolve.json`
+   (`newest` per bug; IF3 bugs keep the notes in `TSR.EbugLogAndData` › `ResolveComment`, old-ASP bugs in the status
+   log). A bug with no note is verified from its description alone; say so in `verify-plan.md`.
+2. **Test what the Solution says.** The Solution is the behaviour the build now has: copy each concrete rule into
+   `verify-plan.md` beside the bug's Expect Result and check every branch it names, not only the original repro. E.g.
+   P0074: the limit is the total of empty slots on all pages, and photos fill the tapped slot, then the same page, then
+   the other pages in order; P0138: no answer, a 5xx, a 401 or an unreadable answer each ends in the network error
+   (dialog offline, toast online).
+3. **Expected behaviour.** A Solution that changes the expectation ("ux modify", "after discussion, we decided …")
+   is what the build is held to: the build doing what the Solution says is OK, even where the bug's Expect Result
+   asked for more (user, 2026-11-25: P0074, no 20 cap). A newer spec item that contradicts the Solution, and a "no need
+   fix" note that leaves the filed symptom as it was, go to the user before the verdict (list them in the run's
+   result), not into Fail or OK on the agent's own reading.
+4. **Side effects from the impact field.** The *might impact* field names the area the change can break; check it
+   on the build as part of the same journey, plus everything the Solution says it changed beyond the bug itself:
+   - "only affect <room / feature>": walk that room's other actions that touch the changed code (P0162: Adjust and
+     Filter cleared after Removal, so they are not applied twice; P0080 / P0160: new text, stickers, photos and
+     frames go to the screen centre);
+   - a named sibling feature or OS / hardware condition: run the bug's path there too (P0138: AI Transition and
+     CineStory show the same dialog);
+   - "n/a", "low" or empty: still check the places the Solution names.
+   Where the Changeset is a Git or Trac link the agent can read (`gh`), its changed files may show other callers to
+   check; it is optional and never a substitute for the phone.
+5. **Record** per bug in the segment result: `RD note: <root cause> → <solution, one line>` and
+   `Side effects: none seen (places checked: …)` or the finding. Findings follow *Side effects of the fix*: they do not
+   fail the bug, go under Other observations on the review page, and are filed only when the user asks.
 
 ## Verify first (user, 2026-11-05, REQ-093)
 
@@ -28,7 +100,7 @@ existing eBugs, and only when the user asks for it in chat. Never add eBug comme
 first (run folder `runs/<date>-<tr>-verify/`, `bugs.md` with each bug's filed description), then report.
 
 **One journey, fewest steps.** Never start fresh for each bug. Before touching the phone, write `verify-plan.md`:
-1. List what each bug needs: the stage it starts from (new chat, a stage of an existing drama, a setting, a language)
+1. List what each bug needs (on PHD-A, from RD's newest resolve note too: *RD's resolve note*): the stage it starts from (new chat, a stage of an existing drama, a setting, a language)
    and what it costs (chat turns, credits, Wi-Fi off, waits).
 2. Order the checks along the feature's own flow so one drama (or one session) carries as many bugs as it passes
    through: e.g. a new chat checks the empty-chat and outline bugs, then the character stage, then storyboard, then
@@ -66,7 +138,8 @@ holds now. First bring the repo up to date: the Figma change check of `spec-case
 Figma file, `figma-check.ts`; 2026-11-05: no run between 10/29 and 11/05 did it, and PM had redrawn 18 boards and
 added 5). A changed board that touches a bug's flow is read before its verdict; the full analysis pass can follow
 later. Beyond that, no Figma or PDF call is needed when the repo already has it:
-- the eBug page's newest comments and Resolve note (RD often cites a spec change there);
+- the eBug page's newest comments (`ecl_query.py comments <code>`, IF3 bugs) and Resolve note (RD often cites a
+  spec change there);
 - the table row the bug came from (`cases.csv`, its Notes) and its R- rules in `requirements.md`: `Changed` notes
   and Open questions;
 - the newest spec set's `extracted/` (`board-notes.md`, Figma frames dated after the filing, `figma/` board images).
@@ -138,7 +211,9 @@ The first time the form is filled on a new template, record the field names you 
 - Account (user, 2026-11-05, REQ-100): the account the phone is signed in to, as the app's menu shows it (Launcher ☰,
   the account at the top), with its tier: `Account: cltqauiap2@gmail.com (Premium)`. Read it from the menu at the start
   of the verify run (it changes when someone signs in another account) and write it in the run's `result.md`; never
-  copy it from an earlier run. On the web (MyEdit, user 2026-11-25) it is the site's account menu with the active
+  copy it from an earlier run. When the app is not signed in and the bugs need no account, write that with the tier
+  (`Account: Not signed in (Free)`); signing in only for the QR is not needed (user, 2026-11-13).
+  On the web (MyEdit, user 2026-11-25) it is the site's account menu with the active
   plan, read by `device-web.ts <run dir> credits <ID>` (`ledger/<ID>-<time>.json`: account, plans, balance):
   `Account: JackCY_Lee@cyberlink.com (Studio Pro Plan)`, and the device line names the browser, the environment and
   its build from `device-web.ts … build` (`Chrome 158 · demo · MyEdit 5.11.0 build 11240106`).
@@ -148,6 +223,10 @@ The first time the form is filled on a new template, record the field names you 
   Details end with `Evidence: screenshots and logs are attached to each eBug and named in its Reason.`
 
 ## Evidence on each eBug (user, 2026-11-05, REQ-099 / REQ-101)
+
+This section is in force on every TR except PhotoDirector Android, whose team template is text only (*PHD-A QR*,
+`"textOnly": true`); the 2026-11-13 hold on it elsewhere was not adopted (user, 2026-11-26). `"textOnly": true` is
+otherwise only for a bug that cannot take files: old-ASP bugs (`PHA252025-…`) cannot take API uploads.
 
 A QR's Reason reaches every linked bug, so each bug's evidence goes on that bug, and the QR carries no ZIP (others
 check the bug and the files there; `pack` refuses per-bug drafts):
@@ -161,6 +240,12 @@ file stays on the ticket. This is part of the QR exception to overlay rule 6: fi
 never a comment.
 
 ## Form notes (first filing, QR261103-0039, 2026-11-03)
+
+- **PhotoDirector Android (QR261113-0020, 2026-11-13).** Standard Report is `QRTemplateID=14830` on the PHD-A TRs
+  (read from the TR page's QA Report Create button with `window.open` stubbed). Operation System lists Android 11–15
+  only: an Android 16 phone leaves it unticked (Details names the OS). Test Result reads `PHD-A - …` (set
+  `testResult` in the draft; the script's default is PDR). The TR's verify list and the tickets moved to Close about
+  two minutes after Create, not at once. `PHA25…` / `PHA262026-…` bugs are old ASP: no API uploads.
 
 - **Create.** The TR page's 「Create QA Report」 › Standard Report › **Create** opens a new tab, which the browser pane
   blocks; open its URL instead: `https://ecl.cyberlink.com/IF3/qr/BPM/Start/Request/NewCreated?QRTemplateID=14564&TRCode=<TR>`

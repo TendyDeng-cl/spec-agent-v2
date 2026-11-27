@@ -1,0 +1,114 @@
+[
+  {
+    "bug": "PHA262026P0090",
+    "verdict": "NOT_FIXED",
+    "observed": "Add Layer > Sticker now opens a bottom sheet with a 「Favorites」 tab and a ✕ / ✓ bar (✕ removes the sticker just added). The panel still has no store button, no 「AI Sticker」 tab and no 「More」 tile: the tabs run Favorites, Trending, Thanksgiving, Christmas, Seasons, Life, Doodle, Tape, Decoration, Shadow, Holidays, Emotion, Gradient, Graduation, Love, and the grid starts with stickers.",
+    "expected": "The Edit Room Sticker panel with its store button, Favorites, AI Sticker, the 「More」 tile and ✕ / ✓ (3_Add_Sticker board).",
+    "observedZh": "已有 Favorites 與 ✕ / ✓，但仍沒有商店鈕、AI Sticker 分頁與 More 格。",
+    "expectedZh": "應有商店鈕、Favorites、AI Sticker、More 與 ✕ / ✓。",
+    "shots": ["a_p0090_sticker_panel.png", "a_p0090_tabs_end.png", "a_after_drag.png", "a_p0090_sticker_added.png", "a_p0090_after_x.png"],
+    "sideEffects": "The new ✕ / ✓ work: ✕ removed the sticker added in the panel and returned to the Canvas.",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0091",
+    "verdict": "NOT_FIXED",
+    "observed": "Add Layer > Text Bubble now has a ✕ / ✓ bar, but the first item of the Trending tab is still a bubble style (「I LOVE YOU」); there is no 「∅」 (none) item, also not with a bubble selected.",
+    "expected": "「∅」 as the first item, then the bubble styles, with ✕ / ✓ (5_Text_bubble board).",
+    "observedZh": "已有 ✕ / ✓，但第一格仍不是「∅」（無）。",
+    "expectedZh": "第一格應為「∅」，並有 ✕ / ✓。",
+    "shots": ["a_p0091_bubble_panel.png", "a_p0091_bubble_added.png", "a_p0091_bubble_applied.png"],
+    "sideEffects": "✓ applies the bubble and leaves it selected with its tool bar (Duplicate, Opacity, Horizontal Flip, Vertical Flip, Forward, Backward, Lock, Delete).",
+    "other": "The bubble's floating icons are Delete / Duplicate / Flip / Lock; the Design's floating edit-text icon is not drawn (editing works by tapping the bubble, P0078)."
+  },
+  {
+    "bug": "PHA262026P0078",
+    "verdict": "FIXED",
+    "observed": "Tapping a text bubble opens a text field with the keyboard, ✕, B, I, alignment and ✓; typing 「Bubble OK」 changed the bubble. For a Text layer, tapping the selected text while its Preset / Font / Style panel is open opens the same field and keyboard; typing 「Hello 2026」 changed the text on the canvas.",
+    "summary": "Text and Text Bubble now open a text field with the keyboard, and the typed words replace the text on the canvas.",
+    "shots": ["a_p0078_bubble_tap1.png", "a_p0078_bubble_edited.png", "a_p0078_text_tap_again.png", "a_p0078_text_field_keyboard.png", "a_p0078_text_edited.png"],
+    "sideEffects": "The editor's ✓ keeps the text and returns to the panel; the canvas shows the new words.",
+    "other": "A new, small 「Add text」 box was hard to hit: several taps on it did nothing until a preset made it larger. While editing the text, its floating Delete / Duplicate / Lock pill was drawn far from it, over the page-1 bubble."
+  },
+  {
+    "bug": "PHA262026P0079",
+    "verdict": "NOT_FIXED",
+    "observed": "Tapping a filled frame once shows the frame tool bar Replace, Duplicate, Opacity, Horizontal Flip, Vertical Flip, Forward, Backward, Lock, Delete, and floating Delete / Duplicate / Lock. Flip H, Flip V and the floating Lock are now there (Lock greys the other items and turns into Unlock), but there is still no 「Shadow」.",
+    "expected": "Frame focus offers Opacity, Shadow, Flip H, Flip V, Duplicate, Lock, Delete and a floating Lock (canvas_frame_focus board; PM F7 / F9).",
+    "observedZh": "Flip H / V 與浮動鎖已加入，但框工具列仍沒有 Shadow。",
+    "expectedZh": "框工具列應含 Shadow。",
+    "shots": ["a_p0079_frame_focus.png", "a_p0079_frame_bar_end.png", "a_p0079_locked.png"],
+    "sideEffects": "Floating Lock locks the frame (Flip, Forward, Backward, Delete disabled, label Unlock) and unlocks it again.",
+    "other": "When locked, the floating Duplicate stays enabled while Delete is greyed. Flip items are labelled 「Horizontal Flip」 / 「Vertical Flip」 (see P0081)."
+  },
+  {
+    "bug": "PHA262026P0081",
+    "verdict": "NOT_FIXED",
+    "observed": "Image focus (second tap on a filled frame) tool bar still reads Replace, 「Horizontal Flip」, 「Vertical Flip」, 「Adjustments」, Filter, Removal, 「AI Enhance」, Lock, Delete.",
+    "expected": "The labels read 「Flip H」, 「Flip V」, 「Adjust」 and 「Enhance」 (canvas_img_focus board; PM F8).",
+    "observedZh": "標籤仍為 Horizontal Flip、Vertical Flip、Adjustments、AI Enhance。",
+    "expectedZh": "應為 Flip H、Flip V、Adjust、Enhance。",
+    "shots": ["a_p0081_image_bar_start.png", "a_p0081_image_bar_labels.png"],
+    "sideEffects": "",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0086",
+    "verdict": "HOLD_SPEC",
+    "observed": "The AI Enhance page opened from a collage photo has no credit button at the top, on Standard and on Advanced (only ‹ at the top; Advanced shows 「Enhance」 with 6 credits). RD removed the button (\"ui modify, remove credit button\", commit d484ee8e). The newest Design in the repo (Enhance_2, 2026-11-05 read, frame 111:9730) still draws the credit button 「100」 with 「+」, and requirements R-211 expects it; no newer spec or PM comment in the repo removes it.",
+    "shots": ["a_p0086_enhance_page.png", "a_p0086_advanced_no_credit_button.png"],
+    "sideEffects": "Nothing is left where the button was; the top bar holds only ‹. Enhance was not run (no credits spent).",
+    "other": "The Design's history button beside the credit button is not shown either. Advanced Enhance costs 6 credits (Design draws 5; open question Q-27)."
+  },
+  {
+    "bug": "PHA262026P0088",
+    "verdict": "FIXED",
+    "observed": "Background > Custom color > eyedropper shows the pin; touching the canvas moves the pin there (its tip sits about 120 px above the finger) and dragging moves it with the finger. Releasing on the face photo picked a skin tone, and dragging onto the blue 2730x1535 photo picked a light blue; the canvas background and the picker followed each pick.",
+    "summary": "The eyedropper pin now moves to the touched point and follows a drag, and it picks the photo's colour under its tip.",
+    "shots": ["a_p0088_eyedropper_on.png", "a_p0088_hold_face.png", "a_p0088_pin_on_face.png", "a_p0088_picked_face.png", "a_p0088_drag_to_blue_held.png", "a_p0088_picked_blue.png"],
+    "sideEffects": "Done keeps the picked colour as the background.",
+    "other": "Because the tip is about 120 px above the finger, a tap near the top of the short canvas samples the dark area outside it (the first try picked near-black), and the lower part of the canvas behind the panel cannot be reached. The picked blue looked lighter than the photo's blue around the tip."
+  },
+  {
+    "bug": "PHA262026P0093",
+    "verdict": "NOT_FIXED",
+    "observed": "On a 3-page canvas, Ratio 9:16 grows the canvas equally upward and downward: the frames stay at the screen centre while the canvas top moves up, and the template stickers and 「Goodbye 2026」 move to new places. Ratio 16:9 shrinks the canvas from both edges and scales the frames and stickers down and re-spaces them. Frames are no longer squashed into strips.",
+    "expected": "Elements stay where they are; the canvas grows downward or shrinks upward (PM states-ratio F12).",
+    "observedZh": "畫布仍從中心上下同時延伸／縮短，元素被移位與縮放（框不再被壓扁）。",
+    "expectedZh": "元素位置不變，畫布只向下延伸或向上縮短。",
+    "shots": ["a_p0093_ratio_panel.png", "a_p0093_ratio_9x16.png", "a_p0093_ratio_16x9.png"],
+    "sideEffects": "Ratio ✕ restored the original ratio.",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0095",
+    "verdict": "NOT_FIXED",
+    "observed": "Pages now has ✕ and ✓. ✓ applies an added page (the Canvas shows 4 pages). ✕ after Add (and after Delete), and system Back after Add, drop the change and return to the Canvas at once, with no 「Discard changes?」.",
+    "expected": "✕ drops the changes, asking 「Discard changes?」 (Discard / Keep, as Edit Room) first when there are changes (PM states-pages D1-24).",
+    "observedZh": "已有 ✓ / ✕ 且 ✓ 可套用，但有變更時按 ✕ 或返回直接放棄，不會先問 Discard changes?。",
+    "expectedZh": "有變更時按 ✕ 應先跳出 Discard changes?。",
+    "shots": ["a_p0095_pages.png", "a_p0095_page_added.png", "a_p0095_x_dialog.png", "a_p0095_back_after_add_s.png", "a_p0095_check_applied.png", "a_p0095_x_after_delete_canvas.png"],
+    "sideEffects": "",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0096",
+    "verdict": "FIXED",
+    "observed": "Pages shows only ✕ and ✓ at the bottom; after selecting the last page and tapping Delete there is no ↶ / ↷ on screen.",
+    "summary": "Pages no longer shows ↶ / ↷; its bottom bar holds only ✕ and ✓.",
+    "shots": ["a_p0096_pages_4.png", "a_p0096_pages_deleted_no_undo.png"],
+    "sideEffects": "Add, Insert Left / Right and Delete still work; ✕ drops the page change (without the dialog, P0095).",
+    "other": ""
+  },
+  {
+    "bug": "PHA262026P0147",
+    "verdict": "NOT_FIXED",
+    "observed": "Filled a page frame with 1 photo, image focus > Removal > Continue (Premium sheet) > Try First (Smart Wire Removal sheet) > ✕ in Object Removal, then force-stopped the app. After relaunch, tapping Swipe Collage on the Launcher crashed the app at once (「PhotoDirector has stopped」), and it crashed again on the second try: java.lang.ClassCastException: com.google.gson.internal.LinkedTreeMap cannot be cast to uw8 at SwipeCollageDraftUseCase$load$2.invokeSuspend(SourceFile:94), at 14:47:53 and 14:48:22.",
+    "expected": "No crash: 「Continue editing?」 restores the project, or Swipe Collage opens normally (PM leave-notes D1-10).",
+    "observedZh": "強制關閉後重開進入 Swipe Collage 立即閃退，兩次都是 SwipeCollageDraftUseCase 的 ClassCastException。",
+    "expectedZh": "不應閃退，應出現 Continue editing? 還原專案或正常進入。",
+    "shots": ["a_p0147_filled.png", "a_p0147_removal_tap.png", "a_p0147_try_first.png", "a_p0147_after_x_canvas.png", "a_p0147_reopen1.png"],
+    "sideEffects": "",
+    "other": "The draft stays on the phone, so every Swipe Collage open now crashes until the app data is cleared. Entry used was the Launcher 「Swipe Collage」 tile (no Collage banner on this build's Home). Crash logs: logs/p0147-crash1.txt, logs/p0147-crash-all.txt."
+  }
+]

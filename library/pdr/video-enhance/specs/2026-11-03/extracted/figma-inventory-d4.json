@@ -2,7 +2,7 @@
   "file": "HceGLJVaxnKsv7gXSXzKWh",
   "page": "2974:19965",
   "group": "d4",
-  "extracted_at": "2026-11-19",
+  "extracted_at": "2026-11-26",
   "section": [
     "3293:13053",
     "AI Video Enhance_26.09_v2",
@@ -752,9 +752,9 @@
     }
   ],
   "hash": {
-    "3300:32003": "33dd9b93"
+    "3300:32003": "37d2195b"
   },
-  "hashed_at": "2026-11-19T04:51:01.560Z",
+  "hashed_at": "2026-11-26T08:06:34.598Z",
   "overlay": {
     "3300:32003": "a64ece62"
   },
@@ -1346,10 +1346,10 @@
     [
       0,
       23517,
-      3446,
+      3461,
       276,
       32,
-      "Standard: Great quality · up to 8 min\nProfessional: Maximum detail · up to 2:30",
+      "Standard: Great quality · up to 08:00\nProfessional: Maximum detail · up to 02:30",
       0
     ],
     [
@@ -1508,7 +1508,7 @@
     [
       0,
       23539,
-      4114,
+      4099,
       276,
       64,
       "Natural: Lighter enhancement with fewer artifacts, for a more realistic look\nSharp: Moderate enhancement for a sharp, clear image",
@@ -3378,6 +3378,6 @@
       0
     ]
   ],
-  "ms": 6655,
-  "size": 13752
+  "ms": 5390,
+  "size": 13753
 }

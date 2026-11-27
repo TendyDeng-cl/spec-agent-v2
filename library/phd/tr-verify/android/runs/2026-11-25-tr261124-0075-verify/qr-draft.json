@@ -1,0 +1,182 @@
+{
+ "tr": "TR261124-0075",
+ "product": "PhotoDirector Mobile for Android",
+ "tester": "WILLY_WU",
+ "template": "Standard Report",
+ "testingDate": "2026/11/25",
+ "version": "20.19.0",
+ "build": "202611241937",
+ "buildDay": "1124",
+ "os": "Android 16",
+ "osLanguage": "English",
+ "style": "phd-a",
+ "textOnly": true,
+ "shortDescription": "20.19.0.v202611241937 (Deluxe) for CyberLink 9 Languages + RUS + PTB (Enu, Cht, Chs, Jpn, Kor, Deu, Esp, Fra, Ita, Rus, Ptb) (R11)",
+ "testResult": "PHD-A - Bug verification [OK=12, Fail=0]",
+ "env": {
+  "device": "Samsung Galaxy S23 (SM-S9110) / Android 16",
+  "server": "Test Server",
+  "account": "Not signed in (Free)",
+  "testedBy": "AI agent (Claude Opus 5.5) driving the phone over Appium; verdicts and evidence reviewed by WILLY_WU",
+  "install": "TR build 20.19.0.v202611241937 (versionCode 90201902), installed by the tester; the installed APK carries v202611241937",
+  "scope": "every eBug on this TR's verify list (PHD-A rule); PHA262026P0029 not verified (hint never shown) and left off"
+ },
+ "observations": [
+  "PHA262026P0029 (not on this QR): on four cleared installs, at display sizes 450, 560 and 680 dpi, the Portrait tab never auto-scrolled and the AI Hair Color hint never showed; RD's note says it cannot be verified in this app version.",
+  "AI Edit Agent image requests charge with no cost dialog (6 credits read from the balance and credit history)."
+ ],
+ "rows": [
+  {
+   "bug": "PHA242024-1271",
+   "title": "PHD-A 19.8.0 - AISketch-realistic: The selected style in female is not unselected after selecting a style in male",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_54_1271_tap_clean_nophoto.png",
+    "screenshots/a_56_1271_male_cine_selected.png",
+    "screenshots/a_57_1271_back_to_female.png"
+   ],
+   "result": "OK",
+   "summary": "In AI Art, which now holds the female and male style lists, selecting a male style clears the female selection."
+  },
+  {
+   "bug": "PHA262026-0031",
+   "title": "PHD-A 20.9.2 - AI_Background: The [Generate] button is not lighted up after generating an image",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/b_05_0031_before_generate.png",
+    "screenshots/b_07_0031_after.png",
+    "screenshots/b_09_0031_prompt_changed.png"
+   ],
+   "result": "OK",
+   "summary": "After a Custom generation in AI Background the button is lit and can be tapped again."
+  },
+  {
+   "bug": "PHA262026-0051",
+   "title": "PHD-A 20.10.0 - [Samsung S23]Sign in: The page shows nothing after entering User Sign in",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_03_0051_signin_page.png",
+    "screenshots/a_04_0051_signin_page.png"
+   ],
+   "result": "OK",
+   "summary": "The User Sign in page now shows its full content (Email, Password, Sign Up, Google and Facebook sign-in)."
+  },
+  {
+   "bug": "PHA262026-0243",
+   "title": "PHD-A 20.13.0 - Image_to_Video: The sample image is not showing right after changing language and selecting style",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/d_bzh_01.png",
+    "screenshots/d_bzh_05.png",
+    "screenshots/e_85_i2v_zh_sheet.png"
+   ],
+   "result": "OK",
+   "summary": "After changing the system language, each Image to Video style shows its own sample image right away."
+  },
+  {
+   "bug": "PHA262026-0289",
+   "title": "PHD-A 20.13.0 - [ATFound]ID_Photo: The preview is showing all black after tapping the [X] button in Makeup",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_34a_0289_lipstick_applied.png",
+    "screenshots/a_37_0289_x_cycle7_immediate.png",
+    "screenshots/a_42_0289_v_beautify_applied.png"
+   ],
+   "result": "OK",
+   "summary": "In ID Photo, tapping [X] in Makeup returns to the normal preview every time, with no black preview."
+  },
+  {
+   "bug": "PHA262026-0360",
+   "title": "PHD-A 20.15.1 - Image_to_video: Generated video from \"Feeling Good\" template has no sound but sound setting = ON",
+   "creator": "ALBERT_CHANG",
+   "severity": "2",
+   "images": [
+    "screenshots/b_51_0360_sound_on_saved.png",
+    "screenshots/b_55_0360_result.png"
+   ],
+   "result": "OK",
+   "summary": "The video generated from the Feeling Good template with sound on now has an audible sound track."
+  },
+  {
+   "bug": "PHA262026-0407",
+   "title": "PHD-A 20.16.5 - [UX][Light_mode]Image_to_video: Icon of \"Happy Horse\" model is not obvious",
+   "creator": "ALBERT_CHANG",
+   "severity": "3",
+   "images": [
+    "screenshots/a_76_0407_happyhorse_light.png",
+    "screenshots/a_76_0407_happyhorse_light_icon_zoom.png",
+    "screenshots/a_74_0407_happyhorse_dark.png"
+   ],
+   "result": "OK",
+   "summary": "In light mode the Happy Horse model icon is now a dark icon that stands out clearly on the light card."
+  },
+  {
+   "bug": "PHA262026P0025",
+   "title": "PHD-A 20.18.0 - [UX]AI_Background: There is no [Artwork] button in AI Background",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_09_p0025_ai_background_room.png",
+    "screenshots/a_10_p0025_artwork.png"
+   ],
+   "result": "OK",
+   "summary": "AI Background now has an Artwork button that opens My AI Artwork on the AI Background tab."
+  },
+  {
+   "bug": "PHA262026P0045",
+   "title": "PHD-A 20.18.0 - [UX]AI_edit_agent: UI always focus on photo tab of AI edit agent category even the latest generated result is video after tapping [artwork] button of AI edit agent",
+   "creator": "ALBERT_CHANG",
+   "severity": "3",
+   "images": [
+    "screenshots/b_29_p0045_artwork_video.png",
+    "screenshots/b_34_p0045_artwork_photo.png",
+    "screenshots/b_21_p0045_artwork_noresult.png"
+   ],
+   "result": "OK",
+   "summary": "After a video result, the Artwork button now opens the Video tab of the AI Edit Agent category (Photo tab after an image result)."
+  },
+  {
+   "bug": "PHA262026P0056",
+   "title": "PHD-A 20.18.0 - [CS003208922]AI_Edit_Agent: The cost credits are not the same in rules page and the pop-up dialog",
+   "creator": "WILLY_WU",
+   "severity": "2",
+   "images": [
+    "screenshots/a_61_p0056_info.png",
+    "screenshots/a_67_p0056_after_send.png",
+    "screenshots/b_30_p0056_info.png"
+   ],
+   "result": "OK",
+   "summary": "The rules page and the generation dialog now show the same costs (video 4 credits per second, image 6 credits)."
+  },
+  {
+   "bug": "PHA262026P0142",
+   "title": "PHD-A 20.19.0 - [AIAgent] Image_to_Video: Reuse opens Custom without the Image to Video explanation sheet shown elsewhere",
+   "creator": "WILLY_WU",
+   "severity": "4",
+   "images": [
+    "screenshots/c_02_p0142_aivideos_entry.png",
+    "screenshots/c_07_p0142_reuse_sheet.png",
+    "screenshots/c_09_p0142_custom_toast.png"
+   ],
+   "result": "OK",
+   "summary": "Reuse now shows the Image to Video explanation sheet first, then opens Custom with the reused settings."
+  },
+  {
+   "bug": "PHA262026P0145",
+   "title": "PHD-A 20.19.0 - [AIAgent][UI] Image_to_Video: Reuse: Custom room flashes rotated (landscape) before settling portrait",
+   "creator": "WILLY_WU",
+   "severity": "4",
+   "images": [
+    "recordings/frames-sheets/p0145-reuse-1_native.png",
+    "recordings/frames-sheets/p0145-reuse-5-nosheet_native.png"
+   ],
+   "result": "OK",
+   "summary": "Reuse now opens the Custom room in portrait with no rotated frame during the transition."
+  }
+ ]
+}

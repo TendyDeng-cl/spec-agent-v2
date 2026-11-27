@@ -33,6 +33,27 @@ controls, and the `decision` entries (Won't Fix, NAB, PM rulings) that make a fi
      asking PM to decide. One eBug per question (its Fail (question) rows on the `Report step:` line); the Result says
      what the app does, the Expect states the decision needed with the sources and the proposal quoted, and the Note
      names the Q-id. A question another PM ruling or ticket already answers (on either OS) is not filed: cite it.
+   - **No question is left open by a completed run (user, 2026-11-25).** At the phase wrap-up, go through every Open
+     question of the table's `requirements.md` and settle each one of three ways, listing all of them with their
+     outcome in `report.md` (`## Open questions`):
+     1. **Determined:** the device, a ruling or an existing ticket answers it. Record it in the table's
+        `question-status.json` (`"Q-5": { "state": "determined", "by": "<phase> (<run id>, <version>)", "at":
+        "<date>", "note": "<what the app does, with the rows; or the ticket that rules>" }`): per platform, because a
+        device answers for its own app only. A row whose expectation the answer changes is named in the note and
+        changed at the next draft. (`question-answers.json` is for the team's answers about the spec itself.)
+     2. **Filed:** it becomes the PM eBug above. Its draft entry and Note name the Q-id exactly (`Q-13`), and a
+        question an existing same-OS ticket covers has its Q-id and that ticket's code on one line of `dedupe.txt`:
+        that is how the pages link it (`lib/boards.ts` `filedQuestions`). An older batch that carries the question
+        without naming its Q-id is linked in `question-status.json` instead (`"state": "filed", "codes": ["DRA…"]`). A question no row fails on is still filed
+        when the run cannot determine it: the filing rule follows the question list, not only the Fail (question)
+        rows (Video Enhance R1–R3 left Q-14 and Q-21 unfiled because nothing failed on them).
+     3. **Not reached:** its rows were Blocked or not in this phase (a question with no row at all gets one now,
+        in the next draft: `analysis.md`, *Every Open question gets an observing row*): `"state": "not-reached"` with the reason. It
+        stays open for the next run and is the only kind that may. One that must be filed but needs a check first is
+        `"state": "to-file"` with what is missing; it stays open, flagged, until it is filed.
+     Settled questions (determined or filed) leave the Cases page's question list for its closed 「Settled」 list.
+     The Dashboard's Questions figure counts only what is neither answered nor filed, so after a full run it should
+     be 0 or the not-reached ones.
    - the rule is written for the screen, state and entry path in the Repro steps; when the row's own path could not
      be reached, the row is Blocked (test-data) — never a finding on a nearby screen or a substitute flow;
    - **only the named Design source (user, 2026-11-11, Video Enhance REQ-010):** when the user names the Design page or
@@ -60,7 +81,11 @@ controls, and the `decision` entries (Won't Fix, NAB, PM rulings) that make a fi
    tested OS only) and read each candidate with `ecl_query.py bug <code>`. **Per OS (user, 2026-10-28):** a match on
    the other OS is not a duplicate (new entry; its BugCode may go in the Note); a match on the same OS's TRs, open or
    resolved, is left off the drafts and the review page entirely and recorded only in `dedupe.txt`; a **closed**
-   same-OS ticket whose bug is back stays a new entry naming the closed ticket as related.
+   same-OS ticket whose bug is back stays a new entry naming the closed ticket as related. A **cancelled or declined**
+   match is judged by why it ended, from the comments `dedupe` prints under it (user, 2026-11-27): wrongly filed →
+   judge against the refiled ticket; a ruling → dropped unless a newer spec contradicts it; fixed / not reproducible →
+   a card only if it reproduces now; no reason → a card naming it for the reviewer (`ebug-tr-filer/references/dedupe.md`
+   › *Ended tickets: read why*).
    **Whole pool (2026-11-19, Video Enhance Android R2).** Check that each entry's `searched N candidate(s)` matches the
    pool (`ecl_query.py bugs --text "<feature core>" --product "<ecl_product>"`), and read every ticket in the
    closing 「Open in the pool on <version>」 list against every entry, ranked or not. The R2 batch searched 90 of 182

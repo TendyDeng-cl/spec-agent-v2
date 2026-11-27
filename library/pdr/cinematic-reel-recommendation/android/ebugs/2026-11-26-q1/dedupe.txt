@@ -1,0 +1,8 @@
+# Cinematic Reel Recommendation Android, question round Q1 (Q-3, Q-4): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-26
+# Pool read with `ecl_query.py bugs --text … --product "PowerDirector Mobile for Android" --limit 300`:
+# 「Cinematic Reel」, 「photo tips」 6, 「CineStory」 3 tickets.
+# ISS-CRA-03 (Q-3, sheet closes on outside tap / swipe down): no ticket about closing the photo tips sheet.
+# ISS-CRA-04 (Q-4, offline sheet pictures blank): no ticket about the tips, the chip or the template page offline or without data.
+#   Open on 16.9.0: DRA262611P0289 (Q-1), DRA262611P0290 (Q-2), DRA262611P0316 – P0320 (MUI text): other findings.
+# O-1 (credit pill 「--」 after an offline launch): closest DRA262610P0166 (closed, 16.8.0, 「--」 after a restart), other trigger; not drafted.
+# No same-OS ticket covers either question. Nothing commented on (rule 6).

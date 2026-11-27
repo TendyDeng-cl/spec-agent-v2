@@ -28,17 +28,18 @@ offer (16.9.0 build 2611091); its amount there is unchecked.
 
 ## KP-067 Credits can read 「--」 or 0 right after a launch
 - kind: quirk · platform: android · use: run · tags: credits, billing, logs, launch
-- source: Video Enhance Android run 2026-11-10-r1-full O-1; AIGC Watermark Android run 2026-11-17-r1-full O-1, O-20 (seen without a purchase: corrected) · verified: 16.9.0 build 2611231 (2026-11-24)
+- source: Video Enhance Android run 2026-11-10-r1-full O-1; AIGC Watermark Android run 2026-11-17-r1-full O-1, O-20 (seen without a purchase: corrected); AIGC Watermark Android run 2026-11-26-e1-entries O-4 (inbox I-012) · verified: 16.9.0 build 2611251 (2026-11-26)
 
 At some launches (right after a Google Play purchase, but also after a plain relaunch or a `locale reset`),
 CreditSystemManager logs `getCreditRemain error, creditSystemUUID is null`, `refreshMemberToken error` and
 `checkFeatureCredit … JsonSyntaxException` right after the Play Integrity (StandardIntegrity) call: the pill shows
-「--」, AI Magic may say 「No Internet Connection」 and tool pages 0 credits while online. A plain relaunch fixes it;
+「--」, AI Magic may say 「No Internet Connection」 and tool pages 0 credits while online, or a wrong price (2611251: Text to
+Video Kling 4.0 「Generate ◆ 25」 instead of ◆70 once). A plain relaunch fixes it;
 relaunch before reading prices or the pill.
 
 ## KP-070 Credit Details drops the current month after local midnight
 - kind: quirk · platform: android · use: run, ebug · tags: credits, ledger, date
-- source: Video Enhance Android run 2026-11-18-r2-full O-25, O-31; Video Enhance Android run 2026-11-24-r3-full O-17 · verified: 16.9.0 build 2611231 (2026-11-25)
+- source: Video Enhance Android run 2026-11-18-r2-full O-25, O-31; Video Enhance Android run 2026-11-24-r3-full O-17; Video Enhance Android run 2026-11-26-r4-full O-25 · verified: 16.9.0 build 2611251 (2026-11-27)
 
 Between local midnight (UTC+8) and the server's UTC date change, Mine › Credits › Details opened on the previous
 month's group with no current-month group, also after a relaunch, while logcat `getCreditHistory` listed the new
@@ -47,13 +48,15 @@ before filing.
 
 ## KP-071 Buying credits is followed by an offer and a backup dialog
 - kind: fact · platform: android · use: analysis, run · tags: credits, buy-more, dialog
-- source: Video Enhance Android run 2026-11-18-r2-full O-12; Video Enhance Android run 2026-11-24-r3-full O-5 · verified: 16.9.0 build 2611231 (2026-11-24)
+- source: Video Enhance Android run 2026-11-18-r2-full O-12; Video Enhance Android run 2026-11-24-r3-full O-5; Video Enhance Android run 2026-11-26-r4-full O-12 · verified: 16.9.0 build 2611251 (2026-11-26)
 
 After a 500-credit test purchase the app offers another pack, which varies between purchases (「Want to get 50
-Credits, too?」 「NT$170.00」 on 2611091, 「Want to get 1000 Credits, too?」 「NT$2,010.00」 on 2611231), with 「Not now」;
+Credits, too?」 「NT$170.00」 on 2611091 and 2611251, 「Want to get 1000 Credits, too?」 「NT$2,010.00」 on 2611231), with
+「Not now」;
 「Not now」 then opens 「Check Backup Protection」 over My Credits (「Back up now」, 「Later」, 「Don't show again」
-unticked). On 2611231 the pack page itself opens on a pre-selected 「Annual Auto Pass Discount」 card (「Continue with the
-best deal」): tap the wanted pack tile first. None of this is in a feature spec; close both dialogs before the next step.
+unticked). The pack page opens on a pre-selected server-set promotion: 「Annual Auto Pass Discount」 1000 +1000 NT$2490
+(「Continue with the best deal」) on 2611231, a 「BLACK FRIDAY SALE」 header with a countdown and 「Special Offer」 1000 +1000
+NT$2740 (「Get 2000 Credits for NT$2740」) on 2611251: tap the wanted pack tile first. None of this is in a feature spec; close both dialogs before the next step.
 
 ## KP-091 Credit prices seen on Android (Free, Stage)
 - kind: fact · platform: android · use: analysis, run · tags: credits, price
@@ -67,7 +70,7 @@ feature list prices them at 1. On 2611193: Text to Video Veo 3.1 4 s Fast 28, Kl
 Video Edit by Chat Gemini Omni Flash 1.1 8 a second (40 for 5 s), Kling O3 5 a second (25); Motion Swap Wan 2.2
 Animate 3 a second (39), Kling Motion Control 6 a second (60); Cinematic Reel Horror Movie 70, Micro Cinema / Handheld
 Camera / One-Take Shot / Time Lapse 48, Fast Cut 72; Pro Seedance 2.0 5 s 40 (I2V Standard, T2V Fast 720p); I2V Gemini
-Omni Flash 1.1 5 s 25. Prices are server-set: recheck on each build.
+Omni Flash 1.1 5 s 25. Prices are server-set: recheck on each build (Image / Text to Video on 2611251: KP-135).
 
 ## KP-092 Reading the balance from the Android log
 - kind: howto · platform: android · use: run · tags: credits, logs
@@ -83,3 +86,12 @@ so a charge can be checked by clock time in logcat without opening Mine › Cred
 The ledger's log line (`getCreditHistory … actionId=…`) names each charge's provider and model (e.g.
 AICinematicShorts genvideo_1_sec_kling_o3pro_enable_1080p, bytedance seedance2.0fast). It is the only place Cinematic
 Reel's model shows.
+
+## KP-135 Video generation prices on 2611251
+- kind: fact · platform: android · use: analysis, run · tags: credits, price, image-to-video, text-to-video, video-edit-by-chat
+- source: Recent Task Model Info Android run 2026-11-26-r1-full (inbox I-024, I-027); AIGC Watermark Android run 2026-11-26-e1-entries O-3 (inbox I-009) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+Image to Video 5 s: Kling 4.0 70, Kling O3 25, Pixverse V6 20, Wan 3.0 50, Gemini Omni Flash 1.1 25, Happy Horse 1.1
+40, Seedance 2.5 150, Seedance 2.0 40, Veo 3.1 32, Vidu Q2 15, Wan 2.7 40; templates 15 or 25. Text to Video 9:16 5 s
+1080p: Kling 4.0 70, Wan 3.0 50, Seedance 2.5 150, Seedance 2.0 40, Gemini Omni Flash 25, Happy Horse 1.1 40, Wan 2.7
+40, Veo 3.1 28, Kling O3 30. Video Edit by Chat Seedance 2.5 14 a second, Kling O3 5. Others as KP-091.

@@ -1,0 +1,71 @@
+{
+  "qr": "QR261125-0017",
+  "url": "https://ecl.cyberlink.com/IF3/qr/BPM/FormView/QR261125-0017",
+  "tr": "TR261124-0075",
+  "template": "Standard Report (QRTemplateID=14830)",
+  "createdAt": "2026-11-25 (Asia/Taipei)",
+  "tester": "WILLY_WU",
+  "testResult": "PHD-A - Bug verification [OK=12, Fail=0]",
+  "testingDate": "2026-11-25",
+  "counts": {
+    "OK": 12,
+    "Fail": 0,
+    "leftNotYetVerified": 1
+  },
+  "leftNotYetVerified": [
+    "PHA262026P0029"
+  ],
+  "rows": [
+    {
+      "bug": "PHA242024-1271",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0031",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0051",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0243",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0289",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0360",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026-0407",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0025",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0045",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0056",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0142",
+      "state": "OK"
+    },
+    {
+      "bug": "PHA262026P0145",
+      "state": "OK"
+    }
+  ],
+  "readBack": "all fields, 12 States and Reasons match qr-text.txt; P0029 not on the QR",
+  "attachments": "none (textOnly, PHD-A)",
+  "mismatch": null
+}

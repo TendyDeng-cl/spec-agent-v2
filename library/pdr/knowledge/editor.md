@@ -61,3 +61,24 @@ puts the result after the source clip, not in its place. Start it early in a seg
 
 AI Cartoon (Elf) and AI Sketch (Oil Painting) on an upright portrait photo (DSC_0047.JPG) return the image turned 90°
 in the preview and the export; likely EXIF orientation. Use portrait photos with EXIF rotation when testing them.
+
+## KP-112 AI tools started from the editor leave the timeline alone
+- kind: fact · platform: android · use: analysis, run · tags: editor, entry-point, timeline, ai-task
+- source: AIGC Watermark Android run 2026-11-26-e1-entries O-12 (inbox I-007, I-011, I-014); Recent Task Model Info Android run 2026-11-26-r1-full O-13 (inbox I-029) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+From the editor, Generate in AI Anime Video, Talking Avatar, AI Art, Text to Image, Cinematic Reel Creator or Video
+Edit by Chat goes to the tool's task list or result; results land there and in My Artwork, and Back returns to the
+unchanged editor (only a result's 「Add to Timeline」 adds a clip, KP-076). Cinematic Reel Creator and Video Edit by
+Chat never take the selected clip; AI Anime Video from a clip's Effects goes straight to trimming that clip, Talking
+Avatar from an audio clip takes it as the voice. Leaving Text to Image clears the clip selection (RTMI Q-10).
+Editor ⋯ › My Artwork › a result, then system Back ×3, lands on the Launcher, not the editor.
+
+## KP-113 AI Style Transfer on 2611251
+- kind: fact · platform: android · use: analysis, run · tags: editor, style-transfer, ai-cartoon, ai-sketch, tier, credits
+- source: AIGC Watermark Android run 2026-11-26-e1-entries O-11, O-14 (inbox I-015, I-020) · verified: 16.9.0 build 2611251 (2026-11-26)
+
+Photo / PIP Photo › Portrait › 「AI Style Transfer」 is back (2611193 had none): tabs Favorites | AI Anime (Custom =
+description box) / AI Cartoon / AI Sketch ⓘ / Tempo Effects, opening on AI Anime. No price, no charge (Pro); a result
+replaces the photo in place and Undo restores it. Launcher › AI Magic › AI Cartoon / AI Sketch: intro › Try It Now ›
+Add Media, then a new project 「AI Cartoon <MM-DD>」 (「…(1)」 next) opens on that panel; results are not in My Artwork.
+On Free one Pro style previewed with 「Pro Only / Upgrade Now」, then even free styles opened 「Upgrade to Pro」.

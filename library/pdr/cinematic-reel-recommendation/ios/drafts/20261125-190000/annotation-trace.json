@@ -1,0 +1,128 @@
+{
+  "spec_folder": "specs/2026-11-23",
+  "skip": [],
+  "skip_reason": "",
+  "grouping": {
+    "x_tolerance": 120,
+    "y_gap": 140
+  },
+  "blocks": [
+    {
+      "id": "d-cinestory@1070,315",
+      "board": "d-cinestory",
+      "x": 1070,
+      "y": 315,
+      "low": false,
+      "text": "第一次顯示 tutorial video,  點Ｘ收進",
+      "trace": "label: first-run tutorial of Cinematic Reel Creator (the header ? stays the tutorial), not PDRA-661; see Q-1"
+    },
+    {
+      "id": "d-cinestory@4408,1366",
+      "board": "d-cinestory",
+      "x": 4408,
+      "y": 1366,
+      "low": false,
+      "text": "Add Text 的 rule 與 timeline 一致",
+      "trace": "label: result page of Cinematic Reel Creator, not PDRA-661"
+    },
+    {
+      "id": "d-cinestory@4928,1366",
+      "board": "d-cinestory",
+      "x": 4928,
+      "y": 1366,
+      "low": false,
+      "text": "Edit Music 的 rule 與 timeline 一致",
+      "trace": "label: result page of Cinematic Reel Creator, not PDRA-661"
+    },
+    {
+      "id": "d-cinestory@607,1433",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1433,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: Mid-Distance Framing, Rich Visual Details. Avoid: Flat Composition, Visible Text or Logos, Extreme Close-up.",
+      "trace": "R-012 (TC-002)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1493",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1493,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: Mid-Distance Framing, Layered Depth. Avoid: Flat Composition, Visible Text or Logos, Extreme Close-up.",
+      "trace": "R-012 (TC-003)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1553",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1553,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: Visible Sky, Cityscape or Landscape. Avoid: Portrait as Subject, Indoor Close-up, Extreme Close-up.",
+      "trace": "R-012 (TC-004)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1613",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1613,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: Layered Depth, Rich Visual Details. Avoid: Flat Composition, Visible Text or Logos, Extreme Close-up.",
+      "trace": "R-012 (TC-005)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1673",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1673,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: Sense of Motion, Rich Visual Details (its own 「for Fast Cut」 picture). Avoid: Static Composition, Visible Text or Logos, Extreme Close-up.",
+      "trace": "R-012 (TC-006)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1733",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1733,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Recommendation: People in Frame, Layered Depth. Avoid: Flat Composition, Visible Text or Logos, Extreme Close-up.",
+      "trace": "R-012 (TC-001)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1793",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1793,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] Each item has one picture (Recommendation 8, Avoid 6; Rich Visual Details has a separate picture for Fast Cut); the JP and EN columns beside the picture list are empty, so localized item names are not given.",
+      "trace": "R-013 (TC-009), Q-2",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@607,1853",
+      "board": "d-cinestory",
+      "x": 607,
+      "y": 1853,
+      "low": false,
+      "text": "[link https://docs.google.com/spreadsheets/d/1XoLgFmZ4YGRPIcfG6xRTtx_3HJ63-Xo5O3uKFWJaRGI/edit?gid=1744053327#gid=1744053327] CMS columns row 20: recommendSamples / recommend_samples, 每個template對應的 recommendation/avoid (link) from recommendation page on CMS; Mobile UI Shown blank.",
+      "trace": "R-014 (TC-019)",
+      "link": "1112:6314"
+    },
+    {
+      "id": "d-cinestory@132,194",
+      "board": "d-cinestory",
+      "x": 132,
+      "y": 194,
+      "low": false,
+      "text": "[link https://www.figma.com/design/ITGFcSoXzw6dAXYBY3GMGR/CineStory?node-id=0-1] Searched every page by text (figma-pm): no frame or note mentions photo tips, recommendation or avoid; the CineStory PM spec predates the 0820 tips.",
+      "trace": "label: the PM Figma holds no photo tips content (figma-frames.json)",
+      "link": "108:15176"
+    }
+  ]
+}

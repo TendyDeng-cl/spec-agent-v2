@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "creator": "WILLY_WU",
+    "creators_read_back": [
+      "WILLY_WU"
+    ],
+    "token_owner": "",
+    "method": "api",
+    "tr": "TR261123-0041",
+    "server": "",
+    "version": "",
+    "build": "",
+    "filed_on": "2026-11-23"
+  },
+  "bugs": [
+    {
+      "bugcode": "PHA262026P0159",
+      "short": "PHD-A 20.19.0 - [AIAgent] Swipe_Collage: App still crashes on every open after a force stop with a canvas being edited",
+      "status": "NewCreated",
+      "severity": 1,
+      "priority": 5,
+      "belong": "RD",
+      "creator": "WILLY_WU",
+      "created": "2026-11-23T16:45:56",
+      "build": "202611231214",
+      "tr": "TR261123-0041",
+      "product": "PhotoDirector Mobile for Android",
+      "template": "PHD_Android_Generic 20.19",
+      "assignee": null,
+      "handler": "JANE_LAI",
+      "version": "20.19.0",
+      "bug_source": "QA",
+      "reproduce": "4/4",
+      "happened": "Unknown",
+      "desc": "Repro Steps:\n1. Launch the APP\n2. Tap Swipe Collage on the Launcher\n3. Tap the Year-end Recap 「4 photos · 3 pages」 card\n4. Tap Use Template\n5. Tap the 「+」 of a page-1 frame\n6. Select 1 photo\n7. Tap Next\n8. Tap the filled frame\n9. Tap the same frame again\n10. Tap Removal on the tool bar\n11. Tap Continue\n12. Tap Try First\n13. Tap ✕ in the Object Removal room\n14. Force stop PhotoDirector\n15. Launch the APP\n16. Tap Swipe Collage on the Launcher\n17. Check the result\n\nResult:\nThe app crashes at once (ClassCastException in SwipeCollageDraftUseCase load), on every later try.\n摘要：強制關閉後重開，每次進入 Swipe Collage 都立即閃退。\n{20.19.0_swc51_canvas_before_force_stop.jpg} {20.19.0_swc51_crash_dialog.jpg} {20.19.0_swc51_crash_log.txt}\n\nExpect Result:\nNo crash: 「Continue editing?」 appears and restores the project, or Swipe Collage opens normally.\n摘要：不應閃退，應出現「Continue editing?」還原專案或正常進入。\n\nNote:\nDevice: Google Pixel 8a / Android 16\nSpec Link: Swipe Collage PhDM Spec.pdf (PM), leave-notes board (D1-10: 「Continue editing?」 after a kill restores the project)\nRelated: PHA262026P0147 (same crash; the fix in this build does not stop it); also on Samsung Galaxy S23 (SM-S9110) / Android 16 with this build\n<Claude Reviewed>",
+      "attachments": [
+        "20.19.0_swc51_canvas_before_force_stop.jpg",
+        "20.19.0_swc51_crash_dialog.jpg",
+        "20.19.0_swc51_crash_log.txt"
+      ],
+      "key": "TR261123-0041-Observations-01",
+      "iss": "ISS-SWC-51",
+      "feature": "TR261123-0041-Observations",
+      "problem_type": "Functional"
+    }
+  ],
+  "dispositions": {}
+}

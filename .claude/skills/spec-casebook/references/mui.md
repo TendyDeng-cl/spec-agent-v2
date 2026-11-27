@@ -87,6 +87,11 @@ notification) are left to the APK read, or listed under "Not added" on iOS.
 language, plus `MUI-apk` on Android), run on request (string freeze, new languages, before release). A full run never
 includes them, and *complete full run* in the run-media rule means every non-MUI row.
 
+**Numbered lines (user, 2026-11-25).** An MUI row's cells are long lists, so every cell of it with two or more lines
+is numbered, the Expected Result too (`1. Every string … shows in full` newline `2. No string overlaps …` newline
+`3. Launcher shortcut: 「AI Video Enhance」`), never plain line breaks: a result or an eBug can then name the line it
+failed (`Expected 14`). `check.ts` warns on an MUI row whose Expected Result has unnumbered lines.
+
 The screens are every one the feature's rows reach, its dialogs, toasts, tooltips, empty and error states included
 (reuse the Design screen list or `inventory.json` when the spec set has one); list them in the Action. Long strings
 worth stressing (the longest translation of a button, a toast with a number in it) are named in the Truncation row's
@@ -142,9 +147,11 @@ MUI findings follow the eBug rules of `ebugs.md` and the casebook overlay (rule 
   as in the Short Description: `MUI: translation — JPN, DEU`, `MUI: translation — all`, `MUI: truncation — DEU`.
   The Spec Link is the translation sheet (file name or URL, tab and row or key); with no sheet, the Design or PM board
   that draws the English string.
-- **Owner** (the text rule, AGENTS.md *Text bugs go to RD or PM*): the sheet has the text and the app shows
-  something else, or truncates it → RD; the sheet has no text for that language (`null`), or its own text cannot
-  fit and must change → PM.
+- **Owner** (AGENTS.md *Translation problems go to PC-Doc*; user, 2026-11-26, replaces PM here): the app truncates
+  or breaks a translation, or does not show one the build has → RD; anything whose fix is the translation's own
+  wording → **PC-Doc** (BugBelong `PC-Doc`), never PM: no text for that language (`null`), a string left in English,
+  a wrong, unnatural or inconsistent translation, its capitalisation or punctuation, a text that cannot fit and must
+  be reworded, and every filed translation doubt.
 - **Dedupe** per OS and per language: an existing same-OS ticket on the same strings and language makes the finding
   a duplicate (`dedupe.txt`); one on other languages does not.
 - **Translation doubts (no sheet, user 2026-11-24).** The run's doubts go in the drafts as a `## Translation doubts`

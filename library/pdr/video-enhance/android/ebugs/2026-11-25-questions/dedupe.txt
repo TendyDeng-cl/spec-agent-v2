@@ -1,0 +1,17 @@
+# Dedupe per OS (user, 2026-10-28): same-OS matches are left off the drafts and the review page.
+# Batch 2026-11-25-questions: the two Open questions flagged to-file after R3 (2611231), Q-21 (drafted, ISS-VEA-57) and Q-14 (not drafted).
+# Pool: ecl_query.py dedupe, 214 candidates (「AI Video Enhance」 and 「Video Enhance」, PowerDirector Mobile for Android),
+# 65 open on 16.9.0, each read against ISS-VEA-57 and against Q-14 (dedupe-query.txt); plus pool text searches 「consent」 (6, none on
+# Video Enhance or a first-upload disclosure) and 「GenAI」 (0). Status read 2026-11-25. No existing ticket was commented on.
+
+# No same-OS ticket covers either question, so no line here pairs a Q-id with a ticket code.
+
+# ISS-VEA-57 (playhead range and play start): no duplicate. Related, not the same:
+#   P0208 of the 2611 pool (Assigned, RD: Preview lags behind the double-arrow seek handle) and P0113 (Assigned, RD: allowed Preview
+#   delay while trimming) are the frame lag (another question of the table), not the playhead's range;
+#   P0230 (NeedCodeReview, RD: play does nothing with the playhead at the selection's end) is a defect at one position, looks fixed
+#   on 2611231 (R3 O-2), and states no rule for the range or for play from a moved playhead;
+#   P0074 (Assigned, RD: no Preview time at rest) is the missing time in the entry's first image.
+# The disclosure question (not drafted, needs a device check): no Android ticket on a GenAI consent or disclosure dialog for Video Enhance.
+#   The 「consent」 hits are face-swap safeguards on other features (16.8.0, NAB, PM), a Feedback page section (15.9.0, Close) and a
+#   Google Drive log line (13.1.0, Close).

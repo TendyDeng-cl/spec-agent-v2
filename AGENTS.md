@@ -39,21 +39,36 @@ lines; put the full rule in the skill or reference file that applies it and poin
 - **Filing account.** Review pages prefill Creator, TRCode, source tag and method from the newest filed batch
   (`node scripts/ebug-defaults.ts`); "Same build" / "Same TR" means that batch's TR once its header names the tested
   build (overlay rule 4).
+- **eBugs go on the TR's own template (user, 2026-11-27).** An API filing uses the eBug template whose name and
+  product match the TR's (`ecl_query.py tr <TR>`, e.g. 「Generic v16.9」), never 「AIFound eBugs pool」 by default;
+  `ecl_if3.py create` refuses any other template or a TR for another build, and `--other-template "<reason>"` is
+  only for a pool the user named (Video Enhance R4: P0335 – P0337 cancelled, refiled as P0338 – P0340;
+  `ebug-tr-filer/references/api-filing.md`).
 - **No comments on existing eBugs (2026-10-21, until lifted).** Never comment on, reopen or reject the fix of an
   existing ticket; rechecks and fixed tickets are listed for information only (overlay).
+- **Ended tickets: read why (user, 2026-11-27).** A cancelled, declined or closed dedupe match is judged by why it
+  ended, from its eBug comments (`TSR.EbugComments`, printed by `ecl_query.py dedupe`): wrongly filed → the refiled
+  ticket; a ruling → dropped unless a newer spec contradicts it; fixed / not reproducible → a card only if it
+  reproduces now; no reason → a card for the reviewer (`ebug-tr-filer/references/dedupe.md`). The add-comment API
+  stays blocked by the rule below (`ALLOW_ECL_COMMENT=1` only when it is lifted).
 - **Dedupe per OS (user, 2026-10-28).** A ticket on the other OS never makes a finding a duplicate; a same-OS match is
   left off the drafts and review page (kept only in `dedupe.txt`), unless that ticket is **closed** and the bug is
   back: then it is a new card naming the closed ticket (overlay, *Dedupe per OS*).
 - **eBug owner and type (RD, 2026-10-21 — replaces the 2026-10-20 rule; revertible).** Casebook findings are
   `[AIAgent]` Functional or `[UI]`, owner RD, never `[UX]`; RD forwards to PM when it wants a ruling. A
   finding with no spec basis is filed to PM for a decision (2026-11-11, below). Exploration (`[AIFound]`) keeps filing `[UX]`.
+  The 2026-11-13 restore of the 2026-10-20 rule (PR 7, PhotoDirector Android) was not adopted (user, 2026-11-26).
   **Revert** — the user may restore the 2026-10-20 rule: "A UX problem goes to PM (BugBelong PM), who decides before
   handing it to RD. A problem that plainly needs an RD fix (performance, waits, missing behaviour) is Functional,
   owner RD, with no `[UX]` tag." Put that text back here, then follow the revert steps in overlay rule 5
   (`--allow-agent-ux` / `ALLOW_AGENT_UX=1`).
 - **Text bugs go to RD or PM (user, 2026-11-11).** Text that differs from the spec is RD when the spec states it and
   the app shows something else (fix the app's text), PM when the spec's own text must change (wrong, unclear, two
-  sheets disagree, or none states it); never Doc (`ebug-draft-generator` › Owner, overlay rule 5).
+  sheets disagree, or none states it); translations: next rule (`ebug-draft-generator` › Owner, overlay rule 5).
+- **Translation problems go to PC-Doc (user, 2026-11-26).** Anything whose fix is the wording of a translated string
+  (wrong, missing, left in English, half-translated screen, capitalisation or punctuation of a translation, a filed
+  translation doubt) is BugBelong PC-Doc, never PM; RD keeps truncation, mid-word breaks and layout. The English
+  source text keeps the rule above (`ebug-draft-generator` › Owner, overlay rules 5 and 8, `mui.md` §4).
 - **Visible defects and open questions are filed (user, 2026-11-11).** A plainly wrong screen is filed even when its
   exact expected wording is only a PM proposal or open question; a question the run cannot settle (an undecided
   string, a proposal the app differs from) is filed to PM (BugBelong PM) for a decision, not held; one already
@@ -91,6 +106,11 @@ lines; put the full rule in the skill or reference file that applies it and poin
   its eBugs comes from there (`ebugs.md` step 1).
 - **Spec Link URL on its own line (user, 2026-11-11).** In an eBug Note, `Spec Link: <source>, <board> board (…) -`
   then the URL alone on the next line; `check_ebug_format.py` fails a URL on the label's line (overlay rule 2).
+- **Every copy on a Figma page, every appearance (user, 2026-11-27, DRA262611P0331).** Every copy of a screen drawn
+  on a page is read (dark / light, landscape, update copies: none is a duplicate unless a label says so), each
+  appearance is a variant row that sets it in its Precondition, and the Expected Result names the look the Design
+  draws (「pale cream card」, never just 「seasonal background」); `### Repeated screens`, `check.ts`
+  (`reading-the-spec.md` step 8, `analysis.md` pass 10; KP-036).
 - **Every combination (user, 2026-11-10, REQ-008).** Settings chosen together get a row per combination of their
   values (the full cross product), each priced and checked in the result; `### Combinations` grid, `check.ts`
   (`analysis.md` pass 10).
@@ -103,6 +123,17 @@ lines; put the full rule in the skill or reference file that applies it and poin
   Design, PM and MX Figma files draw is inventoried, traced to a row and pressed in runs; the coverage page proves it
   and marks everything on every board, superseded versions as Excluded (`reading-the-spec.md` step 10, `analysis.md`
   pass 11, `run.md`).
+- **Every entry point, every control once (user, 2026-11-26).** A feature reached from several places (toolbar
+  entries, Launcher, AI Magic, banners…) keeps its full table on the primary entry. Every other entry gets a UI pass
+  in its own Section: the landing and the values read from its input (fps, resolution, length), every control and
+  option pressed once with no error, the main action once, and every exit. Nothing is assumed to behave the same from
+  each entry. Editor-toolbar entries come from the newest dated tab of the toolbar sheet
+  (`node scripts/entry-points.ts pdr fetch`, KP-107). Other entries come from the spec, Figma and knowledge
+  (`analysis.md` pass 12).
+- **Toolbar sheet per platform (user, 2026-11-27).** The toolbar sheet marks iOS-only and Android-only places and
+  behaviours (「4/E IOS」, 「(iOS)」, 「Android沒有」, 「only Android」); a table reads it for its own platform only
+  (`entry-points.ts … --platform`) and never checks, questions or files the other platform's items (KP-107,
+  `analysis.md` pass 12; DRA262611P0341 reported the iOS-only 「AI Remove」 missing on Android).
 - **Figma access (user, 2026-10-28/29).** Design only through the `figma-design` MCP server (qa-dm@cyberlink.com), PM
   and MX only through `figma-pm` (qa1@cyberlink.com); never swap accounts by hand or use a claude.ai Figma connector (`.claude/settings.json` blocks it for terminal and IDE
   sessions; desktop app users disconnect it at claude.ai › Settings › Connectors);
@@ -163,13 +194,26 @@ lines; put the full rule in the skill or reference file that applies it and poin
   each eBug*). The one exception to *No comments on existing eBugs*: files only, never a comment.
 - **QR account line (user, 2026-11-05, REQ-100).** A QR's Details name the phone's signed-in account as the app's menu
   shows it, with its tier (`Account: cltqauiap2@gmail.com (Premium)`), read from the menu at each verify run
-  (`qa-report/SKILL.md` › *Wording*).
+  (`qa-report/SKILL.md` › *Wording*). An app not signed in is written `Not signed in (Free)`; no sign-in just for
+  the QR (user, 2026-11-13).
+- **PHD-A QRs (user, 2026-11-13).** On PhotoDirector Android TRs only: verify every bug on the verify list whoever
+  created it, and write the QR exactly like the team template QR261102-0081 (TR's Short Description, Details = the
+  Test Result line, `Verified OK with <build> build.` + one sentence + `Risk test: n/a`, text only); `qa-report/SKILL.md` ›
+  *PHD-A QR*, draft `"style": "phd-a"`. Every other TR keeps *Evidence on each eBug* (REQ-099): the 2026-11-13
+  text-only QR rule was not adopted outside PHD-A (user, 2026-11-26).
+- **RD's resolve note on PHD-A bugs (user, 2026-11-25).** Before verifying a PhotoDirector Android bug, read RD's
+  newest resolve note (RootCause, Solution / Workaround, might-impact area, Changeset; `ecl_query.py resolve`), test
+  what its Solution says and check its impact area for side effects; a Solution that changes the expectation is what
+  the build is held to (P0074) (`qa-report/SKILL.md` › *RD's resolve note*).
 - **Bug verify against today's spec (user, 2026-11-05, REQ-091).** Before verifying a bug, check its Expect Result
   against the current spec in the repo (ticket comments, row, `requirements.md` changes and open questions, newer
   frames in `extracted/`), then judge the build's current behaviour against that. An open question means Hold
   (`qa-report/SKILL.md` › *Expected = today's spec*). But a build that does what the bug expected is OK even
   with a board unread or a question open (user, 2026-11-05, REQ-098).
-- **AI Mini Drama credits (user, 2026-11-03, REQ-073, until lifted).** For runs and rechecks, use whatever credits a check needs for anything except a full video generation (characters, outlines, storyboards, regenerations, updates); a full video generation still needs the user's go-ahead or an existing video. Check every path a bug names rather than stopping at one to save credits.
+- **Credits: use what a row needs (user, 2026-11-26; replaces the AI Mini Drama rule of 2026-11-03, REQ-073).** On
+  every feature, runs, rechecks and verifies spend whatever in-app credits a row needs (generations, enhances, full
+  videos, a new result to test on) with no separate go-ahead, and a row is never Blocked only to save credits. Check
+  every path a bug names rather than stopping at one. Buying credits stays under *Test purchases in the app*.
 - **Chinese copy of every table (user, 2026-11-11).** Each table has a Traditional Chinese reading copy
   (`cases.zh-Hant.csv`) that the 中文 switch shows on Cases, Results, Progress and Coverage; it is natural Taiwan
   Chinese, never word by word, kept current row by row with `scripts/zh-copy.ts` after drafts and Saves; run results
@@ -184,6 +228,80 @@ lines; put the full rule in the skill or reference file that applies it and poin
   own phase (user, 2026-11-24)**, run on request and never in a full run; Android translations are read from the
   build's APK (`scripts/mui-strings.ts`, no phone), the phone walks each language for truncation (iOS: translation
   too) and starts no new task.
+- **Dashboard (user, 2026-11-25).** The pages server's first page is the Dashboard: two tabs, Agentic runs (tables
+  waiting for their conversion to AT) and Regression (AT) (converted), above them the product switch and then its platform switch (user, 2026-11-26: product first, then platform;
+  PowerDirector, PhotoDirector, Promeo, MyEdit Web · PC, Mac, Android, iOS, one without a table dimmed; platforms are
+  never listed together), one toolbar (Version, Sort, Search), then per product and app version
+  (16.9.0, never the build or the TR, and no build number anywhere on the page) one aligned line per feature: Cases,
+  Last run, Pass, Fail, Blocked (a column each), eBugs open / filed, Questions, MUI, Design, AT, and a total line.
+  Keep it a table: no sentences of figures in a cell (the first version was 「way too messy」), every column says what
+  its number is, and every figure opens the exact place behind it (Questions opens the Cases page's question panel,
+  a result count opens Results on that run and result). **MUI stays out of the counts:** cases, run tallies and eBugs
+  leave out MUI rows, runs and eBugs, which show only in the MUI column. **eBugs are open / filed** in three kinds
+  that never overlap: functional and UX (eBugs column), MUI (MUI column), [UI] (Design column); 「Refresh eBugs」 on a
+  version group reads their status from eCL (this computer only, statuses only, `lib/ebug-status.ts`; reading, never
+  commenting). A table is marked converted with 「Mark as AT」 on its line (this computer only) or
+  `node scripts/regression.ts <feature> <ios|android|both>` (`regression.json` in the feature folder, committed), only
+  when the user says it is converted (`scripts/boards-page.tpl`, `lib/boards.ts`, `lib/regression.ts`).
+  **2026-11-26:** no feature/table totals under the title and no counts on the product and platform switches or the two tabs; the
+  columns are eBugs, MUI bugs, Design bugs (each open / filed, nothing else in the cell) and PM questions; 「Refresh
+  eBugs」 works from any computer that reached the page, one read at a time per group (a second click joins the first),
+  read by bug-code prefix so a group takes seconds; every feature is listed under the version the Kanban roadmap
+  puts it in (`release.json` in the feature folder: per platform the version and the roadmap items it covers; written
+  when a feature is added or the roadmap moves it), one the roadmap does not list goes by the version it was tested on,
+  else 「Not tested yet」; a table run on another version than its group says 「on 16.9.0」 under the run date, highlighted
+  when that is the newest version tested; each version's header says how many of its cases have been run on a device, of the
+  cases created, written short (「Cases run 374/997」; a case with a result from any run, MUI left out; cases, never
+  roadmap items), beside the version's GM date from the roadmap (`library/<product>/releases.json`).
+- **Dashboard style: Vercel / Geist (user, 2026-11-27).** The Dashboard follows the Vercel (Geist) layout rules listed
+  at the top of `scripts/boards-page.tpl`: a top bar `Casebook / product / platform` (two menus), underline tabs, one
+  section and card per version with a cases-run gauge, cases and last run on each feature's second line, monospace
+  figures, colour only for failures and open bugs. All of it is the repo's own CSS: nothing (stylesheet, script, font,
+  icon) is loaded from a third party, and the Geist fonts are only named. Other pages keep the shared palette. The list
+  also holds Vercel's interface guidelines (user, 2026-11-27): 4px grid, keyboard tabs, 24px / 44px touch targets,
+  16px fields on a phone, visible labels over hover tips, the view in the address, undo instead of a confirm box.
+- **Dashboard columns, AT states and the AT tab (user, 2026-11-27).** Cases is its own column on Agentic runs (not under
+  the feature's name); a visit without a view in its address lands on PowerDirector · Android. Each table's AT menu is
+  Waiting, Mark as AT or **Not AT-capable** (stays on Agentic runs; `regression.json` `"state": "na"`, `regression.ts
+  … --na`). Regression (AT) lists one line per table with its latest completed Jenkins build: Tests, Pass, Fail,
+  Blocked, Skipped, [AT] eBugs (open / filed, eCL Short Descriptions tagged `[AT]`; no PM column), and the build's own
+  report last (Allure, ReportPortal, else JUnit). The job is `at.json` in the feature folder (「Link Jenkins job」 or
+  `regression.ts … --jenkins <job URL>`); keys stay in `config/at-credentials.json` (git-ignored, user 2026-11-27: copy `config/at-credentials.example.json`; `~/.casebook/` still read) (`lib/at-results.ts`).
+  **Core AT suite (user, 2026-11-27):** the automated cases the casebook did not create are one line above the features,
+  named 「Core AT suite」, from the product's suite job (`product.json` › `at`; PDR Android: `PDR_Android_SFT`, with
+  `PDR_Android_BFT` named on its second line). Its figures and report are the build's ReportPortal launch
+  (`http://192.168.17.37:9090`, project pdra, launch 「SFT」), else the console's pytest summary. A converted feature
+  whose tests sit in the suite is linked to its top-level folder (`regression.ts <feature> android --folder
+  <folder>`, or 「Link AT results」), and its row is that folder of the same launch. **The suite row holds only the
+  cases not created by the casebook (user, 2026-11-27):** a converted table's linked folder leaves its figures. Folders
+  are not casebook features by name: `ai_video_upscaler` is AI Video Upscaler, not Video Enhance (KP-138).
+- **Settings: this computer and this browser (user, 2026-11-27).** The Settings page keeps this computer's settings
+  (seat size, saved outside the repo) apart from this browser's, which apply at once from any computer: Appearance
+  (System / Light / Dark on every page, `lib/page-shared.ts` sets it before the page draws), Language, the name signed
+  under question answers, and 「Forget remembered views」 (never the language, theme, name or unsaved answers).
+  **Rollback** — when the user asks to roll the Dashboard back: the earlier look is `scripts/boards-page.tpl` at commit
+  `07e93e8` (`git show 07e93e8:scripts/boards-page.tpl`); restore that file, carry over any data columns added since,
+  and remove this entry.
+- **Dashboard versions and results (user, 2026-11-27).** Pass, Fail and Blocked count each case at its newest result
+  from any run (R1 pass, pass, fail; R2 re-runs 2 and 3 as fail, blocked → 1 / 1 / 1), opening Results' 「Latest
+  results」 (`boards.ts latestTally`, `results-page.ts`). Versions follow the roadmap's GM dates: the next version before
+  its GM on top, with its roadmap items that no table covers (`releases.json` › `items`, read from the Kanban sheet),
+  then later ones, then versions past GM, folded to one line; every version folds from its heading (per browser).
+  An empty figure is 「–」 when it never had a value and 0 when it had one and is now none (questions all settled: 0).
+- **No question left open by a completed run (user, 2026-11-25).** At every phase wrap-up each Open question is
+  determined (`<platform>/question-status.json`), filed as a PM eBug whose entry names the Q-id (also when no row
+  failed on it), or marked not reached with the reason; settled ones leave the Cases page's question list for its
+  closed 「Settled」 list and the Dashboard counts only what is open
+  (`spec-casebook/references/ebugs.md` step 1).
+- **Every Open question has a row (user, 2026-11-25).** A question is written together with a row that observes its
+  point and is named in it, so the next run reaches it; a new question from a ruling or a wrap-up gets its row in the
+  same draft. `check.ts` warns on a question no active row observes (`spec-casebook/references/analysis.md`).
+- **Results say the problem (user, 2026-11-25).** A failed case opens with a highlighted Problem block across the card
+  (each eBug's title and ticket, else the first sentence recorded), and 「What happened」, the run's own record one line
+  per step, is highlighted too; a Fail's recorded text starts with the problem sentence (`run.md` step 2,
+  `scripts/results-page.ts`).
+- **MUI rows are numbered (user, 2026-11-25).** Every multi-line cell of an MUI row is numbered, the Expected Result
+  too, never plain line breaks; `check.ts` warns (`spec-casebook/references/mui.md` §2).
 - **One step per line (user, 2026-11-03).** When a table cell holds two or more steps, each goes on its own
   numbered line, whether they were numbered (`1. … 2. …`) or plain sentences (`Open X, then tap Y`); `check.ts`
   warns (`formats.md`, writing rules).
@@ -277,6 +395,8 @@ lines; put the full rule in the skill or reference file that applies it and poin
   under *Domain rules*), the spec winning for its tool's values.
 - **A Figma link is the spec (user, 2026-11-04).** When the user sends a Figma link and no PDF, read the spec from
   Figma directly; do not ask for a PDF export (`reading-the-spec.md`, *Figma-only spec*).
+- **Kanban links (user, 2026-11-19).** In a Kanban item, `SPEC:` is the PM spec (`figma-pm`) and `Guideline:` the
+  Design spec (`figma-design`) (`reading-the-spec.md`, *Figma-only spec*).
 - **Build downloads (user, 2026-11-05).** The build under test from a TR's OneDrive folder is always downloaded
   without asking; say the file name and size in chat, then check the MD5 (`run-android.md`, `fixtures.md`).
 - **Phone fixtures (2026-10-27).** What a run needs on the phone or account is in
@@ -324,9 +444,12 @@ lines; put the full rule in the skill or reference file that applies it and poin
   runs are too frequent and the repo would bloat. Pages say when a run's images are not on this computer.
 - **Page layout (user, 2026-11-06).** Every tab has the same page width and side gutter (`--gutter` in
   `scripts/page-shared.css.tpl`); Results shows each case in full by default, with Compact list as the option.
-- **Formatting check on every page (user, 2026-11-19).** Any HTML page or artifact made or changed is looked at
-  rendered before hand-over (about 1100 px and 375 px, both languages, light and dark): no mark orphaned on its own
-  line, even columns, unambiguous legends, a better side on every compared row; fix and look again
+- **Formatting and design check on every page (user, 2026-11-19; design rules 2026-11-25).** Any HTML page or artifact
+  made or changed is looked at rendered before hand-over (about 1100 px and 375 px, both languages, light and dark): no
+  mark orphaned on its own line, even columns, unambiguous legends, a better side on every compared row. A page with
+  controls is also held to the general UI design rules: one control style per kind of choice, a toolbar on one line
+  with nothing stranded, visible hierarchy, filter options scoped to their parent, every number labelled, quiet by
+  default. Judge the screenshot as a designer would; fix and look again
   (`spec-casebook/references/page-checks.md`).
 - **One-off HTML pages (user, 2026-11-05).** A page asked for as HTML is a local file, not an artifact, and never goes
   on the Desktop: it goes in `library/<product>/<feature>/comparisons/` (git-ignored, local only), named
@@ -341,6 +464,9 @@ lines; put the full rule in the skill or reference file that applies it and poin
   sign-in stays the user's when the agent cannot log in (the agent never types passwords); where a phone signs in with
   its Google account button and no password (the SM-A5360, `fixtures.md`), the agent does it. Every permission the app
   asks for (notifications, photos, microphone…) is allowed (user, 2026-11-04).
+- **PHD Premium by the backdoor (user, 2026-11-12).** A PhotoDirector Android run never waits for a Premium sign-in:
+  the agent turns 「Set to subscriber」 on (Premium) or off (Free) in Settings › About's debug dialog itself
+  (`run-android.md`, KP-131).
 - **Android sign-in: the phone's Google account first (user, 2026-11-18).** On Android the agent signs the app in with
   the Google account already on the phone (its account button, no password) before asking the user for anything; on
   the Sony that is acda.test7. When the app's Google button opens Chrome, the agent may tap 「Continue as <name>」,

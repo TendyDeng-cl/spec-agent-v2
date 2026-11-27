@@ -1,0 +1,9 @@
+{
+  "logs": {
+    "files": "[_/](logcat-live|cl_credit)\\.txt$",
+    "failure": "(image2video|imagetovideo|text2video|texttovideo|text2image|texttoimage|recent|task|model).*(fail|error|exception)|status=fail|error=",
+    "toast": "Toast|toast for",
+    "credit": "CreditSystemManager|credit=|refund|returned",
+    "timing": "(image2video|text2video|text2image|recent_task|model)"
+  }
+}

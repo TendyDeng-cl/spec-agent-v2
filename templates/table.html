@@ -106,6 +106,8 @@ body.l-zh .qitem .qtext:not(.zh),body.l-zh .qitem .qassume:not(.zh){font-size:11
 .qrow{display:inline-flex;gap:4px;align-items:center} .qrow a.qcase{font-family:var(--mono);color:var(--edit)} .qrow a.spec{margin-top:0}
 .qitem textarea{border:1px solid var(--line);background:var(--surface);min-height:3.2em;font-size:13.5px}
 .qmeta{font-size:.76rem;color:var(--muted)} .qres{font-size:.8rem;color:var(--new)}
+.qsettled{border-top:1px solid var(--line);padding-top:8px} .qsettled summary{cursor:pointer;font-weight:600;font-size:.86rem;color:var(--muted)}
+.qdone{padding:8px 0;border-bottom:1px solid var(--line);font-size:.86rem} .qdone:last-child{border-bottom:0} .qdone.hit{box-shadow:0 0 0 2px var(--edit)}
 .qfoot{display:flex;gap:10px;align-items:center;justify-content:flex-end}
 a.qmark{display:inline-block;margin-top:4px;font:600 .7rem var(--body);color:var(--mod);background:var(--mod-soft);border-radius:4px;padding:1px 6px;text-decoration:none}
 a.qmark.answered{color:var(--edit);background:var(--edit-soft)} a.qmark.done{color:var(--new);background:var(--new-soft)}
@@ -222,29 +224,39 @@ function md(src){
 // applies them; they do not need the table to be saved, and typing one is kept in this browser until it is saved.
 const QKEY=KEY+':answers';let qEdits={};try{qEdits=JSON.parse(localStorage.getItem(QKEY)||'{}')}catch(e){}
 const qSaved=id=>(D.answers||{})[id];
-const qState=id=>{const a=qSaved(id);return !a?'open':a.status==='done'?'done':'answered'};
+// a question nobody answered but a filed eBug carries to its owner is 'filed' (user, 2026-11-25), not open
+const qBugs=id=>[...new Set([...((D.question_bugs||{})[id]||[]),...(((D.question_settled||{})[id]||{}).codes||[])])];
+// … and one a completed run determined (question-status.json) is 'determined'. Both are settled: they leave the
+// list of questions and sit in the closed 「Settled」 list under it, each with its ticket or how it was determined.
+const qSet=id=>(D.question_settled||{})[id];
+const qState=id=>{const a=qSaved(id);return !a?(qSet(id)&&qSet(id).state==='determined'?'determined':qBugs(id).length?'filed':'open'):a.status==='done'?'done':'answered'};
+const qSettled=id=>['filed','determined'].includes(qState(id));
 function qSplit(t){const i=t.search(/Assumption:/i);let q=i<0?t:t.slice(0,i),a=i<0?'':t.slice(i).replace(/^Assumption:\s*/i,'');
   // the requirement and row ids at the end are shown as row links instead
   a=a.replace(/\s*(?:\(?\bR-\d+[^.]*\)?\.?\s*)+$/,'').replace(/[.;]\s*$/,'');return [q.trim().replace(/[.;]\s*$/,''),a.trim()]}
 function questions(){
   const qs=D.questions||[];if(!qs.length)return;
-  const open=qs.filter(q=>qState(q.id)==='open').length,ans=qs.length-open;
+  const open=qs.filter(q=>qState(q.id)==='open').length,filed=qs.filter(q=>qSettled(q.id)).length,ans=qs.length-open-filed;
   $('#qBox').hidden=false;
-  const qsumText=L==='zh'?`${T('qTitle')} <span class="note">（${T('qOpen')} ${open}${ans?` · ${T('qAnswered')} ${ans}`:''}）</span><span class="qhint">${T('qHint')}</span>`:`Questions for the team <span class="note">(${open} open${ans?` · ${ans} answered`:''})</span><span class="qhint">Where the spec is unclear the rows follow an assumption. Answer any question you know; leave the rest.</span>`;
+  const qsumText=L==='zh'?`${T('qTitle')} <span class="note">（${T('qOpen')} ${open}${filed?` · 已處理 ${filed}`:''}${ans?` · ${T('qAnswered')} ${ans}`:''}）</span><span class="qhint">${T('qHint')}</span>`:`Questions for the team <span class="note">(${open} open${filed?` · ${filed} settled`:''}${ans?` · ${ans} answered`:''})</span><span class="qhint">Where the spec is unclear the rows follow an assumption. Answer any question you know; leave the rest.</span>`;
   $('#qSum').innerHTML=`<span class="qsum">${qsumText}</span>`;
   const unsaved=Object.keys(qEdits).filter(id=>(qEdits[id]||'').trim()!==((qSaved(id)||{}).answer||'')).length;
   let by='';try{by=localStorage.getItem('casebook-q-by')||''}catch(e){}
   const QZ=D.questions_zh||{};
-  $('#qList').innerHTML=`<label class="qname">${T('qName')??'Your name'} <input id="qBy" value="${esc(by)}" placeholder="${T('qOpt')??'optional'}"></label>`+qs.map(q=>{
+  $('#qList').innerHTML=`<label class="qname">${T('qName')??'Your name'} <input id="qBy" value="${esc(by)}" placeholder="${T('qOpt')??'optional'}"></label>`+qs.filter(q=>!qSettled(q.id)).map(q=>{
     const [text,assume]=qSplit(q.text),a=qSaved(q.id),st=qState(q.id),v=qEdits[q.id]!==undefined?qEdits[q.id]:(a?a.answer:'');
     const z=L==='zh'?QZ[q.id]:'',zi=z?z.search(/假設[：:]/):-1,zq=z?(zi<0?z:z.slice(0,zi)).trim():'',za=zi<0?'':z.slice(zi).replace(/^假設[：:]\s*/,'').trim();
     const zhHtml=L!=='zh'?'':z?`<div class="qtext zh">${esc(zq)}</div>${za?`<div class="qassume zh"><b>${T('qAssume')}</b>${esc(za)}</div>`:''}`:`<div class="qassume">${T('qNoZh')}</div>`;
     const rowsHtml=q.rows.length?`<div class="qrows"><span>${(T('qRows')??'Rows:').trim()}</span>${q.rows.map(id=>{const r=find(id),pl=r&&!r.added?pageLinks(id):[];
       return `<span class="qrow"><a class="qcase" href="#${esc(id)}" data-case="${esc(id)}">${esc(id)}</a>${pl.join('')}</span>`}).join('')}</div>`:'';
-    return `<div class="qitem" id="q-${esc(q.id)}"><div class="qhead">${esc(q.id)} <span class="qstate ${st}">${st==='open'?T('qStOpen')??'Open':st==='done'?T('qStDone')??'Applied':T('qStWait')??'Answered · waiting for the agent'}</span></div>
+    return `<div class="qitem" id="q-${esc(q.id)}"><div class="qhead">${esc(q.id)} <span class="qstate ${st}">${st==='open'?T('qStOpen')??'Open':st==='done'?T('qStDone')??'Applied':T('qStWait')??'Answered · waiting for the agent'}</span>${qSet(q.id)?`<span class="qstate answered" title="${esc(qSet(q.id).note)}">${qSet(q.id).state==='filed'?'':qSet(q.id).state==='to-file'?(L==='zh'?'待開單給 PM':'To be filed to PM'):(L==='zh'?'執行未觸及':'Not reached by the run')} · ${esc(qSet(q.id).by)}</span>`:''}</div>
       ${zhHtml}<div class="qtext">${esc(text)}</div>${assume?`<div class="qassume"><b>For now the rows assume:</b> ${esc(assume)}</div>`:''}${rowsHtml}
       <textarea data-qa="${esc(q.id)}" placeholder="${T('qPh')??'Your answer, if you know it'}">${esc(v)}</textarea>
       ${a?`<div class="qmeta">Answered ${esc(a.at.slice(0,16).replace('T',' '))}${a.by?' by '+esc(a.by):''} (${esc(a.platform==='ios'?'iOS':a.platform==='web'?'Web':'Android')} page)${a.question!==q.text?' · the question has changed since':''}</div>`:''}${a&&a.resolution?`<div class="qres">${esc(a.resolution)}</div>`:''}</div>`}).join('')+
+    (filed?`<details class="qsettled"><summary>${L==='zh'?`已處理（${filed}）：已開單或已由執行確認`:`Settled (${filed}): filed as an eBug, or determined by a run`}</summary>${qs.filter(q=>qSettled(q.id)).map(q=>{
+      const st=qState(q.id),z=L==='zh'?QZ[q.id]:'',[text]=qSplit(q.text);
+      const how=st==='filed'?`${L==='zh'?'已開單':'Filed as an eBug'} · ${qBugs(q.id).map(c=>`<a href="https://ecl.cyberlink.com/Ebug/eBugHandle/HandleMainEbug.asp?BugCode=${encodeURIComponent(c)}" target="_blank" rel="noopener noreferrer">${esc(c)}</a>`).join(', ')}`:`${L==='zh'?'已確認':'Determined'} · ${esc(qSet(q.id).by)}: ${esc(qSet(q.id).note)}`;
+      return `<div class="qdone" id="q-${esc(q.id)}"><b>${esc(q.id)}</b> <span>${esc(z||text)}</span><div class="qres">${how}</div></div>`}).join('')}</details>`:'')+
     `<div class="qfoot"><span class="note" id="qSt">${unsaved?unsaved+' unsaved':''}</span><button class="btn primary" id="qSave"${unsaved&&D.save?'':' disabled'}${D.save?'':' title="Answers can be saved only on the computer running the pages."'}>${T('qSaveBtn')??'Save answers'}</button></div>`;
   $('#qBy').oninput=e=>{try{localStorage.setItem('casebook-q-by',e.target.value)}catch(x){}};
   $('#qList').querySelectorAll('textarea[data-qa]').forEach(t=>t.oninput=()=>{qEdits[t.dataset.qa]=t.value;try{localStorage.setItem(QKEY,JSON.stringify(qEdits))}catch(e){}
@@ -256,8 +268,8 @@ function questions(){
       D.answers=j.answers;qEdits={};try{localStorage.removeItem(QKEY)}catch(e){}questions();body();toast('Answers saved. Tell the agent they are in; it updates the rows.')}
     catch(e){$('#qSt').textContent='Not saved: '+e.message}};
 }
-function openQuestion(id){const el=document.getElementById('q-'+id);if(!el)return;$('#qBox').open=true;
-  document.querySelectorAll('.qitem.hit').forEach(x=>x.classList.remove('hit'));el.classList.add('hit');el.scrollIntoView({block:'center'});el.querySelector('textarea')?.focus({preventScroll:true})}
+function openQuestion(id){const el=document.getElementById('q-'+id);if(!el)return;$('#qBox').open=true;if(el.closest('.qsettled'))el.closest('.qsettled').open=true;
+  document.querySelectorAll('.qitem.hit,.qdone.hit').forEach(x=>x.classList.remove('hit'));el.classList.add('hit');el.scrollIntoView({block:'center'});el.querySelector('textarea')?.focus({preventScroll:true})}
 function header(){
   const plat=D.platform==='ios'?'iOS':D.platform==='web'?'Web':'Android';
   $('#h').textContent=`${D.title} · ${plat} · ${REVIEW?T('cases')??'Cases':T('approvedCases')??'Approved test cases'}`;
@@ -436,6 +448,8 @@ document.addEventListener('click',e=>{const m=e.target.closest?.('a.qmark');if(!
 document.addEventListener('click',e=>{const a=e.target.closest?.('a.qcase');if(!a)return;e.preventDefault();
   if(location.hash!=='#'+a.dataset.case)history.pushState(null,'','#'+encodeURIComponent(a.dataset.case));focusRow()});
 applyLang();header();questions();filters();body();counts();focusRow();if(/^#q-Q-\d+$/.test(location.hash))openQuestion(location.hash.slice(3));
+// #questions (the Dashboard's Questions figure): the panel opened and in view
+if(location.hash==='#questions'&&!$('#qBox').hidden){$('#qBox').open=true;$('#qBox').scrollIntoView({block:'start'})}
 </script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+{
+  "logs": {
+    "files": "[_/](logcat-live|cl_credit)\\.txt$",
+    "failure": "(cinestory|cinematic|recommend|template).*(fail|error|exception)|status=fail|error=",
+    "toast": "Toast|toast for",
+    "credit": "CreditSystemManager|credit=|refund|returned",
+    "timing": "(cinestory|recommend_samples|recommend)"
+  }
+}

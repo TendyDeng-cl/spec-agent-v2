@@ -1,0 +1,22 @@
+2026-11-24T09:00:14.295Z status 
+2026-11-24T09:00:14.746Z texts 
+2026-11-24T09:00:19.231Z restart 
+2026-11-24T09:00:26.689Z texts 
+2026-11-24T09:00:34.655Z lbl Cinematic Reel Creator
+2026-11-24T09:00:35.491Z waitfor View photo tips|Import a Photo|Import a photo --timeout 20
+2026-11-24T09:00:37.394Z texts 
+2026-11-24T09:00:37.854Z els 
+2026-11-24T09:00:41.474Z id btn_import
+2026-11-24T09:00:41.987Z waitfor Add Media --timeout 15
+2026-11-24T09:00:44.498Z els 
+2026-11-24T09:00:50.566Z tap 140 680
+2026-11-24T09:00:53.863Z texts 
+2026-11-24T09:00:54.232Z els 
+2026-11-24T09:00:54.604Z shot after-pick
+2026-11-24T09:01:10.680Z tap 895 69
+2026-11-24T09:01:10.927Z waitfor advice|Got it|Cinematic Reel Creator --timeout 10
+2026-11-24T09:01:24.012Z texts 
+2026-11-24T09:01:24.266Z shot after-q
+2026-11-24T09:01:40.797Z tap 80 873
+2026-11-24T09:01:41.072Z back 
+2026-11-24T09:01:41.953Z texts 

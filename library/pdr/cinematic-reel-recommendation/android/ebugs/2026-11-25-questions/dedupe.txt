@@ -1,0 +1,11 @@
+# Cinematic Reel Recommendation Android, open questions flagged to-file (Q-4): dedupe, Android pool only (per OS, user 2026-10-28), 2026-11-25
+# No entry was drafted (the missing-data state is not recorded), so `ecl_query.py dedupe` had no bodies.json to rank;
+# the pool was read with `ecl_query.py bugs --text … --product "PowerDirector Mobile for Android" --limit 300`
+# (dedupe-query.txt): 「Cinematic Reel」 77, 「photo tips」 2, 「CineStory」 3 tickets.
+# Read against the question (photo tips with no recommend_samples, or the CMS unreachable / offline): no Short
+# Description is about the tips, the chip or the template page without data or without network.
+#   Open on 16.9.0: DRA262611P0289 (Add Media has no 「?」, Q-1) and DRA262611P0290 (chip and sentence stay English, Q-2): other questions
+#   Closest closed: DRA262607-0054 (Recent Task empty-state message, 16.5.5): another screen
+# No same-OS ticket covers the question. Nothing commented on (rule 6).
+
+No same-OS ticket covers Q-4: it stays to-file (not drafted, needs the offline device check; see the drafts file).
