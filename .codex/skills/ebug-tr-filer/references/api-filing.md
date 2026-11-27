@@ -153,7 +153,8 @@ user named another pool for that batch. A **cancelled** ticket with the same Sho
 so a withdrawn bug can be refiled without `--allow-duplicate`.
 
 `create` reads the **same `bodies.json` that `check_ebug_format.py` validates**, so run the format
-check first and get it to zero errors. Per finding it sends BugBelong in the web-form spelling (old
+check first and get it to zero errors. Extra format-check flags go through `--format-arg` (repeatable: `--format-arg=--videos-requested`,
+`--format-arg=--no-link-ok=<key>`); `--mui <mui.json>` is passed for an MUI batch. Per finding it sends BugBelong in the web-form spelling (old
 `RDSK` / `PCArt` / `PCDoc` values are mapped back to `Setup Kit` / `PC-Art` / `PC-Doc`), sends every value-typed field
 explicitly, and then **reads the bug back and checks Version / Build / ParentTRCode** — `Status: OK`
 is not proof, and `Version` has been observed not to persist.
