@@ -39,12 +39,28 @@ details.panel pre{margin:0;padding:0 14px 14px;white-space:pre-wrap;font:13px/1.
 input[type=search],select{font:inherit;padding:5px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
 input[type=search]{flex:1 1 220px;min-width:0}
 .sep{width:1px;height:22px;background:var(--line)}
+.brk{flex-basis:100%;height:0}
 /* the sheet scrolls inside its own box, so the header row, ID and Decision stay in view both ways (user, 2026-11-06) */
 .tablewrap{overflow:auto;max-height:calc(100vh - 96px)}
-table{border-collapse:separate;border-spacing:0;width:100%;min-width:1150px;background:var(--surface)}
-table.slim{min-width:760px}
-table.slim th:nth-child(2){width:24%}table.slim th:nth-child(3){width:32%}table.slim th:nth-child(4){width:34%}
-table.slim th:nth-child(n+5):nth-child(-n+7),table.slim tr[data-row]>td:nth-child(n+5):nth-child(-n+7){display:none}
+/* Priority sits beside the ID; Spec Ref and Notes are one full-width line under the row (the checkbox shows it), so the
+   three text columns keep their width (user, 2026-11-27: the old side columns squeezed Action and hid Notes) */
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;background:var(--surface)}
+th:nth-child(2){width:27%}th:nth-child(3){width:33%}th:nth-child(4){width:34%}
+table.slim tr.meta{display:none}
+table:not(.slim) tr[data-row]:not(.nometa)>td:not(.id):not(.dec){border-bottom:0}
+tr.meta td{padding:0 8px 8px}
+.mline{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;align-items:baseline;border-top:1px dashed var(--line);padding-top:6px}
+.mline>span{font:600 .68rem var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding-top:5px}
+.mline .cv{font-size:13px;color:var(--muted);min-height:1.6em}
+.mline .cv.refs{font-family:var(--mono);font-size:12px;overflow-wrap:normal;word-break:keep-all}
+.mline textarea{font-size:13px}
+.idl{display:flex;align-items:center;gap:6px}
+.prio{display:inline-block;font:600 .68rem/1 var(--mono);padding:3px 6px;border-radius:4px;border:1px solid transparent;background:var(--bg);color:var(--muted)}
+/* neutral weight, not colour: red stays for failures */
+.prio.p1{background:var(--fg);color:var(--bg)} .prio.p2{background:transparent;color:var(--fg);border-color:var(--muted)} .prio.p3{background:transparent;color:var(--muted);border-color:var(--line)}
+.prio.none{border:1px dashed var(--line);background:transparent}
+select.prio{appearance:none;-webkit-appearance:none;cursor:pointer;padding:3px 6px;text-align:center}
+select.prio:hover,select.prio:focus-visible{border-color:currentColor;outline:none}
 td.id,th:first-child{position:sticky;left:0;background:var(--surface);z-index:1}
 td.dec,#decHead{position:sticky;right:0;background:var(--surface);z-index:1}
 th:first-child,#decHead{z-index:3}
@@ -134,7 +150,7 @@ header .lang button[aria-pressed="true"]{background:var(--edit)}
   <details class="panel" id="planBox" hidden><summary data-i="plan">Update plan</summary><div class="md" id="plan"></div></details>
   <details class="panel" id="reqBox" hidden><summary data-i="req">Requirements extracted from the spec</summary><div class="md" id="req"></div></details>
   <div class="panel bar" id="filters"></div>
-  <div class="panel tablewrap"><table id="tbl"><thead><tr><th data-i="ID">ID</th><th data-i="Precondition">Precondition</th><th data-i="Action">Action</th><th data-i="Expected Result">Expected Result</th><th data-i="Priority">Priority</th><th data-i="Spec Ref">Spec Ref</th><th data-i="Notes">Notes</th><th id="decHead" data-i="Decision">Decision</th></tr></thead><tbody></tbody></table></div>
+  <div class="panel tablewrap"><table id="tbl"><thead><tr><th data-i="ID">ID</th><th data-i="Precondition">Precondition</th><th data-i="Action">Action</th><th data-i="Expected Result">Expected Result</th><th id="decHead" data-i="Decision">Decision</th></tr></thead><tbody></tbody></table></div>
   <p class="note" id="foot"></p>
 </main>
 <footer>
@@ -166,9 +182,9 @@ const KEY='casebook:'+D.feature+':'+D.platform+':'+(/^edit-/.test(D.draft)?'edit
 const ZH=D.zh||{};
 const I18N={zh:{plan:'更新計畫',req:'從規格整理出的需求',ID:'編號',Precondition:'前置條件',Action:'操作步驟','Expected Result':'預期結果',Priority:'優先度','Spec Ref':'規格對應',Notes:'備註',Decision:'決定',
   copyCsv:'複製最終 CSV',copyDec:'複製審查決定',save:'儲存為核准版本',savedBtn:v=>`已儲存為版本 ${v}`,savedTip:'已儲存；再修改後才能重新儲存。',keep:'保留',delete:'刪除',add:'+ 新增案例',addTitle:'用自己的話描述新的案例；下一版草稿會把它們寫成正式的列',
-  search:'搜尋編號或文字',allSections:'所有區塊',allChanges:'所有變更',anyDecision:'所有決定',noMatch:'沒有符合篩選條件的案例。',
+  search:'搜尋編號或文字',allSections:'所有區塊',allChanges:'所有變更',anyPrio:'所有優先度',noPrio:'未設定',anyDecision:'所有決定',noMatch:'沒有符合篩選條件的案例。',
   new:'新增',modified:'修改',removed:'移除',unchanged:'未變更',kept:'保留',edited:'已修改',added:'已新增',deleted:'已刪除',
-  cases:'案例',approvedCases:'核准的測試案例',draft:'草稿',noApproved:'尚無核准版本',updates:v=>`核准版本 v${v}`,workCopy:'工作副本',cols:'優先度、規格對應、備註',version:(v,d)=>`版本 ${v} · 核准於 ${d}`,spec:'規格：',
+  cases:'案例',approvedCases:'核准的測試案例',draft:'草稿',noApproved:'尚無核准版本',updates:v=>`核准版本 v${v}`,workCopy:'工作副本',cols:'顯示規格對應與備註',prioTip:'優先度：P1 主流程、會擋住主流程或會花錢、花點數的項目；P2 次要功能與錯誤處理；P3 文案、外觀與少見的邊界情況',version:(v,d)=>`版本 ${v} · 核准於 ${d}`,spec:'規格：',
   foot:'修改與新案例說明會暫存在這個瀏覽器，直到儲存為止。儲存會寫入核准的 CSV、把前一版保留在 history/、重新產生 Excel 與 HTML，並把新案例說明交給 agent 寫進下一版草稿。中文是對照用的翻譯，表格內容以英文為準，請在英文欄位修改。',
   footView:'由 cases.csv 產生的唯讀檢視。',noZh:'這份表格還沒有中文翻譯（draft.zh-Hant.csv），只有介面是中文。',
   stale:'（英文已修改，中文尚未更新）',noteHead:'新案例說明',noteHelp:'用自己的話寫要測什麼，一個或多個案例都可以。儲存或複製審查決定後，agent 會把每個案例放到正確的區塊、補齊各欄，並提出下一版草稿。',
@@ -196,7 +212,7 @@ let rows=D.rows.map((r,i)=>({orig:{...r},cur:{...r},dec:r.Change==='removed'?'de
 // Save and Copy decisions hand the text to the agent, which writes the rows (section, precondition, spec ref) in a new draft
 let notes=[];
 try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(REVIEW&&s&&s.rows){rows=s.rows;notes=s.notes||[];}}catch(e){}
-const F={q:'',section:'',change:'',state:''};
+const F={q:'',section:'',change:'',state:'',prio:''};
 const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify({rows,notes}))}catch(e){}};
 const liveNotes=()=>notes.filter(n=>n.text.trim());
 const edited=r=>!r.added&&FIELDS.some(f=>(r.cur[f]??'')!==(r.orig[f]??''));
@@ -287,31 +303,48 @@ function header(){
 let wide=false;try{wide=!!localStorage.getItem('cases-wide')}catch(e){}
 function filters(){
   $('#tbl').classList.toggle('slim',!wide);
-  const cnt=(k,v)=>rows.filter(r=>k==='change'?(r.cur.Change||'')===v:state(r)===v).length;
+  const cnt=(k,v)=>rows.filter(r=>k==='change'?(r.cur.Change||'')===v:k==='prio'?(r.cur.Priority||'none')===v:state(r)===v).length;
+  // P1 / P2 / P3 (user, 2026-11-27); 「not set」 only when some row has none
+  const prios=['P1','P2','P3','none'].filter(v=>v!=='none'||cnt('prio','none'));
   const changes=['new','modified','removed','unchanged'].filter(v=>cnt('change',v));
   const states=['kept','edited','added','deleted'];
   let h=`<input type="search" id="q" placeholder="${esc(T('search')??'Search ID or text')}" value="${esc(F.q)}"><select id="sec"><option value="">${T('allSections')??'All sections'} (${rows.length})</option>${sections().map(s=>`<option value="${esc(s)}"${F.section===s?' selected':''}>${esc(secZh(s))}</option>`).join('')}</select>`;
+  // search and section on the first line, the chip groups below (the old trailing divider was stranded)
+  h+=`<span class="brk"></span>`+[['all',T('anyPrio')??'Any priority'],...prios.map(p=>[p,p==='none'?(T('noPrio')??'Not set'):p])].map(([v,l])=>`<button class="chip" data-k="prio" data-v="${v}" aria-pressed="${(F.prio||'all')===v}">${l}${v!=='all'?` <b>${cnt('prio',v)}</b>`:''}</button>`).join('');
   if(changes.length){h+=`<span class="sep"></span>`+[['',T('allChanges')??'All changes'],...changes.map(c=>[c,T(c)??c])].map(([v,l])=>`<button class="chip" data-k="change" data-v="${v}" aria-pressed="${F.change===v}">${l}${v?` <b>${cnt('change',v)}</b>`:''}</button>`).join('')}
   if(REVIEW)h+=`<span class="sep"></span>`+[['',T('anyDecision')??'Any decision'],...states.map(s=>[s,T(s)??s])].map(([v,l])=>`<button class="chip" data-k="state" data-v="${v}" aria-pressed="${F.state===v}">${l}${v?` <b>${cnt('state',v)}</b>`:''}</button>`).join('');
-  h+=`<label class="colsw"><input type="checkbox" id="cols"${wide?' checked':''}> ${T('cols')??'Priority, Spec Ref, Notes'}</label>`;
+  h+=`<label class="colsw"><input type="checkbox" id="cols"${wide?' checked':''}> ${T('cols')??'Show Spec Ref and Notes'}</label>`;
   $('#filters').innerHTML=h;
-  $('#cols').onchange=e=>{wide=e.target.checked;try{localStorage.setItem('cases-wide',wide?'1':'')}catch(x){}$('#tbl').classList.toggle('slim',!wide)};
+  $('#cols').onchange=e=>{wide=e.target.checked;try{localStorage.setItem('cases-wide',wide?'1':'')}catch(x){}$('#tbl').classList.toggle('slim',!wide);body()};
   $('#q').oninput=e=>{F.q=e.target.value;body()};
   $('#sec').onchange=e=>{F.section=e.target.value;body()};
-  $('#filters').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{F[b.dataset.k]=b.dataset.v;filters();body()});
+  $('#filters').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{F[b.dataset.k]=b.dataset.k==='prio'&&b.dataset.v==='all'?'':b.dataset.v;filters();body()});
 }
 function visible(r){
   const z=L==='zh'&&ZH[r.cur.ID]?' '+Object.values(ZH[r.cur.ID]).join(' '):'';
   const t=(r.cur.ID+' '+FIELDS.map(f=>r.cur[f]).join(' ')+z).toLowerCase();
-  return (!F.q||t.includes(F.q.toLowerCase()))&&(!F.section||(r.cur.Section||'(no section)')===F.section)&&(!F.change||(r.cur.Change||'')===F.change)&&(!F.state||state(r)===F.state);
+  return (!F.q||t.includes(F.q.toLowerCase()))&&(!F.section||(r.cur.Section||'(no section)')===F.section)&&(!F.change||(r.cur.Change||'')===F.change)&&(!F.state||state(r)===F.state)&&(!F.prio||(r.cur.Priority||'none')===F.prio);
 }
-function cell(r,f){
+function cell(r,f,bare){
   const prev=D.previous[r.cur.ID];
   const was=prev&&r.cur.Change==='modified'&&(prev[f]??'')!==(r.orig[f]??'')?`<div class="was">${esc(prev[f])}</div>`:'';
   const z=L==='zh'&&f!=='Spec Ref'?ZH[r.cur.ID]?.[f]:'';
   const zh=z?`<div class="zh${(r.cur[f]??'')!==(r.orig[f]??'')?' stale':''}" data-stale="${esc(T('stale'))}">${esc(z)}</div>`:'';
   // plain text until clicked (or Enter): one editor at a time, not 3,000 boxes on the page
-  return `<td>${zh}<div class="cv"${REVIEW?` tabindex="0" data-id="${esc(r.cur.ID)}" data-f="${f}"`:''}>${esc(r.cur[f])}</div>${was}</td>`;
+  const inner=`${zh}<div class="cv${f==='Spec Ref'?' refs':''}"${REVIEW?` tabindex="0" data-id="${esc(r.cur.ID)}" data-f="${f}"`:''}>${esc(r.cur[f])}</div>${was}`;
+  return bare?inner:`<td>${inner}</td>`;
+}
+// Spec Ref and Notes: one line under the row; in the read-only view an empty Notes is left out
+function metaRow(r){
+  const parts=[['Spec Ref',T('Spec Ref')??'Spec Ref'],['Notes',T('Notes')??'Notes']].filter(([f])=>REVIEW||(r.cur[f]??'').trim());
+  if(!parts.length)return '';
+  return `<tr class="meta${state(r)==='deleted'?' deleted':''}${r.cur.ID===focusId?' focus':''}" data-meta="${esc(r.cur.ID)}"><td colspan="3"><div class="mline">${parts.map(([f,l])=>`<span>${esc(l)}</span><div>${cell(r,f,true)}</div>`).join('')}</div></td></tr>`;
+}
+// P1 / P2 / P3 beside the ID: a pill to pick from while reviewing, a plain badge in the read-only view
+function prioBadge(r){
+  const p=r.cur.Priority||'',c=`prio ${p?p.toLowerCase():'none'}`,tip=T('prioTip')??'Priority: P1 main flow, blockers and anything that costs money or credits; P2 secondary features and error handling; P3 copy, cosmetic and rare edge cases';
+  return REVIEW?`<select class="${c}" data-id="${esc(r.cur.ID)}" data-f="Priority" aria-label="${esc(T('Priority')??'Priority')}" title="${esc(tip)}">${['','P1','P2','P3'].map(x=>`<option value="${x}"${p===x?' selected':''}>${x||'P?'}</option>`).join('')}</select>`
+    :p?`<span class="${c}" title="${esc(tip)}">${esc(p)}</span>`:'';
 }
 function idCell(r){
   const st=state(r),ch=r.cur.Change;
@@ -324,7 +357,7 @@ function idCell(r){
   const qm=(D.questions||[]).filter(q=>q.rows.includes(r.cur.ID)).map(q=>{const st=qState(q.id);
     return `<a class="qmark ${st}" href="#q-${esc(q.id)}" data-q="${esc(q.id)}" title="${esc(st==='open'?'This row assumes an answer to an open question: read it or answer it':st==='done'?'Answered and applied':'Answered, waiting for the agent')}">${esc(q.id)}${st==='open'?' ?':' ✓'}</a>`}).join(' ');
   const why=(L==='zh'&&ZH[r.cur.ID]?.['Change Reason'])||r.cur['Change Reason'];
-  return `${esc(r.cur.ID)}<div>${badges}</div>${qm?`<div>${qm}</div>`:''}${spec}${why?`<div class="reason">${esc(why)}</div>`:''}`;
+  return `<div class="idl">${esc(r.cur.ID)}${prioBadge(r)}</div><div>${badges}</div>${qm?`<div>${qm}</div>`:''}${spec}${why?`<div class="reason">${esc(why)}</div>`:''}`;
 }
 // the Cov / Prog / Res links of a case, on its row and under each question that names it
 function pageLinks(id){
@@ -333,7 +366,7 @@ function pageLinks(id){
     PAGES.results&&`<a class="spec" href="${esc(PAGES.results)}#case=${encodeURIComponent(id)}" aria-label="Results: what each run found, with screenshots" data-tip="Results: what each run found, with screenshots">Res</a>`].filter(Boolean);
 }
 const find=id=>rows.find(r=>r.cur.ID===id);
-function bindField(el){el.onchange=el.oninput=()=>{const r=find(el.dataset.id);r.cur[el.dataset.f]=el.value;persist();counts();const tr=el.closest('tr');tr.querySelector('td.id').innerHTML=idCell(r);};el.onblur=()=>filters()}
+function bindField(el){el.onchange=el.oninput=()=>{const r=find(el.dataset.id);r.cur[el.dataset.f]=el.value;persist();counts();const td=document.querySelector(`tr[data-row="${CSS.escape(el.dataset.id)}"]>td.id`);if(td){td.innerHTML=idCell(r);td.querySelectorAll('select.prio').forEach(bindField)}};el.onblur=()=>filters()}
 function editCell(d){
   const ta=document.createElement('textarea');ta.dataset.id=d.dataset.id;ta.dataset.f=d.dataset.f;ta.rows=2;ta.value=find(d.dataset.id).cur[d.dataset.f]??'';
   d.replaceWith(ta);bindField(ta);ta.focus();
@@ -344,21 +377,21 @@ function body(){
   for(const s of sections()){
     const rs=rows.filter(r=>(r.cur.Section||'(no section)')===s&&visible(r));
     if(!rs.length)continue;
-    h+=`<tr class="section"><td colspan="8">${esc(secZh(s))}${L==='zh'&&secZh(s)!==s?` <span class="note">${esc(s)}</span>`:''} <span class="note">(${rs.length})</span>${REVIEW?`<button class="add" data-sec="${esc(s)}" title="${esc(T('addTitle')??'Describe new cases in your own words; they become rows in the next draft')}">${T('add')??'+ Add case'}</button>`:''}</td></tr>`;
-    for(const n of notes.filter(n=>n.section===s))h+=`<tr class="newcase"><td colspan="8"><div class="nh"><b>${T('noteHead')??'New case notes'}</b><span>${T('noteHelp')??'Write what to test in your own words, one case or several. After Save or Copy decisions, the agent places each case in the right section, fills in the columns and proposes the next draft.'}</span><button class="add" data-del="${esc(n.id)}">${T('remove')??'Remove'}</button></div><textarea class="big" data-note="${esc(n.id)}" placeholder="${esc(T('notePh')??'e.g. Tap the credit pill while the outline is generating: a leave dialog should appear, and leaving keeps the chat')}">${esc(n.text)}</textarea></td></tr>`;
+    h+=`<tr class="section"><td colspan="5">${esc(secZh(s))}${L==='zh'&&secZh(s)!==s?` <span class="note">${esc(s)}</span>`:''} <span class="note">(${rs.length})</span>${REVIEW?`<button class="add" data-sec="${esc(s)}" title="${esc(T('addTitle')??'Describe new cases in your own words; they become rows in the next draft')}">${T('add')??'+ Add case'}</button>`:''}</td></tr>`;
+    for(const n of notes.filter(n=>n.section===s))h+=`<tr class="newcase"><td colspan="5"><div class="nh"><b>${T('noteHead')??'New case notes'}</b><span>${T('noteHelp')??'Write what to test in your own words, one case or several. After Save or Copy decisions, the agent places each case in the right section, fills in the columns and proposes the next draft.'}</span><button class="add" data-del="${esc(n.id)}">${T('remove')??'Remove'}</button></div><textarea class="big" data-note="${esc(n.id)}" placeholder="${esc(T('notePh')??'e.g. Tap the credit pill while the outline is generating: a leave dialog should appear, and leaving keeps the chat')}">${esc(n.text)}</textarea></td></tr>`;
     for(const r of rs){
       const st=state(r);
-      h+=`<tr data-row="${esc(r.cur.ID)}" class="${st==='deleted'?'deleted':''}${r.cur.ID===focusId?' focus':''}"><td class="id">${idCell(r)}</td>
+      // only drawn while shown: a hidden row under a rowspan pulls the next case's cells sideways
+      const meta=wide?metaRow(r):'',span=meta?' rowspan="2"':'';
+      h+=`<tr data-row="${esc(r.cur.ID)}" class="${st==='deleted'?'deleted':''}${r.cur.ID===focusId?' focus':''}${meta?'':' nometa'}"><td class="id"${span}>${idCell(r)}</td>
       ${cell(r,'Precondition')}${cell(r,'Action')}${cell(r,'Expected Result')}
-      <td><select data-id="${esc(r.cur.ID)}" data-f="Priority" ${REVIEW?'':'disabled'}>${['','P1','P2','P3'].map(p=>`<option${(r.cur.Priority||'')===p?' selected':''}>${p}</option>`).join('')}</select></td>
-      ${cell(r,'Spec Ref')}${cell(r,'Notes')}
-      ${REVIEW?`<td class="dec"><span class="seg"><button class="k" data-id="${esc(r.cur.ID)}" data-d="keep" aria-pressed="${r.dec==='keep'}">${T('keep')??'Keep'}</button><button class="d" data-id="${esc(r.cur.ID)}" data-d="delete" aria-pressed="${r.dec==='delete'}">${T('delete')??'Delete'}</button></span></td>`:''}</tr>`;
+      ${REVIEW?`<td class="dec"${span}><span class="seg"><button class="k" data-id="${esc(r.cur.ID)}" data-d="keep" aria-pressed="${r.dec==='keep'}">${T('keep')??'Keep'}</button><button class="d" data-id="${esc(r.cur.ID)}" data-d="delete" aria-pressed="${r.dec==='delete'}">${T('delete')??'Delete'}</button></span></td>`:''}</tr>${meta}`;
     }
   }
-  tb.innerHTML=h||`<tr><td colspan="8" class="note">${T('noMatch')??'No cases match these filters.'}</td></tr>`;
+  tb.innerHTML=h||`<tr><td colspan="5" class="note">${T('noMatch')??'No cases match these filters.'}</td></tr>`;
   tb.querySelectorAll('textarea[data-note]').forEach(el=>el.oninput=()=>{notes.find(n=>n.id===el.dataset.note).text=el.value;persist();counts()});
   tb.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{const n=notes.find(n=>n.id===b.dataset.del);if(n.text.trim()&&!confirm(T('removeConfirm')??'Remove this note and its text?'))return;notes=notes.filter(x=>x!==n);persist();body();counts()});
-  tb.querySelectorAll('select').forEach(el=>{if(REVIEW)bindField(el)});
+  tb.querySelectorAll('select.prio').forEach(el=>bindField(el));
   tb.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{find(b.dataset.id).dec=b.dataset.d;persist();filters();body();counts()});
   // + Add case: focus the section's empty note, else open a new one
   tb.querySelectorAll('.add[data-sec]').forEach(b=>b.onclick=()=>{const sec=b.dataset.sec;let n=notes.find(n=>n.section===sec&&!n.text.trim());
@@ -430,7 +463,7 @@ $('#save').onclick=async()=>{
 let focusId='';
 function focusRow(){
   const id=decodeURIComponent(location.hash.slice(1));const r=rows.find(x=>x.cur.ID===id);if(!r)return;
-  focusId=id;if(!visible(r)){F.q='';F.section='';F.change='';F.state='';filters()}body();
+  focusId=id;if(!visible(r)){F.q='';F.section='';F.change='';F.state='';F.prio='';filters()}body();
   document.querySelector(`tr[data-row="${CSS.escape(id)}"]`)?.scrollIntoView({block:'center'});
 }
 addEventListener('hashchange',focusRow);

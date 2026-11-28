@@ -118,10 +118,12 @@ for md,steps in SPEC.items():
             chk(any(not l.startswith('Spec Link: none') for l in links),f"{md} e{n} ({iid}): no Spec Link — every bug carries its link")
             steps_=desc.split('\nResult:')[0]
             chk(not re.search(r'^\s*\d+\.[^\n「“"]*\s(?:>|›|→)\s',steps_,re.M),f"{md} e{n} ({iid}): Repro step chains actions with '>'")
-            if cls=='UX':
+            if cls=='UX' and tags and tags[0]=='AIAgent':
+                # user, 2026-11-11: [AIAgent][UX] is a PM decision on a UX problem (BugBelong PM);
+                # ALLOW_AGENT_UX=1 is the revert switch (see check_ebug_format.py --allow-agent-ux)
+                chk(own=='PM' or os.environ.get('ALLOW_AGENT_UX')=='1',f"{md} e{n} ({iid}): [AIAgent] UX entries are PM decisions: Owner must be PM")
+            elif cls=='UX':
                 chk(re.search(r'^Basis: (External|None)\b',desc,re.M),f"{md} e{n} ({iid}): Class UX needs 'Basis: External — …' or 'Basis: None — …'")
-                # ALLOW_AGENT_UX=1 is the revert switch for the casebook (see check_ebug_format.py --allow-agent-ux)
-                chk(tags[0]!='AIAgent' or os.environ.get('ALLOW_AGENT_UX')=='1',f"{md} e{n} ({iid}): [AIAgent] entries never carry [UX]")
         ipath=re.search(r'\*\*Images:\*\* `([^`]+)`',body).group(1).rstrip('/')
         pre=mdname[:9]
         chk(ipath.startswith(pre) or not mdname[:8].isdigit(),f"{md} e{n}: Images path lacks {pre} prefix")

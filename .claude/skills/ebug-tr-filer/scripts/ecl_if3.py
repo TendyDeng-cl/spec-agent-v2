@@ -387,7 +387,7 @@ def cmd_create(a):
                                "check_ebug_format.py")
         cmd = [sys.executable, checker, a.bodies, "--product", short_product,
                "--version", a.version,
-               "--upload-dir", os.path.dirname(os.path.abspath(a.bodies))]
+               "--upload-dir", os.path.dirname(os.path.abspath(a.bodies))] + a.format_arg
         if os.environ.get("ALLOW_AGENT_UX") == "1":   # casebook: UX rule restored 2026-11-13 (overlay rule 5)
             cmd.append("--allow-agent-ux")
         if a.mui:   # MUI language tags ([DEU] [NLD]…) are valid only against the feature's mui.json
@@ -938,6 +938,9 @@ def main():
                    "language tags ([DEU] [NLD]…) are accepted")
     s.add_argument("--skip-format-check", action="store_true",
                    help="bypass check_ebug_format.py (every batch that did shipped malformed)")
+    s.add_argument("--format-arg", action="append", default=[],
+                   help="extra argument for the format check, repeatable — e.g. --format-arg=--videos-requested "
+                        "when the user asked for video, --format-arg=--no-link-ok=<key> for a reviewer-approved exception")
     s.add_argument("--other-template", default="",
                    help="file on a template other than the TR's own; only when the user named "
                         "that pool for the batch — the value is their reason, printed and kept")
